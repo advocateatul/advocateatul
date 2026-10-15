@@ -315,6 +315,34 @@
     .step h3 { font-size: 1.35rem; }
     .step p { margin: 10px 0 0; color: var(--muted); font-size: .88rem; }
 
+    .updates { background: var(--dark); color: var(--on-dark); padding: clamp(84px, 11vw, 144px) 0; }
+    .updates-head { display: grid; grid-template-columns: .7fr 1.3fr; gap: 50px; align-items: end; margin-bottom: 14px; }
+    .updates h2 { font-size: clamp(2.35rem, 4.6vw, 4.45rem); line-height: 1.08; letter-spacing: -.035em; }
+    .updates-head > p { justify-self: end; max-width: 390px; margin: 0; color: rgba(255,255,255,.62); font-size: .9rem; }
+    .updates-date { color: #c49b5e; font-size: .85rem; letter-spacing: .05em; margin: 0 0 42px; }
+    .updates-list { border-top: 1px solid rgba(255,255,255,.18); }
+    .update-item { border-bottom: 1px solid rgba(255,255,255,.18); padding: 26px 0; }
+    .update-top { display: grid; grid-template-columns: 1fr auto; gap: 18px; align-items: start; }
+    .update-court { display: inline-block; font-size: .7rem; letter-spacing: .14em; text-transform: uppercase; color: #c49b5e; border: 1px solid rgba(196,155,94,.45); padding: 5px 13px; border-radius: 999px; margin-bottom: 13px; }
+    .update-item h3 { font-size: clamp(1.12rem, 2.1vw, 1.55rem); line-height: 1.32; margin: 0 0 10px; max-width: 800px; }
+    .update-summary { margin: 0; color: rgba(255,255,255,.72); font-size: .9rem; max-width: 780px; }
+    .update-toggle { background: transparent; border: 1px solid rgba(255,255,255,.35); color: var(--on-dark); border-radius: 999px; padding: 9px 20px; font-size: .78rem; letter-spacing: .04em; cursor: pointer; white-space: nowrap; }
+    .update-toggle:hover { border-color: #c49b5e; color: #c49b5e; }
+    .update-detail { display: none; margin-top: 20px; max-width: 800px; }
+    .update-item.open .update-detail { display: block; }
+    .update-detail h4 { color: #c49b5e; font-size: .76rem; letter-spacing: .12em; text-transform: uppercase; margin: 18px 0 7px; }
+    .update-detail h4:first-child { margin-top: 0; }
+    .update-detail p { color: rgba(255,255,255,.78); font-size: .88rem; margin: 0 0 10px; line-height: 1.65; }
+    .update-source { display: inline-block; margin-top: 16px; color: #c49b5e; font-size: .85rem; text-decoration: none; border-bottom: 1px solid rgba(196,155,94,.55); padding-bottom: 2px; }
+    .update-source:hover { color: #e0bc7f; }
+    .updates-note { margin-top: 34px; color: rgba(255,255,255,.45); font-size: .78rem; max-width: 720px; }
+    @media (max-width: 760px) {
+      .updates-head { grid-template-columns: 1fr; gap: 18px; }
+      .updates-head > p { justify-self: start; }
+      .update-top { grid-template-columns: 1fr; }
+      .update-toggle { justify-self: start; }
+    }
+
     .documents { padding: clamp(90px, 11vw, 145px) 0; background: var(--paper-2); }
     .documents-top { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: end; margin-bottom: 46px; }
     .documents-top p { justify-self: end; max-width: 490px; margin: 0; color: var(--muted); font-size: .92rem; }
@@ -456,6 +484,7 @@
       <div class="identity"><strong id="siteName">Atul Kumar</strong><span id="identityProfession">Criminal Lawyer</span></div>
       <nav>
         <a href="#practice" data-i18n="navPractice">Practice</a>
+        <a href="#updates" data-i18n="navUpdates">Updates</a>
         <a href="#documents" data-i18n="navDocuments">Documents</a>
         <a class="nav-cta" href="#contact" data-i18n="navConsultation">Consultation</a>
         <div class="language-switch" role="group" aria-label="Language / भाषा">
@@ -531,6 +560,115 @@
       </div>
     </section>
 
+    <section class="updates" id="updates" aria-labelledby="updates-title">
+      <div class="shell">
+        <div class="updates-head reveal">
+          <div>
+            <span class="section-index">03</span>
+            <p class="kicker" data-i18n="updatesKicker">Daily legal updates</p>
+            <h2 id="updates-title" data-i18n="updatesTitle">Today's judgments, in plain words.</h2>
+          </div>
+          <p data-i18n="updatesCopy">Key Supreme Court and High Court rulings, plus changes in sections and acts — summarised in English and Hindi every morning, with source links to read further.</p>
+        </div>
+        <p class="updates-date reveal"><span data-i18n="updatesUpdated">Updated</span>: <span id="updatesDate">—</span></p>
+        <div class="updates-list reveal" id="updatesList"></div>
+        <p class="updates-note reveal" data-i18n="updatesNote">Summaries are brief explainers, not legal advice. For the complete reasoning, open the linked source article — full judgments are published by the courts and reporting outlets.</p>
+      </div>
+    </section>
+    <script type="application/json" id="legalUpdatesData">
+    {
+      "date": "16 October 2026",
+      "dateHi": "16 अक्टूबर 2026",
+      "items": [
+        {
+          "court": { "en": "Supreme Court of India", "hi": "भारत का सर्वोच्च न्यायालय" },
+          "title": {
+            "en": "Conversion to another religion does not carry backward-class quota with it",
+            "hi": "धर्म परिवर्तन से पिछड़ा वर्ग का आरक्षण स्वतः नहीं मिलता"
+          },
+          "summary": {
+            "en": "The Supreme Court upheld the Madras High Court's order striking down a Tamil Nadu government order that let converts to Islam claim reservation under the Backward Class (Muslim) category based on pre-conversion status. Social backwardness, the Court held, cannot be transferred across religions.",
+            "hi": "सर्वोच्च न्यायालय ने मद्रास हाई कोर्ट के फैसले को बरकरार रखा, जिसमें तमिलनाडु सरकार का वह आदेश रद्द किया गया था जो इस्लाम अपनाने वालों को धर्म परिवर्तन से पहले की स्थिति के आधार पर पिछड़ा वर्ग (मुस्लिम) श्रेणी में आरक्षण देता था। न्यायालय ने कहा कि सामाजिक पिछड़ापन धर्म बदलने से स्वतः स्थानांतरित नहीं होता।"
+          },
+          "detail": {
+            "en": "Background: Sameer Ahamed, born to Hindu parents, converted to Islam in 2015 and sought a community certificate as 'Muslim Lebbai' for reservation benefits; the Tahsildar refused. The Tamil Nadu government's March 2024 order had opened a route for BC/MBC/Denotified/SC converts to claim Backward Class (Muslim) benefits. What the court held: A bench of Justices Prashant Kumar Mishra and Shree Chandrashekhar held that no entitlement under Article 16(4) conditioned on membership of the Hindu social order can be claimed merely on antecedent membership after conversion. A Jamath certificate proves conversion, not statutory Backward Class membership. Law affected: Article 16(4) of the Constitution; Tamil Nadu G.O. of 9 March 2024 quashed; Constitution (Scheduled Castes) Order, 1950 reiterated — only Hindus, Sikhs and Buddhists can claim SC status.",
+            "hi": "पृष्ठभूमि: हिंदू माता-पिता के घर जन्मे समीर अहमद ने 2015 में इस्लाम अपनाया और आरक्षण हेतु 'मुस्लिम लब्बै' समुदाय प्रमाणपत्र मांगा; तहसीलदार ने इनकार कर दिया। तमिलनाडु सरकार के मार्च 2024 के आदेश ने पिछड़ा/अति-पिछड़ा/विमुक्त/SC धर्मांतरितों को पिछड़ा वर्ग (मुस्लिम) लाभ का रास्ता दिया था। न्यायालय ने क्या कहा: न्यायमूर्ति प्रशांत कुमार मिश्रा और न्यायमूर्ति श्री चंद्रशेखर की पीठ ने कहा कि हिंदू सामाजिक व्यवस्था की सदस्यता पर आधारित अनुच्छेद 16(4) का कोई लाभ धर्म परिवर्तन के बाद केवल पूर्व सदस्यता के आधार पर नहीं मांगा जा सकता। जमात का प्रमाणपत्र धर्म परिवर्तन सिद्ध करता है, वैधानिक पिछड़ा वर्ग सदस्यता नहीं। प्रभावित कानून: संविधान का अनुच्छेद 16(4); 9 मार्च 2024 का तमिलनाडु शासनादेश रद्द; अनुसूचित जाति आदेश, 1950 दोहराया गया — केवल हिंदू, सिख और बौद्ध ही SC दर्जा पा सकते हैं।"
+          },
+          "source": "https://www.thehindubusinessline.com/news/sc-holds-conversion-does-not-automatically-grant-quota-benefits/article71589466.ece",
+          "sourceName": "The Hindu BusinessLine"
+        },
+        {
+          "court": { "en": "Delhi High Court", "hi": "दिल्ली उच्च न्यायालय" },
+          "title": {
+            "en": "Woman can be charged with gang rape even without physically committing it",
+            "hi": "शारीरिक रूप से दुष्कर्म न करने पर भी महिला पर सामूहिक दुष्कर्म का आरोप लग सकता है"
+          },
+          "summary": {
+            "en": "Justice Anup Jairam Bhambhani held that 'persons' in Section 376D IPC / Section 70 BNS is gender-neutral — a woman acting in furtherance of a common intention can be charged with gang rape. A woman acting alone, however, cannot face the charge.",
+            "hi": "न्यायमूर्ति अनुप जयराम भंभानी ने कहा कि धारा 376D IPC / धारा 70 BNS में 'व्यक्तियों' शब्द लिंग-तटस्थ है — समान आशय से काम करने वाली महिला पर सामूहिक दुष्कर्म का आरोप लग सकता है। हालांकि अकेली महिला पर यह आरोप नहीं लग सकता।"
+          },
+          "detail": {
+            "en": "Background: A criminal revision challenged framing of charges against a woman (accused of forcing her minor daughter into sexual acts with another accused) under BNS provisions including Section 70 and Section 6 of the POCSO Act. What the court held: For gang rape it is not necessary that a person acting in furtherance of a common intention must also be among those who physically commit rape — the provision creates a legal fiction deeming every group member to have committed the offence. The court distinguished pre-2013 precedents (Priya Patel), noting the 2013 amendment made gang rape a standalone offence under Section 376D. It left open whether 'man' in the definition of rape (Section 375 IPC / 63 BNS) is gender-neutral. Law affected: Section 376D IPC; Section 70 BNS; Section 6, POCSO Act (upheld as gender-neutral for penetrative sexual assault).",
+            "hi": "पृष्ठभूमि: एक महिला (जिस पर अपनी नाबालिग बेटी से दूसरे आरोपी के साथ यौन कृत्य कराने का आरोप है) के विरुद्ध BNS की धारा 70 और POCSO अधिनियम की धारा 6 सहित आरोप तय करने को चुनौती दी गई थी। न्यायालय ने क्या कहा: सामूहिक दुष्कर्म के लिए यह आवश्यक नहीं कि समान आशय से काम करने वाला व्यक्ति शारीरिक रूप से दुष्कर्म करने वालों में भी हो — यह प्रावधान विधिक कल्पना (legal fiction) रचता है कि समूह का हर सदस्य अपराधी माना जाएगा। न्यायालय ने 2013 से पहले के निर्णयों (प्रिया पटेल) को अलग करते हुए कहा कि 2013 के संशोधन ने सामूहिक दुष्कर्म को धारा 376D के तहत स्वतंत्र अपराध बनाया। दुष्कर्म की परिभाषा (धारा 375 IPC / 63 BNS) में 'पुरुष' शब्द लिंग-तटस्थ है या नहीं — यह प्रश्न खुला छोड़ा गया। प्रभावित कानून: धारा 376D IPC; धारा 70 BNS; POCSO अधिनियम की धारा 6 (प्रवेशक यौन हमले हेतु लिंग-तटस्थ मानी गई)।"
+          },
+          "source": "https://www.livelaw.in/high-court/delhi-high-court/women-can-be-charged-with-gang-rape-even-if-they-dont-physically-commit-rape-delhi-high-court-554857",
+          "sourceName": "LiveLaw"
+        },
+        {
+          "court": { "en": "Supreme Court of India", "hi": "भारत का सर्वोच्च न्यायालय" },
+          "title": {
+            "en": "Panel mooted to probe sexual violence complaints by women journalists",
+            "hi": "महिला पत्रकारों की यौन हिंसा शिकायतों की जांच हेतु पैनल का सुझाव"
+          },
+          "summary": {
+            "en": "Hearing the NWMI petition on alleged manhandling and sexual harassment of women journalists during Delhi's SIR protests, the CJI-led bench said it would like to pass orders soon and asked for material — including names of former judges and police officers for a probe panel — in a sealed envelope.",
+            "hi": "दिल्ली में SIR विरोध प्रदर्शनों के दौरान महिला पत्रकारों से कथित बदसलूकी और यौन उत्पीड़न पर NWMI की याचिका सुनते हुए CJI की पीठ ने कहा कि वह जल्द आदेश देना चाहेगी और जांच पैनल हेतु पूर्व न्यायाधीशों व पुलिस अधिकारियों के नाम सहित सामग्री सीलबंद लिफाफे में मांगी।"
+          },
+          "detail": {
+            "en": "Background: The Network of Women in Media, India (NWMI) moved the Court after women journalists covering protests against the Special Intensive Revision of electoral rolls alleged manhandling, detention and sexual harassment by Delhi Police, including an October 3 incident near Jantar Mantar. Senior counsel Indira Jaising appeared for the petitioners. What the court held (interim): CJI Kant indicated the Court wants to pass an order as soon as the material is received; enforceable guidelines for police interaction with journalists during protests and an independent inquiry with action against erring personnel have been sought. Law affected: No statute amended yet — but the expected guidelines could shape police-protestor-press protocols and accountability under service and criminal law.",
+            "hi": "पृष्ठभूमि: नेटवर्क ऑफ वीमेन इन मीडिया, इंडिया (NWMI) ने मतदाता सूची के विशेष गहन पुनरीक्षण (SIR) के विरोध प्रदर्शनों को कवर कर रहीं महिला पत्रकारों से दिल्ली पुलिस द्वारा कथित बदसलूकी, हिरासत और यौन उत्पीड़न (जंतर-मंतर के पास 3 अक्टूबर की घटना सहित) पर न्यायालय का दरवाजा खटखटाया। याचिकाकर्ताओं की ओर से वरिष्ठ अधिवक्ता इंदिरा जयसिंह पेश हुईं। न्यायालय ने क्या कहा (अंतरिम): CJI कांत ने संकेत दिया कि सामग्री मिलते ही आदेश दिया जाएगा; विरोध प्रदर्शनों के दौरान पत्रकारों से पुलिस के व्यवहार हेतु बाध्यकारी दिशानिर्देश और दोषी कर्मियों पर कार्रवाई सहित स्वतंत्र जांच की मांग की गई है। प्रभावित कानून: अभी कोई कानून संशोधित नहीं — लेकिन अपेक्षित दिशानिर्देश पुलिस-प्रदर्शनकारी-प्रेस प्रोटोकॉल और जवाबदेही को आकार दे सकते हैं।"
+          },
+          "source": "https://www.barandbench.com/news/litigation/delhi-protests-supreme-court-moots-panel-to-probe-sexual-violence-complaints-by-women-journalists",
+          "sourceName": "Bar & Bench"
+        },
+        {
+          "court": { "en": "Madras High Court", "hi": "मद्रास उच्च न्यायालय" },
+          "title": {
+            "en": "RSS route marches: State pulled up for repeated denials; minority presence not a valid ground",
+            "hi": "RSS रूट मार्च: बार-बार इनकार पर राज्य को फटकार; अल्पसंख्यक उपस्थिति वैध आधार नहीं"
+          },
+          "summary": {
+            "en": "Justice V. Lakshminarayanan questioned why Tamil Nadu keeps denying RSS route-march permission despite court orders allowing them, and ruled that citing mosques or minority apprehensions along the route is not a valid ground for refusal.",
+            "hi": "न्यायमूर्ति वी. लक्ष्मीनारायणन ने सवाल उठाया कि न्यायालय के अनुमति आदेशों के बावजूद तमिलनाडु RSS रूट मार्च की अनुमति क्यों नहीं दे रहा, और कहा कि मार्ग में मस्जिदों या अल्पसंख्यक आशंकाओं का हवाला इनकार का वैध आधार नहीं है।"
+          },
+          "detail": {
+            "en": "Background: The RSS sought permission for processions at 128 locations for Vijaya Dashami; police allowed only 58, citing mosques/minority localities, traffic and opposition groups (Jagadeesan v. State). What the court held: An earlier ruling (Justice G. Jayachandran) had already rejected these as 'lame' grounds; the Court said police were wrongly portraying minority communities as opposed to the processions and remarked the State was 'looking at citizens as enemies'. The Court asked what the State feared, noting marches had been permitted even in J&K. Law affected: No statute changed — but the rulings reinforce Article 19(1)(b) (right to assemble peaceably) and the requirement that restrictions under Article 19(3) meet the test of reasonable, non-arbitrary executive action.",
+            "hi": "पृष्ठभूमि: RSS ने विजयादशमी पर 128 स्थानों पर जुलूस की अनुमति मांगी; पुलिस ने मस्जिदों/अल्पसंख्यक बस्तियों, यातायात और विरोधी समूहों का हवाला देकर केवल 58 की अनुमति दी (जगदीसन बनाम राज्य)। न्यायालय ने क्या कहा: पूर्व निर्णय (न्यायमूर्ति जी. जयचंद्रन) इन आधारों को 'बहानेबाजी' कहकर पहले ही खारिज कर चुका था; न्यायालय ने कहा कि पुलिस अल्पसंख्यक समुदायों को गलत तरीके से जुलूस-विरोधी बता रही है और टिप्पणी की कि राज्य 'नागरिकों को शत्रु समझ रहा है'। न्यायालय ने पूछा कि राज्य को डर किस बात का है, जबकि जम्मू-कश्मीर में भी मार्च की अनुमति मिली थी। प्रभावित कानून: कोई कानून नहीं बदला — लेकिन ये फैसले अनुच्छेद 19(1)(b) (शांतिपूर्वक सभा का अधिकार) और अनुच्छेद 19(3) के तहत युक्तियुक्त, मनमानी-रहित प्रशासनिक कार्रवाई की कसौटी को मजबूत करते हैं।"
+          },
+          "source": "https://www.barandbench.com/news/litigation/dont-give-muslims-bad-name-by-citing-them-as-ground-to-disallow-rss-route-marches-madras-high-court",
+          "sourceName": "Bar & Bench"
+        },
+        {
+          "court": { "en": "Supreme Court of India", "hi": "भारत का सर्वोच्च न्यायालय" },
+          "title": {
+            "en": "Asaram's challenge to rape conviction and life sentence to be heard in November",
+            "hi": "आसाराम की दुष्कर्म सजा व आजीवन कारावास को चुनौती पर नवंबर में सुनवाई"
+          },
+          "summary": {
+            "en": "The Supreme Court will in November hear Asaram's special leave petition against his conviction and life sentence in the 2013 Jodhpur rape case. The listing is procedural at this stage — no relief granted yet.",
+            "hi": "सर्वोच्च न्यायालय नवंबर में 2013 के जोधपुर दुष्कर्म मामले में आसाराम की सजा और आजीवन कारावास के विरुद्ध विशेष अनुमति याचिका पर सुनवाई करेगा। यह अभी प्रक्रियात्मक सूचीबद्धता है — कोई राहत नहीं मिली है।"
+          },
+          "detail": {
+            "en": "Background: Asaram was convicted and sentenced to life imprisonment in the 2013 Jodhpur sexual assault case; his SLP (Crl) No. 11761/2026 challenges the conviction. What the court held: Nothing on merits yet — the Court has only listed the matter for hearing in November. For practitioners, the case remains a reference point on sentencing in POCSO/rape matters and the appellate standards for challenging concurrent findings of fact. Law affected: None changed at this stage; Sections 376 IPC / POCSO provisions as applied in the trial court's judgment remain under challenge.",
+            "hi": "पृष्ठभूमि: 2013 के जोधपुर यौन उत्पीड़न मामले में आसाराम को दोषी ठहराकर आजीवन कारावास दिया गया था; उनकी SLP (आपराधिक) सं. 11761/2026 सजा को चुनौती देती है। न्यायालय ने क्या कहा: गुण-दोष पर अभी कुछ नहीं — न्यायालय ने केवल नवंबर में सुनवाई हेतु मामला सूचीबद्ध किया है। अधिवक्ताओं के लिए यह मामला POCSO/दुष्कर्म मामलों में सजा और तथ्यात्मक निष्कर्षों को चुनौती देने के अपीलीय मानदंडों का संदर्भ बना हुआ है। प्रभावित कानून: इस चरण में कोई बदलाव नहीं; विचारण न्यायालय के निर्णय में लागू धारा 376 IPC / POCSO प्रावधान चुनौती के अधीन हैं।"
+          },
+          "source": "https://www.livelaw.in/top-stories/supreme-court-asaram-bail-ailing-wife-rape-case-554604",
+          "sourceName": "LiveLaw"
+        }
+      ]
+    }
+    </script>
+
     <section class="documents" id="documents" aria-labelledby="documents-title">
       <div class="shell">
         <div class="documents-top reveal">
@@ -581,7 +719,7 @@
     <section class="legal-warning" aria-labelledby="legal-warning-title">
       <div class="shell legal-warning-grid">
         <div class="reveal">
-          <span class="section-index">03</span>
+          <span class="section-index">04</span>
           <h2 id="legal-warning-title" data-i18n="legalWarningTitle">Legal &amp; security notice.</h2>
         </div>
         <div class="legal-warning-copy reveal">
@@ -637,6 +775,7 @@
       var translations = {
         en: {
           navPractice: "Practice",
+          navUpdates: "Updates",
           navDocuments: "Documents",
           navConsultation: "Consultation",
           heroLineOne: "Clear counsel.",
@@ -703,10 +842,22 @@
           disclaimer: "Information on this website does not constitute legal advice or create a lawyer–client relationship.",
           incorrectPassword: "Incorrect password. Please try again.",
           checking: "Checking…",
-          checkUnavailable: "Password check is unavailable in this browser."
+          checkUnavailable: "Password check is unavailable in this browser.",
+          updatesKicker: "Daily legal updates",
+          updatesTitle: "Today's judgments, in plain words.",
+          updatesCopy: "Key Supreme Court and High Court rulings, plus changes in sections and acts — summarised in English and Hindi every morning, with source links to read further.",
+          updatesUpdated: "Updated",
+          updatesNote: "Summaries are brief explainers, not legal advice. For the complete reasoning, open the linked source article — full judgments are published by the courts and reporting outlets.",
+          readAnalysis: "Read analysis",
+          hideAnalysis: "Hide",
+          fullStory: "Read full story ↗",
+          detailBackground: "Background",
+          detailHeld: "What the court held",
+          detailLaw: "Law affected"
         },
         hi: {
           navPractice: "कार्य क्षेत्र",
+          navUpdates: "अपडेट",
           navDocuments: "दस्तावेज़",
           navConsultation: "परामर्श",
           heroLineOne: "स्पष्ट सलाह।",
@@ -773,7 +924,18 @@
           disclaimer: "इस वेबसाइट की जानकारी कानूनी सलाह नहीं है और इससे अधिवक्ता–मुवक्किल संबंध नहीं बनता।",
           incorrectPassword: "गलत पासवर्ड। कृपया फिर प्रयास करें।",
           checking: "जांच हो रही है…",
-          checkUnavailable: "इस ब्राउज़र में पासवर्ड जांच उपलब्ध नहीं है।"
+          checkUnavailable: "इस ब्राउज़र में पासवर्ड जांच उपलब्ध नहीं है।",
+          updatesKicker: "दैनिक कानूनी अपडेट",
+          updatesTitle: "आज के फैसले, सरल शब्दों में।",
+          updatesCopy: "सुप्रीम कोर्ट और हाई कोर्ट के मुख्य फैसले तथा धाराओं व कानूनों में बदलाव — हर सुबह अंग्रेज़ी और हिंदी में सारांश, आगे पढ़ने के लिए स्रोत लिंक सहित।",
+          updatesUpdated: "अपडेट",
+          updatesNote: "सारांश संक्षिप्त विवरण हैं, कानूनी सलाह नहीं। पूर्ण तर्क हेतु लिंक किया गया स्रोत लेख खोलें — पूर्ण फैसले न्यायालयों और रिपोर्टिंग माध्यमों द्वारा प्रकाशित होते हैं।",
+          readAnalysis: "विश्लेषण पढ़ें",
+          hideAnalysis: "छिपाएं",
+          fullStory: "पूरी खबर पढ़ें ↗",
+          detailBackground: "पृष्ठभूमि",
+          detailHeld: "न्यायालय ने क्या कहा",
+          detailLaw: "प्रभावित कानून"
         }
       };
 
@@ -799,6 +961,106 @@
 
       function localizedExperience() {
         return currentLanguage === "hi" && SETTINGS.experience === "2 years" ? "2 वर्ष" : SETTINGS.experience;
+      }
+
+      function escapeHtml(value) {
+        return String(value).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+      }
+
+      function getLegalUpdates() {
+        try {
+          var node = document.getElementById("legalUpdatesData");
+          if (!node) return null;
+          return JSON.parse(node.textContent);
+        } catch (error) {
+          return null;
+        }
+      }
+
+      function renderLegalUpdates() {
+        var list = document.getElementById("updatesList");
+        var dateEl = document.getElementById("updatesDate");
+        if (!list) return;
+        var data = getLegalUpdates();
+        if (!data || !data.items || !data.items.length) {
+          list.innerHTML = "";
+          if (dateEl) dateEl.textContent = "—";
+          return;
+        }
+        if (dateEl) dateEl.textContent = currentLanguage === "hi" ? (data.dateHi || data.date) : data.date;
+        list.innerHTML = "";
+        data.items.forEach(function (item) {
+          var lang = currentLanguage === "hi" ? "hi" : "en";
+          var article = document.createElement("article");
+          article.className = "update-item";
+          var top = document.createElement("div");
+          top.className = "update-top";
+          var main = document.createElement("div");
+          var court = document.createElement("span");
+          court.className = "update-court";
+          court.textContent = item.court[lang] || item.court.en;
+          var heading = document.createElement("h3");
+          heading.textContent = item.title[lang] || item.title.en;
+          var summary = document.createElement("p");
+          summary.className = "update-summary";
+          summary.textContent = item.summary[lang] || item.summary.en;
+          main.appendChild(court);
+          main.appendChild(heading);
+          main.appendChild(summary);
+          var toggle = document.createElement("button");
+          toggle.type = "button";
+          toggle.className = "update-toggle";
+          toggle.textContent = t("readAnalysis");
+          toggle.setAttribute("aria-expanded", "false");
+          top.appendChild(main);
+          top.appendChild(toggle);
+          var detail = document.createElement("div");
+          detail.className = "update-detail";
+          detail.hidden = true;
+          var detailText = item.detail[lang] || item.detail.en;
+          var detailLabels = lang === "hi"
+            ? ["पृष्ठभूमि", "न्यायालय ने क्या कहा", "प्रभावित कानून"]
+            : ["Background", "What the court held", "Law affected"];
+          var labelPositions = [];
+          detailLabels.forEach(function (label) {
+            var idx = detailText.indexOf(label + ":");
+            if (idx !== -1) labelPositions.push({ label: label, idx: idx });
+          });
+          labelPositions.sort(function (a, b) { return a.idx - b.idx; });
+          if (!labelPositions.length) {
+            var fallback = document.createElement("p");
+            fallback.textContent = detailText;
+            detail.appendChild(fallback);
+          }
+          labelPositions.forEach(function (pos, i) {
+            var start = pos.idx + pos.label.length + 1;
+            var end = (i + 1 < labelPositions.length) ? labelPositions[i + 1].idx : detailText.length;
+            var h4 = document.createElement("h4");
+            h4.textContent = pos.label;
+            var p = document.createElement("p");
+            p.textContent = detailText.slice(start, end).trim();
+            detail.appendChild(h4);
+            detail.appendChild(p);
+          });
+          if (item.source) {
+            var link = document.createElement("a");
+            link.className = "update-source";
+            link.href = item.source;
+            link.target = "_blank";
+            link.rel = "noopener";
+            link.textContent = (item.sourceName ? item.sourceName + " · " : "") + t("fullStory");
+            detail.appendChild(link);
+          }
+          toggle.addEventListener("click", function () {
+            var open = article.classList.toggle("open");
+            detail.hidden = !open;
+            toggle.setAttribute("aria-expanded", String(open));
+            toggle.textContent = open ? t("hideAnalysis") : t("readAnalysis");
+          });
+          article.appendChild(top);
+          article.appendChild(detail);
+          list.appendChild(article);
+        });
       }
 
       function renderPracticeAreas() {
@@ -841,6 +1103,7 @@
         passwordHint.textContent = SETTINGS.passwordHint[currentLanguage] || SETTINGS.passwordHint.en;
         gateInput.placeholder = currentLanguage === "hi" ? "पासवर्ड" : "Password";
         renderPracticeAreas();
+        renderLegalUpdates();
       }
 
       document.querySelectorAll("[data-language]").forEach(function (button) {
