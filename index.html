@@ -337,6 +337,34 @@
     .update-source { display: inline-block; margin-top: 16px; color: #c49b5e; font-size: .85rem; text-decoration: none; border-bottom: 1px solid rgba(196,155,94,.55); padding-bottom: 2px; }
     .update-source:hover { color: #e0bc7f; }
     .updates-note { margin-top: 34px; color: rgba(255,255,255,.45); font-size: .78rem; max-width: 720px; }
+    .updates-tabs { display: flex; gap: 10px; margin: 0 0 26px; }
+    .updates-tab { background: transparent; border: 1px solid rgba(255,255,255,.35); color: var(--on-dark); border-radius: 999px; padding: 9px 22px; font-size: .8rem; letter-spacing: .04em; cursor: pointer; }
+    .updates-tab:hover { border-color: #c49b5e; color: #c49b5e; }
+    .updates-tab.active { background: #c49b5e; border-color: #c49b5e; color: #1a1410; font-weight: 600; }
+    .archive-dates { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 10px; }
+    .archive-date { background: transparent; border: 1px solid rgba(255,255,255,.25); color: rgba(255,255,255,.75); border-radius: 999px; padding: 7px 16px; font-size: .75rem; cursor: pointer; }
+    .archive-date:hover { border-color: #c49b5e; color: #c49b5e; }
+    .archive-date.active { background: rgba(196,155,94,.16); border-color: #c49b5e; color: #c49b5e; }
+
+    .library { background: var(--dark); color: var(--on-dark); padding: clamp(84px, 11vw, 144px) 0; }
+    .library-head { display: grid; grid-template-columns: .7fr 1.3fr; gap: 50px; align-items: end; margin-bottom: 54px; }
+    .library h2 { font-size: clamp(2.35rem, 4.6vw, 4.45rem); line-height: 1.08; letter-spacing: -.035em; }
+    .library-head > p { justify-self: end; max-width: 390px; margin: 0; color: rgba(255,255,255,.62); font-size: .9rem; }
+    .library-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+    .judgement-card { border: 1px solid rgba(255,255,255,.16); border-radius: 14px; padding: 26px 24px; display: flex; flex-direction: column; gap: 10px; background: rgba(255,255,255,.02); }
+    .judgement-card:hover { border-color: rgba(196,155,94,.55); }
+    .judgement-meta { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; color: #c49b5e; }
+    .judgement-card h3 { font-size: 1.18rem; line-height: 1.35; margin: 0; }
+    .judgement-citation { font-size: .78rem; color: rgba(255,255,255,.5); margin: 0; }
+    .judgement-summary { margin: 0; color: rgba(255,255,255,.72); font-size: .88rem; line-height: 1.65; flex: 1; }
+    .judgement-link { align-self: flex-start; margin-top: 8px; display: inline-block; color: #c49b5e; font-size: .85rem; text-decoration: none; border: 1px solid rgba(196,155,94,.55); border-radius: 999px; padding: 9px 20px; }
+    .judgement-link:hover { background: #c49b5e; color: #1a1410; }
+    .library-note { margin-top: 34px; color: rgba(255,255,255,.45); font-size: .78rem; max-width: 720px; }
+    @media (max-width: 900px) {
+      .library-grid { grid-template-columns: 1fr; }
+      .library-head { grid-template-columns: 1fr; gap: 18px; }
+      .library-head > p { justify-self: start; }
+    }
     @media (max-width: 760px) {
       .updates-head { grid-template-columns: 1fr; gap: 18px; }
       .updates-head > p { justify-self: start; }
@@ -486,6 +514,7 @@
       <nav>
         <a href="#practice" data-i18n="navPractice">Practice</a>
         <a href="#updates" data-i18n="navUpdates">Updates</a>
+        <a href="#library" data-i18n="navLibrary">Library</a>
         <a href="#documents" data-i18n="navDocuments">Documents</a>
         <a class="nav-cta" href="#contact" data-i18n="navConsultation">Consultation</a>
         <div class="language-switch" role="group" aria-label="Language / भाषा">
@@ -572,6 +601,11 @@
           <p data-i18n="updatesCopy">Key Supreme Court and High Court rulings, plus changes in sections and acts — summarised in English and Hindi every morning, with source links to read further.</p>
         </div>
         <p class="updates-date reveal"><span data-i18n="updatesUpdated">Updated</span>: <span id="updatesDate">—</span></p>
+        <div class="updates-tabs reveal" role="tablist" aria-label="Updates views">
+          <button type="button" class="updates-tab active" data-tab="today" data-i18n="tabToday">Today</button>
+          <button type="button" class="updates-tab" data-tab="archive" data-i18n="tabArchive">Daily Judgements</button>
+        </div>
+        <div class="archive-dates reveal" id="archiveDates" hidden></div>
         <div class="updates-list reveal" id="updatesList"></div>
         <p class="updates-note reveal" data-i18n="updatesNote">Summaries are brief explainers, not legal advice. For the complete reasoning, open the linked source article — full judgments are published by the courts and reporting outlets.</p>
       </div>
@@ -669,6 +703,27 @@
       ]
     }
     </script>
+    <script type="application/json" id="dailyJudgementsArchive">
+{"days": [{"date": "16 October 2026", "dateHi": "16 अक्टूबर 2026", "items": [{"court": {"en": "Supreme Court of India", "hi": "भारत का सर्वोच्च न्यायालय"}, "title": {"en": "Conversion to another religion does not carry backward-class quota with it", "hi": "धर्म परिवर्तन से पिछड़ा वर्ग का आरक्षण स्वतः नहीं मिलता"}, "summary": {"en": "The Supreme Court upheld the Madras High Court's order striking down a Tamil Nadu government order that let converts to Islam claim reservation under the Backward Class (Muslim) category based on pre-conversion status. Social backwardness, the Court held, cannot be transferred across religions.", "hi": "सर्वोच्च न्यायालय ने मद्रास हाई कोर्ट के फैसले को बरकरार रखा, जिसमें तमिलनाडु सरकार का वह आदेश रद्द किया गया था जो इस्लाम अपनाने वालों को धर्म परिवर्तन से पहले की स्थिति के आधार पर पिछड़ा वर्ग (मुस्लिम) श्रेणी में आरक्षण देता था। न्यायालय ने कहा कि सामाजिक पिछड़ापन धर्म बदलने से स्वतः स्थानांतरित नहीं होता।"}, "detail": {"en": "Background: Sameer Ahamed, born to Hindu parents, converted to Islam in 2015 and sought a community certificate as 'Muslim Lebbai' for reservation benefits; the Tahsildar refused. The Tamil Nadu government's March 2024 order had opened a route for BC/MBC/Denotified/SC converts to claim Backward Class (Muslim) benefits. What the court held: A bench of Justices Prashant Kumar Mishra and Shree Chandrashekhar held that no entitlement under Article 16(4) conditioned on membership of the Hindu social order can be claimed merely on antecedent membership after conversion. A Jamath certificate proves conversion, not statutory Backward Class membership. Law affected: Article 16(4) of the Constitution; Tamil Nadu G.O. of 9 March 2024 quashed; Constitution (Scheduled Castes) Order, 1950 reiterated — only Hindus, Sikhs and Buddhists can claim SC status.", "hi": "पृष्ठभूमि: हिंदू माता-पिता के घर जन्मे समीर अहमद ने 2015 में इस्लाम अपनाया और आरक्षण हेतु 'मुस्लिम लब्बै' समुदाय प्रमाणपत्र मांगा; तहसीलदार ने इनकार कर दिया। तमिलनाडु सरकार के मार्च 2024 के आदेश ने पिछड़ा/अति-पिछड़ा/विमुक्त/SC धर्मांतरितों को पिछड़ा वर्ग (मुस्लिम) लाभ का रास्ता दिया था। न्यायालय ने क्या कहा: न्यायमूर्ति प्रशांत कुमार मिश्रा और न्यायमूर्ति श्री चंद्रशेखर की पीठ ने कहा कि हिंदू सामाजिक व्यवस्था की सदस्यता पर आधारित अनुच्छेद 16(4) का कोई लाभ धर्म परिवर्तन के बाद केवल पूर्व सदस्यता के आधार पर नहीं मांगा जा सकता। जमात का प्रमाणपत्र धर्म परिवर्तन सिद्ध करता है, वैधानिक पिछड़ा वर्ग सदस्यता नहीं। प्रभावित कानून: संविधान का अनुच्छेद 16(4); 9 मार्च 2024 का तमिलनाडु शासनादेश रद्द; अनुसूचित जाति आदेश, 1950 दोहराया गया — केवल हिंदू, सिख और बौद्ध ही SC दर्जा पा सकते हैं।"}, "source": "https://www.thehindubusinessline.com/news/sc-holds-conversion-does-not-automatically-grant-quota-benefits/article71589466.ece", "sourceName": "The Hindu BusinessLine"}, {"court": {"en": "Delhi High Court", "hi": "दिल्ली उच्च न्यायालय"}, "title": {"en": "Woman can be charged with gang rape even without physically committing it", "hi": "शारीरिक रूप से दुष्कर्म न करने पर भी महिला पर सामूहिक दुष्कर्म का आरोप लग सकता है"}, "summary": {"en": "Justice Anup Jairam Bhambhani held that 'persons' in Section 376D IPC / Section 70 BNS is gender-neutral — a woman acting in furtherance of a common intention can be charged with gang rape. A woman acting alone, however, cannot face the charge.", "hi": "न्यायमूर्ति अनुप जयराम भंभानी ने कहा कि धारा 376D IPC / धारा 70 BNS में 'व्यक्तियों' शब्द लिंग-तटस्थ है — समान आशय से काम करने वाली महिला पर सामूहिक दुष्कर्म का आरोप लग सकता है। हालांकि अकेली महिला पर यह आरोप नहीं लग सकता।"}, "detail": {"en": "Background: A criminal revision challenged framing of charges against a woman (accused of forcing her minor daughter into sexual acts with another accused) under BNS provisions including Section 70 and Section 6 of the POCSO Act. What the court held: For gang rape it is not necessary that a person acting in furtherance of a common intention must also be among those who physically commit rape — the provision creates a legal fiction deeming every group member to have committed the offence. The court distinguished pre-2013 precedents (Priya Patel), noting the 2013 amendment made gang rape a standalone offence under Section 376D. It left open whether 'man' in the definition of rape (Section 375 IPC / 63 BNS) is gender-neutral. Law affected: Section 376D IPC; Section 70 BNS; Section 6, POCSO Act (upheld as gender-neutral for penetrative sexual assault).", "hi": "पृष्ठभूमि: एक महिला (जिस पर अपनी नाबालिग बेटी से दूसरे आरोपी के साथ यौन कृत्य कराने का आरोप है) के विरुद्ध BNS की धारा 70 और POCSO अधिनियम की धारा 6 सहित आरोप तय करने को चुनौती दी गई थी। न्यायालय ने क्या कहा: सामूहिक दुष्कर्म के लिए यह आवश्यक नहीं कि समान आशय से काम करने वाला व्यक्ति शारीरिक रूप से दुष्कर्म करने वालों में भी हो — यह प्रावधान विधिक कल्पना (legal fiction) रचता है कि समूह का हर सदस्य अपराधी माना जाएगा। न्यायालय ने 2013 से पहले के निर्णयों (प्रिया पटेल) को अलग करते हुए कहा कि 2013 के संशोधन ने सामूहिक दुष्कर्म को धारा 376D के तहत स्वतंत्र अपराध बनाया। दुष्कर्म की परिभाषा (धारा 375 IPC / 63 BNS) में 'पुरुष' शब्द लिंग-तटस्थ है या नहीं — यह प्रश्न खुला छोड़ा गया। प्रभावित कानून: धारा 376D IPC; धारा 70 BNS; POCSO अधिनियम की धारा 6 (प्रवेशक यौन हमले हेतु लिंग-तटस्थ मानी गई)।"}, "source": "https://www.livelaw.in/high-court/delhi-high-court/women-can-be-charged-with-gang-rape-even-if-they-dont-physically-commit-rape-delhi-high-court-554857", "sourceName": "LiveLaw"}, {"court": {"en": "Supreme Court of India", "hi": "भारत का सर्वोच्च न्यायालय"}, "title": {"en": "Panel mooted to probe sexual violence complaints by women journalists", "hi": "महिला पत्रकारों की यौन हिंसा शिकायतों की जांच हेतु पैनल का सुझाव"}, "summary": {"en": "Hearing the NWMI petition on alleged manhandling and sexual harassment of women journalists during Delhi's SIR protests, the CJI-led bench said it would like to pass orders soon and asked for material — including names of former judges and police officers for a probe panel — in a sealed envelope.", "hi": "दिल्ली में SIR विरोध प्रदर्शनों के दौरान महिला पत्रकारों से कथित बदसलूकी और यौन उत्पीड़न पर NWMI की याचिका सुनते हुए CJI की पीठ ने कहा कि वह जल्द आदेश देना चाहेगी और जांच पैनल हेतु पूर्व न्यायाधीशों व पुलिस अधिकारियों के नाम सहित सामग्री सीलबंद लिफाफे में मांगी।"}, "detail": {"en": "Background: The Network of Women in Media, India (NWMI) moved the Court after women journalists covering protests against the Special Intensive Revision of electoral rolls alleged manhandling, detention and sexual harassment by Delhi Police, including an October 3 incident near Jantar Mantar. Senior counsel Indira Jaising appeared for the petitioners. What the court held (interim): CJI Kant indicated the Court wants to pass an order as soon as the material is received; enforceable guidelines for police interaction with journalists during protests and an independent inquiry with action against erring personnel have been sought. Law affected: No statute amended yet — but the expected guidelines could shape police-protestor-press protocols and accountability under service and criminal law.", "hi": "पृष्ठभूमि: नेटवर्क ऑफ वीमेन इन मीडिया, इंडिया (NWMI) ने मतदाता सूची के विशेष गहन पुनरीक्षण (SIR) के विरोध प्रदर्शनों को कवर कर रहीं महिला पत्रकारों से दिल्ली पुलिस द्वारा कथित बदसलूकी, हिरासत और यौन उत्पीड़न (जंतर-मंतर के पास 3 अक्टूबर की घटना सहित) पर न्यायालय का दरवाजा खटखटाया। याचिकाकर्ताओं की ओर से वरिष्ठ अधिवक्ता इंदिरा जयसिंह पेश हुईं। न्यायालय ने क्या कहा (अंतरिम): CJI कांत ने संकेत दिया कि सामग्री मिलते ही आदेश दिया जाएगा; विरोध प्रदर्शनों के दौरान पत्रकारों से पुलिस के व्यवहार हेतु बाध्यकारी दिशानिर्देश और दोषी कर्मियों पर कार्रवाई सहित स्वतंत्र जांच की मांग की गई है। प्रभावित कानून: अभी कोई कानून संशोधित नहीं — लेकिन अपेक्षित दिशानिर्देश पुलिस-प्रदर्शनकारी-प्रेस प्रोटोकॉल और जवाबदेही को आकार दे सकते हैं।"}, "source": "https://www.barandbench.com/news/litigation/delhi-protests-supreme-court-moots-panel-to-probe-sexual-violence-complaints-by-women-journalists", "sourceName": "Bar & Bench"}, {"court": {"en": "Madras High Court", "hi": "मद्रास उच्च न्यायालय"}, "title": {"en": "RSS route marches: State pulled up for repeated denials; minority presence not a valid ground", "hi": "RSS रूट मार्च: बार-बार इनकार पर राज्य को फटकार; अल्पसंख्यक उपस्थिति वैध आधार नहीं"}, "summary": {"en": "Justice V. Lakshminarayanan questioned why Tamil Nadu keeps denying RSS route-march permission despite court orders allowing them, and ruled that citing mosques or minority apprehensions along the route is not a valid ground for refusal.", "hi": "न्यायमूर्ति वी. लक्ष्मीनारायणन ने सवाल उठाया कि न्यायालय के अनुमति आदेशों के बावजूद तमिलनाडु RSS रूट मार्च की अनुमति क्यों नहीं दे रहा, और कहा कि मार्ग में मस्जिदों या अल्पसंख्यक आशंकाओं का हवाला इनकार का वैध आधार नहीं है।"}, "detail": {"en": "Background: The RSS sought permission for processions at 128 locations for Vijaya Dashami; police allowed only 58, citing mosques/minority localities, traffic and opposition groups (Jagadeesan v. State). What the court held: An earlier ruling (Justice G. Jayachandran) had already rejected these as 'lame' grounds; the Court said police were wrongly portraying minority communities as opposed to the processions and remarked the State was 'looking at citizens as enemies'. The Court asked what the State feared, noting marches had been permitted even in J&K. Law affected: No statute changed — but the rulings reinforce Article 19(1)(b) (right to assemble peaceably) and the requirement that restrictions under Article 19(3) meet the test of reasonable, non-arbitrary executive action.", "hi": "पृष्ठभूमि: RSS ने विजयादशमी पर 128 स्थानों पर जुलूस की अनुमति मांगी; पुलिस ने मस्जिदों/अल्पसंख्यक बस्तियों, यातायात और विरोधी समूहों का हवाला देकर केवल 58 की अनुमति दी (जगदीसन बनाम राज्य)। न्यायालय ने क्या कहा: पूर्व निर्णय (न्यायमूर्ति जी. जयचंद्रन) इन आधारों को 'बहानेबाजी' कहकर पहले ही खारिज कर चुका था; न्यायालय ने कहा कि पुलिस अल्पसंख्यक समुदायों को गलत तरीके से जुलूस-विरोधी बता रही है और टिप्पणी की कि राज्य 'नागरिकों को शत्रु समझ रहा है'। न्यायालय ने पूछा कि राज्य को डर किस बात का है, जबकि जम्मू-कश्मीर में भी मार्च की अनुमति मिली थी। प्रभावित कानून: कोई कानून नहीं बदला — लेकिन ये फैसले अनुच्छेद 19(1)(b) (शांतिपूर्वक सभा का अधिकार) और अनुच्छेद 19(3) के तहत युक्तियुक्त, मनमानी-रहित प्रशासनिक कार्रवाई की कसौटी को मजबूत करते हैं।"}, "source": "https://www.barandbench.com/news/litigation/dont-give-muslims-bad-name-by-citing-them-as-ground-to-disallow-rss-route-marches-madras-high-court", "sourceName": "Bar & Bench"}, {"court": {"en": "Supreme Court of India", "hi": "भारत का सर्वोच्च न्यायालय"}, "title": {"en": "Asaram's challenge to rape conviction and life sentence to be heard in November", "hi": "आसाराम की दुष्कर्म सजा व आजीवन कारावास को चुनौती पर नवंबर में सुनवाई"}, "summary": {"en": "The Supreme Court will in November hear Asaram's special leave petition against his conviction and life sentence in the 2013 Jodhpur rape case. The listing is procedural at this stage — no relief granted yet.", "hi": "सर्वोच्च न्यायालय नवंबर में 2013 के जोधपुर दुष्कर्म मामले में आसाराम की सजा और आजीवन कारावास के विरुद्ध विशेष अनुमति याचिका पर सुनवाई करेगा। यह अभी प्रक्रियात्मक सूचीबद्धता है — कोई राहत नहीं मिली है।"}, "detail": {"en": "Background: Asaram was convicted and sentenced to life imprisonment in the 2013 Jodhpur sexual assault case; his SLP (Crl) No. 11761/2026 challenges the conviction. What the court held: Nothing on merits yet — the Court has only listed the matter for hearing in November. For practitioners, the case remains a reference point on sentencing in POCSO/rape matters and the appellate standards for challenging concurrent findings of fact. Law affected: None changed at this stage; Sections 376 IPC / POCSO provisions as applied in the trial court's judgment remain under challenge.", "hi": "पृष्ठभूमि: 2013 के जोधपुर यौन उत्पीड़न मामले में आसाराम को दोषी ठहराकर आजीवन कारावास दिया गया था; उनकी SLP (आपराधिक) सं. 11761/2026 सजा को चुनौती देती है। न्यायालय ने क्या कहा: गुण-दोष पर अभी कुछ नहीं — न्यायालय ने केवल नवंबर में सुनवाई हेतु मामला सूचीबद्ध किया है। अधिवक्ताओं के लिए यह मामला POCSO/दुष्कर्म मामलों में सजा और तथ्यात्मक निष्कर्षों को चुनौती देने के अपीलीय मानदंडों का संदर्भ बना हुआ है। प्रभावित कानून: इस चरण में कोई बदलाव नहीं; विचारण न्यायालय के निर्णय में लागू धारा 376 IPC / POCSO प्रावधान चुनौती के अधीन हैं।"}, "source": "https://www.livelaw.in/top-stories/supreme-court-asaram-bail-ailing-wife-rape-case-554604", "sourceName": "LiveLaw"}]}]}
+    </script>
+    <script type="application/json" id="usefulJudgementsData">
+{"items": [{"caseName": "Kesavananda Bharati v. State of Kerala", "citation": "(1973) 4 SCC 225", "court": {"en": "Supreme Court of India", "hi": "भारत का सर्वोच्च न्यायालय"}, "year": 1973, "summary": {"en": "The most important constitutional case in Indian history. A 13-judge bench ruled by a narrow 7:6 majority that Parliament may amend the Constitution but cannot destroy its basic structure — its core identity, such as democracy, the rule of law, federalism and judicial review. It protects the Constitution itself from being rewritten by a temporary majority.", "hi": "यह भारतीय इतिहास का सबसे महत्वपूर्ण संवैधानिक निर्णय है। 13 न्यायाधीशों की पीठ ने 7:6 के बहुमत से कहा कि संसद संविधान में संशोधन कर सकती है, लेकिन उसकी मूल संरचना (बेसिक स्ट्रक्चर) — जैसे लोकतंत्र, विधि का शासन, संघीयता और न्यायिक पुनरावलोकन — को नष्ट नहीं कर सकती। यह संविधान को अस्थायी बहुमत से बदलने से बचाता है।"}, "pdfUrl": "https://indiankanoon.org/doc/257876/", "sourceName": "Indian Kanoon"}, {"caseName": "Maneka Gandhi v. Union of India", "citation": "(1978) 1 SCC 248", "court": {"en": "Supreme Court of India", "hi": "भारत का सर्वोच्च न्यायालय"}, "year": 1978, "summary": {"en": "This judgment transformed Article 21 from a narrow guarantee of physical survival into a broad right to live with human dignity. It held that any 'procedure established by law' depriving a person of life or liberty must be fair, just and reasonable, not arbitrary. It also linked Articles 14, 19 and 21 into the famous 'golden triangle', making most fundamental-rights cases cite this ruling.", "hi": "इस फैसले ने अनुच्छेद 21 को केवल जीने के अधिकार से बढ़ाकर गरिमा के साथ जीने के व्यापक अधिकार में बदल दिया। न्यायालय ने कहा कि जीवन या स्वतंत्रता छीनने वाली कोई भी विधिक प्रक्रिया मनमानी नहीं, बल्कि उचित, न्यायसंगत और तर्कसंगत होनी चाहिए। अनुच्छेद 14, 19 और 21 को एक साथ जोड़ने वाला 'गोल्डन ट्रायंगल' सिद्धांत भी इसी केस से आया, जिसे आज भी अधिकांश मौलिक अधिकार के मामलों में उद्धृत किया जाता है।"}, "pdfUrl": "https://indiankanoon.org/doc/1766147/", "sourceName": "Indian Kanoon"}, {"caseName": "Vishaka v. State of Rajasthan", "citation": "(1997) 6 SCC 241", "court": {"en": "Supreme Court of India", "hi": "भारत का सर्वोच्च न्यायालय"}, "year": 1997, "summary": {"en": "With no law on workplace sexual harassment existing, the Supreme Court itself laid down binding guidelines to protect the fundamental rights of working women to equality and dignity. These Vishaka Guidelines served as the law of the land for 16 years, until Parliament enacted the POSH Act in 2013.", "hi": "जब कार्यस्थल पर यौन उत्पीड़न को लेकर कोई कानून नहीं था, तो सर्वोच्च न्यायालय ने स्वयं बाध्यकारी दिशा-निर्देश तय किए ताकि कामकाजी महिलाओं के समानता और गरिमा के मौलिक अधिकार सुरक्षित रहें। ये विशाखा दिशा-निर्देश 16 वर्षों तक देश का कानून रहे, जब तक 2013 में POSH अधिनियम नहीं बना।"}, "pdfUrl": "https://indiankanoon.org/doc/1031794/", "sourceName": "Indian Kanoon"}, {"caseName": "Minerva Mills Ltd. v. Union of India", "citation": "(1980) 3 SCC 625", "court": {"en": "Supreme Court of India", "hi": "भारत का सर्वोच्च न्यायालय"}, "year": 1980, "summary": {"en": "This judgment strengthened the basic structure doctrine by striking down parts of the 42nd Amendment passed during the Emergency. The Court held that Parliament cannot grant itself unlimited amending power, and that the harmony between fundamental rights and directive principles is itself part of the Constitution's basic structure.", "hi": "यह निर्णय आपातकाल के दौरान पारित 42वें संशोधन के कुछ हिस्सों को रद्द करके बेसिक स्ट्रक्चर सिद्धांत को मजबूत करता है। न्यायालय ने कहा कि संसद स्वयं को असीमित संशोधन शक्ति नहीं दे सकती, और मौलिक अधिकारों तथा नीति निर्देशक तत्वों के बीच संतुलन भी संविधान की मूल संरचना का हिस्सा है।"}, "pdfUrl": "https://indiankanoon.org/doc/1939993/", "sourceName": "Indian Kanoon"}, {"caseName": "S.R. Bommai v. Union of India", "citation": "(1994) 3 SCC 1", "court": {"en": "Supreme Court of India", "hi": "भारत का सर्वोच्च न्यायालय"}, "year": 1994, "summary": {"en": "A nine-judge bench settled the law on President's Rule under Article 356, holding that such a proclamation is subject to judicial review and cannot be used to dismiss a state government for political reasons. It also declared secularism to be a part of the Constitution's basic structure.", "hi": "नौ न्यायाधीशों की पीठ ने अनुच्छेद 356 के तहत राष्ट्रपति शासन पर कानून स्पष्ट किया — कहा कि ऐसी घोषणा न्यायिक पुनरावलोकन के अधीन है और राजनीतिक कारणों से राज्य सरकार बर्खास्त नहीं की जा सकती। साथ ही धर्मनिरपेक्षता को संविधान की मूल संरचना का हिस्सा घोषित किया।"}, "pdfUrl": "https://indiankanoon.org/doc/141126788/", "sourceName": "Indian Kanoon"}, {"caseName": "Golaknath v. State of Punjab", "citation": "1967 AIR 1643", "court": {"en": "Supreme Court of India", "hi": "भारत का सर्वोच्च न्यायालय"}, "year": 1967, "summary": {"en": "An 11-judge bench held by a 6:5 majority that Parliament cannot amend the Constitution to take away or curtail fundamental rights. Though overruled by Kesavananda Bharati six years later, this case first raised the idea that the Constitution has an unchangeable core, planting the seed of the basic structure doctrine.", "hi": "11 न्यायाधीशों की पीठ ने 6:5 के बहुमत से कहा कि संसद संविधान संशोधन द्वारा मौलिक अधिकारों को छीन या कम नहीं कर सकती। छह साल बाद केसवानंद भारती ने इसे पलट दिया, लेकिन यही मामला पहली बार यह विचार लेकर आया कि संविधान में कुछ अपरिवर्तनीय मूल तत्व हैं — जिससे बेसिक स्ट्रक्चर सिद्धांत की नींव पड़ी।"}, "pdfUrl": "https://indiankanoon.org/doc/120358/", "sourceName": "Indian Kanoon"}, {"caseName": "Shayara Bano v. Union of India", "citation": "(2017) 9 SCC 1", "court": {"en": "Supreme Court of India", "hi": "भारत का सर्वोच्च न्यायालय"}, "year": 2017, "summary": {"en": "A five-judge bench struck down instant triple talaq (talaq-e-biddat) by a 3:2 majority, holding it manifestly arbitrary and against equality. The judgment settled that personal laws must pass the test of fundamental rights and that the practice was not an essential religious practice protected by the Constitution.", "hi": "पाँच न्यायाधीशों की पीठ ने 3:2 बहुमत से तीन तलाक (तलाक-ए-बिद्दत) को असंवैधानिक घोषित किया और इसे समानता के अधिकार के विरुद्ध मनमानी प्रथा बताया। इस फैसले ने तय किया कि निजी कानून भी मौलिक अधिकारों की कसौटी पर खरे उतरने होंगे और यह प्रथा अनिवार्य धार्मिक क्रिया नहीं है।"}, "pdfUrl": "https://indiankanoon.org/doc/115701246/", "sourceName": "Indian Kanoon"}, {"caseName": "Navtej Singh Johar v. Union of India", "citation": "2018 (10) SCC 1", "court": {"en": "Supreme Court of India", "hi": "भारत का सर्वोच्च न्यायालय"}, "year": 2018, "summary": {"en": "The Court unanimously read down Section 377 of the IPC so that consensual sexual acts between adults of the same sex are no longer criminal. It held that dignity, privacy and equal citizenship extend to the LGBTQ+ community, overruling the earlier Suresh Koushal decision.", "hi": "न्यायालय ने सर्वसम्मति से आईपीसी की धारा 377 को सीमित किया, ताकि वयस्कों के बीच आपसी सहमति से समलैंगिक संबंध अब अपराध न रहें। कोर्ट ने कहा कि गरिमा, निजता और समान नागरिकता LGBTQ+ समुदाय के लिए भी उतनी ही सुरक्षित है, और सुरेश कौशल के पहले के फैसले को पलट दिया।"}, "pdfUrl": "https://indiankanoon.org/doc/168671544/", "sourceName": "Indian Kanoon"}, {"caseName": "Justice K.S. Puttaswamy (Retd.) v. Union of India", "citation": "2017 (10) SCC 1", "court": {"en": "Supreme Court of India", "hi": "भारत का सर्वोच्च न्यायालय"}, "year": 2017, "summary": {"en": "A nine-judge bench unanimously declared the right to privacy a fundamental right under Articles 14, 19 and 21, overruling M.P. Sharma and Kharak Singh. This became the foundation for later rulings on Aadhaar, data protection, Section 377 and the dignity of personal choices.", "hi": "नौ न्यायाधीशों की पीठ ने सर्वसम्मति से निजता के अधिकार को अनुच्छेद 14, 19 और 21 के तहत मौलिक अधिकार घोषित किया और एम.पी. शर्मा तथा खड़क सिंह के फैसलों को पलट दिया। यही फैसला आगे आधार, डेटा संरक्षण, धारा 377 और व्यक्तिगत स्वतंत्रता से जुड़े मामलों की नींव बना।"}, "pdfUrl": "https://indiankanoon.org/doc/91938676/", "sourceName": "Indian Kanoon"}, {"caseName": "D.K. Basu v. State of West Bengal", "citation": "(1997) 1 SCC 416", "court": {"en": "Supreme Court of India", "hi": "भारत का सर्वोच्च न्यायालय"}, "year": 1997, "summary": {"en": "After rising custodial deaths, the Court laid down 11 mandatory safeguards to be followed at every arrest, such as identifying the arresting officers, informing a relative, and recording the arrest in a diary. It also held that the State must compensate victims of custodial violence.", "hi": "हिरासत में बढ़ती मौतों के बाद कोर्ट ने गिरफ्तारी के समय 11 अनिवार्य सुरक्षा-उपाय तय किए — जैसे गिरफ्तार करने वाले अधिकारियों की पहचान, रिश्तेदार को सूचना और गिरफ्तारी का रिकॉर्ड। कोर्ट ने यह भी कहा कि हिरासत में हिंसा के पीड़ितों को राज्य मुआवज़ा देगा।"}, "pdfUrl": "https://indiankanoon.org/doc/501198/", "sourceName": "Indian Kanoon"}, {"caseName": "Lalita Kumari v. Government of Uttar Pradesh", "citation": "(2014) 2 SCC 1", "court": {"en": "Supreme Court of India", "hi": "भारत का सर्वोच्च न्यायालय"}, "year": 2014, "summary": {"en": "A Constitution Bench ruled that when information discloses a cognizable offence, the police must register an FIR under Section 154 CrPC — no discretion and no preliminary inquiry is allowed. This ended the common practice of police refusing to record complaints, except in narrowly defined categories.", "hi": "संविधान पीठ ने फैसला दिया कि जब जानकारी से संज्ञेय अपराध बनता है, तो पुलिस को धारा 154 सीआरपीसी के तहत FIR दर्ज करनी ही होगी — न कोई विवेकाधिकार और न ही प्रारंभिक जाँच। इससे पुलिस द्वारा शिकायत दर्ज करने से इनकार की आम प्रथा समाप्त हुई, कुछ सीमित श्रेणियों को छोड़कर।"}, "pdfUrl": "https://indiankanoon.org/doc/10239019/", "sourceName": "Indian Kanoon"}, {"caseName": "Arnesh Kumar v. State of Bihar", "citation": "(2014) 8 SCC 273", "court": {"en": "Supreme Court of India", "hi": "भारत का सर्वोच्च न्यायालय"}, "year": 2014, "summary": {"en": "This ruling put firm brakes on routine and mechanical arrests by police, especially in cases carrying up to seven years' imprisonment. It made it mandatory for officers to follow the Section 41/41A CrPC checklist and record written reasons before arresting, and required magistrates to verify the arrest's legality before authorising detention. It is the leading authority cited in almost every bail and wrongful-arrest plea today.", "hi": "इस फैसले ने पुलिस द्वारा बिना सोचे-समझे की जाने वाली गिरफ्तारियों पर सख्त रोक लगाई, खासकर सात साल तक की सजा वाले मामलों में। न्यायालय ने कहा कि गिरफ्तारी से पहले धारा 41/41ए सीआरपीसी की चेकलिस्ट का पालन और लिखित कारण दर्ज करना अनिवार्य है, और मजिस्ट्रेट को हिरासत की अनुमति से पहले गिरफ्तारी की वैधता जांचनी होगी। आज जमानत और गलत गिरफ्तारी की लगभग हर याचिका में यही फैसला उद्धृत होता है।"}, "pdfUrl": "https://indiankanoon.org/doc/2982624/", "sourceName": "Indian Kanoon"}, {"caseName": "Bachan Singh v. State of Punjab", "citation": "(1980) 2 SCC 684", "court": {"en": "Supreme Court of India", "hi": "भारत का सर्वोच्च न्यायालय"}, "year": 1980, "summary": {"en": "A five-judge Constitution Bench upheld the death penalty's constitutional validity but confined it to the 'rarest of rare' cases where life imprisonment is unquestionably inadequate. It required sentencing courts to weigh aggravating and mitigating circumstances together, including the offender's chance of reformation. This framework still governs every death-sentence decision in India.", "hi": "पांच न्यायाधीशों की संविधान पीठ ने मृत्युदंड की संवैधानिक वैधता बरकरार रखी, लेकिन इसे केवल 'रेयरेस्ट ऑफ रेयर' (अत्यंत विरल) मामलों तक सीमित कर दिया, जहां आजीवन कारावास निःसंदेह अपर्याप्त हो। फैसले में कहा गया कि सजा सुनाते समय उग्र और शमन दोनों परिस्थितियों को तौला जाए, जिसमें अपराधी के सुधरने की संभावना भी शामिल हो। भारत में हर मृत्युदंड के निर्णय में आज भी यही सिद्धांत लागू होता है।"}, "pdfUrl": "https://indiankanoon.org/doc/307021/", "sourceName": "Indian Kanoon"}, {"caseName": "Olga Tellis v. Bombay Municipal Corporation", "citation": "(1985) 3 SCC 545", "court": {"en": "Supreme Court of India", "hi": "भारत का सर्वोच्च न्यायालय"}, "year": 1985, "summary": {"en": "This landmark ruling declared that the right to life under Article 21 includes the right to livelihood, because no one can live without the means of living. It held that pavement and slum dwellers cannot be evicted without fair procedure and humane consideration, and that there can be no estoppel against fundamental rights. It remains the foundation of shelter, eviction and urban-poor litigation.", "hi": "इस ऐतिहासिक फैसले में कहा गया कि अनुच्छेद 21 के तहत जीवन के अधिकार में आजीविका का अधिकार भी शामिल है, क्योंकि जीने के साधनों के बिना कोई जीवित नहीं रह सकता। न्यायालय ने कहा कि फुटपाथ और झुग्गी-झोपड़ी में रहने वालों को उचित प्रक्रिया और मानवीय विचार के बिना बेदखल नहीं किया जा सकता, और मौलिक अधिकारों के खिलाफ कोई 'एस्टोपल' नहीं चल सकता। आश्रय और बेदखली से जुड़े मुकदमों में आज भी यही फैसला आधार है।"}, "pdfUrl": "https://indiankanoon.org/doc/709776/", "sourceName": "Indian Kanoon"}, {"caseName": "M.C. Mehta v. Union of India (Oleum Gas Leak case)", "citation": "(1987) 1 SCC 395", "court": {"en": "Supreme Court of India", "hi": "भारत का सर्वोच्च न्यायालय"}, "year": 1986, "summary": {"en": "After the oleum gas leak from a Delhi factory, the Court created the doctrine of 'absolute liability' for industries engaged in hazardous activities, rejecting the old Rylands v. Fletcher exceptions. Compensation was linked to the enterprise's capacity to pay. It also expanded Article 21 to include a clean environment and strengthened public interest litigation as a tool for the poor.", "hi": "दिल्ली के एक कारखाने से ओलियम गैस रिसाव के बाद न्यायालय ने खतरनाक उद्योगों के लिए 'पूर्ण दायित्व' (एब्सोल्यूट लायबिलिटी) का सिद्धांत दिया और राइलैंड्स बनाम फ्लेचर के पुराने अपवादों को खारिज कर दिया। मुआवजे को उद्यम की भुगतान क्षमता से जोड़ा गया। इस फैसले ने अनुच्छेद 21 में स्वच्छ पर्यावरण को भी शामिल किया और गरीबों के लिए जनहित याचिका को मजबूत हथियार बनाया।"}, "pdfUrl": "https://indiankanoon.org/doc/1486949/", "sourceName": "Indian Kanoon"}]}
+    </script>
+
+    <section class="library" id="library" aria-labelledby="library-title">
+      <div class="shell">
+        <div class="library-head reveal">
+          <div>
+            <span class="section-index">04</span>
+            <p class="kicker" data-i18n="libraryKicker">Judgement library</p>
+            <h2 id="library-title" data-i18n="libraryTitle">Famous & useful judgements.</h2>
+          </div>
+          <p data-i18n="libraryCopy">Landmark Supreme Court rulings every lawyer should know — summarised in English and Hindi, with a one-tap link to read the complete judgement.</p>
+        </div>
+        <div class="library-grid reveal" id="libraryGrid"></div>
+        <p class="library-note reveal" data-i18n="libraryNote">Summaries are brief explainers, not legal advice. Full judgements open on Indian Kanoon, which publishes the complete text of court decisions.</p>
+      </div>
+    </section>
 
     <section class="documents" id="documents" aria-labelledby="documents-title">
       <div class="shell">
@@ -720,7 +775,7 @@
     <section class="legal-warning" aria-labelledby="legal-warning-title">
       <div class="shell legal-warning-grid">
         <div class="reveal">
-          <span class="section-index">04</span>
+          <span class="section-index">05</span>
           <h2 id="legal-warning-title" data-i18n="legalWarningTitle">Legal &amp; security notice.</h2>
         </div>
         <div class="legal-warning-copy reveal">
@@ -854,7 +909,15 @@
           fullStory: "Read full story ↗",
           detailBackground: "Background",
           detailHeld: "What the court held",
-          detailLaw: "Law affected"
+          detailLaw: "Law affected",
+          navLibrary: "Library",
+          tabToday: "Today",
+          tabArchive: "Daily Judgements",
+          libraryKicker: "Judgement library",
+          libraryTitle: "Famous & useful judgements.",
+          libraryCopy: "Landmark Supreme Court rulings every lawyer should know — summarised in English and Hindi, with a one-tap link to read the complete judgement.",
+          libraryNote: "Summaries are brief explainers, not legal advice. Full judgements open on Indian Kanoon, which publishes the complete text of court decisions.",
+          readFullJudgement: "Read full judgement ↗"
         },
         hi: {
           navPractice: "कार्य क्षेत्र",
@@ -936,7 +999,15 @@
           fullStory: "पूरी खबर पढ़ें ↗",
           detailBackground: "पृष्ठभूमि",
           detailHeld: "न्यायालय ने क्या कहा",
-          detailLaw: "प्रभावित कानून"
+          detailLaw: "प्रभावित कानून",
+          navLibrary: "लाइब्रेरी",
+          tabToday: "आज",
+          tabArchive: "दैनिक निर्णय",
+          libraryKicker: "निर्णय पुस्तकालय",
+          libraryTitle: "प्रसिद्ध और उपयोगी निर्णय।",
+          libraryCopy: "हर अधिवक्ता को जानने योग्य सर्वोच्च न्यायालय के ऐतिहासिक निर्णय — हिंदी और अंग्रेज़ी में सारांश, पूर्ण निर्णय पढ़ने के लिए एक-टैप लिंक के साथ।",
+          libraryNote: "सारांश संक्षिप्त व्याख्या हैं, कानूनी सलाह नहीं। पूर्ण निर्णय इंडियन कानून पर खुलते हैं, जहाँ न्यायालय के निर्णयों का पूरा पाठ प्रकाशित होता है।",
+          readFullJudgement: "पूर्ण निर्णय पढ़ें ↗"
         }
       };
 
@@ -991,6 +1062,11 @@
         if (dateEl) dateEl.textContent = currentLanguage === "hi" ? (data.dateHi || data.date) : data.date;
         list.innerHTML = "";
         data.items.forEach(function (item) {
+          list.appendChild(buildUpdateItem(item));
+        });
+      }
+
+      function buildUpdateItem(item) {
           var lang = currentLanguage === "hi" ? "hi" : "en";
           var article = document.createElement("article");
           article.className = "update-item";
@@ -1060,7 +1136,113 @@
           });
           article.appendChild(top);
           article.appendChild(detail);
-          list.appendChild(article);
+          return article;
+      }
+
+      var activeUpdatesTab = "today";
+      var activeArchiveIndex = 0;
+
+      function getArchiveData() {
+        try {
+          var node = document.getElementById("dailyJudgementsArchive");
+          if (!node) return null;
+          return JSON.parse(node.textContent);
+        } catch (error) {
+          return null;
+        }
+      }
+
+      function getUsefulJudgements() {
+        try {
+          var node = document.getElementById("usefulJudgementsData");
+          if (!node) return null;
+          return JSON.parse(node.textContent);
+        } catch (error) {
+          return null;
+        }
+      }
+
+      function renderActiveUpdatesTab() {
+        var dateEl = document.getElementById("updatesDate");
+        var dateLine = dateEl ? dateEl.closest(".updates-date") : null;
+        var chips = document.getElementById("archiveDates");
+        if (activeUpdatesTab === "archive") {
+          if (dateLine) dateLine.style.display = "none";
+          if (chips) chips.hidden = false;
+          renderArchiveDates();
+        } else {
+          if (dateLine) dateLine.style.display = "";
+          if (chips) chips.hidden = true;
+          renderLegalUpdates();
+        }
+      }
+
+      function renderArchiveDates() {
+        var chips = document.getElementById("archiveDates");
+        var list = document.getElementById("updatesList");
+        if (!chips || !list) return;
+        var data = getArchiveData();
+        chips.innerHTML = "";
+        list.innerHTML = "";
+        if (!data || !data.days || !data.days.length) return;
+        if (activeArchiveIndex >= data.days.length) activeArchiveIndex = 0;
+        var lang = currentLanguage === "hi" ? "hi" : "en";
+        data.days.forEach(function (day, index) {
+          var chip = document.createElement("button");
+          chip.type = "button";
+          chip.className = "archive-date" + (index === activeArchiveIndex ? " active" : "");
+          chip.textContent = lang === "hi" ? (day.dateHi || day.date) : day.date;
+          chip.setAttribute("aria-pressed", String(index === activeArchiveIndex));
+          chip.addEventListener("click", function () {
+            activeArchiveIndex = index;
+            renderArchiveDates();
+          });
+          chips.appendChild(chip);
+        });
+        var day = data.days[activeArchiveIndex];
+        (day.items || []).forEach(function (item) {
+          list.appendChild(buildUpdateItem(item));
+        });
+      }
+
+      function renderLibrary() {
+        var grid = document.getElementById("libraryGrid");
+        if (!grid) return;
+        var data = getUsefulJudgements();
+        grid.innerHTML = "";
+        if (!data || !data.items || !data.items.length) return;
+        var lang = currentLanguage === "hi" ? "hi" : "en";
+        data.items.forEach(function (item) {
+          var card = document.createElement("article");
+          card.className = "judgement-card";
+          var meta = document.createElement("div");
+          meta.className = "judgement-meta";
+          var courtSpan = document.createElement("span");
+          courtSpan.textContent = item.court[lang] || item.court.en;
+          meta.appendChild(courtSpan);
+          var yearSpan = document.createElement("span");
+          yearSpan.textContent = "· " + item.year;
+          meta.appendChild(yearSpan);
+          var heading = document.createElement("h3");
+          heading.textContent = item.caseName;
+          var citation = document.createElement("p");
+          citation.className = "judgement-citation";
+          citation.textContent = item.citation;
+          var summary = document.createElement("p");
+          summary.className = "judgement-summary";
+          summary.textContent = item.summary[lang] || item.summary.en;
+          var link = document.createElement("a");
+          link.className = "judgement-link";
+          link.href = item.pdfUrl;
+          link.target = "_blank";
+          link.rel = "noopener";
+          link.textContent = t("readFullJudgement");
+          card.appendChild(meta);
+          card.appendChild(heading);
+          card.appendChild(citation);
+          card.appendChild(summary);
+          card.appendChild(link);
+          grid.appendChild(card);
         });
       }
 
@@ -1104,7 +1286,8 @@
         passwordHint.textContent = SETTINGS.passwordHint[currentLanguage] || SETTINGS.passwordHint.en;
         gateInput.placeholder = currentLanguage === "hi" ? "पासवर्ड" : "Password";
         renderPracticeAreas();
-        renderLegalUpdates();
+        renderActiveUpdatesTab();
+        renderLibrary();
       }
 
       document.querySelectorAll("[data-language]").forEach(function (button) {
@@ -1226,6 +1409,16 @@
         var shouldOpen = passwordHelp.hidden;
         passwordHelp.hidden = !shouldOpen;
         forgotPassword.setAttribute("aria-expanded", String(shouldOpen));
+      });
+
+      document.querySelectorAll(".updates-tab").forEach(function (button) {
+        button.addEventListener("click", function () {
+          activeUpdatesTab = button.getAttribute("data-tab");
+          document.querySelectorAll(".updates-tab").forEach(function (other) {
+            other.classList.toggle("active", other === button);
+          });
+          renderActiveUpdatesTab();
+        });
       });
 
       applyLanguage("en");
