@@ -23,7 +23,7 @@
       profession: "Criminal Lawyer",
       experience: "2 years",
       jurisdiction: "Bulandshahr District Court",
-      office: "Siyana, District Bulandshahr, Uttar Pradesh – 245412",
+      office: "Bulandshahr District Court, Uttar Pradesh",
 
       // Documents password ka SHA-256 hash — asli password code mein seedha nahi likha hai.
       passwordSha256: "76bfc8baf7c270f50a127b475e2a1bb65be3745649afa327d9549ea6e1cace30",
@@ -610,7 +610,7 @@
             <div class="contact-row"><span>WhatsApp</span><strong><a id="contactWhatsApp" href="https://wa.me/917456022448" target="_blank" rel="noopener noreferrer">7456022448</a></strong></div>
             <div class="contact-row"><span data-i18n="email">Email</span><strong><a id="contactEmail" href="mailto:atul40874@gmail.com">atul40874@gmail.com</a></strong></div>
             <div class="contact-row"><span data-i18n="website">Website</span><strong id="contactWebsite">advocateatul.in</strong></div>
-            <div class="contact-row"><span data-i18n="office">Office</span><strong id="contactAddress">Siyana, District Bulandshahr, Uttar Pradesh – 245412</strong></div>
+            <div class="contact-row"><span data-i18n="office">Office</span><strong id="contactAddress">Bulandshahr District Court, Uttar Pradesh</strong></div>
             <div class="contact-row"><span data-i18n="experience">Experience</span><strong id="contactExperience">2 years</strong></div>
           </div>
         </div>
@@ -835,7 +835,7 @@
         document.getElementById("professionalPortrait").alt = t("professionalPhotoAlt");
         document.getElementById("jurisdictionLine").textContent = currentLanguage === "hi" ? "आपराधिक अधिवक्ता · बुलंदशहर जिला न्यायालय" : SETTINGS.profession + " · " + SETTINGS.jurisdiction;
         document.getElementById("profileSummary").textContent = currentLanguage === "hi" ? "आपराधिक अधिवक्ता · " + localizedExperience() + " का अनुभव · बुलंदशहर जिला न्यायालय" : SETTINGS.profession + " · " + SETTINGS.experience + "’ experience · " + SETTINGS.jurisdiction;
-        document.getElementById("contactAddress").textContent = currentLanguage === "hi" ? "सियाना, जिला बुलंदशहर, उत्तर प्रदेश – 245412" : SETTINGS.office;
+        document.getElementById("contactAddress").textContent = currentLanguage === "hi" ? "बुलंदशहर जिला न्यायालय, उत्तर प्रदेश" : SETTINGS.office;
         document.getElementById("contactExperience").textContent = localizedExperience();
         document.getElementById("footerIdentity").textContent = SETTINGS.websiteDomain + " · " + SETTINGS.siteName + " · " + (currentLanguage === "hi" ? "आपराधिक अधिवक्ता" : SETTINGS.profession);
         passwordHint.textContent = SETTINGS.passwordHint[currentLanguage] || SETTINGS.passwordHint.en;
