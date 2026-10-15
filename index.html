@@ -22,8 +22,8 @@
       websiteDomain: "advocateatul.in",
       profession: "Criminal Lawyer",
       experience: "2 years",
-      jurisdiction: "Independent Practice",
-      office: "Self-employed · Independent practice",
+      jurisdiction: "Bulandshahr District Court",
+      office: "Bulandshahr District Court, Uttar Pradesh",
 
       // Documents password ka SHA-256 hash — asli password code mein seedha nahi likha hai.
       passwordSha256: "76bfc8baf7c270f50a127b475e2a1bb65be3745649afa327d9549ea6e1cace30",
@@ -473,7 +473,7 @@
       </div>
       <div class="hero-content">
         <div>
-          <p class="kicker" id="jurisdictionLine">Criminal Lawyer · Independent Practice</p>
+          <p class="kicker" id="jurisdictionLine">Criminal Lawyer · Bulandshahr District Court</p>
           <h1 id="hero-title"><span data-i18n="heroLineOne">Clear counsel.</span><em data-i18n="heroLineTwo">Measured action.</em></h1>
           <p class="hero-copy" data-i18n="heroCopy">Focused criminal-law guidance built on careful preparation, direct communication and respect for every matter entrusted to the practice.</p>
           <div class="hero-actions">
@@ -483,7 +483,7 @@
         </div>
         <aside class="hero-note">
           <strong data-i18n="professionalProfile">Professional profile</strong>
-          <span id="profileSummary">Criminal Lawyer · 2 years’ experience · Independent practice</span>
+          <span id="profileSummary">Criminal Lawyer · 2 years’ experience · Bulandshahr District Court</span>
         </aside>
       </div>
     </section>
@@ -610,7 +610,7 @@
             <div class="contact-row"><span>WhatsApp</span><strong><a id="contactWhatsApp" href="https://wa.me/917456022448" target="_blank" rel="noopener noreferrer">7456022448</a></strong></div>
             <div class="contact-row"><span data-i18n="email">Email</span><strong><a id="contactEmail" href="mailto:atul40874@gmail.com">atul40874@gmail.com</a></strong></div>
             <div class="contact-row"><span data-i18n="website">Website</span><strong id="contactWebsite">advocateatul.in</strong></div>
-            <div class="contact-row"><span data-i18n="office">Office</span><strong id="contactAddress">Self-employed · Independent practice</strong></div>
+            <div class="contact-row"><span data-i18n="office">Office</span><strong id="contactAddress">Bulandshahr District Court, Uttar Pradesh</strong></div>
             <div class="contact-row"><span data-i18n="experience">Experience</span><strong id="contactExperience">2 years</strong></div>
           </div>
         </div>
@@ -833,9 +833,9 @@
         document.title = SETTINGS.websiteDomain + " — " + SETTINGS.siteName + (currentLanguage === "hi" ? ", आपराधिक अधिवक्ता" : ", Criminal Lawyer");
         document.getElementById("identityProfession").textContent = currentLanguage === "hi" ? "आपराधिक अधिवक्ता" : SETTINGS.profession;
         document.getElementById("professionalPortrait").alt = t("professionalPhotoAlt");
-        document.getElementById("jurisdictionLine").textContent = currentLanguage === "hi" ? "आपराधिक अधिवक्ता · स्वतंत्र प्रैक्टिस" : SETTINGS.profession + " · " + SETTINGS.jurisdiction;
-        document.getElementById("profileSummary").textContent = currentLanguage === "hi" ? "आपराधिक अधिवक्ता · " + localizedExperience() + " का अनुभव · स्वतंत्र प्रैक्टिस" : SETTINGS.profession + " · " + SETTINGS.experience + "’ experience · " + SETTINGS.jurisdiction;
-        document.getElementById("contactAddress").textContent = currentLanguage === "hi" ? "स्वरोजगार · स्वतंत्र प्रैक्टिस" : SETTINGS.office;
+        document.getElementById("jurisdictionLine").textContent = currentLanguage === "hi" ? "आपराधिक अधिवक्ता · बुलंदशहर जिला न्यायालय" : SETTINGS.profession + " · " + SETTINGS.jurisdiction;
+        document.getElementById("profileSummary").textContent = currentLanguage === "hi" ? "आपराधिक अधिवक्ता · " + localizedExperience() + " का अनुभव · बुलंदशहर जिला न्यायालय" : SETTINGS.profession + " · " + SETTINGS.experience + "’ experience · " + SETTINGS.jurisdiction;
+        document.getElementById("contactAddress").textContent = currentLanguage === "hi" ? "बुलंदशहर जिला न्यायालय, उत्तर प्रदेश" : SETTINGS.office;
         document.getElementById("contactExperience").textContent = localizedExperience();
         document.getElementById("footerIdentity").textContent = SETTINGS.websiteDomain + " · " + SETTINGS.siteName + " · " + (currentLanguage === "hi" ? "आपराधिक अधिवक्ता" : SETTINGS.profession);
         passwordHint.textContent = SETTINGS.passwordHint[currentLanguage] || SETTINGS.passwordHint.en;
