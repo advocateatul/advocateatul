@@ -948,6 +948,28 @@
     html[data-theme="dark"] .top-search input { background: #1a1a1a !important; color: #f3f3f3 !important; border-color: rgba(255,255,255,.25) !important; }
     html[data-theme="dark"] .top-search input::placeholder { color: rgba(255,255,255,.5) !important; }
 
+  
+    /* Dark mode: hamburger and theme toggle icons readable */
+    html[data-theme="dark"] .nav-hamburger { color: #f3f3f3 !important; }
+    html[data-theme="dark"] .nav-hamburger:hover { background: rgba(255,255,255,.1) !important; }
+    html[data-theme="dark"] .theme-toggle { color: #f3f3f3 !important; border-color: rgba(255,255,255,.4) !important; }
+    html[data-theme="dark"] .theme-toggle:hover { background: rgba(255,255,255,.1) !important; }
+
+  
+    /* Dark mode: comprehensive audit fixes (4 issues) */
+    /* 1. Hero outline button readable */
+    html[data-theme="dark"] .button.ghost { color: #f3f3f3 !important; border-color: rgba(255,255,255,.5) !important; }
+    html[data-theme="dark"] .button.ghost:hover { background: rgba(255,255,255,.1) !important; border-color: #f3f3f3 !important; }
+    /* 2. Nav links readable */
+    html[data-theme="dark"] nav a { color: #e8e8e8 !important; }
+    html[data-theme="dark"] nav a:hover { color: #ffffff !important; }
+    /* 3. Dark mode toggle visible (icon) */
+    html[data-theme="dark"] .theme-toggle svg { color: #f3f3f3 !important; }
+    /* 4. AI topic pills readable */
+    html[data-theme="dark"] .ai-chip { color: #f3f3f3 !important; border-color: rgba(255,255,255,.5) !important; background: transparent !important; }
+    html[data-theme="dark"] .ai-chip:hover { background: #f3f3f3 !important; color: #111 !important; }
+    html[data-theme="dark"] .ai-chips { background: #141414 !important; border-top-color: rgba(255,255,255,.1) !important; }
+
   </style>
   <script>
     /* Website always opens in light mode (owner's choice); the dark toggle is per-session only. */
