@@ -819,6 +819,32 @@
     .section-search input:focus { border-color: #111111; box-shadow: 0 0 0 3px rgba(0,0,0,.08); }
     html[data-theme="dark"] .section-search input:focus { border-color: #f0f0f0; box-shadow: 0 0 0 3px rgba(255,255,255,.1); }
 
+      /* AI Legal Assistant */
+    .ai-fab { position: fixed; right: 18px; bottom: 18px; z-index: 500; display: flex; align-items: center; gap: 6px; height: 52px; padding: 0 18px; border: 2px solid #000; border-radius: 999px; background: #111; color: #fff; font: 700 .95rem/1 var(--sans); cursor: pointer; box-shadow: 0 8px 24px rgba(0,0,0,.25); transition: transform .15s ease; }
+    .ai-fab:hover { transform: translateY(-2px); }
+    .ai-fab span[aria-hidden="true"] { font-size: 1.2rem; }
+    .ai-panel { position: fixed; right: 18px; bottom: 82px; z-index: 501; width: min(380px, calc(100vw - 36px)); height: min(540px, calc(100vh - 120px)); display: flex; flex-direction: column; background: #fff; border: 2px solid #000; border-radius: 16px; box-shadow: 0 24px 64px rgba(0,0,0,.3); overflow: hidden; }
+    .ai-panel[hidden] { display: none; }
+    .ai-header { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; background: #111; color: #fff; }
+    .ai-header strong { display: block; font-size: .95rem; }
+    .ai-header span { font-size: .72rem; opacity: .75; }
+    .ai-header button { background: none; border: none; color: #fff; font-size: 1rem; cursor: pointer; padding: 4px 8px; }
+    .ai-messages { flex: 1; overflow-y: auto; padding: 14px; display: flex; flex-direction: column; gap: 10px; background: #fafafa; }
+    .ai-msg { max-width: 88%; padding: 10px 13px; border-radius: 14px; font-size: .85rem; line-height: 1.5; }
+    .ai-msg.bot { align-self: flex-start; background: #fff; border: 1px solid rgba(0,0,0,.14); color: #111; border-bottom-left-radius: 4px; }
+    .ai-msg.user { align-self: flex-end; background: #111; color: #fff; border-bottom-right-radius: 4px; }
+    .ai-msg .ai-draft-btn { display: inline-block; margin: 4px 4px 0 0; padding: 7px 12px; border: 1.5px solid #000; border-radius: 999px; background: #fff; color: #000; font-size: .76rem; font-weight: 700; cursor: pointer; }
+    .ai-msg .ai-draft-btn:hover { background: #111; color: #fff; }
+    .ai-msg .ai-link { color: #000; font-weight: 700; text-decoration: underline; }
+    .ai-chips { display: flex; gap: 8px; padding: 10px 14px; overflow-x: auto; background: #fff; border-top: 1px solid rgba(0,0,0,.1); }
+    .ai-chip { flex: 0 0 auto; padding: 7px 13px; border: 1.5px solid #000; border-radius: 999px; background: #fff; font-size: .76rem; font-weight: 600; cursor: pointer; white-space: nowrap; }
+    .ai-chip:hover { background: #111; color: #fff; }
+    .ai-form { display: flex; gap: 8px; padding: 10px 14px; background: #fff; border-top: 1px solid rgba(0,0,0,.1); }
+    .ai-form input { flex: 1; height: 42px; border: 2px solid #000; border-radius: 999px; padding: 0 16px; font-size: .85rem; outline: none; }
+    .ai-form button { width: 42px; height: 42px; border: 2px solid #000; border-radius: 50%; background: #111; color: #fff; font-size: 1rem; cursor: pointer; }
+    .ai-highlight { animation: aiPulse 2s ease; }
+    @keyframes aiPulse { 0%,100% { box-shadow: none; } 30% { box-shadow: 0 0 0 4px rgba(0,0,0,.25); } }
+
   </style>
   <script>
     /* Website always opens in light mode (owner's choice); the dark toggle is per-session only. */
@@ -2969,5 +2995,213 @@
     })();
   </script>
   <div id="draftPrintArea" aria-hidden="true"></div>
+  <!-- AI Legal Assistant -->
+  <button type="button" id="aiFab" class="ai-fab" aria-label="AI Legal Assistant">
+    <span aria-hidden="true">✦</span><span class="ai-fab-label">AI</span>
+  </button>
+  <div id="aiPanel" class="ai-panel" hidden role="dialog" aria-label="AI Legal Assistant">
+    <div class="ai-header">
+      <div><strong id="aiTitle">AI Legal Assistant</strong><span id="aiSubtitle">Ask about drafts, laws &amp; procedures</span></div>
+      <button type="button" id="aiClose" aria-label="Close">✕</button>
+    </div>
+    <div id="aiMessages" class="ai-messages" aria-live="polite"></div>
+    <div id="aiChips" class="ai-chips"></div>
+    <form id="aiForm" class="ai-form">
+      <input type="text" id="aiInput" autocomplete="off" placeholder="Ask something…" aria-label="Ask the AI assistant" />
+      <button type="submit" aria-label="Send">➤</button>
+    </form>
+  </div>
+
+  <script>
+    /* AI Legal Assistant — client-side intent engine (bilingual EN/HI) */
+    (function () {
+      "use strict";
+      var INTENTS = [
+        { id: "bail", kw: ["bail", "जमानत", "jamanat", "release from jail", "jail se", "anticipatory", "अग्रिम", "regular bail", "interim bail", "default bail", "statutory bail", "surrender"],
+          drafts: ["regular-bail", "anticipatory-bail", "interim-bail", "default-bail-187"],
+          ans: { en: "For bail matters I found these drafts for you:", hi: "जमानत मामलों के लिए ये ड्राफ्ट मिले:" } },
+        { id: "fir", kw: ["fir", "एफआईआर", "fir file", "fir darj", "complaint to police", "police complaint", "police not", "police refuse", "थाने", "पुलिस"],
+          drafts: ["fir-direction-173", "complaint-magistrate-175", "cyber-crime-complaint"],
+          ans: { en: "For FIR / police complaint matters:", hi: "FIR / पुलिस शिकायत मामलों के लिए:" } },
+        { id: "cheque", kw: ["cheque", "check bounce", "चेक बाउंस", "138", "ni act", "dishonour", "bounce"],
+          drafts: ["notice-138", "complaint-138", "reply-notice-138"],
+          ans: { en: "Cheque bounce (Sec. 138 NI Act) drafts:", hi: "चेक बाउंस (धारा 138 NI Act) ड्राफ्ट:" } },
+        { id: "arrest", kw: ["arrest", "गिरफ्तारी", "giraftari", "remand", "रिमांड", "custody", "हिरासत", "warrant", "वारंट", "nbw", "surrender"],
+          drafts: ["remand-objection-187", "nbw-recall", "anticipatory-bail", "medical-examination-53"],
+          ans: { en: "Arrest / remand / warrant related drafts:", hi: "गिरफ्तारी / रिमांड / वारंट संबंधी ड्राफ्ट:" } },
+        { id: "divorce", kw: ["divorce", "तलाक", "talaq", "mutual consent", "cruelty", "क्रूरता", "maintenance", "भरण", "child custody", "बच्चे की कस्टडी", "conjugal", "dowry", "दहेज", "domestic violence"],
+          drafts: ["divorce-mutual", "divorce-contested", "maintenance-144", "interim-maintenance", "child-custody", "child-visitation", "dv-complaint-12", "restitution-conjugal"],
+          ans: { en: "Family / matrimonial drafts:", hi: "पारिवारिक / वैवाहिक ड्राफ्ट:" } },
+        { id: "property", kw: ["property", "संपत्ति", "land", "जमीन", "plot", "house", "मकान", "partition", "बंटवारा", "possession", "कब्जा", "sale deed", "registry", "रजिस्ट्री", "tenant", "किरायेदार", "eviction"],
+          drafts: ["partition-suit", "sale-deed", "rent-agreement", "eviction-suit", "specific-performance", "relinquishment-deed", "gift-deed", "will-format"],
+          ans: { en: "Property related drafts:", hi: "संपत्ति संबंधी ड्राफ्ट:" } },
+        { id: "court", kw: ["appeal", "अपील", "revision", "पुनरीक्षण", "review", "quash", "quashing", "fir quash", "writ", "रिट", "supreme court", "high court", "transfer", "stay"],
+          drafts: ["criminal-appeal", "criminal-revision", "quashing-528", "writ-226", "habeas-corpus-226", "stay-sentence-appeal", "transfer-case-456", "first-appeal-41", "review-petition"],
+          ans: { en: "Appeals / writs / higher court drafts:", hi: "अपील / रिट / उच्च न्यायालय ड्राफ्ट:" } },
+        { id: "civil", kw: ["suit", "वाद", "plaint", "वादपत्र", "injunction", "निषेधाज्ञा", "decree", "डिक्री", "execution", "cpc", "money recovery", "पैसे की वसूली"],
+          drafts: ["plaint-order7", "written-statement", "temp-injunction", "recovery-suit", "execution-petition-21", "caveat-148a", "amendment-pleadings"],
+          ans: { en: "Civil suit drafts:", hi: "दीवानी वाद ड्राफ्ट:" } },
+        { id: "document", kw: ["agreement", "करार", "deed", "affidavit", "शपथपत्र", "vakalatnama", "वकालतनामा", "will", "वसीयत", "power of attorney", "rent", "loan", "nda", "partnership", "mou"],
+          drafts: ["affidavit", "vakalatnama", "rent-agreement", "sale-deed", "poa-general", "loan-agreement", "nda-format", "partnership-deed", "will-format", "legal-notice-general"],
+          ans: { en: "Agreements & documents:", hi: "करार व दस्तावेज़:" } },
+        { id: "victim", kw: ["victim", "पीड़ित", "compensation", "मुआवजा", "मुआवज़ा", "acid attack", "injury", "मृतक"],
+          drafts: ["victim-compensation-396"],
+          ans: { en: "Victim related:", hi: "पीड़ित संबंधी:" } },
+        { id: "consumer", kw: ["consumer", "उपभोक्ता", "defective", "warranty", "refund", "धोखाधड़ी"],
+          drafts: ["consumer-complaint", "consumer-appeal-state"],
+          ans: { en: "Consumer drafts:", hi: "उपभोक्ता ड्राफ्ट:" } },
+        { id: "seized", kw: ["seized", "जब्त", "superdari", "सुपुर्दगी", "vehicle release", "gaadi", "गाड़ी", "mobile", "phone seized"],
+          drafts: ["superdari-491"],
+          ans: { en: "For release of seized property:", hi: "जब्त संपत्ति की रिहाई हेतु:" } }
+      ];
+      var QA = [
+        { kw: ["what is bail", "जमानत क्या", "bail kya", "bail meaning"],
+          a: { en: "Bail is the temporary release of an accused person from custody while the trial is pending, on furnishing bonds/surety. Types: Regular (Sec. 483 BNSS), Anticipatory (Sec. 482 BNSS), Interim, and Default bail (Sec. 187(3) BNSS — when chargesheet isn't filed in 60/90 days).",
+               hi: "जमानत विचारण लंबित रहते अभियुक्त की अस्थायी रिहाई है, बांड/जमानतदार पर। प्रकार: नियमित (धारा 483 BNSS), अग्रिम (धारा 482 BNSS), अंतरिम, और डिफॉल्ट जमानत (धारा 187(3) BNSS — जब 60/90 दिन में आरोपपत्र दाखिल न हो)।" } },
+        { kw: ["how to file fir", "fir kaise", "fir दर्ज कैसे", "fir likhna"],
+          a: { en: "To file an FIR: (1) Go to the police station where the offence occurred, (2) give a written complaint with date, time, place & details, (3) get the FIR number and free copy (your right under Sec. 173 BNSS). If police refuse, approach the SP in writing, then the Magistrate under Sec. 175(3) BNSS.",
+               hi: "FIR दर्ज करने हेतु: (1) अपराध घटित थाने जाएं, (2) तिथि, समय, स्थान व विवरण सहित लिखित शिकायत दें, (3) FIR नंबर व निःशुल्क प्रति लें (धारा 173 BNSS के अधीन अधिकार)। पुलिस इनकार करे तो SP को लिखित में, फिर धारा 175(3) BNSS के अधीन मजिस्ट्रेट के पास जाएं।" } },
+        { kw: ["138", "cheque bounce time", "चेक बाउंस समय", "cheque bounce procedure"],
+          a: { en: "Cheque bounce (Sec. 138 NI Act) steps: (1) Send legal notice within 30 days of bounce, (2) wait 15 days for payment, (3) file complaint within 30 days after that before the Magistrate. Punishment: up to 2 years imprisonment and/or fine up to twice the cheque amount.",
+               hi: "चेक बाउंस (धारा 138 NI Act) प्रक्रिया: (1) बाउंस के 30 दिन में विधिक नोटिस भेजें, (2) भुगतान हेतु 15 दिन प्रतीक्षा करें, (3) उसके बाद 30 दिन में मजिस्ट्रेट के समक्ष शिकायत दाखिल करें। दंड: 2 वर्ष तक कारावास और/या चेक राशि के दोगुने तक जुर्माना।" } },
+        { kw: ["fees", "फीस", "charges", "consultation fee", "kitni fees"],
+          a: { en: "For fee/consultation details, please call or WhatsApp on 7456022448, or use the Consultation section on this website to book an appointment.",
+               hi: "फीस/परामर्श विवरण हेतु कृपया 7456022448 पर कॉल या WhatsApp करें, या वेबसाइट के Consultation सेक्शन से अपॉइंटमेंट बुक करें।" } },
+        { kw: ["hello", "hi", "namaste", "नमस्ते", "hey", "ram ram"],
+          a: { en: "Namaste! 🙏 I'm the AI legal assistant. Ask me about bail, FIR, cheque bounce, divorce, property — or tap a suggestion below. I can find the right legal draft for you.",
+               hi: "नमस्ते! 🙏 मैं AI विधिक सहायक हूं। जमानत, FIR, चेक बाउंस, तलाक, संपत्ति के बारे में पूछें — या नीचे सुझाव दबाएं। मैं आपके लिए सही विधिक ड्राफ्ट ढूंढ दूंगा।" } }
+      ];
+      var CHIPS = [
+        { en: "Bail drafts", hi: "जमानत ड्राफ्ट" },
+        { en: "File an FIR", hi: "FIR दर्ज करें" },
+        { en: "Cheque bounce", hi: "चेक बाउंस" },
+        { en: "Divorce & maintenance", hi: "तलाक व भरण-पोषण" },
+        { en: "Property dispute", hi: "संपत्ति विवाद" }
+      ];
+
+      function lang() { return (typeof currentLanguage !== "undefined" && currentLanguage === "hi") ? "hi" : "en"; }
+      function getDrafts() {
+        try {
+          var el = document.getElementById("legalDraftsData");
+          return el ? JSON.parse(el.textContent).drafts : [];
+        } catch (e) { return []; }
+      }
+      function findIntent(q) {
+        q = " " + q.toLowerCase() + " ";
+        var best = null, bestScore = 0;
+        INTENTS.forEach(function (it) {
+          var score = 0;
+          it.kw.forEach(function (k) { if (q.indexOf(k.toLowerCase()) !== -1) score += k.length; });
+          if (score > bestScore) { bestScore = score; best = it; }
+        });
+        return bestScore > 0 ? best : null;
+      }
+      function findQA(q) {
+        q = " " + q.toLowerCase() + " ";
+        for (var i = 0; i < QA.length; i++) {
+          for (var j = 0; j < QA[i].kw.length; j++) {
+            if (q.indexOf(QA[i].kw[j].toLowerCase()) !== -1) return QA[i];
+          }
+        }
+        return null;
+      }
+      function addMsg(text, who, html) {
+        var box = document.getElementById("aiMessages");
+        var d = document.createElement("div");
+        d.className = "ai-msg " + who;
+        if (html) d.innerHTML = text; else d.textContent = text;
+        box.appendChild(d);
+        box.scrollTop = box.scrollHeight;
+        return d;
+      }
+      function draftName(id) {
+        var ds = getDrafts(), L = lang();
+        for (var i = 0; i < ds.length; i++) {
+          if (ds[i].id === id) return ds[i].title[L] || ds[i].title.en;
+        }
+        return id;
+      }
+      function jumpToDraft(id) {
+        var sec = document.getElementById("drafts");
+        if (sec) sec.scrollIntoView({ behavior: "smooth" });
+        setTimeout(function () {
+          var card = document.querySelector('[data-draft-id="' + id + '"]');
+          if (card) {
+            card.scrollIntoView({ behavior: "smooth", block: "center" });
+            card.classList.remove("ai-highlight");
+            void card.offsetWidth;
+            card.classList.add("ai-highlight");
+            var btn = card.querySelector(".draft-toggle");
+            if (btn && btn.getAttribute("aria-expanded") !== "true") btn.click();
+          }
+        }, 600);
+      }
+      function respond(q) {
+        var L = lang();
+        addMsg(q, "user");
+        var intent = findIntent(q), qa = findQA(q);
+        var html = "";
+        if (qa) {
+          html = "<p>" + qa.a[L] + "</p>";
+        }
+        if (intent) {
+          html += "<p><strong>" + intent.ans[L] + "</strong></p><p>";
+          intent.drafts.forEach(function (id) {
+            html += '<button type="button" class="ai-draft-btn" data-goto="' + id + '">📄 ' + draftName(id) + "</button>";
+          });
+          html += "</p>";
+        }
+        if (!qa && !intent) {
+          html = L === "hi"
+            ? "<p>माफ कीजिए, मैं समझ नहीं पाया। कृपया जमानत, FIR, चेक बाउंस, तलाक, संपत्ति जैसे शब्दों में पूछें — या नीचे सुझाव दबाएं।</p>"
+            : "<p>Sorry, I didn't quite get that. Try asking about bail, FIR, cheque bounce, divorce, property — or tap a suggestion below.</p>";
+        }
+        var m = addMsg(html, "bot", true);
+        m.querySelectorAll("[data-goto]").forEach(function (b) {
+          b.addEventListener("click", function () { jumpToDraft(b.getAttribute("data-goto")); });
+        });
+      }
+      function init() {
+        var fab = document.getElementById("aiFab"), panel = document.getElementById("aiPanel");
+        if (!fab || !panel) return;
+        var msgs = document.getElementById("aiMessages"), chips = document.getElementById("aiChips");
+        var greeted = false;
+        function openPanel() {
+          panel.hidden = false;
+          if (!greeted) {
+            greeted = true;
+            var L = lang();
+            addMsg(L === "hi"
+              ? "नमस्ते! 🙏 मैं आपका AI विधिक सहायक हूं। जमानत, FIR, चेक बाउंस, तलाक, संपत्ति — किसी भी विषय पर पूछें, मैं सही ड्राफ्ट ढूंढ दूंगा।"
+              : "Hello! 🙏 I'm your AI legal assistant. Ask about bail, FIR, cheque bounce, divorce, property — I'll find the right draft for you.", "bot");
+          }
+          renderChips();
+        }
+        function renderChips() {
+          var L = lang();
+          chips.textContent = "";
+          CHIPS.forEach(function (c) {
+            var b = document.createElement("button");
+            b.type = "button"; b.className = "ai-chip"; b.textContent = c[L];
+            b.addEventListener("click", function () { respond(c.en); });
+            chips.appendChild(b);
+          });
+        }
+        fab.addEventListener("click", function () {
+          if (panel.hidden) openPanel(); else panel.hidden = true;
+        });
+        document.getElementById("aiClose").addEventListener("click", function () { panel.hidden = true; });
+        document.getElementById("aiForm").addEventListener("submit", function (e) {
+          e.preventDefault();
+          var inp = document.getElementById("aiInput");
+          var v = inp.value.trim();
+          if (v) { respond(v); inp.value = ""; }
+        });
+      }
+      if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
+      else init();
+    })();
+
+  </script>
 </body>
 </html>
