@@ -861,9 +861,10 @@
       transition: transform .35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow .35s cubic-bezier(0.22, 1, 0.36, 1) !important;
     }
     .draft-item:hover, .update-card:hover, .hub-card:hover, .guide-card:hover { transform: translateY(-3px); }
-    /* Reveals disabled for max scroll smoothness - instant show */
-    .reveal-smooth { opacity: 1; transform: none; transition: none; }
-    .reveal-smooth.visible { opacity: 1; transform: none; }
+    /* Subtle smoothness: opacity-only fade (GPU compositor, zero layout cost, no jank) */
+    .reveal-smooth { opacity: 0; transition: opacity .45s cubic-bezier(0.22, 1, 0.36, 1); }
+    .reveal-smooth.visible { opacity: 1; }
+    @media (prefers-reduced-motion: reduce) { .reveal-smooth { opacity: 1; transition: none; } }
     @media (prefers-reduced-motion: reduce) { .reveal-smooth { opacity: 1; transform: none; transition: none; } }
     /* Silky AI panel entrance */
     .ai-panel:not([hidden]) { animation: aiIn .35s cubic-bezier(0.22, 1, 0.36, 1); }
