@@ -845,6 +845,37 @@
     .ai-highlight { animation: aiPulse 2s ease; }
     @keyframes aiPulse { 0%,100% { box-shadow: none; } 30% { box-shadow: 0 0 0 4px rgba(0,0,0,.25); } }
 
+      /* ===== Buttery Smooth Upgrade ===== */
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    /* Premium easing for all interactive elements */
+    a, button, .btn, .draft-toggle, .update-toggle, .ai-chip, .ai-draft-btn, .nav-hamburger {
+      transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1) !important;
+    }
+    /* Buttery card hovers - GPU accelerated */
+    .draft-item, .update-card, .hub-card, .guide-card, .practice-card, .library-card {
+      transition: transform .45s cubic-bezier(0.22, 1, 0.36, 1), box-shadow .45s cubic-bezier(0.22, 1, 0.36, 1) !important;
+      will-change: transform;
+    }
+    .draft-item:hover, .update-card:hover, .hub-card:hover, .guide-card:hover, .practice-card:hover, .library-card:hover {
+      transform: translateY(-4px);
+    }
+    /* Silky section reveals */
+    .reveal-smooth { opacity: 0; transform: translateY(28px); transition: opacity .8s cubic-bezier(0.22, 1, 0.36, 1), transform .8s cubic-bezier(0.22, 1, 0.36, 1); will-change: opacity, transform; }
+    .reveal-smooth.visible { opacity: 1; transform: translateY(0); }
+    @media (prefers-reduced-motion: reduce) { .reveal-smooth { opacity: 1; transform: none; transition: none; } }
+    /* Smooth accordion expands */
+    .draft-body, .update-body { transition: opacity .4s cubic-bezier(0.22, 1, 0.36, 1); }
+    /* Buttery image rendering */
+    img { -webkit-transform: translateZ(0); transform: translateZ(0); }
+    /* Smooth mobile nav panel */
+    .mobile-nav-panel:not([hidden]) { animation: hamSlide .35s cubic-bezier(0.22, 1, 0.36, 1); }
+    /* Silky AI panel */
+    .ai-panel:not([hidden]) { animation: aiIn .4s cubic-bezier(0.22, 1, 0.36, 1); }
+    @keyframes aiIn { from { opacity: 0; transform: translateY(16px) scale(.98); } to { opacity: 1; transform: none; } }
+    /* Smooth back-to-top / fab */
+    .ai-fab { transition: transform .3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow .3s cubic-bezier(0.22, 1, 0.36, 1) !important; }
+
   </style>
   <script>
     /* Website always opens in light mode (owner's choice); the dark toggle is per-session only. */
@@ -3287,6 +3318,28 @@
 {"id":"summons-warrant","q":["summons","समन","warrant","वारंट","court notice aaya","न्यायालय नोटिस"],"a":{"en":"Received summons/warrant? Summons = appear on the given date; ignoring it leads to bailable warrant, then non-bailable warrant (NBW). NBW can be recalled by surrendering + filing recall application. Never ignore court process — consult a lawyer immediately.","hi":"समन/वारंट मिला? समन = दी गई तिथि को उपस्थित हों; अनदेखी पर जमानतीय वारंट, फिर गैर-जमानतीय वारंट (NBW)। समर्पण + वापसी आवेदन से NBW वापस हो सकता है। न्यायालय प्रक्रिया की अनदेखी कभी न करें — तुरंत वकील से सलाह लें।"},"drafts":["nbw-recall","summons-witnesses-16"]},
 {"id":"bns-new-laws","q":["new criminal laws","नए आपराधिक कानून","bns bnss bsa","ipc crpc replaced"],"a":{"en":"From 1 July 2024: BNS replaced IPC, BNSS replaced CrPC, BSA replaced Indian Evidence Act. Old cases continue under old laws; new FIRs use new sections. Key renumbering: 302→103 BNS, 498A→85-86 BNS, 420→318 BNS, 482 CrPC→528 BNSS, 125 CrPC→144 BNSS, 313 CrPC→351 BNSS.","hi":"1 जुलाई 2024 से: BNS ने IPC, BNSS ने CrPC, BSA ने भारतीय साक्ष्य अधिनियम की जगह ली। पुराने मामले पुराने कानूनों में चलेंगे; नई FIR में नई धाराएं। मुख्य पुनर्संख्यांकन: 302→103 BNS, 498A→85-86 BNS, 420→318 BNS, 482 CrPC→528 BNSS, 125 CrPC→144 BNSS, 313 CrPC→351 BNSS।"},"drafts":[]}
 ]}
+
+  </script>
+  <script>
+    /* Buttery smooth scroll reveals */
+    (function () {
+      "use strict";
+      function initReveals() {
+        var els = document.querySelectorAll("section:not(.hero) .shell > h2, .draft-item, .update-card, .hub-card, .guide-card");
+        if (!("IntersectionObserver" in window)) {
+          els.forEach(function (el) { el.classList.add("visible"); });
+          return;
+        }
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) { e.target.classList.add("visible"); io.unobserve(e.target); }
+          });
+        }, { threshold: 0.08, rootMargin: "0px 0px -40px 0px" });
+        els.forEach(function (el) { el.classList.add("reveal-smooth"); io.observe(el); });
+      }
+      if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", initReveals);
+      else initReveals();
+    })();
 
   </script>
 </body>
