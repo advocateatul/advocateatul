@@ -1120,7 +1120,7 @@
         <p class="updates-date reveal"><span data-i18n="updatesUpdated">Updated</span>: <span id="updatesDate">—</span></p>
         <div class="updates-tabs reveal" role="tablist" aria-label="Updates views">
           <button type="button" class="updates-tab active" data-tab="today" data-i18n="tabToday">Today</button>
-          <button type="button" class="updates-tab" data-tab="archive" data-i18n="tabArchive">Daily Judgements</button>
+          <button type="button" class="updates-tab" data-tab="archive" data-i18n="tabArchive">Daily Judgments</button>
         </div>
         <div class="archive-dates reveal" id="archiveDates" hidden></div>
         <div class="section-search reveal" role="search">
@@ -1511,7 +1511,7 @@
           detailLaw: "Law affected",
           navLibrary: "Library",
           tabToday: "Today",
-          tabArchive: "Daily Judgements",
+          tabArchive: "Daily Judgments",
           libraryKicker: "Judgement library",
           libraryTitle: "Famous & useful judgements.",
           libraryCopy: "Landmark Supreme Court rulings every lawyer should know — summarised in English and Hindi, with a one-tap link to read the complete judgement.",
@@ -1884,7 +1884,7 @@
             link.href = item.source;
             link.target = "_blank";
             link.rel = "noopener";
-            link.textContent = (item.sourceName ? item.sourceName + " · " : "") + t("fullStory");
+            link.textContent = (item.sourceName ? (item.sourceName[lang] || item.sourceName.en || item.sourceName) + " · " : "") + t("fullStory");
             detail.appendChild(link);
           }
           toggle.addEventListener("click", function () {
