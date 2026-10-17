@@ -3393,6 +3393,11 @@
         raf = requestAnimationFrame(animate);
       }
       function onWheel(e) {
+        // Never hijack horizontal/side scrolling (trackpad side-scroll)
+        if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
+        // Never hijack trackpads: they send small fractional deltas with built-in momentum.
+        // Only smooth classic mouse wheels (large discrete notches >= 40).
+        if (Math.abs(e.deltaY) < 40) return;
         // Let inner scrollable areas (panels, chat) scroll natively
         var t = e.target;
         while (t && t !== document.body) {
