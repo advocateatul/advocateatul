@@ -889,6 +889,26 @@
     ::-webkit-scrollbar-thumb { background: #333; border-radius: 8px; }
     ::-webkit-scrollbar-thumb:hover { background: #000; }
 
+  
+    /* ===== Scroll Performance Fix ===== */
+    /* Replace paint-heavy shadows with cheap borders - shadows only on hover */
+    .draft-item, .update-card, .hub-card, .guide-card {
+      box-shadow: none !important;
+      border: 1px solid rgba(0,0,0,.12) !important;
+    }
+    .draft-item:hover, .update-card:hover, .hub-card:hover, .guide-card:hover {
+      box-shadow: 0 8px 24px rgba(0,0,0,.12) !important;
+    }
+    /* Faster intrinsic size for content-visibility (less scrollbar jump) */
+    #drafts, #updates, #library, #knowledge-hub, #documents, #draft-guide {
+      contain-intrinsic-size: auto 1200px;
+    }
+    /* Kill reveal transform on touch devices - opacity only (cheaper) */
+    @media (hover: none) {
+      .reveal-smooth { transform: none !important; }
+      .reveal-smooth.visible { transform: none !important; }
+    }
+
   </style>
   <script>
     /* Website always opens in light mode (owner's choice); the dark toggle is per-session only. */
