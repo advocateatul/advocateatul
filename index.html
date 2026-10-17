@@ -424,7 +424,7 @@
       body.draft-printing #draftPrintArea .draft-print-cat { font-size: .8rem; color: #333; margin: 0 0 16px; }
       body.draft-printing #draftPrintArea pre { white-space: pre-wrap; font-size: .78rem; line-height: 1.6; font-family: Georgia, serif; }
     }
-    html[data-theme="dark"] .drafts h2, html[data-theme="dark"] .draft-item h3 { color: #f3f3f3; }
+    html[data-theme="dark"] .drafts h2, html[data-theme="dark"] .draft-item h3 { color: #f3f3f3 !important; }
     html[data-theme="dark"] .draft-cat { border-color: rgba(255,255,255,.45); }
     html[data-theme="dark"] .draft-btn { border-color: rgba(255,255,255,.45); }
     html[data-theme="dark"] .draft-btn:hover { border-color: #f0f0f0; color: #f0f0f0; }
@@ -918,6 +918,41 @@
     }
     .ai-chips::-webkit-scrollbar { height: 6px; }
     .ai-chips::-webkit-scrollbar-thumb { background: rgba(0,0,0,.25); border-radius: 4px; }
+
+  
+    /* Dark theme: hero and header turn dark too */
+    html[data-theme="dark"] .hero { background: #0c0c0c; color: #f3f3f3; }
+    html[data-theme="dark"] .hero-image { border-color: rgba(255,255,255,.2); background: #1a1a1a; }
+    html[data-theme="dark"] .masthead { border-bottom-color: rgba(255,255,255,.15); }
+
+  
+    /* ===== Comprehensive dark mode: all hardcoded dark text becomes light ===== */
+    html[data-theme="dark"] .identity strong,
+    html[data-theme="dark"] .identity span,
+    html[data-theme="dark"] nav a,
+    html[data-theme="dark"] nav .nav-cta,
+    html[data-theme="dark"] .nav-more-btn,
+    html[data-theme="dark"] .language-switch button,
+    html[data-theme="dark"] .hero h1,
+    html[data-theme="dark"] h1 em,
+    html[data-theme="dark"] .button.ghost,
+    html[data-theme="dark"] .hero-note strong,
+    html[data-theme="dark"] .hero-note,
+    html[data-theme="dark"] .update-toggle,
+    html[data-theme="dark"] .updates-tab,
+    html[data-theme="dark"] .hub-filter,
+    html[data-theme="dark"] .guide-card h3,
+    html[data-theme="dark"] .update-card h3,
+    html[data-theme="dark"] .judgement-card h3,
+    html[data-theme="dark"] .hub-card h3 { color: #f3f3f3 !important; }
+    html[data-theme="dark"] nav .nav-cta { border-bottom-color: #f3f3f3 !important; }
+    html[data-theme="dark"] .nav-more-btn,
+    html[data-theme="dark"] .button.ghost,
+    html[data-theme="dark"] .update-toggle,
+    html[data-theme="dark"] .updates-tab,
+    html[data-theme="dark"] .hub-filter { border-color: rgba(255,255,255,.4) !important; }
+    html[data-theme="dark"] .section-index { color: #e9e9e9 !important; }
+    html[data-theme="dark"] .section-index span { border-bottom-color: #e9e9e9 !important; }
 
   </style>
   <script>
