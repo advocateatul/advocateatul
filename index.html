@@ -2097,7 +2097,7 @@
           var meta = String(a.year);
           var btnLabel = a.itemPage ? t("hubViewOnIndiaCode") : t("hubOpenPdf");
           grid.appendChild(hubCard({
-            title: (a.name[lang] || a.name.en) + " (" + a.year + ")",
+            title: (a.name[lang] || a.name.en),
             meta: meta,
             badge: badge,
             desc: null,
@@ -2624,7 +2624,7 @@
           return false;
         }
         var actHits = (data.bareActs || []).filter(function (a) { return matches(a.name.en, a.name.hi, a.year); }).slice(0, 8);
-        if (actHits.length) groups.push({ title: t("hubResultActs"), items: actHits.map(function (a) { return { title: (a.name[lang] || a.name.en) + " (" + a.year + ")", sub: a.itemPage ? "India Code" : "PDF · " + t("hubOfficialBadge"), go: function () { hubActFilter = "all"; switchHubTab("acts"); renderActFilters(); renderActs(); scrollToHubCard(a.name.en); } }; }) });
+        if (actHits.length) groups.push({ title: t("hubResultActs"), items: actHits.map(function (a) { return { title: (a.name[lang] || a.name.en), sub: a.itemPage ? "India Code" : "PDF · " + t("hubOfficialBadge"), go: function () { hubActFilter = "all"; switchHubTab("acts"); renderActFilters(); renderActs(); scrollToHubCard(a.name.en); } }; }) });
         var lib = getUsefulJudgements();
         var jHits = ((lib && lib.items) || []).filter(function (j) { return matches(j.caseName, j.citation, j.summary.en, j.summary.hi); }).slice(0, 6);
         if (jHits.length) groups.push({ title: t("hubResultJudgements"), items: jHits.map(function (j) { return { title: j.caseName, sub: j.citation, go: function () { document.getElementById("library").scrollIntoView({ behavior: "smooth" }); } }; }) });
