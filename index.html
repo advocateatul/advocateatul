@@ -770,10 +770,13 @@
     @keyframes micPulseDark { 0%,100% { box-shadow: 0 0 0 0 rgba(255,255,255,.4); } 50% { box-shadow: 0 0 0 12px rgba(255,255,255,0); } }
 
   
-    /* All headings dark & bold (owner's choice) — both light and dark mode. */
+    /* All headings dark & bold (owner's choice) — light mode. */
     h1, h2, h3 { color: #111111 !important; font-weight: 700 !important; }
     .hero h1 { font-weight: 800 !important; }
     .contact h2 { color: #ffffff !important; } /* keep readable on dark footer */
+    /* Dark mode exception: headings turn light (must come after the global rule) */
+    html[data-theme="dark"] h1, html[data-theme="dark"] h2, html[data-theme="dark"] h3 { color: #f3f3f3 !important; }
+    html[data-theme="dark"] .contact h2 { color: #ffffff !important; }
 
   
     /* Top search bar (site-wide, always visible) */
@@ -928,7 +931,9 @@
   
 
   
-    /* Dark mode: fix 3 contrast issues found in audit */
+    /* Dark mode: fix contrast issues found in audit */
+    html[data-theme="dark"] .hero h1 { color: #f3f3f3 !important; }
+    html[data-theme="dark"] .hero h1 em { color: #f3f3f3 !important; }
     html[data-theme="dark"] .hero .kicker { color: rgba(255,255,255,.75) !important; }
     html[data-theme="dark"] .hero .kicker::before { background: rgba(255,255,255,.75) !important; }
     html[data-theme="dark"] .hero-copy { color: rgba(255,255,255,.8) !important; }
