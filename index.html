@@ -926,33 +926,13 @@
     html[data-theme="dark"] .masthead { border-bottom-color: rgba(255,255,255,.15); }
 
   
-    /* ===== Comprehensive dark mode: all hardcoded dark text becomes light ===== */
-    html[data-theme="dark"] .identity strong,
-    html[data-theme="dark"] .identity span,
-    html[data-theme="dark"] nav a,
-    html[data-theme="dark"] nav .nav-cta,
-    html[data-theme="dark"] .nav-more-btn,
-    html[data-theme="dark"] .language-switch button,
-    html[data-theme="dark"] .hero h1,
-    html[data-theme="dark"] h1 em,
-    html[data-theme="dark"] .button.ghost,
-    html[data-theme="dark"] .hero-note strong,
-    html[data-theme="dark"] .hero-note,
-    html[data-theme="dark"] .update-toggle,
-    html[data-theme="dark"] .updates-tab,
-    html[data-theme="dark"] .hub-filter,
-    html[data-theme="dark"] .guide-card h3,
-    html[data-theme="dark"] .update-card h3,
-    html[data-theme="dark"] .judgement-card h3,
-    html[data-theme="dark"] .hub-card h3 { color: #f3f3f3 !important; }
-    html[data-theme="dark"] nav .nav-cta { border-bottom-color: #f3f3f3 !important; }
-    html[data-theme="dark"] .nav-more-btn,
-    html[data-theme="dark"] .button.ghost,
-    html[data-theme="dark"] .update-toggle,
-    html[data-theme="dark"] .updates-tab,
-    html[data-theme="dark"] .hub-filter { border-color: rgba(255,255,255,.4) !important; }
-    html[data-theme="dark"] .section-index { color: #e9e9e9 !important; }
-    html[data-theme="dark"] .section-index span { border-bottom-color: #e9e9e9 !important; }
+
+  
+    /* Dark mode: fix 3 contrast issues found in audit */
+    html[data-theme="dark"] .hero .kicker { color: rgba(255,255,255,.75) !important; }
+    html[data-theme="dark"] .hero .kicker::before { background: rgba(255,255,255,.75) !important; }
+    html[data-theme="dark"] .hero-copy { color: rgba(255,255,255,.8) !important; }
+    html[data-theme="dark"] .library h2 { color: #f3f3f3 !important; }
 
   </style>
   <script>
