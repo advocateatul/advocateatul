@@ -3373,5 +3373,45 @@
     })();
 
   </script>
+  <script>
+    /* Ultra smooth + fast wheel scrolling (desktop mouse only, touch untouched) */
+    (function () {
+      "use strict";
+      // Only on devices with a fine pointer (mouse), not touch
+      if (!window.matchMedia("(pointer: fine)").matches) return;
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+      var target = window.scrollY, current = target, raf = null;
+      var SPEED = 1.6;   // ultra fast multiplier
+      var EASE = 0.12;   // buttery lerp (lower = smoother)
+
+      function animate() {
+        var diff = target - current;
+        if (Math.abs(diff) < 0.5) { current = target; raf = null; return; }
+        current += diff * EASE;
+        window.scrollTo(0, Math.round(current));
+        raf = requestAnimationFrame(animate);
+      }
+      function onWheel(e) {
+        // Let inner scrollable areas (panels, chat) scroll natively
+        var t = e.target;
+        while (t && t !== document.body) {
+          var ov = getComputedStyle(t).overflowY;
+          if ((ov === "auto" || ov === "scroll") && t.scrollHeight > t.clientHeight) return;
+          t = t.parentElement;
+        }
+        e.preventDefault();
+        target += e.deltaY * SPEED;
+        target = Math.max(0, Math.min(target, document.documentElement.scrollHeight - window.innerHeight));
+        if (!raf) raf = requestAnimationFrame(animate);
+      }
+      window.addEventListener("wheel", onWheel, { passive: false });
+      // Keep in sync if something else scrolls (anchors, keyboard)
+      window.addEventListener("scroll", function () {
+        if (!raf) { target = window.scrollY; current = target; }
+      }, { passive: true });
+    })();
+
+  </script>
 </body>
 </html>
