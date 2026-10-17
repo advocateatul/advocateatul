@@ -246,8 +246,9 @@
       font-size: .72rem;
       letter-spacing: .14em;
       text-transform: uppercase;
-      color: rgba(255,255,255,.78);
+      color: rgba(0,0,0,.62);
     }
+    .kicker::before { background: rgba(0,0,0,.62); }
     .kicker::before { content: ""; width: 44px; height: 1px; background: var(--brass); }
     .hero .kicker { color: rgba(0,0,0,.62); }
     .hero .kicker::before { background: #111111; }
@@ -844,7 +845,7 @@
     .ai-msg .ai-draft-btn { display: inline-block; margin: 4px 4px 0 0; padding: 7px 12px; border: 1.5px solid #000; border-radius: 999px; background: #fff; color: #000; font-size: .76rem; font-weight: 700; cursor: pointer; }
     .ai-msg .ai-draft-btn:hover { background: #111; color: #fff; }
     .ai-msg .ai-link { color: #000; font-weight: 700; text-decoration: underline; }
-    .ai-chips { display: flex; gap: 8px; padding: 10px 14px; overflow-x: auto; background: #fff; border-top: 1px solid rgba(0,0,0,.1); }
+    .ai-chips { display: flex; gap: 8px; padding: 10px 14px; padding-right: 24px; overflow-x: auto; background: #fff; border-top: 1px solid rgba(0,0,0,.1); scroll-padding-right: 24px; }
     .ai-chip { flex: 0 0 auto; padding: 7px 13px; border: 1.5px solid #000; border-radius: 999px; background: #fff; font-size: .76rem; font-weight: 600; cursor: pointer; white-space: nowrap; }
     .ai-chip:hover { background: #111; color: #fff; }
     .ai-form { display: flex; gap: 8px; padding: 10px 14px; background: #fff; border-top: 1px solid rgba(0,0,0,.1); }
@@ -969,6 +970,13 @@
     html[data-theme="dark"] .ai-chip { color: #f3f3f3 !important; border-color: rgba(255,255,255,.5) !important; background: transparent !important; }
     html[data-theme="dark"] .ai-chip:hover { background: #f3f3f3 !important; color: #111 !important; }
     html[data-theme="dark"] .ai-chips { background: #141414 !important; border-top-color: rgba(255,255,255,.1) !important; }
+
+  
+    /* Kicker: dark text on light sections, light text on dark sections */
+    html[data-theme="dark"] .kicker { color: rgba(255,255,255,.78) !important; }
+    html[data-theme="dark"] .kicker::before { background: rgba(255,255,255,.78) !important; }
+    .contact .kicker { color: rgba(255,255,255,.78) !important; }
+    .contact .kicker::before { background: rgba(255,255,255,.78) !important; }
 
   </style>
   <script>
@@ -1302,7 +1310,7 @@
     <section class="legal-warning" aria-labelledby="legal-warning-title">
       <div class="shell legal-warning-grid">
         <div class="reveal">
-          <span class="section-index">05</span>
+          <span class="section-index">08</span>
           <h2 id="legal-warning-title" data-i18n="legalWarningTitle">Legal &amp; security notice.</h2>
         </div>
         <div class="legal-warning-copy reveal">
@@ -3305,7 +3313,7 @@
           else if (entry && !qa) html += "<p><strong>" + (L === "hi" ? "संबंधित ड्राफ्ट:" : "Related drafts:") + "</strong></p>";
           html += "<p>";
           drafts.forEach(function (id) {
-            html += '<button type="button" class="ai-draft-btn" data-goto="' + id + '">\u0001F4C4 ' + escHtml(draftName(id)) + "</button>";
+            html += '<button type="button" class="ai-draft-btn" data-goto="' + id + '">📄 ' + escHtml(draftName(id)) + "</button>";
           });
           html += "</p>";
         }
