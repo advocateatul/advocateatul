@@ -3566,39 +3566,49 @@
 
         /* Request modal */
         (function () {
-          var btn = document.getElementById("requestBtn");
-          var modal = document.getElementById("requestModal");
-          var close = document.getElementById("requestClose");
-          var form = document.getElementById("requestForm");
-          if (!btn || !modal) return;
-          function openModal() {
-            modal.hidden = false;
-            var mm = document.getElementById("navMoreMenu");
-            var mb = document.getElementById("navMoreBtn");
-            if (mm) mm.hidden = true;
-            if (mb) mb.setAttribute("aria-expanded", "false");
-            var d = document.getElementById("reqDetail");
-            if (d) d.focus();
+          function setupRequestModal() {
+            var btn = document.getElementById("requestBtn");
+            var modal = document.getElementById("requestModal");
+            var close = document.getElementById("requestClose");
+            var form = document.getElementById("requestForm");
+            if (!btn || !modal) return false;
+            function openModal() {
+              modal.hidden = false;
+              var mm = document.getElementById("navMoreMenu");
+              var mb = document.getElementById("navMoreBtn");
+              if (mm) mm.hidden = true;
+              if (mb) mb.setAttribute("aria-expanded", "false");
+              var d = document.getElementById("reqDetail");
+              if (d) d.focus();
+            }
+            function closeModal() { modal.hidden = true; }
+            btn.addEventListener("click", function (e) {
+              e.stopPropagation();
+              openModal();
+            });
+            if (close) close.addEventListener("click", closeModal);
+            modal.addEventListener("click", function (e) { if (e.target === modal) closeModal(); });
+            document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !modal.hidden) closeModal(); });
+            if (form) form.addEventListener("submit", function (e) {
+              e.preventDefault();
+              var name = (document.getElementById("reqName").value || "").trim();
+              var type = document.getElementById("reqType").value === "info" ? "Legal Information" : "Legal Draft";
+              var detail = (document.getElementById("reqDetail").value || "").trim();
+              if (!detail) return;
+              var msg = "Namaste! I visited your website (advocateatul.github.io/advocateatul) and could not find this:\n\nType: " + type + "\nDetails: " + detail + (name ? "\nName: " + name : "") + "\n\nPlease add it to the website. Thank you!";
+              window.open("https://wa.me/917456022448?text=" + encodeURIComponent(msg), "_blank", "noopener");
+              closeModal();
+              form.reset();
+            });
+            return true;
           }
-          function closeModal() { modal.hidden = true; }
-          btn.addEventListener("click", function (e) {
-            e.stopPropagation();
-            openModal();
-          });
-          if (close) close.addEventListener("click", closeModal);
-          modal.addEventListener("click", function (e) { if (e.target === modal) closeModal(); });
-          document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !modal.hidden) closeModal(); });
-          if (form) form.addEventListener("submit", function (e) {
-            e.preventDefault();
-            var name = (document.getElementById("reqName").value || "").trim();
-            var type = document.getElementById("reqType").value === "info" ? "Legal Information" : "Legal Draft";
-            var detail = (document.getElementById("reqDetail").value || "").trim();
-            if (!detail) return;
-            var msg = "Namaste! I visited your website (advocateatul.github.io/advocateatul) and could not find this:\n\nType: " + type + "\nDetails: " + detail + (name ? "\nName: " + name : "") + "\n\nPlease add it to the website. Thank you!";
-            window.open("https://wa.me/917456022448?text=" + encodeURIComponent(msg), "_blank", "noopener");
-            closeModal();
-            form.reset();
-          });
+          if (!setupRequestModal()) {
+            if (document.readyState === "loading") {
+              document.addEventListener("DOMContentLoaded", setupRequestModal);
+            } else {
+              setTimeout(setupRequestModal, 100);
+            }
+          }
         })();
 
         /* More dropdown menu */
