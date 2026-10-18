@@ -3915,8 +3915,7 @@
           if (hc) { hc.setAttribute("aria-expanded", "false"); }
           try { switchHubTab(tabId); } catch (e) {}
           setTimeout(function () {
-            var tabs = document.getElementById("hubTabs");
-            var target = tabs || document.getElementById("knowledge");
+            var target = document.getElementById("knowledge");
             if (target) { target.scrollIntoView({ behavior: "smooth", block: "start" }); }
           }, 80);
         }
