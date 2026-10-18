@@ -1263,8 +1263,11 @@
     .vocab-cats { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 28px; }
     .vocab-cat { font: 700 .82rem var(--sans); padding: 9px 18px; border: 1px solid rgba(0,0,0,.25); border-radius: 999px; background: transparent; color: var(--ink); cursor: pointer; transition: all .25s; }
     .vocab-cat.active { background: #111; color: #fff; border-color: #111; }
+    .vocab-cat:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,.15); }
+    .vocab-term:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,.1); transition: transform .25s, box-shadow .25s; }
     .vocab-list { display: grid; gap: 14px; }
-    .vocab-term { background: var(--paper-2); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; }
+    .vocab-term { background: var(--paper-2); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; animation: vocab-fade .5s cubic-bezier(0.22, 1, 0.36, 1) both; }
+    @keyframes vocab-fade { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
     .vocab-term h3 { font-size: 1.15rem; font-weight: 800; margin: 0 0 6px; color: #111; }
     .vocab-term h3 .vocab-hi { color: #6b21a8; font-weight: 700; }
     .vocab-term .vocab-ex { font-size: .92rem; color: var(--ink); opacity: .85; margin: 8px 0 0; padding-left: 14px; border-left: 3px solid #3b82f6; }
@@ -11344,7 +11347,8 @@
             if (q && term.en.toLowerCase().indexOf(q) < 0 && term.hi.indexOf(vocabQuery) < 0) return;
             shown++;
             var div = document.createElement("div");
-            div.className = "vocab-term reveal visible";
+            div.className = "vocab-term";
+            div.style.animationDelay = Math.min(shown % 12, 11) * 40 + "ms";
             var h3 = document.createElement("h3");
             h3.textContent = term.en + " ";
             var hiSpan = document.createElement("span");
