@@ -975,6 +975,12 @@
     #requestBtn { display: block; width: 100%; text-align: left; background: none; border: none; font: inherit; color: inherit; cursor: pointer; padding: 10px 16px; }
     #requestBtn:hover { background: rgba(0,0,0,.06); }
     html[data-theme="dark"] #requestBtn:hover { background: rgba(255,255,255,.08); }
+    .nav-more-sep { height: 1px; background: rgba(0,0,0,.12); margin: 6px 12px; }
+    html[data-theme="dark"] .nav-more-sep { background: rgba(255,255,255,.15); }
+    .nav-more-label { padding: 8px 16px 4px; font-size: .68rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; opacity: .55; }
+    .hub-jump { display: block; width: 100%; text-align: left; background: none; border: none; font: inherit; color: inherit; cursor: pointer; padding: 9px 16px 9px 28px; font-size: .92em; }
+    .hub-jump:hover { background: rgba(0,0,0,.06); }
+    html[data-theme="dark"] .hub-jump:hover { background: rgba(255,255,255,.08); }
     @keyframes aiIn { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
     .mobile-nav-panel:not([hidden]) { animation: hamSlide .3s cubic-bezier(0.22, 1, 0.36, 1); }
     .ai-fab { transition: transform .3s cubic-bezier(0.22, 1, 0.36, 1) !important; }
@@ -1277,6 +1283,16 @@
             <a href="https://ecourts.gov.in/" target="_blank" rel="noopener" role="menuitem">eCourts</a>
             <a href="#contact" role="menuitem" data-i18n="navConsultation">Consultation</a>
             <button type="button" id="requestBtn" role="menuitem" data-i18n="navRequest">📝 Request a Draft</button>
+            <div class="nav-more-sep" role="separator"></div>
+            <div class="nav-more-label" data-i18n="navHubCats">Knowledge Hub Categories</div>
+            <button type="button" class="hub-jump" data-hub-tab="acts" role="menuitem" data-i18n="hubTabActs">Bare Acts</button>
+            <button type="button" class="hub-jump" data-hub-tab="constitution" role="menuitem" data-i18n="hubTabConstitution">Constitution</button>
+            <button type="button" class="hub-jump" data-hub-tab="courts" role="menuitem" data-i18n="hubTabCourts">Courts</button>
+            <button type="button" class="hub-jump" data-hub-tab="consumer" role="menuitem" data-i18n="hubTabConsumer">Consumer</button>
+            <button type="button" class="hub-jump" data-hub-tab="bar" role="menuitem" data-i18n="hubTabBar">AIBE &amp; Bar</button>
+            <button type="button" class="hub-jump" data-hub-tab="drafts" role="menuitem" data-i18n="hubTabDrafts">Drafts &amp; Library</button>
+            <button type="button" class="hub-jump" data-hub-tab="links" role="menuitem" data-i18n="hubTabLinks">Useful Links</button>
+            <button type="button" class="hub-jump" data-hub-tab="toolkit" role="menuitem" data-i18n="hubTabToolkit">Criminal Toolkit</button>
           </div>
         </div>
         <a class="nav-cta" href="#contact" data-i18n="navConsultation">Consultation</a>
@@ -1750,6 +1766,7 @@
           hubResultDrafts: "Legal drafts",
           navConsultation: "Consultation",
           navRequest: "📝 Request a Draft",
+          navHubCats: "Knowledge Hub Categories",
           reqTitle: "📝 Request a Draft / Information",
           reqSub: "Can't find a draft or legal information on this website? Tell us — we'll add it for you.",
           reqName: "Your name (optional)",
@@ -1953,6 +1970,7 @@
           hubResultDrafts: "\u0915\u093e\u0928\u0942\u0928\u0940 \u092a\u094d\u0930\u093e\u0930\u0942\u092a",
           navConsultation: "परामर्श",
           navRequest: "📝 प्रारूप का अनुरोध",
+          navHubCats: "नॉलेज हब श्रेणियां",
           reqTitle: "📝 प्रारूप / जानकारी का अनुरोध",
           reqSub: "इस वेबसाइट पर कोई प्रारूप या कानूनी जानकारी नहीं मिली? हमें बताएं — हम आपके लिए जोड़ देंगे।",
           reqName: "आपका नाम (वैकल्पिक)",
@@ -3583,6 +3601,20 @@
         /* More dropdown menu */
         var moreBtn = document.getElementById("navMoreBtn");
         var moreMenu = document.getElementById("navMoreMenu");
+        /* Jump to a Knowledge Hub tab from the More menu */
+        function jumpToHubTab(tabId) {
+          var sec = document.getElementById("knowledge");
+          if (moreMenu) { moreMenu.hidden = true; }
+          if (moreBtn) { moreBtn.setAttribute("aria-expanded", "false"); }
+          if (typeof switchHubTab === "function") { try { switchHubTab(tabId); } catch (e) {} }
+          if (sec) { setTimeout(function () { sec.scrollIntoView({ behavior: "smooth" }); }, 60); }
+        }
+        document.querySelectorAll(".hub-jump").forEach(function (b) {
+          b.addEventListener("click", function (e) {
+            e.stopPropagation();
+            jumpToHubTab(b.getAttribute("data-hub-tab"));
+          });
+        });
         if (moreBtn && moreMenu) {
           moreBtn.addEventListener("click", function (e) {
             e.stopPropagation();
