@@ -649,9 +649,9 @@
     .contact-foot { display: flex; justify-content: space-between; gap: 24px; margin-top: 70px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.18); color: rgba(255,255,255,.5); font-size: .7rem; }
 
     .reveal { opacity: 1; transform: none; }
-    .motion-ready .reveal.visible { animation: soft-reveal 1.15s cubic-bezier(0.22, 1, 0.36, 1) both; }
+    .motion-ready .reveal.visible { animation: soft-reveal .8s cubic-bezier(0.22, 1, 0.36, 1) both; }
     @keyframes soft-reveal {
-      from { opacity: 0; transform: translateY(38px); }
+      from { opacity: 0; transform: translateY(22px); }
       to { opacity: 1; transform: none; }
     }
     /* Buttery theme cross-fade: enabled briefly while switching themes */
@@ -967,7 +967,7 @@
     @keyframes aiPulse { 0%,100% { box-shadow: none; } 30% { box-shadow: 0 0 0 4px rgba(0,0,0,.25); } }
 
       /* ===== Lightweight Buttery Smooth (performance-first) ===== */
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; scrollbar-gutter: stable; }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
     /* content-visibility removed: caused scroll jank on fast scrolling */
     /* Cheap premium easing only on direct interaction (no constant cost) */
@@ -1659,12 +1659,13 @@
             <p class="kicker" data-i18n="notesKicker">Handwritten notes</p>
             <h2 id="notes-title" data-i18n="notesTitle">Study notes, handwritten style.</h2>
           </div>
-          <p data-i18n="notesCopy">Comprehensive handwritten-style study notes for BNS, BNSS, BSA, CPC and Criminal Major Acts — in English and Hindi. Tap a subject to open its notes.</p>
+          <p data-i18n="notesCopy">Comprehensive handwritten-style study notes for BNS, BNSS, BSA, CPC and Criminal Major Acts — in English, Hindi and Hinglish. Tap a subject to open its notes.</p>
         </div>
         <div class="notes-actions reveal">
           <div class="notes-lang" role="group" aria-label="Notes language / नोट्स भाषा">
             <button type="button" class="notes-lang-btn active" data-notes-lang="en" aria-pressed="true">English</button>
             <button type="button" class="notes-lang-btn" data-notes-lang="hi" aria-pressed="false">हिंदी</button>
+            <button type="button" class="notes-lang-btn" data-notes-lang="hinglish" aria-pressed="false">Hinglish</button>
           </div>
         </div>
         <div class="section-search reveal" id="notesSearchWrap" role="search">
@@ -1969,7 +1970,7 @@
           guideKicker: "\u0924\u094d\u0935\u0930\u093f\u0924 \u0938\u0902\u0926\u0930\u094d\u092d",
           notesKicker: "\u0939\u0938\u094d\u0924\u0932\u093f\u0916\u093f\u0924 \u0928\u094b\u091f\u094d\u0938",
           notesTitle: "\u0905\u0927\u094d\u092f\u092f\u0928 \u0928\u094b\u091f\u094d\u0938, \u0939\u0938\u094d\u0924\u0932\u093f\u0916\u093f\u0924 \u0936\u0948\u0932\u0940 \u092e\u0947\u0902\u0964",
-          notesCopy: "BNS, BNSS, BSA, CPC \u0914\u0930 \u0906\u092a\u0930\u093e\u0927\u093f\u0915 \u092a\u094d\u0930\u092e\u0941\u0916 \u0905\u0927\u093f\u0928\u093f\u092f\u092e\u094b\u0902 \u0915\u0947 \u0935\u093f\u0938\u094d\u0924\u0943\u0924 \u0939\u0938\u094d\u0924\u0932\u093f\u0916\u093f\u0924-\u0936\u0948\u0932\u0940 \u0905\u0927\u094d\u092f\u092f\u0928 \u0928\u094b\u091f\u094d\u0938 \u2014 \u0905\u0902\u0917\u094d\u0930\u0947\u091c\u0940 \u0914\u0930 \u0939\u093f\u0902\u0926\u0940 \u092e\u0947\u0902\u0964 \u0915\u093f\u0938\u0940 \u0935\u093f\u0937\u092f \u092a\u0930 \u091f\u0948\u092a \u0915\u0930\u0947\u0902\u0964",
+          notesCopy: "BNS, BNSS, BSA, CPC \u0914\u0930 \u0906\u092a\u0930\u093e\u0927\u093f\u0915 \u092a\u094d\u0930\u092e\u0941\u0916 \u0905\u0927\u093f\u0928\u093f\u092f\u092e\u094b\u0902 \u0915\u0947 \u0935\u093f\u0938\u094d\u0924\u0943\u0924 \u0939\u0938\u094d\u0924\u0932\u093f\u0916\u093f\u0924-\u0936\u0948\u0932\u0940 \u0905\u0927\u094d\u092f\u092f\u0928 \u0928\u094b\u091f\u094d\u0938 \u2014 \u0905\u0902\u0917\u094d\u0930\u0947\u091c\u0940 \u0914\u0930 \u0939\u093f\u0902\u0926\u0940 \u0914\u0930 \u0939\u093f\u0902\u0917\u094d\u0932\u093f\u0936 \u092e\u0947\u0902\u0964 \u0915\u093f\u0938\u0940 \u0935\u093f\u0937\u092f \u092a\u0930 \u091f\u0948\u092a \u0915\u0930\u0947\u0902\u0964",
           notesMajorActs: "\u092a\u094d\u0930\u092e\u0941\u0916 \u0905\u0927\u093f\u0928\u093f\u092f\u092e",
           notesDownload: "\u0928\u094b\u091f\u094d\u0938 \u0921\u093e\u0909\u0928\u0932\u094b\u0921 \u0915\u0930\u0947\u0902",
           notesPrint: "\u0928\u094b\u091f\u094d\u0938 \u092a\u094d\u0930\u093f\u0902\u091f \u0915\u0930\u0947\u0902",
@@ -2634,13 +2635,108 @@
       function topicDlBtn(subj, ti, label) {
         return ' <button type="button" class="topic-dl" data-subj="' + escapeHtml(subj) + '" data-ti="' + ti + '" aria-label="' + escapeHtml(label) + '" title="' + escapeHtml(label) + '">\u2B07</button>';
       }
+      /* Hinglish (Roman Hindi) support for notes */
+      /* Devanagari -> Roman (Hinglish) transliterator.
+         Inherent schwas are marked 'A'; medial schwa deletion (VCAC LONGV -> VCC LONGV)
+         and join-aware final schwa deletion are applied. */
+      function devToRoman(s) {
+        if (!s) return "";
+        var CONS = {
+          'क':'k','ख':'kh','ग':'g','घ':'gh','ङ':'ng',
+          'च':'ch','छ':'chh','ज':'j','झ':'jh','ञ':'ny',
+          'ट':'t','ठ':'th','ड':'d','ढ':'dh','ण':'n',
+          'त':'t','थ':'th','द':'d','ध':'dh','न':'n',
+          'प':'p','फ':'ph','ब':'b','भ':'bh','म':'m',
+          'य':'y','र':'r','ल':'l','व':'v','श':'sh','ष':'sh','स':'s','ह':'h'
+        };
+        var NUKTA = { 'क':'q','ख':'kh','ग':'gh','ज':'z','झ':'jh','ट':'t','ठ':'th','ड':'r','ढ':'rh','फ':'f','य':'y','ल':'l','व':'v','स':'s','ह':'h' };
+        var VOW = { 'अ':'a','आ':'aa','इ':'i','ई':'ee','उ':'u','ऊ':'oo','ऋ':'ri','ॠ':'ri','ए':'e','ऐ':'ai','ओ':'o','औ':'o','ऑ':'o','ऍ':'e' };
+        var MATRA = { 'ा':'aa','ि':'i','ी':'ee','ु':'u','ू':'oo','ृ':'ri','ॄ':'ri','े':'e','ै':'ai','ो':'o','ौ':'o','ॉ':'o','ॅ':'e' };
+        var DIG = {'०':'0','१':'1','२':'2','३':'3','४':'4','५':'5','६':'6','७':'7','८':'8','९':'9'};
+        var CLUSTER = { 'ज्ञ':'gy', 'क्ष':'ksh', 'त्र':'tr', 'श्र':'shr' };
+        var VMATRA = 'ािीुूृॄेैोौॉॅ';
+        var LABIAL = 'पफबभम';
+        var FIX = {
+          'samajhota':'samjhauta', 'praavadhaan':'praavdhaan',
+          'giraphtaari':'giraftaari', 'ilektronik':'electronic', 'majistret':'magistrate',
+          'rikord':'record', 'pahale':'pehle', 'maamalon':'maamlon',
+          'chaahie':'chaahiye', 'ophis':'office', 'sahamat':'sehmat',
+          'dvaara':'dwara', 'aaparaadhik':'aapraadhik', 'karvaana':'karwana',
+          'samajhaana':'samjhana', 'banaana':'banana', 'lagaana':'lagana',
+          'julaaee':'julai', 'dikhaana':'dikhana', 'bataana':'batana'
+        };
+        function transWord(w) {
+          var out = '', i = 0, n = w.length, pendA = false, inJoin = false, lastConsJoin = false;
+          function flush() { if (pendA) { out += 'A'; pendA = false; } }
+          while (i < n) {
+            var ch = w[i], nx = (i + 1 < n) ? w[i + 1] : '';
+            var cl = (i + 2 < n) ? w.substr(i, 3) : '';
+            if (CLUSTER[cl]) {
+              flush();
+              if (w[i + 3] === '्') { out += CLUSTER[cl]; i += 4; inJoin = true; continue; }
+              var cm = w[i + 3];
+              if (cm && VMATRA.indexOf(cm) >= 0) { out += CLUSTER[cl] + MATRA[cm]; i += 4; inJoin = false; lastConsJoin = false; continue; }
+              out += CLUSTER[cl]; pendA = true; lastConsJoin = true; inJoin = false; i += 3; continue;
+            }
+            if (CONS[ch] && nx === '़' && NUKTA[ch]) { flush(); out += NUKTA[ch]; pendA = true; lastConsJoin = inJoin; inJoin = false; i += 2; continue; }
+            if (CONS[ch]) {
+              flush();
+              if (nx === '्') { out += CONS[ch]; i += 2; inJoin = true; continue; }
+              if (nx && VMATRA.indexOf(nx) >= 0) { out += CONS[ch] + MATRA[nx]; i += 2; inJoin = false; lastConsJoin = false; continue; }
+              out += CONS[ch]; pendA = true; lastConsJoin = inJoin; inJoin = false; i += 1; continue;
+            }
+            if (VOW[ch]) { flush(); out += VOW[ch]; inJoin = false; i += 1; continue; }
+            if (ch === '्' || ch === '़') { i += 1; continue; }
+            if (ch === 'ं' || ch === 'ँ') { flush(); var nc = w[i + 1] || ''; out += (nc && LABIAL.indexOf(nc) >= 0) ? 'm' : 'n'; inJoin = false; i += 1; continue; }
+            if (ch === 'ः') { flush(); out += 'h'; inJoin = false; i += 1; continue; }
+            if (MATRA[ch] !== undefined) { pendA = false; out += MATRA[ch]; inJoin = false; i += 1; continue; }
+            if (DIG[ch]) { flush(); out += DIG[ch]; inJoin = false; i += 1; continue; }
+            if (ch === '।' || ch === '॥') { flush(); out += '.'; inJoin = false; i += 1; continue; }
+            flush(); out += ch; inJoin = false; i += 1;
+          }
+          flush();
+          var tail = '';
+          while (out.slice(-1) === '.') { tail = '.' + tail; out = out.slice(0, -1); }
+          if (out.length > 2 && out.slice(-1) === 'A') {
+            var stemA = out.slice(0, -1);
+            var cm = stemA.match(/[bcdfghjklmnpqrstvwxyz]{1,4}$/);
+            var clusA = cm ? cm[0] : '';
+            if (!/([bcdfghjklmnpqrstvwxyz][ry]|gy|jnya)$/.test(clusA)) { out = stemA; }
+          }
+          var MED = /([aeiouAEIOU])([bcdfghjklmnpqrstvwxyz])A([bcdfghjklmnpqrstvwxyz])(aa|ee|oo|ai|au|o|e)/g, prev;
+          do { prev = out; out = out.replace(MED, '$1$2$3$4'); } while (out !== prev);
+          out = out.replace(/A/g, 'a');
+          out = out.replace(/aa([aeiou])/g, 'a$1').replace(/aa$/, 'a').replace(/ee$/, 'i').replace(/oo$/, 'u');
+          var fxd = FIX[out];
+          return (fxd ? fxd : out) + tail;
+        }
+        return String(s).split(/(\s+)/).map(function(tok) {
+          if (/^\s*$/.test(tok) || !/[\u0900-\u097F]/.test(tok)) return tok;
+          var res = '', j = 0;
+          while (j < tok.length) {
+            if (/[\u0900-\u097F]/.test(tok[j])) {
+              var k = j;
+              while (k < tok.length && /[\u0900-\u097F]/.test(tok[k])) k++;
+              res += transWord(tok.slice(j, k)); j = k;
+            } else { res += tok[j]; j++; }
+          }
+          return res;
+        }).join('');
+      }
+      var NOTES_LANGS = ["en", "hi", "hinglish"];
+      var NOTES_LANG_LABELS = { en: "English", hi: "\u0939\u093f\u0902\u0926\u0940", hinglish: "Hinglish" };
+      function notesText(obj, lang) {
+        if (!obj) return "";
+        if (lang === "hinglish") return devToRoman(obj.hi || obj.en || "");
+        return obj[lang] || obj.en || "";
+      }
       function renderTopicHtml(subj, ti, topic, lang, dlLabel) {
-        var title = (topic.title && (topic.title[lang] || topic.title.en)) || "";
+        var title = notesText(topic.title, lang);
         var out = "<h3>" + escapeHtml(title) + topicDlBtn(subj, ti, dlLabel) + "</h3>";
         if (topic.points && topic.points.length) {
           out += "<ul>";
           topic.points.forEach(function(pt) {
-            out += "<li>" + escapeHtml((pt[lang] || pt.en) || "") + "</li>";
+            out += "<li>" + escapeHtml(notesText(pt, lang)) + "</li>";
           });
           out += "</ul>";
         }
@@ -2651,7 +2747,7 @@
         var container = document.getElementById("notesContent");
         if (!container) return;
         var lang = notesLang;
-        var dlLabel = lang === "hi" ? "इस टॉपिक को डाउनलोड करें" : "Download this topic";
+        var dlLabel = lang === "hi" ? "इस टॉपिक को डाउनलोड करें" : (lang === "hinglish" ? "Is topic ko download karein" : "Download this topic");
         var htmlOut = "";
         if (notesQuery) {
           var found = 0;
@@ -2660,7 +2756,8 @@
             if (!topics) return;
             topics.forEach(function(topic, ti) {
               var hay = ((topic.title && ((topic.title.en || "") + " " + (topic.title.hi || ""))) || "")
-                + " " + (topic.points || []).map(function(p) { return (p.en || "") + " " + (p.hi || ""); }).join(" ");
+                + " " + devToRoman((topic.title && topic.title.hi) || "")
+                + " " + (topic.points || []).map(function(p) { return (p.en || "") + " " + (p.hi || "") + " " + devToRoman(p.hi || ""); }).join(" ");
               if (hay.toLowerCase().indexOf(notesQuery) !== -1) {
                 found++;
                 htmlOut += '<span class="notes-result-badge">' + escapeHtml(notesSubjectLabels[subj] || subj) + "</span>";
@@ -2668,7 +2765,7 @@
               }
             });
           });
-          if (!found) htmlOut = '<p class="notes-empty">' + escapeHtml(lang === "hi" ? "कोई नोट्स नहीं मिले।" : "No notes found. Try another word.") + "</p>";
+          if (!found) htmlOut = '<p class="notes-empty">' + escapeHtml(lang === "hi" ? "कोई नोट्स नहीं मिले।" : (lang === "hinglish" ? "Koi notes nahi mile. Koi aur shabd try karein." : "No notes found. Try another word.")) + "</p>";
         } else {
           if (!data[currentNotesSubject]) return;
           data[currentNotesSubject].forEach(function(topic, ti) {
@@ -2683,12 +2780,12 @@
         if (!topics || !topics[ti]) return;
         var topic = topics[ti];
         var lang = notesLang;
-        var title = (topic.title && (topic.title[lang] || topic.title.en)) || "";
+        var title = notesText(topic.title, lang);
         var label = notesSubjectLabels[subj] || subj;
         var items = (topic.points || []).map(function(pt) {
-          return "<li>" + escapeHtml((pt[lang] || pt.en) || "") + "</li>";
+          return "<li>" + escapeHtml(notesText(pt, lang)) + "</li>";
         }).join("");
-        var foot = lang === "hi" ? "केवल अध्ययन मार्गदर्शन हेतु — कानूनी सलाह नहीं।" : "For study guidance only — not legal advice.";
+        var foot = lang === "hi" ? "केवल अध्ययन मार्गदर्शन हेतु — कानूनी सलाह नहीं।" : (lang === "hinglish" ? "Keval adhyayan margdarshan hetu — kanooni salah nahi." : "For study guidance only — not legal advice.");
         var html = "<!DOCTYPE html><html lang=\"" + lang + "\"><head><meta charset=\"utf-8\">"
           + "<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">"
           + "<title>" + escapeHtml(title) + "</title><style>"
@@ -2748,11 +2845,14 @@
       }
 
       function setNotesLang(l) {
+        if (NOTES_LANGS.indexOf(l) < 0) l = "en";
         notesLang = l;
         document.querySelectorAll("[data-notes-lang]").forEach(function(b) {
-          var on = b.hasAttribute("data-notes-toggle") ? (l === "hi") : (b.getAttribute("data-notes-lang") === l);
+          var isToggle = b.hasAttribute("data-notes-toggle");
+          var on = isToggle ? true : (b.getAttribute("data-notes-lang") === l);
           b.classList.toggle("active", on);
           b.setAttribute("aria-pressed", String(on));
+          if (isToggle) b.textContent = NOTES_LANG_LABELS[l] || l;
         });
         renderNotes();
       }
@@ -2760,7 +2860,10 @@
         if (typeof currentLanguage !== "undefined") notesLang = currentLanguage;
         document.querySelectorAll("[data-notes-lang]").forEach(function(b) {
           b.addEventListener("click", function() {
-            if (b.hasAttribute("data-notes-toggle")) setNotesLang(notesLang === "hi" ? "en" : "hi");
+            if (b.hasAttribute("data-notes-toggle")) {
+              var i = NOTES_LANGS.indexOf(notesLang);
+              setNotesLang(NOTES_LANGS[(i + 1) % NOTES_LANGS.length]);
+            }
             else setNotesLang(b.getAttribute("data-notes-lang"));
           });
         });
