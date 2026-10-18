@@ -1130,11 +1130,25 @@
     html[data-theme="dark"] .notes-lang { border-color: #fff; }
     html[data-theme="dark"] .notes-lang-btn { color: #fff; }
     html[data-theme="dark"] .notes-lang-btn.active { background: #fff; color: #111; }
+    #notesSearchWrap { max-width: 420px; margin-bottom: 22px; }
+    .topic-dl { display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; margin-left: 10px; padding: 0; border: 1px solid rgba(26,58,92,.45); border-radius: 50%; background: transparent; color: #1a3a5c; font-size: .8rem; line-height: 1; cursor: pointer; vertical-align: middle; transition: background .2s cubic-bezier(0.22, 1, 0.36, 1), color .2s cubic-bezier(0.22, 1, 0.36, 1); }
+    .topic-dl:hover { background: #1a3a5c; color: #fff; }
+    html[data-theme="dark"] .topic-dl { border-color: rgba(255,255,255,.45); color: #f3f3f3; }
+    html[data-theme="dark"] .topic-dl:hover { background: #f3f3f3; color: #111; }
+    .notes-result-badge { display: inline-block; font: 700 .68rem var(--sans); letter-spacing: .08em; text-transform: uppercase; border: 1px solid rgba(26,58,92,.45); color: #1a3a5c; border-radius: 999px; padding: 3px 10px; margin: 14px 0 2px; }
+    html[data-theme="dark"] .notes-result-badge { border-color: rgba(255,255,255,.45); color: #f3f3f3; }
+    .notes-empty { font-size: .92rem; opacity: .72; padding: 20px 4px; }
+    .notes-tabs-divider { width: 1px; align-self: stretch; background: rgba(0,0,0,.16); margin: 8px 4px; }
+    html[data-theme="dark"] .notes-tabs-divider { background: rgba(255,255,255,.22); }
+    .notes-hindi-btn { font: 700 .85rem var(--sans); letter-spacing: .06em; padding: 10px 22px; border: 1px solid #111; border-radius: 999px; background: transparent; color: var(--ink); cursor: pointer; transition: all .25s cubic-bezier(0.22, 1, 0.36, 1); }
+    .notes-hindi-btn.active { background: #111; color: #fff; border-color: #111; }
+    html[data-theme="dark"] .notes-hindi-btn { border-color: #fff; }
+    html[data-theme="dark"] .notes-hindi-btn.active { background: #fff; color: #111; border-color: #fff; }
     @media print {
       body * { visibility: hidden; }
       #notesPaper, #notesPaper * { visibility: visible; }
       #notesPaper { position: absolute; top: 0; left: 0; width: 100%; box-shadow: none; border: none; }
-      .notes-tabs, .notes-actions, .notes-head { display: none; }
+      .notes-tabs, .notes-actions, .notes-head, #notesSearchWrap { display: none; }
     }
 
   </style>
@@ -1507,8 +1521,9 @@
             <button type="button" class="notes-lang-btn active" data-notes-lang="en" aria-pressed="true">English</button>
             <button type="button" class="notes-lang-btn" data-notes-lang="hi" aria-pressed="false">हिंदी</button>
           </div>
-          <button type="button" class="notes-btn" id="notesDownloadBtn" data-i18n="notesDownload">Download Notes</button>
-          <button type="button" class="notes-btn" id="notesPrintBtn" data-i18n="notesPrint">Print Notes</button>
+        </div>
+        <div class="section-search reveal" id="notesSearchWrap" role="search">
+          <input type="search" id="notesSearchInput" data-i18n-ph="sectionSearchPh" placeholder="Search this section…" aria-label="Search notes" autocomplete="off" />
         </div>
         <div class="notes-tabs reveal" role="tablist" aria-label="Note subjects">
           <button type="button" class="notes-tab active" data-subject="bns" role="tab" aria-selected="true">BNS</button>
@@ -1516,6 +1531,8 @@
           <button type="button" class="notes-tab" data-subject="bsa" role="tab" aria-selected="false">BSA</button>
           <button type="button" class="notes-tab" data-subject="cpc" role="tab" aria-selected="false">CPC</button>
           <button type="button" class="notes-tab" data-subject="majorActs" role="tab" aria-selected="false" data-i18n="notesMajorActs">Major Acts</button>
+          <span class="notes-tabs-divider" aria-hidden="true"></span>
+          <button type="button" class="notes-hindi-btn" data-notes-lang="hi" data-notes-toggle="1" aria-pressed="false" title="हिंदी में पढ़ें">हिंदी</button>
         </div>
         <div class="notes-paper reveal" id="notesPaper">
           <div class="notes-content" id="notesContent"></div>
@@ -2443,89 +2460,143 @@
       }
       var currentNotesSubject = "bns";
       var notesLang = "en";
+      var notesQuery = "";
+      var notesSubjectLabels = { bns: "BNS", bnss: "BNSS", bsa: "BSA", cpc: "CPC", majorActs: "Major Acts" };
+      function topicDlBtn(subj, ti, label) {
+        return ' <button type="button" class="topic-dl" data-subj="' + escapeHtml(subj) + '" data-ti="' + ti + '" aria-label="' + escapeHtml(label) + '" title="' + escapeHtml(label) + '">\u2B07</button>';
+      }
+      function renderTopicHtml(subj, ti, topic, lang, dlLabel) {
+        var title = (topic.title && (topic.title[lang] || topic.title.en)) || "";
+        var out = "<h3>" + escapeHtml(title) + topicDlBtn(subj, ti, dlLabel) + "</h3>";
+        if (topic.points && topic.points.length) {
+          out += "<ul>";
+          topic.points.forEach(function(pt) {
+            out += "<li>" + escapeHtml((pt[lang] || pt.en) || "") + "</li>";
+          });
+          out += "</ul>";
+        }
+        return out;
+      }
       function renderNotes() {
         var data = getHandwrittenNotes();
         var container = document.getElementById("notesContent");
-        if (!container || !data[currentNotesSubject]) return;
+        if (!container) return;
         var lang = notesLang;
-        var topics = data[currentNotesSubject];
+        var dlLabel = lang === "hi" ? "इस टॉपिक को डाउनलोड करें" : "Download this topic";
         var htmlOut = "";
-        topics.forEach(function(topic) {
-          var title = (topic.title && (topic.title[lang] || topic.title.en)) || "";
-          htmlOut += "<h3>" + escapeHtml(title) + "</h3>";
-          if (topic.points && topic.points.length) {
-            htmlOut += "<ul>";
-            topic.points.forEach(function(pt) {
-              var text = (pt[lang] || pt.en) || "";
-              htmlOut += "<li>" + escapeHtml(text) + "</li>";
+        if (notesQuery) {
+          var found = 0;
+          ["bns", "bnss", "bsa", "cpc", "majorActs"].forEach(function(subj) {
+            var topics = data[subj];
+            if (!topics) return;
+            topics.forEach(function(topic, ti) {
+              var hay = ((topic.title && ((topic.title.en || "") + " " + (topic.title.hi || ""))) || "")
+                + " " + (topic.points || []).map(function(p) { return (p.en || "") + " " + (p.hi || ""); }).join(" ");
+              if (hay.toLowerCase().indexOf(notesQuery) !== -1) {
+                found++;
+                htmlOut += '<span class="notes-result-badge">' + escapeHtml(notesSubjectLabels[subj] || subj) + "</span>";
+                htmlOut += renderTopicHtml(subj, ti, topic, lang, dlLabel);
+              }
             });
-            htmlOut += "</ul>";
-          }
-        });
+          });
+          if (!found) htmlOut = '<p class="notes-empty">' + escapeHtml(lang === "hi" ? "कोई नोट्स नहीं मिले।" : "No notes found. Try another word.") + "</p>";
+        } else {
+          if (!data[currentNotesSubject]) return;
+          data[currentNotesSubject].forEach(function(topic, ti) {
+            htmlOut += renderTopicHtml(currentNotesSubject, ti, topic, lang, dlLabel);
+          });
+        }
         container.innerHTML = htmlOut;
+      }
+      function downloadTopic(subj, ti) {
+        var data = getHandwrittenNotes();
+        var topics = data[subj];
+        if (!topics || !topics[ti]) return;
+        var topic = topics[ti];
+        var lang = notesLang;
+        var title = (topic.title && (topic.title[lang] || topic.title.en)) || "";
+        var label = notesSubjectLabels[subj] || subj;
+        var items = (topic.points || []).map(function(pt) {
+          return "<li>" + escapeHtml((pt[lang] || pt.en) || "") + "</li>";
+        }).join("");
+        var foot = lang === "hi" ? "केवल अध्ययन मार्गदर्शन हेतु — कानूनी सलाह नहीं।" : "For study guidance only — not legal advice.";
+        var html = "<!DOCTYPE html><html lang=\"" + lang + "\"><head><meta charset=\"utf-8\">"
+          + "<meta name=\"viewport\" content=\"width=device-width,initial-scale=1\">"
+          + "<title>" + escapeHtml(title) + "</title><style>"
+          + "body{font-family:Georgia,'Times New Roman',serif;color:#1c1c1c;line-height:1.75;max-width:760px;margin:0 auto;padding:48px 28px;background:#fff;}"
+          + ".kicker{font-family:Arial,Helvetica,sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#8a6d1c;margin:0 0 10px;}"
+          + "h1{font-size:1.7rem;margin:0 0 20px;line-height:1.35;}"
+          + "ul{padding-left:22px;margin:0;}li{margin:0 0 12px;}"
+          + ".foot{margin-top:36px;padding-top:14px;border-top:1px solid #ddd;font-family:Arial,Helvetica,sans-serif;font-size:.78rem;color:#888;}"
+          + "@media print{body{padding:0;}}"
+          + "</style></head><body>"
+          + "<p class=\"kicker\">" + escapeHtml(label + " - Handwritten Notes") + "</p>"
+          + "<h1>" + escapeHtml(title) + "</h1><ul>" + items + "</ul>"
+          + "<p class=\"foot\">" + escapeHtml(foot) + "</p></body></html>";
+        var slug = title.toLowerCase().replace(/[^a-z0-9\u0900-\u097f]+/gi, "-").replace(/^-+|-+$/g, "").slice(0, 48);
+        if (!slug) slug = "topic-" + (ti + 1);
+        var blob = new Blob([html], { type: "text/html;charset=utf-8" });
+        var a = document.createElement("a");
+        a.href = URL.createObjectURL(blob);
+        a.download = label.replace(/\s+/g, "") + "-" + slug + "-" + lang + ".html";
+        document.body.appendChild(a);
+        a.click();
+        setTimeout(function() { URL.revokeObjectURL(a.href); a.remove(); }, 500);
+      }
+      function initNotesSearch() {
+        var input = document.getElementById("notesSearchInput");
+        if (!input) return;
+        input.addEventListener("input", function() {
+          notesQuery = input.value.trim().toLowerCase();
+          renderNotes();
+        });
       }
       function initNotesTabs() {
         var tabs = document.querySelectorAll(".notes-tab");
+        var content = document.getElementById("notesContent");
+        if (content && !content.getAttribute("data-dl-bound")) {
+          content.setAttribute("data-dl-bound", "1");
+          content.addEventListener("click", function(e) {
+            var t = e.target;
+            var btn = (t && t.closest) ? t.closest(".topic-dl") : null;
+            if (!btn) return;
+            downloadTopic(btn.getAttribute("data-subj"), parseInt(btn.getAttribute("data-ti"), 10));
+          });
+        }
         tabs.forEach(function(tab) {
           tab.addEventListener("click", function() {
             tabs.forEach(function(t) { t.classList.remove("active"); t.setAttribute("aria-selected", "false"); });
             tab.classList.add("active");
             tab.setAttribute("aria-selected", "true");
             currentNotesSubject = tab.getAttribute("data-subject");
+            var si = document.getElementById("notesSearchInput");
+            if (si) si.value = "";
+            notesQuery = "";
             renderNotes();
           });
         });
         renderNotes();
       }
 
-      function initNotesLang() {
-        if (typeof currentLanguage !== "undefined") notesLang = currentLanguage;
-        var btns = document.querySelectorAll(".notes-lang-btn");
-        btns.forEach(function(b) {
-          var on = b.getAttribute("data-notes-lang") === notesLang;
+      function setNotesLang(l) {
+        notesLang = l;
+        document.querySelectorAll("[data-notes-lang]").forEach(function(b) {
+          var on = b.hasAttribute("data-notes-toggle") ? (l === "hi") : (b.getAttribute("data-notes-lang") === l);
           b.classList.toggle("active", on);
           b.setAttribute("aria-pressed", String(on));
+        });
+        renderNotes();
+      }
+      function initNotesLang() {
+        if (typeof currentLanguage !== "undefined") notesLang = currentLanguage;
+        document.querySelectorAll("[data-notes-lang]").forEach(function(b) {
           b.addEventListener("click", function() {
-            notesLang = b.getAttribute("data-notes-lang");
-            btns.forEach(function(x) {
-              var isOn = x === b;
-              x.classList.toggle("active", isOn);
-              x.setAttribute("aria-pressed", String(isOn));
-            });
-            renderNotes();
+            if (b.hasAttribute("data-notes-toggle")) setNotesLang(notesLang === "hi" ? "en" : "hi");
+            else setNotesLang(b.getAttribute("data-notes-lang"));
           });
         });
+        setNotesLang(notesLang);
       }
-      function initNotesActions() {
-        var dlBtn = document.getElementById("notesDownloadBtn");
-        var printBtn = document.getElementById("notesPrintBtn");
-        if (dlBtn) dlBtn.addEventListener("click", downloadNotes);
-        if (printBtn) printBtn.addEventListener("click", function() { window.print(); });
-      }
-      function downloadNotes() {
-        var data = getHandwrittenNotes();
-        if (!data[currentNotesSubject]) return;
-        var lang = notesLang;
-        var topics = data[currentNotesSubject];
-        var subjectNames = { bns: "BNS", bnss: "BNSS", bsa: "BSA", cpc: "CPC", majorActs: "Major Acts" };
-        var text = (subjectNames[currentNotesSubject] || currentNotesSubject) + " - Handwritten Notes\n";
-        text += "=".repeat(50) + "\n\n";
-        topics.forEach(function(topic) {
-          var title = (topic.title && (topic.title[lang] || topic.title.en)) || "";
-          text += "\n" + title + "\n" + "-".repeat(title.length) + "\n";
-          if (topic.points) topic.points.forEach(function(pt) {
-            text += "\u2713 " + ((pt[lang] || pt.en) || "") + "\n";
-          });
-        });
-        text += "\n\n--- For study guidance only, not legal advice ---";
-        var blob = new Blob([text], { type: "text/plain;charset=utf-8" });
-        var a = document.createElement("a");
-        a.href = URL.createObjectURL(blob);
-        a.download = (subjectNames[currentNotesSubject] || "notes") + "-notes-" + lang + ".txt";
-        document.body.appendChild(a); a.click();
-        setTimeout(function() { document.body.removeChild(a); URL.revokeObjectURL(a.href); }, 100);
-      }
-
       function escapeHtml(s) {
         if (!s) return "";
         return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
@@ -3144,8 +3215,8 @@
         renderLibrary();
         renderHub();
         initNotesLang();
+        initNotesSearch();
         initNotesTabs();
-        initNotesActions();
         renderDrafts();
         renderDraftGuide();
       }
