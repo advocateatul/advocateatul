@@ -167,16 +167,18 @@
       left: 0;
       width: 100%;
       color: var(--on-dark);
-      border-bottom: 1px solid rgba(255,255,255,.22);
-      transition: background-color .35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow .35s cubic-bezier(0.22, 1, 0.36, 1), border-color .35s cubic-bezier(0.22, 1, 0.36, 1);
+      background-color: var(--paper);
+      border-bottom: 1px solid rgba(0,0,0,.08);
+      transition: box-shadow .3s cubic-bezier(0.22, 1, 0.36, 1), border-color .3s cubic-bezier(0.22, 1, 0.36, 1);
     }
     .masthead.is-scrolled {
-      background-color: var(--paper);
-      border-bottom-color: rgba(0,0,0,.1);
+      border-bottom-color: rgba(0,0,0,.12);
       box-shadow: 0 6px 24px rgba(0,0,0,.08);
     }
+    html[data-theme="dark"] .masthead {
+      border-bottom-color: rgba(255,255,255,.12);
+    }
     html[data-theme="dark"] .masthead.is-scrolled {
-      border-bottom-color: rgba(255,255,255,.14);
       box-shadow: 0 6px 24px rgba(0,0,0,.45);
     }
     .masthead-inner {
@@ -942,10 +944,31 @@
     /* Silky focus rings */
     :focus-visible { outline: 2px solid #000; outline-offset: 3px; transition: outline-offset .3s cubic-bezier(0.22, 1, 0.36, 1); }
     /* Smooth scrollbar (webkit) */
-    ::-webkit-scrollbar { width: 10px; }
-    ::-webkit-scrollbar-track { background: #f1f1f1; }
-    ::-webkit-scrollbar-thumb { background: #333; border-radius: 8px; }
-    ::-webkit-scrollbar-thumb:hover { background: #000; }
+    ::-webkit-scrollbar { width: 12px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(0,0,0,.32);
+      border-radius: 10px;
+      border: 3px solid transparent;
+      background-clip: content-box;
+      transition: background .3s cubic-bezier(0.22, 1, 0.36, 1);
+      min-height: 48px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(0,0,0,.52);
+      border: 3px solid transparent;
+      background-clip: content-box;
+    }
+    ::-webkit-scrollbar-thumb:active {
+      background: rgba(0,0,0,.65);
+      border: 2px solid transparent;
+      background-clip: content-box;
+    }
+    html[data-theme="dark"] ::-webkit-scrollbar-thumb { background: rgba(255,255,255,.32); border: 3px solid transparent; background-clip: content-box; }
+    html[data-theme="dark"] ::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,.52); border: 3px solid transparent; background-clip: content-box; }
+    html[data-theme="dark"] ::-webkit-scrollbar-thumb:active { background: rgba(255,255,255,.65); border: 2px solid transparent; background-clip: content-box; }
+    html { scrollbar-width: thin; scrollbar-color: rgba(0,0,0,.35) transparent; }
+    html[data-theme="dark"] { scrollbar-color: rgba(255,255,255,.35) transparent; }
 
   
     /* ===== Scroll Performance Fix ===== */
@@ -3241,8 +3264,14 @@
       function initStickyHeader() {
         var mh = document.querySelector(".masthead");
         if (!mh) return;
+        var ticking = false;
         var onScroll = function() {
-          mh.classList.toggle("is-scrolled", window.scrollY > 24);
+          if (ticking) return;
+          ticking = true;
+          requestAnimationFrame(function() {
+            mh.classList.toggle("is-scrolled", window.scrollY > 24);
+            ticking = false;
+          });
         };
         window.addEventListener("scroll", onScroll, { passive: true });
         onScroll();
@@ -3251,6 +3280,7 @@
           ident.addEventListener("click", function(e) {
             e.preventDefault();
             window.scrollTo({ top: 0, behavior: "smooth" });
+            history.replaceState(null, "", "#top");
           });
         }
       }
@@ -3416,9 +3446,15 @@
         var fab = document.getElementById("themeFab");
         var headerToggle = document.getElementById("themeToggle");
         if (!fab) return;
+        var fabTicking = false;
         function onScroll() {
-          if (window.scrollY > 400) { fab.classList.add("visible"); }
-          else { fab.classList.remove("visible"); }
+          if (fabTicking) return;
+          fabTicking = true;
+          requestAnimationFrame(function() {
+            if (window.scrollY > 400) { fab.classList.add("visible"); }
+            else { fab.classList.remove("visible"); }
+            fabTicking = false;
+          });
         }
         window.addEventListener("scroll", onScroll, { passive: true });
         onScroll();
