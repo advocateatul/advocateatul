@@ -169,6 +169,10 @@
       color: var(--on-dark);
       background-color: var(--paper);
       border-bottom: 1px solid rgba(0,0,0,.08);
+      transform: translateZ(0);
+      -webkit-transform: translateZ(0);
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
       transition: box-shadow .3s cubic-bezier(0.22, 1, 0.36, 1), border-color .3s cubic-bezier(0.22, 1, 0.36, 1);
     }
     .masthead.is-scrolled {
@@ -944,31 +948,34 @@
     /* Silky focus rings */
     :focus-visible { outline: 2px solid #000; outline-offset: 3px; transition: outline-offset .3s cubic-bezier(0.22, 1, 0.36, 1); }
     /* Smooth scrollbar (webkit) */
-    ::-webkit-scrollbar { width: 12px; }
+    ::-webkit-scrollbar { width: 14px; }
     ::-webkit-scrollbar-track { background: transparent; }
     ::-webkit-scrollbar-thumb {
-      background: rgba(0,0,0,.32);
-      border-radius: 10px;
+      background: linear-gradient(180deg, rgba(0,0,0,.42), rgba(0,0,0,.32));
+      border-radius: 12px;
       border: 3px solid transparent;
-      background-clip: content-box;
-      transition: background .3s cubic-bezier(0.22, 1, 0.36, 1);
-      min-height: 48px;
+      background-clip: padding-box;
+      min-height: 60px;
+      box-shadow: inset 0 1px 2px rgba(255,255,255,.15);
+      transition: background .4s cubic-bezier(0.22, 1, 0.36, 1), border-width .25s cubic-bezier(0.22, 1, 0.36, 1), box-shadow .4s cubic-bezier(0.22, 1, 0.36, 1);
     }
     ::-webkit-scrollbar-thumb:hover {
-      background: rgba(0,0,0,.52);
-      border: 3px solid transparent;
-      background-clip: content-box;
+      background: linear-gradient(180deg, rgba(0,0,0,.58), rgba(0,0,0,.48));
+      border: 2px solid transparent;
+      background-clip: padding-box;
+      box-shadow: inset 0 1px 3px rgba(255,255,255,.2), 0 2px 6px rgba(0,0,0,.15);
     }
     ::-webkit-scrollbar-thumb:active {
-      background: rgba(0,0,0,.65);
+      background: linear-gradient(180deg, rgba(0,0,0,.72), rgba(0,0,0,.62));
       border: 2px solid transparent;
-      background-clip: content-box;
+      background-clip: padding-box;
+      box-shadow: inset 0 1px 3px rgba(255,255,255,.2), 0 2px 8px rgba(0,0,0,.2);
     }
-    html[data-theme="dark"] ::-webkit-scrollbar-thumb { background: rgba(255,255,255,.32); border: 3px solid transparent; background-clip: content-box; }
-    html[data-theme="dark"] ::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,.52); border: 3px solid transparent; background-clip: content-box; }
-    html[data-theme="dark"] ::-webkit-scrollbar-thumb:active { background: rgba(255,255,255,.65); border: 2px solid transparent; background-clip: content-box; }
-    html { scrollbar-width: thin; scrollbar-color: rgba(0,0,0,.35) transparent; }
-    html[data-theme="dark"] { scrollbar-color: rgba(255,255,255,.35) transparent; }
+    html[data-theme="dark"] ::-webkit-scrollbar-thumb { background: linear-gradient(180deg, rgba(255,255,255,.42), rgba(255,255,255,.32)); border: 3px solid transparent; background-clip: padding-box; box-shadow: inset 0 1px 2px rgba(255,255,255,.1); }
+    html[data-theme="dark"] ::-webkit-scrollbar-thumb:hover { background: linear-gradient(180deg, rgba(255,255,255,.58), rgba(255,255,255,.48)); border: 2px solid transparent; background-clip: padding-box; }
+    html[data-theme="dark"] ::-webkit-scrollbar-thumb:active { background: linear-gradient(180deg, rgba(255,255,255,.72), rgba(255,255,255,.62)); border: 2px solid transparent; background-clip: padding-box; }
+    html { scrollbar-width: thin; scrollbar-color: rgba(0,0,0,.4) transparent; }
+    html[data-theme="dark"] { scrollbar-color: rgba(255,255,255,.4) transparent; }
 
   
     /* ===== Scroll Performance Fix ===== */
