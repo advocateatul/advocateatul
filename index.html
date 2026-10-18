@@ -3253,6 +3253,13 @@
           });
         });
       }
+      function scrollSlightlyAboveCenter(el) {
+        if (!el) return;
+        var rect = el.getBoundingClientRect();
+        var vh = window.innerHeight || document.documentElement.clientHeight;
+        var y = window.scrollY + rect.top - (vh / 2) + (rect.height / 2) - (vh * 0.12);
+        window.scrollTo({ top: Math.max(0, y), behavior: "smooth" });
+      }
       function jumpToDraft(id) {
         var target = document.querySelector('.draft-item[data-draft-id="' + id + '"]');
         if (!target) return;
@@ -3262,7 +3269,7 @@
         var toggle = target.querySelector(".draft-toggle");
         if (body && toggle && body.hidden) toggle.click();
         setTimeout(function () {
-          target.scrollIntoView({ behavior: "smooth", block: "center" });
+          scrollSlightlyAboveCenter(target);
         }, 650);
       }
       function buildGuideCard(d, lang) {
@@ -4221,7 +4228,7 @@
         setTimeout(function () {
           var card = document.querySelector('[data-draft-id="' + id + '"]');
           if (card) {
-            card.scrollIntoView({ behavior: "smooth", block: "center" });
+            scrollSlightlyAboveCenter(card);
             card.classList.remove("ai-highlight");
             void card.offsetWidth;
             card.classList.add("ai-highlight");
