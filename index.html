@@ -936,6 +936,25 @@
     @media (prefers-reduced-motion: reduce) { .reveal-smooth { opacity: 1; transform: none; transition: none; } }
     /* Silky AI panel entrance */
     .ai-panel:not([hidden]) { animation: aiIn .35s cubic-bezier(0.22, 1, 0.36, 1); }
+
+    /* Request modal */
+    .request-modal { position: fixed; inset: 0; z-index: 502; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,.5); padding: 18px; }
+    .request-modal[hidden] { display: none; }
+    .request-box { width: min(440px, 100%); background: var(--paper); color: var(--ink); border-radius: 16px; border: 1px solid rgba(0,0,0,.12); box-shadow: 0 24px 64px rgba(0,0,0,.3); overflow: hidden; animation: aiIn .35s cubic-bezier(0.22, 1, 0.36, 1); }
+    .request-head { display: flex; align-items: center; justify-content: space-between; padding: 16px 18px; border-bottom: 1px solid rgba(0,0,0,.1); font-size: 1.05rem; }
+    .request-head button { border: none; background: none; font-size: 1.1rem; cursor: pointer; color: var(--ink); }
+    .request-sub { margin: 0; padding: 12px 18px 0; font-size: .9rem; opacity: .75; }
+    #requestForm { padding: 14px 18px 18px; display: grid; gap: 12px; }
+    #requestForm label { display: grid; gap: 6px; font-size: .85rem; font-weight: 600; }
+    #requestForm input, #requestForm select, #requestForm textarea { font: 400 .95rem var(--sans); padding: 10px 12px; border: 1px solid rgba(0,0,0,.16); border-radius: 10px; background: #fff; color: #111; width: 100%; box-sizing: border-box; }
+    #requestForm textarea { resize: vertical; }
+    html[data-theme="dark"] #requestForm input, html[data-theme="dark"] #requestForm select, html[data-theme="dark"] #requestForm textarea { background: #1c1c1c; color: #f3f3f3; border-color: rgba(255,255,255,.2); }
+    .request-submit { background: #111; color: #fff; border: none; border-radius: 999px; padding: 12px; font: 700 .95rem var(--sans); cursor: pointer; transition: transform .2s, opacity .2s; }
+    .request-submit:hover { transform: translateY(-1px); opacity: .92; }
+    html[data-theme="dark"] .request-submit { background: #f3f3f3; color: #111; }
+    #requestBtn { display: block; width: 100%; text-align: left; background: none; border: none; font: inherit; color: inherit; cursor: pointer; padding: 10px 16px; }
+    #requestBtn:hover { background: rgba(0,0,0,.06); }
+    html[data-theme="dark"] #requestBtn:hover { background: rgba(255,255,255,.08); }
     @keyframes aiIn { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
     .mobile-nav-panel:not([hidden]) { animation: hamSlide .3s cubic-bezier(0.22, 1, 0.36, 1); }
     .ai-fab { transition: transform .3s cubic-bezier(0.22, 1, 0.36, 1) !important; }
@@ -1237,6 +1256,7 @@
             <a href="https://www.indiacode.nic.in/" target="_blank" rel="noopener" role="menuitem">India Code</a>
             <a href="https://ecourts.gov.in/" target="_blank" rel="noopener" role="menuitem">eCourts</a>
             <a href="#contact" role="menuitem" data-i18n="navConsultation">Consultation</a>
+            <button type="button" id="requestBtn" role="menuitem" data-i18n="navRequest">📝 Request a Draft</button>
           </div>
         </div>
         <a class="nav-cta" href="#contact" data-i18n="navConsultation">Consultation</a>
@@ -1709,6 +1729,15 @@
           draftsTemplateLabel: "Draft template",
           hubResultDrafts: "Legal drafts",
           navConsultation: "Consultation",
+          navRequest: "📝 Request a Draft",
+          reqTitle: "📝 Request a Draft / Information",
+          reqSub: "Can't find a draft or legal information on this website? Tell us — we'll add it for you.",
+          reqName: "Your name (optional)",
+          reqType: "What do you need?",
+          reqTypeDraft: "Legal Draft / Format",
+          reqTypeInfo: "Legal Information",
+          reqDetail: "Describe what you're looking for",
+          reqSend: "Send Request on WhatsApp",
           heroLineOne: "Clear counsel.",
           heroLineTwo: "Measured action.",
           heroCopy: "Focused criminal-law guidance built on careful preparation, direct communication and respect for every matter entrusted to the practice.",
@@ -1903,6 +1932,15 @@
           draftsTemplateLabel: "\u092a\u094d\u0930\u093e\u0930\u0942\u092a",
           hubResultDrafts: "\u0915\u093e\u0928\u0942\u0928\u0940 \u092a\u094d\u0930\u093e\u0930\u0942\u092a",
           navConsultation: "परामर्श",
+          navRequest: "📝 प्रारूप का अनुरोध",
+          reqTitle: "📝 प्रारूप / जानकारी का अनुरोध",
+          reqSub: "इस वेबसाइट पर कोई प्रारूप या कानूनी जानकारी नहीं मिली? हमें बताएं — हम आपके लिए जोड़ देंगे।",
+          reqName: "आपका नाम (वैकल्पिक)",
+          reqType: "आपको क्या चाहिए?",
+          reqTypeDraft: "कानूनी प्रारूप",
+          reqTypeInfo: "कानूनी जानकारी",
+          reqDetail: "आप क्या खोज रहे हैं, बताएं",
+          reqSend: "WhatsApp पर अनुरोध भेजें",
           heroLineOne: "स्पष्ट सलाह।",
           heroLineTwo: "संतुलित कार्रवाई।",
           heroCopy: "सावधानीपूर्ण तैयारी, सीधे संवाद और हर सौंपे गए मामले के सम्मान पर आधारित आपराधिक कानून संबंधी केंद्रित मार्गदर्शन।",
@@ -3273,6 +3311,14 @@
         renderDrafts();
         renderDraftGuide();
         initStickyHeader();
+        /* Deep-link: #draft-<id> opens that draft directly */
+        (function () {
+          var h = window.location.hash || "";
+          if (h.indexOf("#draft-") === 0) {
+            var id = h.slice(7);
+            setTimeout(function () { if (typeof jumpToDraft === "function") jumpToDraft(id); }, 900);
+          }
+        })();
       }
 
       function initStickyHeader() {
@@ -3477,6 +3523,37 @@
         });
       })();
 
+        /* Request modal */
+        (function () {
+          var btn = document.getElementById("requestBtn");
+          var modal = document.getElementById("requestModal");
+          var close = document.getElementById("requestClose");
+          var form = document.getElementById("requestForm");
+          if (!btn || !modal) return;
+          function openModal() {
+            modal.hidden = false;
+            if (moreMenu) { moreMenu.hidden = true; moreBtn.setAttribute("aria-expanded", "false"); }
+            var d = document.getElementById("reqDetail");
+            if (d) d.focus();
+          }
+          function closeModal() { modal.hidden = true; }
+          btn.addEventListener("click", openModal);
+          if (close) close.addEventListener("click", closeModal);
+          modal.addEventListener("click", function (e) { if (e.target === modal) closeModal(); });
+          document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !modal.hidden) closeModal(); });
+          if (form) form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            var name = (document.getElementById("reqName").value || "").trim();
+            var type = document.getElementById("reqType").value === "info" ? "Legal Information" : "Legal Draft";
+            var detail = (document.getElementById("reqDetail").value || "").trim();
+            if (!detail) return;
+            var msg = "Namaste! I visited your website (advocateatul.github.io/advocateatul) and could not find this:\n\nType: " + type + "\nDetails: " + detail + (name ? "\nName: " + name : "") + "\n\nPlease add it to the website. Thank you!";
+            window.open("https://wa.me/917456022448?text=" + encodeURIComponent(msg), "_blank", "noopener");
+            closeModal();
+            form.reset();
+          });
+        })();
+
         /* More dropdown menu */
         var moreBtn = document.getElementById("navMoreBtn");
         var moreMenu = document.getElementById("navMoreMenu");
@@ -3635,6 +3712,27 @@
       <input type="text" id="aiInput" autocomplete="off" placeholder="Ask something…" aria-label="Ask the AI assistant" />
       <button type="submit" aria-label="Send">➤</button>
     </form>
+  </div>
+
+  <div id="requestModal" class="request-modal" hidden role="dialog" aria-modal="true" aria-labelledby="requestTitle">
+    <div class="request-box">
+      <div class="request-head">
+        <strong id="requestTitle" data-i18n="reqTitle">📝 Request a Draft / Information</strong>
+        <button type="button" id="requestClose" aria-label="Close">✕</button>
+      </div>
+      <p class="request-sub" data-i18n="reqSub">Can't find a draft or legal information on this website? Tell us — we'll add it for you.</p>
+      <form id="requestForm">
+        <label><span data-i18n="reqName">Your name (optional)</span><input type="text" id="reqName" autocomplete="name" /></label>
+        <label><span data-i18n="reqType">What do you need?</span>
+          <select id="reqType">
+            <option value="draft" data-i18n="reqTypeDraft">Legal Draft / Format</option>
+            <option value="info" data-i18n="reqTypeInfo">Legal Information</option>
+          </select>
+        </label>
+        <label><span data-i18n="reqDetail">Describe what you're looking for</span><textarea id="reqDetail" rows="4" required placeholder="e.g. Anticipatory bail draft for 498A case…"></textarea></label>
+        <button type="submit" class="request-submit" data-i18n="reqSend">Send Request on WhatsApp</button>
+      </form>
+    </div>
   </div>
 
   <script>
