@@ -1293,13 +1293,6 @@
     .notes-hindi-btn.active { background: #111; color: #fff; border-color: #111; }
     html[data-theme="dark"] .notes-hindi-btn { border-color: #fff; }
     html[data-theme="dark"] .notes-hindi-btn.active { background: #fff; color: #111; border-color: #fff; }
-    @media print {
-      body * { visibility: hidden; }
-      #notesPaper, #notesPaper * { visibility: visible; }
-      #notesPaper { position: absolute; top: 0; left: 0; width: 100%; box-shadow: none; border: none; }
-      .notes-tabs, .notes-actions, .notes-head, #notesSearchWrap { display: none; }
-    }
-
   </style>
   <script>
     /* Website always opens in light mode (owner's choice); the dark toggle is per-session only. */
@@ -3137,22 +3130,50 @@
         if (!d) return;
         var lang = draftDisplayLang(id);
         var tmpl = draftTemplate(d, lang);
-        var text = (d.title[lang] || d.title.en) + "\n" +
-          "(".concat(d.category[lang] || d.category.en, ")") + "\n" +
-          (d.filedIn ? t("draftsFiledIn") + ": " + (d.filedIn[lang] || d.filedIn.en) + "\n" : "") +
-          (d.sections ? t("draftsSections") + ": " + (d.sections[lang] || d.sections.en) + "\n" : "") +
-          (d.jurisdiction ? t("draftsJurisdiction") + ": " + (d.jurisdiction[lang] || d.jurisdiction.en) + "\n" : "") +
-          (d.requirements ? t("draftsRequirements") + ":\n- " + (d.requirements[lang] || d.requirements.en).join("\n- ") + "\n" : "") +
-          "=".repeat(60) + "\n\n" + d.template + "\n";
-        var blob = new Blob([text], { type: "text/plain;charset=utf-8" });
+        var title = d.title[lang] || d.title.en;
+        var cat = d.category[lang] || d.category.en;
+        function esc(s) { return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); }
+        var refHtml = "";
+        if (d.filedIn || d.sections || d.jurisdiction || d.requirements) {
+          refHtml += '<div class="dl-ref"><h2>' + esc(t("draftsLegalRef")) + '</h2>';
+          if (d.filedIn) refHtml += '<p><strong>' + esc(t("draftsFiledIn")) + ':</strong> ' + esc(d.filedIn[lang] || d.filedIn.en) + '</p>';
+          if (d.sections) refHtml += '<p><strong>' + esc(t("draftsSections")) + ':</strong> ' + esc(d.sections[lang] || d.sections.en) + '</p>';
+          if (d.jurisdiction) refHtml += '<p><strong>' + esc(t("draftsJurisdiction")) + ':</strong> ' + esc(d.jurisdiction[lang] || d.jurisdiction.en) + '</p>';
+          if (d.requirements) refHtml += '<p><strong>' + esc(t("draftsRequirements")) + ':</strong></p><ul>' + (d.requirements[lang] || d.requirements.en).map(function (r) { return '<li>' + esc(r) + '</li>'; }).join('') + '</ul>';
+          refHtml += '</div>';
+        }
+        var kicker = lang === "hi" ? "\u0915\u093e\u0928\u0942\u0928\u0940 \u092a\u094d\u0930\u093e\u0930\u0942\u092a" : "Legal Draft";
+        var html = '<!DOCTYPE html><html lang="' + lang + '"><head><meta charset="utf-8">'
+          + '<meta name="viewport" content="width=device-width,initial-scale=1">'
+          + '<title>' + esc(title) + '</title><style>'
+          + 'body{font-family:Georgia,\'Times New Roman\',serif;color:#111;line-height:1.8;max-width:780px;margin:0 auto;padding:48px 32px;background:#fff;}'
+          + '.kicker{font-family:Arial,Helvetica,sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#555;margin:0 0 10px;}'
+          + 'h1{font-size:1.65rem;margin:0 0 8px;line-height:1.4;border-bottom:2px solid #111;padding-bottom:14px;}'
+          + '.doc-cat{font-family:Arial,Helvetica,sans-serif;font-size:.82rem;color:#555;margin:0 0 28px;}'
+          + 'pre.doc{white-space:pre-wrap;font-family:Georgia,\'Times New Roman\',serif;font-size:.95rem;line-height:1.85;margin:0 0 30px;}'
+          + '.dl-ref{background:#f7f7f7;border:1px solid #ddd;border-radius:8px;padding:20px 22px;margin:0 0 30px;}'
+          + '.dl-ref h2{font-family:Arial,Helvetica,sans-serif;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;margin:0 0 12px;}'
+          + '.dl-ref p{font-size:.88rem;margin:0 0 8px;}'
+          + '.dl-ref ul{margin:6px 0 0;padding-left:20px;font-size:.88rem;}'
+          + '.dl-ref li{margin:0 0 6px;}'
+          + '.foot{margin-top:36px;padding-top:14px;border-top:1px solid #ddd;font-family:Arial,Helvetica,sans-serif;font-size:.75rem;color:#888;}'
+          + '@media print{body{padding:0;}.dl-ref{break-inside:avoid;}}'
+          + '</style></head><body>'
+          + '<p class="kicker">' + esc(kicker) + '</p>'
+          + '<h1>' + esc(title) + '</h1>'
+          + '<p class="doc-cat">' + esc(cat) + '</p>'
+          + '<pre class="doc">' + esc(tmpl) + '</pre>'
+          + refHtml
+          + '<p class="foot">A.K Legal Law \u2014 Advocate Atul Kumar, Bulandshahr</p>'
+          + '</body></html>';
+        var blob = new Blob([html], { type: "text/html;charset=utf-8" });
         var a = document.createElement("a");
         a.href = URL.createObjectURL(blob);
-        a.download = "legal-draft-" + id + ".txt";
+        a.download = "legal-draft-" + id + "-" + lang + ".html";
         document.body.appendChild(a);
         a.click();
         setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 800);
       }
-
       function printDraft(id) {
         var d = draftById(id);
         if (!d) return;
