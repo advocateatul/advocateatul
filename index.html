@@ -1080,6 +1080,18 @@
     html[data-theme="dark"] .notes-content .note-section-num { background: #3b82f6; }
     .notes-note { margin-top: 24px; font-size: .85rem; color: var(--ink); opacity: .7; }
 
+  
+    .notes-actions { display: flex; gap: 12px; margin-bottom: 20px; flex-wrap: wrap; }
+    .notes-btn { font: 700 .85rem var(--sans); padding: 10px 24px; border: 1px solid #111; border-radius: 999px; background: #111; color: #fff; cursor: pointer; transition: all .25s cubic-bezier(0.22, 1, 0.36, 1); }
+    .notes-btn:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,.15); }
+    html[data-theme="dark"] .notes-btn { background: #fff; color: #111; border-color: #fff; }
+    @media print {
+      body * { visibility: hidden; }
+      #notesPaper, #notesPaper * { visibility: visible; }
+      #notesPaper { position: absolute; top: 0; left: 0; width: 100%; box-shadow: none; border: none; }
+      .notes-tabs, .notes-actions, .notes-head { display: none; }
+    }
+
   </style>
   <script>
     /* Website always opens in light mode (owner's choice); the dark toggle is per-session only. */
@@ -1441,6 +1453,10 @@
           </div>
           <p data-i18n="notesCopy">Comprehensive handwritten-style study notes for BNS, BNSS, BSA, CPC and Criminal Major Acts — in English and Hindi. Tap a subject to open its notes.</p>
         </div>
+        <div class="notes-actions reveal">
+          <button type="button" class="notes-btn" id="notesDownloadBtn" data-i18n="notesDownload">Download Notes</button>
+          <button type="button" class="notes-btn" id="notesPrintBtn" data-i18n="notesPrint">Print Notes</button>
+        </div>
         <div class="notes-tabs reveal" role="tablist" aria-label="Note subjects">
           <button type="button" class="notes-tab active" data-subject="bns" role="tab" aria-selected="true">BNS</button>
           <button type="button" class="notes-tab" data-subject="bnss" role="tab" aria-selected="false">BNSS</button>
@@ -1537,6 +1553,8 @@
           notesTitle: "Study notes, handwritten style.",
           notesCopy: "Comprehensive handwritten-style study notes for BNS, BNSS, BSA, CPC and Criminal Major Acts \u2014 in English and Hindi. Tap a subject to open its notes.",
           notesMajorActs: "Major Acts",
+          notesDownload: "Download Notes",
+          notesPrint: "Print Notes",
           notesNote: "These notes are for study guidance only, not legal advice. Always verify with the bare Act and consult an advocate for your specific matter.",
           guideTitle: "Draft guide.",
           guideCopy: "A compact guide to every draft \u2014 what it is used for, the sections it relies on, where it is filed, and what you need. Tap any card to jump to the full draft template.",
@@ -1729,6 +1747,8 @@
           notesTitle: "\u0905\u0927\u094d\u092f\u092f\u0928 \u0928\u094b\u091f\u094d\u0938, \u0939\u0938\u094d\u0924\u0932\u093f\u0916\u093f\u0924 \u0936\u0948\u0932\u0940 \u092e\u0947\u0902\u0964",
           notesCopy: "BNS, BNSS, BSA, CPC \u0914\u0930 \u0906\u092a\u0930\u093e\u0927\u093f\u0915 \u092a\u094d\u0930\u092e\u0941\u0916 \u0905\u0927\u093f\u0928\u093f\u092f\u092e\u094b\u0902 \u0915\u0947 \u0935\u093f\u0938\u094d\u0924\u0943\u0924 \u0939\u0938\u094d\u0924\u0932\u093f\u0916\u093f\u0924-\u0936\u0948\u0932\u0940 \u0905\u0927\u094d\u092f\u092f\u0928 \u0928\u094b\u091f\u094d\u0938 \u2014 \u0905\u0902\u0917\u094d\u0930\u0947\u091c\u0940 \u0914\u0930 \u0939\u093f\u0902\u0926\u0940 \u092e\u0947\u0902\u0964 \u0915\u093f\u0938\u0940 \u0935\u093f\u0937\u092f \u092a\u0930 \u091f\u0948\u092a \u0915\u0930\u0947\u0902\u0964",
           notesMajorActs: "\u092a\u094d\u0930\u092e\u0941\u0916 \u0905\u0927\u093f\u0928\u093f\u092f\u092e",
+          notesDownload: "\u0928\u094b\u091f\u094d\u0938 \u0921\u093e\u0909\u0928\u0932\u094b\u0921 \u0915\u0930\u0947\u0902",
+          notesPrint: "\u0928\u094b\u091f\u094d\u0938 \u092a\u094d\u0930\u093f\u0902\u091f \u0915\u0930\u0947\u0902",
           notesNote: "\u092f\u0947 \u0928\u094b\u091f\u094d\u0938 \u0915\u0947\u0935\u0932 \u0905\u0927\u094d\u092f\u092f\u0928 \u092e\u093e\u0930\u094d\u0917\u0926\u0930\u094d\u0936\u0928 \u0915\u0947 \u0932\u093f\u090f \u0939\u0948\u0902, \u0915\u093e\u0928\u0942\u0928\u0940 \u0938\u0932\u093e\u0939 \u0928\u0939\u0940\u0902\u0964",
           guideTitle: "\u0921\u094d\u0930\u093e\u092b\u094d\u091f \u092e\u093e\u0930\u094d\u0917\u0926\u0930\u094d\u0936\u093f\u0915\u093e\u0964",
           guideCopy: "\u0939\u0930 \u092a\u094d\u0930\u093e\u0930\u0942\u092a \u0915\u0940 \u0938\u0902\u0915\u094d\u0937\u093f\u092a\u094d\u0924 \u092e\u093e\u0930\u094d\u0917\u0926\u0930\u094d\u0936\u093f\u0915\u093e \u2014 \u092f\u0939 \u0915\u093f\u0938 \u0915\u093e\u092e \u0906\u0924\u093e \u0939\u0948, \u0915\u093f\u0928 \u0927\u093e\u0930\u093e\u0913\u0902 \u092a\u0930 \u0906\u0927\u093e\u0930\u093f\u0924 \u0939\u0948, \u0915\u0939\u093e\u0901 \u0926\u093e\u0916\u093f\u0932 \u0939\u094b\u0924\u093e \u0939\u0948, \u0914\u0930 \u0906\u092a\u0915\u094b \u0915\u094d\u092f\u093e \u091a\u093e\u0939\u093f\u090f\u0964 \u092a\u0942\u0930\u094d\u0923 \u092a\u094d\u0930\u093e\u0930\u0942\u092a \u091f\u0947\u092e\u094d\u092a\u0932\u0947\u091f \u092a\u0930 \u091c\u093e\u0928\u0947 \u0915\u0947 \u0932\u093f\u090f \u0915\u093f\u0938\u0940 \u092d\u0940 \u0915\u093e\u0930\u094d\u0921 \u092a\u0930 \u091f\u0948\u092a \u0915\u0930\u0947\u0902\u0964",
@@ -2403,6 +2423,37 @@
         });
         renderNotes();
       }
+
+      function initNotesActions() {
+        var dlBtn = document.getElementById("notesDownloadBtn");
+        var printBtn = document.getElementById("notesPrintBtn");
+        if (dlBtn) dlBtn.addEventListener("click", downloadNotes);
+        if (printBtn) printBtn.addEventListener("click", function() { window.print(); });
+      }
+      function downloadNotes() {
+        var data = getHandwrittenNotes();
+        if (!data[currentNotesSubject]) return;
+        var lang = (typeof currentLanguage !== "undefined") ? currentLanguage : "en";
+        var topics = data[currentNotesSubject];
+        var subjectNames = { bns: "BNS", bnss: "BNSS", bsa: "BSA", cpc: "CPC", majorActs: "Major Acts" };
+        var text = (subjectNames[currentNotesSubject] || currentNotesSubject) + " - Handwritten Notes\n";
+        text += "=".repeat(50) + "\n\n";
+        topics.forEach(function(topic) {
+          var title = (topic.title && (topic.title[lang] || topic.title.en)) || "";
+          text += "\n" + title + "\n" + "-".repeat(title.length) + "\n";
+          if (topic.points) topic.points.forEach(function(pt) {
+            text += "\u2713 " + ((pt[lang] || pt.en) || "") + "\n";
+          });
+        });
+        text += "\n\n--- For study guidance only, not legal advice ---";
+        var blob = new Blob([text], { type: "text/plain;charset=utf-8" });
+        var a = document.createElement("a");
+        a.href = URL.createObjectURL(blob);
+        a.download = (subjectNames[currentNotesSubject] || "notes") + "-notes-" + lang + ".txt";
+        document.body.appendChild(a); a.click();
+        setTimeout(function() { document.body.removeChild(a); URL.revokeObjectURL(a.href); }, 100);
+      }
+
       function escapeHtml(s) {
         if (!s) return "";
         return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
@@ -3021,6 +3072,7 @@
         renderLibrary();
         renderHub();
         initNotesTabs();
+        initNotesActions();
         renderDrafts();
         renderDraftGuide();
       }
