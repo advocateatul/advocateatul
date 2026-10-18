@@ -3683,7 +3683,14 @@
 
       document.querySelectorAll("[data-language]").forEach(function (button) {
         button.addEventListener("click", function () {
+          /* Preserve scroll position across language switch */
+          var savedY = window.scrollY || window.pageYOffset || 0;
           applyLanguage(button.getAttribute("data-language"));
+          requestAnimationFrame(function () {
+            requestAnimationFrame(function () {
+              window.scrollTo(0, savedY);
+            });
+          });
         });
       });
 
