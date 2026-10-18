@@ -697,7 +697,7 @@
 
 
     /* ---------- Knowledge Hub ---------- */
-    .knowledge { background: var(--paper); color: var(--ink); padding: clamp(84px, 11vw, 144px) 0; position: relative; overflow: hidden; }
+    .knowledge { background: var(--paper); color: var(--ink); padding: clamp(84px, 11vw, 144px) 0; position: relative; overflow: clip; }
     .knowledge::before { content: ""; position: absolute; inset: 0; background: radial-gradient(900px 420px at 85% -60px, rgba(0,0,0,.05), transparent 60%), radial-gradient(700px 380px at 8% 110%, rgba(0,0,0,.04), transparent 60%); pointer-events: none; }
     .knowledge .shell { position: relative; z-index: 1; }
     .knowledge-head { display: grid; grid-template-columns: .7fr 1.3fr; gap: 50px; align-items: end; margin-bottom: 34px; }
@@ -718,7 +718,7 @@
     .hub-result:hover { color: #000000; padding-left: 10px; }
     .hub-result small { display: block; color: var(--muted); font-size: .74rem; margin-top: 2px; }
     .hub-no-results { padding: 22px; color: var(--muted); font-size: .88rem; }
-    .hub-tabs { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 30px; scroll-margin-top: 90px; position: sticky; top: 76px; z-index: 4; background: var(--paper); padding: 12px 0; }
+    .hub-tabs { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 30px; scroll-margin-top: 90px; position: sticky; top: var(--hub-tabs-top, 76px); z-index: 4; background: var(--paper); padding: 12px 0; }
     .hub-tab { background: transparent; border: 1px solid rgba(0,0,0,.28); color: var(--ink); border-radius: 999px; padding: 10px 22px; font: 600 .8rem var(--sans); letter-spacing: .03em; cursor: pointer; transition: all .25s cubic-bezier(0.22, 1, 0.36, 1); }
     .hub-tab:hover { border-color: #111111; color: #111111; transform: translateY(-2px); }
     .hub-tab.active { background: #111111; border-color: #111111; color: #ffffff; box-shadow: 0 8px 24px rgba(0,0,0,.22); }
@@ -2424,6 +2424,9 @@
       function switchHubTab(id) {
         hubActiveTab = id;
         renderHubTabs();
+        /* Keep sticky tabs below the fixed header */
+        var mh = document.querySelector(".masthead");
+        if (mh) { document.documentElement.style.setProperty("--hub-tabs-top", (mh.offsetHeight + 4) + "px"); }
         HUB_TABS.forEach(function (tab) {
           var panel = document.getElementById(tab.panel);
           if (!panel) return;
