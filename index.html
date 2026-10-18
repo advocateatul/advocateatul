@@ -3310,9 +3310,6 @@
         if (!target) return;
         var draftsSection = document.getElementById("drafts");
         if (draftsSection) draftsSection.scrollIntoView({ behavior: "smooth" });
-        var body = target.querySelector(".draft-body");
-        var toggle = target.querySelector(".draft-toggle");
-        if (body && toggle && body.hidden) toggle.click();
         setTimeout(function () {
           scrollSlightlyAboveCenter(target);
         }, 650);
@@ -4277,8 +4274,6 @@
             card.classList.remove("ai-highlight");
             void card.offsetWidth;
             card.classList.add("ai-highlight");
-            var btn = card.querySelector(".draft-toggle");
-            if (btn && btn.getAttribute("aria-expanded") !== "true") btn.click();
           }
         }, 600);
       }
