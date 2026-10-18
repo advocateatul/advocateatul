@@ -3981,9 +3981,14 @@
             menu.hidden = true;
             caret.setAttribute("aria-expanded", "false");
           }
+          var hubMenuOpenedAt = 0;
           caret.addEventListener("click", function (e) {
             e.stopPropagation();
+            var now = Date.now();
             var open = menu.hidden;
+            /* Ignore accidental double-click: don't close within 350ms of opening */
+            if (!open && now - hubMenuOpenedAt < 350) return;
+            if (open) hubMenuOpenedAt = now;
             menu.hidden = !open;
             caret.setAttribute("aria-expanded", String(open));
           });
