@@ -736,6 +736,15 @@
     .hub-tab { background: transparent; border: 1px solid rgba(0,0,0,.28); color: var(--ink); border-radius: 999px; padding: 10px 22px; font: 600 .8rem var(--sans); letter-spacing: .03em; cursor: pointer; transition: all .25s cubic-bezier(0.22, 1, 0.36, 1); }
     .hub-tab:hover { border-color: #111111; color: #111111; transform: translateY(-2px); }
     .hub-tab.active { background: #111111; border-color: #111111; color: #ffffff; box-shadow: 0 8px 24px rgba(0,0,0,.22); }
+    /* Hub tab icons (survive i18n text swaps; same set as the nav dropdown) */
+    #hubTabs .hub-tab[data-tab="acts"]::before, #navMoreMenu .hub-jump[data-hub-tab="acts"]::before { content: "📜"; margin-right: .45em; }
+    #hubTabs .hub-tab[data-tab="constitution"]::before, #navMoreMenu .hub-jump[data-hub-tab="constitution"]::before { content: "📖"; margin-right: .45em; }
+    #hubTabs .hub-tab[data-tab="courts"]::before, #navMoreMenu .hub-jump[data-hub-tab="courts"]::before { content: "🏛️"; margin-right: .45em; }
+    #hubTabs .hub-tab[data-tab="consumer"]::before, #navMoreMenu .hub-jump[data-hub-tab="consumer"]::before { content: "🛒"; margin-right: .45em; }
+    #hubTabs .hub-tab[data-tab="bar"]::before, #navMoreMenu .hub-jump[data-hub-tab="bar"]::before { content: "🎓"; margin-right: .45em; }
+    #hubTabs .hub-tab[data-tab="drafts"]::before, #navMoreMenu .hub-jump[data-hub-tab="drafts"]::before { content: "📁"; margin-right: .45em; }
+    #hubTabs .hub-tab[data-tab="links"]::before, #navMoreMenu .hub-jump[data-hub-tab="links"]::before { content: "🔗"; margin-right: .45em; }
+    #hubTabs .hub-tab[data-tab="toolkit"]::before, #navMoreMenu .hub-jump[data-hub-tab="toolkit"]::before { content: "⚖️"; margin-right: .45em; }
     .hub-panel { animation: hubFade .45s cubic-bezier(0.22, 1, 0.36, 1) both; }
     .hub-panel[hidden] { display: none; }
     @keyframes hubFade { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
@@ -2444,6 +2453,7 @@
           var btn = hubEl("button", "hub-tab" + (hubActiveTab === tab.id ? " active" : ""), t(tab.labelKey));
           btn.type = "button";
           btn.setAttribute("role", "tab");
+          btn.setAttribute("data-tab", tab.id);
           btn.addEventListener("click", function () { switchHubTab(tab.id); });
           wrap.appendChild(btn);
         });
