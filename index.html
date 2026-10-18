@@ -250,6 +250,17 @@
     html[data-theme="dark"] .nav-more-menu { background: #111111; color: #f3f3f3; border-color: rgba(255,255,255,.15); box-shadow: 0 18px 50px rgba(0,0,0,.45); }
     html[data-theme="dark"] .nav-more-menu a { color: rgba(255,255,255,.85); }
     html[data-theme="dark"] .nav-more-menu a:hover { background: rgba(255,255,255,.1); color: #fff; }
+    /* Knowledge Hub nav dropdown — lists the 8 hub categories so visitors see what's inside */
+    .nav-hub-wrap { position: relative; display: inline-flex; align-items: center; }
+    .nav-strip > .nav-hub-wrap { flex: 0 0 auto; white-space: nowrap; }
+    .nav-hub-caret { background: none; border: none; cursor: pointer; font-size: .72em; line-height: 1; padding: 4px 0 4px 1px; margin-left: -1px; color: inherit; }
+    .nav-hub-caret:hover { transform: translateY(1px); }
+    .nav-hub-menu { position: absolute; top: calc(100% + 8px); left: 0; min-width: 230px; background: #ffffff; color: #111; border: 1px solid rgba(0,0,0,.12); border-radius: 12px; padding: 8px; z-index: 200; box-shadow: 0 18px 50px rgba(0,0,0,.18); }
+    .nav-hub-menu .hub-jump { display: flex; align-items: center; gap: 10px; padding: 9px 14px; border-radius: 8px; font-size: .82rem; }
+    .nav-hub-menu .hub-jump:hover { background: rgba(0,0,0,.06); }
+    .nav-hub-menu .hj-ic { font-size: 1.05em; flex: 0 0 auto; }
+    html[data-theme="dark"] .nav-hub-menu { background: #111111; color: #f3f3f3; border-color: rgba(255,255,255,.15); box-shadow: 0 18px 50px rgba(0,0,0,.45); }
+    html[data-theme="dark"] .nav-hub-menu .hub-jump:hover { background: rgba(255,255,255,.1); }
     .language-switch { display: inline-flex; border: 1px solid rgba(255,255,255,.38); }
     .language-switch button { min-width: 36px; height: 30px; padding: 0 9px; border: 0; background: transparent; color: #111; font: 700 .68rem var(--sans); cursor: pointer; }
     .language-switch button[aria-pressed="true"] { background: #111; color: #fff; }
@@ -918,6 +929,8 @@
       .top-search input { flex: 1 1 auto; width: auto; min-width: 0; }
       .top-search input:focus { width: auto; }
       .mobile-nav-panel { display: none !important; }
+      /* Knowledge Hub dropdown is desktop/laptop only — the strip clips absolute menus on mobile (categories stay in More ▾) */
+      .nav-hub-caret, .nav-hub-menu { display: none !important; }
     }
     @keyframes hamSlide { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: none; } }
     /* Per-section search inputs */
@@ -1280,7 +1293,19 @@
         <a href="#practice" data-i18n="navPractice">Practice</a>
         <a href="#updates" data-i18n="navUpdates">Updates</a>
         <a href="#library" data-i18n="navLibrary">Library</a>
-        <a href="#knowledge" data-i18n="navKnowledge">Knowledge Hub</a>
+        <div class="nav-hub-wrap">
+        <a href="#knowledge" data-i18n="navKnowledge">Knowledge Hub</a><button type="button" class="nav-hub-caret" id="navHubCaret" aria-haspopup="true" aria-expanded="false" aria-label="Knowledge Hub categories">▾</button>
+          <div class="nav-hub-menu" id="navHubMenu" hidden role="menu" aria-label="Knowledge Hub categories">
+            <button type="button" class="hub-jump" data-hub-tab="acts" role="menuitem"><span class="hj-ic" aria-hidden="true">📜</span><span data-i18n="hubTabActs">Bare Acts</span></button>
+            <button type="button" class="hub-jump" data-hub-tab="constitution" role="menuitem"><span class="hj-ic" aria-hidden="true">📖</span><span data-i18n="hubTabConstitution">Constitution</span></button>
+            <button type="button" class="hub-jump" data-hub-tab="courts" role="menuitem"><span class="hj-ic" aria-hidden="true">🏛️</span><span data-i18n="hubTabCourts">Courts</span></button>
+            <button type="button" class="hub-jump" data-hub-tab="consumer" role="menuitem"><span class="hj-ic" aria-hidden="true">🛒</span><span data-i18n="hubTabConsumer">Consumer</span></button>
+            <button type="button" class="hub-jump" data-hub-tab="bar" role="menuitem"><span class="hj-ic" aria-hidden="true">🎓</span><span data-i18n="hubTabBar">AIBE &amp; Bar</span></button>
+            <button type="button" class="hub-jump" data-hub-tab="drafts" role="menuitem"><span class="hj-ic" aria-hidden="true">📁</span><span data-i18n="hubTabDrafts">Drafts &amp; Library</span></button>
+            <button type="button" class="hub-jump" data-hub-tab="links" role="menuitem"><span class="hj-ic" aria-hidden="true">🔗</span><span data-i18n="hubTabLinks">Useful Links</span></button>
+            <button type="button" class="hub-jump" data-hub-tab="toolkit" role="menuitem"><span class="hj-ic" aria-hidden="true">⚖️</span><span data-i18n="hubTabToolkit">Criminal Toolkit</span></button>
+          </div>
+        </div>
         <a href="#documents" data-i18n="navDocuments">Documents</a>
         <a href="#drafts" data-i18n="navDrafts">Drafts</a>
         <a href="#draft-guide" class="nav-mid-hide" data-i18n="navDraftGuide">Draft Guide</a>
@@ -3629,6 +3654,10 @@
         function jumpToHubTab(tabId) {
           if (moreMenu) { moreMenu.hidden = true; }
           if (moreBtn) { moreBtn.setAttribute("aria-expanded", "false"); }
+          var hm = document.getElementById("navHubMenu");
+          var hc = document.getElementById("navHubCaret");
+          if (hm) { hm.hidden = true; }
+          if (hc) { hc.setAttribute("aria-expanded", "false"); }
           try { switchHubTab(tabId); } catch (e) {}
           setTimeout(function () {
             var tabs = document.getElementById("hubTabs");
@@ -3672,6 +3701,38 @@
             }
           });
         }
+        /* Knowledge Hub nav dropdown — lists the 8 hub categories under the nav item */
+        (function () {
+          var caret = document.getElementById("navHubCaret");
+          var menu = document.getElementById("navHubMenu");
+          if (!caret || !menu) return;
+          function closeHubMenu() {
+            menu.hidden = true;
+            caret.setAttribute("aria-expanded", "false");
+          }
+          caret.addEventListener("click", function (e) {
+            e.stopPropagation();
+            var open = menu.hidden;
+            menu.hidden = !open;
+            caret.setAttribute("aria-expanded", String(open));
+          });
+          menu.addEventListener("click", function (e) {
+            var t = e.target.closest ? e.target.closest(".hub-jump") : null;
+            if (t && t.getAttribute("data-hub-tab")) {
+              e.stopPropagation();
+              e.preventDefault();
+              jumpToHubTab(t.getAttribute("data-hub-tab"));
+            }
+          });
+          document.addEventListener("click", function (e) {
+            if (!menu.hidden && !menu.contains(e.target) && e.target !== caret && !caret.contains(e.target)) {
+              closeHubMenu();
+            }
+          });
+          document.addEventListener("keydown", function (e) {
+            if (e.key === "Escape" && !menu.hidden) { closeHubMenu(); }
+          });
+        })();
         /* Hamburger menu (mobile) */
         var hamBtn = document.getElementById("navHamburger");
         var hamPanel = document.getElementById("mobileNavPanel");
