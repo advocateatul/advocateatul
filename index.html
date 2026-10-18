@@ -161,13 +161,23 @@
     .shell { width: min(1180px, calc(100% - 40px)); margin-inline: auto; }
 
     .masthead {
-      position: absolute;
+      position: fixed;
       z-index: 5;
       top: 0;
       left: 0;
       width: 100%;
       color: var(--on-dark);
       border-bottom: 1px solid rgba(255,255,255,.22);
+      transition: background-color .35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow .35s cubic-bezier(0.22, 1, 0.36, 1), border-color .35s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .masthead.is-scrolled {
+      background-color: var(--paper);
+      border-bottom-color: rgba(0,0,0,.1);
+      box-shadow: 0 6px 24px rgba(0,0,0,.08);
+    }
+    html[data-theme="dark"] .masthead.is-scrolled {
+      border-bottom-color: rgba(255,255,255,.14);
+      box-shadow: 0 6px 24px rgba(0,0,0,.45);
     }
     .masthead-inner {
       min-height: 76px;
@@ -182,7 +192,8 @@
       nav { gap: 14px !important; }
       .masthead-inner { gap: 16px; }
     }
-    .identity { display: flex; flex-direction: column; align-items: flex-start; gap: 3px; min-width: 0; line-height: 1.15; }
+    .identity { display: flex; flex-direction: column; align-items: flex-start; gap: 3px; min-width: 0; line-height: 1.15; text-decoration: none; cursor: pointer; transition: opacity .2s; }
+    .identity:hover { opacity: .82; }
     .identity strong { font-family: var(--serif); font-size: 1.2rem; font-weight: 800; letter-spacing: .01em; white-space: nowrap; color: #111; }
     .identity span { font-size: .8rem; font-weight: 700; color: #111; letter-spacing: .18em; text-transform: uppercase; white-space: nowrap; }
     nav { display: flex; gap: 22px; align-items: center; }
@@ -1163,9 +1174,9 @@
   </script>
 </head>
 <body>
-  <header class="masthead" aria-label="Primary navigation">
+  <header class="masthead" id="top" aria-label="Primary navigation">
     <div class="shell masthead-inner">
-      <div class="identity"><strong id="siteName">A.K legal law</strong><span id="identityProfession">Criminal Lawyer</span></div>
+      <a class="identity" href="#top" aria-label="A.K legal law — back to top"><strong id="siteName">A.K legal law</strong><span id="identityProfession">Criminal Lawyer</span></a>
       <nav>
         <button type="button" id="navHamburger" class="nav-hamburger" aria-haspopup="true" aria-expanded="false" aria-label="Menu / मेन्यू"><span aria-hidden="true">☰</span></button>
         <div class="nav-strip">
@@ -3224,6 +3235,17 @@
         initNotesTabs();
         renderDrafts();
         renderDraftGuide();
+        initStickyHeader();
+      }
+
+      function initStickyHeader() {
+        var mh = document.querySelector(".masthead");
+        if (!mh) return;
+        var onScroll = function() {
+          mh.classList.toggle("is-scrolled", window.scrollY > 24);
+        };
+        window.addEventListener("scroll", onScroll, { passive: true });
+        onScroll();
       }
 
       document.querySelectorAll("[data-language]").forEach(function (button) {
