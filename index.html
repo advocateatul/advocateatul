@@ -984,6 +984,17 @@
     html[data-theme="dark"] .mobile-nav-panel a { color: #e8e8e8 !important; border-bottom-color: rgba(255,255,255,.08) !important; }
     html[data-theme="dark"] .mobile-nav-panel a:hover { color: #ffffff !important; }
 
+  
+    /* Floating dark mode button (appears on scroll) */
+    .theme-fab { position: fixed; left: 18px; bottom: 18px; z-index: 500; width: 52px; height: 52px; border-radius: 50%; border: 2px solid #000; background: #fff; color: #111; font-size: 1.3rem; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 24px rgba(0,0,0,.25); opacity: 0; transform: translateY(20px); pointer-events: none; transition: opacity .3s, transform .3s; }
+    .theme-fab.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+    .theme-fab:hover { transform: translateY(-2px); }
+    .theme-fab.visible:hover { transform: translateY(-2px); }
+    html[data-theme="dark"] .theme-fab { background: #1a1a1a; color: #f3f3f3; border-color: rgba(255,255,255,.4); }
+    html[data-theme="dark"] .theme-fab .icon-moon { display: none; }
+    html[data-theme="dark"] .theme-fab .icon-sun { display: block; }
+    .theme-fab .icon-sun { display: none; }
+
   </style>
   <script>
     /* Website always opens in light mode (owner's choice); the dark toggle is per-session only. */
@@ -2996,6 +3007,23 @@
             setTheme(root.getAttribute("data-theme") === "dark" ? "light" : "dark", true);
           });
         }
+
+      /* Floating theme button: appears on scroll */
+      (function initThemeFab() {
+        var fab = document.getElementById("themeFab");
+        var headerToggle = document.getElementById("themeToggle");
+        if (!fab) return;
+        function onScroll() {
+          if (window.scrollY > 400) { fab.classList.add("visible"); }
+          else { fab.classList.remove("visible"); }
+        }
+        window.addEventListener("scroll", onScroll, { passive: true });
+        onScroll();
+        fab.addEventListener("click", function () {
+          if (headerToggle) { headerToggle.click(); }
+        });
+      })();
+
         /* More dropdown menu */
         var moreBtn = document.getElementById("navMoreBtn");
         var moreMenu = document.getElementById("navMoreMenu");
@@ -3135,7 +3163,12 @@
   </script>
   <div id="draftPrintArea" aria-hidden="true"></div>
   <!-- AI Legal Assistant -->
-  <button type="button" id="aiFab" class="ai-fab" aria-label="AI Legal Assistant">
+  
+    <button type="button" id="themeFab" class="theme-fab" aria-label="Toggle dark mode" title="Dark mode">
+      <span class="icon-moon" aria-hidden="true">🌙</span>
+      <span class="icon-sun" aria-hidden="true">☀️</span>
+    </button>
+    <button type="button" id="aiFab" class="ai-fab" aria-label="AI Legal Assistant">
     <span aria-hidden="true">✦</span><span class="ai-fab-label">AI</span>
   </button>
   <div id="aiPanel" class="ai-panel" hidden role="dialog" aria-label="AI Legal Assistant">
