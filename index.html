@@ -4044,18 +4044,7 @@
         reveals.forEach(function (element) { element.classList.add("visible"); });
       }
 
-      if (!reduceMotion) {
-        var ticking = false;
-        window.addEventListener("scroll", function () {
-          if (!ticking) {
-            window.requestAnimationFrame(function () {
-              root.style.setProperty("--hero-shift", Math.min(window.scrollY * 0.11, 76) + "px");
-              ticking = false;
-            });
-            ticking = true;
-          }
-        }, { passive: true });
-      }
+
 
       
 
