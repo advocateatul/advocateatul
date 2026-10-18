@@ -487,6 +487,15 @@
     .drafts-list { border-top: 1px solid var(--line); margin-top: 26px; }
     .draft-item { border-bottom: 1px solid var(--line); padding: 26px 24px; }
     .draft-top { display: grid; grid-template-columns: 1fr auto; gap: 18px; align-items: start; }
+    .draft-top-actions { display: flex; flex-direction: column; gap: 8px; align-items: flex-end; }
+    .draft-langswitch { display: inline-flex; border: 1px solid rgba(0,0,0,.22); border-radius: 999px; overflow: hidden; background: transparent; }
+    .draft-langswitch button { border: none; background: transparent; padding: 5px 12px; font: 700 .72rem var(--sans); letter-spacing: .04em; cursor: pointer; color: var(--ink); transition: all .2s; }
+    .draft-langswitch button.active { background: #111111; color: #ffffff; }
+    .draft-langswitch button:not(.active):hover { background: rgba(0,0,0,.06); }
+    html[data-theme="dark"] .draft-langswitch { border-color: rgba(255,255,255,.28); }
+    html[data-theme="dark"] .draft-langswitch button.active { background: #f3f3f3; color: #111111; }
+    html[data-theme="dark"] .draft-langswitch button:not(.active):hover { background: rgba(255,255,255,.08); }
+    .draft-template-note { font-size: .82rem; color: var(--muted); font-style: italic; margin: 0 0 10px; }
     .draft-cat { display: inline-block; font-size: .7rem; letter-spacing: .14em; text-transform: uppercase; color: var(--ink); border: 1px solid rgba(0,0,0,.35); padding: 5px 13px; border-radius: 999px; margin-bottom: 13px; }
     .draft-item h3 { font-size: clamp(1.12rem, 2.1vw, 1.55rem); line-height: 1.32; margin: 0 0 10px; max-width: 800px; width: fit-content; color: #111111; font-weight: 800; }
     .draft-use { margin: 0; color: var(--muted); font-size: .9rem; max-width: 780px; }
@@ -1800,6 +1809,8 @@
           draftsNoResults: "No drafts match your search.",
           draftsExpand: "View draft",
           draftsCollapse: "Hide draft",
+          draftsLangLabel: "Draft language",
+          draftsTemplateNote: "Note: The draft template is in English.",
           draftsDownload: "Download",
           draftsPrint: "Print",
           draftsWhenToUse: "When to use",
@@ -2003,6 +2014,8 @@
           draftsNoResults: "\u0906\u092a\u0915\u0940 \u0916\u094b\u091c \u0938\u0947 \u0915\u094b\u0908 \u092a\u094d\u0930\u093e\u0930\u0942\u092a \u0928\u0939\u0940\u0902 \u092e\u093f\u0932\u093e\u0964",
           draftsExpand: "\u092a\u094d\u0930\u093e\u0930\u0942\u092a \u0926\u0947\u0916\u0947\u0902",
           draftsCollapse: "\u092a\u094d\u0930\u093e\u0930\u0942\u092a \u091b\u093f\u092a\u093e\u090f\u0902",
+          draftsLangLabel: "\u092a\u094d\u0930\u093e\u0930\u0942\u092a \u0915\u0940 \u092d\u093e\u0937\u093e",
+          draftsTemplateNote: "\u0928\u094b\u091f: \u092a\u094d\u0930\u093e\u0930\u0942\u092a \u0905\u0902\u0917\u094d\u0930\u0947\u091c\u0940 \u092e\u0947\u0902 \u0939\u0948\u0964",
           draftsDownload: "\u0921\u093e\u0909\u0928\u0932\u094b\u0921",
           draftsPrint: "\u092a\u094d\u0930\u093f\u0902\u091f",
           draftsWhenToUse: "\u0915\u092c \u0909\u092a\u092f\u094b\u0917 \u0915\u0930\u0947\u0902",
@@ -2902,6 +2915,178 @@
         return null;
       }
 
+      function dt(key, lang) {
+        var l = lang === "hi" ? "hi" : "en";
+        return (translations[l] && translations[l][key]) || translations.en[key] || key;
+      }
+
+      function buildDraftItem(d, lang, open) {
+        var item = document.createElement("article");
+        item.className = "draft-item";
+        item.setAttribute("data-draft-id", d.id);
+        item.setAttribute("data-dlang", lang);
+        if (open) item.classList.add("open");
+
+        var top = document.createElement("div");
+        top.className = "draft-top";
+        var headDiv = document.createElement("div");
+
+        var cat = document.createElement("span");
+        cat.className = "draft-cat";
+        cat.textContent = (d.category && (d.category[lang] || d.category.en)) || "";
+        headDiv.appendChild(cat);
+
+        var h3 = document.createElement("h3");
+        h3.textContent = d.title[lang] || d.title.en;
+        headDiv.appendChild(h3);
+
+        var use = document.createElement("p");
+        use.className = "draft-use";
+        var useLabel = document.createElement("strong");
+        useLabel.textContent = dt("draftsWhenToUse", lang) + ": ";
+        use.appendChild(useLabel);
+        use.appendChild(document.createTextNode(d.use[lang] || d.use.en));
+        headDiv.appendChild(use);
+
+        if (d.filedIn) {
+          var fi = document.createElement("p");
+          fi.className = "draft-filedin";
+          var fiLabel = document.createElement("strong");
+          fiLabel.textContent = dt("draftsFiledIn", lang) + ": ";
+          fi.appendChild(fiLabel);
+          fi.appendChild(document.createTextNode(d.filedIn[lang] || d.filedIn.en));
+          headDiv.appendChild(fi);
+        }
+        top.appendChild(headDiv);
+
+        var actionsWrap = document.createElement("div");
+        actionsWrap.className = "draft-top-actions";
+
+        var toggle = document.createElement("button");
+        toggle.type = "button";
+        toggle.className = "update-toggle draft-toggle";
+        toggle.textContent = open ? dt("draftsCollapse", lang) : dt("draftsExpand", lang);
+        toggle.setAttribute("aria-expanded", open ? "true" : "false");
+        actionsWrap.appendChild(toggle);
+
+        var langSwitch = document.createElement("div");
+        langSwitch.className = "draft-langswitch";
+        langSwitch.setAttribute("role", "group");
+        langSwitch.setAttribute("aria-label", dt("draftsLangLabel", lang));
+        ["en", "hi"].forEach(function (l) {
+          var b = document.createElement("button");
+          b.type = "button";
+          b.textContent = l === "hi" ? "\u0939\u093f\u0902" : "EN";
+          b.setAttribute("data-dlang", l);
+          if (l === lang) b.classList.add("active");
+          b.setAttribute("aria-pressed", l === lang ? "true" : "false");
+          b.addEventListener("click", function () {
+            if (item.getAttribute("data-dlang") === l) return;
+            var isOpen = item.classList.contains("open");
+            var newItem = buildDraftItem(d, l, isOpen);
+            item.replaceWith(newItem);
+            if (typeof filterDrafts === "function") filterDrafts();
+          });
+          langSwitch.appendChild(b);
+        });
+        actionsWrap.appendChild(langSwitch);
+        top.appendChild(actionsWrap);
+        item.appendChild(top);
+
+        var body = document.createElement("div");
+        body.className = "draft-body";
+        body.hidden = !open;
+
+        toggle.addEventListener("click", function () {
+          var isOpen = item.classList.toggle("open");
+          body.hidden = !isOpen;
+          toggle.textContent = isOpen ? dt("draftsCollapse", lang) : dt("draftsExpand", lang);
+          toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        });
+
+        if (d.sections || d.jurisdiction || d.requirements) {
+          var refBox = document.createElement("div");
+          refBox.className = "draft-legalref";
+          var refTitle = document.createElement("p");
+          refTitle.className = "draft-legalref-title";
+          refTitle.textContent = dt("draftsLegalRef", lang);
+          refBox.appendChild(refTitle);
+          if (d.sections) {
+            var secP = document.createElement("p");
+            secP.className = "draft-legalref-row";
+            var secL = document.createElement("strong");
+            secL.textContent = dt("draftsSections", lang) + ": ";
+            secP.appendChild(secL);
+            secP.appendChild(document.createTextNode(d.sections[lang] || d.sections.en));
+            refBox.appendChild(secP);
+          }
+          if (d.jurisdiction) {
+            var jurP = document.createElement("p");
+            jurP.className = "draft-legalref-row";
+            var jurL = document.createElement("strong");
+            jurL.textContent = dt("draftsJurisdiction", lang) + ": ";
+            jurP.appendChild(jurL);
+            jurP.appendChild(document.createTextNode(d.jurisdiction[lang] || d.jurisdiction.en));
+            refBox.appendChild(jurP);
+          }
+          if (d.requirements) {
+            var reqP = document.createElement("p");
+            reqP.className = "draft-legalref-row";
+            var reqL = document.createElement("strong");
+            reqL.textContent = dt("draftsRequirements", lang) + ": ";
+            reqP.appendChild(reqL);
+            refBox.appendChild(reqP);
+            var reqUl = document.createElement("ul");
+            reqUl.className = "draft-req-list";
+            (d.requirements[lang] || d.requirements.en).forEach(function (r) {
+              var li = document.createElement("li");
+              li.textContent = r;
+              reqUl.appendChild(li);
+            });
+            refBox.appendChild(reqUl);
+          }
+          body.appendChild(refBox);
+        }
+
+        var tplLabel = document.createElement("p");
+        tplLabel.className = "draft-template-label";
+        tplLabel.textContent = dt("draftsTemplateLabel", lang);
+        body.appendChild(tplLabel);
+
+        if (lang === "hi") {
+          var tplNote = document.createElement("p");
+          tplNote.className = "draft-template-note";
+          tplNote.textContent = dt("draftsTemplateNote", lang);
+          body.appendChild(tplNote);
+        }
+
+        var pre = document.createElement("pre");
+        pre.className = "draft-template";
+        pre.textContent = d.template;
+        body.appendChild(pre);
+
+        var actions = document.createElement("div");
+        actions.className = "draft-actions";
+
+        var dl = document.createElement("button");
+        dl.type = "button";
+        dl.className = "draft-btn solid";
+        dl.textContent = dt("draftsDownload", lang);
+        dl.addEventListener("click", function () { downloadDraft(d.id); });
+        actions.appendChild(dl);
+
+        var pr = document.createElement("button");
+        pr.type = "button";
+        pr.className = "draft-btn";
+        pr.textContent = dt("draftsPrint", lang);
+        pr.addEventListener("click", function () { printDraft(d.id); });
+        actions.appendChild(pr);
+
+        body.appendChild(actions);
+        item.appendChild(body);
+        return item;
+      }
+
       function renderDrafts() {
         var grid = document.getElementById("draftsGrid");
         if (!grid) return;
@@ -2909,134 +3094,7 @@
         var lang = currentLanguage === "hi" ? "hi" : "en";
         grid.textContent = "";
         (data.drafts || []).forEach(function (d) {
-          var item = document.createElement("article");
-          item.className = "draft-item";
-          item.setAttribute("data-draft-id", d.id);
-
-          var top = document.createElement("div");
-          top.className = "draft-top";
-          var headDiv = document.createElement("div");
-
-          var cat = document.createElement("span");
-          cat.className = "draft-cat";
-          cat.textContent = (d.category && (d.category[lang] || d.category.en)) || "";
-          headDiv.appendChild(cat);
-
-          var h3 = document.createElement("h3");
-          h3.textContent = d.title[lang] || d.title.en;
-          headDiv.appendChild(h3);
-
-          var use = document.createElement("p");
-          use.className = "draft-use";
-          var useLabel = document.createElement("strong");
-          useLabel.textContent = t("draftsWhenToUse") + ": ";
-          use.appendChild(useLabel);
-          use.appendChild(document.createTextNode(d.use[lang] || d.use.en));
-          headDiv.appendChild(use);
-
-          if (d.filedIn) {
-            var fi = document.createElement("p");
-            fi.className = "draft-filedin";
-            var fiLabel = document.createElement("strong");
-            fiLabel.textContent = t("draftsFiledIn") + ": ";
-            fi.appendChild(fiLabel);
-            fi.appendChild(document.createTextNode(d.filedIn[lang] || d.filedIn.en));
-            headDiv.appendChild(fi);
-          }
-          top.appendChild(headDiv);
-
-          var toggle = document.createElement("button");
-          toggle.type = "button";
-          toggle.className = "update-toggle draft-toggle";
-          toggle.textContent = t("draftsExpand");
-          toggle.setAttribute("aria-expanded", "false");
-          toggle.addEventListener("click", function () {
-            var open = item.classList.toggle("open");
-            body.hidden = !open;
-            toggle.textContent = open ? t("draftsCollapse") : t("draftsExpand");
-            toggle.setAttribute("aria-expanded", open ? "true" : "false");
-          });
-          top.appendChild(toggle);
-          item.appendChild(top);
-
-          var body = document.createElement("div");
-          body.className = "draft-body";
-          body.hidden = true;
-
-          if (d.sections || d.jurisdiction || d.requirements) {
-            var refBox = document.createElement("div");
-            refBox.className = "draft-legalref";
-            var refTitle = document.createElement("p");
-            refTitle.className = "draft-legalref-title";
-            refTitle.textContent = t("draftsLegalRef");
-            refBox.appendChild(refTitle);
-            if (d.sections) {
-              var secP = document.createElement("p");
-              secP.className = "draft-legalref-row";
-              var secL = document.createElement("strong");
-              secL.textContent = t("draftsSections") + ": ";
-              secP.appendChild(secL);
-              secP.appendChild(document.createTextNode(d.sections[lang] || d.sections.en));
-              refBox.appendChild(secP);
-            }
-            if (d.jurisdiction) {
-              var jurP = document.createElement("p");
-              jurP.className = "draft-legalref-row";
-              var jurL = document.createElement("strong");
-              jurL.textContent = t("draftsJurisdiction") + ": ";
-              jurP.appendChild(jurL);
-              jurP.appendChild(document.createTextNode(d.jurisdiction[lang] || d.jurisdiction.en));
-              refBox.appendChild(jurP);
-            }
-            if (d.requirements) {
-              var reqP = document.createElement("p");
-              reqP.className = "draft-legalref-row";
-              var reqL = document.createElement("strong");
-              reqL.textContent = t("draftsRequirements") + ": ";
-              reqP.appendChild(reqL);
-              refBox.appendChild(reqP);
-              var reqUl = document.createElement("ul");
-              reqUl.className = "draft-req-list";
-              (d.requirements[lang] || d.requirements.en).forEach(function (r) {
-                var li = document.createElement("li");
-                li.textContent = r;
-                reqUl.appendChild(li);
-              });
-              refBox.appendChild(reqUl);
-            }
-            body.appendChild(refBox);
-          }
-
-          var tplLabel = document.createElement("p");
-          tplLabel.className = "draft-template-label";
-          tplLabel.textContent = t("draftsTemplateLabel");
-          body.appendChild(tplLabel);
-
-          var pre = document.createElement("pre");
-          pre.className = "draft-template";
-          pre.textContent = d.template;
-          body.appendChild(pre);
-
-          var actions = document.createElement("div");
-          actions.className = "draft-actions";
-
-          var dl = document.createElement("button");
-          dl.type = "button";
-          dl.className = "draft-btn solid";
-          dl.textContent = t("draftsDownload");
-          dl.addEventListener("click", function () { downloadDraft(d.id); });
-          actions.appendChild(dl);
-
-          var pr = document.createElement("button");
-          pr.type = "button";
-          pr.className = "draft-btn";
-          pr.textContent = t("draftsPrint");
-          pr.addEventListener("click", function () { printDraft(d.id); });
-          actions.appendChild(pr);
-
-          body.appendChild(actions);
-          item.appendChild(body);
-          grid.appendChild(item);
+          grid.appendChild(buildDraftItem(d, lang, false));
         });
         filterDrafts();
       }
