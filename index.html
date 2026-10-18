@@ -240,7 +240,8 @@
     .nav-more-btn { background: transparent; border: 1px solid rgba(0,0,0,.35); color: #111; font: 700 .78rem var(--sans); padding: 6px 12px; border-radius: 999px; cursor: pointer; white-space: nowrap; }
     .nav-more-btn:hover { background: rgba(0,0,0,.07); color: #111; }
     html[data-theme="dark"] .nav-more-btn:hover { background: rgba(255,255,255,.12); color: #fff; }
-    .nav-more-menu { position: absolute; top: calc(100% + 8px); right: 0; min-width: 200px; max-height: min(70vh, 420px); overflow-y: auto; overflow-x: hidden; background: #ffffff; color: #111; border: 1px solid rgba(0,0,0,.12); border-radius: 12px; padding: 8px; z-index: 200; box-shadow: 0 18px 50px rgba(0,0,0,.18); scrollbar-width: thin; scrollbar-color: rgba(0,0,0,.35) transparent; }
+    .nav-more-menu { position: absolute; top: calc(100% + 8px); right: 0; min-width: 200px; max-width: calc(100vw - 24px); max-height: min(70vh, 420px); overflow-y: auto; overflow-x: hidden; background: #ffffff; color: #111; border: 1px solid rgba(0,0,0,.12); border-radius: 12px; padding: 8px; z-index: 200; box-shadow: 0 18px 50px rgba(0,0,0,.18); scrollbar-width: thin; scrollbar-color: rgba(0,0,0,.35) transparent; }
+    @media (max-width: 1150px) { .nav-more-menu { left: 0; right: auto; } }
     .nav-more-menu::-webkit-scrollbar { width: 8px; }
     .nav-more-menu::-webkit-scrollbar-track { background: transparent; }
     .nav-more-menu::-webkit-scrollbar-thumb { background: linear-gradient(180deg, rgba(0,0,0,.4), rgba(0,0,0,.3)); border-radius: 8px; border: 2px solid transparent; background-clip: padding-box; }
