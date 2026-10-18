@@ -894,7 +894,11 @@
       nav { gap: 12px; }
       .nav-strip > a.nav-mid-hide { display: none !important; }
       .nav-hamburger { display: none !important; }
-      .top-search { margin-left: 4px; }
+      /* Search takes its own full-width row under the nav — roomy, premium, easy to use */
+      .top-search { order: 10; flex: 1 1 100%; width: 100%; margin: 0; }
+      .top-search input { flex: 1 1 auto; width: auto; min-width: 0; }
+      .top-search input:focus { width: auto; }
+      section[id] { scroll-margin-top: 104px; }
     }
     /* Mobile header (1150px and below): no hamburger — swipeable nav strip + pinned More */
     @media (max-width: 1150px) {
@@ -2584,6 +2588,9 @@
 
       function renderHub() {
         renderHubTabs();
+        /* Set sticky-tab offset from the real header height on load too (not just on tab switch) */
+        var mh0 = document.querySelector(".masthead");
+        if (mh0) { document.documentElement.style.setProperty("--hub-tabs-top", (mh0.offsetHeight + 4) + "px"); }
         renderActFilters();
         renderActs();
         renderHubStaticPanels();
@@ -3342,7 +3349,8 @@
         document.querySelectorAll("[data-language]").forEach(function (button) {
           button.setAttribute("aria-pressed", String(button.getAttribute("data-language") === currentLanguage));
         });
-        document.title = SETTINGS.websiteDomain + " — " + SETTINGS.siteName + (currentLanguage === "hi" ? ", आपराधिक अधिवक्ता" : ", Criminal Lawyer");
+        /* SEO title stays intact on language switch — keeps "Advocate Atul Kumar / Bulandshahr" ranking in both languages */
+        document.title = currentLanguage === "hi" ? "Advocate Atul Kumar — बुलंदशहर में आपराधिक अधिवक्ता | A.K Legal Law" : "Advocate Atul Kumar — Criminal Lawyer in Bulandshahr | A.K Legal Law";
         document.getElementById("identityProfession").textContent = currentLanguage === "hi" ? "आपराधिक अधिवक्ता" : SETTINGS.profession;
         document.getElementById("professionalPortrait").alt = t("professionalPhotoAlt");
         document.getElementById("jurisdictionLine").textContent = currentLanguage === "hi" ? "आपराधिक अधिवक्ता · बुलंदशहर जिला न्यायालय" : SETTINGS.profession + " · " + SETTINGS.jurisdiction;
