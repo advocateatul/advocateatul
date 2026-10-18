@@ -186,6 +186,7 @@
     .identity strong { font-family: var(--serif); font-size: 1rem; font-weight: 800; letter-spacing: .01em; white-space: nowrap; color: #111; }
     .identity span { font-size: .72rem; font-weight: 700; color: #111; letter-spacing: .08em; text-transform: uppercase; white-space: nowrap; }
     nav { display: flex; gap: 22px; align-items: center; }
+    .nav-strip { display: contents; }
     nav a { font-size: .78rem; font-weight: 700; text-decoration: none; color: #111; }
     nav a:hover, nav a:focus-visible { color: #000; }
     nav .nav-cta { border-bottom: 1px solid #111; padding-bottom: 3px; color: #111; font-weight: 700; }
@@ -595,7 +596,6 @@
 
     @media (max-width: 820px) {
       .shell, .hero-content { width: min(100% - 30px, 680px); }
-      nav a:not(.nav-cta) { display: none; }
       .identity span { display: none; }
       .hero { min-height: 900px; align-items: end; }
       .hero-image { inset: 138px 15px 22px; }
@@ -838,26 +838,27 @@
     @media (max-width: 1400px) and (min-width: 1151px) {
       .masthead-inner { gap: 14px; row-gap: 6px; }
       nav { gap: 12px; }
-      nav > a.nav-mid-hide { display: none !important; }
+      .nav-strip > a.nav-mid-hide { display: none !important; }
       .nav-hamburger { display: none !important; }
       .top-search { margin-left: 4px; }
     }
-    /* Mobile header (1150px and below): hamburger + full-width search row */
+    /* Mobile header (1150px and below): no hamburger — swipeable nav strip + pinned More */
     @media (max-width: 1150px) {
-      .masthead-inner { flex-wrap: wrap; gap: 10px; row-gap: 4px; padding-top: 10px; }
+      .masthead-inner { flex-wrap: wrap; gap: 8px; row-gap: 8px; padding-top: 10px; }
       .masthead-inner .identity { flex: 1 1 auto; min-width: 0; }
-      nav { gap: 8px; margin-left: auto; }
-      nav > a, nav > .nav-more-wrap { display: none !important; }
-      .nav-hamburger { display: inline-flex; }
-      .top-search { flex: 1 1 100%; order: 10; width: 100%; margin: 4px 0 22px; }
+      #navHamburger { display: none !important; }
+      nav { display: contents; }
+      .language-switch { order: 1; margin-left: auto; }
+      #themeToggle { order: 2; }
+      .nav-strip { order: 5; flex: 1 1 auto; min-width: 0; display: flex; align-items: center; gap: 18px; overflow-x: auto; padding: 6px 2px 10px; scrollbar-width: none; }
+      .nav-strip::-webkit-scrollbar { display: none; }
+      .nav-strip > a { flex: 0 0 auto; white-space: nowrap; }
+      nav > .nav-more-wrap { order: 6; flex: 0 0 auto; }
+      nav > a.nav-cta { order: 7; flex: 0 0 auto; white-space: nowrap; }
+      .top-search { order: 10; flex: 1 1 100%; width: 100%; margin: 0 0 16px; }
       .top-search input { flex: 1 1 auto; width: auto; min-width: 0; }
       .top-search input:focus { width: auto; }
-      .mobile-nav-panel { position: absolute; top: 100%; left: 0; right: 0; z-index: 300; background: #ffffff; border-top: 1px solid rgba(0,0,0,.12); border-bottom: 1px solid rgba(0,0,0,.12); box-shadow: 0 30px 60px rgba(0,0,0,.18); max-height: 70vh; overflow: auto; padding: 8px 20px 16px; }
-      .mobile-nav-panel:not([hidden]) { display: block; animation: hamSlide .28s cubic-bezier(0.22, 1, 0.36, 1); }
-      .mobile-nav-panel a { display: block !important; padding: 12px 4px; border-bottom: 1px solid rgba(0,0,0,.08); color: #111; text-decoration: none; font-size: .92rem; font-weight: 600; }
-      .mobile-nav-panel a:last-child { border-bottom: 0; }
-      .mobile-nav-panel a:hover, .mobile-nav-panel a:focus-visible { color: #000; }
-      .mobile-nav-panel a.ext::after { content: " \2197"; font-size: .75em; opacity: .6; }
+      .mobile-nav-panel { display: none !important; }
     }
     @keyframes hamSlide { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: none; } }
     /* Per-section search inputs */
@@ -1142,6 +1143,7 @@
       <div class="identity"><strong id="siteName">A.K legal law</strong><span id="identityProfession">Criminal Lawyer</span></div>
       <nav>
         <button type="button" id="navHamburger" class="nav-hamburger" aria-haspopup="true" aria-expanded="false" aria-label="Menu / मेन्यू"><span aria-hidden="true">☰</span></button>
+        <div class="nav-strip">
         <a href="#practice" data-i18n="navPractice">Practice</a>
         <a href="#updates" data-i18n="navUpdates">Updates</a>
         <a href="#library" data-i18n="navLibrary">Library</a>
@@ -1150,6 +1152,7 @@
         <a href="#drafts" data-i18n="navDrafts">Drafts</a>
         <a href="#draft-guide" class="nav-mid-hide" data-i18n="navDraftGuide">Draft Guide</a>
         <a href="#notes" class="nav-mid-hide" data-i18n="navNotes">Notes</a>
+        </div>
         <div class="nav-more-wrap">
           <button type="button" id="navMoreBtn" class="nav-more-btn" aria-haspopup="true" aria-expanded="false"><span data-i18n="navMore">More</span> ▾</button>
           <div class="nav-more-menu" id="navMoreMenu" hidden role="menu" aria-label="More links">
