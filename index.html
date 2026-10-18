@@ -496,6 +496,9 @@
     html[data-theme="dark"] .draft-langswitch button.active { background: #f3f3f3; color: #111111; }
     html[data-theme="dark"] .draft-langswitch button:not(.active):hover { background: rgba(255,255,255,.08); }
     .draft-template-note { font-size: .82rem; color: var(--muted); font-style: italic; margin: 0 0 10px; }
+    .guide-headrow { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 12px; }
+    .guide-headrow .guide-cat { margin-bottom: 0; }
+    .guide-langswitch { flex-shrink: 0; }
     .draft-cat { display: inline-block; font-size: .7rem; letter-spacing: .14em; text-transform: uppercase; color: var(--ink); border: 1px solid rgba(0,0,0,.35); padding: 5px 13px; border-radius: 999px; margin-bottom: 13px; }
     .draft-item h3 { font-size: clamp(1.12rem, 2.1vw, 1.55rem); line-height: 1.32; margin: 0 0 10px; max-width: 800px; width: fit-content; color: #111111; font-weight: 800; }
     .draft-use { margin: 0; color: var(--muted); font-size: .9rem; max-width: 780px; }
@@ -3245,6 +3248,89 @@
           target.scrollIntoView({ behavior: "smooth", block: "center" });
         }, 650);
       }
+      function buildGuideCard(d, lang) {
+        var card = document.createElement("article");
+        card.className = "guide-card";
+        card.setAttribute("data-cat", (d.category && d.category.en) || "");
+        card.setAttribute("data-dlang", lang);
+
+        var headRow = document.createElement("div");
+        headRow.className = "guide-headrow";
+
+        var cat = document.createElement("span");
+        cat.className = "guide-cat";
+        cat.textContent = (d.category && (d.category[lang] || d.category.en)) || "";
+        headRow.appendChild(cat);
+
+        var langSwitch = document.createElement("div");
+        langSwitch.className = "draft-langswitch guide-langswitch";
+        langSwitch.setAttribute("role", "group");
+        langSwitch.setAttribute("aria-label", dt("draftsLangLabel", lang));
+        ["en", "hi"].forEach(function (l) {
+          var b = document.createElement("button");
+          b.type = "button";
+          b.textContent = l === "hi" ? "\u0939\u093f\u0902" : "EN";
+          b.setAttribute("data-dlang", l);
+          if (l === lang) b.classList.add("active");
+          b.setAttribute("aria-pressed", l === lang ? "true" : "false");
+          b.addEventListener("click", function () {
+            if (card.getAttribute("data-dlang") === l) return;
+            var newCard = buildGuideCard(d, l);
+            card.replaceWith(newCard);
+            if (typeof filterDraftGuide === "function") filterDraftGuide();
+          });
+          langSwitch.appendChild(b);
+        });
+        headRow.appendChild(langSwitch);
+        card.appendChild(headRow);
+
+        var h3 = document.createElement("h3");
+        h3.textContent = d.title[lang] || d.title.en;
+        card.appendChild(h3);
+
+        function addRow(labelKey, value) {
+          if (!value) return;
+          var p = document.createElement("p");
+          p.className = "guide-row";
+          var s = document.createElement("strong");
+          s.textContent = dt(labelKey, lang) + ": ";
+          p.appendChild(s);
+          p.appendChild(document.createTextNode(value));
+          card.appendChild(p);
+        }
+        addRow("guideUsedFor", d.use[lang] || d.use.en);
+        if (d.sections) addRow("guideSections", d.sections[lang] || d.sections.en);
+        if (d.filedIn) addRow("guideFiledIn", d.filedIn[lang] || d.filedIn.en);
+
+        if (d.requirements && (d.requirements[lang] || d.requirements.en)) {
+          var reqLabel = document.createElement("p");
+          reqLabel.className = "guide-row";
+          var rs = document.createElement("strong");
+          rs.textContent = dt("guideNeeds", lang) + ":";
+          reqLabel.appendChild(rs);
+          card.appendChild(reqLabel);
+          var ul = document.createElement("ul");
+          ul.className = "guide-req";
+          (d.requirements[lang] || d.requirements.en).forEach(function (r) {
+            var li = document.createElement("li");
+            li.textContent = r;
+            ul.appendChild(li);
+          });
+          card.appendChild(ul);
+        }
+
+        var jump = document.createElement("a");
+        jump.href = "#drafts";
+        jump.className = "guide-jump";
+        jump.textContent = dt("guideViewDraft", lang);
+        jump.addEventListener("click", function (ev) {
+          ev.preventDefault();
+          jumpToDraft(d.id);
+        });
+        card.appendChild(jump);
+
+        return card;
+      }
       function renderDraftGuide() {
         var grid = document.getElementById("draftGuideGrid");
         if (!grid) return;
@@ -3253,61 +3339,7 @@
         renderGuideFilters();
         grid.textContent = "";
         (data.drafts || []).forEach(function (d) {
-          var card = document.createElement("article");
-          card.className = "guide-card";
-          card.setAttribute("data-cat", (d.category && d.category.en) || "");
-
-          var cat = document.createElement("span");
-          cat.className = "guide-cat";
-          cat.textContent = (d.category && (d.category[lang] || d.category.en)) || "";
-          card.appendChild(cat);
-
-          var h3 = document.createElement("h3");
-          h3.textContent = d.title[lang] || d.title.en;
-          card.appendChild(h3);
-
-          function addRow(labelKey, value) {
-            if (!value) return;
-            var p = document.createElement("p");
-            p.className = "guide-row";
-            var s = document.createElement("strong");
-            s.textContent = t(labelKey) + ": ";
-            p.appendChild(s);
-            p.appendChild(document.createTextNode(value));
-            card.appendChild(p);
-          }
-          addRow("guideUsedFor", d.use[lang] || d.use.en);
-          if (d.sections) addRow("guideSections", d.sections[lang] || d.sections.en);
-          if (d.filedIn) addRow("guideFiledIn", d.filedIn[lang] || d.filedIn.en);
-
-          if (d.requirements && (d.requirements[lang] || d.requirements.en)) {
-            var reqLabel = document.createElement("p");
-            reqLabel.className = "guide-row";
-            var rs = document.createElement("strong");
-            rs.textContent = t("guideNeeds") + ":";
-            reqLabel.appendChild(rs);
-            card.appendChild(reqLabel);
-            var ul = document.createElement("ul");
-            ul.className = "guide-req";
-            (d.requirements[lang] || d.requirements.en).forEach(function (r) {
-              var li = document.createElement("li");
-              li.textContent = r;
-              ul.appendChild(li);
-            });
-            card.appendChild(ul);
-          }
-
-          var jump = document.createElement("a");
-          jump.href = "#drafts";
-          jump.className = "guide-jump";
-          jump.textContent = t("guideViewDraft");
-          jump.addEventListener("click", function (ev) {
-            ev.preventDefault();
-            jumpToDraft(d.id);
-          });
-          card.appendChild(jump);
-
-          grid.appendChild(card);
+          grid.appendChild(buildGuideCard(d, lang));
         });
         var searchInput = document.getElementById("draftGuideSearch");
         if (searchInput) filterDraftGuide();
