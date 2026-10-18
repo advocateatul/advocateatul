@@ -1477,10 +1477,6 @@
         </div>
         <div class="hub-results" id="hubResults" hidden aria-live="polite"></div>
 
-        <div class="hub-toolbar reveal">
-          <button type="button" class="hub-btn" id="hubPrintBtn" data-i18n="hubPrint">Print this hub</button>
-        </div>
-
         <div class="hub-tabs reveal" role="tablist" aria-label="Knowledge hub categories" id="hubTabs"></div>
 
         <div class="hub-panel" id="hubPanel-acts" role="tabpanel">
@@ -1882,7 +1878,6 @@
           topSearchPh: "Search the website…",
           sectionSearchPh: "Search this section…",
           hubSearchBtn: "Search",
-          hubPrint: "Print this hub",
           hubNote: "Bare-act PDFs open from official government sources (India Code, Ministry of Home Affairs). Summaries are brief explainers, not legal advice.",
           hubTabActs: "Bare Acts",
           hubTabConstitution: "Constitution",
@@ -2086,7 +2081,6 @@
           topSearchPh: "वेबसाइट खोजें…",
           sectionSearchPh: "इस भाग में खोजें…",
           hubSearchBtn: "खोजें",
-          hubPrint: "इस केंद्र को प्रिंट करें",
           hubNote: "बेयर-एक्ट PDF आधिकारिक सरकारी स्रोतों (India Code, गृह मंत्रालय) से खुलते हैं। सारांश संक्षिप्त व्याख्या हैं, कानूनी सलाह नहीं।",
           hubTabActs: "बेयर एक्ट",
           hubTabConstitution: "संविधान",
@@ -3258,7 +3252,6 @@
       function initHubSearch() {
         var input = document.getElementById("hubSearchInput");
         var btn = document.getElementById("hubSearchBtn");
-        var printBtn = document.getElementById("hubPrintBtn");
         if (!input) return;
         var timer = null;
         input.addEventListener("input", function () {
@@ -3267,7 +3260,6 @@
         });
         input.addEventListener("keydown", function (ev) { if (ev.key === "Enter") { clearTimeout(timer); hubSearchAll(input.value); } });
         if (btn) btn.addEventListener("click", function () { hubSearchAll(input.value); });
-        if (printBtn) printBtn.addEventListener("click", function () { window.print(); });
         document.addEventListener("click", function (ev) {
           var box = document.getElementById("hubResults");
           if (box && !box.hidden && !box.contains(ev.target) && ev.target !== input && ev.target !== btn) box.hidden = true;
