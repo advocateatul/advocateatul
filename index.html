@@ -485,7 +485,7 @@
     .drafts h2 { font-size: clamp(2.35rem, 4.6vw, 4.45rem); line-height: 1.08; letter-spacing: -.035em; color: #111111; font-weight: 800; }
     .drafts-head > p { justify-self: end; max-width: 390px; margin: 0; color: var(--muted); font-size: .9rem; }
     .drafts-list { border-top: 1px solid var(--line); margin-top: 26px; }
-    .draft-item { border-bottom: 1px solid var(--line); padding: 26px 0; }
+    .draft-item { border-bottom: 1px solid var(--line); padding: 26px 24px 26px 0; }
     .draft-top { display: grid; grid-template-columns: 1fr auto; gap: 18px; align-items: start; }
     .draft-cat { display: inline-block; font-size: .7rem; letter-spacing: .14em; text-transform: uppercase; color: var(--ink); border: 1px solid rgba(0,0,0,.35); padding: 5px 13px; border-radius: 999px; margin-bottom: 13px; }
     .draft-item h3 { font-size: clamp(1.12rem, 2.1vw, 1.55rem); line-height: 1.32; margin: 0 0 10px; max-width: 800px; color: #111111; font-weight: 800; }
@@ -523,7 +523,7 @@
       body.draft-printing #draftPrintArea pre { white-space: pre-wrap; font-size: .78rem; line-height: 1.6; font-family: Georgia, serif; }
     }
     html[data-theme="dark"] .drafts h2, html[data-theme="dark"] .draft-item h3 { color: #f3f3f3 !important; }
-    html[data-theme="dark"] .draft-item h3 { border-bottom: 1px solid rgba(255,255,255,.35); padding-bottom: 14px; }
+    html[data-theme="dark"] .draft-item h3 { border-bottom: 1px solid rgba(255,255,255,.35); padding-bottom: 20px; }
     html[data-theme="dark"] .draft-cat { border-color: #ffffff !important; color: #ffffff !important; }
     html[data-theme="dark"] .draft-btn { border-color: rgba(255,255,255,.45); }
     html[data-theme="dark"] .draft-btn:hover { border-color: #f0f0f0; color: #f0f0f0; }
@@ -1167,18 +1167,18 @@
     .theme-fab .icon-sun { display: none; }
 
   
-    html[data-theme="dark"] .judgement-card h3 { border-bottom: 1px solid rgba(255,255,255,.35); padding-bottom: 14px; }
-    html[data-theme="dark"] .guide-card h3 { border-bottom: 1px solid rgba(255,255,255,.35); padding-bottom: 14px; }
+    html[data-theme="dark"] .judgement-card h3 { border-bottom: 1px solid rgba(255,255,255,.35); padding-bottom: 20px; }
+    html[data-theme="dark"] .guide-card h3 { border-bottom: 1px solid rgba(255,255,255,.35); padding-bottom: 20px; }
 
   
-    html[data-theme="dark"] h3.hub-group-title { border-bottom: 1px solid rgba(255,255,255,.35); padding-bottom: 14px; }
+    html[data-theme="dark"] h3.hub-group-title { border-bottom: 1px solid rgba(255,255,255,.35); padding-bottom: 20px; }
 
   
     /* Light mode: black underlines under card titles */
-    .draft-item h3 { border-bottom: 1px solid rgba(0,0,0,.2); padding-bottom: 14px; }
-    .judgement-card h3 { border-bottom: 1px solid rgba(0,0,0,.2); padding-bottom: 14px; }
-    .guide-card h3 { border-bottom: 1px solid rgba(0,0,0,.2); padding-bottom: 14px; }
-    h3.hub-group-title { border-bottom: 1px solid rgba(0,0,0,.2); padding-bottom: 14px; }
+    .draft-item h3 { border-bottom: 1px solid rgba(0,0,0,.2); padding-bottom: 20px; }
+    .judgement-card h3 { border-bottom: 1px solid rgba(0,0,0,.2); padding-bottom: 20px; }
+    .guide-card h3 { border-bottom: 1px solid rgba(0,0,0,.2); padding-bottom: 20px; }
+    h3.hub-group-title { border-bottom: 1px solid rgba(0,0,0,.2); padding-bottom: 20px; }
 
   
     /* ===== HANDWRITTEN NOTES SECTION ===== */
