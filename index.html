@@ -813,10 +813,10 @@
   
     /* Top search bar (site-wide, always visible) */
     .top-search { display: flex; align-items: center; gap: 6px; margin-left: 12px; }
-    .top-search input { height: 34px; width: 190px; border: 1px solid #000; background: #fff; color: #111; padding: 0 12px; font: 500 .8rem var(--sans); border-radius: 999px; outline: none; transition: width .25s cubic-bezier(0.22, 1, 0.36, 1), border-color .25s cubic-bezier(0.22, 1, 0.36, 1), background .25s cubic-bezier(0.22, 1, 0.36, 1); }
+    .top-search input { height: 34px; width: 190px; border: 1px solid rgba(0,0,0,.14); background: #fff; color: #111; padding: 0 12px; font: 500 .8rem var(--sans); border-radius: 999px; outline: none; box-shadow: 0 1px 2px rgba(0,0,0,.05); transition: width .25s cubic-bezier(0.22, 1, 0.36, 1), border-color .25s cubic-bezier(0.22, 1, 0.36, 1), background .25s cubic-bezier(0.22, 1, 0.36, 1), box-shadow .25s cubic-bezier(0.22, 1, 0.36, 1); }
     .top-search input::placeholder { color: rgba(0,0,0,.5); }
     .top-search input:focus { width: 240px; border-color: #fff; background: rgba(255,255,255,.14); }
-    .top-search button { height: 34px; width: 34px; border-radius: 50%; border: 1px solid #000; background: #fff; color: #000; font-size: 1rem; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; }
+    .top-search button { height: 34px; width: 34px; border-radius: 50%; border: 1px solid rgba(0,0,0,.14); background: #fff; color: #000; font-size: 1rem; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; box-shadow: 0 1px 2px rgba(0,0,0,.05); }
     .top-search button:hover { background: rgba(255,255,255,.14); }
     .top-search .top-mic.listening { background: rgba(255,255,255,.25); animation: micPulseTop 1.2s infinite; }
     @keyframes micPulseTop { 0%,100% { box-shadow: 0 0 0 0 rgba(255,255,255,.4); } 50% { box-shadow: 0 0 0 8px rgba(255,255,255,0); } }
@@ -977,7 +977,7 @@
     html[data-theme="dark"] .identity span { color: #f3f3f3 !important; }
     html[data-theme="dark"] .language-switch button { color: #f3f3f3 !important; }
     html[data-theme="dark"] .nav-more-btn { color: #f3f3f3 !important; border-color: rgba(255,255,255,.4) !important; }
-    html[data-theme="dark"] .top-search input { background: #1a1a1a !important; color: #f3f3f3 !important; border-color: rgba(255,255,255,.25) !important; }
+    html[data-theme="dark"] .top-search input { background: #1a1a1a !important; color: #f3f3f3 !important; border-color: rgba(255,255,255,.16) !important; }
     html[data-theme="dark"] .top-search input::placeholder { color: rgba(255,255,255,.5) !important; }
 
   
