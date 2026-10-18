@@ -225,10 +225,12 @@
       nav { gap: 14px !important; }
       .masthead-inner { gap: 16px; }
     }
-    .identity { display: flex; flex-direction: column; align-items: flex-start; gap: 3px; min-width: 0; line-height: 1.15; text-decoration: none; cursor: pointer; transition: opacity .2s; }
+    .identity { display: flex; flex-direction: row; align-items: center; gap: 12px; min-width: 0; line-height: 1.15; text-decoration: none; cursor: pointer; transition: opacity .2s; }
     .identity:hover { opacity: .82; }
-    .identity strong { font-family: var(--serif); font-size: 1.2rem; font-weight: 800; letter-spacing: .01em; white-space: nowrap; color: #111; }
-    .identity span { font-size: .8rem; font-weight: 700; color: #111; letter-spacing: .18em; text-transform: uppercase; white-space: nowrap; }
+    .identity-logo { width: 46px; height: 46px; border-radius: 50%; object-fit: cover; background: #fff; border: 2px solid rgba(0,0,0,.12); flex-shrink: 0; }
+    .identity-text { display: flex; flex-direction: column; align-items: flex-start; gap: 3px; min-width: 0; }
+    .identity-text strong { font-family: var(--serif); font-size: 1.2rem; font-weight: 800; letter-spacing: .01em; white-space: nowrap; color: #111; }
+    .identity-text span { font-size: .8rem; font-weight: 700; color: #111; letter-spacing: .18em; text-transform: uppercase; white-space: nowrap; }
     nav { display: flex; gap: 22px; align-items: center; }
     .nav-strip { display: contents; }
     nav a { font-size: .78rem; font-weight: 700; text-decoration: none; color: #111; }
@@ -648,7 +650,7 @@
 
     @media (max-width: 820px) {
       .shell, .hero-content { width: min(100% - 30px, 680px); }
-      .identity span { display: none; }
+      .identity-text span { display: block; font-size: .65rem; }
       .hero { min-height: 900px; align-items: end; }
       .hero-image { inset: 138px 15px 22px; }
       .hero-image img { height: 106%; object-position: 50% 48%; }
@@ -675,7 +677,7 @@
 
     @media (max-width: 480px) {
       .masthead-inner { min-height: 67px; }
-      .identity strong { font-size: 1rem; }
+      .identity-text strong { font-size: 1rem; }
       nav .nav-cta { font-size: .7rem; }
       .hero { min-height: 820px; }
       .hero-content { padding-bottom: 40px; }
@@ -1083,8 +1085,8 @@
 
   
     /* Dark mode: header text and icons readable */
-    html[data-theme="dark"] .identity strong { color: #f3f3f3 !important; }
-    html[data-theme="dark"] .identity span { color: #f3f3f3 !important; }
+    html[data-theme="dark"] .identity-text strong { color: #f3f3f3 !important; }
+    html[data-theme="dark"] .identity-text span { color: #f3f3f3 !important; }
     html[data-theme="dark"] .language-switch button { color: #f3f3f3 !important; }
     html[data-theme="dark"] .nav-more-btn { color: #f3f3f3 !important; border-color: rgba(255,255,255,.4) !important; }
     html[data-theme="dark"] .top-search input { background: #1a1a1a !important; color: #f3f3f3 !important; border-color: rgba(255,255,255,.16) !important; }
@@ -1266,7 +1268,7 @@
 <body id="top">
   <header class="masthead" aria-label="Primary navigation">
     <div class="shell masthead-inner">
-      <a class="identity" href="#top" aria-label="A.K legal law — back to top"><strong id="siteName">A.K legal law</strong><span id="identityProfession">Criminal Lawyer</span></a>
+      <a class="identity" href="#top" aria-label="A.K legal law — back to top"><img class="identity-logo" src="logo.png" alt="Lady Justice logo" width="44" height="44"><span class="identity-text"><strong id="siteName">A.K legal law</strong><span id="identityProfession">Criminal Lawyer</span></span></a>
       <nav>
         <button type="button" id="navHamburger" class="nav-hamburger" aria-haspopup="true" aria-expanded="false" aria-label="Menu / मेन्यू"><span aria-hidden="true">☰</span></button>
         <div class="nav-strip">
