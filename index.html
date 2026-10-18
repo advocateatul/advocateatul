@@ -3073,7 +3073,8 @@
         tplLabel.textContent = dt("draftsTemplateLabel", lang);
         body.appendChild(tplLabel);
 
-        if (lang === "hi") {
+        var tmplText = draftTemplate(d, lang);
+        if (lang === "hi" && !d.templateHi) {
           var tplNote = document.createElement("p");
           tplNote.className = "draft-template-note";
           tplNote.textContent = dt("draftsTemplateNote", lang);
@@ -3082,7 +3083,7 @@
 
         var pre = document.createElement("pre");
         pre.className = "draft-template";
-        pre.textContent = d.template;
+        pre.textContent = tmplText;
         body.appendChild(pre);
 
         var actions = document.createElement("div");
@@ -3119,10 +3120,23 @@
         filterDrafts();
       }
 
+      function draftDisplayLang(id) {
+        var item = document.querySelector('.draft-item[data-draft-id="' + id + '"]');
+        if (item) {
+          var dl = item.getAttribute("data-dlang");
+          if (dl === "hi" || dl === "en") return dl;
+        }
+        return currentLanguage === "hi" ? "hi" : "en";
+      }
+      function draftTemplate(d, lang) {
+        if (lang === "hi" && d.templateHi) return d.templateHi;
+        return d.template;
+      }
       function downloadDraft(id) {
         var d = draftById(id);
         if (!d) return;
-        var lang = currentLanguage === "hi" ? "hi" : "en";
+        var lang = draftDisplayLang(id);
+        var tmpl = draftTemplate(d, lang);
         var text = (d.title[lang] || d.title.en) + "\n" +
           "(".concat(d.category[lang] || d.category.en, ")") + "\n" +
           (d.filedIn ? t("draftsFiledIn") + ": " + (d.filedIn[lang] || d.filedIn.en) + "\n" : "") +
@@ -3142,7 +3156,8 @@
       function printDraft(id) {
         var d = draftById(id);
         if (!d) return;
-        var lang = currentLanguage === "hi" ? "hi" : "en";
+        var lang = draftDisplayLang(id);
+        var tmpl = draftTemplate(d, lang);
         var area = document.getElementById("draftPrintArea");
         if (!area) return;
         area.textContent = "";
@@ -3152,7 +3167,7 @@
         c.className = "draft-print-cat";
         c.textContent = (d.category[lang] || d.category.en) || "";
         var pre = document.createElement("pre");
-        pre.textContent = d.template;
+        pre.textContent = tmpl;
         area.appendChild(h);
         area.appendChild(c);
         if (d.filedIn) {
@@ -3257,7 +3272,7 @@
         if (!el) return;
         var rect = el.getBoundingClientRect();
         var vh = window.innerHeight || document.documentElement.clientHeight;
-        var y = window.scrollY + rect.top - (vh / 2) + (rect.height / 2) - (vh * 0.12);
+        var y = window.scrollY + rect.top - (vh / 2) + (rect.height / 2);
         window.scrollTo({ top: Math.max(0, y), behavior: "smooth" });
       }
       function jumpToDraft(id) {
