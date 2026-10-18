@@ -3008,6 +3008,15 @@
         prTop.textContent = dt("draftsPrint", lang);
         prTop.addEventListener("click", function () { printDraft(d.id); });
         topActions.appendChild(prTop);
+        if (d.id === "vakalatnama") {
+          var pdfBtn = document.createElement("a");
+          pdfBtn.className = "draft-btn solid";
+          pdfBtn.href = "vakalatnama.pdf";
+          pdfBtn.download = "Vakalatnama.pdf";
+          pdfBtn.textContent = lang === "hi" ? "\u092e\u0942\u0932 PDF \u0921\u093e\u0909\u0928\u0932\u094b\u0921" : "Original PDF";
+          pdfBtn.style.textDecoration = "none";
+          topActions.appendChild(pdfBtn);
+        }
         body.appendChild(topActions);
 
         toggle.addEventListener("click", function () {
