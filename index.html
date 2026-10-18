@@ -1173,8 +1173,8 @@
     document.documentElement.setAttribute("data-theme", "light");
   </script>
 </head>
-<body>
-  <header class="masthead" id="top" aria-label="Primary navigation">
+<body id="top">
+  <header class="masthead" aria-label="Primary navigation">
     <div class="shell masthead-inner">
       <a class="identity" href="#top" aria-label="A.K legal law — back to top"><strong id="siteName">A.K legal law</strong><span id="identityProfession">Criminal Lawyer</span></a>
       <nav>
@@ -3246,6 +3246,13 @@
         };
         window.addEventListener("scroll", onScroll, { passive: true });
         onScroll();
+        var ident = document.querySelector(".identity");
+        if (ident) {
+          ident.addEventListener("click", function(e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          });
+        }
       }
 
       document.querySelectorAll("[data-language]").forEach(function (button) {
