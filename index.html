@@ -496,6 +496,7 @@
     html[data-theme="dark"] .draft-langswitch button.active { background: #f3f3f3; color: #111111; }
     html[data-theme="dark"] .draft-langswitch button:not(.active):hover { background: rgba(255,255,255,.08); }
     .draft-template-note { font-size: .82rem; color: var(--muted); font-style: italic; margin: 0 0 10px; }
+    .draft-actions-top { margin: 0 0 18px; padding-bottom: 16px; border-bottom: 1px dashed var(--line); }
     .guide-headrow { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 12px; }
     .guide-headrow .guide-cat { margin-bottom: 0; }
     .guide-langswitch { flex-shrink: 0; }
@@ -3000,6 +3001,22 @@
         body.className = "draft-body";
         body.hidden = !open;
 
+        var topActions = document.createElement("div");
+        topActions.className = "draft-actions draft-actions-top";
+        var dlTop = document.createElement("button");
+        dlTop.type = "button";
+        dlTop.className = "draft-btn solid";
+        dlTop.textContent = dt("draftsDownload", lang);
+        dlTop.addEventListener("click", function () { downloadDraft(d.id); });
+        topActions.appendChild(dlTop);
+        var prTop = document.createElement("button");
+        prTop.type = "button";
+        prTop.className = "draft-btn";
+        prTop.textContent = dt("draftsPrint", lang);
+        prTop.addEventListener("click", function () { printDraft(d.id); });
+        topActions.appendChild(prTop);
+        body.appendChild(topActions);
+
         toggle.addEventListener("click", function () {
           var isOpen = item.classList.toggle("open");
           body.hidden = !isOpen;
@@ -3407,7 +3424,7 @@
         if (lHits.length) groups.push({ title: t("hubResultLinks"), items: lHits.map(function (l) { return { title: l["label_" + lang] || l.label_en, sub: l.url, go: function () { window.open(l.url, "_blank", "noopener"); } }; }) });
         var drData = getLegalDrafts();
         var dHits = ((drData && drData.drafts) || []).filter(function (dr) { return matches(dr.title.en, dr.title.hi, dr.use.en, dr.use.hi, dr.category.en, dr.category.hi, dr.sections && dr.sections.en, dr.sections && dr.sections.hi, dr.jurisdiction && dr.jurisdiction.en, dr.jurisdiction && dr.jurisdiction.hi); }).slice(0, 6);
-        if (dHits.length) groups.push({ title: t("hubResultDrafts"), items: dHits.map(function (dr) { return { title: dr.title[lang] || dr.title.en, sub: dr.category[lang] || dr.category.en, go: function () { document.getElementById("drafts").scrollIntoView({ behavior: "smooth" }); } }; }) });
+        if (dHits.length) groups.push({ title: t("hubResultDrafts"), items: dHits.map(function (dr) { return { title: dr.title[lang] || dr.title.en, sub: dr.category[lang] || dr.category.en, go: function () { if (typeof jumpToDraft === "function") jumpToDraft(dr.id); else document.getElementById("drafts").scrollIntoView({ behavior: "smooth" }); } }; }) });
         if (!groups.length) {
           box.appendChild(hubEl("div", "hub-no-results", t("hubNoResults")));
         } else {
