@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://advocateatul.github.io/advocateatul/sitemap.xml
