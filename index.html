@@ -1124,6 +1124,12 @@
     .notes-btn { font: 700 .85rem var(--sans); padding: 10px 24px; border: 1px solid #111; border-radius: 999px; background: #111; color: #fff; cursor: pointer; transition: all .25s cubic-bezier(0.22, 1, 0.36, 1); }
     .notes-btn:hover { transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,.15); }
     html[data-theme="dark"] .notes-btn { background: #fff; color: #111; border-color: #fff; }
+    .notes-lang { display: inline-flex; border: 1px solid #111; border-radius: 999px; overflow: hidden; align-self: center; }
+    .notes-lang-btn { border: 0; background: transparent; color: #111; font: 700 .85rem var(--sans); padding: 10px 20px; cursor: pointer; transition: background .25s cubic-bezier(0.22, 1, 0.36, 1), color .25s cubic-bezier(0.22, 1, 0.36, 1); }
+    .notes-lang-btn.active { background: #111; color: #fff; }
+    html[data-theme="dark"] .notes-lang { border-color: #fff; }
+    html[data-theme="dark"] .notes-lang-btn { color: #fff; }
+    html[data-theme="dark"] .notes-lang-btn.active { background: #fff; color: #111; }
     @media print {
       body * { visibility: hidden; }
       #notesPaper, #notesPaper * { visibility: visible; }
@@ -1497,6 +1503,10 @@
           <p data-i18n="notesCopy">Comprehensive handwritten-style study notes for BNS, BNSS, BSA, CPC and Criminal Major Acts — in English and Hindi. Tap a subject to open its notes.</p>
         </div>
         <div class="notes-actions reveal">
+          <div class="notes-lang" role="group" aria-label="Notes language / नोट्स भाषा">
+            <button type="button" class="notes-lang-btn active" data-notes-lang="en" aria-pressed="true">English</button>
+            <button type="button" class="notes-lang-btn" data-notes-lang="hi" aria-pressed="false">हिंदी</button>
+          </div>
           <button type="button" class="notes-btn" id="notesDownloadBtn" data-i18n="notesDownload">Download Notes</button>
           <button type="button" class="notes-btn" id="notesPrintBtn" data-i18n="notesPrint">Print Notes</button>
         </div>
@@ -2432,11 +2442,12 @@
         } catch (e) { return {}; }
       }
       var currentNotesSubject = "bns";
+      var notesLang = "en";
       function renderNotes() {
         var data = getHandwrittenNotes();
         var container = document.getElementById("notesContent");
         if (!container || !data[currentNotesSubject]) return;
-        var lang = (typeof currentLanguage !== "undefined") ? currentLanguage : "en";
+        var lang = notesLang;
         var topics = data[currentNotesSubject];
         var htmlOut = "";
         topics.forEach(function(topic) {
@@ -2467,6 +2478,24 @@
         renderNotes();
       }
 
+      function initNotesLang() {
+        if (typeof currentLanguage !== "undefined") notesLang = currentLanguage;
+        var btns = document.querySelectorAll(".notes-lang-btn");
+        btns.forEach(function(b) {
+          var on = b.getAttribute("data-notes-lang") === notesLang;
+          b.classList.toggle("active", on);
+          b.setAttribute("aria-pressed", String(on));
+          b.addEventListener("click", function() {
+            notesLang = b.getAttribute("data-notes-lang");
+            btns.forEach(function(x) {
+              var isOn = x === b;
+              x.classList.toggle("active", isOn);
+              x.setAttribute("aria-pressed", String(isOn));
+            });
+            renderNotes();
+          });
+        });
+      }
       function initNotesActions() {
         var dlBtn = document.getElementById("notesDownloadBtn");
         var printBtn = document.getElementById("notesPrintBtn");
@@ -2476,7 +2505,7 @@
       function downloadNotes() {
         var data = getHandwrittenNotes();
         if (!data[currentNotesSubject]) return;
-        var lang = (typeof currentLanguage !== "undefined") ? currentLanguage : "en";
+        var lang = notesLang;
         var topics = data[currentNotesSubject];
         var subjectNames = { bns: "BNS", bnss: "BNSS", bsa: "BSA", cpc: "CPC", majorActs: "Major Acts" };
         var text = (subjectNames[currentNotesSubject] || currentNotesSubject) + " - Handwritten Notes\n";
@@ -3114,6 +3143,7 @@
         renderActiveUpdatesTab();
         renderLibrary();
         renderHub();
+        initNotesLang();
         initNotesTabs();
         initNotesActions();
         renderDrafts();
