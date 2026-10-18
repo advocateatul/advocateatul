@@ -834,8 +834,16 @@
     html[data-theme="dark"] .top-search-results h4 { color: #b9b9b9; }
     @media (max-width: 1400px) { .top-search input { width: 130px; } .top-search input:focus { width: 160px; } }
 
-    /* Mobile header: hamburger + full-width search row (1400px: laptops too, nav has 9 items) */
-    @media (max-width: 1400px) {
+    /* Laptop header (1151-1400px): condensed desktop nav; items that don't fit live in "More" */
+    @media (max-width: 1400px) and (min-width: 1151px) {
+      .masthead-inner { gap: 14px; row-gap: 6px; }
+      nav { gap: 12px; }
+      nav > a.nav-mid-hide { display: none !important; }
+      .nav-hamburger { display: none !important; }
+      .top-search { margin-left: 4px; }
+    }
+    /* Mobile header (1150px and below): hamburger + full-width search row */
+    @media (max-width: 1150px) {
       .masthead-inner { flex-wrap: wrap; gap: 10px; row-gap: 4px; padding-top: 10px; }
       .masthead-inner .identity { flex: 1 1 auto; min-width: 0; }
       nav { gap: 8px; margin-left: auto; }
@@ -1140,14 +1148,16 @@
         <a href="#knowledge" data-i18n="navKnowledge">Knowledge Hub</a>
         <a href="#documents" data-i18n="navDocuments">Documents</a>
         <a href="#drafts" data-i18n="navDrafts">Drafts</a>
-        <a href="#draft-guide" data-i18n="navDraftGuide">Draft Guide</a>
-        <a href="#notes" data-i18n="navNotes">Notes</a>
+        <a href="#draft-guide" class="nav-mid-hide" data-i18n="navDraftGuide">Draft Guide</a>
+        <a href="#notes" class="nav-mid-hide" data-i18n="navNotes">Notes</a>
         <div class="nav-more-wrap">
           <button type="button" id="navMoreBtn" class="nav-more-btn" aria-haspopup="true" aria-expanded="false"><span data-i18n="navMore">More</span> ▾</button>
           <div class="nav-more-menu" id="navMoreMenu" hidden role="menu" aria-label="More links">
             <a href="#drafts" role="menuitem" data-i18n="navDrafts">Drafts</a>
             <a href="#knowledge" role="menuitem" data-i18n="navKnowledge">Knowledge Hub</a>
             <a href="#library" role="menuitem" data-i18n="navLibrary">Library</a>
+            <a href="#draft-guide" role="menuitem" data-i18n="navDraftGuide">Draft Guide</a>
+            <a href="#notes" role="menuitem" data-i18n="navNotes">Notes</a>
             <a href="https://www.indiacode.nic.in/" target="_blank" rel="noopener" role="menuitem">India Code</a>
             <a href="https://ecourts.gov.in/" target="_blank" rel="noopener" role="menuitem">eCourts</a>
             <a href="#contact" role="menuitem" data-i18n="navConsultation">Consultation</a>
