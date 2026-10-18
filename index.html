@@ -751,15 +751,6 @@
     .hub-tab:hover { border-color: #111111; color: #111111; transform: translateY(-2px); }
     .hub-tab.active { background: #111111; border-color: #111111; color: #ffffff; box-shadow: 0 8px 24px rgba(0,0,0,.22); }
     /* Hub tab icons (survive i18n text swaps; same set as the nav dropdown) */
-    #hubTabs .hub-tab::before, #navMoreMenu .hub-jump::before { font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif; }
-    #hubTabs .hub-tab[data-tab="acts"]::before, #navMoreMenu .hub-jump[data-hub-tab="acts"]::before { content: "📜"; margin-right: .45em; }
-    #hubTabs .hub-tab[data-tab="constitution"]::before, #navMoreMenu .hub-jump[data-hub-tab="constitution"]::before { content: "📖"; margin-right: .45em; }
-    #hubTabs .hub-tab[data-tab="courts"]::before, #navMoreMenu .hub-jump[data-hub-tab="courts"]::before { content: "🏛️"; margin-right: .45em; }
-    #hubTabs .hub-tab[data-tab="consumer"]::before, #navMoreMenu .hub-jump[data-hub-tab="consumer"]::before { content: "🛒"; margin-right: .45em; }
-    #hubTabs .hub-tab[data-tab="bar"]::before, #navMoreMenu .hub-jump[data-hub-tab="bar"]::before { content: "🎓"; margin-right: .45em; }
-    #hubTabs .hub-tab[data-tab="drafts"]::before, #navMoreMenu .hub-jump[data-hub-tab="drafts"]::before { content: "📁"; margin-right: .45em; }
-    #hubTabs .hub-tab[data-tab="links"]::before, #navMoreMenu .hub-jump[data-hub-tab="links"]::before { content: "🔗"; margin-right: .45em; }
-    #hubTabs .hub-tab[data-tab="toolkit"]::before, #navMoreMenu .hub-jump[data-hub-tab="toolkit"]::before { content: "⚖️"; margin-right: .45em; }
     .hub-panel { animation: hubFade .45s cubic-bezier(0.22, 1, 0.36, 1) both; }
     .hub-panel[hidden] { display: none; }
     @keyframes hubFade { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
@@ -1343,14 +1334,14 @@
             <button type="button" id="requestBtn" role="menuitem" data-i18n="navRequest">📝 Request a Draft</button>
             <div class="nav-more-sep" role="separator"></div>
             <div class="nav-more-label" data-i18n="navHubCats">Knowledge Hub Categories</div>
-            <button type="button" class="hub-jump" data-hub-tab="acts" role="menuitem" data-i18n="hubTabActs">Bare Acts</button>
-            <button type="button" class="hub-jump" data-hub-tab="constitution" role="menuitem" data-i18n="hubTabConstitution">Constitution</button>
-            <button type="button" class="hub-jump" data-hub-tab="courts" role="menuitem" data-i18n="hubTabCourts">Courts</button>
-            <button type="button" class="hub-jump" data-hub-tab="consumer" role="menuitem" data-i18n="hubTabConsumer">Consumer</button>
-            <button type="button" class="hub-jump" data-hub-tab="bar" role="menuitem" data-i18n="hubTabBar">AIBE &amp; Bar</button>
-            <button type="button" class="hub-jump" data-hub-tab="drafts" role="menuitem" data-i18n="hubTabDrafts">Drafts &amp; Library</button>
-            <button type="button" class="hub-jump" data-hub-tab="links" role="menuitem" data-i18n="hubTabLinks">Useful Links</button>
-            <button type="button" class="hub-jump" data-hub-tab="toolkit" role="menuitem" data-i18n="hubTabToolkit">Criminal Toolkit</button>
+            <button type="button" class="hub-jump" data-hub-tab="acts" role="menuitem"><span class="hj-ic" aria-hidden="true">📜</span><span data-i18n="hubTabActs">Bare Acts</span></button>
+            <button type="button" class="hub-jump" data-hub-tab="constitution" role="menuitem"><span class="hj-ic" aria-hidden="true">📖</span><span data-i18n="hubTabConstitution">Constitution</span></button>
+            <button type="button" class="hub-jump" data-hub-tab="courts" role="menuitem"><span class="hj-ic" aria-hidden="true">🏛️</span><span data-i18n="hubTabCourts">Courts</span></button>
+            <button type="button" class="hub-jump" data-hub-tab="consumer" role="menuitem"><span class="hj-ic" aria-hidden="true">🛒</span><span data-i18n="hubTabConsumer">Consumer</span></button>
+            <button type="button" class="hub-jump" data-hub-tab="bar" role="menuitem"><span class="hj-ic" aria-hidden="true">🎓</span><span data-i18n="hubTabBar">AIBE &amp; Bar</span></button>
+            <button type="button" class="hub-jump" data-hub-tab="drafts" role="menuitem"><span class="hj-ic" aria-hidden="true">📁</span><span data-i18n="hubTabDrafts">Drafts &amp; Library</span></button>
+            <button type="button" class="hub-jump" data-hub-tab="links" role="menuitem"><span class="hj-ic" aria-hidden="true">🔗</span><span data-i18n="hubTabLinks">Useful Links</span></button>
+            <button type="button" class="hub-jump" data-hub-tab="toolkit" role="menuitem"><span class="hj-ic" aria-hidden="true">⚖️</span><span data-i18n="hubTabToolkit">Criminal Toolkit</span></button>
           </div>
         </div>
         <a class="nav-cta" href="#contact" data-i18n="navConsultation">Consultation</a>
@@ -2457,12 +2448,13 @@
         { id: "other", labelKey: "hubFilterOther" }
       ];
 
+      var HUB_TAB_ICONS = { acts: "\u{1F4DC}", constitution: "\u{1F4D6}", courts: "\u{1F3DB}\uFE0F", consumer: "\u{1F6D2}", bar: "\u{1F393}", drafts: "\u{1F4C1}", links: "\u{1F517}", toolkit: "\u2696\uFE0F" };
       function renderHubTabs() {
         var wrap = document.getElementById("hubTabs");
         if (!wrap) return;
         wrap.textContent = "";
         HUB_TABS.forEach(function (tab) {
-          var btn = hubEl("button", "hub-tab" + (hubActiveTab === tab.id ? " active" : ""), t(tab.labelKey));
+          var btn = hubEl("button", "hub-tab" + (hubActiveTab === tab.id ? " active" : ""), (HUB_TAB_ICONS[tab.id] ? HUB_TAB_ICONS[tab.id] + " " : "") + t(tab.labelKey));
           btn.type = "button";
           btn.setAttribute("role", "tab");
           btn.setAttribute("data-tab", tab.id);
