@@ -894,8 +894,9 @@
       nav { gap: 12px; }
       .nav-strip > a.nav-mid-hide { display: none !important; }
       .nav-hamburger { display: none !important; }
-      /* Search takes its own full-width row under the nav — roomy, premium, easy to use */
-      .top-search { order: 10; flex: 1 1 100%; width: 100%; margin: 0; }
+      /* Search takes its own full-width row under the nav — roomy, premium, easy to use.
+         10px breathing room below so the search pill/mic/search-icon never touch the header's bottom edge. */
+      .top-search { order: 10; flex: 1 1 100%; width: 100%; margin: 0 0 10px; }
       .top-search input { flex: 1 1 auto; width: auto; min-width: 0; }
       .top-search input:focus { width: auto; }
       section[id] { scroll-margin-top: 104px; }
