@@ -1093,10 +1093,15 @@
     html[data-theme="dark"] .notes-content { color: #a8c8e8; }
     .notes-content h3 {
       font-family: "Segoe Print", "Bradley Hand", cursive;
-      font-size: 1.25rem; color: #b91c1c; margin: 24px 0 12px;
-      border-bottom: 2px solid rgba(185,28,28,.3); padding-bottom: 6px;
+      font-size: 1.34rem; font-weight: 700; color: #b91c1c; margin: 26px 0 10px;
+      padding: 2px 10px 4px; display: inline-block; border-radius: 3px;
+      background: linear-gradient(to top, rgba(253,224,71,.65) 38%, transparent 38%);
+      border-bottom: none;
     }
-    html[data-theme="dark"] .notes-content h3 { color: #f87171; border-color: rgba(248,113,113,.3); }
+    html[data-theme="dark"] .notes-content h3 {
+      color: #fca5a5;
+      background: linear-gradient(to top, rgba(253,224,71,.28) 38%, transparent 38%);
+    }
     .notes-content h4 {
       font-family: "Segoe Print", "Bradley Hand", cursive;
       font-size: 1.08rem; color: #1e40af; margin: 20px 0 8px;
@@ -1135,8 +1140,8 @@
     .topic-dl:hover { background: #1a3a5c; color: #fff; }
     html[data-theme="dark"] .topic-dl { border-color: rgba(255,255,255,.45); color: #f3f3f3; }
     html[data-theme="dark"] .topic-dl:hover { background: #f3f3f3; color: #111; }
-    .notes-result-badge { display: inline-block; font: 700 .68rem var(--sans); letter-spacing: .08em; text-transform: uppercase; border: 1px solid rgba(26,58,92,.45); color: #1a3a5c; border-radius: 999px; padding: 3px 10px; margin: 14px 0 2px; }
-    html[data-theme="dark"] .notes-result-badge { border-color: rgba(255,255,255,.45); color: #f3f3f3; }
+    .notes-result-badge { display: inline-block; font: 700 .68rem var(--sans); letter-spacing: .08em; text-transform: uppercase; border: 1px solid rgba(180,83,9,.5); color: #b45309; border-radius: 999px; padding: 3px 10px; margin: 14px 8px 2px 0; vertical-align: middle; }
+    html[data-theme="dark"] .notes-result-badge { border-color: rgba(251,191,36,.5); color: #fbbf24; }
     .notes-empty { font-size: .92rem; opacity: .72; padding: 20px 4px; }
     .notes-tabs-divider { width: 1px; align-self: stretch; background: rgba(0,0,0,.16); margin: 8px 4px; }
     html[data-theme="dark"] .notes-tabs-divider { background: rgba(255,255,255,.22); }
