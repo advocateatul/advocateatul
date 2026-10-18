@@ -3552,12 +3552,18 @@
           if (!btn || !modal) return;
           function openModal() {
             modal.hidden = false;
-            if (moreMenu) { moreMenu.hidden = true; moreBtn.setAttribute("aria-expanded", "false"); }
+            var mm = document.getElementById("navMoreMenu");
+            var mb = document.getElementById("navMoreBtn");
+            if (mm) mm.hidden = true;
+            if (mb) mb.setAttribute("aria-expanded", "false");
             var d = document.getElementById("reqDetail");
             if (d) d.focus();
           }
           function closeModal() { modal.hidden = true; }
-          btn.addEventListener("click", openModal);
+          btn.addEventListener("click", function (e) {
+            e.stopPropagation();
+            openModal();
+          });
           if (close) close.addEventListener("click", closeModal);
           modal.addEventListener("click", function (e) { if (e.target === modal) closeModal(); });
           document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !modal.hidden) closeModal(); });
