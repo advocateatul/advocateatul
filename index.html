@@ -10189,6 +10189,9 @@
         </div>
         <div class="vocab-cats reveal" id="vocabCats" role="tablist" aria-label="Vocabulary categories"></div>
         <div class="vocab-list" id="vocabList"></div>
+        <div class="vocab-more-wrap" id="vocabMoreWrap" style="text-align:center;margin-top:24px;display:none;">
+          <button type="button" class="vocab-cat" id="vocabMoreBtn" style="font-size:.95rem;padding:12px 32px;"></button>
+        </div>
         <p class="vocab-count reveal" id="vocabCount"></p>
       </div>
     </section>
@@ -11321,30 +11324,36 @@
         allBtn.type = "button"; allBtn.className = "vocab-cat" + (vocabActiveCat === "all" ? " active" : "");
         allBtn.textContent = currentLanguage === "hi" ? "सभी" : "All";
         allBtn.setAttribute("role", "tab");
-        allBtn.addEventListener("click", function() { vocabActiveCat = "all"; renderVocabCats(); renderVocabList(); });
+        allBtn.addEventListener("click", function() { vocabActiveCat = "all"; vocabLimit = VOCAB_PAGE; renderVocabCats(); renderVocabList(); });
         wrap.appendChild(allBtn);
         data.categories.forEach(function(cat) {
           var btn = document.createElement("button");
           btn.type = "button"; btn.className = "vocab-cat" + (vocabActiveCat === cat.id ? " active" : "");
           btn.textContent = currentLanguage === "hi" ? (cat.name.hi || cat.name.en) : (cat.name.en || cat.name.hi);
           btn.setAttribute("role", "tab");
-          btn.addEventListener("click", function() { vocabActiveCat = cat.id; renderVocabCats(); renderVocabList(); });
+          btn.addEventListener("click", function() { vocabActiveCat = cat.id; vocabLimit = VOCAB_PAGE; renderVocabCats(); renderVocabList(); });
           wrap.appendChild(btn);
         });
       }
+      var vocabLimit = 30;
+      var VOCAB_PAGE = 30;
       function renderVocabList() {
         var data = getVocabData();
         var list = document.getElementById("vocabList");
         var countEl = document.getElementById("vocabCount");
+        var moreWrap = document.getElementById("vocabMoreWrap");
+        var moreBtn = document.getElementById("vocabMoreBtn");
         if (!list) return;
         list.textContent = "";
-        var shown = 0, total = 0;
+        var shown = 0, total = 0, matched = 0;
         var q = vocabQuery.toLowerCase();
         data.categories.forEach(function(cat) {
           if (vocabActiveCat !== "all" && vocabActiveCat !== cat.id) return;
           cat.terms.forEach(function(term) {
             total++;
             if (q && term.en.toLowerCase().indexOf(q) < 0 && term.hi.indexOf(vocabQuery) < 0) return;
+            matched++;
+            if (matched > vocabLimit) return;
             shown++;
             var div = document.createElement("div");
             div.className = "vocab-term";
@@ -11372,7 +11381,24 @@
           });
         });
         if (countEl) {
-          countEl.textContent = shown + " / " + total + (currentLanguage === "hi" ? " शब्द" : " terms");
+          countEl.textContent = shown + " / " + matched + (currentLanguage === "hi" ? " शब्द" : " terms");
+        }
+        if (moreWrap && moreBtn) {
+          if (matched > vocabLimit) {
+            moreWrap.style.display = "block";
+            moreBtn.textContent = (currentLanguage === "hi" ? "और दिखाएं (" : "Show more (") + (matched - vocabLimit) + ")";
+          } else {
+            moreWrap.style.display = "none";
+          }
+        }
+      }
+      function initVocabMore() {
+        var moreBtn = document.getElementById("vocabMoreBtn");
+        if (moreBtn) {
+          moreBtn.addEventListener("click", function() {
+            vocabLimit += VOCAB_PAGE;
+            renderVocabList();
+          });
         }
       }
       function initVocab() {
@@ -11380,11 +11406,13 @@
         if (input) {
           input.addEventListener("input", function() {
             vocabQuery = input.value.trim();
+            vocabLimit = VOCAB_PAGE;
             renderVocabList();
           });
         }
         renderVocabCats();
         renderVocabList();
+        initVocabMore();
       }
 
       function downloadTopic(subj, ti) {
