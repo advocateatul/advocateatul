@@ -2472,7 +2472,14 @@
 
       function switchHubTab(id) {
         hubActiveTab = id;
-        renderHubTabs();
+        var wrap = document.getElementById("hubTabs");
+        if (wrap) {
+          var btns = wrap.querySelectorAll(".hub-tab");
+          for (var i = 0; i < btns.length; i++) {
+            if (btns[i].getAttribute("data-tab") === id) btns[i].classList.add("active");
+            else btns[i].classList.remove("active");
+          }
+        }
         /* Keep sticky tabs below the fixed header */
         var mh = document.querySelector(".masthead");
         if (mh) { document.documentElement.style.setProperty("--hub-tabs-top", (mh.offsetHeight + 4) + "px"); }
