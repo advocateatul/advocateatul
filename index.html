@@ -12742,19 +12742,24 @@
         document.documentElement.classList.add("motion-ready");
         var observer = new IntersectionObserver(function (entries) {
           entries.forEach(function (entry) {
+            var el = entry.target;
             if (entry.isIntersecting) {
-              var parent = entry.target.parentElement;
+              var parent = el.parentElement;
               if (parent) {
                 var sibs = parent.querySelectorAll(":scope > .reveal");
-                var idx = Array.prototype.indexOf.call(sibs, entry.target);
-                if (idx > 0) entry.target.style.animationDelay = Math.min(idx, 7) * 90 + "ms";
+                var idx = Array.prototype.indexOf.call(sibs, el);
+                if (idx > 0) el.style.animationDelay = Math.min(idx, 7) * 90 + "ms";
               }
-              entry.target.classList.add("visible");
-              observer.unobserve(entry.target);
+              el.classList.add("visible");
+            } else if (el.classList.contains("visible")) {
+              el.classList.remove("visible");
             }
           });
         }, { threshold: 0.08, rootMargin: "0px 0px -12px" });
-        reveals.forEach(function (element) { observer.observe(element); });
+        reveals.forEach(function (element) {
+          if (element.classList.contains("hub-card")) return; /* hubStagger owns hub cards */
+          observer.observe(element);
+        });
       } else {
         reveals.forEach(function (element) { element.classList.add("visible"); });
       }
