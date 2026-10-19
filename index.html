@@ -493,8 +493,8 @@
     .drafts-head { display: grid; grid-template-columns: .7fr 1.3fr; gap: 50px; align-items: end; margin-bottom: 14px; }
     .drafts h2 { font-size: clamp(1.45rem, 2.6vw, 2.15rem); line-height: 1.08; letter-spacing: -.035em; color: #111111; font-weight: 800; }
     .drafts-head > p { justify-self: end; max-width: 390px; margin: 0; color: var(--muted); font-size: .9rem; }
-    .drafts-list { border-top: 1px solid var(--line); margin-top: 26px; }
-    .draft-item { border-bottom: 1px solid var(--line); padding: 26px 24px; }
+    .drafts-list { margin-top: 26px; display: flex; flex-direction: column; gap: 14px; }
+    .draft-item { border: 1px solid var(--line); border-radius: 14px; background: #ffffff; padding: 26px 24px; }
     .draft-top { display: grid; grid-template-columns: 1fr auto; gap: 18px; align-items: start; }
     .draft-top-actions { display: flex; flex-direction: column; gap: 8px; align-items: flex-end; }
     .draft-langswitch { display: inline-flex; border: 1px solid rgba(0,0,0,.22); border-radius: 999px; overflow: hidden; background: transparent; }
@@ -673,7 +673,7 @@
     .contact-foot { display: flex; justify-content: space-between; gap: 24px; margin-top: 70px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.18); color: rgba(255,255,255,.5); font-size: .7rem; }
 
     .reveal { opacity: 1; transform: none; }
-    .motion-ready .reveal.visible { animation: soft-reveal .8s cubic-bezier(0.22, 1, 0.36, 1) backwards; }
+    .motion-ready .reveal.visible { animation: soft-reveal .6s cubic-bezier(0.22, 1, 0.36, 1) backwards; }
     @keyframes soft-reveal {
       from { opacity: 0; transform: translateY(38px) scale(.985); }
       to { opacity: 1; transform: none; }
@@ -1002,8 +1002,11 @@
       transition: transform .35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow .35s cubic-bezier(0.22, 1, 0.36, 1) !important;
     }
     .draft-item:hover, .update-card:hover, .hub-card:hover, .guide-card:hover { transform: translateY(-3px); }
+    .draft-item:hover { box-shadow: 0 12px 30px rgba(0,0,0,.08); border-color: #111111; }
+    html[data-theme="dark"] .draft-item { background: #141414; }
+    html[data-theme="dark"] .draft-item:hover { border-color: #e8e8e8; box-shadow: 0 12px 30px rgba(0,0,0,.35); }
     /* Subtle smoothness: opacity-only fade (GPU compositor, zero layout cost, no jank) */
-    .reveal-smooth { opacity: 0; transform: translateY(30px); transition: opacity .7s cubic-bezier(0.22, 1, 0.36, 1), transform .7s cubic-bezier(0.22, 1, 0.36, 1); }
+    .reveal-smooth { opacity: 0; transform: translateY(30px); transition: opacity .55s cubic-bezier(0.22, 1, 0.36, 1), transform .55s cubic-bezier(0.22, 1, 0.36, 1); }
     .reveal-smooth.visible { opacity: 1; transform: none; }
     @media (prefers-reduced-motion: reduce) { .reveal-smooth { opacity: 1; transition: none; } }
     @media (prefers-reduced-motion: reduce) { .reveal-smooth { opacity: 1; transform: none; transition: none; } }
@@ -1321,7 +1324,7 @@
 <body id="top">
   <header class="masthead" aria-label="Primary navigation">
     <div class="shell masthead-inner">
-      <a class="identity" href="#top" aria-label="A.K legal law — back to top"><img class="identity-logo" src="logo.png" alt="Lady Justice logo" width="44" height="44"><span class="identity-text"><strong id="siteName">A.K legal law</strong><span id="identityProfession">Criminal Lawyer</span></span></a>
+      <a class="identity" href="#top" aria-label="A.K legal law — back to top"><img class="identity-logo" src="logo.png" alt="Lady Justice logo" width="44" height="44" decoding="async"><span class="identity-text"><strong id="siteName">A.K legal law</strong><span id="identityProfession">Criminal Lawyer</span></span></a>
       <nav>
         <button type="button" id="navHamburger" class="nav-hamburger" aria-haspopup="true" aria-expanded="false" aria-label="Menu / मेन्यू"><span aria-hidden="true">☰</span></button>
         <div class="nav-strip">
@@ -10951,10 +10954,10 @@
       function hubStagger(container) {
         var cards = container.querySelectorAll(".hub-card");
         cards.forEach(function (card, i) {
-          card.style.animationDelay = Math.min(i * 60, 600) + "ms";
+          card.style.animationDelay = Math.min(i * 50, 500) + "ms";
           card.classList.add("reveal");
           requestAnimationFrame(function () { requestAnimationFrame(function () { card.classList.add("visible"); }); });
-          setTimeout(function () { card.style.animationDelay = "0ms"; }, 1600);
+          setTimeout(function () { card.style.animationDelay = "0ms"; }, 1400);
         });
       }
 
@@ -12748,7 +12751,7 @@
               if (parent) {
                 var sibs = parent.querySelectorAll(":scope > .reveal");
                 var idx = Array.prototype.indexOf.call(sibs, el);
-                if (idx > 0) el.style.animationDelay = Math.min(idx, 7) * 90 + "ms";
+                if (idx > 0) el.style.animationDelay = Math.min(idx, 7) * 70 + "ms";
               }
               el.classList.add("visible");
             } else if (el.classList.contains("visible")) {
