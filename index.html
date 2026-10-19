@@ -1021,10 +1021,21 @@
     .la-builder-actions button { flex: 1; height: 42px; border-radius: 999px; font-weight: 700; font-size: .84rem; cursor: pointer; }
     .la-generate { background: #111; color: #fff; border: 2px solid #111; }
     .la-preview-actions { display: flex; gap: 8px; }
+    .la-preview-actions[hidden], .la-preview[hidden] { display: none; }
     .la-preview-actions button { flex: 1; height: 40px; border-radius: 999px; font-weight: 700; font-size: .8rem; cursor: pointer; border: 2px solid #111; }
     .la-dl { background: #111; color: #fff; }
     .la-pr { background: #fff; color: #111; }
     .la-preview { border: 1px solid rgba(0,0,0,.15); border-radius: 12px; padding: 12px; font-size: .78rem; line-height: 1.6; white-space: pre-wrap; max-height: 260px; overflow-y: auto; background: #f8fafc; font-family: Georgia, serif; }
+    .la-ai-draft { border: 1px solid rgba(0,0,0,.15); border-radius: 12px; padding: 12px; margin: 10px 14px 4px; background: #fff; display: flex; flex-direction: column; gap: 8px; }
+    .la-ai-draft-head { font-weight: 800; font-size: .88rem; }
+    .la-ai-draft-sub { font-size: .74rem; color: #5a5a5a; margin: 0; }
+    .la-ai-draft textarea { width: 100%; box-sizing: border-box; border: 1px solid rgba(0,0,0,.25); border-radius: 8px; padding: 8px; font: inherit; font-size: .8rem; resize: vertical; }
+    .la-ai-draft .la-generate { height: 40px; border-radius: 999px; font-weight: 700; font-size: .82rem; cursor: pointer; background: #111; color: #fff; border: 2px solid #111; }
+    .la-ai-draft .la-preview { margin: 0; }
+    .la-copy { margin-top: 6px; font-size: .7rem; border: 1px solid rgba(0,0,0,.25); background: transparent; border-radius: 999px; padding: 3px 10px; cursor: pointer; color: #5a5a5a; }
+    html[data-theme="dark"] .la-ai-draft { background: #141414; border-color: rgba(255,255,255,.15); }
+    html[data-theme="dark"] .la-ai-draft-sub, html[data-theme="dark"] .la-copy { color: #b9b9b9; }
+    html[data-theme="dark"] .la-ai-draft textarea { background: #0c0c0c; color: #eee; border-color: rgba(255,255,255,.2); }
     .la-case-form { padding: 12px 14px; background: #fff; border-bottom: 1px solid rgba(0,0,0,.08); display: flex; flex-direction: column; gap: 8px; }
     .la-case-form input { height: 38px; border: 1.5px solid rgba(0,0,0,.25); border-radius: 10px; padding: 0 12px; font-size: .84rem; outline: none; width: 100%; box-sizing: border-box; }
     .la-case-form input:focus { border-color: #111; }
@@ -12887,6 +12898,17 @@
         </form>
       </section>
       <section class="la-pane" id="laPaneDrafting" role="tabpanel" hidden>
+        <div class="la-ai-draft">
+          <div class="la-ai-draft-head">🤖 <span id="laAiDraftTitle">AI Drafting</span></div>
+          <p class="la-ai-draft-sub" id="laAiDraftSub">Describe your matter — AI will draft the document.</p>
+          <textarea id="laAiDraftInput" rows="3"></textarea>
+          <button type="button" id="laAiDraftBtn" class="la-generate">✨ <span id="laAiDraftBtnTxt">Generate with AI</span></button>
+          <div id="laAiDraftOut" class="la-preview" hidden></div>
+          <div id="laAiDraftActions" class="la-preview-actions" hidden>
+            <button type="button" id="laAiDraftDl" class="la-dl">⬇ Download</button>
+            <button type="button" id="laAiDraftPr" class="la-pr">🖨 Print</button>
+          </div>
+        </div>
         <div class="la-draft-search"><input type="search" id="laDraftSearch" /></div>
         <div id="laDraftList" class="la-draft-list"></div>
         <div id="laDraftBuilder" class="la-builder" hidden></div>
@@ -12961,7 +12983,11 @@
         { en: "Bail drafts", hi: "जमानत ड्राफ्ट" },
         { en: "What is Section 138?", hi: "धारा 138 क्या है?" },
         { en: "How to file FIR?", hi: "FIR कैसे दर्ज करें?" },
-        { en: "Landmark judgements", hi: "ऐतिहासिक निर्णय" }
+        { en: "Landmark judgements", hi: "ऐतिहासिक निर्णय" },
+        { en: "Anticipatory bail", hi: "अग्रिम जमानत" },
+        { en: "Divorce process", hi: "तलाक की प्रक्रिया" },
+        { en: "Property dispute", hi: "संपत्ति विवाद" },
+        { en: "Maintenance law", hi: "भरण-पोषण कानून" }
       ];
 
       function research(query) {
@@ -13070,6 +13096,7 @@
         }
         box.appendChild(div);
         box.scrollTop = box.scrollHeight;
+        return div;
       }
 
       /* Gemini AI (free tier) — tries AI first, falls back to built-in engine */
@@ -13082,19 +13109,19 @@
           ? "Aap LawAssist hain — Advocate Atul Kumar (criminal lawyer, Bulandshahr District Court, UP) ki website ka AI sahayak. KEVAl Bharatiya kanoon par jawab dein, Hindi me. Sankshipt (120 shabdon ke andar), sateek, vyavharik. Sahi dhaaraon (BNS/BNSS/BSA/NI Act/CPC) ka naam lein. Kabhi farzi case citation na banayein. Ant me ek line jodein: 'Vistrit salah ke liye 7456022448 par WhatsApp karein.'"
           : "You are LawAssist — the AI assistant on Advocate Atul Kumar's website (criminal lawyer, Bulandshahr District Court, UP). Answer ONLY about Indian law, in English. Concise (under 120 words), accurate, practical. Name correct sections (BNS/BNSS/BSA/NI Act/CPC). Never invent case citations. End with one line: 'For detailed advice, WhatsApp 7456022448.'";
       }
-      function askGemini(q, lang, cb) {
+      function askGemini(q, lang, cb, sys, tokens) {
         if (!GEMINI_KEY || GEMINI_KEY.indexOf("<") !== -1 || GEMINI_KEY.length < 20) { cb(null); return; }
         var done = false;
         function fin(v) { if (!done) { done = true; cb(v); } }
-        var to = setTimeout(function () { fin(null); }, 25000);
+        var to = setTimeout(function () { fin(null); }, 30000);
         try {
           fetch("https://generativelanguage.googleapis.com/v1beta/models/" + GEMINI_MODEL + ":generateContent?key=" + GEMINI_KEY, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
-              systemInstruction: { parts: [{ text: geminiSystem(lang) }] },
+              systemInstruction: { parts: [{ text: sys || geminiSystem(lang) }] },
               contents: [{ parts: [{ text: q }] }],
-              generationConfig: { temperature: 0.3, maxOutputTokens: 450 }
+              generationConfig: { temperature: 0.3, maxOutputTokens: tokens || 450 }
             })
           }).then(function (res) { if (!res.ok) { fin(null); return null; } return res.json(); })
           .then(function (data) {
@@ -13107,11 +13134,11 @@
           }).catch(function () { clearTimeout(to); fin(null); });
         } catch (e) { clearTimeout(to); fin(null); }
       }
-      function askGroq(q, lang, cb) {
+      function askGroq(q, lang, cb, sys, tokens) {
         if (!GROQ_KEY || GROQ_KEY.indexOf("<") !== -1 || GROQ_KEY.length < 20) { cb(null); return; }
         var done = false;
         function fin(v) { if (!done) { done = true; cb(v); } }
-        var to = setTimeout(function () { fin(null); }, 25000);
+        var to = setTimeout(function () { fin(null); }, 30000);
         try {
           fetch("https://api.groq.com/openai/v1/chat/completions", {
             method: "POST",
@@ -13119,11 +13146,11 @@
             body: JSON.stringify({
               model: GROQ_MODEL,
               messages: [
-                { role: "system", content: geminiSystem(lang) },
+                { role: "system", content: sys || geminiSystem(lang) },
                 { role: "user", content: q }
               ],
               temperature: 0.3,
-              max_tokens: 450
+              max_tokens: tokens || 450
             })
           }).then(function (res) { if (!res.ok) { fin(null); return null; } return res.json(); })
           .then(function (data) {
@@ -13136,6 +13163,60 @@
           }).catch(function () { clearTimeout(to); fin(null); });
         } catch (e) { clearTimeout(to); fin(null); }
       }
+      function aiAsk(q, lang, sys, tokens, cb) {
+        askGemini(q, lang, function (gt) {
+          if (gt) { cb(gt); return; }
+          askGroq(q, lang, cb, sys, tokens);
+        }, sys, tokens);
+      }
+
+      /* ---------------- AI Drafting (AI-generated legal documents) ---------------- */
+      var LA_AI_DRAFT = { text: "", desc: "" };
+      function aiDraftSystem(lang) {
+        return lang === "hi"
+          ? "Aap LawAssist hain — Advocate Atul Kumar (criminal lawyer, Bulandshahr District Court, UP) ki website ke AI legal drafting assistant. Neeche diye gaye vivaran par ek aupcharik Bharatiya kanooni dastavej taiyar karen. Niyam: Paramparik Bharatiya nyayalaya format — uchit sheershak, pakshkar, kramankit paragraph, prarthana khand. Naam, tithi, case number aadi jo user ne nahi diye, unke liye [BRACKETED] placeholder rakhen. Sirf draft dastavej likhen, koi vyakhya nahi. Poorn lekin sankshipt (600 shabdon ke andar). Case number ya adesh mat gaden. Hindi me likhen. Ant me ye line joden: 'Dakhil karne me sahayta hetu WhatsApp karen: 7456022448'."
+          : "You are LawAssist — the AI legal drafting assistant on Advocate Atul Kumar's website (criminal lawyer, Bulandshahr District Court, UP). Draft a formal Indian legal document from the description below. Rules: Traditional Indian court format — proper title, parties, numbered paragraphs, prayer clause. Use [BRACKETED] placeholders for names, dates, case numbers and details the user did not give. Write ONLY the draft document, no explanations. Complete but concise (under 600 words). Never invent case numbers or court orders. Write in English. End with the line: 'For filing assistance, WhatsApp: 7456022448'.";
+      }
+      function aiDraftGenerate() {
+        var inp = document.getElementById("laAiDraftInput"), desc = inp.value.trim();
+        var out = document.getElementById("laAiDraftOut"), acts = document.getElementById("laAiDraftActions");
+        if (!desc) return;
+        var lang = laLang();
+        out.hidden = false; acts.hidden = true;
+        out.innerHTML = "<span class='la-dots'><span></span><span></span><span></span></span>";
+        aiAsk("Draft this legal document: " + desc, lang, aiDraftSystem(lang), 800, function (txt) {
+          if (txt) {
+            LA_AI_DRAFT = { text: txt, desc: desc };
+            out.textContent = txt;
+            acts.hidden = false;
+          } else {
+            out.textContent = L("AI drafting is unavailable right now. Please try the template drafts below.", "AI ड्राफ्टिंग अभी उपलब्ध नहीं है। कृपया नीचे दिए गए टेम्पलेट ड्राफ्ट आज़माएं।");
+          }
+          try { out.scrollIntoView({ block: "nearest" }); } catch (e) {}
+        });
+      }
+      function aiDraftDocHTML() {
+        var body = esc(LA_AI_DRAFT.text).replace(/\n/g, "<br>");
+        var title = L("AI Draft", "AI ड्राफ्ट") + " — " + LA_AI_DRAFT.desc.slice(0, 60);
+        return "<!DOCTYPE html><html><head><meta charset=\"utf-8\"><title>" + esc(title) + "</title><style>body{font-family:Georgia,serif;max-width:720px;margin:40px auto;padding:0 20px;line-height:1.8;color:#111}h1{font-size:1.3rem;text-align:center;margin-bottom:30px}.doc{white-space:pre-wrap}.foot{margin-top:40px;text-align:center;font-size:.8rem;color:#555;border-top:1px solid #ccc;padding-top:12px}</style></head><body><h1>" + esc(title) + "</h1><div class=\"doc\">" + body + "</div><div class=\"foot\">A.K Legal Law — Advocate Atul Kumar, Bulandshahr<br>" + esc(L("Generated with LawAssist", "LawAssist द्वारा तैयार")) + "</div></body></html>";
+      }
+      function aiDraftDownload() {
+        var blob = new Blob([aiDraftDocHTML()], { type: "text/html;charset=utf-8" });
+        var a = document.createElement("a");
+        a.href = URL.createObjectURL(blob);
+        a.download = "lawassist-ai-draft-" + laLang() + ".html";
+        document.body.appendChild(a); a.click();
+        setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 2000);
+      }
+      function aiDraftPrint() {
+        var w = window.open("", "_blank");
+        if (!w) return;
+        w.document.write(aiDraftDocHTML());
+        w.document.close();
+        w.focus();
+        setTimeout(function () { w.print(); }, 400);
+      }
+
       function respond(q) {
         addMsg(esc(q), "user");
         var lang = laLang();
@@ -13150,7 +13231,21 @@
         function done(html, sources, ai) {
           try { thinking && thinking.parentNode && thinking.parentNode.removeChild(thinking); } catch (e2) {}
           var tag = ai ? "<span class='la-ai-tag'>\u2728 AI</span> " : "";
-          addMsg(tag + esc(html).replace(/\n/g, "<br>"), "bot", sources);
+          var msgDiv = addMsg(tag + esc(html).replace(/\n/g, "<br>"), "bot", sources);
+          if (ai && msgDiv) {
+            var cp = document.createElement("button");
+            cp.type = "button"; cp.className = "la-copy";
+            cp.textContent = "📋 " + L("Copy", "कॉपी");
+            cp.addEventListener("click", function () {
+              var okTxt = "✓ " + L("Copied", "कॉपी हुआ");
+              try {
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                  navigator.clipboard.writeText(html).then(function () { cp.textContent = okTxt; }, function () {});
+                }
+              } catch (e) {}
+            });
+            msgDiv.appendChild(cp);
+          }
           try {
             var arr = JSON.parse(localStorage.getItem("laMissed") || "[]");
             if (!sources.length) { arr.push({ q: q, at: Date.now() }); localStorage.setItem("laMissed", JSON.stringify(arr.slice(-50))); }
@@ -13342,6 +13437,14 @@
         if (cn) cn.placeholder = L("Notes (optional)", "नोट्स (वैकल्पिक)");
         var ca = document.getElementById("laCaseAdd");
         if (ca) ca.textContent = L("+ Add Case", "+ केस जोड़ें");
+        var adt = document.getElementById("laAiDraftTitle");
+        if (adt) adt.textContent = L("AI Drafting", "AI ड्राफ्टिंग");
+        var ads = document.getElementById("laAiDraftSub");
+        if (ads) ads.textContent = L("Describe your matter — AI will draft the document.", "अपना मामला बताएं — AI दस्तावेज़ तैयार करेगा।");
+        var adi = document.getElementById("laAiDraftInput");
+        if (adi) adi.placeholder = L("e.g. Bail application for theft case, accused in custody 10 days…", "जैसे: चोरी के मामले में जमानत अर्जी, अभियुक्त 10 दिन से हिरासत में…");
+        var adbt = document.getElementById("laAiDraftBtnTxt");
+        if (adbt) adbt.textContent = L("Generate with AI", "AI से बनाएं");
       }
       function switchTab(name) {
         document.querySelectorAll(".la-tab").forEach(function (b) {
@@ -13373,8 +13476,8 @@
         if (!greeted) {
           greeted = true;
           addMsg(L(
-            "Namaste! 🙏 I'm <b>LawAssist</b> — your AI legal workspace.<br><br>🔍 <b>Research</b> — ask any legal question, get answers with sources.<br>📝 <b>Drafting</b> — pick from 119 drafts, fill details, download.<br>📁 <b>My Cases</b> — track your cases & hearing dates.",
-            "नमस्ते! 🙏 मैं <b>LawAssist</b> हूं — आपका AI विधिक कार्यक्षेत्र।<br><br>🔍 <b>रिसर्च</b> — कोई भी कानूनी प्रश्न पूछें, स्रोतों सहित उत्तर पाएं।<br>📝 <b>ड्राफ्टिंग</b> — 119 ड्राफ्ट में से चुनें, विवरण भरें, डाउनलोड करें।<br>📁 <b>मेरे केस</b> — अपने केस व सुनवाई तिथियों का हिसाब रखें।"), "bot");
+            "Namaste! 🙏 I'm <b>LawAssist</b> — your AI legal workspace.<br><br>🔍 <b>Research</b> — ask any legal question, get answers with sources.<br>📝 <b>Drafting</b> — pick from 119 drafts, fill details, download, or let AI draft it.<br>📁 <b>My Cases</b> — track your cases & hearing dates.",
+            "नमस्ते! 🙏 मैं <b>LawAssist</b> हूं — आपका AI विधिक कार्यक्षेत्र।<br><br>🔍 <b>रिसर्च</b> — कोई भी कानूनी प्रश्न पूछें, स्रोतों सहित उत्तर पाएं।<br>📝 <b>ड्राफ्टिंग</b> — 119 ड्राफ्ट में से चुनें, विवरण भरें, डाउनलोड करें, या AI से ड्राफ्ट बनवाएं।<br>📁 <b>मेरे केस</b> — अपने केस व सुनवाई तिथियों का हिसाब रखें।"), "bot");
         }
         renderChips();
       }
@@ -13395,6 +13498,12 @@
         });
         var dsearch = document.getElementById("laDraftSearch");
         if (dsearch) dsearch.addEventListener("input", renderDraftList);
+        var abtn = document.getElementById("laAiDraftBtn");
+        if (abtn) abtn.addEventListener("click", aiDraftGenerate);
+        var adl = document.getElementById("laAiDraftDl");
+        if (adl) adl.addEventListener("click", aiDraftDownload);
+        var apr = document.getElementById("laAiDraftPr");
+        if (apr) apr.addEventListener("click", aiDraftPrint);
         document.getElementById("laCaseForm").addEventListener("submit", function (e) {
           e.preventDefault();
           var title = document.getElementById("laCaseTitle").value.trim();
