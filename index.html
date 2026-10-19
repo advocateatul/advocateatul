@@ -992,6 +992,12 @@
     .la-msg .la-src strong { display: block; margin-bottom: 3px; color: #111; }
     .la-msg .la-goto { display: inline-block; margin: 4px 6px 0 0; padding: 5px 11px; border: 1.5px solid #111; border-radius: 999px; background: #fff; color: #111; font-size: .76rem; font-weight: 700; cursor: pointer; }
     .la-msg .la-goto:hover { background: #111; color: #fff; }
+    .la-thinking { opacity: .85; }
+    .la-dots span { display: inline-block; width: 7px; height: 7px; margin-right: 4px; border-radius: 50%; background: #888; animation: laBlink 1.2s infinite; }
+    .la-dots span:nth-child(2) { animation-delay: .2s; }
+    .la-dots span:nth-child(3) { animation-delay: .4s; }
+    @keyframes laBlink { 0%, 100% { opacity: .25; } 50% { opacity: 1; } }
+    .la-ai-tag { display: inline-block; background: #0c0c0c; color: #fff; font-size: .68rem; font-weight: 700; border-radius: 999px; padding: 2px 9px; margin-right: 6px; vertical-align: 1px; }
     .la-chips { display: flex; gap: 8px; overflow-x: auto; padding: 10px 14px; background: #fff; border-top: 1px solid rgba(0,0,0,.08); }
     .la-form { display: flex; gap: 8px; padding: 10px 14px; background: #fff; border-top: 1px solid rgba(0,0,0,.1); }
     .la-form input { flex: 1; height: 42px; border: 2px solid #000; border-radius: 999px; padding: 0 16px; font-size: .85rem; outline: none; min-width: 0; }
@@ -12926,7 +12932,7 @@
     /* Modes: Research (citation-backed Q&A), Drafting (guided template filler), My Cases (local case manager) */
     (function () {
       "use strict";
-      function laLang() { return (typeof currentLanguage !== "undefined" && currentLanguage === "hi") ? "hi" : "en"; }
+      function laLang() { if (typeof currentLanguage !== "undefined" && currentLanguage === "hi") return "hi"; var dl = null; try { dl = document.documentElement.getAttribute("lang"); } catch (e) {} return dl === "hi" ? "hi" : "en"; }
       function L(en, hi) { return laLang() === "hi" ? hi : en; }
       function esc(s) { return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); }
       function getDrafts() { try { var el = document.getElementById("legalDraftsData"); return el ? JSON.parse(el.textContent).drafts : []; } catch (e) { return []; } }
@@ -13066,16 +13072,64 @@
         box.scrollTop = box.scrollHeight;
       }
 
+      /* Gemini AI (free tier) — tries AI first, falls back to built-in engine */
+      var GEMINI_KEY = "AIzaSyAb8RN6KoAw3sbhFUk1MMb2e_rAfB7qn6ukPqgCF3llr0oc0EZA";
+      var GEMINI_MODEL = "gemini-3.8-flash";
+      function geminiSystem(lang) {
+        return lang === "hi"
+          ? "Aap LawAssist hain — Advocate Atul Kumar (criminal lawyer, Bulandshahr District Court, UP) ki website ka AI sahayak. KEVAl Bharatiya kanoon par jawab dein, Hindi me. Sankshipt (120 shabdon ke andar), sateek, vyavharik. Sahi dhaaraon (BNS/BNSS/BSA/NI Act/CPC) ka naam lein. Kabhi farzi case citation na banayein. Ant me ek line jodein: 'Vistrit salah ke liye 7456022448 par WhatsApp karein.'"
+          : "You are LawAssist — the AI assistant on Advocate Atul Kumar's website (criminal lawyer, Bulandshahr District Court, UP). Answer ONLY about Indian law, in English. Concise (under 120 words), accurate, practical. Name correct sections (BNS/BNSS/BSA/NI Act/CPC). Never invent case citations. End with one line: 'For detailed advice, WhatsApp 7456022448.'";
+      }
+      function askGemini(q, lang, cb) {
+        if (!/^AIza[0-9A-Za-z_\-]{35}$/.test(GEMINI_KEY || "")) { cb(null); return; }
+        var done = false;
+        function fin(v) { if (!done) { done = true; cb(v); } }
+        var to = setTimeout(function () { fin(null); }, 25000);
+        try {
+          fetch("https://generativelanguage.googleapis.com/v1beta/models/" + GEMINI_MODEL + ":generateContent?key=" + GEMINI_KEY, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              systemInstruction: { parts: [{ text: geminiSystem(lang) }] },
+              contents: [{ parts: [{ text: q }] }],
+              generationConfig: { temperature: 0.3, maxOutputTokens: 450 }
+            })
+          }).then(function (res) { if (!res.ok) { fin(null); return null; } return res.json(); })
+          .then(function (data) {
+            clearTimeout(to);
+            if (!data) { fin(null); return; }
+            try {
+              var txt = data.candidates[0].content.parts.map(function (p) { return p.text || ""; }).join("").trim();
+              fin(txt || null);
+            } catch (e) { fin(null); }
+          }).catch(function () { clearTimeout(to); fin(null); });
+        } catch (e) { clearTimeout(to); fin(null); }
+      }
       function respond(q) {
         addMsg(esc(q), "user");
-        setTimeout(function () {
-          var r = research(q);
-          addMsg(esc(r.html).replace(/\n/g, "<br>"), "bot", r.sources);
+        var lang = laLang();
+        var thinking = null;
+        try {
+          thinking = document.createElement("div");
+          thinking.className = "la-msg bot la-thinking";
+          thinking.innerHTML = "<span class='la-dots'><span></span><span></span><span></span></span>";
+          var mb = document.getElementById("laMessages");
+          mb.appendChild(thinking); mb.scrollTop = mb.scrollHeight;
+        } catch (e) {}
+        function done(html, sources, ai) {
+          try { thinking && thinking.parentNode && thinking.parentNode.removeChild(thinking); } catch (e2) {}
+          var tag = ai ? "<span class='la-ai-tag'>\u2728 AI</span> " : "";
+          addMsg(tag + esc(html).replace(/\n/g, "<br>"), "bot", sources);
           try {
             var arr = JSON.parse(localStorage.getItem("laMissed") || "[]");
-            if (!r.sources.length) { arr.push({ q: q, at: Date.now() }); localStorage.setItem("laMissed", JSON.stringify(arr.slice(-50))); }
-          } catch (e) {}
-        }, 350);
+            if (!sources.length) { arr.push({ q: q, at: Date.now() }); localStorage.setItem("laMissed", JSON.stringify(arr.slice(-50))); }
+          } catch (e3) {}
+        }
+        var builtin = research(q);
+        askGemini(q, lang, function (aiText) {
+          if (aiText) done(aiText, builtin.sources, true);
+          else setTimeout(function () { done(builtin.html, builtin.sources, false); }, 350);
+        });
       }
 
       /* ---------------- Drafting (guided template filler) ---------------- */
