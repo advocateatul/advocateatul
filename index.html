@@ -13969,7 +13969,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
       if (!btn) return;
       var u = LA_AUTH.user;
       if (!u) {
-        btn.innerHTML = "<span>👤</span><span data-t-en=\"Login\" data-t-hi=\"लॉगिन\">" + t("Login", "लॉगिन") + "</span>";
+        btn.innerHTML = "<span data-t-en=\"Login\" data-t-hi=\"लॉगिन\">" + t("Login", "लॉगिन") + "</span>";
         btn.setAttribute("aria-label", "Login / लॉगिन");
       } else {
         var name = (u.displayName || (u.email || "").split("@")[0] || "User").trim();
