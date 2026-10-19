@@ -673,7 +673,7 @@
     .contact-foot { display: flex; justify-content: space-between; gap: 24px; margin-top: 70px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.18); color: rgba(255,255,255,.5); font-size: .7rem; }
 
     .reveal { opacity: 1; transform: none; }
-    .motion-ready .reveal.visible { animation: soft-reveal .8s cubic-bezier(0.22, 1, 0.36, 1) both; }
+    .motion-ready .reveal.visible { animation: soft-reveal .8s cubic-bezier(0.22, 1, 0.36, 1) backwards; }
     @keyframes soft-reveal {
       from { opacity: 0; transform: translateY(38px) scale(.985); }
       to { opacity: 1; transform: none; }
@@ -1473,7 +1473,7 @@
         <div class="section-search reveal" role="search">
           <input type="search" id="updatesSectionSearch" data-i18n-ph="sectionSearchPh" placeholder="Search this section…" aria-label="Search Daily Updates" autocomplete="off" />
         </div>
-        <div class="updates-list reveal" id="updatesList"></div>
+        <div class="updates-list" id="updatesList"></div>
         <p class="updates-note reveal" data-i18n="updatesNote">Summaries are brief explainers, not legal advice. For the complete reasoning, open the linked source article — full judgments are published by the courts and reporting outlets.</p>
       </div>
     </section>
@@ -1499,7 +1499,7 @@
         <div class="section-search reveal" role="search">
           <input type="search" id="librarySectionSearch" data-i18n-ph="sectionSearchPh" placeholder="Search this section…" aria-label="Search Library" autocomplete="off" />
         </div>
-        <div class="library-grid reveal" id="libraryGrid"></div>
+        <div class="library-grid" id="libraryGrid"></div>
         <p class="library-note reveal" data-i18n="libraryNote">Summaries are brief explainers, not legal advice. Full judgements open on Indian Kanoon, which publishes the complete text of court decisions.</p>
       </div>
     </section>
@@ -1624,7 +1624,7 @@
         <div class="section-search reveal" role="search">
           <input type="search" id="draftsSectionSearch" data-i18n-ph="sectionSearchPh" placeholder="Search this section&hellip;" aria-label="Search Legal Drafts" autocomplete="off" />
         </div>
-        <div class="drafts-list reveal" id="draftsGrid"></div>
+        <div class="drafts-list" id="draftsGrid"></div>
         <p class="drafts-no-results" id="draftsNoResults" data-i18n="draftsNoResults" hidden>No drafts match your search.</p>
         <p class="drafts-note reveal" data-i18n="draftsNote">Draft templates are general formats for guidance only, not legal advice. Details, court names, dates and facts must be filled in carefully before filing — consult an advocate for your specific matter.</p>
       </div>
@@ -1644,7 +1644,7 @@
           <input type="search" id="draftGuideSearch" data-i18n-ph="guideSearchPh" placeholder="Search the guide…" aria-label="Search Draft Guide" autocomplete="off" />
         </div>
         <div class="guide-filters reveal" id="draftGuideFilters" role="group" aria-label="Filter by category"></div>
-        <div class="guide-grid reveal" id="draftGuideGrid"></div>
+        <div class="guide-grid" id="draftGuideGrid"></div>
         <p class="drafts-no-results" id="draftGuideNoResults" data-i18n="guideNoResults" hidden>No entries match your search.</p>
         <p class="drafts-note reveal" data-i18n="guideNote">This guide summarises each draft for quick reference only. Always check the full draft template and consult an advocate before filing.</p>
       </div>
@@ -10766,7 +10766,7 @@
       function buildUpdateItem(item, itemLang, startOpen) {
           var lang = itemLang || (currentLanguage === "hi" ? "hi" : "en");
           var article = document.createElement("article");
-          article.className = "update-item" + (startOpen ? " open" : "");
+          article.className = "update-item reveal" + (startOpen ? " open" : "");
           article.setAttribute("data-ulang", lang);
           var top = document.createElement("div");
           top.className = "update-top";
@@ -10951,10 +10951,10 @@
       function hubStagger(container) {
         var cards = container.querySelectorAll(".hub-card");
         cards.forEach(function (card, i) {
-          card.style.transitionDelay = Math.min(i * 45, 450) + "ms";
+          card.style.animationDelay = Math.min(i * 60, 600) + "ms";
           card.classList.add("reveal");
           requestAnimationFrame(function () { requestAnimationFrame(function () { card.classList.add("visible"); }); });
-          setTimeout(function () { card.style.transitionDelay = "0ms"; }, 900);
+          setTimeout(function () { card.style.animationDelay = "0ms"; }, 1600);
         });
       }
 
@@ -11586,7 +11586,7 @@
 
       function buildDraftItem(d, lang, open) {
         var item = document.createElement("article");
-        item.className = "draft-item";
+        item.className = "draft-item reveal";
         item.setAttribute("data-draft-id", d.id);
         item.setAttribute("data-dlang", lang);
         if (open) item.classList.add("open");
@@ -11983,7 +11983,7 @@
       }
       function buildGuideCard(d, lang) {
         var card = document.createElement("article");
-        card.className = "guide-card";
+        card.className = "guide-card reveal";
         card.setAttribute("data-cat", (d.category && d.category.en) || "");
         card.setAttribute("data-dlang", lang);
 
@@ -12243,7 +12243,7 @@
         var lang = currentLanguage === "hi" ? "hi" : "en";
         data.items.forEach(function (item) {
           var card = document.createElement("article");
-          card.className = "judgement-card";
+          card.className = "judgement-card reveal";
           var meta = document.createElement("div");
           meta.className = "judgement-meta";
           var courtSpan = document.createElement("span");
