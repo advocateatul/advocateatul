@@ -13075,6 +13075,8 @@
       /* Gemini AI (free tier) — tries AI first, falls back to built-in engine */
       var GEMINI_KEY = "AQ.Ab8RN6KQUdagyyxyClNgxdexEURUcAr6ctGomPYWYn3IZr-QAQ";
       var GEMINI_MODEL = "gemini-3.8-flash";
+      var GROQ_KEY = "GROQ_KEY_PENDING";
+      var GROQ_MODEL = "qwen/qwen3.8-27b";
       function geminiSystem(lang) {
         return lang === "hi"
           ? "Aap LawAssist hain — Advocate Atul Kumar (criminal lawyer, Bulandshahr District Court, UP) ki website ka AI sahayak. KEVAl Bharatiya kanoon par jawab dein, Hindi me. Sankshipt (120 shabdon ke andar), sateek, vyavharik. Sahi dhaaraon (BNS/BNSS/BSA/NI Act/CPC) ka naam lein. Kabhi farzi case citation na banayein. Ant me ek line jodein: 'Vistrit salah ke liye 7456022448 par WhatsApp karein.'"
@@ -13105,6 +13107,35 @@
           }).catch(function () { clearTimeout(to); fin(null); });
         } catch (e) { clearTimeout(to); fin(null); }
       }
+      function askGroq(q, lang, cb) {
+        if (!GROQ_KEY || GROQ_KEY.indexOf("<") !== -1 || GROQ_KEY.length < 20) { cb(null); return; }
+        var done = false;
+        function fin(v) { if (!done) { done = true; cb(v); } }
+        var to = setTimeout(function () { fin(null); }, 25000);
+        try {
+          fetch("https://api.groq.com/openai/v1/chat/completions", {
+            method: "POST",
+            headers: { "Content-Type": "application/json", "Authorization": "Bearer " + GROQ_KEY },
+            body: JSON.stringify({
+              model: GROQ_MODEL,
+              messages: [
+                { role: "system", content: geminiSystem(lang) },
+                { role: "user", content: q }
+              ],
+              temperature: 0.3,
+              max_tokens: 450
+            })
+          }).then(function (res) { if (!res.ok) { fin(null); return null; } return res.json(); })
+          .then(function (data) {
+            clearTimeout(to);
+            if (!data) { fin(null); return; }
+            try {
+              var txt = (data.choices[0].message.content || "").trim();
+              fin(txt || null);
+            } catch (e) { fin(null); }
+          }).catch(function () { clearTimeout(to); fin(null); });
+        } catch (e) { clearTimeout(to); fin(null); }
+      }
       function respond(q) {
         addMsg(esc(q), "user");
         var lang = laLang();
@@ -13127,8 +13158,11 @@
         }
         var builtin = research(q);
         askGemini(q, lang, function (aiText) {
-          if (aiText) done(aiText, builtin.sources, true);
-          else setTimeout(function () { done(builtin.html, builtin.sources, false); }, 350);
+          if (aiText) { done(aiText, builtin.sources, true); return; }
+          askGroq(q, lang, function (gqText) {
+            if (gqText) done(gqText, builtin.sources, true);
+            else setTimeout(function () { done(builtin.html, builtin.sources, false); }, 350);
+          });
         });
       }
 
