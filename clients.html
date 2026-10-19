@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Clients — A.K Legal Law (Admin)</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:#f4f5f7;color:#111}
+header{background:#0c0c0c;color:#fff;padding:16px 22px;display:flex;align-items:center;gap:14px;position:sticky;top:0;z-index:10}
+header h1{margin:0;font-size:1.15rem;font-weight:700}
+header .cnt{background:#fff;color:#0c0c0c;border-radius:999px;padding:3px 12px;font-size:.8rem;font-weight:700}
+header .sp{flex:1}
+header button{background:#fff;color:#0c0c0c;border:none;border-radius:8px;padding:8px 16px;font-weight:600;cursor:pointer}
+main{max-width:1000px;margin:0 auto;padding:22px 16px 60px}
+.card{background:#fff;border-radius:14px;box-shadow:0 2px 12px rgba(0,0,0,.06);padding:22px}
+#gate{text-align:center;padding:60px 20px}
+#gate h2{color:#0c0c0c}
+.btn{background:#0c0c0c;color:#fff;border:none;border-radius:10px;padding:12px 22px;font-size:.95rem;font-weight:600;cursor:pointer;margin:6px}
+.btn:hover{background:#222}
+.deny{color:#a00;font-weight:600}
+#tools{display:flex;gap:10px;margin-bottom:14px;flex-wrap:wrap}
+#q{flex:1;min-width:200px;padding:10px 14px;border:1.5px solid #ddd;border-radius:10px;font-size:.9rem}
+table{width:100%;border-collapse:collapse;font-size:.88rem}
+th{text-align:left;padding:10px 8px;border-bottom:2px solid #0c0c0c;color:#0c0c0c;font-size:.78rem;text-transform:uppercase;letter-spacing:.04em}
+td{padding:10px 8px;border-bottom:1px solid #eee;vertical-align:middle}
+tr:hover td{background:#fafafa}
+.who{display:flex;align-items:center;gap:10px}
+.who img{width:34px;height:34px;border-radius:50%;object-fit:cover}
+.who .av{width:34px;height:34px;border-radius:50%;background:#0c0c0c;color:#fff;display:inline-flex;align-items:center;justify-content:center;font-weight:800}
+.who .nm{font-weight:600}
+.who .em{font-size:.76rem;color:#666}
+.pill{display:inline-block;background:#eef;border:1px solid #dde;border-radius:999px;padding:2px 10px;font-size:.75rem;font-weight:600;color:#334}
+.muted{color:#777;font-size:.8rem}
+#empty{text-align:center;color:#777;padding:30px}
+@media(max-width:640px){table{font-size:.8rem}.hide-m{display:none}}
+</style>
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js"></script>
+</head>
+<body>
+<header>
+  <h1>👥 Clients</h1><span class="cnt" id="cnt">0</span><span class="sp"></span>
+  <button id="logoutBtn" hidden>Logout</button>
+</header>
+<main>
+  <div class="card" id="gate">
+    <h2>Admin access</h2>
+    <p class="muted">Ye page sirf Advocate Atul Kumar ke liye hai.</p>
+    <button class="btn" id="loginBtn">Google se login karein</button>
+    <p class="deny" id="denyMsg" hidden>Aapke account ko access nahi hai.</p>
+  </div>
+  <div class="card" id="main" hidden>
+    <div id="tools">
+      <input id="q" type="search" placeholder="Search naam / email…" autocomplete="off">
+    </div>
+    <div style="overflow-x:auto">
+    <table>
+      <thead><tr><th>Client</th><th class="hide-m">Login se</th><th>Juda</th><th class="hide-m">Aakhri visit</th></tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
+    </div>
+    <p class="muted" id="empty" hidden>Koi client abhi nahi juda.</p>
+  </div>
+</main>
+<script>
+(function () {
+  "use strict";
+  var ADMIN_EMAIL = "atul40874@gmail.com";
+  var FIREBASE_CONFIG = {"apiKey": "AIzaSyCZT1SUpgT2IPuwXdJlz5PmCU3P2txOUK4", "appId": "1:553558535319:web:bbbfd7ad4e24ce2c8ecdd2", "authDomain": "ak-legal-law.firebaseapp.com", "messagingSenderId": "553558535319", "projectId": "ak-legal-law", "storageBucket": "ak-legal-law.firebasestorage.app"};
+  firebase.initializeApp(FIREBASE_CONFIG);
+  var auth = firebase.auth(), db = firebase.firestore();
+  var all = [];
+
+  function fmt(ts) {
+    if (!ts || !ts.toDate) return "—";
+    try { return ts.toDate().toLocaleString("en-IN", { day: "2-digit", month: "short", year: "numeric", hour: "2-digit", minute: "2-digit" }); }
+    catch (e) { return "—"; }
+  }
+  function esc(s) { return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+
+  function render(filter) {
+    var tb = document.getElementById("rows");
+    var q = (filter || "").toLowerCase();
+    var list = all.filter(function (c) {
+      return !q || (c.name + " " + c.email).toLowerCase().indexOf(q) !== -1;
+    });
+    document.getElementById("cnt").textContent = list.length;
+    document.getElementById("empty").hidden = list.length > 0;
+    tb.innerHTML = list.map(function (c) {
+      var nm = esc(c.name || "(naam nahi)"), em = esc(c.email || "");
+      var av = c.photo ? "<img src=\"" + esc(c.photo) + "\" alt=\"\">" : "<span class=\"av\">" + esc((nm || "U").charAt(0).toUpperCase()) + "</span>";
+      return "<tr><td><span class=\"who\">" + av + "<span><span class=\"nm\">" + nm + "</span><br><span class=\"em\">" + em + "</span></span></span></td>" +
+        "<td class=\"hide-m\"><span class=\"pill\">" + esc(c.provider || "—") + "</span></td>" +
+        "<td>" + fmt(c.createdAt) + "</td>" +
+        "<td class=\"hide-m\">" + fmt(c.lastSeen) + "</td></tr>";
+    }).join("");
+  }
+
+  document.getElementById("q").addEventListener("input", function (e) { render(e.target.value); });
+  document.getElementById("loginBtn").addEventListener("click", function () {
+    auth.signInWithPopup(new firebase.auth.GoogleAuthProvider()).catch(function () {});
+  });
+  document.getElementById("logoutBtn").addEventListener("click", function () { auth.signOut(); });
+
+  auth.onAuthStateChanged(function (u) {
+    var ok = u && (u.email || "").toLowerCase() === ADMIN_EMAIL;
+    document.getElementById("gate").hidden = !!ok;
+    document.getElementById("main").hidden = !ok;
+    document.getElementById("logoutBtn").hidden = !ok;
+    document.getElementById("denyMsg").hidden = !(u && !ok);
+    if (ok) {
+      db.collection("clients").orderBy("createdAt", "desc").limit(500).get().then(function (snap) {
+        all = [];
+        snap.forEach(function (d) { var x = d.data(); x.id = d.id; all.push(x); });
+        render("");
+      }).catch(function () {
+        document.getElementById("empty").hidden = false;
+        document.getElementById("empty").textContent = "Data load nahi ho paya. Firestore rules check karein.";
+      });
+    } else { all = []; }
+  });
+})();
+</script>
+</body>
+</html>
