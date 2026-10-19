@@ -12279,7 +12279,7 @@
         practiceList.textContent = "";
         SETTINGS.practiceAreas.forEach(function (area, index) {
           var article = document.createElement("article");
-          article.className = "practice-item reveal visible";
+          article.className = "practice-item reveal";
           var number = document.createElement("span");
           number.className = "num";
           number.textContent = String(index + 1).padStart(2, "0");
