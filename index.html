@@ -10751,6 +10751,18 @@
         });
       }
 
+      /* Hindi-reading: open the source article via Google Translate's Hindi proxy,
+         so a judgement opened in Hindi links to a Hindi-readable article. */
+      function hindiSourceUrl(url) {
+        try {
+          var u = new URL(url);
+          if (u.hostname.indexOf("translate.goog") !== -1) return url;
+          var host = u.hostname.replace(/\./g, "-");
+          var q = u.search ? u.search + "&" : "?";
+          return "https://" + host + ".translate.goog" + u.pathname + q + "_x_tr_sl=en&_x_tr_tl=hi&_x_tr_hl=hi";
+        } catch (e) { return url; }
+      }
+
       function buildUpdateItem(item, itemLang, startOpen) {
           var lang = itemLang || (currentLanguage === "hi" ? "hi" : "en");
           var article = document.createElement("article");
@@ -10829,10 +10841,11 @@
           if (item.source) {
             var link = document.createElement("a");
             link.className = "update-source";
-            link.href = item.source;
+            link.href = item.sourceHi ? item.sourceHi : (lang === "hi" ? hindiSourceUrl(item.source) : item.source);
             link.target = "_blank";
             link.rel = "noopener";
-            link.textContent = (item.sourceName ? (item.sourceName[lang] || item.sourceName.en || item.sourceName) + " · " : "") + t("fullStory");
+            var storyLabel = (translations[lang] && translations[lang].fullStory) || translations.en.fullStory || t("fullStory");
+            link.textContent = (item.sourceName ? (item.sourceName[lang] || item.sourceName.en || item.sourceName) + " · " : "") + storyLabel;
             detail.appendChild(link);
           }
           toggle.addEventListener("click", function () {
