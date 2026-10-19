@@ -13073,7 +13073,7 @@
       }
 
       /* Gemini AI (free tier) — tries AI first, falls back to built-in engine */
-      var GEMINI_KEY = "AIzaSyAb8RN6KoAw3sbhFUk1MMb2e_rAfB7qn6ukPqgCF3llr0oc0EZA";
+      var GEMINI_KEY = "AQ.Ab8RN6KoAw3sbhFUk1MMb2e_rAfB7qn6ukPqgCF3llr0oc0EZA";
       var GEMINI_MODEL = "gemini-3.8-flash";
       function geminiSystem(lang) {
         return lang === "hi"
@@ -13081,7 +13081,7 @@
           : "You are LawAssist — the AI assistant on Advocate Atul Kumar's website (criminal lawyer, Bulandshahr District Court, UP). Answer ONLY about Indian law, in English. Concise (under 120 words), accurate, practical. Name correct sections (BNS/BNSS/BSA/NI Act/CPC). Never invent case citations. End with one line: 'For detailed advice, WhatsApp 7456022448.'";
       }
       function askGemini(q, lang, cb) {
-        if (!/^AIza[0-9A-Za-z_\-]{35}$/.test(GEMINI_KEY || "")) { cb(null); return; }
+        if (!GEMINI_KEY || GEMINI_KEY.indexOf("<") !== -1 || GEMINI_KEY.length < 20) { cb(null); return; }
         var done = false;
         function fin(v) { if (!done) { done = true; cb(v); } }
         var to = setTimeout(function () { fin(null); }, 25000);
