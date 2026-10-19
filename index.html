@@ -449,6 +449,14 @@
     .update-summary { margin: 0; color: var(--muted); font-size: .9rem; max-width: 780px; }
     .update-toggle { background: transparent; border: 1px solid rgba(0,0,0,.35); color: var(--ink); border-radius: 999px; padding: 9px 20px; font-size: .78rem; letter-spacing: .04em; cursor: pointer; white-space: nowrap; }
     .update-toggle:hover { border-color: #111111; color: #111111; }
+    .update-actions { display: flex; flex-direction: column; gap: 10px; align-items: flex-end; }
+    .update-langswitch { display: inline-flex; border: 1px solid rgba(0,0,0,.22); border-radius: 999px; overflow: hidden; background: transparent; }
+    .update-langswitch button { border: none; background: transparent; padding: 5px 12px; font: 700 .72rem var(--sans); letter-spacing: .04em; cursor: pointer; color: var(--ink); transition: all .2s; }
+    .update-langswitch button.active { background: #111111; color: #ffffff; }
+    .update-langswitch button:not(.active):hover { background: rgba(0,0,0,.06); }
+    html[data-theme="dark"] .update-langswitch { border-color: rgba(255,255,255,.28); }
+    html[data-theme="dark"] .update-langswitch button.active { background: #f3f3f3; color: #111111; }
+    html[data-theme="dark"] .update-langswitch button:not(.active):hover { background: rgba(255,255,255,.08); }
     .update-detail { display: none; margin-top: 20px; max-width: 800px; }
     .update-item.open .update-detail { display: block; }
     .update-detail h4 { color: var(--ink); font-size: .76rem; letter-spacing: .12em; text-transform: uppercase; margin: 18px 0 7px; }
@@ -583,6 +591,7 @@
       .updates-head > p { justify-self: start; }
       .update-top { grid-template-columns: 1fr; }
       .update-toggle { justify-self: start; }
+      .update-actions { flex-direction: row; align-items: center; justify-content: flex-start; flex-wrap: wrap; }
     }
 
     .documents { padding: clamp(90px, 11vw, 145px) 0; background: var(--paper-2); }
@@ -10742,10 +10751,11 @@
         });
       }
 
-      function buildUpdateItem(item) {
-          var lang = currentLanguage === "hi" ? "hi" : "en";
+      function buildUpdateItem(item, itemLang, startOpen) {
+          var lang = itemLang || (currentLanguage === "hi" ? "hi" : "en");
           var article = document.createElement("article");
-          article.className = "update-item";
+          article.className = "update-item" + (startOpen ? " open" : "");
+          article.setAttribute("data-ulang", lang);
           var top = document.createElement("div");
           top.className = "update-top";
           var main = document.createElement("div");
@@ -10760,16 +10770,37 @@
           main.appendChild(court);
           main.appendChild(heading);
           main.appendChild(summary);
+          var actions = document.createElement("div");
+          actions.className = "update-actions";
           var toggle = document.createElement("button");
           toggle.type = "button";
           toggle.className = "update-toggle";
-          toggle.textContent = t("readAnalysis");
-          toggle.setAttribute("aria-expanded", "false");
+          toggle.textContent = startOpen ? t("hideAnalysis") : t("readAnalysis");
+          toggle.setAttribute("aria-expanded", startOpen ? "true" : "false");
+          actions.appendChild(toggle);
+          var ulangSwitch = document.createElement("div");
+          ulangSwitch.className = "update-langswitch";
+          ulangSwitch.setAttribute("role", "group");
+          ulangSwitch.setAttribute("aria-label", lang === "hi" ? "इस अपडेट को पढ़ें:" : "Read this update in:");
+          ["en", "hi"].forEach(function (l) {
+            var b = document.createElement("button");
+            b.type = "button";
+            b.textContent = l === "hi" ? "हिंदी" : "EN";
+            if (l === lang) b.classList.add("active");
+            b.setAttribute("aria-pressed", l === lang ? "true" : "false");
+            b.addEventListener("click", function () {
+              if (article.getAttribute("data-ulang") === l) return;
+              var isOpen = article.classList.contains("open");
+              article.replaceWith(buildUpdateItem(item, l, isOpen));
+            });
+            ulangSwitch.appendChild(b);
+          });
+          actions.appendChild(ulangSwitch);
           top.appendChild(main);
-          top.appendChild(toggle);
+          top.appendChild(actions);
           var detail = document.createElement("div");
           detail.className = "update-detail";
-          detail.hidden = true;
+          detail.hidden = !startOpen;
           var detailText = item.detail[lang] || item.detail.en;
           var detailLabels = lang === "hi"
             ? ["पृष्ठभूमि", "न्यायालय ने क्या कहा", "प्रभावित कानून"]
