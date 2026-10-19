@@ -966,81 +966,91 @@
     .section-search input:focus { border-color: #111111; box-shadow: 0 0 0 3px rgba(0,0,0,.08); }
     html[data-theme="dark"] .section-search input:focus { border-color: #f0f0f0; box-shadow: 0 0 0 3px rgba(255,255,255,.1); }
 
-      /* AI Legal Assistant */
-    .ai-fab { position: fixed; right: 18px; bottom: 18px; z-index: 500; display: flex; align-items: center; gap: 6px; height: 52px; padding: 0 18px; border: 2px solid #000; border-radius: 999px; background: #111; color: #fff; font: 700 .95rem/1 var(--sans); cursor: pointer; box-shadow: 0 8px 24px rgba(0,0,0,.25); transform: translateZ(0); transition: transform .15s cubic-bezier(0.22, 1, 0.36, 1); }
-    .ai-fab:hover { transform: translateY(-2px) translateZ(0); }
-    .ai-fab span[aria-hidden="true"] { font-size: 1.2rem; }
-    .ai-panel { position: fixed; right: 18px; bottom: 82px; z-index: 501; width: min(380px, calc(100vw - 36px)); height: min(540px, calc(100vh - 120px)); display: flex; flex-direction: column; background: #fff; border: 2px solid #000; border-radius: 16px; box-shadow: 0 24px 64px rgba(0,0,0,.3); overflow: hidden; }
-    .ai-panel[hidden] { display: none; }
-    .ai-header { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; background: #111; color: #fff; }
-    .ai-header strong { display: block; font-size: .95rem; }
-    .ai-header span { font-size: .72rem; opacity: .75; }
-    .ai-header button { background: none; border: none; color: #fff; font-size: 1rem; cursor: pointer; padding: 4px 8px; }
-    .ai-messages { flex: 1; overflow-y: auto; padding: 14px; display: flex; flex-direction: column; gap: 10px; background: #f8fafc; }
-    .ai-msg { max-width: 88%; padding: 10px 13px; border-radius: 14px; font-size: .85rem; line-height: 1.5; }
-    .ai-msg.bot { align-self: flex-start; background: #fff; border: 1px solid rgba(0,0,0,.14); color: #111; border-bottom-left-radius: 4px; }
-    .ai-msg.user { align-self: flex-end; background: #111; color: #fff; border-bottom-right-radius: 4px; }
-    .ai-msg .ai-draft-btn { display: inline-block; margin: 4px 4px 0 0; padding: 7px 12px; border: 1.5px solid #000; border-radius: 999px; background: #fff; color: #0c0c0c; font-size: .76rem; font-weight: 700; cursor: pointer; }
-    .ai-msg .ai-draft-btn:hover { background: #111; color: #fff; }
-    .ai-msg .ai-link { color: #0c0c0c; font-weight: 700; text-decoration: underline; }
-    .ai-chips { display: flex; gap: 8px; padding: 10px 14px; padding-right: 24px; overflow-x: auto; background: #fff; border-top: 1px solid rgba(0,0,0,.1); scroll-padding-right: 24px; }
-    .ai-chip { flex: 0 0 auto; padding: 7px 13px; border: 1.5px solid #000; border-radius: 999px; background: #fff; font-size: .76rem; font-weight: 600; cursor: pointer; white-space: nowrap; }
-    .ai-chip:hover { background: #111; color: #fff; }
-    .ai-form { display: flex; gap: 8px; padding: 10px 14px; background: #fff; border-top: 1px solid rgba(0,0,0,.1); }
-    .ai-form input { flex: 1; height: 42px; border: 2px solid #000; border-radius: 999px; padding: 0 16px; font-size: .85rem; outline: none; }
-    .ai-form button { width: 42px; height: 42px; border: 2px solid #000; border-radius: 50%; background: #111; color: #fff; font-size: 1rem; cursor: pointer; }
-    .ai-highlight { animation: aiPulse 2s cubic-bezier(0.22, 1, 0.36, 1); }
-    @keyframes aiPulse { 0%,100% { box-shadow: none; } 30% { box-shadow: 0 0 0 4px rgba(0,0,0,.25); } }
-
-      /* ===== Lightweight Buttery Smooth (performance-first) ===== */
-    html { scroll-behavior: smooth; scrollbar-gutter: stable; }
-    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-    /* content-visibility removed: caused scroll jank on fast scrolling */
-    /* Cheap premium easing only on direct interaction (no constant cost) */
-    a, button { transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1) !important; }
-    /* Light card hover - transform+opacity only (GPU cheap), no will-change hoarding */
-    .draft-item, .update-card, .hub-card, .guide-card {
-      transition: transform .35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow .35s cubic-bezier(0.22, 1, 0.36, 1) !important;
-    }
-    .draft-item:hover, .update-card:hover, .hub-card:hover, .guide-card:hover { transform: translateY(-3px); }
-    .draft-item:hover { box-shadow: 0 12px 30px rgba(0,0,0,.08); border-color: #111111; }
-    html[data-theme="dark"] .draft-item { background: #141414; }
-    html[data-theme="dark"] .draft-item:hover { border-color: #e8e8e8; box-shadow: 0 12px 30px rgba(0,0,0,.35); }
-    /* Subtle smoothness: opacity-only fade (GPU compositor, zero layout cost, no jank) */
-    .reveal-smooth { opacity: 0; transform: translateY(30px); transition: opacity .55s cubic-bezier(0.22, 1, 0.36, 1), transform .55s cubic-bezier(0.22, 1, 0.36, 1); }
-    .reveal-smooth.visible { opacity: 1; transform: none; }
-    @media (prefers-reduced-motion: reduce) { .reveal-smooth { opacity: 1; transition: none; } }
-    @media (prefers-reduced-motion: reduce) { .reveal-smooth { opacity: 1; transform: none; transition: none; } }
-    /* Silky AI panel entrance */
-    .ai-panel:not([hidden]) { animation: aiIn .35s cubic-bezier(0.22, 1, 0.36, 1); }
-
-    /* Request modal */
-    .request-modal { position: fixed; inset: 0; z-index: 502; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,.5); padding: 18px; }
-    .request-modal[hidden] { display: none; }
-    .request-box { width: min(440px, 100%); background: var(--paper); color: var(--ink); border-radius: 16px; border: 1px solid rgba(0,0,0,.12); box-shadow: 0 24px 64px rgba(0,0,0,.3); overflow: hidden; animation: aiIn .35s cubic-bezier(0.22, 1, 0.36, 1); }
-    .request-head { display: flex; align-items: center; justify-content: space-between; padding: 16px 18px; border-bottom: 1px solid rgba(0,0,0,.1); font-size: 1.05rem; }
-    .request-head button { border: none; background: none; font-size: 1.1rem; cursor: pointer; color: var(--ink); }
-    .request-sub { margin: 0; padding: 12px 18px 0; font-size: .9rem; opacity: .75; }
-    #requestForm { padding: 14px 18px 18px; display: grid; gap: 12px; }
-    #requestForm label { display: grid; gap: 6px; font-size: .85rem; font-weight: 600; }
-    #requestForm input, #requestForm select, #requestForm textarea { font: 400 .95rem var(--sans); padding: 10px 12px; border: 1px solid rgba(0,0,0,.16); border-radius: 10px; background: #fff; color: #111; width: 100%; box-sizing: border-box; }
-    #requestForm textarea { resize: vertical; }
-    html[data-theme="dark"] #requestForm input, html[data-theme="dark"] #requestForm select, html[data-theme="dark"] #requestForm textarea { background: #1c1c1c; color: #f3f3f3; border-color: rgba(255,255,255,.2); }
-    .request-submit { background: #111; color: #fff; border: none; border-radius: 999px; padding: 12px; font: 700 .95rem var(--sans); cursor: pointer; transition: transform .2s, opacity .2s; }
-    .request-submit:hover { transform: translateY(-1px); opacity: .92; }
-    html[data-theme="dark"] .request-submit { background: #f3f3f3; color: #111; }
-    #requestBtn { display: block; width: 100%; text-align: left; background: none; border: none; font: inherit; color: inherit; cursor: pointer; padding: 10px 16px; }
-    #requestBtn:hover { background: rgba(0,0,0,.06); }
-    html[data-theme="dark"] #requestBtn:hover { background: rgba(255,255,255,.08); }
-    .nav-more-sep { height: 1px; background: rgba(0,0,0,.12); margin: 6px 12px; }
-    html[data-theme="dark"] .nav-more-sep { background: rgba(255,255,255,.15); }
-    .nav-more-label { padding: 8px 16px 4px; font-size: .68rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; opacity: .55; }
-    .hub-jump { display: block; width: 100%; text-align: left; background: none; border: none; font: inherit; color: inherit; cursor: pointer; padding: 9px 16px 9px 28px; font-size: .92em; }
-    .hub-jump:hover { background: rgba(0,0,0,.06); }
-    html[data-theme="dark"] .hub-jump:hover { background: rgba(255,255,255,.08); }
-    @keyframes aiIn { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
-    .mobile-nav-panel:not([hidden]) { animation: hamSlide .3s cubic-bezier(0.22, 1, 0.36, 1); }
-    .ai-fab { transition: transform .3s cubic-bezier(0.22, 1, 0.36, 1) !important; }
+      /* LawAssist — AI Legal Workspace */
+    .lawassist-fab { position: fixed; right: 18px; bottom: 18px; z-index: 500; display: flex; align-items: center; gap: 8px; height: 54px; padding: 0 20px; border: 2px solid #000; border-radius: 999px; background: #111; color: #fff; font: 700 .95rem/1 var(--sans); cursor: pointer; box-shadow: 0 8px 24px rgba(0,0,0,.25); transform: translateZ(0); transition: transform .15s cubic-bezier(0.22, 1, 0.36, 1); }
+    .lawassist-fab:hover { transform: translateY(-2px) translateZ(0); }
+    .lawassist-fab span[aria-hidden="true"] { font-size: 1.3rem; }
+    .lawassist-panel { position: fixed; right: 18px; bottom: 84px; z-index: 501; width: min(420px, calc(100vw - 36px)); height: min(600px, calc(100vh - 120px)); display: flex; flex-direction: column; background: #fff; border: 2px solid #000; border-radius: 18px; box-shadow: 0 24px 64px rgba(0,0,0,.3); overflow: hidden; }
+    .lawassist-panel[hidden] { display: none; }
+    .la-header { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; background: #111; color: #fff; }
+    .la-brand { display: flex; align-items: center; gap: 10px; }
+    .la-logo { font-size: 1.6rem; }
+    .la-brand strong { display: block; font-size: 1.05rem; letter-spacing: .02em; }
+    .la-brand .la-sub { display: block; font-size: .72rem; opacity: .7; font-weight: 400; }
+    .la-header #laClose { background: transparent; border: 1px solid rgba(255,255,255,.35); color: #fff; width: 32px; height: 32px; border-radius: 50%; cursor: pointer; font-size: .85rem; }
+    .la-tabs { display: flex; background: #f1f1f1; border-bottom: 1px solid rgba(0,0,0,.1); }
+    .la-tab { flex: 1; border: 0; background: transparent; padding: 11px 4px; font: 700 .8rem/1.2 var(--sans); color: #555; cursor: pointer; border-bottom: 3px solid transparent; }
+    .la-tab.active { color: #111; border-bottom-color: #111; background: #fff; }
+    .la-body { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
+    .la-pane { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
+    .la-pane[hidden] { display: none; }
+    .la-messages { flex: 1; overflow-y: auto; padding: 14px; display: flex; flex-direction: column; gap: 10px; background: #f8fafc; }
+    .la-msg { max-width: 92%; padding: 10px 13px; border-radius: 14px; font-size: .85rem; line-height: 1.55; white-space: pre-wrap; word-break: break-word; }
+    .la-msg.bot { background: #fff; border: 1px solid rgba(0,0,0,.12); align-self: flex-start; border-bottom-left-radius: 4px; }
+    .la-msg.user { background: #111; color: #fff; align-self: flex-end; border-bottom-right-radius: 4px; }
+    .la-msg .la-src { display: block; margin-top: 8px; padding-top: 8px; border-top: 1px dashed rgba(0,0,0,.15); font-size: .76rem; color: #444; }
+    .la-msg .la-src strong { display: block; margin-bottom: 3px; color: #111; }
+    .la-msg .la-goto { display: inline-block; margin: 4px 6px 0 0; padding: 5px 11px; border: 1.5px solid #111; border-radius: 999px; background: #fff; color: #111; font-size: .76rem; font-weight: 700; cursor: pointer; }
+    .la-msg .la-goto:hover { background: #111; color: #fff; }
+    .la-chips { display: flex; gap: 8px; overflow-x: auto; padding: 10px 14px; background: #fff; border-top: 1px solid rgba(0,0,0,.08); }
+    .la-form { display: flex; gap: 8px; padding: 10px 14px; background: #fff; border-top: 1px solid rgba(0,0,0,.1); }
+    .la-form input { flex: 1; height: 42px; border: 2px solid #000; border-radius: 999px; padding: 0 16px; font-size: .85rem; outline: none; min-width: 0; }
+    .la-form button { width: 42px; height: 42px; flex: 0 0 42px; border: 2px solid #000; border-radius: 50%; background: #111; color: #fff; font-size: 1rem; cursor: pointer; }
+    .la-draft-search { padding: 12px 14px 6px; background: #fff; }
+    .la-draft-search input { width: 100%; height: 40px; border: 2px solid #000; border-radius: 999px; padding: 0 16px; font-size: .85rem; outline: none; }
+    .la-draft-list { flex: 1; overflow-y: auto; padding: 8px 14px 14px; display: flex; flex-direction: column; gap: 8px; background: #f8fafc; }
+    .la-draft-item { background: #fff; border: 1px solid rgba(0,0,0,.12); border-radius: 12px; padding: 10px 13px; cursor: pointer; text-align: left; width: 100%; font-family: var(--sans); }
+    .la-draft-item:hover { border-color: #111; box-shadow: 0 4px 14px rgba(0,0,0,.08); }
+    .la-draft-item strong { display: block; font-size: .84rem; margin-bottom: 2px; }
+    .la-draft-item span { font-size: .74rem; color: var(--muted); }
+    .la-builder { flex: 1; overflow-y: auto; padding: 14px; background: #fff; display: flex; flex-direction: column; gap: 10px; }
+    .la-builder[hidden] { display: none; }
+    .la-builder h4 { margin: 0; font-size: .95rem; }
+    .la-builder .la-back { align-self: flex-start; background: transparent; border: 1px solid #111; border-radius: 999px; padding: 6px 14px; font-size: .78rem; font-weight: 700; cursor: pointer; }
+    .la-field { display: flex; flex-direction: column; gap: 4px; }
+    .la-field label { font-size: .74rem; font-weight: 700; color: #444; }
+    .la-field input { height: 38px; border: 1.5px solid rgba(0,0,0,.25); border-radius: 10px; padding: 0 12px; font-size: .84rem; outline: none; }
+    .la-field input:focus { border-color: #111; }
+    .la-builder-actions { display: flex; gap: 8px; position: sticky; bottom: 0; background: #fff; padding-top: 8px; }
+    .la-builder-actions button { flex: 1; height: 42px; border-radius: 999px; font-weight: 700; font-size: .84rem; cursor: pointer; }
+    .la-generate { background: #111; color: #fff; border: 2px solid #111; }
+    .la-preview-actions { display: flex; gap: 8px; }
+    .la-preview-actions button { flex: 1; height: 40px; border-radius: 999px; font-weight: 700; font-size: .8rem; cursor: pointer; border: 2px solid #111; }
+    .la-dl { background: #111; color: #fff; }
+    .la-pr { background: #fff; color: #111; }
+    .la-preview { border: 1px solid rgba(0,0,0,.15); border-radius: 12px; padding: 12px; font-size: .78rem; line-height: 1.6; white-space: pre-wrap; max-height: 260px; overflow-y: auto; background: #f8fafc; font-family: Georgia, serif; }
+    .la-case-form { padding: 12px 14px; background: #fff; border-bottom: 1px solid rgba(0,0,0,.08); display: flex; flex-direction: column; gap: 8px; }
+    .la-case-form input { height: 38px; border: 1.5px solid rgba(0,0,0,.25); border-radius: 10px; padding: 0 12px; font-size: .84rem; outline: none; width: 100%; box-sizing: border-box; }
+    .la-case-form input:focus { border-color: #111; }
+    .la-row { display: flex; gap: 8px; }
+    .la-row input { flex: 1; min-width: 0; }
+    .la-case-form button { height: 40px; border-radius: 999px; background: #111; color: #fff; border: 2px solid #111; font-weight: 700; font-size: .84rem; cursor: pointer; }
+    .la-case-list { flex: 1; overflow-y: auto; padding: 10px 14px 14px; display: flex; flex-direction: column; gap: 8px; background: #f8fafc; }
+    .la-case { background: #fff; border: 1px solid rgba(0,0,0,.12); border-radius: 12px; padding: 10px 13px; }
+    .la-case.soon { border-color: #b91c1c; box-shadow: 0 0 0 1px #b91c1c; }
+    .la-case strong { display: block; font-size: .86rem; }
+    .la-case .la-case-meta { font-size: .74rem; color: var(--muted); margin-top: 3px; }
+    .la-case .la-case-notes { font-size: .78rem; margin-top: 6px; color: #333; }
+    .la-case .la-case-del { margin-top: 8px; background: transparent; border: 1px solid rgba(0,0,0,.25); border-radius: 999px; padding: 4px 12px; font-size: .72rem; cursor: pointer; color: #b91c1c; border-color: rgba(185,28,28,.4); }
+    .la-empty { text-align: center; color: var(--muted); font-size: .82rem; padding: 24px 10px; }
+    @keyframes laIn { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+    .lawassist-panel:not([hidden]) { animation: laIn .35s cubic-bezier(0.22, 1, 0.36, 1); }
+    .lawassist-fab { transition: transform .3s cubic-bezier(0.22, 1, 0.36, 1) !important; }
+    html[data-theme="dark"] .lawassist-panel { background: #161616; border-color: rgba(255,255,255,.25); }
+    html[data-theme="dark"] .la-tab { color: #aaa; }
+    html[data-theme="dark"] .la-tab.active { color: #fff; border-bottom-color: #fff; background: #161616; }
+    html[data-theme="dark"] .la-tabs { background: #0e0e0e; }
+    html[data-theme="dark"] .la-messages, html[data-theme="dark"] .la-draft-list, html[data-theme="dark"] .la-case-list { background: #101010; }
+    html[data-theme="dark"] .la-msg.bot { background: #1e1e1e; border-color: rgba(255,255,255,.15); color: #eee; }
+    html[data-theme="dark"] .la-msg .la-src { color: #bbb; border-top-color: rgba(255,255,255,.15); }
+    html[data-theme="dark"] .la-msg .la-src strong { color: #fff; }
+    html[data-theme="dark"] .la-chips, html[data-theme="dark"] .la-form, html[data-theme="dark"] .la-draft-search, html[data-theme="dark"] .la-case-form { background: #161616; }
+    html[data-theme="dark"] .la-form input, html[data-theme="dark"] .la-draft-search input { background: #0e0e0e; border-color: rgba(255,255,255,.35); color: #fff; }
+    html[data-theme="dark"] .la-draft-item, html[data-theme="dark"] .la-case { background: #1e1e1e; border-color: rgba(255,255,255,.15); color: #eee; }
+    html[data-theme="dark"] .la-builder { background: #161616; color: #eee; }
+    html[data-theme="dark"] .la-field input, html[data-theme="dark"] .la-case-form input { background: #0e0e0e; border-color: rgba(255,255,255,.25); color: #fff; }
+    html[data-theme="dark"] .la-preview { background: #0e0e0e; border-color: rgba(255,255,255,.15); color: #eee; }
+    html[data-theme="dark"] .la-case .la-case-notes { color: #ccc; }
 
   
     /* ===== Ultra Smooth Level 2: silky rendering ===== */
@@ -12848,20 +12858,46 @@
       <span class="icon-moon" aria-hidden="true">🌙</span>
       <span class="icon-sun" aria-hidden="true">☀️</span>
     </button>
-    <button type="button" id="aiFab" class="ai-fab" aria-label="AI Legal Assistant">
-    <span aria-hidden="true">✦</span><span class="ai-fab-label">AI</span>
+    <button type="button" id="lawAssistFab" class="lawassist-fab" aria-label="LawAssist — AI Legal Workspace">
+    <span aria-hidden="true">⚖️</span><span class="lawassist-fab-label">LawAssist</span>
   </button>
-  <div id="aiPanel" class="ai-panel" hidden role="dialog" aria-label="AI Legal Assistant">
-    <div class="ai-header">
-      <div><strong id="aiTitle">AI Legal Assistant</strong><span id="aiSubtitle">Ask about drafts, laws &amp; procedures</span></div>
-      <button type="button" id="aiClose" aria-label="Close">✕</button>
+  <div id="lawAssistPanel" class="lawassist-panel" hidden role="dialog" aria-label="LawAssist — AI Legal Workspace">
+    <div class="la-header">
+      <div class="la-brand"><span class="la-logo" aria-hidden="true">⚖️</span><div><strong>LawAssist</strong><span class="la-sub" id="laSubtitle">AI Legal Workspace</span></div></div>
+      <button type="button" id="laClose" aria-label="Close">✕</button>
     </div>
-    <div id="aiMessages" class="ai-messages" aria-live="polite"></div>
-    <div id="aiChips" class="ai-chips"></div>
-    <form id="aiForm" class="ai-form">
-      <input type="text" id="aiInput" autocomplete="off" placeholder="Ask something…" aria-label="Ask the AI assistant" />
-      <button type="submit" aria-label="Send">➤</button>
-    </form>
+    <div class="la-tabs" role="tablist">
+      <button type="button" class="la-tab active" data-latab="research" role="tab" aria-selected="true">🔍 <span data-la-tabname="research">Research</span></button>
+      <button type="button" class="la-tab" data-latab="drafting" role="tab" aria-selected="false">📝 <span data-la-tabname="drafting">Drafting</span></button>
+      <button type="button" class="la-tab" data-latab="cases" role="tab" aria-selected="false">📁 <span data-la-tabname="cases">My Cases</span></button>
+    </div>
+    <div class="la-body">
+      <section class="la-pane" id="laPaneResearch" role="tabpanel">
+        <div id="laMessages" class="la-messages" aria-live="polite"></div>
+        <div id="laChips" class="la-chips ai-chips"></div>
+        <form id="laForm" class="la-form">
+          <input type="text" id="laInput" autocomplete="off" />
+          <button type="submit" aria-label="Send">➤</button>
+        </form>
+      </section>
+      <section class="la-pane" id="laPaneDrafting" role="tabpanel" hidden>
+        <div class="la-draft-search"><input type="search" id="laDraftSearch" /></div>
+        <div id="laDraftList" class="la-draft-list"></div>
+        <div id="laDraftBuilder" class="la-builder" hidden></div>
+      </section>
+      <section class="la-pane" id="laPaneCases" role="tabpanel" hidden>
+        <form id="laCaseForm" class="la-case-form">
+          <input type="text" id="laCaseTitle" required maxlength="120" />
+          <div class="la-row">
+            <input type="text" id="laCaseCourt" maxlength="80" />
+            <input type="date" id="laCaseDate" />
+          </div>
+          <input type="text" id="laCaseNotes" maxlength="200" />
+          <button type="submit" id="laCaseAdd">+ Add Case</button>
+        </form>
+        <div id="laCaseList" class="la-case-list"></div>
+      </section>
+    </div>
   </div>
 
   <div id="requestModal" class="request-modal" hidden role="dialog" aria-modal="true" aria-labelledby="requestTitle">
@@ -12886,231 +12922,419 @@
   </div>
 
   <script>
-    /* AI Legal Assistant — client-side intent engine (bilingual EN/HI) */
+    /* LawAssist — AI Legal Workspace (client-side; bilingual EN/HI) */
+    /* Modes: Research (citation-backed Q&A), Drafting (guided template filler), My Cases (local case manager) */
     (function () {
       "use strict";
+      function laLang() { return (typeof currentLanguage !== "undefined" && currentLanguage === "hi") ? "hi" : "en"; }
+      function L(en, hi) { return laLang() === "hi" ? hi : en; }
+      function esc(s) { return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); }
+      function getDrafts() { try { var el = document.getElementById("legalDraftsData"); return el ? JSON.parse(el.textContent).drafts : []; } catch (e) { return []; } }
+      function getKB() { try { var el = document.getElementById("aiKnowledgeData"); var d = el ? JSON.parse(el.textContent) : null; return (d && d.knowledge) ? d.knowledge : []; } catch (e) { return []; } }
+      function getJudgements() { try { var el = document.getElementById("usefulJudgementsData"); var d = el ? JSON.parse(el.textContent) : null; return (d && d.items) ? d.items : []; } catch (e) { return []; } }
+      function getVocab() { try { var el = document.getElementById("legalVocabData"); var d = el ? JSON.parse(el.textContent) : null; return (d && d.terms) ? d.terms : []; } catch (e) { return []; } }
+      function tokens(s) { return String(s || "").toLowerCase().replace(/[^\p{L}\p{N}\s]/gu, " ").split(/\s+/).filter(function (w) { return w.length > 1; }); }
+      function overlap(q, text) {
+        var qt = tokens(q), tt = {}, i, score = 0;
+        tokens(text).forEach(function (w) { tt[w] = 1; });
+        for (i = 0; i < qt.length; i++) { if (tt[qt[i]]) score += qt[i].length > 4 ? 2 : 1; }
+        return score;
+      }
+
+      /* ---------------- Research (citation-backed) ---------------- */
       var INTENTS = [
-        { id: "bail", kw: ["bail", "जमानत", "jamanat", "release from jail", "jail se", "anticipatory", "अग्रिम", "regular bail", "interim bail", "default bail", "statutory bail", "surrender"],
-          drafts: ["regular-bail", "anticipatory-bail", "interim-bail", "default-bail-187"],
-          ans: { en: "For bail matters I found these drafts for you:", hi: "जमानत मामलों के लिए ये ड्राफ्ट मिले:" } },
-        { id: "fir", kw: ["fir", "एफआईआर", "fir file", "fir darj", "complaint to police", "police complaint", "police not", "police refuse", "थाने", "पुलिस"],
-          drafts: ["fir-direction-173", "complaint-magistrate-175", "cyber-crime-complaint"],
-          ans: { en: "For FIR / police complaint matters:", hi: "FIR / पुलिस शिकायत मामलों के लिए:" } },
-        { id: "cheque", kw: ["cheque", "check bounce", "चेक बाउंस", "138", "ni act", "dishonour", "bounce"],
-          drafts: ["notice-138", "complaint-138", "reply-notice-138"],
-          ans: { en: "Cheque bounce (Sec. 138 NI Act) drafts:", hi: "चेक बाउंस (धारा 138 NI Act) ड्राफ्ट:" } },
-        { id: "arrest", kw: ["arrest", "गिरफ्तारी", "giraftari", "remand", "रिमांड", "custody", "हिरासत", "warrant", "वारंट", "nbw", "surrender"],
-          drafts: ["remand-objection-187", "nbw-recall", "anticipatory-bail", "medical-examination-53"],
-          ans: { en: "Arrest / remand / warrant related drafts:", hi: "गिरफ्तारी / रिमांड / वारंट संबंधी ड्राफ्ट:" } },
-        { id: "divorce", kw: ["divorce", "तलाक", "talaq", "mutual consent", "cruelty", "क्रूरता", "maintenance", "भरण", "child custody", "बच्चे की कस्टडी", "conjugal", "dowry", "दहेज", "domestic violence"],
-          drafts: ["divorce-mutual", "divorce-contested", "maintenance-144", "interim-maintenance", "child-custody", "child-visitation", "dv-complaint-12", "restitution-conjugal"],
-          ans: { en: "Family / matrimonial drafts:", hi: "पारिवारिक / वैवाहिक ड्राफ्ट:" } },
-        { id: "property", kw: ["property", "संपत्ति", "land", "जमीन", "plot", "house", "मकान", "partition", "बंटवारा", "possession", "कब्जा", "sale deed", "registry", "रजिस्ट्री", "tenant", "किरायेदार", "eviction"],
-          drafts: ["partition-suit", "sale-deed", "rent-agreement", "eviction-suit", "specific-performance", "relinquishment-deed", "gift-deed", "will-format"],
-          ans: { en: "Property related drafts:", hi: "संपत्ति संबंधी ड्राफ्ट:" } },
-        { id: "court", kw: ["appeal", "अपील", "revision", "पुनरीक्षण", "review", "quash", "quashing", "fir quash", "writ", "रिट", "supreme court", "high court", "transfer", "stay"],
-          drafts: ["criminal-appeal", "criminal-revision", "quashing-528", "writ-226", "habeas-corpus-226", "stay-sentence-appeal", "transfer-case-456", "first-appeal-41", "review-petition"],
-          ans: { en: "Appeals / writs / higher court drafts:", hi: "अपील / रिट / उच्च न्यायालय ड्राफ्ट:" } },
-        { id: "civil", kw: ["suit", "वाद", "plaint", "वादपत्र", "injunction", "निषेधाज्ञा", "decree", "डिक्री", "execution", "cpc", "money recovery", "पैसे की वसूली"],
-          drafts: ["plaint-order7", "written-statement", "temp-injunction", "recovery-suit", "execution-petition-21", "caveat-148a", "amendment-pleadings"],
-          ans: { en: "Civil suit drafts:", hi: "दीवानी वाद ड्राफ्ट:" } },
-        { id: "document", kw: ["agreement", "करार", "deed", "affidavit", "शपथपत्र", "vakalatnama", "वकालतनामा", "will", "वसीयत", "power of attorney", "rent", "loan", "nda", "partnership", "mou"],
-          drafts: ["affidavit", "vakalatnama", "rent-agreement", "sale-deed", "poa-general", "loan-agreement", "nda-format", "partnership-deed", "will-format", "legal-notice-general"],
-          ans: { en: "Agreements & documents:", hi: "करार व दस्तावेज़:" } },
-        { id: "victim", kw: ["victim", "पीड़ित", "compensation", "मुआवजा", "मुआवज़ा", "acid attack", "injury", "मृतक"],
-          drafts: ["victim-compensation-396"],
-          ans: { en: "Victim related:", hi: "पीड़ित संबंधी:" } },
-        { id: "consumer", kw: ["consumer", "उपभोक्ता", "defective", "warranty", "refund", "धोखाधड़ी"],
-          drafts: ["consumer-complaint", "consumer-appeal-state"],
-          ans: { en: "Consumer drafts:", hi: "उपभोक्ता ड्राफ्ट:" } },
-        { id: "seized", kw: ["seized", "जब्त", "superdari", "सुपुर्दगी", "vehicle release", "gaadi", "गाड़ी", "mobile", "phone seized"],
-          drafts: ["superdari-491"],
-          ans: { en: "For release of seized property:", hi: "जब्त संपत्ति की रिहाई हेतु:" } }
-      ];
-      var QA = [
-        { kw: ["what is bail", "जमानत क्या", "bail kya", "bail meaning"],
-          a: { en: "Bail is the temporary release of an accused person from custody while the trial is pending, on furnishing bonds/surety. Types: Regular (Sec. 483 BNSS), Anticipatory (Sec. 482 BNSS), Interim, and Default bail (Sec. 187(3) BNSS — when chargesheet isn't filed in 60/90 days).",
-               hi: "जमानत विचारण लंबित रहते अभियुक्त की अस्थायी रिहाई है, बांड/जमानतदार पर। प्रकार: नियमित (धारा 483 BNSS), अग्रिम (धारा 482 BNSS), अंतरिम, और डिफॉल्ट जमानत (धारा 187(3) BNSS — जब 60/90 दिन में आरोपपत्र दाखिल न हो)।" } },
-        { kw: ["how to file fir", "fir kaise", "fir दर्ज कैसे", "fir likhna"],
-          a: { en: "To file an FIR: (1) Go to the police station where the offence occurred, (2) give a written complaint with date, time, place & details, (3) get the FIR number and free copy (your right under Sec. 173 BNSS). If police refuse, approach the SP in writing, then the Magistrate under Sec. 175(3) BNSS.",
-               hi: "FIR दर्ज करने हेतु: (1) अपराध घटित थाने जाएं, (2) तिथि, समय, स्थान व विवरण सहित लिखित शिकायत दें, (3) FIR नंबर व निःशुल्क प्रति लें (धारा 173 BNSS के अधीन अधिकार)। पुलिस इनकार करे तो SP को लिखित में, फिर धारा 175(3) BNSS के अधीन मजिस्ट्रेट के पास जाएं।" } },
-        { kw: ["138", "cheque bounce time", "चेक बाउंस समय", "cheque bounce procedure"],
-          a: { en: "Cheque bounce (Sec. 138 NI Act) steps: (1) Send legal notice within 30 days of bounce, (2) wait 15 days for payment, (3) file complaint within 30 days after that before the Magistrate. Punishment: up to 2 years imprisonment and/or fine up to twice the cheque amount.",
-               hi: "चेक बाउंस (धारा 138 NI Act) प्रक्रिया: (1) बाउंस के 30 दिन में विधिक नोटिस भेजें, (2) भुगतान हेतु 15 दिन प्रतीक्षा करें, (3) उसके बाद 30 दिन में मजिस्ट्रेट के समक्ष शिकायत दाखिल करें। दंड: 2 वर्ष तक कारावास और/या चेक राशि के दोगुने तक जुर्माना।" } },
-        { kw: ["fees", "फीस", "charges", "consultation fee", "kitni fees"],
-          a: { en: "For fee/consultation details, please call or WhatsApp on 7456022448, or use the Consultation section on this website to book an appointment.",
-               hi: "फीस/परामर्श विवरण हेतु कृपया 7456022448 पर कॉल या WhatsApp करें, या वेबसाइट के Consultation सेक्शन से अपॉइंटमेंट बुक करें।" } },
-        { kw: ["hello", "hi", "namaste", "नमस्ते", "hey", "ram ram"],
-          a: { en: "Namaste! 🙏 I'm the AI legal assistant. Ask me about bail, FIR, cheque bounce, divorce, property — or tap a suggestion below. I can find the right legal draft for you.",
-               hi: "नमस्ते! 🙏 मैं AI विधिक सहायक हूं। जमानत, FIR, चेक बाउंस, तलाक, संपत्ति के बारे में पूछें — या नीचे सुझाव दबाएं। मैं आपके लिए सही विधिक ड्राफ्ट ढूंढ दूंगा।" } }
+        { kw: ["bail", "जमानत", "jamanat", "anticipatory", "अग्रिम", "regular bail", "interim bail", "default bail"], drafts: ["regular-bail", "anticipatory-bail", "interim-bail", "default-bail-187"] },
+        { kw: ["fir", "एफआईआर", "police complaint", "थाने", "पुलिस", "police refuse"], drafts: ["fir-direction-173", "complaint-magistrate-175", "cyber-crime-complaint"] },
+        { kw: ["cheque", "चेक बाउंस", "138", "ni act", "dishonour", "bounce"], drafts: ["notice-138", "complaint-138", "reply-notice-138"] },
+        { kw: ["divorce", "तलाक", "talaq", "maintenance", "भरण", "custody", "कस्टडी", "dowry", "दहेज", "domestic violence"], drafts: ["divorce-mutual", "divorce-contested", "maintenance-144", "child-custody", "dv-complaint-12"] },
+        { kw: ["property", "संपत्ति", "जमीन", "partition", "बंटवारा", "sale deed", "रजिस्ट्री", "tenant", "किरायेदार"], drafts: ["partition-suit", "sale-deed", "rent-agreement", "eviction-suit", "will-format"] },
+        { kw: ["appeal", "अपील", "revision", "writ", "रिट", "quash", "supreme court", "high court"], drafts: ["criminal-appeal", "criminal-revision", "quashing-528", "writ-226", "slp-supreme-court"] },
+        { kw: ["affidavit", "शपथपत्र", "vakalatnama", "वकालतनामा", "agreement", "करार", "will", "वसीयत"], drafts: ["affidavit", "vakalatnama", "rent-agreement", "poa-general", "will-format"] }
       ];
       var CHIPS = [
         { en: "Bail drafts", hi: "जमानत ड्राफ्ट" },
-        { en: "File an FIR", hi: "FIR दर्ज करें" },
-        { en: "Cheque bounce", hi: "चेक बाउंस" },
-        { en: "Divorce & maintenance", hi: "तलाक व भरण-पोषण" },
-        { en: "Property dispute", hi: "संपत्ति विवाद" }
+        { en: "What is Section 138?", hi: "धारा 138 क्या है?" },
+        { en: "How to file FIR?", hi: "FIR कैसे दर्ज करें?" },
+        { en: "Landmark judgements", hi: "ऐतिहासिक निर्णय" }
       ];
 
-      function lang() { return (typeof currentLanguage !== "undefined" && currentLanguage === "hi") ? "hi" : "en"; }
-      function getDrafts() {
-        try {
-          var el = document.getElementById("legalDraftsData");
-          return el ? JSON.parse(el.textContent).drafts : [];
-        } catch (e) { return []; }
-      }
-      function findIntent(q) {
-        q = " " + q.toLowerCase() + " ";
-        var best = null, bestScore = 0;
-        INTENTS.forEach(function (it) {
-          var score = 0;
-          it.kw.forEach(function (k) { if (q.indexOf(k.toLowerCase()) !== -1) score += k.length; });
-          if (score > bestScore) { bestScore = score; best = it; }
+      function research(query) {
+        var lang = laLang(), drafts = getDrafts(), kb = getKB(), judges = getJudgements(), vocab = getVocab();
+        var best = null, bestScore = 0, i, s, k;
+        // 1. Knowledge base (42 entries)
+        for (i = 0; i < kb.length; i++) {
+          s = 0; k = kb[i];
+          (k.q || []).forEach(function (qq) { s = Math.max(s, overlap(query, qq) * 3); });
+          s = Math.max(s, overlap(query, (k.a && (k.a.en + " " + k.a.hi)) || ""));
+          if (s > bestScore) { bestScore = s; best = { type: "kb", item: k, score: s }; }
+        }
+        // 2. Landmark judgements
+        for (i = 0; i < judges.length; i++) {
+          var j = judges[i];
+          s = Math.max(overlap(query, j.caseName || ""), overlap(query, j.caseNameHi || "")) * 3;
+          s = Math.max(s, overlap(query, (j.summary && (j.summary.en + " " + j.summary.hi)) || ""));
+          if (s > bestScore && s >= 3) { bestScore = s; best = { type: "judge", item: j, score: s }; }
+        }
+        // 3. Vocabulary
+        var vbest = null, vscore = 0;
+        for (i = 0; i < vocab.length; i++) {
+          s = Math.max(overlap(query, vocab[i].en || ""), overlap(query, vocab[i].hi || "")) * 2;
+          if (s > vscore) { vscore = s; vbest = vocab[i]; }
+        }
+        // 4. Intent → drafts
+        var matchedDrafts = [];
+        INTENTS.forEach(function (in_) {
+          var hit = in_.kw.some(function (kw) { return query.toLowerCase().indexOf(kw.toLowerCase()) !== -1; });
+          if (hit) in_.drafts.forEach(function (id) { if (matchedDrafts.indexOf(id) === -1) matchedDrafts.push(id); });
         });
-        return bestScore > 0 ? best : null;
-      }
-      function findQA(q) {
-        q = " " + q.toLowerCase() + " ";
-        for (var i = 0; i < QA.length; i++) {
-          for (var j = 0; j < QA[i].kw.length; j++) {
-            if (q.indexOf(QA[i].kw[j].toLowerCase()) !== -1) return QA[i];
-          }
+
+        var html = "", sources = [];
+        function draftById(id) { for (var x = 0; x < drafts.length; x++) if (drafts[x].id === id) return drafts[x]; return null; }
+        function draftTitle(d) { return (lang === "hi" && d.title.hi) ? d.title.hi : d.title.en; }
+
+        if (best && best.type === "kb") {
+          var k2 = best.item;
+          html = esc(k2.a[lang] || k2.a.en);
+          (k2.drafts || []).forEach(function (id) { var d = draftById(id); if (d) sources.push({ t: "draft", d: d }); });
+        } else if (best && best.type === "judge") {
+          var j2 = best.item;
+          html = esc(lang === "hi" ? (j2.summary.hi || j2.summary.en) : j2.summary.en);
+          sources.push({ t: "judge", j: j2 });
         }
-        return null;
-      }
-      function addMsg(text, who, html) {
-        var box = document.getElementById("aiMessages");
-        var d = document.createElement("div");
-        d.className = "ai-msg " + who;
-        if (html) d.innerHTML = text; else d.textContent = text;
-        box.appendChild(d);
-        box.scrollTop = box.scrollHeight;
-        return d;
-      }
-      function draftName(id) {
-        var ds = getDrafts(), L = lang();
-        for (var i = 0; i < ds.length; i++) {
-          if (ds[i].id === id) return ds[i].title[L] || ds[i].title.en;
+        matchedDrafts.slice(0, 6).forEach(function (id) {
+          var d = draftById(id);
+          if (d && !sources.some(function (x) { return x.t === "draft" && x.d.id === id; })) sources.push({ t: "draft", d: d });
+        });
+        // Fallback: vocab term
+        if (!html && vbest && vscore >= 4) {
+          html = esc(vbest.en) + " — " + esc(vbest.hi) + (vbest.example ? "\n" + esc(lang === "hi" ? vbest.example.hi : vbest.example.en) : "");
+          sources.push({ t: "vocab", v: vbest });
         }
-        return id;
-      }
-      function jumpToDraft(id) {
-        var sec = document.getElementById("drafts");
-        if (sec) sec.scrollIntoView({ behavior: "smooth" });
-        setTimeout(function () {
-          var card = document.querySelector('[data-draft-id="' + id + '"]');
-          if (card) {
-            scrollSlightlyAboveCenter(card);
-            card.classList.remove("ai-highlight");
-            void card.offsetWidth;
-            card.classList.add("ai-highlight");
-          }
-        }, 600);
-      }
-      function getKnowledge() {
-        try {
-          var el = document.getElementById("aiKnowledgeData");
-          return el ? JSON.parse(el.textContent).knowledge : [];
-        } catch (e) { return []; }
-      }
-      function searchKnowledge(q) {
-        var kb = getKnowledge();
-        q = " " + q.toLowerCase() + " ";
-        var best = null, bestScore = 0;
-        kb.forEach(function (k) {
-          var score = 0;
-          (k.q || []).forEach(function (kw) {
-            if (q.indexOf(kw.toLowerCase()) !== -1) score += kw.length * 2;
+        // Fallback: draft title search
+        if (!html) {
+          var dbest = null, dscore = 0;
+          drafts.forEach(function (d) {
+            s = Math.max(overlap(query, d.title.en || ""), overlap(query, (d.title.hi || "")), overlap(query, (d.use && (d.use.en + " " + d.use.hi)) || ""));
+            if (s > dscore) { dscore = s; dbest = d; }
           });
-          var words = q.trim().split(/\s+/);
-          words.forEach(function (w) {
-            if (w.length > 3) {
-              (k.q || []).forEach(function (kw) {
-                if (kw.toLowerCase().indexOf(w) !== -1) score += 3;
-              });
+          if (dbest && dscore >= 4) {
+            html = L("I found this draft for you:", "आपके लिए यह ड्राफ्ट मिला:") + " " + draftTitle(dbest);
+            sources.push({ t: "draft", d: dbest });
+          }
+        }
+        if (!html) {
+          html = L(
+            "I couldn't find a precise answer on this website. Try asking about bail, FIR, cheque bounce, divorce, property, or tap a suggestion below. For detailed advice, WhatsApp 7456022448.",
+            "इस वेबसाइट पर इसका सटीक उत्तर नहीं मिला। जमानत, FIR, चेक बाउंस, तलाक, संपत्ति के बारे में पूछें, या नीचे सुझाव दबाएं। विस्तृत सलाह हेतु 7456022448 पर WhatsApp करें।");
+        }
+        return { html: html, sources: sources.slice(0, 6) };
+      }
+
+      function addMsg(html, who, sources) {
+        var box = document.getElementById("laMessages");
+        if (!box) return;
+        var div = document.createElement("div");
+        div.className = "la-msg " + who;
+        div.innerHTML = html;
+        if (sources && sources.length) {
+          var src = document.createElement("span");
+          src.className = "la-src";
+          var sh = document.createElement("strong");
+          sh.textContent = L("📚 Sources:", "📚 स्रोत:");
+          src.appendChild(sh);
+          sources.forEach(function (x) {
+            if (x.t === "judge") {
+              var p = document.createElement("span");
+              p.textContent = "⚖️ " + (laLang() === "hi" && x.j.caseNameHi ? x.j.caseNameHi : x.j.caseName) + " " + (x.j.citation || "");
+              src.appendChild(p); src.appendChild(document.createElement("br"));
+            } else if (x.t === "draft") {
+              var b = document.createElement("button");
+              b.type = "button"; b.className = "la-goto";
+              b.textContent = "📝 " + ((laLang() === "hi" && x.d.title.hi) ? x.d.title.hi : x.d.title.en);
+              b.setAttribute("data-goto", x.d.id);
+              b.addEventListener("click", function () { jumpToDraft(x.d.id); });
+              src.appendChild(b);
+            } else if (x.t === "vocab") {
+              var v = document.createElement("span");
+              v.textContent = "📖 " + x.v.en + " / " + x.v.hi;
+              src.appendChild(v); src.appendChild(document.createElement("br"));
             }
           });
-          if (score > bestScore) { bestScore = score; best = k; }
-        });
-        return bestScore >= 6 ? best : null;
+          div.appendChild(src);
+        }
+        box.appendChild(div);
+        box.scrollTop = box.scrollHeight;
       }
-      function escHtml(s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); }
+
       function respond(q) {
-        var L = lang();
-        addMsg(q, "user");
-        var intent = findIntent(q), qa = findQA(q), kb = searchKnowledge(q);
-        var html = "";
-        var entry = kb || qa;
-        if (entry) {
-          var ans = entry.a ? entry.a[L] : null;
-          if (ans) html = "<p>" + ans + "</p>";
-        }
-        var drafts = (kb && kb.drafts && kb.drafts.length ? kb.drafts : (intent ? intent.drafts : []));
-        if (drafts.length) {
-          if (!entry && intent) html += "<p><strong>" + intent.ans[L] + "</strong></p>";
-          else if (entry && !qa) html += "<p><strong>" + (L === "hi" ? "संबंधित ड्राफ्ट:" : "Related drafts:") + "</strong></p>";
-          html += "<p>";
-          drafts.forEach(function (id) {
-            html += '<button type="button" class="ai-draft-btn" data-goto="' + id + '">📄 ' + escHtml(draftName(id)) + "</button>";
-          });
-          html += "</p>";
-        }
-        if (!entry && !intent) {
-          var gq = encodeURIComponent(q + " indian law");
-          var waq = encodeURIComponent((L === "hi" ? "नमस्ते! मुझे इस बारे में जानकारी चाहिए: " : "Hello! I need information about: ") + q);
-          html = L === "hi"
-            ? "<p>यह जानकारी मेरे ज्ञान में अभी नहीं है। मैंने इसे सीखने की सूची में डाल दिया है — जल्द ही जोड़ दी जाएगी।</p><p><a class=\"ai-link\" href=\"https://wa.me/917456022448?text=" + waq + "\" target=\"_blank\" rel=\"noopener\">\u0001F4F2 वकील साहब से WhatsApp पर पूछें</a></p><p><a class=\"ai-link\" href=\"https://www.google.com/search?q=" + gq + "\" target=\"_blank\" rel=\"noopener\">\u0001F50D Google पर खोजें</a></p>"
-            : "<p>This isn't in my knowledge yet. I've added it to my learning list — it will be added soon.</p><p><a class=\"ai-link\" href=\"https://wa.me/917456022448?text=" + waq + "\" target=\"_blank\" rel=\"noopener\">\u0001F4F2 Ask on WhatsApp</a></p><p><a class=\"ai-link\" href=\"https://www.google.com/search?q=" + gq + "\" target=\"_blank\" rel=\"noopener\">\u0001F50D Search on Google</a></p>";
+        addMsg(esc(q), "user");
+        setTimeout(function () {
+          var r = research(q);
+          addMsg(esc(r.html).replace(/\n/g, "<br>"), "bot", r.sources);
           try {
-            var missed = JSON.parse(localStorage.getItem("aiMissed") || "[]");
-            if (missed.indexOf(q) === -1) { missed.push(q); localStorage.setItem("aiMissed", JSON.stringify(missed.slice(-50))); }
+            var arr = JSON.parse(localStorage.getItem("laMissed") || "[]");
+            if (!r.sources.length) { arr.push({ q: q, at: Date.now() }); localStorage.setItem("laMissed", JSON.stringify(arr.slice(-50))); }
           } catch (e) {}
+        }, 350);
+      }
+
+      /* ---------------- Drafting (guided template filler) ---------------- */
+      var LA_BUILDER = { id: null, fields: [] };
+      function extractPlaceholders(tpl) {
+        var seen = {}, out = [], m, re = /\[([A-Z][A-Z0-9 '\/\-\.\(\)&]+?)\]/g;
+        while ((m = re.exec(tpl)) !== null) {
+          var key = m[1].trim();
+          if (key === "____" || /^\d+$/.test(key)) continue;
+          if (!seen[key]) { seen[key] = 1; out.push(key); }
         }
-        var m = addMsg(html, "bot", true);
-        m.querySelectorAll("[data-goto]").forEach(function (b) {
-          b.addEventListener("click", function () { jumpToDraft(b.getAttribute("data-goto")); });
+        return out.slice(0, 24);
+      }
+      function draftDisplayTitle(d) { var l = laLang(); return (l === "hi" && d.title.hi) ? d.title.hi : d.title.en; }
+      function renderDraftList() {
+        var list = document.getElementById("laDraftList"), q = (document.getElementById("laDraftSearch").value || "").toLowerCase();
+        var builder = document.getElementById("laDraftBuilder");
+        if (builder) builder.hidden = true;
+        if (list) list.style.display = "";
+        list.textContent = "";
+        var drafts = getDrafts(), shown = 0;
+        drafts.forEach(function (d) {
+          var t = ((d.title.en || "") + " " + (d.title.hi || "") + " " + d.id).toLowerCase();
+          if (q && t.indexOf(q) === -1) return;
+          if (shown >= 40) return;
+          shown++;
+          var b = document.createElement("button");
+          b.type = "button"; b.className = "la-draft-item";
+          var st = document.createElement("strong"); st.textContent = draftDisplayTitle(d);
+          var sp = document.createElement("span"); sp.textContent = d.id;
+          b.appendChild(st); b.appendChild(sp);
+          b.addEventListener("click", function () { openBuilder(d.id); });
+          list.appendChild(b);
         });
+        if (!shown) { var e = document.createElement("div"); e.className = "la-empty"; e.textContent = L("No drafts found.", "कोई ड्राफ्ट नहीं मिला।"); list.appendChild(e); }
+      }
+      function openBuilder(id) {
+        var drafts = getDrafts(), d = null, i;
+        for (i = 0; i < drafts.length; i++) if (drafts[i].id === id) d = drafts[i];
+        if (!d) return;
+        var lang = laLang();
+        var tpl = (lang === "hi" && d.templateHi) ? d.templateHi : d.template;
+        var fields = extractPlaceholders(tpl);
+        LA_BUILDER = { id: id, fields: fields, tpl: tpl, title: draftDisplayTitle(d) };
+        var list = document.getElementById("laDraftList"), builder = document.getElementById("laDraftBuilder");
+        list.style.display = "none"; builder.hidden = false; builder.textContent = "";
+        var back = document.createElement("button");
+        back.type = "button"; back.className = "la-back"; back.textContent = L("← All drafts", "← सभी ड्राफ्ट");
+        back.addEventListener("click", renderDraftList);
+        var h = document.createElement("h4"); h.textContent = LA_BUILDER.title;
+        builder.appendChild(back); builder.appendChild(h);
+        var sub = document.createElement("div");
+        sub.style.cssText = "font-size:.76rem;color:var(--muted);";
+        sub.textContent = L("Fill the details — your draft builds itself.", "विवरण भरें — आपका ड्राफ्ट स्वयं बन जाएगा।");
+        builder.appendChild(sub);
+        fields.forEach(function (f, idx) {
+          var wrap = document.createElement("div"); wrap.className = "la-field";
+          var lab = document.createElement("label"); lab.textContent = f.charAt(0) + f.slice(1).toLowerCase();
+          var inp = document.createElement("input"); inp.type = "text"; inp.id = "laField" + idx; inp.setAttribute("data-k", f);
+          inp.placeholder = f;
+          wrap.appendChild(lab); wrap.appendChild(inp); builder.appendChild(wrap);
+        });
+        var acts = document.createElement("div"); acts.className = "la-builder-actions";
+        var gen = document.createElement("button"); gen.type = "button"; gen.className = "la-generate";
+        gen.textContent = L("Generate Draft →", "ड्राफ्ट बनाएं →");
+        gen.addEventListener("click", generateFilled);
+        acts.appendChild(gen); builder.appendChild(acts);
+        var prev = document.createElement("div"); prev.className = "la-preview"; prev.id = "laPreview"; prev.hidden = true;
+        builder.appendChild(prev);
+        var pacts = document.createElement("div"); pacts.className = "la-preview-actions"; pacts.id = "laPreviewActions"; pacts.hidden = true;
+        var dl = document.createElement("button"); dl.type = "button"; dl.className = "la-dl"; dl.textContent = L("⬇ Download", "⬇ डाउनलोड");
+        dl.addEventListener("click", downloadFilled);
+        var pr = document.createElement("button"); pr.type = "button"; pr.className = "la-pr"; pr.textContent = L("🖨 Print", "🖨 प्रिंट");
+        pr.addEventListener("click", printFilled);
+        pacts.appendChild(dl); pacts.appendChild(pr); builder.appendChild(pacts);
+        builder.scrollTop = 0;
+      }
+      function filledText() {
+        var out = LA_BUILDER.tpl;
+        LA_BUILDER.fields.forEach(function (f, idx) {
+          var inp = document.getElementById("laField" + idx);
+          var v = inp ? inp.value.trim() : "";
+          if (v) out = out.split("[" + f + "]").join(v);
+        });
+        return out;
+      }
+      function generateFilled() {
+        var prev = document.getElementById("laPreview");
+        prev.textContent = filledText();
+        prev.hidden = false;
+        document.getElementById("laPreviewActions").hidden = false;
+        prev.scrollIntoView({ block: "nearest" });
+      }
+      function filledDocHTML() {
+        var body = esc(filledText()).replace(/\n/g, "<br>");
+        return "<!DOCTYPE html><html><head><meta charset=\"utf-8\"><title>" + esc(LA_BUILDER.title) + "</title><style>body{font-family:Georgia,serif;max-width:720px;margin:40px auto;padding:0 20px;line-height:1.8;color:#111}h1{font-size:1.3rem;text-align:center;margin-bottom:30px}.doc{white-space:pre-wrap}.foot{margin-top:40px;text-align:center;font-size:.8rem;color:#555;border-top:1px solid #ccc;padding-top:12px}</style></head><body><h1>" + esc(LA_BUILDER.title) + "</h1><div class=\"doc\">" + body + "</div><div class=\"foot\">A.K Legal Law \\u2014 Advocate Atul Kumar, Bulandshahr<br>" + esc(L("Generated with LawAssist", "LawAssist द्वारा तैयार")) + "</div></body></html>";
+      }
+      function downloadFilled() {
+        var blob = new Blob([filledDocHTML()], { type: "text/html;charset=utf-8" });
+        var a = document.createElement("a");
+        a.href = URL.createObjectURL(blob);
+        a.download = "lawassist-" + LA_BUILDER.id + "-" + laLang() + ".html";
+        document.body.appendChild(a); a.click();
+        setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 2000);
+      }
+      function printFilled() {
+        var w = window.open("", "_blank");
+        if (!w) return;
+        w.document.write(filledDocHTML());
+        w.document.close();
+        w.focus();
+        setTimeout(function () { w.print(); }, 400);
+      }
+
+      /* ---------------- My Cases (local case manager) ---------------- */
+      function loadCases() { try { return JSON.parse(localStorage.getItem("lawAssistCases") || "[]"); } catch (e) { return []; } }
+      function saveCases(c) { try { localStorage.setItem("lawAssistCases", JSON.stringify(c)); } catch (e) {} }
+      function renderCases() {
+        var list = document.getElementById("laCaseList");
+        list.textContent = "";
+        var cases = loadCases();
+        cases.sort(function (a, b) { return (a.nextDate || "9999").localeCompare(b.nextDate || "9999"); });
+        if (!cases.length) {
+          var e = document.createElement("div"); e.className = "la-empty";
+          e.textContent = L("No cases yet. Add your first case above — LawAssist will keep track of hearing dates.", "अभी कोई केस नहीं। ऊपर अपना पहला केस जोड़ें — LawAssist सुनवाई तिथियों का ध्यान रखेगा।");
+          list.appendChild(e); return;
+        }
+        var today = new Date().toISOString().slice(0, 10);
+        cases.forEach(function (c) {
+          var div = document.createElement("div");
+          div.className = "la-case" + (c.nextDate && c.nextDate <= today ? " soon" : "");
+          var st = document.createElement("strong"); st.textContent = c.title;
+          div.appendChild(st);
+          var meta = document.createElement("div"); meta.className = "la-case-meta";
+          var parts = [];
+          if (c.court) parts.push(c.court);
+          if (c.nextDate) {
+            var dstr = c.nextDate;
+            try { var dt = new Date(c.nextDate + "T00:00:00"); dstr = dt.toLocaleDateString(laLang() === "hi" ? "hi-IN" : "en-IN", { day: "numeric", month: "short", year: "numeric" }); } catch (e2) {}
+            parts.push((c.nextDate <= today ? L("⚠️ Next date: ", "⚠️ अगली तिथि: ") : L("Next date: ", "अगली तिथि: ")) + dstr);
+          }
+          meta.textContent = parts.join(" · ");
+          div.appendChild(meta);
+          if (c.notes) { var n = document.createElement("div"); n.className = "la-case-notes"; n.textContent = c.notes; div.appendChild(n); }
+          var del = document.createElement("button");
+          del.type = "button"; del.className = "la-case-del"; del.textContent = L("Remove", "हटाएं");
+          del.addEventListener("click", function () { saveCases(loadCases().filter(function (x) { return x.id !== c.id; })); renderCases(); });
+          div.appendChild(del);
+          list.appendChild(div);
+        });
+      }
+
+      /* ---------------- Panel / tabs / init ---------------- */
+      var greeted = false;
+      function applyLabels() {
+        var map = {
+          research: [L("Research", "रिसर्च"), "🔍"],
+          drafting: [L("Drafting", "ड्राफ्टिंग"), "📝"],
+          cases: [L("My Cases", "मेरे केस"), "📁"]
+        };
+        document.querySelectorAll("[data-la-tabname]").forEach(function (sp) {
+          var k = sp.getAttribute("data-la-tabname");
+          if (map[k]) sp.textContent = map[k][0];
+        });
+        var sub = document.getElementById("laSubtitle");
+        if (sub) sub.textContent = L("AI Legal Workspace", "AI विधिक कार्यक्षेत्र");
+        var inp = document.getElementById("laInput");
+        if (inp) inp.placeholder = L("Ask about law, drafts, judgements…", "कानून, ड्राफ्ट, निर्णयों के बारे में पूछें…");
+        var ds = document.getElementById("laDraftSearch");
+        if (ds) ds.placeholder = L("Search 119 drafts…", "119 ड्राफ्ट खोजें…");
+        var ct = document.getElementById("laCaseTitle");
+        if (ct) ct.placeholder = L("Case / client name *", "केस / मुवक्किल का नाम *");
+        var cc = document.getElementById("laCaseCourt");
+        if (cc) cc.placeholder = L("Court", "न्यायालय");
+        var cn = document.getElementById("laCaseNotes");
+        if (cn) cn.placeholder = L("Notes (optional)", "नोट्स (वैकल्पिक)");
+        var ca = document.getElementById("laCaseAdd");
+        if (ca) ca.textContent = L("+ Add Case", "+ केस जोड़ें");
+      }
+      function switchTab(name) {
+        document.querySelectorAll(".la-tab").forEach(function (b) {
+          var on = b.getAttribute("data-latab") === name;
+          b.classList.toggle("active", on);
+          b.setAttribute("aria-selected", on ? "true" : "false");
+        });
+        ["research", "drafting", "cases"].forEach(function (n) {
+          var p = document.getElementById("laPane" + n.charAt(0).toUpperCase() + n.slice(1));
+          if (p) p.hidden = (n !== name);
+        });
+        if (name === "drafting") renderDraftList();
+        if (name === "cases") renderCases();
+      }
+      function renderChips() {
+        var chips = document.getElementById("laChips");
+        chips.textContent = "";
+        CHIPS.forEach(function (c) {
+          var b = document.createElement("button");
+          b.type = "button"; b.className = "ai-chip"; b.textContent = c[laLang()];
+          b.addEventListener("click", function () { respond(c.en); });
+          chips.appendChild(b);
+        });
+      }
+      function openPanel() {
+        var panel = document.getElementById("lawAssistPanel");
+        panel.hidden = false;
+        applyLabels();
+        if (!greeted) {
+          greeted = true;
+          addMsg(L(
+            "Namaste! 🙏 I'm <b>LawAssist</b> — your AI legal workspace.<br><br>🔍 <b>Research</b> — ask any legal question, get answers with sources.<br>📝 <b>Drafting</b> — pick from 119 drafts, fill details, download.<br>📁 <b>My Cases</b> — track your cases & hearing dates.",
+            "नमस्ते! 🙏 मैं <b>LawAssist</b> हूं — आपका AI विधिक कार्यक्षेत्र।<br><br>🔍 <b>रिसर्च</b> — कोई भी कानूनी प्रश्न पूछें, स्रोतों सहित उत्तर पाएं।<br>📝 <b>ड्राफ्टिंग</b> — 119 ड्राफ्ट में से चुनें, विवरण भरें, डाउनलोड करें।<br>📁 <b>मेरे केस</b> — अपने केस व सुनवाई तिथियों का हिसाब रखें।"), "bot");
+        }
+        renderChips();
       }
       function init() {
-        var fab = document.getElementById("aiFab"), panel = document.getElementById("aiPanel");
+        var fab = document.getElementById("lawAssistFab"), panel = document.getElementById("lawAssistPanel");
         if (!fab || !panel) return;
-        var msgs = document.getElementById("aiMessages"), chips = document.getElementById("aiChips");
-        var greeted = false;
-        function openPanel() {
-          panel.hidden = false;
-          if (!greeted) {
-            greeted = true;
-            var L = lang();
-            addMsg(L === "hi"
-              ? "नमस्ते! 🙏 मैं आपका AI विधिक सहायक हूं। जमानत, FIR, चेक बाउंस, तलाक, संपत्ति — किसी भी विषय पर पूछें, मैं सही ड्राफ्ट ढूंढ दूंगा।"
-              : "Hello! 🙏 I'm your AI legal assistant. Ask about bail, FIR, cheque bounce, divorce, property — I'll find the right draft for you.", "bot");
-          }
-          renderChips();
-        }
-        function renderChips() {
-          var L = lang();
-          chips.textContent = "";
-          CHIPS.forEach(function (c) {
-            var b = document.createElement("button");
-            b.type = "button"; b.className = "ai-chip"; b.textContent = c[L];
-            b.addEventListener("click", function () { respond(c.en); });
-            chips.appendChild(b);
-          });
-        }
         fab.addEventListener("click", function () {
           if (panel.hidden) openPanel(); else panel.hidden = true;
         });
-        document.getElementById("aiClose").addEventListener("click", function () { panel.hidden = true; });
-        document.getElementById("aiForm").addEventListener("submit", function (e) {
+        document.getElementById("laClose").addEventListener("click", function () { panel.hidden = true; });
+        document.querySelectorAll(".la-tab").forEach(function (b) {
+          b.addEventListener("click", function () { switchTab(b.getAttribute("data-latab")); });
+        });
+        document.getElementById("laForm").addEventListener("submit", function (e) {
           e.preventDefault();
-          var inp = document.getElementById("aiInput");
-          var v = inp.value.trim();
+          var inp = document.getElementById("laInput"), v = inp.value.trim();
           if (v) { respond(v); inp.value = ""; }
+        });
+        var dsearch = document.getElementById("laDraftSearch");
+        if (dsearch) dsearch.addEventListener("input", renderDraftList);
+        document.getElementById("laCaseForm").addEventListener("submit", function (e) {
+          e.preventDefault();
+          var title = document.getElementById("laCaseTitle").value.trim();
+          if (!title) return;
+          var cases = loadCases();
+          cases.push({
+            id: "c" + Date.now(),
+            title: title,
+            court: document.getElementById("laCaseCourt").value.trim(),
+            nextDate: document.getElementById("laCaseDate").value,
+            notes: document.getElementById("laCaseNotes").value.trim()
+          });
+          saveCases(cases);
+          document.getElementById("laCaseTitle").value = "";
+          document.getElementById("laCaseCourt").value = "";
+          document.getElementById("laCaseDate").value = "";
+          document.getElementById("laCaseNotes").value = "";
+          renderCases();
+        });
+        // Re-apply labels when site language changes
+        document.querySelectorAll("[data-language]").forEach(function (b) {
+          b.addEventListener("click", function () { setTimeout(applyLabels, 300); });
         });
       }
       if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
       else init();
     })();
+
 
   </script>
   <script type="application/json" id="aiKnowledgeData">
