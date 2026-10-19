@@ -1032,6 +1032,9 @@
     .la-ai-draft textarea { width: 100%; box-sizing: border-box; border: 1px solid rgba(0,0,0,.25); border-radius: 8px; padding: 8px; font: inherit; font-size: .8rem; resize: vertical; }
     .la-ai-draft .la-generate { height: 40px; border-radius: 999px; font-weight: 700; font-size: .82rem; cursor: pointer; background: #111; color: #fff; border: 2px solid #111; }
     .la-ai-draft .la-preview { margin: 0; }
+    .la-doc-actions { display: flex; gap: 8px; }
+    .la-doc-actions .la-generate { flex: 1; }
+    a.la-copy { text-decoration: none; display: inline-block; }
     .la-copy { margin-top: 6px; font-size: .7rem; border: 1px solid rgba(0,0,0,.25); background: transparent; border-radius: 999px; padding: 3px 10px; cursor: pointer; color: #5a5a5a; }
     html[data-theme="dark"] .la-ai-draft { background: #141414; border-color: rgba(255,255,255,.15); }
     html[data-theme="dark"] .la-ai-draft-sub, html[data-theme="dark"] .la-copy { color: #b9b9b9; }
@@ -12887,6 +12890,8 @@
       <button type="button" class="la-tab active" data-latab="research" role="tab" aria-selected="true">🔍 <span data-la-tabname="research">Research</span></button>
       <button type="button" class="la-tab" data-latab="drafting" role="tab" aria-selected="false">📝 <span data-la-tabname="drafting">Drafting</span></button>
       <button type="button" class="la-tab" data-latab="cases" role="tab" aria-selected="false">📁 <span data-la-tabname="cases">My Cases</span></button>
+      <button type="button" class="la-tab" data-latab="docs" role="tab" aria-selected="false">📄 <span data-la-tabname="docs">Docs</span></button>
+      <button type="button" class="la-tab" data-latab="meetings" role="tab" aria-selected="false">🎙️ <span data-la-tabname="meetings">Meetings</span></button>
     </div>
     <div class="la-body">
       <section class="la-pane" id="laPaneResearch" role="tabpanel">
@@ -12913,6 +12918,36 @@
         <div id="laDraftList" class="la-draft-list"></div>
         <div id="laDraftBuilder" class="la-builder" hidden></div>
       </section>
+      <section class="la-pane" id="laPaneDocs" role="tabpanel" hidden>
+        <div class="la-ai-draft">
+          <div class="la-ai-draft-head">📄 <span id="laDocsTitle">Document Tools</span></div>
+          <p class="la-ai-draft-sub" id="laDocsSub">Paste legal text — AI will process it.</p>
+          <textarea id="laDocsInput" rows="4"></textarea>
+          <div class="la-doc-actions">
+            <button type="button" id="laDocsSum" class="la-generate">📝 <span id="laDocsSumTxt">Summarise</span></button>
+            <button type="button" id="laDocsTr" class="la-generate">🌐 <span id="laDocsTrTxt">Translate</span></button>
+            <button type="button" id="laDocsKey" class="la-generate">⭐ <span id="laDocsKeyTxt">Key Points</span></button>
+          </div>
+          <div id="laDocsOut" class="la-preview" hidden></div>
+          <div id="laDocsActions" class="la-preview-actions" hidden>
+            <button type="button" id="laDocsCopy" class="la-dl">📋 Copy</button>
+          </div>
+        </div>
+      </section>
+      <section class="la-pane" id="laPaneMeetings" role="tabpanel" hidden>
+        <div class="la-ai-draft">
+          <div class="la-ai-draft-head">🎙️ <span id="laMeetTitle">Meeting Assistant</span></div>
+          <p class="la-ai-draft-sub" id="laMeetSub">Paste meeting notes — AI makes the summary.</p>
+          <textarea id="laMeetInput" rows="4"></textarea>
+          <button type="button" id="laMeetBtn" class="la-generate">✨ <span id="laMeetBtnTxt">Generate Summary</span></button>
+          <div id="laMeetOut" class="la-preview" hidden></div>
+          <div id="laMeetActions" class="la-preview-actions" hidden>
+            <button type="button" id="laMeetSave" class="la-dl">💾 Save</button>
+            <button type="button" id="laMeetCopy" class="la-pr">📋 Copy</button>
+          </div>
+        </div>
+        <div id="laMeetList" class="la-draft-list"></div>
+      </section>
       <section class="la-pane" id="laPaneCases" role="tabpanel" hidden>
         <form id="laCaseForm" class="la-case-form">
           <input type="text" id="laCaseTitle" required maxlength="120" />
@@ -12921,6 +12956,10 @@
             <input type="date" id="laCaseDate" />
           </div>
           <input type="text" id="laCaseNotes" maxlength="200" />
+          <div class="la-row">
+            <input type="date" id="laCaseDeadline" />
+            <input type="text" id="laCaseDeadlineNote" maxlength="80" />
+          </div>
           <button type="submit" id="laCaseAdd">+ Add Case</button>
         </form>
         <div id="laCaseList" class="la-case-list"></div>
@@ -13245,6 +13284,11 @@
               } catch (e) {}
             });
             msgDiv.appendChild(cp);
+            var wa = document.createElement("a");
+            wa.className = "la-copy"; wa.target = "_blank"; wa.rel = "noopener";
+            wa.href = "https://wa.me/?text=" + encodeURIComponent(html);
+            wa.textContent = "💬 WhatsApp";
+            msgDiv.appendChild(wa);
           }
           try {
             var arr = JSON.parse(localStorage.getItem("laMissed") || "[]");
@@ -13373,6 +13417,99 @@
         setTimeout(function () { w.print(); }, 400);
       }
 
+      /* ---------------- Documents (AI document tools) ---------------- */
+      function docSystem(lang, mode) {
+        var base = lang === "hi"
+          ? "Aap LawAssist hain — Advocate Atul Kumar ki website ke AI document assistant. "
+          : "You are LawAssist — the AI document assistant on Advocate Atul Kumar's website. ";
+        if (mode === "sum") return base + (lang === "hi"
+          ? "Neeche diye gaye kanooni text ka sankshipt saransh Hindi me den (150 shabdon ke andar). Sirf saransh likhen, koi vyakhya nahi."
+          : "Summarise the legal text below in under 150 words. Write only the summary, no explanations.");
+        if (mode === "tr") return base + (lang === "hi"
+          ? "Neeche diye gaye English kanooni text ka sahi Hindi anuvad karen. Kanooni shabdavali sahi rakhen. Sirf anuvad likhen."
+          : "Translate the Hindi legal text below into accurate English. Keep legal terminology correct. Write only the translation.");
+        return base + (lang === "hi"
+          ? "Neeche diye gaye text ke mukhya bindu sankhya suchi me Hindi me den. Sirf suchi likhen."
+          : "List the key points of the text below as a numbered list. Write only the list.");
+      }
+      function docProcess(mode) {
+        var inp = document.getElementById("laDocsInput"), txt = inp.value.trim();
+        var out = document.getElementById("laDocsOut"), acts = document.getElementById("laDocsActions");
+        if (!txt) return;
+        var lang = laLang();
+        out.hidden = false; acts.hidden = true;
+        out.innerHTML = "<span class='la-dots'><span></span><span></span><span></span></span>";
+        aiAsk(txt.slice(0, 4000), lang, docSystem(lang, mode), 600, function (res) {
+          if (res) { out.textContent = res; acts.hidden = false; }
+          else out.textContent = L("Document processing is unavailable right now.", "दस्तावेज़ प्रसंस्करण अभी उपलब्ध नहीं है।");
+          try { out.scrollIntoView({ block: "nearest" }); } catch (e) {}
+        });
+      }
+      function docCopy() {
+        var out = document.getElementById("laDocsOut");
+        try {
+          if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(out.textContent);
+        } catch (e) {}
+      }
+
+      /* ---------------- Meetings (AI meeting assistant) ---------------- */
+      var LA_MEET_TXT = "";
+      function meetSystem(lang) {
+        return lang === "hi"
+          ? "Aap LawAssist hain — Advocate Atul Kumar ki website ke AI meeting assistant. Neeche diye gaye meeting notes ka structured summary Hindi me banayen: 1) मुख्य बिंदु 2) कार्यवाही — kaun kya karega 3) अगले चरण. Sankshipt aur spasht likhen."
+          : "You are LawAssist — the AI meeting assistant on Advocate Atul Kumar's website. Make a structured summary of the meeting notes below in English: 1) Key points 2) Action items — who does what 3) Next steps. Keep it concise and clear.";
+      }
+      function meetGenerate() {
+        var inp = document.getElementById("laMeetInput"), txt = inp.value.trim();
+        var out = document.getElementById("laMeetOut"), acts = document.getElementById("laMeetActions");
+        if (!txt) return;
+        var lang = laLang();
+        out.hidden = false; acts.hidden = true;
+        out.innerHTML = "<span class='la-dots'><span></span><span></span><span></span></span>";
+        aiAsk(txt.slice(0, 4000), lang, meetSystem(lang), 600, function (res) {
+          if (res) { LA_MEET_TXT = res; out.textContent = res; acts.hidden = false; }
+          else out.textContent = L("Meeting summary is unavailable right now.", "मीटिंग सारांश अभी उपलब्ध नहीं है।");
+          try { out.scrollIntoView({ block: "nearest" }); } catch (e) {}
+        });
+      }
+      function loadMeets() { try { return JSON.parse(localStorage.getItem("lawAssistMeets") || "[]"); } catch (e) { return []; } }
+      function saveMeets(m) { try { localStorage.setItem("lawAssistMeets", JSON.stringify(m)); } catch (e) {} }
+      function renderMeets() {
+        var list = document.getElementById("laMeetList");
+        if (!list) return;
+        list.textContent = "";
+        var ms = loadMeets();
+        if (!ms.length) {
+          var e = document.createElement("div"); e.className = "la-empty";
+          e.textContent = L("No saved meetings yet.", "अभी कोई सहेजी हुई मीटिंग नहीं।");
+          list.appendChild(e); return;
+        }
+        ms.forEach(function (m, idx) {
+          var div = document.createElement("div"); div.className = "la-case";
+          var st = document.createElement("strong"); st.textContent = m.title;
+          var pv = document.createElement("div");
+          pv.style.cssText = "font-size:.76rem;white-space:pre-wrap;margin-top:6px;";
+          pv.textContent = m.text.slice(0, 300);
+          var rm = document.createElement("button"); rm.type = "button"; rm.className = "la-copy";
+          rm.textContent = "✕ " + L("Remove", "हटाएं");
+          rm.addEventListener("click", function () { var a = loadMeets(); a.splice(idx, 1); saveMeets(a); renderMeets(); });
+          div.appendChild(st); div.appendChild(pv); div.appendChild(rm);
+          list.appendChild(div);
+        });
+      }
+      function meetSave() {
+        if (!LA_MEET_TXT) return;
+        var ms = loadMeets(), d = new Date();
+        var tstr = d.toLocaleDateString() + " " + d.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+        ms.unshift({ title: L("Meeting", "मीटिंग") + " — " + tstr, text: LA_MEET_TXT });
+        saveMeets(ms.slice(0, 20)); renderMeets();
+      }
+      function meetCopy() {
+        try {
+          if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(LA_MEET_TXT);
+        } catch (e) {}
+      }
+
       /* ---------------- My Cases (local case manager) ---------------- */
       function loadCases() { try { return JSON.parse(localStorage.getItem("lawAssistCases") || "[]"); } catch (e) { return []; } }
       function saveCases(c) { try { localStorage.setItem("lawAssistCases", JSON.stringify(c)); } catch (e) {} }
@@ -13400,6 +13537,12 @@
             try { var dt = new Date(c.nextDate + "T00:00:00"); dstr = dt.toLocaleDateString(laLang() === "hi" ? "hi-IN" : "en-IN", { day: "numeric", month: "short", year: "numeric" }); } catch (e2) {}
             parts.push((c.nextDate <= today ? L("⚠️ Next date: ", "⚠️ अगली तिथि: ") : L("Next date: ", "अगली तिथि: ")) + dstr);
           }
+          if (c.deadline) {
+            var dlstr = c.deadline;
+            try { var ddt = new Date(c.deadline + "T00:00:00"); dlstr = ddt.toLocaleDateString(laLang() === "hi" ? "hi-IN" : "en-IN", { day: "numeric", month: "short", year: "numeric" }); } catch (e2) {}
+            parts.push((c.deadline <= today ? L("⏰ Deadline: ", "⏰ डेडलाइन: ") : L("Deadline: ", "डेडलाइन: ")) + dlstr + (c.deadlineNote ? " (" + c.deadlineNote + ")" : ""));
+            if (c.deadline <= today) div.className += " soon";
+          }
           meta.textContent = parts.join(" · ");
           div.appendChild(meta);
           if (c.notes) { var n = document.createElement("div"); n.className = "la-case-notes"; n.textContent = c.notes; div.appendChild(n); }
@@ -13417,7 +13560,9 @@
         var map = {
           research: [L("Research", "रिसर्च"), "🔍"],
           drafting: [L("Drafting", "ड्राफ्टिंग"), "📝"],
-          cases: [L("My Cases", "मेरे केस"), "📁"]
+          cases: [L("My Cases", "मेरे केस"), "📁"],
+          docs: [L("Docs", "दस्तावेज़"), "📄"],
+          meetings: [L("Meetings", "मीटिंग"), "🎙️"]
         };
         document.querySelectorAll("[data-la-tabname]").forEach(function (sp) {
           var k = sp.getAttribute("data-la-tabname");
@@ -13445,6 +13590,28 @@
         if (adi) adi.placeholder = L("e.g. Bail application for theft case, accused in custody 10 days…", "जैसे: चोरी के मामले में जमानत अर्जी, अभियुक्त 10 दिन से हिरासत में…");
         var adbt = document.getElementById("laAiDraftBtnTxt");
         if (adbt) adbt.textContent = L("Generate with AI", "AI से बनाएं");
+        var dct = document.getElementById("laDocsTitle");
+        if (dct) dct.textContent = L("Document Tools", "दस्तावेज़ उपकरण");
+        var dcs = document.getElementById("laDocsSub");
+        if (dcs) dcs.textContent = L("Paste legal text — AI will process it.", "कानूनी टेक्स्ट पेस्ट करें — AI प्रसंस्करण करेगा।");
+        var dci = document.getElementById("laDocsInput");
+        if (dci) dci.placeholder = L("Paste judgement, notice, or any legal text…", "निर्णय, नोटिस या कोई कानूनी टेक्स्ट पेस्ट करें…");
+        var dst = document.getElementById("laDocsSumTxt");
+        if (dst) dst.textContent = L("Summarise", "सारांश");
+        var dtt = document.getElementById("laDocsTrTxt");
+        if (dtt) dtt.textContent = L("Translate", "अनुवाद");
+        var dkt = document.getElementById("laDocsKeyTxt");
+        if (dkt) dkt.textContent = L("Key Points", "मुख्य बिंदु");
+        var mtt = document.getElementById("laMeetTitle");
+        if (mtt) mtt.textContent = L("Meeting Assistant", "मीटिंग सहायक");
+        var mts = document.getElementById("laMeetSub");
+        if (mts) mts.textContent = L("Paste meeting notes — AI makes the summary.", "मीटिंग नोट्स पेस्ट करें — AI सारांश बनाएगा।");
+        var mti = document.getElementById("laMeetInput");
+        if (mti) mti.placeholder = L("Paste client meeting / chamber discussion notes…", "मुवक्किल मीटिंग / चेंबर चर्चा के नोट्स पेस्ट करें…");
+        var mbt = document.getElementById("laMeetBtnTxt");
+        if (mbt) mbt.textContent = L("Generate Summary", "सारांश बनाएं");
+        var cdn = document.getElementById("laCaseDeadlineNote");
+        if (cdn) cdn.placeholder = L("Deadline note (optional)", "डेडलाइन नोट (वैकल्पिक)");
       }
       function switchTab(name) {
         document.querySelectorAll(".la-tab").forEach(function (b) {
@@ -13452,12 +13619,13 @@
           b.classList.toggle("active", on);
           b.setAttribute("aria-selected", on ? "true" : "false");
         });
-        ["research", "drafting", "cases"].forEach(function (n) {
+        ["research", "drafting", "cases", "docs", "meetings"].forEach(function (n) {
           var p = document.getElementById("laPane" + n.charAt(0).toUpperCase() + n.slice(1));
           if (p) p.hidden = (n !== name);
         });
         if (name === "drafting") renderDraftList();
         if (name === "cases") renderCases();
+        if (name === "meetings") renderMeets();
       }
       function renderChips() {
         var chips = document.getElementById("laChips");
@@ -13476,8 +13644,8 @@
         if (!greeted) {
           greeted = true;
           addMsg(L(
-            "Namaste! 🙏 I'm <b>LawAssist</b> — your AI legal workspace.<br><br>🔍 <b>Research</b> — ask any legal question, get answers with sources.<br>📝 <b>Drafting</b> — pick from 119 drafts, fill details, download, or let AI draft it.<br>📁 <b>My Cases</b> — track your cases & hearing dates.",
-            "नमस्ते! 🙏 मैं <b>LawAssist</b> हूं — आपका AI विधिक कार्यक्षेत्र।<br><br>🔍 <b>रिसर्च</b> — कोई भी कानूनी प्रश्न पूछें, स्रोतों सहित उत्तर पाएं।<br>📝 <b>ड्राफ्टिंग</b> — 119 ड्राफ्ट में से चुनें, विवरण भरें, डाउनलोड करें, या AI से ड्राफ्ट बनवाएं।<br>📁 <b>मेरे केस</b> — अपने केस व सुनवाई तिथियों का हिसाब रखें।"), "bot");
+            "Namaste! 🙏 I'm <b>LawAssist</b> — your AI legal workspace.<br><br>🔍 <b>Research</b> — ask any legal question, get answers with sources.<br>📝 <b>Drafting</b> — pick from 119 drafts, fill details, download, or let AI draft it.<br>📁 <b>My Cases</b> — track your cases, hearing dates & deadlines.<br>📄 <b>Docs</b> — summarise, translate & extract key points from legal text.<br>🎙️ <b>Meetings</b> — turn meeting notes into summaries & action items.",
+            "नमस्ते! 🙏 मैं <b>LawAssist</b> हूं — आपका AI विधिक कार्यक्षेत्र।<br><br>🔍 <b>रिसर्च</b> — कोई भी कानूनी प्रश्न पूछें, स्रोतों सहित उत्तर पाएं।<br>📝 <b>ड्राफ्टिंग</b> — 119 ड्राफ्ट में से चुनें, विवरण भरें, डाउनलोड करें, या AI से ड्राफ्ट बनवाएं।<br>📁 <b>मेरे केस</b> — केस, सुनवाई तिथि व डेडलाइन का हिसाब रखें।<br>📄 <b>दस्तावेज़</b> — कानूनी टेक्स्ट का सारांश, अनुवाद व मुख्य बिंदु।<br>🎙️ <b>मीटिंग</b> — मीटिंग नोट्स से सारांश व कार्यवाही बनाएं।"), "bot");
         }
         renderChips();
       }
@@ -13504,6 +13672,20 @@
         if (adl) adl.addEventListener("click", aiDraftDownload);
         var apr = document.getElementById("laAiDraftPr");
         if (apr) apr.addEventListener("click", aiDraftPrint);
+        var dsum = document.getElementById("laDocsSum");
+        if (dsum) dsum.addEventListener("click", function () { docProcess("sum"); });
+        var dtr = document.getElementById("laDocsTr");
+        if (dtr) dtr.addEventListener("click", function () { docProcess("tr"); });
+        var dkey = document.getElementById("laDocsKey");
+        if (dkey) dkey.addEventListener("click", function () { docProcess("key"); });
+        var dcp = document.getElementById("laDocsCopy");
+        if (dcp) dcp.addEventListener("click", docCopy);
+        var mbtn = document.getElementById("laMeetBtn");
+        if (mbtn) mbtn.addEventListener("click", meetGenerate);
+        var msv = document.getElementById("laMeetSave");
+        if (msv) msv.addEventListener("click", meetSave);
+        var mcp = document.getElementById("laMeetCopy");
+        if (mcp) mcp.addEventListener("click", meetCopy);
         document.getElementById("laCaseForm").addEventListener("submit", function (e) {
           e.preventDefault();
           var title = document.getElementById("laCaseTitle").value.trim();
@@ -13514,13 +13696,17 @@
             title: title,
             court: document.getElementById("laCaseCourt").value.trim(),
             nextDate: document.getElementById("laCaseDate").value,
-            notes: document.getElementById("laCaseNotes").value.trim()
+            notes: document.getElementById("laCaseNotes").value.trim(),
+            deadline: document.getElementById("laCaseDeadline").value,
+            deadlineNote: document.getElementById("laCaseDeadlineNote").value.trim()
           });
           saveCases(cases);
           document.getElementById("laCaseTitle").value = "";
           document.getElementById("laCaseCourt").value = "";
           document.getElementById("laCaseDate").value = "";
           document.getElementById("laCaseNotes").value = "";
+          document.getElementById("laCaseDeadline").value = "";
+          document.getElementById("laCaseDeadlineNote").value = "";
           renderCases();
         });
         // Re-apply labels when site language changes
