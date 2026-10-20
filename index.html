@@ -1406,6 +1406,12 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
       .hero-content { padding: 24px 0 36px !important; }
     }
 
+    /* Header/nav text is not selectable: dragging a text selection up into the fixed
+       header no longer paints the nav blue. The search box stays fully usable.
+       (Raised by Atul from his screen recording, 2026-10-20) */
+    .masthead { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
+    .masthead input, .masthead textarea { -webkit-user-select: text; user-select: text; }
+
 </style>
 
 </head>
