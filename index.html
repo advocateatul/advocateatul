@@ -1413,10 +1413,8 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
     .masthead input, .masthead textarea { -webkit-user-select: text; user-select: text; }
     .masthead ::selection { background: transparent !important; background-color: transparent !important; }
     .masthead input::selection, .masthead textarea::selection { background: transparent !important; background-color: transparent !important; }
-    /* Whole page (Atul's choice, 2026-10-20): text still selects and copies normally,
-       but the blue highlight colour never paints anywhere on the site. */
-    ::selection { background: transparent !important; background-color: transparent !important; }
-    ::-moz-selection { background: transparent !important; background-color: transparent !important; }
+    /* Atul's final rule (2026-10-20): the selected text itself keeps its normal blue
+       highlight — only the header is protected above, so the blue can never spread there. */
     html { -webkit-tap-highlight-color: transparent; }
 
 </style>
