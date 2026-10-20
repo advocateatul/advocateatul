@@ -1411,12 +1411,13 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
        (Raised by Atul from his screen recording, 2026-10-20) */
     .masthead { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
     .masthead input, .masthead textarea { -webkit-user-select: text; user-select: text; }
-    .masthead ::selection { background: transparent; }
-    .masthead input::selection, .masthead textarea::selection { background: transparent; }
+    .masthead ::selection { background: transparent !important; background-color: transparent !important; }
+    .masthead input::selection, .masthead textarea::selection { background: transparent !important; background-color: transparent !important; }
     /* Whole page (Atul's choice, 2026-10-20): text still selects and copies normally,
        but the blue highlight colour never paints anywhere on the site. */
-    ::selection { background: transparent; }
-    ::-moz-selection { background: transparent; }
+    ::selection { background: transparent !important; background-color: transparent !important; }
+    ::-moz-selection { background: transparent !important; background-color: transparent !important; }
+    html { -webkit-tap-highlight-color: transparent; }
 
 </style>
 
