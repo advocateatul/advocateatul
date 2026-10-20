@@ -677,6 +677,7 @@
 
     .reveal { opacity: 1; transform: none; }
     .motion-ready .reveal.visible { animation: soft-reveal .5s cubic-bezier(0.22, 1, 0.36, 1) backwards; }
+    .motion-ready .reveal.visible.no-anim { animation: none; }
     @keyframes soft-reveal {
       from { opacity: 0; transform: translateY(26px) scale(.985); }
       to { opacity: 1; transform: none; }
@@ -12923,6 +12924,20 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
           });
         }
       })();
+      /* Fast-scroll guard (video review 2026-10-20): while the user scrolls fast,
+         reveal animations are skipped for newly entering items so long lists never
+         look blank or washed out; gentle scrolling keeps the full animation. */
+      window.__fastScroll = false;
+      (function () {
+        var lastY = window.scrollY || 0, lastT = performance.now(), fsTimer = null;
+        window.addEventListener("scroll", function () {
+          var now = performance.now(), y = window.scrollY || 0, dt = now - lastT;
+          if (dt > 0 && Math.abs(y - lastY) / dt > 0.9) window.__fastScroll = true;
+          lastY = y; lastT = now;
+          if (fsTimer) clearTimeout(fsTimer);
+          fsTimer = setTimeout(function () { window.__fastScroll = false; }, 150);
+        }, { passive: true });
+      })();
       var reveals = document.querySelectorAll(".reveal");
       if ("IntersectionObserver" in window && !reduceMotion) {
         document.documentElement.classList.add("motion-ready");
@@ -12934,14 +12949,16 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
               if (parent) {
                 var sibs = parent.querySelectorAll(":scope > .reveal");
                 var idx = Array.prototype.indexOf.call(sibs, el);
-                if (idx > 0) el.style.animationDelay = Math.min(idx, 4) * 45 + "ms";
+                if (idx > 0) el.style.animationDelay = Math.min(idx, 3) * 40 + "ms";
               }
+              if (window.__fastScroll) el.classList.add("no-anim"); else el.classList.remove("no-anim");
               el.classList.add("visible");
             } else if (el.classList.contains("visible")) {
               el.classList.remove("visible");
+              el.classList.remove("no-anim");
             }
           });
-        }, { threshold: 0.08, rootMargin: "0px 0px 160px 0px" });
+        }, { threshold: 0.08, rootMargin: "220px 0px 280px 0px" });
         reveals.forEach(function (element) {
           if (element.classList.contains("hub-card")) return; /* hubStagger owns hub cards */
           observer.observe(element);
