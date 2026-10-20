@@ -1395,6 +1395,16 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
 .la-login-nudge{display:inline-block;margin-top:10px;background:#0c0c0c;color:#fff;border:none;border-radius:999px;padding:8px 16px;font-size:.82rem;font-weight:600;cursor:pointer}
 .la-login-nudge:hover{background:#222}
 @media (max-width:640px){.auth-btn{padding:7px 12px;font-size:.78rem}}
+
+    /* Mobile hero layout — Option B (photo on top, text below). Chosen by Atul 2026-10-20. */
+    @media (max-width: 820px) {
+      .hero { min-height: 0 !important; display: block !important; }
+      .hero-image { position: relative !important; inset: auto !important; height: 290px; margin: 128px 15px 0; border-radius: 18px; overflow: hidden; }
+      .hero-image img { width: 100% !important; height: 100% !important; object-fit: cover; object-position: 50% 28% !important; }
+      .hero-image::after { display: none !important; }
+      .hero-content { padding: 24px 0 36px !important; }
+    }
+
 </style>
 
 </head>
