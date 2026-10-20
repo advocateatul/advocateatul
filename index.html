@@ -1416,6 +1416,8 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
     /* Atul's final rule (2026-10-20): the selected text itself keeps its normal blue
        highlight — only the header is protected above, so the blue can never spread there. */
     html { -webkit-tap-highlight-color: transparent; }
+    .lawassist-fab { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
+    .lawassist-fab ::selection { background: transparent !important; background-color: transparent !important; }
 
 </style>
 
