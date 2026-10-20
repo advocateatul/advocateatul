@@ -1,0 +1,10 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "io.github.advocateatul.app",
+      "sha256_cert_fingerprints": ["93:C7:74:FC:4B:F7:DE:1A:BF:CC:DF:FB:DF:19:8C:DA:89:18:9C:18:89:E4:8A:FF:01:79:67:E2:B1:5D:14:63"]
+    }
+  }
+]
