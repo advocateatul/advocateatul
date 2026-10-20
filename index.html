@@ -972,8 +972,9 @@
     html[data-theme="dark"] .section-search input:focus { border-color: #f0f0f0; box-shadow: 0 0 0 3px rgba(255,255,255,.1); }
 
       /* LawAssist — AI Legal Workspace */
-    .lawassist-fab { position: fixed; right: 18px; bottom: 18px; z-index: 500; display: flex; align-items: center; gap: 8px; height: 54px; padding: 0 20px; border: 2px solid #000; border-radius: 999px; background: #111; color: #fff; font: 700 .95rem/1 var(--sans); cursor: pointer; box-shadow: 0 8px 24px rgba(0,0,0,.25); transform: translateZ(0); transition: transform .15s cubic-bezier(0.22, 1, 0.36, 1); }
+    .lawassist-fab { position: fixed; right: 18px; bottom: 18px; z-index: 500; display: flex; align-items: center; justify-content: center; gap: 0; width: 54px; height: 54px; padding: 0; border: 2px solid #000; border-radius: 50%; background: #111; color: #fff; font: 700 .95rem/1 var(--sans); cursor: pointer; box-shadow: 0 8px 24px rgba(0,0,0,.25); transform: translateZ(0); transition: transform .15s cubic-bezier(0.22, 1, 0.36, 1); }
     .lawassist-fab:hover { transform: translateY(-2px) translateZ(0); }
+    .lawassist-fab-label { display: none; } /* Round icon-only FAB — chosen by Atul 2026-10-20 */
     .lawassist-fab span[aria-hidden="true"] { font-size: 1.3rem; }
     .lawassist-panel { position: fixed; right: 18px; bottom: 84px; z-index: 501; width: min(420px, calc(100vw - 36px)); height: min(600px, calc(100vh - 120px)); display: flex; flex-direction: column; background: #fff; border: 2px solid #000; border-radius: 18px; box-shadow: 0 24px 64px rgba(0,0,0,.3); overflow: hidden; }
     .lawassist-panel[hidden] { display: none; }
