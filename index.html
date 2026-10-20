@@ -12968,7 +12968,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
               el.classList.remove("no-anim");
             }
           });
-        }, { threshold: 0.08, rootMargin: "220px 0px 280px 0px" });
+        }, { threshold: 0, rootMargin: "220px 0px 280px 0px" });
         reveals.forEach(function (element) {
           if (element.classList.contains("hub-card")) return; /* hubStagger owns hub cards */
           observer.observe(element);
