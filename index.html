@@ -1510,59 +1510,12 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
           <p class="hero-copy" data-i18n="heroCopy">Focused criminal-law guidance built on careful preparation, direct communication and respect for every matter entrusted to the practice.</p>
           <div class="hero-actions">
             <a class="button primary" href="#contact"><span data-i18n="requestConsultation">Request a consultation</span> <span aria-hidden="true">→</span></a>
-            <a class="button ghost" href="#practice" data-i18n="explorePractice">Explore practice area</a>
           </div>
         </div>
         <aside class="hero-note">
           <strong data-i18n="professionalProfile">Professional profile</strong>
           <span id="profileSummary">Criminal Lawyer · 2 years’ experience · Bulandshahr District Court</span>
         </aside>
-      </div>
-    </section>
-
-    <section class="intro" aria-labelledby="intro-title">
-      <div class="shell intro-grid">
-        <div class="section-index reveal"><span>01</span><br /><span data-i18n="thePractice">The practice</span></div>
-        <div class="intro-copy reveal">
-          <h2 id="intro-title" data-i18n="introTitle">Law explained without the noise.</h2>
-          <p data-i18n="introCopy">Every criminal matter begins with listening. The practice focuses on understanding the facts, identifying the legal and procedural risks, and setting out a practical route forward.</p>
-          <div class="principles">
-            <div class="principle"><strong data-i18n="plainAdvice">Plain advice</strong><span data-i18n="plainAdviceCopy">Options, obligations and next steps explained clearly.</span></div>
-            <div class="principle"><strong data-i18n="thoughtfulStrategy">Thoughtful strategy</strong><span data-i18n="thoughtfulStrategyCopy">Preparation shaped around the facts of each matter.</span></div>
-            <div class="principle"><strong data-i18n="responsiveCounsel">Responsive counsel</strong><span data-i18n="responsiveCounselCopy">Timely updates at the stages that matter.</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="practice" id="practice" aria-labelledby="practice-title">
-      <div class="shell">
-        <div class="practice-heading reveal">
-          <div>
-            <p class="kicker" data-i18n="areaOfPractice">Area of practice</p>
-            <h2 id="practice-title" data-i18n="practiceTitle">Focused criminal-law support.</h2>
-          </div>
-          <p data-i18n="practiceCopy">Independent representation and procedural guidance for criminal-law matters.</p>
-        </div>
-        <div class="section-search reveal" role="search">
-          <input type="search" id="practiceSectionSearch" data-i18n-ph="sectionSearchPh" placeholder="Search this section…" aria-label="Search Practice Areas" autocomplete="off" />
-        </div>
-        <div class="practice-list" id="practiceList"></div>
-      </div>
-    </section>
-
-    <section class="process" id="approach" aria-labelledby="process-title">
-      <div class="shell process-grid">
-        <div class="process-head reveal">
-          <span class="section-index">02</span>
-          <h2 id="process-title" data-i18n="processTitle">A deliberate path from facts to action.</h2>
-          <p data-i18n="processCopy">A simple, transparent structure keeps each matter focused and keeps the client informed.</p>
-        </div>
-        <div class="steps">
-          <article class="step reveal"><div><h3 data-i18n="stepOneTitle">Initial conference</h3><p data-i18n="stepOneCopy">Understand the background, urgency and desired outcome. Identify the documents needed for a meaningful first review.</p></div></article>
-          <article class="step reveal"><div><h3 data-i18n="stepTwoTitle">Legal assessment</h3><p data-i18n="stepTwoCopy">Review the record, applicable law and procedural position before outlining realistic options.</p></div></article>
-          <article class="step reveal"><div><h3 data-i18n="stepThreeTitle">Strategy &amp; representation</h3><p data-i18n="stepThreeCopy">Agree on the course of action, prepare thoroughly and communicate at each material stage.</p></div></article>
-        </div>
       </div>
     </section>
 
@@ -10810,7 +10763,6 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
 
 
       var currentLanguage = "en";
-      var practiceList = document.getElementById("practiceList");
       var gate = document.getElementById("documentGate");
       var gateForm = document.getElementById("gateForm");
       var gateInput = document.getElementById("documentPassword");
@@ -12486,25 +12438,6 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
         }
       }
 
-      function renderPracticeAreas() {
-        practiceList.textContent = "";
-        SETTINGS.practiceAreas.forEach(function (area, index) {
-          var article = document.createElement("article");
-          article.className = "practice-item reveal";
-          var number = document.createElement("span");
-          number.className = "num";
-          number.textContent = String(index + 1).padStart(2, "0");
-          var title = document.createElement("h3");
-          title.textContent = currentLanguage === "hi" ? area.titleHi : area.titleEn;
-          var description = document.createElement("p");
-          description.textContent = currentLanguage === "hi" ? area.descriptionHi : area.descriptionEn;
-          article.appendChild(number);
-          article.appendChild(title);
-          article.appendChild(description);
-          practiceList.appendChild(article);
-        });
-      }
-
       function applyLanguage(language) {
         currentLanguage = language === "hi" ? "hi" : "en";
         document.documentElement.lang = currentLanguage;
@@ -12526,7 +12459,6 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
         document.getElementById("footerIdentity").textContent = SETTINGS.websiteDomain + " · " + SETTINGS.siteName + " · " + (currentLanguage === "hi" ? "आपराधिक अधिवक्ता" : SETTINGS.profession);
         passwordHint.textContent = SETTINGS.passwordHint[currentLanguage] || SETTINGS.passwordHint.en;
         gateInput.placeholder = currentLanguage === "hi" ? "पासवर्ड" : "Password";
-        renderPracticeAreas();
         renderActiveUpdatesTab();
         renderLibrary();
         renderHub();
@@ -13030,7 +12962,6 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
           });
         });
       }
-      sectionFilter("practiceSectionSearch", ".practice-item", "practiceList");
       sectionFilter("updatesSectionSearch", ".update-item", "updatesList");
       sectionFilter("knowledgeSectionSearch", ".hub-card", "knowledge");
       sectionFilter("documentsSectionSearch", ".drive-folder, .drive-tab", "documents");
