@@ -3,6 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="A.K Legal Law" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <style>@media (display-mode: standalone) { #installAppBtn { display: none !important; } }</style>
   <!-- v163-rebuild -->
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="color-scheme" content="light dark" />
@@ -1450,6 +1458,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
             <a href="https://ecourts.gov.in/" target="_blank" rel="noopener" role="menuitem">eCourts</a>
             <a href="#contact" role="menuitem" data-i18n="navConsultation">Consultation</a>
             <button type="button" id="requestBtn" role="menuitem" data-i18n="navRequest">📝 Request a Draft</button>
+            <button type="button" id="installAppBtn" role="menuitem" data-i18n="navInstall" hidden>📲 Install App</button>
             <div class="nav-more-sep" role="separator"></div>
             <div class="nav-more-label" data-i18n="navHubCats">Knowledge Hub Categories</div>
             <button type="button" class="hub-jump" data-hub-tab="acts" role="menuitem"><span class="hj-ic" aria-hidden="true">📜</span><span data-i18n="hubTabActs">Bare Acts</span></button>
@@ -10398,6 +10407,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
           hubResultDrafts: "Legal drafts",
           navConsultation: "Consultation",
           navRequest: "📝 Request a Draft",
+          navInstall: "📲 Install App",
           navHubCats: "Knowledge Hub Categories",
           reqTitle: "📝 Request a Draft / Information",
           reqSub: "Can't find a draft or legal information on this website? Tell us — we'll add it for you.",
@@ -10608,6 +10618,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
           hubResultDrafts: "\u0915\u093e\u0928\u0942\u0928\u0940 \u092a\u094d\u0930\u093e\u0930\u0942\u092a",
           navConsultation: "परामर्श",
           navRequest: "📝 प्रारूप का अनुरोध",
+          navInstall: "📲 ऐप इंस्टॉल करें",
           navHubCats: "नॉलेज हब श्रेणियां",
           reqTitle: "📝 प्रारूप / जानकारी का अनुरोध",
           reqSub: "इस वेबसाइट पर कोई प्रारूप या कानूनी जानकारी नहीं मिली? हमें बताएं — हम आपके लिए जोड़ देंगे।",
@@ -14360,5 +14371,45 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
 })();
 
 </script>
+    <script>
+      (function () {
+        if ("serviceWorker" in navigator) {
+          window.addEventListener("load", function () {
+            navigator.serviceWorker.register("sw.js").catch(function () {});
+          });
+        }
+        var deferredPrompt = null;
+        function installBtn() { return document.getElementById("installAppBtn"); }
+        window.addEventListener("beforeinstallprompt", function (e) {
+          e.preventDefault();
+          deferredPrompt = e;
+          var b = installBtn(); if (b) b.hidden = false;
+        });
+        window.addEventListener("appinstalled", function () {
+          deferredPrompt = null;
+          var b = installBtn(); if (b) b.hidden = true;
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+          var b = installBtn();
+          if (!b) return;
+          // prompt pehle aa chuka ho to button dikhao; warna click par manual guide milega
+          b.addEventListener("click", function () {
+            var menu = document.getElementById("navMoreMenu");
+            if (menu) menu.hidden = true;
+            var nb = document.getElementById("navMoreBtn");
+            if (nb) nb.setAttribute("aria-expanded", "false");
+            if (deferredPrompt) {
+              deferredPrompt.prompt();
+              deferredPrompt.userChoice.then(function () { deferredPrompt = null; });
+            } else {
+              var hi = (document.documentElement.getAttribute("lang") || "").indexOf("hi") === 0;
+              alert(hi
+                ? "ऐप इंस्टॉल करने के लिए: ब्राउज़र मेनू (⋮) खोलें और 'ऐप इंस्टॉल करें' या 'होम स्क्रीन पर जोड़ें' पर टैप करें।"
+                : "To install the app: open your browser menu (\u22EE) and tap 'Install app' or 'Add to Home screen'.");
+            }
+          });
+        });
+      })();
+    </script>
 </body>
 </html>
