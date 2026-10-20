@@ -12950,13 +12950,17 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
       })();
       /* Fast-scroll guard (video review 2026-10-20): while the user scrolls fast,
          reveal animations are skipped for newly entering items so long lists never
-         look blank or washed out; gentle scrolling keeps the full animation. */
+         look blank or washed out; gentle scrolling keeps the full animation.
+         The skip also applies while a text selection is active, so scrolling
+         during drag-selection stays smooth on weak phones (owner report 2026-10-20). */
       window.__fastScroll = false;
       (function () {
         var lastY = window.scrollY || 0, lastT = performance.now(), fsTimer = null;
         window.addEventListener("scroll", function () {
           var now = performance.now(), y = window.scrollY || 0, dt = now - lastT;
           if (dt > 0 && Math.abs(y - lastY) / dt > 0.9) window.__fastScroll = true;
+          var selNow = window.getSelection();
+          if (selNow && !selNow.isCollapsed) window.__fastScroll = true;
           lastY = y; lastT = now;
           if (fsTimer) clearTimeout(fsTimer);
           fsTimer = setTimeout(function () { window.__fastScroll = false; }, 150);
