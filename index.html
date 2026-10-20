@@ -1413,6 +1413,10 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
     .masthead input, .masthead textarea { -webkit-user-select: text; user-select: text; }
     .masthead ::selection { background: transparent; }
     .masthead input::selection, .masthead textarea::selection { background: transparent; }
+    /* Whole page (Atul's choice, 2026-10-20): text still selects and copies normally,
+       but the blue highlight colour never paints anywhere on the site. */
+    ::selection { background: transparent; }
+    ::-moz-selection { background: transparent; }
 
 </style>
 
