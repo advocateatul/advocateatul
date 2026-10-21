@@ -14195,6 +14195,9 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
         if (kind === "github") provider = new firebase.auth.GithubAuthProvider();
         else if (kind === "yahoo") provider = new firebase.auth.OAuthProvider("yahoo.com");
         else provider = new firebase.auth.GoogleAuthProvider();
+        var inApp = false;
+        try { inApp = (window.matchMedia && window.matchMedia("(display-mode: standalone)").matches) || (document.referrer && document.referrer.indexOf("android-app://") === 0); } catch (e3) {}
+        if (inApp) { try { self.auth.signInWithRedirect(provider); return; } catch (e4) {} }
         self.auth.signInWithPopup(provider).catch(function () {
           try { self.auth.signInWithRedirect(provider); } catch (e2) {}
         });
