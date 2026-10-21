@@ -783,6 +783,32 @@
     .hub-filter:hover { border-color: #111111; color: #111111; }
     .hub-filter.active { background: #111111; border-color: #111111; color: #ffffff; }
     .hub-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .cf-grid { margin-bottom: 20px; }
+    .cf-grid .hub-card { grid-column: 1 / -1; }
+    .cf-panel { border: 1px solid var(--line); border-radius: 16px; background: #ffffff; padding: 24px 22px; margin: 0 0 28px; animation: hubFade .45s cubic-bezier(0.22, 1, 0.36, 1) both; }
+    .cf-panel[hidden] { display: none; }
+    .cf-form { display: flex; flex-wrap: wrap; gap: 14px; align-items: flex-end; }
+    .cf-field { display: flex; flex-direction: column; gap: 6px; flex: 1 1 240px; }
+    .cf-field label { font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: rgba(0,0,0,.6); }
+    .cf-field select, .cf-field input { font: inherit; font-size: .95rem; color: #111111; background: #ffffff; border: 1.5px solid rgba(0,0,0,.55); border-radius: 10px; padding: 11px 12px; width: 100%; box-sizing: border-box; }
+    .cf-field select:focus, .cf-field input:focus { outline: 2px solid #111111; outline-offset: 1px; }
+    .cf-calc-btn { padding: 12px 22px; }
+    .cf-error { color: #111111; font-weight: 700; margin: 14px 0 0; }
+    .cf-result { margin-top: 20px; }
+    .cf-result h4, .cf-other h4 { font-size: .95rem; margin: 0 0 10px; }
+    .cf-echo { margin: 0 0 12px; font-size: .9rem; }
+    .cf-table { width: 100%; border-collapse: collapse; font-size: .88rem; }
+    .cf-table th, .cf-table td { text-align: left; padding: 8px 10px; border-bottom: 1px solid rgba(0,0,0,.12); }
+    .cf-table th { font-size: .7rem; letter-spacing: .07em; text-transform: uppercase; color: rgba(0,0,0,.55); }
+    .cf-table td:last-child, .cf-table th:last-child { text-align: right; font-variant-numeric: tabular-nums; }
+    .cf-table tfoot td { font-weight: 700; border-top: 2px solid #111111; border-bottom: none; }
+    .cf-half { font-size: .85rem; margin: 12px 0 0; }
+    .cf-total { font-size: 1.15rem; margin: 16px 0 0; border-top: 2px solid #111111; padding-top: 14px; }
+    .cf-other { margin-top: 24px; }
+    .cf-other ul { margin: 0; padding-left: 18px; font-size: .88rem; display: flex; flex-direction: column; gap: 6px; }
+    .cf-disclaimer { margin: 20px 0 0; font-size: .82rem; font-weight: 700; border: 1.5px solid #111111; border-radius: 10px; padding: 10px 12px; }
+    .cf-source { margin: 12px 0 0; font-size: .8rem; color: rgba(0,0,0,.65); }
+    .cf-source a { color: #111111; font-weight: 700; }
     .hub-card { border: 1px solid var(--line); border-radius: 16px; padding: 24px 22px; display: flex; flex-direction: column; gap: 10px; background: #ffffff; transition: transform .35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow .35s cubic-bezier(0.22, 1, 0.36, 1), border-color .35s cubic-bezier(0.22, 1, 0.36, 1); position: relative; overflow: hidden; }
     .hub-card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(105deg, transparent 40%, rgba(0,0,0,.05) 50%, transparent 60%); transform: translateX(-120%); transition: transform .8s cubic-bezier(0.22, 1, 0.36, 1); pointer-events: none; }
     .hub-card:hover { transform: translateY(-7px); border-color: #111111; box-shadow: 0 18px 44px rgba(0,0,0,.14); }
@@ -1639,6 +1665,57 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
         </div>
 
         <div class="hub-panel" id="hubPanel-toolkit" role="tabpanel" hidden>
+          <div class="hub-grid cf-grid">
+            <article class="hub-card cf-card">
+              <div class="hub-card-meta"><span class="hub-badge" data-i18n="hubOfficialBadge">Official</span><span>UP · Schedule I</span></div>
+              <h3 data-i18n="cfTitle">Court Fee Calculator</h3>
+              <p data-i18n="cfDesc">Court fee for civil suits and appeals in Uttar Pradesh — Court Fees Act, 1870, Schedule I (ad valorem).</p>
+              <div class="hub-card-actions"><button type="button" class="hub-btn solid" id="cfToggleBtn" data-i18n="cfOpen">Open Calculator</button></div>
+            </article>
+          </div>
+          <div class="cf-panel" id="cfPanel" hidden>
+            <div class="cf-form">
+              <div class="cf-field">
+                <label for="cfType" data-i18n="cfType">Case / document type</label>
+                <select id="cfType">
+                  <option value="suit" data-i18n="cfTypeSuit">Civil Suit (Plaint)</option>
+                  <option value="appeal" data-i18n="cfTypeAppeal">Appeal (Memorandum of Appeal)</option>
+                  <option value="reviewLate" data-i18n="cfTypeReviewLate">Review of Judgment — on or after the 90th day</option>
+                  <option value="reviewEarly" data-i18n="cfTypeReviewEarly">Review of Judgment — before the 90th day (half fee)</option>
+                  <option value="possession" data-i18n="cfTypePossession">Possession Suit — Specific Relief Act, Sec. 6 (half fee)</option>
+                </select>
+              </div>
+              <div class="cf-field">
+                <label for="cfValue" data-i18n="cfValue">Claim / suit valuation (₹)</label>
+                <input type="number" id="cfValue" min="1" step="any" inputmode="decimal" data-i18n-ph="cfValuePh" placeholder="e.g. 500000" />
+              </div>
+              <button type="button" class="hub-btn solid cf-calc-btn" id="cfCalcBtn" data-i18n="cfCalc">Calculate Fee</button>
+            </div>
+            <p class="cf-error" id="cfError" data-i18n="cfInvalid" hidden>Please enter a valid valuation amount.</p>
+            <div class="cf-result" id="cfResult" hidden>
+              <p class="cf-echo"><span data-i18n="cfValueEcho">Suit valuation</span>: <strong id="cfValEchoVal"></strong></p>
+              <h4 data-i18n="cfBreakdown">Slab-wise breakdown</h4>
+              <table class="cf-table">
+                <thead><tr><th data-i18n="cfColSlab">Valuation slab</th><th data-i18n="cfColAmount">Amount in slab</th><th data-i18n="cfColRate">Rate</th><th data-i18n="cfColFee">Fee</th></tr></thead>
+                <tbody id="cfRows"></tbody>
+                <tfoot><tr><td colspan="3" data-i18n="cfFullTotal">Total at full scale</td><td id="cfFullTotalVal"></td></tr></tfoot>
+              </table>
+              <p class="cf-half" id="cfHalfNote" data-i18n="cfHalfNote" hidden>Half fee applied (Schedule I, Article 2 / 5) — the payable fee is one-half of the full-scale fee.</p>
+              <p class="cf-total"><span data-i18n="cfTotal">Total court fee payable</span>: <strong id="cfTotalVal"></strong></p>
+            </div>
+            <div class="cf-other">
+              <h4 data-i18n="cfOtherTitle">Other common fees (UP)</h4>
+              <ul>
+                <li data-i18n="cfFeeCopyJudgment">Copy of a judgment/order (not a decree) — subordinate court ₹0.75–₹1.50; High Court ₹3</li>
+                <li data-i18n="cfFeeCopyDecree">Copy of a decree — subordinate court ₹1.50–₹3; High Court ₹7.50</li>
+                <li data-i18n="cfFeeCopyOther">Copy of any other record/document — ₹1 per 360 words</li>
+                <li data-i18n="cfFeeVakalat">Vakalatnama — ₹1.50 (other courts); ₹5 (High Court)</li>
+                <li data-i18n="cfFeeWrit">Writ petition (Article 226/227), High Court — ₹100</li>
+              </ul>
+            </div>
+            <p class="cf-disclaimer" data-i18n="cfDisclaimer">Indicative only — actual fee as per the current Court Fees Act table applicable in UP; verify before filing.</p>
+            <p class="cf-source"><span data-i18n="cfSource">Source: Court Fees Act, 1870 — Schedules I &amp; II, as applicable in Uttar Pradesh.</span> <a href="https://indiacode.gov.in/server/api/core/bitstreams/eea3ca0a-d99b-4883-81b1-ad9653d12e6f/content" target="_blank" rel="noopener" data-i18n="cfReadAct">Read the Act (India Code)</a></p>
+          </div>
           <div id="hubToolkitGroups"></div>
         </div>
 
@@ -10524,6 +10601,40 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
           hubTabDrafts: "Drafts & Library",
           hubTabLinks: "Useful Links",
           hubTabToolkit: "Criminal Toolkit",
+          cfTitle: "Court Fee Calculator",
+          cfDesc: "Court fee for civil suits and appeals in Uttar Pradesh — Court Fees Act, 1870, Schedule I (ad valorem).",
+          cfOpen: "Open Calculator",
+          cfClose: "Close",
+          cfType: "Case / document type",
+          cfTypeSuit: "Civil Suit (Plaint)",
+          cfTypeAppeal: "Appeal (Memorandum of Appeal)",
+          cfTypeReviewLate: "Review of Judgment — on or after the 90th day",
+          cfTypeReviewEarly: "Review of Judgment — before the 90th day (half fee)",
+          cfTypePossession: "Possession Suit — Specific Relief Act, Sec. 6 (half fee)",
+          cfValue: "Claim / suit valuation (₹)",
+          cfValuePh: "e.g. 500000",
+          cfValueEcho: "Suit valuation",
+          cfCalc: "Calculate Fee",
+          cfTotal: "Total court fee payable",
+          cfFullTotal: "Total at full scale",
+          cfBreakdown: "Slab-wise breakdown",
+          cfColSlab: "Valuation slab",
+          cfColAmount: "Amount in slab",
+          cfColRate: "Rate",
+          cfColFee: "Fee",
+          cfPer: "per",
+          cfAbove: "Above ₹10,000",
+          cfHalfNote: "Half fee applied (Schedule I, Article 2 / 5) — the payable fee is one-half of the full-scale fee.",
+          cfInvalid: "Please enter a valid valuation amount.",
+          cfOtherTitle: "Other common fees (UP)",
+          cfFeeCopyJudgment: "Copy of a judgment/order (not a decree) — subordinate court ₹0.75–₹1.50; High Court ₹3",
+          cfFeeCopyDecree: "Copy of a decree — subordinate court ₹1.50–₹3; High Court ₹7.50",
+          cfFeeCopyOther: "Copy of any other record/document — ₹1 per 360 words",
+          cfFeeVakalat: "Vakalatnama — ₹1.50 (other courts); ₹5 (High Court)",
+          cfFeeWrit: "Writ petition (Article 226/227), High Court — ₹100",
+          cfDisclaimer: "Indicative only — actual fee as per the current Court Fees Act table applicable in UP; verify before filing.",
+          cfSource: "Source: Court Fees Act, 1870 — Schedules I & II, as applicable in Uttar Pradesh.",
+          cfReadAct: "Read the Act (India Code)",
           hubFreeBadge: "Free",
           hubFilterAll: "All",
           hubFilterPopular: "Popular",
@@ -10735,6 +10846,40 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
           hubTabDrafts: "ड्राफ्ट व लाइब्रेरी",
           hubTabLinks: "उपयोगी लिंक",
           hubTabToolkit: "क्रिमिनल टूलकिट",
+          cfTitle: "न्यायालय शुल्क कैलकुलेटर",
+          cfDesc: "उत्तर प्रदेश में सिविल वाद और अपील हेतु न्यायालय शुल्क — न्यायालय शुल्क अधिनियम, 1870, अनुसूची I (मूल्यानुसार)।",
+          cfOpen: "कैलकुलेटर खोलें",
+          cfClose: "बंद करें",
+          cfType: "वाद / दस्तावेज़ का प्रकार",
+          cfTypeSuit: "सिविल वाद (वादपत्र)",
+          cfTypeAppeal: "अपील (अपील ज्ञापन)",
+          cfTypeReviewLate: "निर्णय का पुनरीक्षण — 90वें दिन या उसके बाद",
+          cfTypeReviewEarly: "निर्णय का पुनरीक्षण — 90वें दिन से पहले (आधा शुल्क)",
+          cfTypePossession: "कब्ज़े का वाद — विशिष्ट अनुतोष अधिनियम, धारा 6 (आधा शुल्क)",
+          cfValue: "दावे / वाद का मूल्यांकन (₹)",
+          cfValuePh: "जैसे — 500000",
+          cfValueEcho: "वाद मूल्यांकन",
+          cfCalc: "शुल्क की गणना करें",
+          cfTotal: "कुल देय न्यायालय शुल्क",
+          cfFullTotal: "पूर्ण दर पर कुल शुल्क",
+          cfBreakdown: "स्लैब-वार विवरण",
+          cfColSlab: "मूल्यांकन स्लैब",
+          cfColAmount: "स्लैब में राशि",
+          cfColRate: "दर",
+          cfColFee: "शुल्क",
+          cfPer: "प्रति",
+          cfAbove: "₹10,000 से अधिक",
+          cfHalfNote: "आधा शुल्क लागू (अनुसूची I, अनुच्छेद 2 / 5) — देय शुल्क पूर्ण दर के शुल्क का आधा है।",
+          cfInvalid: "कृपया सही मूल्यांकन राशि दर्ज करें।",
+          cfOtherTitle: "अन्य सामान्य शुल्क (उ.प्र.)",
+          cfFeeCopyJudgment: "निर्णय/आदेश की प्रति (डिक्री नहीं) — अधीनस्थ न्यायालय ₹0.75–₹1.50; उच्च न्यायालय ₹3",
+          cfFeeCopyDecree: "डिक्री की प्रति — अधीनस्थ न्यायालय ₹1.50–₹3; उच्च न्यायालय ₹7.50",
+          cfFeeCopyOther: "अभिलेख के अन्य दस्तावेज़ की प्रति — ₹1 प्रति 360 शब्द",
+          cfFeeVakalat: "वकालतनामा — ₹1.50 (अन्य न्यायालय); ₹5 (उच्च न्यायालय)",
+          cfFeeWrit: "रिट याचिका (अनुच्छेद 226/227), उच्च न्यायालय — ₹100",
+          cfDisclaimer: "केवल सांकेतिक — वास्तविक शुल्क उत्तर प्रदेश में लागू वर्तमान Court Fees Act तालिका के अनुसार देय होगा; दाखिल करने से पहले सत्यापित करें।",
+          cfSource: "स्रोत: न्यायालय शुल्क अधिनियम, 1870 — अनुसूची I व II (उत्तर प्रदेश में यथा-लागू)।",
+          cfReadAct: "अधिनियम पढ़ें (India Code)",
           hubFreeBadge: "मुफ्त",
           hubFilterAll: "सभी",
           hubFilterPopular: "लोकप्रिय",
@@ -11270,6 +11415,121 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
         });
         hubStagger(wrap);
       }
+
+      /* ============ Court Fee Calculator — Court Fees Act 1870, Schedule I (UP) ============
+         Slab table (Article 1 as applicable in Uttar Pradesh; "or part thereof" => ceil):
+           up to 100: Rs 0.50 per Rs 5 | 100-300: Rs 1.25 per Rs 10 | 300-500: Rs 1.50 per Rs 10
+           500-1000: Rs 2.25 per Rs 10 | 1000-5000: Rs 12 per Rs 100 | 5000-10000: Rs 20 per Rs 200
+           above 10000: Rs 37.50 per Rs 500 (no maximum-fee cap in the UP table).
+         Appeal = same scale (Art 1). Review on/after 90th day = same (Art 4);
+         review before 90th day = half (Art 5); possession suit under SRA s.6 = half (Art 2). */
+      var CF_SLABS = [
+        { upTo: 100, unit: 5, rate: 0.5 },
+        { upTo: 300, unit: 10, rate: 1.25 },
+        { upTo: 500, unit: 10, rate: 1.5 },
+        { upTo: 1000, unit: 10, rate: 2.25 },
+        { upTo: 5000, unit: 100, rate: 12 },
+        { upTo: 10000, unit: 200, rate: 20 },
+        { upTo: Infinity, unit: 500, rate: 37.5 }
+      ];
+      function cfAdValorem(v) {
+        var rows = [], total = 0, prev = 0, i, s, inSlab, units, fee;
+        for (i = 0; i < CF_SLABS.length; i++) {
+          if (v <= prev) break;
+          s = CF_SLABS[i];
+          inSlab = Math.min(v, s.upTo) - prev;
+          units = Math.ceil(inSlab / s.unit);
+          fee = units * s.rate;
+          rows.push({ from: prev, to: s.upTo, amount: inSlab, unit: s.unit, rate: s.rate, fee: fee });
+          total += fee;
+          prev = s.upTo;
+        }
+        return { rows: rows, total: total };
+      }
+      function cfFmt(n) {
+        var s = n.toFixed(2), parts = s.split("."), int = parts[0], dec = parts[1];
+        var last3 = int.slice(-3), rest = int.slice(0, -3), grouped;
+        if (rest) grouped = rest.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + "," + last3;
+        else grouped = last3;
+        return grouped + "." + dec;
+      }
+      function cfFmtAmt(n) {
+        if (n === Math.floor(n)) {
+          var s = String(n), last3 = s.slice(-3), rest = s.slice(0, -3);
+          return rest ? rest.replace(/\B(?=(\d{2})+(?!\d))/g, ",") + "," + last3 : last3;
+        }
+        return cfFmt(n);
+      }
+      function cfRender() {
+        var typeEl = document.getElementById("cfType");
+        var valEl = document.getElementById("cfValue");
+        var errEl = document.getElementById("cfError");
+        var resEl = document.getElementById("cfResult");
+        if (!typeEl || !valEl || !errEl || !resEl) return;
+        var raw = String(valEl.value || "").replace(/[^0-9.]/g, "");
+        var v = parseFloat(raw);
+        if (!v || v <= 0 || !isFinite(v)) { errEl.hidden = false; resEl.hidden = true; return; }
+        errEl.hidden = true;
+        var factor = (typeEl.value === "reviewEarly" || typeEl.value === "possession") ? 0.5 : 1;
+        var r = cfAdValorem(v);
+        var tbody = document.getElementById("cfRows");
+        if (tbody) {
+          tbody.textContent = "";
+          r.rows.forEach(function (row) {
+            var tr = document.createElement("tr");
+            var slabTxt = (row.to === Infinity) ? t("cfAbove") : ("\u20B9" + cfFmtAmt(row.from) + " \u2013 \u20B9" + cfFmtAmt(row.to));
+            var cells = [slabTxt, "\u20B9" + cfFmtAmt(row.amount), "\u20B9" + cfFmt(row.rate) + " " + t("cfPer") + " \u20B9" + row.unit, "\u20B9" + cfFmt(row.fee)];
+            cells.forEach(function (c) {
+              var td = document.createElement("td");
+              td.textContent = c;
+              tr.appendChild(td);
+            });
+            tbody.appendChild(tr);
+          });
+        }
+        var echo = document.getElementById("cfValEchoVal");
+        if (echo) echo.textContent = "\u20B9" + cfFmtAmt(v);
+        var fullEl = document.getElementById("cfFullTotalVal");
+        if (fullEl) fullEl.textContent = "\u20B9" + cfFmt(r.total);
+        var halfEl = document.getElementById("cfHalfNote");
+        if (halfEl) halfEl.hidden = (factor === 1);
+        var totEl = document.getElementById("cfTotalVal");
+        if (totEl) totEl.textContent = "\u20B9" + cfFmt(r.total * factor);
+        resEl.hidden = false;
+      }
+      (function () {
+        var btn = document.getElementById("cfToggleBtn");
+        var panel = document.getElementById("cfPanel");
+        if (!btn || !panel) return;
+        btn.addEventListener("click", function () {
+          var open = panel.hidden;
+          panel.hidden = !open;
+          btn.setAttribute("data-i18n", open ? "cfClose" : "cfOpen");
+          btn.textContent = t(open ? "cfClose" : "cfOpen");
+          btn.setAttribute("aria-expanded", String(open));
+          if (open) { var inp = document.getElementById("cfValue"); if (inp) inp.focus(); }
+        });
+        var calcBtn = document.getElementById("cfCalcBtn");
+        if (calcBtn) calcBtn.addEventListener("click", cfRender);
+        var valEl = document.getElementById("cfValue");
+        if (valEl) valEl.addEventListener("keydown", function (e) {
+          if (e.key === "Enter") { e.preventDefault(); cfRender(); }
+        });
+        var typeEl = document.getElementById("cfType");
+        if (typeEl) typeEl.addEventListener("change", function () {
+          var res = document.getElementById("cfResult");
+          if (res && !res.hidden) cfRender();
+        });
+        var langBtns = document.querySelectorAll("[data-language]");
+        for (var i = 0; i < langBtns.length; i++) {
+          langBtns[i].addEventListener("click", function () {
+            setTimeout(function () {
+              var res = document.getElementById("cfResult");
+              if (res && !res.hidden) cfRender();
+            }, 60);
+          });
+        }
+      })();
 
       function renderHub() {
         renderHubTabs();
