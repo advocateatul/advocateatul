@@ -1,9 +1,11 @@
 /* A.K Legal Law — service worker.
-   Pages (navigations): NETWORK-FIRST — site updates always arrive fresh;
-   the cache is only an offline fallback.
+   Pages (navigations): INSTANT-FIRST — the copy saved on the phone is shown
+   immediately (native-app feel); a fast network answer (within ~1.2s) still
+   wins so updates arrive fresh, and the network copy always refreshes the
+   saved copy in the background for the next open.
    Static files: stale-while-revalidate. Cross-origin requests untouched.
    All paths are relative to this script, so it works under any base path. */
-var CACHE = "aklegal-v1";
+var CACHE = "aklegal-v2";
 function abs(p) { return new URL(p, self.location.href).toString(); }
 var INDEX = abs("index.html");
 var CORE = ["", "index.html", "manifest.webmanifest", "logo.png", "icon-192.png", "icon-512.png", "icon-maskable-512.png", "apple-touch-icon.png"];
@@ -36,12 +38,19 @@ self.addEventListener("fetch", function (e) {
 
   if (req.mode === "navigate") {
     e.respondWith(
-      fetch(req).then(function (res) {
-        var copy = res.clone();
-        caches.open(CACHE).then(function (c) { c.put(INDEX, copy); });
-        return res;
-      }).catch(function () {
-        return caches.match(INDEX);
+      caches.open(CACHE).then(function (cache) {
+        return cache.match(INDEX).then(function (cached) {
+          var net = fetch(req).then(function (res) {
+            cache.put(INDEX, res.clone());
+            return res;
+          }).catch(function () { return null; });
+          if (!cached) return net;
+          // Saved copy ready: fresh network within 1.2s wins, warna turant saved copy
+          return Promise.race([
+            net,
+            new Promise(function (r) { setTimeout(function () { r(null); }, 1200); })
+          ]).then(function (fresh) { return fresh || cached; });
+        });
       })
     );
     return;
