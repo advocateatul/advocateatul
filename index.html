@@ -15079,10 +15079,10 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
         renderAuthBtn();
         if (u) {
           saveClientRecord(u);
+          LA_AUTH.closeModal();
           if (LA_AUTH._pending) {
             var cb = LA_AUTH._pending;
             LA_AUTH._pending = null;
-            LA_AUTH.closeModal();
             try { cb(); } catch (e) {}
           }
         }
