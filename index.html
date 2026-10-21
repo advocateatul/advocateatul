@@ -1501,6 +1501,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
             <a href="#contact" role="menuitem" data-i18n="navConsultation">Consultation</a>
             <button type="button" id="requestBtn" role="menuitem" data-i18n="navRequest">📝 Request a Draft</button>
             <button type="button" id="installAppBtn" role="menuitem" data-i18n="navInstall" hidden>📲 Install App</button>
+            <button type="button" id="navSettingsBtn" role="menuitem"><span id="navSettingsLabel">⚙️ Settings</span><span id="navUpdateDot" class="set-dot" hidden></span></button>
             <div class="nav-more-sep" role="separator"></div>
             <div class="nav-more-label" data-i18n="navHubCats">Knowledge Hub Categories</div>
             <button type="button" class="hub-jump" data-hub-tab="acts" role="menuitem"><span class="hj-ic" aria-hidden="true">📜</span><span data-i18n="hubTabActs">Bare Acts</span></button>
@@ -1527,6 +1528,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
   <div class="auth-menu" id="authMenu" hidden>
     <div class="am-name" id="authMenuName"></div>
     <div class="am-email" id="authMenuEmail"></div>
+    <button type="button" class="am-set" id="authSettingsBtn" data-t-en="⚙️ Profile & Settings" data-t-hi="⚙️ प्रोफ़ाइल और सेटिंग्स">⚙️ Profile & Settings</button>
     <button type="button" class="am-out" id="authLogout" data-t-en="Logout" data-t-hi="लॉगआउट">Logout</button>
   </div>
 </div>
@@ -15144,5 +15146,219 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
         });
       })();
     </script>
+<style>
+.set-dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#d92d20;margin-left:7px;vertical-align:middle}
+.set-dot[hidden]{display:none!important}
+#settingsModal[hidden]{display:none!important}
+#updateBanner[hidden]{display:none!important}
+.set-card{max-width:520px;width:calc(100% - 32px);max-height:88vh;overflow-y:auto;text-align:left}
+.set-card h3{text-align:center;margin-bottom:6px}
+.set-sec{border:1px solid #e5e7eb;border-radius:12px;padding:14px 16px;margin:12px 0;background:#fff}
+.set-sec h4{margin:0 0 8px;font-size:1rem}
+.set-row{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:7px 0;flex-wrap:wrap}
+.set-btn{display:inline-block;background:#111;color:#fff;border:1px solid #111;border-radius:9px;padding:8px 14px;font-size:.92rem;cursor:pointer;text-decoration:none;margin:4px 6px 4px 0}
+.set-btn:hover{opacity:.88}
+.set-mini{background:#f3f4f6;border:1px solid #d1d5db;border-radius:8px;padding:6px 12px;cursor:pointer;font-size:.9rem;margin-left:6px}
+.set-mini:hover{background:#e5e7eb}
+.set-status{font-size:.92rem;color:#374151;margin:6px 0;min-height:1.2em}
+.set-prof{display:flex;gap:12px;align-items:center;margin:6px 0 10px}
+.set-av{width:52px;height:52px;border-radius:50%;object-fit:cover;flex-shrink:0}
+.set-av-t{display:inline-flex;align-items:center;justify-content:center;background:#111;color:#fff;font-size:1.35rem;font-weight:700}
+.set-pname{font-weight:700;font-size:1.02rem}
+.set-pmail{font-size:.88rem;color:#4b5563;word-break:break-all}
+.set-pprov{font-size:.82rem;color:#6b7280}
+.am-set{display:block;width:100%;text-align:left;background:none;border:none;border-top:1px solid #eee;padding:9px 4px;cursor:pointer;font-size:.93rem;color:#111}
+#updateBanner{position:fixed;left:12px;right:12px;bottom:92px;z-index:950;background:#111;color:#fff;border-radius:12px;padding:12px 14px;display:flex;align-items:center;gap:10px;box-shadow:0 8px 24px rgba(0,0,0,.35)}
+#updateBannerText{flex:1;font-size:.93rem}
+#updateBannerBtn{background:#fff;color:#111;border:none;border-radius:8px;padding:7px 14px;font-weight:700;cursor:pointer}
+#updateBannerClose{background:none;border:none;color:#fff;font-size:1rem;cursor:pointer;padding:4px 6px}
+</style>
+<div id="settingsModal" class="auth-modal" hidden>
+  <div class="auth-card set-card" role="dialog" aria-modal="true" aria-label="Settings / सेटिंग्स">
+    <button type="button" class="auth-close" id="setClose" aria-label="Close / बंद करें">×</button>
+    <h3 id="setTitle">⚙️ Settings</h3>
+    <div class="set-sec">
+      <h4 id="setProfileTitle">👤 Profile</h4>
+      <div id="setProfileBody"></div>
+    </div>
+    <div class="set-sec">
+      <h4 id="setAppTitle">📲 App</h4>
+      <div class="set-row"><span id="setVerLabel">App version</span><b id="setVerVal">—</b></div>
+      <div class="set-row"><span id="setLatestLabel">Latest version</span><b id="setLatestVal">—</b></div>
+      <p class="set-status" id="setUpdateStatus"></p>
+      <div class="set-row">
+        <button type="button" class="set-btn" id="setCheckBtn">🔄 Check for update</button>
+        <a class="set-btn" id="setDlBtn" href="https://advocateatul.github.io/advocateatul/AKLegalLaw.apk" hidden>⬇️ Download update</a>
+      </div>
+    </div>
+    <div class="set-sec">
+      <h4 id="setPrefTitle">🎛️ Preferences</h4>
+      <div class="set-row"><span id="setLangLabel">Language / भाषा</span><span><button type="button" class="set-mini" id="setLangEn">English</button><button type="button" class="set-mini" id="setLangHi">हिंदी</button></span></div>
+      <div class="set-row"><span id="setThemeLabel">Theme</span><button type="button" class="set-mini" id="setThemeBtn">🌙 Dark / Light</button></div>
+    </div>
+    <div class="set-sec">
+      <h4>ℹ️ About</h4>
+      <p class="set-status">A.K Legal Law — Advocate Atul Kumar, Criminal Lawyer, Bulandshahr District Court, Uttar Pradesh.</p>
+    </div>
+  </div>
+</div>
+<div id="updateBanner" hidden>
+  <span id="updateBannerText">📲 New app version available</span>
+  <button type="button" id="updateBannerBtn">Update</button>
+  <button type="button" id="updateBannerClose" aria-label="Close">✕</button>
+</div>
+<script>
+(function () {
+  var APK_URL = "https://advocateatul.github.io/advocateatul/AKLegalLaw.apk";
+  var S = {
+    en: { nav: "⚙️ Settings", title: "⚙️ Settings", profile: "👤 Profile", app: "📲 App", ver: "App version", latest: "Latest version",
+      check: "🔄 Check for update", checking: "Checking…", uptodate: "✅ Your app is up to date.", avail: "🆕 New version {v} is available!",
+      dl: "⬇️ Download update", webver: "Web (browser)", loginFirst: "You are not logged in.", login: "Login", logout: "Logout",
+      prefs: "🎛️ Preferences", lang: "Language / भाषा", theme: "Theme", signedAs: "Signed in via", banner: "📲 New app version {v} is available",
+      update: "Update", checkFail: "Could not check right now. Please try again.", admin: "👑 Admin: View clients", newTag: "What's new: " },
+    hi: { nav: "⚙️ सेटिंग्स", title: "⚙️ सेटिंग्स", profile: "👤 प्रोफ़ाइल", app: "📲 ऐप", ver: "ऐप version", latest: "नया version",
+      check: "🔄 Update check करें", checking: "Check हो रहा है…", uptodate: "✅ आपका ऐप पूरी तरह up-to-date है।", avail: "🆕 नया version {v} आ गया है!",
+      dl: "⬇️ Update download करें", webver: "Web (browser)", loginFirst: "आप login नहीं हैं।", login: "Login करें", logout: "Logout",
+      prefs: "🎛️ पसंद", lang: "भाषा / Language", theme: "Theme", signedAs: "Login:", banner: "📲 ऐप का नया version {v} आ गया है",
+      update: "Update करें", checkFail: "अभी check नहीं हो पाया। फिर कोशिश करें।", admin: "👑 Admin: Clients देखें", newTag: "नया क्या है: " }
+  };
+  function lang() { try { return document.documentElement.getAttribute("lang") === "hi" ? "hi" : "en"; } catch (e) { return "en"; } }
+  function s(k) { var d = S[lang()]; return (d && d[k]) || S.en[k] || k; }
+  function el(id) { return document.getElementById(id); }
+  function esc(v) { return String(v == null ? "" : v).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); }
+  var cur = null;
+  try {
+    var q = new URLSearchParams(location.search);
+    var av = q.get("appv"), an = q.get("appn");
+    if (av) { try { localStorage.setItem("akl-appv", av); if (an) localStorage.setItem("akl-appn", an); } catch (e1) {} }
+    var sv = null, sn = null;
+    try { sv = localStorage.getItem("akl-appv"); sn = localStorage.getItem("akl-appn"); } catch (e2) {}
+    if (sv) cur = { code: parseInt(sv, 10) || 0, name: sn || "" };
+  } catch (e) {}
+  var latest = null;
+  function fetchLatest(cb) {
+    try {
+      fetch("version.json?ts=" + Date.now(), { cache: "no-store" }).then(function (r) { return r.json(); }).then(function (j) {
+        if (j && typeof j.code === "number") latest = j;
+        cb && cb(!!latest);
+      }).catch(function () { cb && cb(false); });
+    } catch (e) { cb && cb(false); }
+  }
+  function hasUpdate() { return !!(latest && cur && latest.code > cur.code); }
+  function renderProfile() {
+    var body = el("setProfileBody"); if (!body) return;
+    var u = null;
+    try { u = window.LA_AUTH && LA_AUTH.user; } catch (e) {}
+    if (!u) {
+      body.innerHTML = '<p class="set-status">' + esc(s("loginFirst")) + '</p><button type="button" class="set-btn" id="setLoginBtn">' + esc(s("login")) + "</button>";
+      var b = el("setLoginBtn");
+      if (b) b.addEventListener("click", function () { closeSettings(); try { LA_AUTH.openModal(); } catch (e2) {} });
+      return;
+    }
+    var name = u.displayName || (u.email || "").split("@")[0] || "User";
+    var prov = "";
+    try { prov = (u.providerData && u.providerData[0] && u.providerData[0].providerId) || ""; } catch (e) {}
+    var provName = prov.indexOf("google") === 0 ? "Google" : prov.indexOf("github") === 0 ? "GitHub" : prov.indexOf("yahoo") === 0 ? "Yahoo" : prov;
+    var av = u.photoURL ? '<img class="set-av" src="' + esc(u.photoURL) + '" alt="">' : '<span class="set-av set-av-t">' + esc(name.charAt(0).toUpperCase()) + "</span>";
+    var html = '<div class="set-prof">' + av + '<div><div class="set-pname">' + esc(name) + '</div><div class="set-pmail">' + esc(u.email || "") + '</div><div class="set-pprov">' + esc(s("signedAs")) + " " + esc(provName) + "</div></div></div>";
+    if ((u.email || "").toLowerCase() === "atul40874@gmail.com") html += '<a class="set-btn" href="clients.html">' + esc(s("admin")) + "</a>";
+    html += '<button type="button" class="set-btn" id="setLogoutBtn">' + esc(s("logout")) + "</button>";
+    body.innerHTML = html;
+    var lo = el("setLogoutBtn");
+    if (lo) lo.addEventListener("click", function () { try { LA_AUTH.signOut(); } catch (e3) {} setTimeout(renderAll, 350); });
+  }
+  function renderApp() {
+    var vv = el("setVerVal"), lv = el("setLatestVal"), st = el("setUpdateStatus"), dl = el("setDlBtn");
+    if (vv) vv.textContent = cur ? (cur.name ? "v" + cur.name : "#" + cur.code) : s("webver");
+    if (lv) lv.textContent = latest ? "v" + latest.name : "—";
+    if (dl) dl.hidden = !hasUpdate();
+    if (st && !st.getAttribute("data-busy")) {
+      if (hasUpdate()) {
+        var note = lang() === "hi" ? (latest.notesHi || "") : (latest.notesEn || "");
+        st.textContent = s("avail").replace("{v}", latest.name) + (note ? " " + s("newTag") + note : "");
+      } else if (latest && cur) st.textContent = s("uptodate");
+      else if (latest && !cur) st.textContent = s("avail").replace("{v}", latest.name);
+      else st.textContent = "";
+    }
+    var dot = el("navUpdateDot");
+    if (dot) dot.hidden = !hasUpdate();
+  }
+  function renderAll() {
+    var nl = el("navSettingsLabel"); if (nl) nl.textContent = s("nav");
+    var t1 = el("setTitle"); if (t1) t1.textContent = s("title");
+    var t2 = el("setProfileTitle"); if (t2) t2.textContent = s("profile");
+    var t3 = el("setAppTitle"); if (t3) t3.textContent = s("app");
+    var t4 = el("setVerLabel"); if (t4) t4.textContent = s("ver");
+    var t5 = el("setLatestLabel"); if (t5) t5.textContent = s("latest");
+    var t6 = el("setCheckBtn"); if (t6) t6.textContent = s("check");
+    var t7 = el("setDlBtn"); if (t7) t7.textContent = s("dl");
+    var t8 = el("setPrefTitle"); if (t8) t8.textContent = s("prefs");
+    var t9 = el("setLangLabel"); if (t9) t9.textContent = s("lang");
+    var t10 = el("setThemeLabel"); if (t10) t10.textContent = s("theme");
+    var bb = el("updateBannerBtn"); if (bb) bb.textContent = s("update");
+    renderProfile();
+    renderApp();
+  }
+  function openSettings() {
+    var m = el("settingsModal"); if (!m) return;
+    renderAll();
+    m.hidden = false;
+    if (!latest) fetchLatest(function () { renderApp(); });
+  }
+  function closeSettings() { var m = el("settingsModal"); if (m) m.hidden = true; }
+  function maybeBanner() {
+    if (!hasUpdate()) return;
+    try { if (localStorage.getItem("akl-notified") === String(latest.code)) return; } catch (e) {}
+    var bt = el("updateBannerText"); if (bt) bt.textContent = s("banner").replace("{v}", latest.name);
+    var bn = el("updateBannerBtn"); if (bn) bn.textContent = s("update");
+    var b = el("updateBanner"); if (b) b.hidden = false;
+  }
+  function markNotified() { try { localStorage.setItem("akl-notified", String(latest ? latest.code : "")); } catch (e) {} }
+  function boot() {
+    var nb = el("navSettingsBtn");
+    if (nb) nb.addEventListener("click", function () {
+      var menu = el("navMoreMenu"); if (menu) menu.hidden = true;
+      var mb = el("navMoreBtn"); if (mb) mb.setAttribute("aria-expanded", "false");
+      openSettings();
+    });
+    var ab = el("authSettingsBtn");
+    if (ab) ab.addEventListener("click", function () {
+      var am = el("authMenu"); if (am) am.hidden = true;
+      openSettings();
+    });
+    var cl = el("setClose"); if (cl) cl.addEventListener("click", closeSettings);
+    var sm = el("settingsModal");
+    if (sm) sm.addEventListener("click", function (ev) { if (ev.target === sm) closeSettings(); });
+    var cb = el("setCheckBtn");
+    if (cb) cb.addEventListener("click", function () {
+      var st = el("setUpdateStatus");
+      if (st) { st.setAttribute("data-busy", "1"); st.textContent = s("checking"); }
+      fetchLatest(function (ok) {
+        if (st) { st.removeAttribute("data-busy"); if (!ok) st.textContent = s("checkFail"); }
+        renderApp();
+        if (ok && st && hasUpdate()) st.textContent = s("avail").replace("{v}", latest.name);
+        else if (ok && st && cur) st.textContent = s("uptodate");
+      });
+    });
+    var le = el("setLangEn"), lh = el("setLangHi");
+    function siteLangBtn(l) { return document.querySelector('[data-language="' + l + '"]'); }
+    if (le) le.addEventListener("click", function () { var b = siteLangBtn("en"); if (b && lang() !== "en") b.click(); setTimeout(renderAll, 150); });
+    if (lh) lh.addEventListener("click", function () { var b = siteLangBtn("hi"); if (b && lang() !== "hi") b.click(); setTimeout(renderAll, 150); });
+    var tb = el("setThemeBtn");
+    if (tb) tb.addEventListener("click", function () { var tt = el("themeToggle"); if (tt) tt.click(); });
+    var bb = el("updateBannerBtn");
+    if (bb) bb.addEventListener("click", function () { markNotified(); var b2 = el("updateBanner"); if (b2) b2.hidden = true; window.location.href = APK_URL; });
+    var bc = el("updateBannerClose");
+    if (bc) bc.addEventListener("click", function () { markNotified(); var b3 = el("updateBanner"); if (b3) b3.hidden = true; });
+    document.querySelectorAll("[data-language]").forEach(function (btn) {
+      btn.addEventListener("click", function () { setTimeout(renderAll, 150); });
+    });
+    renderAll();
+    if (cur) fetchLatest(function (ok) { if (ok) { renderApp(); maybeBanner(); } });
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot);
+  else boot();
+})();
+</script>
 </body>
 </html>
