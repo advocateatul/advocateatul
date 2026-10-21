@@ -1667,14 +1667,21 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
         <div class="hub-panel" id="hubPanel-toolkit" role="tabpanel" hidden>
           <div class="hub-grid cf-grid">
             <article class="hub-card cf-card">
-              <div class="hub-card-meta"><span class="hub-badge" data-i18n="hubOfficialBadge">Official</span><span>UP · Schedule I</span></div>
+              <div class="hub-card-meta"><span class="hub-badge" data-i18n="hubOfficialBadge">Official</span><span id="cfStateBadge">UP · Schedule I</span></div>
               <h3 data-i18n="cfTitle">Court Fee Calculator</h3>
-              <p data-i18n="cfDesc">Court fee for civil suits and appeals in Uttar Pradesh — Court Fees Act, 1870, Schedule I (ad valorem).</p>
+              <p data-i18n="cfDesc">Court fee for civil suits and appeals in Uttar Pradesh and Delhi — Court Fees Act, 1870, Schedule I (ad valorem).</p>
               <div class="hub-card-actions"><button type="button" class="hub-btn solid" id="cfToggleBtn" data-i18n="cfOpen">Open Calculator</button></div>
             </article>
           </div>
           <div class="cf-panel" id="cfPanel" hidden>
             <div class="cf-form">
+              <div class="cf-field">
+                <label for="cfState" data-i18n="cfState">State</label>
+                <select id="cfState">
+                  <option value="up" data-i18n="cfStateUP" selected>Uttar Pradesh</option>
+                  <option value="delhi" data-i18n="cfStateDelhi">Delhi</option>
+                </select>
+              </div>
               <div class="cf-field">
                 <label for="cfType" data-i18n="cfType">Case / document type</label>
                 <select id="cfType">
@@ -1703,7 +1710,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
               <p class="cf-half" id="cfHalfNote" data-i18n="cfHalfNote" hidden>Half fee applied (Schedule I, Article 2 / 5) — the payable fee is one-half of the full-scale fee.</p>
               <p class="cf-total"><span data-i18n="cfTotal">Total court fee payable</span>: <strong id="cfTotalVal"></strong></p>
             </div>
-            <div class="cf-other">
+            <div class="cf-other" id="cfOtherUP">
               <h4 data-i18n="cfOtherTitle">Other common fees (UP)</h4>
               <ul>
                 <li data-i18n="cfFeeCopyJudgment">Copy of a judgment/order (not a decree) — subordinate court ₹0.75–₹1.50; High Court ₹3</li>
@@ -1713,8 +1720,17 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
                 <li data-i18n="cfFeeWrit">Writ petition (Article 226/227), High Court — ₹100</li>
               </ul>
             </div>
-            <p class="cf-disclaimer" data-i18n="cfDisclaimer">Indicative only — actual fee as per the current Court Fees Act table applicable in UP; verify before filing.</p>
-            <p class="cf-source"><span data-i18n="cfSource">Source: Court Fees Act, 1870 — Schedules I &amp; II, as applicable in Uttar Pradesh.</span> <a href="https://indiacode.gov.in/server/api/core/bitstreams/eea3ca0a-d99b-4883-81b1-ad9653d12e6f/content" target="_blank" rel="noopener" data-i18n="cfReadAct">Read the Act (India Code)</a></p>
+            <div class="cf-other" id="cfOtherDelhi" hidden>
+              <h4 data-i18n="cfOtherTitleDelhi">Other common fees (Delhi)</h4>
+              <ul>
+                <li data-i18n="cfFeeCopyJudgmentDelhi">Copy of a judgment/order (not a decree) — subordinate court ₹1.25; High Court ₹2.65</li>
+                <li data-i18n="cfFeeCopyDecreeDelhi">Copy of a decree — subordinate court ₹2.65; High Court ₹5.25</li>
+                <li data-i18n="cfFeeCopyOtherDelhi">Copy of any other record/document — ₹0.65 per 360 words</li>
+                <li data-i18n="cfFeeVakalatDelhi">Vakalatnama — ₹1.25 (other courts); ₹2.65 (High Court)</li>
+              </ul>
+            </div>
+            <p class="cf-disclaimer" id="cfDisclaimer" data-i18n="cfDisclaimer">Indicative only — actual fee as per the current Court Fees Act table applicable in UP; verify before filing.</p>
+            <p class="cf-source"><span id="cfSourceText" data-i18n="cfSource">Source: Court Fees Act, 1870 — Schedules I &amp; II, as applicable in Uttar Pradesh.</span> <a href="https://indiacode.gov.in/server/api/core/bitstreams/eea3ca0a-d99b-4883-81b1-ad9653d12e6f/content" target="_blank" rel="noopener" data-i18n="cfReadAct">Read the Act (India Code)</a></p>
           </div>
           <div id="hubToolkitGroups"></div>
         </div>
@@ -10602,7 +10618,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
           hubTabLinks: "Useful Links",
           hubTabToolkit: "Criminal Toolkit",
           cfTitle: "Court Fee Calculator",
-          cfDesc: "Court fee for civil suits and appeals in Uttar Pradesh — Court Fees Act, 1870, Schedule I (ad valorem).",
+          cfDesc: "Court fee for civil suits and appeals in Uttar Pradesh and Delhi — Court Fees Act, 1870, Schedule I (ad valorem).",
           cfOpen: "Open Calculator",
           cfClose: "Close",
           cfType: "Case / document type",
@@ -10635,6 +10651,17 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
           cfDisclaimer: "Indicative only — actual fee as per the current Court Fees Act table applicable in UP; verify before filing.",
           cfSource: "Source: Court Fees Act, 1870 — Schedules I & II, as applicable in Uttar Pradesh.",
           cfReadAct: "Read the Act (India Code)",
+          cfState: "State",
+          cfStateUP: "Uttar Pradesh",
+          cfStateDelhi: "Delhi",
+          cfOtherTitleDelhi: "Other common fees (Delhi)",
+          cfFeeCopyJudgmentDelhi: "Copy of a judgment/order (not a decree) — subordinate court ₹1.25; High Court ₹2.65",
+          cfFeeCopyDecreeDelhi: "Copy of a decree — subordinate court ₹2.65; High Court ₹5.25",
+          cfFeeCopyOtherDelhi: "Copy of any other record/document — ₹0.65 per 360 words",
+          cfFeeVakalatDelhi: "Vakalatnama — ₹1.25 (other courts); ₹2.65 (High Court)",
+          cfDisclaimerDelhi: "Indicative only — actual fee as per the current Court Fees Act table applicable in Delhi; verify before filing.",
+          cfSourceDelhi: "Source: Court Fees Act, 1870 — Schedule I and the Table of Rates annexed to it, as applicable in Delhi.",
+          cfAboveFmt: "Above ₹{n}",
           hubFreeBadge: "Free",
           hubFilterAll: "All",
           hubFilterPopular: "Popular",
@@ -10847,7 +10874,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
           hubTabLinks: "उपयोगी लिंक",
           hubTabToolkit: "क्रिमिनल टूलकिट",
           cfTitle: "न्यायालय शुल्क कैलकुलेटर",
-          cfDesc: "उत्तर प्रदेश में सिविल वाद और अपील हेतु न्यायालय शुल्क — न्यायालय शुल्क अधिनियम, 1870, अनुसूची I (मूल्यानुसार)।",
+          cfDesc: "उत्तर प्रदेश और दिल्ली में सिविल वाद और अपील हेतु न्यायालय शुल्क — न्यायालय शुल्क अधिनियम, 1870, अनुसूची I (मूल्यानुसार)।",
           cfOpen: "कैलकुलेटर खोलें",
           cfClose: "बंद करें",
           cfType: "वाद / दस्तावेज़ का प्रकार",
@@ -10880,6 +10907,17 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
           cfDisclaimer: "केवल सांकेतिक — वास्तविक शुल्क उत्तर प्रदेश में लागू वर्तमान Court Fees Act तालिका के अनुसार देय होगा; दाखिल करने से पहले सत्यापित करें।",
           cfSource: "स्रोत: न्यायालय शुल्क अधिनियम, 1870 — अनुसूची I व II (उत्तर प्रदेश में यथा-लागू)।",
           cfReadAct: "अधिनियम पढ़ें (India Code)",
+          cfState: "राज्य",
+          cfStateUP: "उत्तर प्रदेश",
+          cfStateDelhi: "दिल्ली",
+          cfOtherTitleDelhi: "अन्य सामान्य शुल्क (दिल्ली)",
+          cfFeeCopyJudgmentDelhi: "निर्णय/आदेश की प्रति (डिक्री नहीं) — अधीनस्थ न्यायालय ₹1.25; उच्च न्यायालय ₹2.65",
+          cfFeeCopyDecreeDelhi: "डिक्री की प्रति — अधीनस्थ न्यायालय ₹2.65; उच्च न्यायालय ₹5.25",
+          cfFeeCopyOtherDelhi: "अभिलेख के अन्य दस्तावेज़ की प्रति — ₹0.65 प्रति 360 शब्द",
+          cfFeeVakalatDelhi: "वकालतनामा — ₹1.25 (अन्य न्यायालय); ₹2.65 (उच्च न्यायालय)",
+          cfDisclaimerDelhi: "केवल सांकेतिक — वास्तविक शुल्क दिल्ली में लागू वर्तमान Court Fees Act तालिका के अनुसार देय होगा; दाखिल करने से पहले सत्यापित करें।",
+          cfSourceDelhi: "स्रोत: न्यायालय शुल्क अधिनियम, 1870 — अनुसूची I तथा उससे संलग्न दर-तालिका (दिल्ली में यथा-लागू)।",
+          cfAboveFmt: "₹{n} से अधिक",
           hubFreeBadge: "मुफ्त",
           hubFilterAll: "सभी",
           hubFilterPopular: "लोकप्रिय",
@@ -11446,6 +11484,83 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
         }
         return { rows: rows, total: total };
       }
+
+      /* ============ Court Fee Calculator — Delhi table ============
+         Court Fees Act 1870, Schedule I as applicable in Delhi (Punjab Act 14 of
+         1958 substitutions as extended to Delhi) with the Table of Rates annexed
+         to Schedule I ("Rates of Ad Valorem Fees Leviable on the Institution of
+         Suits in Delhi"). The Court Fees (Delhi Amendment) Act, 2012 (2%/3%/4%)
+         was struck down as unconstitutional in Delhi High Court Bar Association
+         v. Govt. of NCT of Delhi, (2013) 203 DLT 129 — the pre-2012 table below
+         is the operative one. Segments marked abs charge the rate on the WHOLE
+         amount, exactly as the annexed table's rows run (e.g. the Rs 500-510
+         band is Rs 76.50); the remaining segments are cumulative on the excess
+         over the segment floor. "Or part thereof" => ceil throughout. NO
+         maximum-fee cap: the annexed table's closing direction continues the
+         top rate (Rs 48.80 per Rs 5,000) indefinitely above Rs 4,00,000.
+         Checkpoints: Rs 1,00,000 -> 3,320.00; Rs 10,00,000 -> 12,104.00;
+         Rs 50,00,000 -> 51,144.00; Rs 1,00,00,000 -> 99,944.00. See
+         SOURCES-DELHI.md. Case types mirror UP (Art. 1 suit/appeal; Art. 4
+         review on/after 90th day full; Art. 5 review before 90th day half;
+         Art. 2 possession under SRA s.6 half) — all verified in the Delhi text. */
+      var CF_SEGS_DELHI = [
+        { upTo: 100, unit: 5, rate: 0.5, abs: true },
+        { upTo: 500, unit: 10, rate: 1, abs: true },
+        { upTo: 1000, unit: 10, rate: 1.5, abs: true },
+        { upTo: 5000, unit: 100, rate: 12.2 },
+        { upTo: 10000, unit: 250, rate: 24.4 },
+        { upTo: 20000, unit: 500, rate: 36.5 },
+        { upTo: 30000, unit: 1000, rate: 48.8 },
+        { upTo: 50000, unit: 2000, rate: 48.8 },
+        { upTo: Infinity, unit: 5000, rate: 48.8 }
+      ];
+      function cfRound2(x) { return Math.round(x * 100) / 100; }
+      function cfDelhiFeeAt(v) {
+        var prev = 0, prevFee = 0, i, s;
+        for (i = 0; i < CF_SEGS_DELHI.length; i++) {
+          s = CF_SEGS_DELHI[i];
+          if (v <= s.upTo) {
+            return s.abs ? cfRound2(Math.ceil(v / s.unit) * s.rate)
+                         : cfRound2(prevFee + Math.ceil((v - prev) / s.unit) * s.rate);
+          }
+          prevFee = s.abs ? cfRound2(Math.ceil(s.upTo / s.unit) * s.rate)
+                          : cfRound2(prevFee + Math.ceil((s.upTo - prev) / s.unit) * s.rate);
+          prev = s.upTo;
+        }
+        return prevFee;
+      }
+      function cfAdValoremDelhi(v) {
+        var rows = [], prev = 0, prevFee = 0, i, s, top, feeTop;
+        for (i = 0; i < CF_SEGS_DELHI.length; i++) {
+          if (v <= prev) break;
+          s = CF_SEGS_DELHI[i];
+          top = Math.min(v, s.upTo);
+          feeTop = cfDelhiFeeAt(top);
+          rows.push({ from: prev, to: s.upTo, amount: top - prev, unit: s.unit, rate: s.rate, fee: cfRound2(feeTop - prevFee) });
+          prevFee = feeTop;
+          prev = s.upTo;
+        }
+        return { rows: rows, total: prevFee };
+      }
+      function cfStateKey() {
+        var el = document.getElementById("cfState");
+        return (el && el.value === "delhi") ? "delhi" : "up";
+      }
+      function cfApplyState() {
+        var delhi = (cfStateKey() === "delhi");
+        var badge = document.getElementById("cfStateBadge");
+        if (badge) badge.textContent = delhi ? "Delhi · Schedule I" : "UP · Schedule I";
+        var dis = document.getElementById("cfDisclaimer");
+        if (dis) dis.textContent = t(delhi ? "cfDisclaimerDelhi" : "cfDisclaimer");
+        var src = document.getElementById("cfSourceText");
+        if (src) src.textContent = t(delhi ? "cfSourceDelhi" : "cfSource");
+        var ou = document.getElementById("cfOtherUP");
+        if (ou) ou.hidden = delhi;
+        var od = document.getElementById("cfOtherDelhi");
+        if (od) od.hidden = !delhi;
+        var res = document.getElementById("cfResult");
+        if (res && !res.hidden) cfRender();
+      }
       function cfFmt(n) {
         var s = n.toFixed(2), parts = s.split("."), int = parts[0], dec = parts[1];
         var last3 = int.slice(-3), rest = int.slice(0, -3), grouped;
@@ -11471,14 +11586,15 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
         if (!v || v <= 0 || !isFinite(v)) { errEl.hidden = false; resEl.hidden = true; return; }
         errEl.hidden = true;
         var factor = (typeEl.value === "reviewEarly" || typeEl.value === "possession") ? 0.5 : 1;
-        var r = cfAdValorem(v);
+        var cfSt = cfStateKey();
+        var r = (cfSt === "delhi") ? cfAdValoremDelhi(v) : cfAdValorem(v);
         var tbody = document.getElementById("cfRows");
         if (tbody) {
           tbody.textContent = "";
           r.rows.forEach(function (row) {
             var tr = document.createElement("tr");
-            var slabTxt = (row.to === Infinity) ? t("cfAbove") : ("\u20B9" + cfFmtAmt(row.from) + " \u2013 \u20B9" + cfFmtAmt(row.to));
-            var cells = [slabTxt, "\u20B9" + cfFmtAmt(row.amount), "\u20B9" + cfFmt(row.rate) + " " + t("cfPer") + " \u20B9" + row.unit, "\u20B9" + cfFmt(row.fee)];
+            var slabTxt = (row.to === Infinity) ? ((cfSt === "delhi") ? t("cfAboveFmt").replace("{n}", cfFmtAmt(row.from)) : t("cfAbove")) : ("\u20B9" + cfFmtAmt(row.from) + " \u2013 \u20B9" + cfFmtAmt(row.to));
+            var cells = [slabTxt, "\u20B9" + cfFmtAmt(row.amount), "\u20B9" + cfFmt(row.rate) + " " + t("cfPer") + " \u20B9" + cfFmtAmt(row.unit), "\u20B9" + cfFmt(row.fee)];
             cells.forEach(function (c) {
               var td = document.createElement("td");
               td.textContent = c;
@@ -11520,13 +11636,13 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
           var res = document.getElementById("cfResult");
           if (res && !res.hidden) cfRender();
         });
+        var stateEl = document.getElementById("cfState");
+        if (stateEl) stateEl.addEventListener("change", cfApplyState);
+        cfApplyState();
         var langBtns = document.querySelectorAll("[data-language]");
         for (var i = 0; i < langBtns.length; i++) {
           langBtns[i].addEventListener("click", function () {
-            setTimeout(function () {
-              var res = document.getElementById("cfResult");
-              if (res && !res.hidden) cfRender();
-            }, 60);
+            setTimeout(function () { cfApplyState(); }, 60);
           });
         }
       })();
