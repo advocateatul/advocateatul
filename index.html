@@ -500,6 +500,16 @@
     .judgement-link { align-self: flex-start; margin-top: 8px; display: inline-block; color: var(--ink); font-size: .85rem; text-decoration: none; border: 1px solid rgba(0,0,0,.4); border-radius: 999px; padding: 9px 20px; }
     .judgement-link:hover { background: #111111; color: #ffffff; }
     .library-note { margin-top: 34px; color: var(--muted); font-size: .78rem; max-width: 720px; }
+    .live-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 10px 0 4px; }
+    .live-bar .live-label { font: 600 .8rem var(--sans); color: var(--muted); }
+    .live-btn { font: 700 .8rem var(--sans); padding: 8px 16px; border: 1px solid rgba(0,0,0,.25); border-radius: 999px; background: transparent; color: var(--ink); text-decoration: none; transition: all .25s; }
+    .live-btn:hover { background: #111; color: #fff; border-color: #111; transform: translateY(-1px); }
+    html[data-theme="dark"] .live-btn { border-color: rgba(255,255,255,.35); }
+    html[data-theme="dark"] .live-btn:hover { background: #fff; color: #111; border-color: #fff; }
+    .la-live { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; padding: 8px 14px 10px; background: #fff; }
+    .la-live .la-live-label { font-size: .75rem; font-weight: 600; color: #555; }
+    .la-live-btn { border: 1.5px solid #111; background: #fff; color: #111; border-radius: 999px; padding: 5px 11px; font-size: .75rem; font-weight: 600; text-decoration: none; }
+    .la-live-btn:hover { background: #111; color: #fff; }
 
     .drafts { background: var(--paper); color: var(--ink); padding: clamp(54px, 7vw, 94px) 0; }
     .drafts-head { display: grid; grid-template-columns: .7fr 1.3fr; gap: 50px; align-items: end; margin-bottom: 14px; }
@@ -1603,6 +1613,11 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
         </div>
         <div class="section-search reveal" role="search">
           <input type="search" id="librarySectionSearch" data-i18n-ph="sectionSearchPh" placeholder="Search this section…" aria-label="Search Library" autocomplete="off" />
+        </div>
+        <div class="live-bar reveal" id="libLiveBar">
+          <span class="live-label" data-i18n="liveSearchLabel">Search live for the latest judgements/orders:</span>
+          <a class="live-btn" id="libLiveKanoon" href="https://indiankanoon.org/search/?formInput=latest%20judgements" target="_blank" rel="noopener" data-i18n="liveKanoon">🔍 Indian Kanoon — Live</a>
+          <a class="live-btn" id="libLiveGoogle" href="https://www.google.com/search?q=latest%20judgements%20judgement" target="_blank" rel="noopener" data-i18n="liveGoogle">🔍 Google — Live</a>
         </div>
         <div class="library-grid" id="libraryGrid"></div>
         <div class="vocab-more-wrap" id="libraryMoreWrap" style="text-align:center;margin-top:24px;display:none;">
@@ -10678,6 +10693,10 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
           hubOfficialBadge: "Official",
           hubNoResults: "No results found. Try another keyword.",
           hubResultActs: "Bare Acts",
+          hubResultLive: "Live Search",
+          liveSearchLabel: "Search live for the latest judgements/orders:",
+          liveKanoon: "🔍 Indian Kanoon — Live",
+          liveGoogle: "🔍 Google — Live",
           hubResultJudgements: "Judgements",
           hubResultUpdates: "Legal Updates",
           hubResultLinks: "Links",
@@ -10934,6 +10953,10 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
           hubOfficialBadge: "आधिकारिक",
           hubNoResults: "कोई परिणाम नहीं मिला। कोई अन्य कीवर्ड आज़माएं।",
           hubResultActs: "बेयर एक्ट",
+          hubResultLive: "लाइव खोज",
+          liveSearchLabel: "ताज़ा निर्णय/आदेश लाइव खोजें:",
+          liveKanoon: "🔍 इंडियन कानून — लाइव",
+          liveGoogle: "🔍 गूगल — लाइव",
           hubResultJudgements: "निर्णय",
           hubResultUpdates: "कानूनी अपडेट",
           hubResultLinks: "लिंक",
@@ -12606,9 +12629,15 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
         var drData = getLegalDrafts();
         var dHits = ((drData && drData.drafts) || []).filter(function (dr) { return matches(dr.title.en, dr.title.hi, dr.use.en, dr.use.hi, dr.category.en, dr.category.hi, dr.sections && dr.sections.en, dr.sections && dr.sections.hi, dr.jurisdiction && dr.jurisdiction.en, dr.jurisdiction && dr.jurisdiction.hi); }).slice(0, 6);
         if (dHits.length) groups.push({ title: t("hubResultDrafts"), items: dHits.map(function (dr) { return { title: dr.title[lang] || dr.title.en, sub: dr.category[lang] || dr.category.en, go: function () { if (typeof jumpToDraft === "function") jumpToDraft(dr.id); else document.getElementById("drafts").scrollIntoView({ behavior: "smooth" }); } }; }) });
-        if (!groups.length) {
+        var liveQ = (q || "").trim() || query;
+        groups.push({ title: t("hubResultLive"), items: [
+          { title: t("liveKanoon"), sub: "indiankanoon.org", go: function () { window.open("https://indiankanoon.org/search/?formInput=" + encodeURIComponent(liveQ), "_blank", "noopener"); } },
+          { title: t("liveGoogle"), sub: "google.com", go: function () { window.open("https://www.google.com/search?q=" + encodeURIComponent(liveQ + " judgement"), "_blank", "noopener"); } }
+        ] });
+        if (groups.length === 1) {
           box.appendChild(hubEl("div", "hub-no-results", t("hubNoResults")));
-        } else {
+        }
+        if (groups.length) {
           groups.forEach(function (g) {
             var wrap = hubEl("div", "hub-result-group");
             wrap.appendChild(hubEl("h4", null, g.title));
@@ -12856,6 +12885,20 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
             moreWrap.style.display = "none";
           }
         }
+      }
+
+      /* ---------- Library live search deep links ---------- */
+      function initLibLiveBar() {
+        var input = document.getElementById("librarySectionSearch");
+        var k = document.getElementById("libLiveKanoon"), g = document.getElementById("libLiveGoogle");
+        if (!k || !g) return;
+        function upd() {
+          var v = (input && input.value ? input.value.trim() : "") || "latest judgements";
+          k.href = "https://indiankanoon.org/search/?formInput=" + encodeURIComponent(v);
+          g.href = "https://www.google.com/search?q=" + encodeURIComponent(v + " judgement");
+        }
+        if (input) input.addEventListener("input", upd);
+        upd();
       }
 
       function initLibraryMore() {
@@ -13420,6 +13463,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
       })();
       sectionFilter("documentsSectionSearch", ".document-note, .drive-tab", "documents");
       initLibraryMore();
+      initLibLiveBar();
       (function () { var i = document.getElementById("draftsSectionSearch"); if (i) i.addEventListener("input", filterDrafts); })();
       (function () { var i = document.getElementById("draftGuideSearch"); if (i) i.addEventListener("input", filterDraftGuide); })();
 
@@ -13460,6 +13504,11 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
           <input type="text" id="laInput" autocomplete="off" />
           <button type="submit" aria-label="Send">➤</button>
         </form>
+        <div class="la-live" id="laLiveRow">
+          <span class="la-live-label" id="laLiveLabel">Search live:</span>
+          <a class="la-live-btn" id="laLiveKanoon" href="https://indiankanoon.org/search/?formInput=legal%20help" target="_blank" rel="noopener">🔍 <span id="laLiveKanoonTxt">Indian Kanoon — Live</span></a>
+          <a class="la-live-btn" id="laLiveGoogle" href="https://www.google.com/search?q=legal%20help%20judgement" target="_blank" rel="noopener">🔍 <span id="laLiveGoogleTxt">Google — Live</span></a>
+        </div>
       </section>
       <section class="la-pane" id="laPaneDrafting" role="tabpanel" hidden>
         <div class="la-ai-draft">
@@ -14491,6 +14540,12 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
         if (mbt) mbt.textContent = L("Generate Summary", "सारांश बनाएं");
         var cdn = document.getElementById("laCaseDeadlineNote");
         if (cdn) cdn.placeholder = L("Deadline note (optional)", "डेडलाइन नोट (वैकल्पिक)");
+        var lvl = document.getElementById("laLiveLabel");
+        if (lvl) lvl.textContent = L("Search live:", "लाइव खोजें:");
+        var lvk = document.getElementById("laLiveKanoonTxt");
+        if (lvk) lvk.textContent = L("Indian Kanoon — Live", "इंडियन कानून — लाइव");
+        var lvg = document.getElementById("laLiveGoogleTxt");
+        if (lvg) lvg.textContent = L("Google — Live", "गूगल — लाइव");
       }
       function switchTab(name) {
         document.querySelectorAll(".la-tab").forEach(function (b) {
@@ -14549,6 +14604,19 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
         if (attBtn && fileInp) { attBtn.addEventListener("click", function () { fileInp.click(); }); fileInp.addEventListener("change", function () { if (fileInp.files[0]) laScanFile(fileInp.files[0]); fileInp.value = ""; }); }
         var dcBtn = document.getElementById("laDocCamBtn");
         if (dcBtn && camInp) dcBtn.addEventListener("click", function () { camInp.click(); });
+        /* ---- Live search deep links (Indian Kanoon / Google) ---- */
+        (function () {
+          var lq = document.getElementById("laInput");
+          var lk = document.getElementById("laLiveKanoon"), lg = document.getElementById("laLiveGoogle");
+          if (!lk || !lg) return;
+          function lupd() {
+            var v = (lq && lq.value ? lq.value.trim() : "") || "legal help";
+            lk.href = "https://indiankanoon.org/search/?formInput=" + encodeURIComponent(v);
+            lg.href = "https://www.google.com/search?q=" + encodeURIComponent(v + " judgement");
+          }
+          if (lq) lq.addEventListener("input", lupd);
+          lupd();
+        })();
         var dsearch = document.getElementById("laDraftSearch");
         if (dsearch) dsearch.addEventListener("input", renderDraftList);
         var abtn = document.getElementById("laAiDraftBtn");
