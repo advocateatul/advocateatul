@@ -1017,6 +1017,12 @@
     .la-form { display: flex; gap: 8px; padding: 10px 14px; background: #fff; border-top: 1px solid rgba(0,0,0,.1); }
     .la-form input { flex: 1; height: 42px; border: 2px solid #000; border-radius: 999px; padding: 0 16px; font-size: .85rem; outline: none; min-width: 0; }
     .la-form button { width: 42px; height: 42px; flex: 0 0 42px; border: 2px solid #000; border-radius: 50%; background: #111; color: #fff; font-size: 1rem; cursor: pointer; }
+    .la-ctx { display: flex; align-items: center; gap: 8px; padding: 8px 14px; background: #111; color: #fff; font-size: .78rem; }
+    .la-ctx[hidden] { display: none; }
+    .la-ctx button { margin-left: auto; flex: 0 0 auto; background: #fff; color: #111; border: 0; border-radius: 999px; padding: 4px 12px; font-size: .75rem; cursor: pointer; }
+    .la-scan-img { max-width: 170px; border-radius: 10px; display: block; margin-top: 6px; }
+    .la-scan-actions { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 9px; }
+    .la-scan-actions button { border: 1.5px solid #111; background: #fff; color: #111; border-radius: 999px; padding: 5px 11px; font-size: .75rem; cursor: pointer; }
     .la-draft-search { padding: 12px 14px 6px; background: #fff; }
     .la-draft-search input { width: 100%; height: 40px; border: 2px solid #000; border-radius: 999px; padding: 0 16px; font-size: .85rem; outline: none; }
     .la-draft-list { flex: 1; overflow-y: auto; padding: 8px 14px 14px; display: flex; flex-direction: column; gap: 8px; background: #f8fafc; }
@@ -13069,7 +13075,12 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
       <section class="la-pane" id="laPaneResearch" role="tabpanel">
         <div id="laMessages" class="la-messages" aria-live="polite"></div>
         <div id="laChips" class="la-chips ai-chips"></div>
+        <div id="laCtxBar" class="la-ctx" hidden></div>
         <form id="laForm" class="la-form">
+          <button type="button" id="laCamBtn" aria-label="Camera scan">📷</button>
+          <button type="button" id="laAttachBtn" aria-label="Attach document">📎</button>
+          <input type="file" id="laCamInput" accept="image/*" capture="environment" hidden>
+          <input type="file" id="laFileInput" accept="image/*,.pdf,.txt" hidden>
           <input type="text" id="laInput" autocomplete="off" />
           <button type="submit" aria-label="Send">➤</button>
         </form>
@@ -13111,6 +13122,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
           <input type="file" id="laDocUpload" accept=".pdf,.jpg,.jpeg,.png,.txt,.doc,.docx" multiple hidden>
           <div class="la-doc-actions">
             <button type="button" id="laDocUploadBtn" class="la-generate">📤 <span data-t-en="Upload" data-t-hi="अपलोड">Upload</span></button>
+            <button type="button" id="laDocCamBtn" class="la-generate">📷 <span data-t-en="Camera Scan" data-t-hi="कैमरा स्कैन">Camera Scan</span></button>
             <button type="button" id="laDocOcrBtn" class="la-generate">🔍 <span data-t-en="Scan Text (OCR)" data-t-hi="टेक्स्ट स्कैन (OCR)">Scan Text (OCR)</span></button>
           </div>
           <div id="laDocOcrOut" class="la-preview" hidden></div>
@@ -13392,6 +13404,270 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
         }, sys, tokens);
       }
 
+      /* ---------------- Document Scan (camera / OCR / AI vision) ---------------- */
+      var LA_SCAN = { text: "", name: "" };
+      function laAiGate(cb) {
+        if (!window.LA_AUTH || !window.LA_AUTH.ready) { cb(true); return; }
+        if (!window.LA_AUTH.user) { cb(false); return; }
+        window.LA_AUTH.withQuota(function (ok) { cb(!!ok); });
+      }
+      function laBotSay(text, ai) {
+        var tag = ai ? "<span class='la-ai-tag'>\u2728 AI</span> " : "";
+        var msgDiv = addMsg(tag + esc(text).replace(/\n/g, "<br>"), "bot");
+        if (ai && msgDiv) {
+          var cp = document.createElement("button");
+          cp.type = "button"; cp.className = "la-copy";
+          cp.textContent = "\uD83D\uDCCB " + L("Copy", "कॉपी");
+          cp.addEventListener("click", function () {
+            try { if (navigator.clipboard) navigator.clipboard.writeText(text); cp.textContent = "\u2713 " + L("Copied", "कॉपी हुआ"); } catch (e) {}
+          });
+          msgDiv.appendChild(cp);
+          var wa = document.createElement("a");
+          wa.className = "la-copy"; wa.target = "_blank"; wa.rel = "noopener";
+          wa.href = "https://wa.me/?text=" + encodeURIComponent(text);
+          wa.textContent = "\uD83D\uDCAC WhatsApp";
+          msgDiv.appendChild(wa);
+        }
+        return msgDiv;
+      }
+      function laCtxRender() {
+        var bar = document.getElementById("laCtxBar");
+        if (!bar) return;
+        if (LA_SCAN.text) {
+          bar.hidden = false;
+          bar.innerHTML = "";
+          var s = document.createElement("span");
+          s.textContent = "\uD83D\uDCC4 " + LA_SCAN.name + " — " + L("attached. Ask anything about it.", "जुड़ा है। इसके बारे में कुछ भी पूछें।");
+          var b = document.createElement("button");
+          b.type = "button"; b.textContent = "\u2715 " + L("Remove", "हटाएँ");
+          b.addEventListener("click", function () { LA_SCAN.text = ""; LA_SCAN.name = ""; laCtxRender(); });
+          bar.appendChild(s); bar.appendChild(b);
+        } else { bar.hidden = true; }
+      }
+      function laSetCtx(text, name) { LA_SCAN.text = text || ""; LA_SCAN.name = name || "Document"; laCtxRender(); }
+      function laLoadOcr(cb) {
+        if (window.Tesseract) { cb(true); return; }
+        var s = document.createElement("script");
+        s.src = "https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js";
+        s.onload = function () { cb(true); };
+        s.onerror = function () { cb(false); };
+        document.head.appendChild(s);
+      }
+      function laOcr(blob, cb) {
+        laLoadOcr(function (ok) {
+          if (!ok) { cb(null); return; }
+          try {
+            Tesseract.recognize(blob, "eng+hin").then(function (r) {
+              cb(((r && r.data && r.data.text) || "").trim() || null);
+            }).catch(function () { cb(null); });
+          } catch (e) { cb(null); }
+        });
+      }
+      function laFileToDataUrl(file, cb) {
+        var r = new FileReader();
+        r.onload = function () { cb(r.result); };
+        r.onerror = function () { cb(null); };
+        r.readAsDataURL(file);
+      }
+      function laDownscale(file, cb) {
+        var url = URL.createObjectURL(file);
+        var img = new Image();
+        img.onload = function () {
+          try {
+            var w = img.naturalWidth, h = img.naturalHeight, m = Math.max(w, h), sc = m > 1280 ? 1280 / m : 1;
+            var c = document.createElement("canvas");
+            c.width = Math.round(w * sc); c.height = Math.round(h * sc);
+            c.getContext("2d").drawImage(img, 0, 0, c.width, c.height);
+            URL.revokeObjectURL(url);
+            cb(c.toDataURL("image/jpeg", 0.85));
+          } catch (e) { URL.revokeObjectURL(url); laFileToDataUrl(file, cb); }
+        };
+        img.onerror = function () { URL.revokeObjectURL(url); laFileToDataUrl(file, cb); };
+        img.src = url;
+      }
+      function askGeminiVision(dataUrl, prompt, cb) {
+        if (!GEMINI_KEY || GEMINI_KEY.length < 20) { cb(null); return; }
+        var done = false;
+        function fin(v) { if (!done) { done = true; cb(v); } }
+        var to = setTimeout(function () { fin(null); }, 45000);
+        try {
+          var parts = String(dataUrl).split(",");
+          var mime = (parts[0].match(/data:([^;]+)/) || [])[1] || "image/jpeg";
+          fetch("https://generativelanguage.googleapis.com/v1beta/models/" + GEMINI_MODEL + ":generateContent?key=" + GEMINI_KEY, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              systemInstruction: { parts: [{ text: geminiSystem(laLang()) }] },
+              contents: [{ parts: [{ text: prompt }, { inline_data: { mime_type: mime, data: parts[1] || "" } }] }],
+              generationConfig: { temperature: 0.2, maxOutputTokens: 1000 }
+            })
+          }).then(function (res) { if (!res.ok) { fin(null); return null; } return res.json(); })
+          .then(function (data) {
+            clearTimeout(to);
+            if (!data) { fin(null); return; }
+            try {
+              var txt = data.candidates[0].content.parts.map(function (p) { return p.text || ""; }).join("").trim();
+              fin(txt || null);
+            } catch (e) { fin(null); }
+          }).catch(function () { clearTimeout(to); fin(null); });
+        } catch (e) { clearTimeout(to); fin(null); }
+      }
+      function laScanPrompt() {
+        return laLang() === "hi"
+          ? "यह एक legal document की photo है। इसे ध्यान से पढ़ो और हिंदी में ठीक इस format में जानकारी दो:\nDocument की type:\nकिसने जारी किया / भेजा:\nParties (पक्ष):\nCase / Reference number:\nज़रूरी dates:\nSections / Acts:\nSummary (5-6 lines):\nध्यान देने वाली बात / अगला step:\nजो जानकारी photo में न मिले वहाँ 'नहीं मिला' लिखो। कुछ भी invent मत करो।"
+          : "This is a photo of a legal document. Read it carefully and give the information in exactly this format:\nDocument type:\nIssued by / sent by:\nParties:\nCase / Reference number:\nImportant dates:\nSections / Acts mentioned:\nSummary (5-6 lines):\nWhat needs attention / next step:\nWhere something is not visible in the photo, write 'not found'. Never invent anything.";
+      }
+      function laFirstDate(text) {
+        var m = /(\d{1,2})[\/\-.](\d{1,2})[\/\-.](\d{4})/.exec(text || "");
+        if (m) { var d = m[1].length === 1 ? "0" + m[1] : m[1], mo = m[2].length === 1 ? "0" + m[2] : m[2]; return m[3] + "-" + mo + "-" + d; }
+        var months = { january: "01", february: "02", march: "03", april: "04", may: "05", june: "06", july: "07", august: "08", september: "09", october: "10", november: "11", december: "12" };
+        var m2 = /(\d{1,2})\s+(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{4})/i.exec(text || "");
+        if (m2) { var d2 = m2[1].length === 1 ? "0" + m2[1] : m2[1]; return m2[3] + "-" + months[m2[2].toLowerCase()] + "-" + d2; }
+        return "";
+      }
+      function laScanActions(file, text) {
+        var row = document.createElement("div");
+        row.className = "la-scan-actions";
+        function mk(label, fn) { var b = document.createElement("button"); b.type = "button"; b.textContent = label; b.addEventListener("click", fn); row.appendChild(b); }
+        mk("\uD83D\uDCDD " + L("Summary", "सारांश"), function () { respond(L("Summarise this document in simple words.", "Is document ka saransh saral shabdon me do.")); });
+        mk("\uD83D\uDCC5 " + L("Dates & details", "तारीखें व विवरण"), function () { respond(L("List all important dates, names, case numbers and sections in this document.", "Is document ki sabhi zaroori dates, naam, case number aur sections ki list do.")); });
+        mk("\uD83C\uDF10 " + L("Translate", "अनुवाद"), function () { respond(laLang() === "hi" ? "Translate this document into English." : "Is document ka Hindi anuvaad karo."); });
+        mk("\uD83D\uDCE5 " + L("Save to My Documents", "My Documents में save करें"), function () { try { laDocUploadFiles([file]); laBotSay(L("Saved to My Documents (Docs tab).", "My Documents (Docs tab) में save हो गया।"), false); } catch (e) {} });
+        mk("\u2795 " + L("Add to My Cases", "My Cases में जोड़ें"), function () {
+          try {
+            switchTab("cases");
+            var lines = (text || "").split("\n").filter(function (x) { return x.trim().length > 8; });
+            var ti = document.getElementById("laCaseTitle"); if (ti) ti.value = (lines[0] || file.name || "").trim().slice(0, 90);
+            var dt = laFirstDate(text); var di = document.getElementById("laCaseDate"); if (di && dt) di.value = dt;
+            var ni = document.getElementById("laCaseNotes"); if (ni) ni.value = (text || "").slice(0, 300);
+          } catch (e) {}
+        });
+        return row;
+      }
+      function laFinishScan(file, ocrText, visionText, statusDiv) {
+        var best = ocrText || visionText || "";
+        if (!best) {
+          statusDiv.textContent = L("Could not read this document. Try a clearer, straight photo in good light.", "Document पढ़ नहीं पाया। साफ़, सीधी photo अच्छी रोशनी में लेकर दोबारा try करें।");
+          return;
+        }
+        laSetCtx(best, file.name || "Document");
+        var ta = document.getElementById("laDocsInput");
+        if (ta && ocrText) ta.value = ocrText.slice(0, 4000);
+        var head = "";
+        if (!visionText) {
+          head = L("Document scanned and attached. Ask me anything about it, or use the buttons below.", "Document scan होकर जुड़ गया है। इसके बारे में कुछ भी पूछिए, या नीचे के button use कीजिए।") + "\n";
+          if (!window.LA_AUTH || !window.LA_AUTH.user) head += L("Tip: log in for a full AI analysis of the document.", "Tip: login करने पर document का full AI analysis मिलेगा।") + "\n";
+          head += "\n";
+        }
+        try { if (statusDiv.parentNode) statusDiv.parentNode.removeChild(statusDiv); } catch (e) {}
+        var msg = laBotSay(head + (visionText || ocrText.slice(0, 2500)), !!visionText);
+        if (msg) msg.appendChild(laScanActions(file, best));
+      }
+      function laScanImage(file, statusDiv) {
+        var ocrText = null, visionText = null, ocrDone = false, visDone = false;
+        function step() { if (ocrDone && visDone) laFinishScan(file, ocrText, visionText, statusDiv); }
+        laOcr(file, function (t) { ocrText = t; ocrDone = true; step(); });
+        laAiGate(function (ok) {
+          if (!ok) { visDone = true; step(); return; }
+          laDownscale(file, function (du) {
+            if (!du) { visDone = true; step(); return; }
+            statusDiv.textContent = L("Photo received — AI is reading the document...", "Photo मिल गई — AI document पढ़ रहा है...");
+            askGeminiVision(du, laScanPrompt(), function (v) { visionText = v; visDone = true; step(); });
+          });
+        });
+      }
+      function laPdfJs(cb) {
+        if (window.__laPdfjs) { cb(window.__laPdfjs); return; }
+        import("https://cdn.jsdelivr.net/npm/pdfjs-dist@6.4.299/build/pdf.min.mjs").then(function (mod) {
+          try { mod.GlobalWorkerOptions.workerSrc = "https://cdn.jsdelivr.net/npm/pdfjs-dist@6.4.299/build/pdf.worker.min.mjs"; } catch (e) {}
+          window.__laPdfjs = mod; cb(mod);
+        }).catch(function () { cb(null); });
+      }
+      function laScanPdf(file, statusDiv) {
+        laPdfJs(function (mod) {
+          if (!mod) { statusDiv.textContent = L("PDF reader could not load. Please scan the document's photo/screenshot instead.", "PDF reader load नहीं हुआ। Document की photo/screenshot scan करके try करें।"); return; }
+          file.arrayBuffer().then(function (buf) {
+            return mod.getDocument({ data: buf, cMapUrl: "https://cdn.jsdelivr.net/npm/pdfjs-dist@6.4.299/cmaps/", cMapPacked: true, standardFontDataUrl: "https://cdn.jsdelivr.net/npm/pdfjs-dist@6.4.299/standard_fonts/" }).promise;
+          }).then(function (pdf) {
+            var n = Math.min(pdf.numPages, 6), texts = [], i, chain = Promise.resolve();
+            for (i = 1; i <= n; i++) {
+              (function (pno) {
+                chain = chain.then(function () {
+                  return pdf.getPage(pno).then(function (page) {
+                    return page.getTextContent().then(function (tc) { texts.push(tc.items.map(function (it) { return it.str; }).join(" ")); });
+                  });
+                });
+              })(i);
+            }
+            return chain.then(function () { return { pdf: pdf, text: texts.join("\n") }; });
+          }).then(function (r) {
+            var txt = (r.text || "").trim();
+            if (txt.length >= 80) {
+              laAiGate(function (ok) {
+                if (!ok) { laFinishScan(file, txt, null, statusDiv); return; }
+                statusDiv.textContent = L("PDF text extracted — AI is analysing...", "PDF text निकल गया — AI analysis कर रहा है...");
+                var q = (laLang() === "hi" ? "नीचे एक legal document का text है। उसकी जानकारी इस format में दो (Document type, Parties, Case number, ज़रूरी dates, Sections, Summary, अगला step):\n\n" : "Below is the text of a legal document. Give its information in this format (Document type, Parties, Case number, Important dates, Sections, Summary, Next step):\n\n") + txt.slice(0, 7000);
+                aiAsk(q, laLang(), null, 1000, function (v) { laFinishScan(file, txt, v, statusDiv); });
+              });
+            } else {
+              var canvases = [], chain2 = Promise.resolve();
+              [1, 2].forEach(function (pno) {
+                if (pno > r.pdf.numPages) return;
+                chain2 = chain2.then(function () {
+                  return r.pdf.getPage(pno).then(function (page) {
+                    var vp = page.getViewport({ scale: 2 });
+                    var c = document.createElement("canvas");
+                    c.width = vp.width; c.height = vp.height;
+                    return page.render({ canvasContext: c.getContext("2d"), viewport: vp }).promise.then(function () { canvases.push(c); });
+                  });
+                });
+              });
+              chain2.then(function () {
+                if (!canvases.length) { laFinishScan(file, null, null, statusDiv); return; }
+                var ocrAll = "", pending = canvases.length;
+                canvases.forEach(function (c) {
+                  laOcr(c, function (t) {
+                    if (t) ocrAll += (ocrAll ? "\n" : "") + t;
+                    pending--;
+                    if (!pending) {
+                      laAiGate(function (ok) {
+                        if (!ok) { laFinishScan(file, ocrAll || null, null, statusDiv); return; }
+                        askGeminiVision(canvases[0].toDataURL("image/jpeg", 0.85), laScanPrompt(), function (v) { laFinishScan(file, ocrAll || null, v, statusDiv); });
+                      });
+                    }
+                  });
+                });
+              }).catch(function () { laFinishScan(file, null, null, statusDiv); });
+            }
+          }).catch(function () {
+            statusDiv.textContent = L("Could not read this PDF. Try its photo/screenshot instead.", "यह PDF पढ़ नहीं पाया। इसकी photo/screenshot scan करके try करें।");
+          });
+        });
+      }
+      function laScanFile(file) {
+        if (!file) return;
+        switchTab("research");
+        if (file.size > 25 * 1048576) { laBotSay(L("File is too large (max 25 MB).", "File बहुत बड़ी है (max 25 MB)।"), false); return; }
+        var isPdf = /pdf/i.test(file.type || "") || /\.pdf$/i.test(file.name || "");
+        var isImg = /^image\//.test(file.type || "") || /\.(jpg|jpeg|png|webp)$/i.test(file.name || "");
+        var um = addMsg("\uD83D\uDCC4 " + esc(file.name || "Document"), "user");
+        if (isImg && um) {
+          var im = document.createElement("img");
+          im.className = "la-scan-img"; im.alt = "";
+          im.src = URL.createObjectURL(file);
+          um.appendChild(im);
+        }
+        var statusDiv = addMsg(L("Scanning document...", "Document scan हो रहा है..."), "bot");
+        if (!statusDiv) return;
+        if (isPdf) laScanPdf(file, statusDiv);
+        else if (isImg) laScanImage(file, statusDiv);
+        else if (/text/.test(file.type || "") || /\.txt$/i.test(file.name || "")) {
+          file.text().then(function (tx) { laFinishScan(file, (tx || "").trim().slice(0, 8000) || null, null, statusDiv); }).catch(function () { laFinishScan(file, null, null, statusDiv); });
+        } else {
+          statusDiv.textContent = L("This file type is not supported for scanning. Use a photo (JPG/PNG) or a PDF.", "यह file type scan के लिए supported नहीं है। Photo (JPG/PNG) या PDF use करें।");
+        }
+      }
+
       /* ---------------- AI Drafting (AI-generated legal documents) ---------------- */
       var LA_AI_DRAFT = { text: "", desc: "" };
       function aiDraftSystem(lang) {
@@ -13480,10 +13756,12 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
           } catch (e3) {}
         }
         var builtin = research(q);
+        var qAI = q;
+        if (LA_SCAN.text) { qAI = "The user has scanned a legal document named \"" + LA_SCAN.name + "\". Its text is below. Answer the user's question from this document first; if the answer is not in it, say so briefly, then give general legal guidance.\n--- DOCUMENT ---\n" + LA_SCAN.text.slice(0, 6000) + "\n--- END ---\nQuestion: " + q; }
         function aiChain() {
-          askGemini(q, lang, function (aiText) {
+          askGemini(qAI, lang, function (aiText) {
             if (aiText) { done(aiText, builtin.sources, true); return; }
-            askGroq(q, lang, function (gqText) {
+            askGroq(qAI, lang, function (gqText) {
               if (gqText) done(gqText, builtin.sources, true);
               else setTimeout(function () { done(builtin.html, builtin.sources, false); }, 350);
             });
@@ -13889,6 +14167,12 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
           var inp = document.getElementById("laInput"), v = inp.value.trim();
           if (v) { respond(v); inp.value = ""; }
         });
+        var camBtn = document.getElementById("laCamBtn"), camInp = document.getElementById("laCamInput");
+        var attBtn = document.getElementById("laAttachBtn"), fileInp = document.getElementById("laFileInput");
+        if (camBtn && camInp) { camBtn.addEventListener("click", function () { camInp.click(); }); camInp.addEventListener("change", function () { if (camInp.files[0]) laScanFile(camInp.files[0]); camInp.value = ""; }); }
+        if (attBtn && fileInp) { attBtn.addEventListener("click", function () { fileInp.click(); }); fileInp.addEventListener("change", function () { if (fileInp.files[0]) laScanFile(fileInp.files[0]); fileInp.value = ""; }); }
+        var dcBtn = document.getElementById("laDocCamBtn");
+        if (dcBtn && camInp) dcBtn.addEventListener("click", function () { camInp.click(); });
         var dsearch = document.getElementById("laDraftSearch");
         if (dsearch) dsearch.addEventListener("input", renderDraftList);
         var abtn = document.getElementById("laAiDraftBtn");
