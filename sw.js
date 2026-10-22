@@ -5,10 +5,10 @@
    saved copy in the background for the next open.
    Static files: stale-while-revalidate. Cross-origin requests untouched.
    All paths are relative to this script, so it works under any base path. */
-var CACHE = "aklegal-v2";
+var CACHE = "aklegal-v3";
 function abs(p) { return new URL(p, self.location.href).toString(); }
 var INDEX = abs("index.html");
-var CORE = ["", "index.html", "manifest.webmanifest", "logo.png", "icon-192.png", "icon-512.png", "icon-maskable-512.png", "apple-touch-icon.png"];
+var CORE = ["", "index.html", "hero.webp", "manifest.webmanifest", "logo.webp", "icon-192.png", "icon-512.png", "icon-maskable-512.png", "apple-touch-icon.png"];
 
 self.addEventListener("install", function (e) {
   e.waitUntil(
@@ -35,6 +35,13 @@ self.addEventListener("fetch", function (e) {
   var url;
   try { url = new URL(req.url); } catch (err) { return; }
   if (url.origin !== self.location.origin) return;
+  var path = url.pathname;
+  var isIndexNav = path.endsWith("/") || path.endsWith("/index.html");
+  // Sirf homepage navigation ko hi instant-first cache milega; clients.html ya
+  // APK download jaisi dusri navigations ko browser khud handle karega —
+  // warna galat file homepage ke cache me ghus sakti thi (bug fix 2026-10-23).
+  if (req.mode === "navigate" && !isIndexNav) return;
+  if (path.endsWith(".apk")) return;
 
   if (req.mode === "navigate") {
     e.respondWith(
