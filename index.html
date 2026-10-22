@@ -1634,6 +1634,22 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
           <a class="live-btn" id="libLiveKanoon" href="https://indiankanoon.org/search/?formInput=latest%20judgements" target="_blank" rel="noopener" data-i18n="liveKanoon">🔍 Indian Kanoon — Live</a>
           <a class="live-btn" id="libLiveGoogle" href="https://www.google.com/search?q=latest%20judgements%20judgement" target="_blank" rel="noopener" data-i18n="liveGoogle">🔍 Google — Live</a>
         </div>
+        <div class="lib-filters reveal">
+          <select id="libCourtFilter" class="lib-filter-sel" aria-label="Filter by court">
+            <option value="all" data-i18n="libCourtAll">All Courts</option>
+            <option value="sc" data-i18n="libCourtSC">Supreme Court</option>
+            <option value="allahabad" data-i18n="libCourtAhd">Allahabad High Court</option>
+            <option value="otherhc" data-i18n="libCourtOther">Other High Courts</option>
+          </select>
+          <select id="libEraFilter" class="lib-filter-sel" aria-label="Filter by period">
+            <option value="all" data-i18n="libEraAll">All Years</option>
+            <option value="e2020" data-i18n="libEra2020">2020 \u2013 2026</option>
+            <option value="e2010" data-i18n="libEra2010">2010 \u2013 2019</option>
+            <option value="e2000" data-i18n="libEra2000">2000 \u2013 2009</option>
+            <option value="eold" data-i18n="libEraOld">1950 \u2013 1999</option>
+            <option value="epre" data-i18n="libEraPre">Before 1950</option>
+          </select>
+        </div>
         <div class="library-grid" id="libraryGrid"></div>
         <div class="vocab-more-wrap" id="libraryMoreWrap" style="text-align:center;margin-top:24px;display:none;">
           <button type="button" class="vocab-cat" id="libraryMoreBtn" style="font-size:.95rem;padding:12px 32px;"></button>
@@ -1643,7 +1659,8 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
     </section>
 
 
-    <section class="knowledge" id="knowledge" aria-labelledby="knowledge-title">
+    <script type="application/json" id="lawCompareData">{"crpc_bnss":[{"new":"BNSS 35","old":"CrPC 41","subjectEn":"When police may arrest without warrant","subjectHi":"पुलिस कब बिना वारंट गिरफ्तार कर सकती है"},{"new":"BNSS 35(3)","old":"CrPC 41A","subjectEn":"Notice of appearance before police officer","subjectHi":"पुलिस अधिकारी के समक्ष उपस्थिति की सूचना"},{"new":"BNSS 47","old":"CrPC 50","subjectEn":"Person arrested to be informed of grounds of arrest and of right to bail","subjectHi":"गिरफ्तार व्यक्ति को गिरफ्तारी के आधार व ज़मानत के अधिकार की सूचना"},{"new":"BNSS 51","old":"CrPC 53","subjectEn":"Examination of accused by medical practitioner at request of police","subjectHi":"पुलिस के अनुरोध पर अभियुक्त की चिकित्सक द्वारा जाँच"},{"new":"BNSS 53","old":"CrPC 54","subjectEn":"Examination of arrested person by medical officer","subjectHi":"गिरफ्तार व्यक्ति की चिकित्सा अधिकारी द्वारा जाँच"},{"new":"BNSS 58","old":"CrPC 57","subjectEn":"Person arrested not to be detained more than twenty-four hours","subjectHi":"गिरफ्तार व्यक्ति को चौबीस घंटे से अधिक हिरासत में न रखा जाए"},{"new":"BNSS 84","old":"CrPC 82","subjectEn":"Proclamation for person absconding","subjectHi":"फ़रार व्यक्ति के लिए उद्घोषणा"},{"new":"BNSS 94","old":"CrPC 91","subjectEn":"Summons to produce document or other thing","subjectHi":"दस्तावेज़ या अन्य वस्तु पेश करने हेतु समन"},{"new":"BNSS 96","old":"CrPC 93","subjectEn":"When search-warrant may be issued","subjectHi":"तलाशी वारंट कब जारी किया जा सकता है"},{"new":"BNSS 144","old":"CrPC 125","subjectEn":"Order for maintenance of wives, children and parents","subjectHi":"पत्नियों, बच्चों व माता-पिता के भरण-पोषण का आदेश"},{"new":"BNSS 152","old":"CrPC 133","subjectEn":"Conditional order for removal of nuisance","subjectHi":"उपद्रव हटाने हेतु सशर्त आदेश"},{"new":"BNSS 163","old":"CrPC 144","subjectEn":"Power to issue order in urgent cases of nuisance or apprehended danger","subjectHi":"उपद्रव या आशंकित खतरे के तत्काल मामलों में आदेश की शक्ति"},{"new":"BNSS 164","old":"CrPC 145","subjectEn":"Procedure where dispute concerning land or water is likely to cause breach of peace","subjectHi":"भूमि या जल विवाद से शांति भंग की आशंका की प्रक्रिया"},{"new":"BNSS 173","old":"CrPC 154","subjectEn":"Information in cognizable cases (FIR)","subjectHi":"संज्ञेय मामलों में सूचना (प्राथमिकी / FIR)"},{"new":"BNSS 174","old":"CrPC 155","subjectEn":"Information as to non-cognizable cases","subjectHi":"असंज्ञेय मामलों संबंधी सूचना"},{"new":"BNSS 175","old":"CrPC 156","subjectEn":"Police officer's power to investigate cognizable case (incl. Magistrate-directed investigation, old 156(3))","subjectHi":"संज्ञेय मामले का अन्वेषण करने की पुलिस शक्ति (मजिस्ट्रेट-निर्देशित अन्वेषण, पुरानी 156(3) सहित)"},{"new":"BNSS 176","old":"CrPC 157","subjectEn":"Procedure for investigation","subjectHi":"अन्वेषण की प्रक्रिया"},{"new":"BNSS 180","old":"CrPC 161","subjectEn":"Examination of witnesses by police","subjectHi":"पुलिस द्वारा साक्षियों से पूछताछ"},{"new":"BNSS 181","old":"CrPC 162","subjectEn":"Statements to police not to be signed; use of such statements","subjectHi":"पुलिस को दिए बयान पर हस्ताक्षर नहीं; ऐसे बयानों का उपयोग"},{"new":"BNSS 183","old":"CrPC 164","subjectEn":"Recording of confessions and statements by Magistrate","subjectHi":"मजिस्ट्रेट द्वारा इक़बालिया बयानों व कथनों का अभिलेखन"},{"new":"BNSS 184","old":"CrPC 164A","subjectEn":"Medical examination of the victim of rape","subjectHi":"बलात्कार पीड़िता की चिकित्सकीय जाँच"},{"new":"BNSS 187","old":"CrPC 167","subjectEn":"Procedure when investigation cannot be completed in 24 hours — remand and default bail","subjectHi":"24 घंटे में अन्वेषण पूर्ण न होने की प्रक्रिया — रिमांड व डिफ़ॉल्ट ज़मानत"},{"new":"BNSS 189","old":"CrPC 169","subjectEn":"Release of accused when evidence deficient","subjectHi":"साक्ष्य अपर्याप्त होने पर अभियुक्त की रिहाई"},{"new":"BNSS 192","old":"CrPC 172","subjectEn":"Diary of proceedings in investigation","subjectHi":"अन्वेषण कार्यवाही की डायरी (केस डायरी)"},{"new":"BNSS 193","old":"CrPC 173","subjectEn":"Report of police officer on completion of investigation (chargesheet)","subjectHi":"अन्वेषण पूर्ण होने पर पुलिस अधिकारी की रिपोर्ट (चार्जशीट)"},{"new":"BNSS 194","old":"CrPC 174","subjectEn":"Police to enquire and report on suicide, etc. (inquest)","subjectHi":"आत्महत्या आदि पर पुलिस जाँच व रिपोर्ट (इन्क्वेस्ट)"},{"new":"BNSS 210","old":"CrPC 190","subjectEn":"Cognizance of offences by Magistrates","subjectHi":"मजिस्ट्रेटों द्वारा अपराधों का संज्ञान"},{"new":"BNSS 223","old":"CrPC 200","subjectEn":"Examination of complainant","subjectHi":"शिकायतकर्ता से पूछताछ"},{"new":"BNSS 225","old":"CrPC 202","subjectEn":"Postponement of issue of process","subjectHi":"प्रक्रिया जारी करने का स्थगन"},{"new":"BNSS 226","old":"CrPC 203","subjectEn":"Dismissal of complaint","subjectHi":"शिकायत का खारिज किया जाना"},{"new":"BNSS 227","old":"CrPC 204","subjectEn":"Issue of process","subjectHi":"प्रक्रिया जारी करना"},{"new":"BNSS 230","old":"CrPC 207","subjectEn":"Supply to the accused of copy of police report and other documents","subjectHi":"अभियुक्त को पुलिस रिपोर्ट व अन्य दस्तावेज़ों की प्रति देना"},{"new":"BNSS 232","old":"CrPC 209","subjectEn":"Commitment of case to Court of Session","subjectHi":"मामले की सत्र न्यायालय को सुपुर्दगी"},{"new":"BNSS 239","old":"CrPC 216","subjectEn":"Court may alter charge","subjectHi":"न्यायालय आरोप में परिवर्तन कर सकता है"},{"new":"BNSS 250","old":"CrPC 227","subjectEn":"Discharge of accused in Sessions trial","subjectHi":"सत्र विचारण में अभियुक्त का उन्मोचन (डिस्चार्ज)"},{"new":"BNSS 251","old":"CrPC 228","subjectEn":"Framing of charge in Sessions trial","subjectHi":"सत्र विचारण में आरोप की विरचना"},{"new":"BNSS 283","old":"CrPC 260","subjectEn":"Power to try summarily","subjectHi":"संक्षिप्त विचारण की शक्ति"},{"new":"BNSS 289","old":"CrPC 265A","subjectEn":"Plea bargaining — application of the chapter","subjectHi":"सौदा अभिवाक् (प्ली बारगेनिंग) — अध्याय का लागू होना"},{"new":"BNSS 337","old":"CrPC 300","subjectEn":"Person once convicted or acquitted not to be tried for same offence","subjectHi":"एक बार दोषसिद्ध या दोषमुक्त व्यक्ति का उसी अपराध हेतु पुनः विचारण नहीं"},{"new":"BNSS 341","old":"CrPC 304","subjectEn":"Legal aid to accused at State expense in certain cases","subjectHi":"कुछ मामलों में राज्य के खर्च पर अभियुक्त को विधिक सहायता"},{"new":"BNSS 346","old":"CrPC 309","subjectEn":"Power to postpone or adjourn proceedings","subjectHi":"कार्यवाही स्थगित या मुल्तवी करने की शक्ति"},{"new":"BNSS 348","old":"CrPC 311","subjectEn":"Power to summon material witness or examine person present","subjectHi":"महत्वपूर्ण साक्षी को बुलाने या उपस्थित व्यक्ति से पूछताछ की शक्ति"},{"new":"BNSS 351","old":"CrPC 313","subjectEn":"Power to examine the accused","subjectHi":"अभियुक्त से पूछताछ की शक्ति"},{"new":"BNSS 358","old":"CrPC 319","subjectEn":"Power to proceed against other persons appearing to be guilty of offence","subjectHi":"अपराध के दोषी प्रतीत अन्य व्यक्तियों के विरुद्ध कार्यवाही की शक्ति"},{"new":"BNSS 359","old":"CrPC 320","subjectEn":"Compounding of offences","subjectHi":"अपराधों का शमन (कंपाउंडिंग)"},{"new":"BNSS 360","old":"CrPC 321","subjectEn":"Withdrawal from prosecution","subjectHi":"अभियोजन से प्रत्याहरण (केस वापस लेना)"},{"new":"BNSS 395","old":"CrPC 357","subjectEn":"Order to pay compensation","subjectHi":"मुआवज़ा देने का आदेश"},{"new":"BNSS 396","old":"CrPC 357A","subjectEn":"Victim compensation scheme","subjectHi":"पीड़ित मुआवज़ा योजना"},{"new":"BNSS 401","old":"CrPC 360","subjectEn":"Order to release on probation of good conduct or after admonition","subjectHi":"अच्छे आचरण की परिवीक्षा या भर्त्सना के बाद छोड़ने का आदेश"},{"new":"BNSS 413","old":"CrPC 372","subjectEn":"No appeal to lie unless otherwise provided","subjectHi":"अन्यथा प्रावधान न हो तो अपील नहीं होगी"},{"new":"BNSS 415","old":"CrPC 374","subjectEn":"Appeals from convictions","subjectHi":"दोषसिद्धियों के विरुद्ध अपील"},{"new":"BNSS 418","old":"CrPC 377","subjectEn":"Appeal by the State Government against sentence","subjectHi":"सज़ा के विरुद्ध राज्य सरकार की अपील"},{"new":"BNSS 419","old":"CrPC 378","subjectEn":"Appeal in case of acquittal","subjectHi":"दोषमुक्ति के मामले में अपील"},{"new":"BNSS 427","old":"CrPC 386","subjectEn":"Powers of the Appellate Court","subjectHi":"अपीलीय न्यायालय की शक्तियाँ"},{"new":"BNSS 430","old":"CrPC 389","subjectEn":"Suspension of sentence pending the appeal; release of appellant on bail","subjectHi":"अपील लंबित रहने तक सज़ा का निलंबन; अपीलार्थी की ज़मानत पर रिहाई"},{"new":"BNSS 432","old":"CrPC 391","subjectEn":"Appellate Court may take further evidence or direct it to be taken","subjectHi":"अपीलीय न्यायालय अतिरिक्त साक्ष्य ले सकता है या लेने का निर्देश दे सकता है"},{"new":"BNSS 438","old":"CrPC 397","subjectEn":"Calling for records to exercise powers of revision","subjectHi":"पुनरीक्षण शक्तियों के प्रयोग हेतु अभिलेख मंगाना"},{"new":"BNSS 442","old":"CrPC 401","subjectEn":"High Court's powers of revision","subjectHi":"उच्च न्यायालय की पुनरीक्षण शक्तियाँ"},{"new":"BNSS 447","old":"CrPC 407","subjectEn":"Power of High Court to transfer cases and appeals","subjectHi":"उच्च न्यायालय की मामले व अपील स्थानांतरित करने की शक्ति"},{"new":"BNSS 461","old":"CrPC 421","subjectEn":"Warrant for levy of fine","subjectHi":"जुर्माना वसूली हेतु वारंट"},{"new":"BNSS 468","old":"CrPC 428","subjectEn":"Period of detention undergone by the accused to be set off against sentence","subjectHi":"अभियुक्त द्वारा बिताई हिरासत अवधि की सज़ा में कटौती (सेट-ऑफ़)"},{"new":"BNSS 478","old":"CrPC 436","subjectEn":"In what cases bail to be taken (bailable offences)","subjectHi":"किन मामलों में ज़मानत ली जाएगी (ज़मानती अपराध)"},{"new":"BNSS 479","old":"CrPC 436A","subjectEn":"Maximum period for which undertrial prisoner can be detained","subjectHi":"विचाराधीन कैदी को अधिकतम कितनी अवधि हिरासत में रखा जा सकता है"},{"new":"BNSS 480","old":"CrPC 437","subjectEn":"When bail may be taken in case of non-bailable offence","subjectHi":"गैर-ज़मानती अपराध में ज़मानत कब ली जा सकती है"},{"new":"BNSS 481","old":"CrPC 437A","subjectEn":"Bail to require accused to appear before next Appellate Court","subjectHi":"अगले अपीलीय न्यायालय के समक्ष उपस्थिति हेतु ज़मानत"},{"new":"BNSS 482","old":"CrPC 438","subjectEn":"Direction for grant of bail to person apprehending arrest (anticipatory bail)","subjectHi":"गिरफ्तारी की आशंका वाले व्यक्ति को ज़मानत का निर्देश (अग्रिम ज़मानत)"},{"new":"BNSS 483","old":"CrPC 439","subjectEn":"Special powers of High Court or Court of Session regarding bail","subjectHi":"ज़मानत संबंधी उच्च न्यायालय या सत्र न्यायालय की विशेष शक्तियाँ"},{"new":"BNSS 497","old":"CrPC 451","subjectEn":"Order for custody and disposal of property pending trial","subjectHi":"विचारण लंबित रहने तक संपत्ति की अभिरक्षा व निपटान का आदेश"},{"new":"BNSS 514","old":"CrPC 468","subjectEn":"Bar to taking cognizance after lapse of period of limitation","subjectHi":"परिसीमा अवधि बीतने के बाद संज्ञान पर रोक"},{"new":"BNSS 528","old":"CrPC 482","subjectEn":"Saving of inherent powers of High Court (quashing petitions)","subjectHi":"उच्च न्यायालय की अंतर्निहित शक्तियों की सुरक्षा (कार्यवाही रद्द करने की याचिकाएँ)"}],"iea_bsa":[{"new":"BSA 2","old":"IEA 3","subjectEn":"Interpretation — 'evidence', 'fact', 'document' defined","subjectHi":"व्याख्या — 'साक्ष्य', 'तथ्य', 'दस्तावेज़' की परिभाषाएँ"},{"new":"BSA 3","old":"IEA 5","subjectEn":"Evidence may be given of facts in issue and relevant facts","subjectHi":"विवाद्यक तथ्यों व सुसंगत तथ्यों का साक्ष्य दिया जा सकता है"},{"new":"BSA 4","old":"IEA 6","subjectEn":"Relevancy of facts forming part of same transaction (res gestae)","subjectHi":"एक ही संव्यवहार के भाग तथ्यों की सुसंगति (रेस जेस्टे)"},{"new":"BSA 6","old":"IEA 8","subjectEn":"Motive, preparation and previous or subsequent conduct","subjectHi":"हेतु, तैयारी तथा पूर्ववर्ती या पश्चातवर्ती आचरण"},{"new":"BSA 12","old":"IEA 14","subjectEn":"Facts showing existence of state of mind, or of body or bodily feeling","subjectHi":"मानसिक दशा, शारीरिक दशा या शारीरिक अनुभूति दर्शाने वाले तथ्य"},{"new":"BSA 15","old":"IEA 17","subjectEn":"Admission — definition","subjectHi":"स्वीकृति (एडमिशन) — परिभाषा"},{"new":"BSA 19","old":"IEA 21","subjectEn":"Proof of admissions against persons making them","subjectHi":"स्वीकृति करने वालों के विरुद्ध स्वीकृतियों का प्रमाण"},{"new":"BSA 22(1)","old":"IEA 24","subjectEn":"Confession caused by inducement, threat, coercion or promise — irrelevant","subjectHi":"प्रलोभन, धमकी, दबाव या वचन से कराया गया इक़बाल — असंगत"},{"new":"BSA 23(1)","old":"IEA 25","subjectEn":"Confession to police officer not to be proved","subjectHi":"पुलिस अधिकारी के समक्ष किया गया इक़बाल साबित नहीं होगा"},{"new":"BSA 23(2)","old":"IEA 26","subjectEn":"Confession by accused while in custody of police not to be proved","subjectHi":"पुलिस अभिरक्षा में अभियुक्त का इक़बाल साबित नहीं होगा"},{"new":"BSA 23 (Proviso)","old":"IEA 27","subjectEn":"Fact discovered on information received from accused in police custody","subjectHi":"पुलिस अभिरक्षा में अभियुक्त से प्राप्त सूचना पर बरामद तथ्य"},{"new":"BSA 24","old":"IEA 30","subjectEn":"Consideration of proved confession affecting person making it and others (co-accused)","subjectHi":"साबित इक़बाल का इक़बालकर्ता व सह-अभियुक्तों पर प्रभाव"},{"new":"BSA 26","old":"IEA 32","subjectEn":"Statement of cause of death (dying declaration) and other statements by person who cannot be called as witness","subjectHi":"मृत्यु के कारण का कथन (मृत्युकालिक कथन) व साक्षी के रूप में न बुलाए जा सकने वाले व्यक्ति के कथन"},{"new":"BSA 28","old":"IEA 34","subjectEn":"Entries in books of account when relevant","subjectHi":"खाता-बही की प्रविष्टियाँ कब सुसंगत हैं"},{"new":"BSA 34","old":"IEA 40","subjectEn":"Previous judgments relevant to bar a second suit or trial","subjectHi":"दूसरे वाद या विचारण पर रोक हेतु सुसंगत पूर्व निर्णय"},{"new":"BSA 39(1)","old":"IEA 45","subjectEn":"Opinions of experts","subjectHi":"विशेषज्ञों की राय"},{"new":"BSA 39(2)","old":"IEA 45A","subjectEn":"Opinion of Examiner of Electronic Evidence","subjectHi":"इलेक्ट्रॉनिक साक्ष्य परीक्षक की राय"},{"new":"BSA 41","old":"IEA 47","subjectEn":"Opinion as to handwriting and signature, when relevant","subjectHi":"हस्तलेख व हस्ताक्षर संबंधी राय कब सुसंगत है"},{"new":"BSA 47","old":"IEA 53","subjectEn":"In criminal cases previous good character relevant","subjectHi":"आपराधिक मामलों में पूर्व अच्छा चरित्र सुसंगत"},{"new":"BSA 50","old":"IEA 56","subjectEn":"Fact judicially noticeable need not be proved","subjectHi":"न्यायिक संज्ञान योग्य तथ्य साबित करना आवश्यक नहीं"},{"new":"BSA 52","old":"IEA 58","subjectEn":"Facts admitted need not be proved","subjectHi":"स्वीकृत तथ्यों को साबित करना आवश्यक नहीं"},{"new":"BSA 55","old":"IEA 60","subjectEn":"Oral evidence to be direct","subjectHi":"मौखिक साक्ष्य प्रत्यक्ष होना चाहिए"},{"new":"BSA 56","old":"IEA 61","subjectEn":"Proof of contents of documents","subjectHi":"दस्तावेज़ों की विषय-वस्तु का प्रमाण"},{"new":"BSA 57","old":"IEA 62","subjectEn":"Primary evidence","subjectHi":"प्राथमिक साक्ष्य"},{"new":"BSA 58","old":"IEA 63","subjectEn":"Secondary evidence","subjectHi":"द्वितीयक साक्ष्य"},{"new":"BSA 60","old":"IEA 65","subjectEn":"Cases in which secondary evidence relating to documents may be given","subjectHi":"वे मामले जिनमें दस्तावेज़ों संबंधी द्वितीयक साक्ष्य दिया जा सकता है"},{"new":"BSA 62","old":"IEA 65A","subjectEn":"Special provisions as to evidence relating to electronic record","subjectHi":"इलेक्ट्रॉनिक अभिलेख संबंधी साक्ष्य के विशेष प्रावधान"},{"new":"BSA 63","old":"IEA 65B","subjectEn":"Admissibility of electronic records — certificate requirement","subjectHi":"इलेक्ट्रॉनिक अभिलेखों की ग्राह्यता — प्रमाणपत्र की आवश्यकता"},{"new":"BSA 65","old":"IEA 67","subjectEn":"Proof of signature and handwriting of person alleged to have signed or written document","subjectHi":"दस्तावेज़ पर हस्ताक्षर या हस्तलेख का प्रमाण"},{"new":"BSA 74","old":"IEA 74","subjectEn":"Public documents and private documents","subjectHi":"लोक दस्तावेज़ व निजी दस्तावेज़"},{"new":"BSA 75","old":"IEA 76","subjectEn":"Certified copies of public documents","subjectHi":"लोक दस्तावेज़ों की प्रमाणित प्रतियाँ"},{"new":"BSA 92","old":"IEA 90","subjectEn":"Presumption as to documents thirty years old","subjectHi":"तीस वर्ष पुराने दस्तावेज़ों के बारे में उपधारणा"},{"new":"BSA 104","old":"IEA 101","subjectEn":"Burden of proof","subjectHi":"सिद्धि का भार (बर्डन ऑफ़ प्रूफ़)"},{"new":"BSA 108","old":"IEA 105","subjectEn":"Burden of proving that case of accused comes within exceptions","subjectHi":"अभियुक्त का मामला अपवादों में आता है — सिद्ध करने का भार"},{"new":"BSA 109","old":"IEA 106","subjectEn":"Burden of proving fact especially within knowledge","subjectHi":"विशेष रूप से जानकारी में होने वाले तथ्य को सिद्ध करने का भार"},{"new":"BSA 116","old":"IEA 112","subjectEn":"Birth during marriage conclusive proof of legitimacy","subjectHi":"विवाह के दौरान जन्म — वैधता का निर्णायक प्रमाण"},{"new":"BSA 117","old":"IEA 113A","subjectEn":"Presumption as to abetment of suicide by a married woman","subjectHi":"विवाहित महिला की आत्महत्या के दुष्प्रेरण की उपधारणा"},{"new":"BSA 118","old":"IEA 113B","subjectEn":"Presumption as to dowry death","subjectHi":"दहेज मृत्यु के बारे में उपधारणा"},{"new":"BSA 119","old":"IEA 114","subjectEn":"Court may presume existence of certain facts","subjectHi":"न्यायालय कुछ तथ्यों के अस्तित्व की उपधारणा कर सकता है"},{"new":"BSA 120","old":"IEA 114A","subjectEn":"Presumption as to absence of consent in certain prosecution for rape","subjectHi":"बलात्कार के कुछ अभियोजनों में सहमति के अभाव की उपधारणा"},{"new":"BSA 121","old":"IEA 115","subjectEn":"Estoppel","subjectHi":"विबंधन (एस्टॉपेल)"},{"new":"BSA 124","old":"IEA 118","subjectEn":"Who may testify","subjectHi":"कौन साक्ष्य दे सकता है"},{"new":"BSA 128","old":"IEA 122","subjectEn":"Communications during marriage","subjectHi":"विवाह के दौरान किए गए संचार"},{"new":"BSA 132","old":"IEA 126","subjectEn":"Professional communications (advocate and client privilege)","subjectHi":"व्यावसायिक संचार (अधिवक्ता–मुवक्किल विशेषाधिकार)"},{"new":"BSA 137","old":"IEA 132","subjectEn":"Witness not excused from answering on ground that answer will criminate","subjectHi":"उत्तर से अपराध में फँसने के आधार पर गवाह मुक्त नहीं"},{"new":"BSA 138","old":"IEA 133","subjectEn":"Accomplice competent witness against accused","subjectHi":"सह-अपराधी अभियुक्त के विरुद्ध सक्षम साक्षी"},{"new":"BSA 139","old":"IEA 134","subjectEn":"No particular number of witnesses required for proof of any fact","subjectHi":"किसी तथ्य के प्रमाण हेतु गवाहों की निश्चित संख्या आवश्यक नहीं"},{"new":"BSA 142","old":"IEA 137","subjectEn":"Examination-in-chief, cross-examination and re-examination","subjectHi":"मुख्य परीक्षा, प्रति-परीक्षा व पुनः परीक्षा"},{"new":"BSA 148","old":"IEA 145","subjectEn":"Cross-examination as to previous statements in writing","subjectHi":"लिखित पूर्व कथनों के बारे में प्रति-परीक्षा"},{"new":"BSA 157","old":"IEA 154","subjectEn":"Questions by party to his own witness (hostile witness)","subjectHi":"पक्षकार द्वारा अपने ही साक्षी से प्रश्न (प्रतिकूल साक्षी)"},{"new":"BSA 162","old":"IEA 159","subjectEn":"Refreshing memory","subjectHi":"स्मृति ताज़ा करना"},{"new":"BSA 168","old":"IEA 165","subjectEn":"Judge's power to put questions or order production","subjectHi":"न्यायाधीश की प्रश्न पूछने या पेशी का आदेश देने की शक्ति"}],"ipc_bns":[{"new":"BNS 3(5)","old":"IPC 34","subjectEn":"Acts done by several persons in furtherance of common intention","subjectHi":"सामान्य आशय के अग्रसरण में कई व्यक्तियों द्वारा किए गए कार्य"},{"new":"BNS 45","old":"IPC 107","subjectEn":"Abetment of a thing","subjectHi":"किसी बात का दुष्प्रेरण"},{"new":"BNS 61(1)","old":"IPC 120A","subjectEn":"Criminal conspiracy — definition","subjectHi":"आपराधिक षड्यंत्र — परिभाषा"},{"new":"BNS 61(2)","old":"IPC 120B","subjectEn":"Criminal conspiracy — punishment","subjectHi":"आपराधिक षड्यंत्र — दण्ड"},{"new":"BNS 152","old":"IPC 124A","subjectEn":"Sedition — now acts endangering sovereignty, unity and integrity of India","subjectHi":"राजद्रोह — अब भारत की संप्रभुता, एकता व अखंडता को खतरे में डालने वाले कार्य"},{"new":"BNS 189(1)","old":"IPC 141","subjectEn":"Unlawful assembly — definition","subjectHi":"विधिविरुद्ध जमाव — परिभाषा"},{"new":"BNS 190","old":"IPC 149","subjectEn":"Every member of unlawful assembly guilty of offence committed for common object","subjectHi":"सामान्य उद्देश्य हेतु किए गए अपराध का विधिविरुद्ध जमाव का प्रत्येक सदस्य दोषी"},{"new":"BNS 196","old":"IPC 153A","subjectEn":"Promoting enmity between different groups","subjectHi":"विभिन्न समूहों के बीच शत्रुता बढ़ाना"},{"new":"BNS 217","old":"IPC 182","subjectEn":"False information to a public servant","subjectHi":"लोक सेवक को मिथ्या सूचना देना"},{"new":"BNS 221","old":"IPC 186","subjectEn":"Obstructing public servant in discharge of public functions","subjectHi":"लोक सेवक के लोक कर्तव्यों के निर्वहन में बाधा डालना"},{"new":"BNS 223","old":"IPC 188","subjectEn":"Disobedience to order duly promulgated by public servant","subjectHi":"लोक सेवक द्वारा प्रख्यापित आदेश की अवज्ञा"},{"new":"BNS 227","old":"IPC 191","subjectEn":"Giving false evidence","subjectHi":"मिथ्या साक्ष्य देना"},{"new":"BNS 229","old":"IPC 193","subjectEn":"False evidence — punishment","subjectHi":"मिथ्या साक्ष्य — दण्ड"},{"new":"BNS 238","old":"IPC 201","subjectEn":"Causing disappearance of evidence of offence","subjectHi":"अपराध के साक्ष्य को गायब करना"},{"new":"BNS 72","old":"IPC 228A","subjectEn":"Disclosure of identity of victim of sexual offences","subjectHi":"यौन अपराधों की पीड़िता की पहचान का प्रकटीकरण"},{"new":"BNS 281","old":"IPC 279","subjectEn":"Rash driving or riding on a public way","subjectHi":"सार्वजनिक मार्ग पर उतावलेपन से वाहन चलाना"},{"new":"BNS 296","old":"IPC 294","subjectEn":"Obscene acts and songs","subjectHi":"अश्लील कार्य व गीत"},{"new":"BNS 299","old":"IPC 295A","subjectEn":"Deliberate acts intended to outrage religious feelings","subjectHi":"धार्मिक भावनाएँ आहत करने के जानबूझकर किए गए कार्य"},{"new":"BNS 100","old":"IPC 299","subjectEn":"Culpable homicide — definition","subjectHi":"सदोष मानव वध — परिभाषा"},{"new":"BNS 101","old":"IPC 300","subjectEn":"Murder — definition","subjectHi":"हत्या — परिभाषा"},{"new":"BNS 103(1)","old":"IPC 302","subjectEn":"Murder — punishment","subjectHi":"हत्या — दण्ड"},{"new":"BNS 105","old":"IPC 304","subjectEn":"Culpable homicide not amounting to murder — punishment","subjectHi":"हत्या की कोटि में न आने वाला सदोष मानव वध — दण्ड"},{"new":"BNS 106(1)","old":"IPC 304A","subjectEn":"Causing death by negligence","subjectHi":"उपेक्षा द्वारा मृत्यु कारित करना"},{"new":"BNS 80","old":"IPC 304B","subjectEn":"Dowry death","subjectHi":"दहेज मृत्यु"},{"new":"BNS 108","old":"IPC 306","subjectEn":"Abetment of suicide","subjectHi":"आत्महत्या का दुष्प्रेरण"},{"new":"BNS 109","old":"IPC 307","subjectEn":"Attempt to murder","subjectHi":"हत्या का प्रयास"},{"new":"BNS 110","old":"IPC 308","subjectEn":"Attempt to commit culpable homicide","subjectHi":"सदोष मानव वध करने का प्रयास"},{"new":"BNS 114","old":"IPC 319","subjectEn":"Hurt — definition","subjectHi":"उपहति — परिभाषा"},{"new":"BNS 116","old":"IPC 320","subjectEn":"Grievous hurt — definition","subjectHi":"गंभीर उपहति — परिभाषा"},{"new":"BNS 115(2)","old":"IPC 323","subjectEn":"Voluntarily causing hurt — punishment","subjectHi":"स्वेच्छा से उपहति कारित करना — दण्ड"},{"new":"BNS 118(1)","old":"IPC 324","subjectEn":"Voluntarily causing hurt by dangerous weapons or means","subjectHi":"खतरनाक हथियारों या साधनों से स्वेच्छा से उपहति"},{"new":"BNS 117(2)","old":"IPC 325","subjectEn":"Voluntarily causing grievous hurt — punishment","subjectHi":"स्वेच्छा से गंभीर उपहति कारित करना — दण्ड"},{"new":"BNS 118(2)","old":"IPC 326","subjectEn":"Voluntarily causing grievous hurt by dangerous weapons or means","subjectHi":"खतरनाक हथियारों या साधनों से स्वेच्छा से गंभीर उपहति"},{"new":"BNS 124(1)","old":"IPC 326A","subjectEn":"Voluntarily causing grievous hurt by use of acid (acid attack)","subjectHi":"तेज़ाब के प्रयोग से गंभीर उपहति (एसिड हमला)"},{"new":"BNS 123","old":"IPC 328","subjectEn":"Causing hurt by means of poison, etc.","subjectHi":"विष आदि के माध्यम से उपहति कारित करना"},{"new":"BNS 126(1)","old":"IPC 339","subjectEn":"Wrongful restraint — definition","subjectHi":"सदोष अवरोध — परिभाषा"},{"new":"BNS 127(1)","old":"IPC 340","subjectEn":"Wrongful confinement — definition","subjectHi":"सदोष परिरोध — परिभाषा"},{"new":"BNS 126(2)","old":"IPC 341","subjectEn":"Wrongful restraint — punishment","subjectHi":"सदोष अवरोध — दण्ड"},{"new":"BNS 127(2)","old":"IPC 342","subjectEn":"Wrongful confinement — punishment","subjectHi":"सदोष परिरोध — दण्ड"},{"new":"BNS 130","old":"IPC 351","subjectEn":"Assault — definition","subjectHi":"हमला — परिभाषा"},{"new":"BNS 132","old":"IPC 353","subjectEn":"Assault or criminal force to deter public servant from duty","subjectHi":"लोक सेवक को कर्तव्य से रोकने हेतु हमला या आपराधिक बल"},{"new":"BNS 74","old":"IPC 354","subjectEn":"Assault or criminal force to woman with intent to outrage her modesty","subjectHi":"महिला की लज्जा भंग करने के आशय से हमला या आपराधिक बल"},{"new":"BNS 75","old":"IPC 354A","subjectEn":"Sexual harassment","subjectHi":"यौन उत्पीड़न"},{"new":"BNS 76","old":"IPC 354B","subjectEn":"Assault or use of criminal force to woman with intent to disrobe","subjectHi":"महिला को निर्वस्त्र करने के आशय से हमला या आपराधिक बल"},{"new":"BNS 77","old":"IPC 354C","subjectEn":"Voyeurism","subjectHi":"ताक-झांक (वॉयरिज़्म)"},{"new":"BNS 78","old":"IPC 354D","subjectEn":"Stalking","subjectHi":"पीछा करना (स्टॉकिंग)"},{"new":"BNS 138","old":"IPC 362","subjectEn":"Abduction — definition","subjectHi":"अपहरण — परिभाषा"},{"new":"BNS 137(2)","old":"IPC 363","subjectEn":"Kidnapping — punishment","subjectHi":"व्यपहरण — दण्ड"},{"new":"BNS 140(2)","old":"IPC 364A","subjectEn":"Kidnapping for ransom","subjectHi":"फिरौती हेतु अपहरण"},{"new":"BNS 87","old":"IPC 366","subjectEn":"Kidnapping or abducting woman to compel her marriage","subjectHi":"महिला को विवाह हेतु विवश करने के लिए व्यपहरण या अपहरण"},{"new":"BNS 143","old":"IPC 370","subjectEn":"Trafficking of persons","subjectHi":"मानव तस्करी (व्यक्तियों का दुर्व्यापार)"},{"new":"BNS 63","old":"IPC 375","subjectEn":"Rape — definition","subjectHi":"बलात्कार — परिभाषा"},{"new":"BNS 64","old":"IPC 376","subjectEn":"Rape — punishment","subjectHi":"बलात्कार — दण्ड"},{"new":"BNS 66","old":"IPC 376A","subjectEn":"Rape causing death or persistent vegetative state of victim","subjectHi":"बलात्कार से पीड़िता की मृत्यु या स्थायी वनस्पतिक अवस्था"},{"new":"BNS 70(1)","old":"IPC 376D","subjectEn":"Gang rape","subjectHi":"सामूहिक बलात्कार"},{"new":"BNS 70(2)","old":"IPC 376DA","subjectEn":"Gang rape on woman under eighteen years of age","subjectHi":"अठारह वर्ष से कम आयु की महिला का सामूहिक बलात्कार"},{"new":"BNS 71","old":"IPC 376E","subjectEn":"Punishment for repeat offenders (rape)","subjectHi":"पुनरावर्ती अपराधियों हेतु दण्ड (बलात्कार)"},{"new":"BNS 303(1)","old":"IPC 378","subjectEn":"Theft — definition","subjectHi":"चोरी — परिभाषा"},{"new":"BNS 303(2)","old":"IPC 379","subjectEn":"Theft — punishment","subjectHi":"चोरी — दण्ड"},{"new":"BNS 305","old":"IPC 380","subjectEn":"Theft in dwelling house, means of transport or place of worship","subjectHi":"निवास गृह, यातायात के साधन या पूजा स्थल में चोरी"},{"new":"BNS 306","old":"IPC 381","subjectEn":"Theft by clerk or servant of property in possession of master","subjectHi":"मालिक के कब्ज़े की संपत्ति की लिपिक या सेवक द्वारा चोरी"},{"new":"BNS 307","old":"IPC 382","subjectEn":"Theft after preparation made for causing death, hurt or restraint","subjectHi":"मृत्यु, उपहति या अवरोध की तैयारी के बाद चोरी"},{"new":"BNS 308(1)","old":"IPC 383","subjectEn":"Extortion — definition","subjectHi":"उद्धरण (रंगदारी) — परिभाषा"},{"new":"BNS 308(2)","old":"IPC 384","subjectEn":"Extortion — punishment","subjectHi":"उद्धरण — दण्ड"},{"new":"BNS 308(3)","old":"IPC 385","subjectEn":"Putting person in fear of injury in order to commit extortion","subjectHi":"उद्धरण हेतु व्यक्ति को क्षति का भय दिखाना"},{"new":"BNS 308(4)","old":"IPC 387","subjectEn":"Putting person in fear of death or grievous hurt in order to commit extortion","subjectHi":"उद्धरण हेतु मृत्यु या गंभीर उपहति का भय दिखाना"},{"new":"BNS 308(5)","old":"IPC 386","subjectEn":"Extortion by putting a person in fear of death or grievous hurt","subjectHi":"मृत्यु या गंभीर उपहति का भय दिखाकर उद्धरण"},{"new":"BNS 308(6)","old":"IPC 389","subjectEn":"Putting person in fear of accusation of offence in order to commit extortion","subjectHi":"उद्धरण हेतु अपराध के आरोप का भय दिखाना"},{"new":"BNS 308(7)","old":"IPC 388","subjectEn":"Extortion by threat of accusation of offence punishable with death or life imprisonment","subjectHi":"मृत्यु या आजीवन कारावास से दण्डनीय अपराध के आरोप की धमकी देकर उद्धरण"},{"new":"BNS 309(1)","old":"IPC 390","subjectEn":"Robbery — definition","subjectHi":"लूट — परिभाषा"},{"new":"BNS 310(1)","old":"IPC 391","subjectEn":"Dacoity — definition","subjectHi":"डकैती — परिभाषा"},{"new":"BNS 309(4)","old":"IPC 392","subjectEn":"Robbery — punishment","subjectHi":"लूट — दण्ड"},{"new":"BNS 310(2)","old":"IPC 395","subjectEn":"Dacoity — punishment","subjectHi":"डकैती — दण्ड"},{"new":"BNS 310(3)","old":"IPC 396","subjectEn":"Dacoity with murder","subjectHi":"हत्या सहित डकैती"},{"new":"BNS 311","old":"IPC 397","subjectEn":"Robbery or dacoity with attempt to cause death or grievous hurt","subjectHi":"मृत्यु या गंभीर उपहति के प्रयास सहित लूट या डकैती"},{"new":"BNS 314","old":"IPC 403","subjectEn":"Dishonest misappropriation of property","subjectHi":"संपत्ति का बेईमानी से दुरुपयोग"},{"new":"BNS 316(1)","old":"IPC 405","subjectEn":"Criminal breach of trust — definition","subjectHi":"आपराधिक न्यासभंग — परिभाषा"},{"new":"BNS 316(2)","old":"IPC 406","subjectEn":"Criminal breach of trust — punishment","subjectHi":"आपराधिक न्यासभंग — दण्ड"},{"new":"BNS 316(5)","old":"IPC 409","subjectEn":"Criminal breach of trust by public servant, banker, merchant or agent","subjectHi":"लोक सेवक, बैंकर, व्यापारी या अभिकर्ता द्वारा आपराधिक न्यासभंग"},{"new":"BNS 317(2)","old":"IPC 411","subjectEn":"Dishonestly receiving stolen property","subjectHi":"चोरी की संपत्ति बेईमानी से प्राप्त करना"},{"new":"BNS 318(1)","old":"IPC 415","subjectEn":"Cheating — definition","subjectHi":"छल — परिभाषा"},{"new":"BNS 318(4)","old":"IPC 420","subjectEn":"Cheating and dishonestly inducing delivery of property","subjectHi":"छल करके बेईमानी से संपत्ति दिलाना"},{"new":"BNS 324(1)","old":"IPC 425","subjectEn":"Mischief — definition","subjectHi":"कुचेष्टा (संपत्ति को क्षति) — परिभाषा"},{"new":"BNS 329(1)","old":"IPC 441","subjectEn":"Criminal trespass — definition","subjectHi":"आपराधिक अतिचार — परिभाषा"},{"new":"BNS 329(2)","old":"IPC 442","subjectEn":"House-trespass — definition","subjectHi":"गृह-अतिचार — परिभाषा"},{"new":"BNS 329(3)","old":"IPC 447","subjectEn":"Criminal trespass — punishment","subjectHi":"आपराधिक अतिचार — दण्ड"},{"new":"BNS 333","old":"IPC 452","subjectEn":"House-trespass after preparation for hurt, assault or wrongful restraint","subjectHi":"उपहति, हमले या सदोष अवरोध की तैयारी के बाद गृह-अतिचार"},{"new":"BNS 336(1)","old":"IPC 463","subjectEn":"Forgery — definition","subjectHi":"कूट रचना (जालसाज़ी) — परिभाषा"},{"new":"BNS 338","old":"IPC 467","subjectEn":"Forgery of valuable security, will, etc.","subjectHi":"मूल्यवान प्रतिभूति, वसीयत आदि की कूट रचना"},{"new":"BNS 340(2)","old":"IPC 471","subjectEn":"Using as genuine a forged document or electronic record","subjectHi":"जाली दस्तावेज़ या इलेक्ट्रॉनिक अभिलेख को असली के रूप में उपयोग करना"},{"new":"BNS 344","old":"IPC 477A","subjectEn":"Falsification of accounts","subjectHi":"खातों का मिथ्याकरण"},{"new":"BNS 178","old":"IPC 489A","subjectEn":"Counterfeiting coins, Government stamps and currency-notes","subjectHi":"सिक्कों, सरकारी स्टाम्पों व मुद्रा-नोटों का जाली बनाना"},{"new":"BNS 180","old":"IPC 489C","subjectEn":"Possession of forged or counterfeit currency-notes","subjectHi":"जाली मुद्रा-नोटों का कब्ज़ा"},{"new":"BNS 81","old":"IPC 493","subjectEn":"Cohabitation caused by man deceitfully inducing belief of lawful marriage","subjectHi":"वैध विवाह का कपटपूर्ण विश्वास दिलाकर सहवास"},{"new":"BNS 82(1)","old":"IPC 494","subjectEn":"Marrying again during lifetime of husband or wife (bigamy)","subjectHi":"पति या पत्नी के जीवित रहते पुनर्विवाह (बहुविवाह)"},{"new":"BNS 84","old":"IPC 498","subjectEn":"Enticing or detaining with criminal intent a married woman","subjectHi":"विवाहित महिला को आपराधिक आशय से बहकाना या रोकना"},{"new":"BNS 85","old":"IPC 498A","subjectEn":"Cruelty by husband or relatives of husband","subjectHi":"पति या पति के संबंधियों द्वारा क्रूरता"},{"new":"BNS 356(1)","old":"IPC 499","subjectEn":"Defamation — definition","subjectHi":"मानहानि — परिभाषा"},{"new":"BNS 356(2)","old":"IPC 500","subjectEn":"Defamation — punishment","subjectHi":"मानहानि — दण्ड"},{"new":"BNS 351(1)","old":"IPC 503","subjectEn":"Criminal intimidation — definition","subjectHi":"आपराधिक धमकी — परिभाषा"},{"new":"BNS 352","old":"IPC 504","subjectEn":"Intentional insult with intent to provoke breach of the peace","subjectHi":"शांति भंग भड़काने के आशय से जानबूझकर अपमान"},{"new":"BNS 351(2)","old":"IPC 506","subjectEn":"Criminal intimidation — punishment","subjectHi":"आपराधिक धमकी — दण्ड"},{"new":"BNS 79","old":"IPC 509","subjectEn":"Word, gesture or act intended to insult the modesty of a woman","subjectHi":"महिला की लज्जा का अपमान करने वाले शब्द, भाव या कार्य"},{"new":"BNS 62","old":"IPC 511","subjectEn":"Attempting to commit offences punishable with imprisonment for life or other imprisonment","subjectHi":"आजीवन या अन्य कारावास से दण्डनीय अपराध करने का प्रयास"}],"notes":[{"en":"BNS merges many scattered IPC sections into one section with sub-clauses — e.g. all extortion provisions (IPC 383–389) now sit in BNS 308, theft and its punishments in BNS 303, and criminal breach of trust in BNS 316.","hi":"BNS ने IPC की कई बिखरी धाराओं को उप-खंडों सहित एक ही धारा में मिला दिया है — जैसे उद्धरण के सभी प्रावधान (IPC 383–389) अब BNS 308 में, चोरी व उसका दण्ड BNS 303 में, और आपराधिक न्यासभंग BNS 316 में है।"},{"en":"Some IPC provisions have no BNS successor: the named offence of sedition (IPC 124A) is gone — its subject is covered in a new form by BNS 152 — and IPC 377 (unnatural offences), IPC 497 (adultery) and IPC 309 (attempt to commit suicide) were dropped.","hi":"कुछ IPC प्रावधानों का BNS में कोई उत्तराधिकारी नहीं है: राजद्रोह (IPC 124A) नामक अपराध समाप्त हो गया — उसका विषय नए रूप में BNS 152 में है — तथा IPC 377 (अप्राकृतिक अपराध), IPC 497 (व्यभिचार) और IPC 309 (आत्महत्या का प्रयास) हटा दिए गए।"},{"en":"BNS also creates offences that had no IPC counterpart: snatching (BNS 304), organised crime (BNS 111), petty organised crime (BNS 112), terrorist act (BNS 113), and murder by a group on grounds of race, caste, community, sex, language or personal belief (BNS 103(2) — mob lynching).","hi":"BNS में कुछ ऐसे अपराध भी हैं जिनका IPC में कोई समकक्ष नहीं था: छीनाझपटी/स्नैचिंग (BNS 304), संगठित अपराध (BNS 111), छोटे संगठित अपराध (BNS 112), आतंकवादी कृत्य (BNS 113), तथा नस्ल, जाति, समुदाय, लिंग, भाषा या व्यक्तिगत विश्वास के आधार पर समूह द्वारा हत्या (BNS 103(2) — मॉब लिंचिंग)।"},{"en":"BNSS builds in timelines and technology: FIR can be given orally, in writing or electronically, and a Zero FIR can be recorded at any police station (BNSS 173); investigation, trial and judgment are given time limits; and a first-time undertrial who has spent one-third of the maximum sentence in detention becomes entitled to release on bail (BNSS 479).","hi":"BNSS में समय-सीमाएँ व तकनीक जोड़ी गई हैं: FIR मौखिक, लिखित या इलेक्ट्रॉनिक रूप से दी जा सकती है और ज़ीरो FIR किसी भी थाने में दर्ज हो सकती है (BNSS 173); अन्वेषण, विचारण व निर्णय हेतु समय-सीमाएँ तय हैं; तथा पहली बार का विचाराधीन कैदी जो अधिकतम सज़ा की एक-तिहाई अवधि हिरासत में बिता चुका हो, ज़मानत पर रिहाई का हकदार होगा (BNSS 479)।"},{"en":"BSA keeps the Evidence Act's scheme largely intact but rewrites electronic evidence: the old Section 65B certificate regime is now BSA 63, electronic records are treated as documents, and the certificate now has two parts — one by the party and one by an expert.","hi":"BSA ने साक्ष्य अधिनियम की संरचना लगभग वैसी ही रखी है, पर इलेक्ट्रॉनिक साक्ष्य को नया रूप दिया है: पुरानी धारा 65B की प्रमाणपत्र व्यवस्था अब BSA 63 है, इलेक्ट्रॉनिक अभिलेख दस्तावेज़ माने गए हैं, और प्रमाणपत्र के अब दो भाग हैं — एक पक्षकार द्वारा व एक विशेषज्ञ द्वारा।"}]}</script>
+      <section class="knowledge" id="knowledge" aria-labelledby="knowledge-title">
       <div class="shell">
         <div class="knowledge-head reveal">
           <div>
@@ -1763,6 +1780,31 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
             <p class="cf-source"><span id="cfSourceText" data-i18n="cfSource">Source: Court Fees Act, 1870 — Schedules I &amp; II, as applicable in Uttar Pradesh.</span> <a href="https://indiacode.gov.in/server/api/core/bitstreams/eea3ca0a-d99b-4883-81b1-ad9653d12e6f/content" target="_blank" rel="noopener" data-i18n="cfReadAct">Read the Act (India Code)</a></p>
           </div>
           <div id="hubToolkitGroups"></div>
+        </div>
+        <style>
+          .lib-filters { display: flex; gap: 10px; flex-wrap: wrap; margin: 14px 0 4px; }
+          .lib-filter-sel { flex: 1 1 160px; padding: 9px 12px; border: 1px solid rgba(0,0,0,.25); border-radius: 10px; background: #fff; color: #111; font-size: .9rem; }
+          .cmp-notes { margin: 6px 0 14px; }
+          .cmp-note { font-size: .86rem; color: #444; margin: 4px 0; line-height: 1.5; }
+          .cmp-head { margin: 20px 0 8px; font-size: 1.02rem; }
+          .cmp-table { border: 1px solid rgba(0,0,0,.14); border-radius: 12px; overflow: hidden; }
+          .cmp-row { display: flex; gap: 8px; align-items: baseline; padding: 8px 12px; background: #fff; }
+          .cmp-row:nth-child(even) { background: #f6f6f4; }
+          .cmp-old { font-weight: 700; white-space: nowrap; min-width: 92px; }
+          .cmp-arrow { color: #888; }
+          .cmp-new { font-weight: 700; white-space: nowrap; min-width: 92px; }
+          .cmp-subj { color: #333; font-size: .88rem; }
+          @media (max-width: 560px) { .cmp-row { flex-wrap: wrap; } .cmp-subj { flex-basis: 100%; } }
+        </style>
+        <div class="hub-panel" id="hubPanel-bills" role="tabpanel" hidden>
+          <div class="hub-grid" id="hubBillsGrid"></div>
+        </div>
+        <div class="hub-panel" id="hubPanel-compare" role="tabpanel" hidden>
+          <div class="section-search" role="search">
+            <input type="search" id="compareSearch" placeholder="Search section number or topic\u2026" aria-label="Search old and new law comparison" autocomplete="off" />
+          </div>
+          <div class="cmp-notes" id="compareNotes"></div>
+          <div id="compareTables"></div>
         </div>
 
         <p class="hub-note reveal" data-i18n="hubNote">Bare-act PDFs open from official government sources (India Code, Ministry of Home Affairs). Summaries are brief explainers, not legal advice.</p>
@@ -10647,6 +10689,18 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
           hubTabDrafts: "Drafts & Library",
           hubTabLinks: "Useful Links",
           hubTabToolkit: "Criminal Toolkit",
+          hubTabBills: "Bills & Ordinances",
+          hubTabCompare: "Old \u2194 New Laws",
+          libCourtAll: "All Courts",
+          libCourtSC: "Supreme Court",
+          libCourtAhd: "Allahabad High Court",
+          libCourtOther: "Other High Courts",
+          libEraAll: "All Years",
+          libEra2020: "2020 \u2013 2026",
+          libEra2010: "2010 \u2013 2019",
+          libEra2000: "2000 \u2013 2009",
+          libEraOld: "1950 \u2013 1999",
+          libEraPre: "Before 1950",
           cfTitle: "Court Fee Calculator",
           cfDesc: "Court fee for civil suits and appeals in Uttar Pradesh and Delhi — Court Fees Act, 1870, Schedule I (ad valorem).",
           cfOpen: "Open Calculator",
@@ -10907,6 +10961,18 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
           hubTabDrafts: "ड्राफ्ट व लाइब्रेरी",
           hubTabLinks: "उपयोगी लिंक",
           hubTabToolkit: "क्रिमिनल टूलकिट",
+          hubTabBills: "विधेयक व अध्यादेश",
+          hubTabCompare: "पुराना \u2194 नया कानून",
+          libCourtAll: "सभी न्यायालय",
+          libCourtSC: "सर्वोच्च न्यायालय",
+          libCourtAhd: "इलाहाबाद उच्च न्यायालय",
+          libCourtOther: "अन्य उच्च न्यायालय",
+          libEraAll: "सभी वर्ष",
+          libEra2020: "2020 \u2013 2026",
+          libEra2010: "2010 \u2013 2019",
+          libEra2000: "2000 \u2013 2009",
+          libEraOld: "1950 \u2013 1999",
+          libEraPre: "1950 से पहले",
           cfTitle: "न्यायालय शुल्क कैलकुलेटर",
           cfDesc: "उत्तर प्रदेश और दिल्ली में सिविल वाद और अपील हेतु न्यायालय शुल्क — न्यायालय शुल्क अधिनियम, 1870, अनुसूची I (मूल्यानुसार)।",
           cfOpen: "कैलकुलेटर खोलें",
@@ -11294,7 +11360,9 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
         { id: "bar", labelKey: "hubTabBar", panel: "hubPanel-bar" },
         { id: "drafts", labelKey: "hubTabDrafts", panel: "hubPanel-drafts" },
         { id: "links", labelKey: "hubTabLinks", panel: "hubPanel-links" },
-        { id: "toolkit", labelKey: "hubTabToolkit", panel: "hubPanel-toolkit" }
+        { id: "toolkit", labelKey: "hubTabToolkit", panel: "hubPanel-toolkit" },
+        { id: "bills", labelKey: "hubTabBills", panel: "hubPanel-bills" },
+        { id: "compare", labelKey: "hubTabCompare", panel: "hubPanel-compare" }
       ];
 
       var HUB_ACT_FILTERS = [
@@ -11309,7 +11377,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
         { id: "other", labelKey: "hubFilterOther" }
       ];
 
-      var HUB_TAB_ICONS = { acts: "\u{1F4DC}", constitution: "\u{1F4D6}", courts: "\u{1F3DB}\uFE0F", consumer: "\u{1F6D2}", bar: "\u{1F393}", drafts: "\u{1F4C1}", links: "\u{1F517}", toolkit: "\u2696\uFE0F" };
+      var HUB_TAB_ICONS = { acts: "\u{1F4DC}", constitution: "\u{1F4D6}", courts: "\u{1F3DB}\uFE0F", consumer: "\u{1F6D2}", bar: "\u{1F393}", drafts: "\u{1F4C1}", links: "\u{1F517}", toolkit: "\u2696\uFE0F", bills: "\u{1F4C4}", compare: "\u{1F500}" };
       function renderHubTabs() {
         var wrap = document.getElementById("hubTabs");
         if (!wrap) return;
@@ -11368,6 +11436,15 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
         if (!grid || !data) return;
         grid.textContent = "";
         var lang = hubLang();
+        if (hubActFilter === "all") {
+          grid.appendChild(hubCard({
+            featured: true,
+            badge: t("hubOfficialBadge"),
+            title: lang === "hi" ? "India Code \u2014 \u092a\u0942\u0930\u093e \u0906\u0927\u093f\u0915\u093e\u0930\u093f\u0915 \u0921\u0947\u091f\u093e\u092c\u0947\u0938" : "India Code \u2014 Complete Official Database",
+            desc: lang === "hi" ? "10,000+ \u0915\u0947\u0902\u0926\u094d\u0930\u0940\u092f \u0935 \u0930\u093e\u091c\u094d\u092f \u0905\u0927\u093f\u0928\u093f\u092f\u092e, \u0928\u093f\u092f\u092e, \u0935\u093f\u0928\u093f\u092f\u092e \u0935 \u0905\u0927\u093f\u0938\u0942\u091a\u0928\u093e\u090f\u0901 \u2014 \u0906\u0927\u093f\u0915\u093e\u0930\u093f\u0915 India Code \u0921\u0947\u091f\u093e\u092c\u0947\u0938 \u092e\u0947\u0902 \u0916\u094b\u091c\u0947\u0902\u0964" : "All Central & State Acts with 15,500+ Rules, Regulations & Notifications \u2014 search the complete official India Code database.",
+            actions: [{ label: lang === "hi" ? "India Code \u0916\u094b\u091c\u0947\u0902" : "Search India Code", href: "https://indiacode.gov.in", external: true, solid: true }]
+          }));
+        }
         var list = data.bareActs.filter(function (a) {
           if (hubActFilter === "all") return true;
           if (hubActFilter === "popular") return !!a.popular;
@@ -11406,6 +11483,11 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
           title: t("hubConstTitle"),
           desc: t("hubConstDesc"),
           actions: constAct ? [{ label: t("hubConstOpen"), href: constAct.url, external: true, solid: true }].concat(constAct.urlHi ? [{ label: "हिंदी PDF", href: constAct.urlHi, external: true }] : []) : []
+        }, {
+          badge: t("hubOfficialBadge"),
+          title: lang === "hi" ? "\u0938\u0902\u0935\u093f\u0927\u093e\u0928 \u2014 17 \u092d\u093e\u0930\u0924\u0940\u092f \u092d\u093e\u0937\u093e\u0913\u0902 \u092e\u0947\u0902" : "The Constitution in 17 Indian Languages",
+          desc: lang === "hi" ? "\u092d\u093e\u0930\u0924 \u0915\u093e \u0938\u0902\u0935\u093f\u0927\u093e\u0928 \u0939\u093f\u0902\u0926\u0940, \u0905\u0902\u0917\u094d\u0930\u0947\u091c\u093c\u0940 \u0938\u092e\u0947\u0924 17 \u092d\u093e\u0930\u0924\u0940\u092f \u092d\u093e\u0937\u093e\u0913\u0902 \u092e\u0947\u0902 \u092a\u0922\u093c\u0947\u0902 \u2014 \u0935\u093f\u0927\u093e\u092f\u0940 \u0935\u093f\u092d\u093e\u0917 \u0915\u0947 \u0906\u0927\u093f\u0915\u093e\u0930\u093f\u0915 \u0905\u0928\u0941\u0935\u093e\u0926\u0964" : "Read the Constitution of India in Hindi, English and 15 more Indian languages \u2014 official translations by the Legislative Department.",
+          actions: [{ label: lang === "hi" ? "\u0938\u092d\u0940 \u092d\u093e\u0937\u093e\u090f\u0901 \u0926\u0947\u0916\u0947\u0902" : "View All Languages", href: "https://legislative.gov.in/constitution-of-india", external: true }]
         }]);
         function linkCard(l, descKey) {
           return { title: l["label_" + lang] || l.label_en, badge: t("hubOfficialBadge"), desc: descKey ? t(descKey) : (l["why_" + lang] || l.why_en), actions: [{ label: t("hubVisitSite"), href: l.url, external: true }] };
@@ -11693,12 +11775,106 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
         renderActFilters();
         renderActs();
         renderHubStaticPanels();
+        renderBillsPanel();
+        renderComparePanel();
         var input = document.getElementById("hubSearchInput");
         if (input) input.placeholder = t("hubSearchPh") || "";
         hubStagger(document.getElementById("hubActsGrid"));
       }
 
-      /* ---------- Handwritten Notes ---------- */
+      
+      /* ---------- Bills, Ordinances & Schemes (Court Book parity, 2026-10-22) ---------- */
+      var BILLS_LINKS = [
+        { tEn: "Parliament Bills \u2014 Lok Sabha", tHi: "\u0938\u0902\u0938\u0926 \u0935\u093f\u0927\u0947\u092f\u0915 \u2014 \u0932\u094b\u0915 \u0938\u092d\u093e", dEn: "Every Bill introduced in the Lok Sabha \u2014 full text, status and progress, from the official Digital Sansad database.", dHi: "\u0932\u094b\u0915 \u0938\u092d\u093e \u092e\u0947\u0902 \u092a\u0947\u0936 \u0939\u0930 \u0935\u093f\u0927\u0947\u092f\u0915 \u2014 \u092a\u0942\u0930\u094d\u0923 \u092a\u093e\u0920, \u0938\u094d\u0925\u093f\u0924\u093f \u0935 \u092a\u094d\u0930\u0917\u0924\u093f, \u0906\u0927\u093f\u0915\u093e\u0930\u093f\u0915 Digital Sansad \u0921\u0947\u091f\u093e\u092c\u0947\u0938 \u0938\u0947\u0964", url: "https://sansad.in/ls/legislation/bills", official: true },
+        { tEn: "Parliament Bills \u2014 Rajya Sabha", tHi: "\u0938\u0902\u0938\u0926 \u0935\u093f\u0927\u0947\u092f\u0915 \u2014 \u0930\u093e\u091c\u094d\u092f \u0938\u092d\u093e", dEn: "Every Bill in the Rajya Sabha \u2014 full text, ministry, passage dates and current status, from Digital Sansad.", dHi: "\u0930\u093e\u091c\u094d\u092f \u0938\u092d\u093e \u0915\u093e \u0939\u0930 \u0935\u093f\u0927\u0947\u092f\u0915 \u2014 \u092a\u0942\u0930\u094d\u0923 \u092a\u093e\u0920, \u092e\u0902\u0924\u094d\u0930\u093e\u0932\u092f, \u092a\u093e\u0930\u093f\u0924 \u0939\u094b\u0928\u0947 \u0915\u0940 \u0924\u093e\u0930\u0940\u0916\u0947\u0902 \u0935 \u0935\u0930\u094d\u0924\u092e\u093e\u0928 \u0938\u094d\u0925\u093f\u0924\u093f, Digital Sansad \u0938\u0947\u0964", url: "https://sansad.in/rs/legislation/bills", official: true },
+        { tEn: "eGazette of India", tHi: "\u092d\u093e\u0930\u0924 \u0915\u093e \u0930\u093e\u091c\u092a\u0924\u094d\u0930 (eGazette)", dEn: "The official Gazette of India \u2014 Acts, Ordinances, Rules, Regulations and Notifications, exactly as published by the Government.", dHi: "\u092d\u093e\u0930\u0924 \u0915\u093e \u0906\u0927\u093f\u0915\u093e\u0930\u093f\u0915 \u0930\u093e\u091c\u092a\u0924\u094d\u0930 \u2014 \u0905\u0927\u093f\u0928\u093f\u092f\u092e, \u0905\u0927\u094d\u092f\u093e\u0926\u0947\u0936, \u0928\u093f\u092f\u092e, \u0935\u093f\u0928\u093f\u092f\u092e \u0935 \u0905\u0927\u093f\u0938\u0942\u091a\u0928\u093e\u090f\u0901, \u0938\u0930\u0915\u093e\u0930 \u0926\u094d\u0935\u093e\u0930\u093e \u091c\u0948\u0938\u0947 \u092a\u094d\u0930\u0915\u093e\u0936\u093f\u0924\u0964", url: "https://egazette.gov.in", official: true },
+        { tEn: "UP Vidhan Sabha", tHi: "\u0909\u0924\u094d\u0924\u0930 \u092a\u094d\u0930\u0926\u0947\u0936 \u0935\u093f\u0927\u093e\u0928 \u0938\u092d\u093e", dEn: "Uttar Pradesh Legislative Assembly \u2014 sessions, business, state bills and proceedings on the official website.", dHi: "\u0909\u0924\u094d\u0924\u0930 \u092a\u094d\u0930\u0926\u0947\u0936 \u0935\u093f\u0927\u093e\u0928 \u0938\u092d\u093e \u2014 \u0938\u0924\u094d\u0930, \u0915\u093e\u0930\u094d\u092f, \u0930\u093e\u091c\u094d\u092f \u0935\u093f\u0927\u0947\u092f\u0915 \u0935 \u0915\u093e\u0930\u094d\u092f\u0935\u093e\u0939\u0940 \u0906\u0927\u093f\u0915\u093e\u0930\u093f\u0915 \u0935\u0947\u092c\u0938\u093e\u0907\u091f \u092a\u0930\u0964", url: "http://uplegisassembly.gov.in/", official: true },
+        { tEn: "India Code \u2014 Complete Database", tHi: "India Code \u2014 \u092a\u0942\u0930\u093e \u0921\u0947\u091f\u093e\u092c\u0947\u0938", dEn: "All Central & State Acts with 15,500+ Rules, Regulations & Notifications \u2014 search the complete official India Code database, including State Acts.", dHi: "10,000+ \u0915\u0947\u0902\u0926\u094d\u0930\u0940\u092f \u0935 \u0930\u093e\u091c\u094d\u092f \u0905\u0927\u093f\u0928\u093f\u092f\u092e, \u0928\u093f\u092f\u092e, \u0935\u093f\u0928\u093f\u092f\u092e \u0935 \u0905\u0927\u093f\u0938\u0942\u091a\u0928\u093e\u090f\u0901 \u2014 \u0930\u093e\u091c\u094d\u092f \u0905\u0927\u093f\u0928\u093f\u092f\u092e\u094b\u0902 \u0938\u0939\u093f\u0924 \u092a\u0942\u0930\u093e \u0906\u0927\u093f\u0915\u093e\u0930\u093f\u0915 India Code \u0921\u0947\u091f\u093e\u092c\u0947\u0938 \u0916\u094b\u091c\u0947\u0902\u0964", url: "https://indiacode.gov.in", official: true },
+        { tEn: "Government Schemes \u2014 myScheme", tHi: "\u0938\u0930\u0915\u093e\u0930\u0940 \u092f\u094b\u091c\u0928\u093e\u090f\u0901 \u2014 myScheme", dEn: "2,300+ Central & State government schemes in one official portal \u2014 check eligibility by age, state, income and category.", dHi: "2,300+ \u0915\u0947\u0902\u0926\u094d\u0930 \u0935 \u0930\u093e\u091c\u094d\u092f \u0938\u0930\u0915\u093e\u0930\u0940 \u092f\u094b\u091c\u0928\u093e\u090f\u0901 \u090f\u0915 \u0906\u0927\u093f\u0915\u093e\u0930\u093f\u0915 \u092a\u094b\u0930\u094d\u091f\u0932 \u092a\u0930 \u2014 \u0906\u092f\u0941, \u0930\u093e\u091c\u094d\u092f, \u0906\u092f \u0935 \u0936\u094d\u0930\u0947\u0923\u0940 \u0938\u0947 \u092a\u093e\u0924\u094d\u0930\u0924\u093e \u091c\u093e\u0901\u091a\u0947\u0902\u0964", url: "https://myscheme.gov.in", official: true },
+        { tEn: "Bills & Ordinances Tracker \u2014 PRS", tHi: "\u0935\u093f\u0927\u0947\u092f\u0915 \u0935 \u0905\u0927\u094d\u092f\u093e\u0926\u0947\u0936 \u091f\u094d\u0930\u0948\u0915\u0930 \u2014 PRS", dEn: "Track every Parliament Bill and Ordinance with live status (Passed / Pending / In Committee / Ordinance in force) \u2014 PRS Legislative Research, an independent research tracker.", dHi: "\u0939\u0930 \u0938\u0902\u0938\u0926\u0940\u092f \u0935\u093f\u0927\u0947\u092f\u0915 \u0935 \u0905\u0927\u094d\u092f\u093e\u0926\u0947\u0936 \u0915\u0940 \u0932\u093e\u0907\u0935 \u0938\u094d\u0925\u093f\u0924\u093f (\u092a\u093e\u0930\u093f\u0924 / \u0932\u0902\u092c\u093f\u0924 / \u0938\u092e\u093f\u0924\u093f \u092e\u0947\u0902 / \u0905\u0927\u094d\u092f\u093e\u0926\u0947\u0936 \u0932\u093e\u0917\u0942) \u2014 PRS Legislative Research, \u090f\u0915 \u0938\u094d\u0935\u0924\u0902\u0924\u094d\u0930 \u0936\u094b\u0927 \u091f\u094d\u0930\u0948\u0915\u0930\u0964", url: "https://prsindia.org/bills/parliamentbills", official: false }
+      ];
+      function renderBillsPanel() {
+        var grid = document.getElementById("hubBillsGrid");
+        if (!grid) return;
+        var lang = hubLang();
+        grid.textContent = "";
+        BILLS_LINKS.forEach(function (b) {
+          grid.appendChild(hubCard({
+            title: lang === "hi" ? b.tHi : b.tEn,
+            badge: b.official ? t("hubOfficialBadge") : (lang === "hi" ? "\u0936\u094b\u0927 \u091f\u094d\u0930\u0948\u0915\u0930" : "Research Tracker"),
+            desc: lang === "hi" ? b.dHi : b.dEn,
+            actions: [{ label: t("hubVisitSite"), href: b.url, external: true }]
+          }));
+        });
+        hubStagger(grid);
+      }
+
+      /* ---------- Old <-> New law comparison (Court Book parity, 2026-10-22) ---------- */
+      var cmpQuery = "";
+      function getCompareData() {
+        try { return JSON.parse(document.getElementById("lawCompareData").textContent); }
+        catch (e) { return null; }
+      }
+      function renderComparePanel() {
+        var wrap = document.getElementById("compareTables");
+        if (!wrap) return;
+        var data = getCompareData();
+        if (!data) return;
+        var lang = hubLang();
+        var input = document.getElementById("compareSearch");
+        if (input) {
+          input.placeholder = lang === "hi" ? "\u0927\u093e\u0930\u093e \u0928\u0902\u092c\u0930 \u092f\u093e \u0935\u093f\u0937\u092f \u0916\u094b\u091c\u0947\u0902\u2026" : "Search section number or topic\u2026";
+          if (!input._cmpBound) {
+            input._cmpBound = true;
+            input.addEventListener("input", function () { cmpQuery = input.value; renderComparePanel(); });
+          }
+        }
+        var nw = document.getElementById("compareNotes");
+        if (nw) {
+          nw.textContent = "";
+          (data.notes || []).forEach(function (n) {
+            var p = document.createElement("p");
+            p.className = "cmp-note";
+            p.textContent = "\u2022 " + (lang === "hi" ? (n.hi || n.en) : n.en);
+            nw.appendChild(p);
+          });
+        }
+        var q = cmpQuery.trim().toLowerCase();
+        wrap.textContent = "";
+        var total = 0;
+        [["ipc_bns", "IPC", "BNS"], ["crpc_bnss", "CrPC", "BNSS"], ["iea_bsa", "IEA (Evidence Act)", "BSA"]].forEach(function (sec) {
+          var rows = (data[sec[0]] || []).filter(function (r) {
+            return !q || (r.old + " " + r.new + " " + (r.subjectEn || "") + " " + (r.subjectHi || "")).toLowerCase().indexOf(q) !== -1;
+          });
+          if (!rows.length) return;
+          total += rows.length;
+          var h = document.createElement("h3");
+          h.className = "cmp-head";
+          h.textContent = sec[1] + " \u2192 " + sec[2] + " (" + rows.length + ")";
+          wrap.appendChild(h);
+          var tbl = document.createElement("div");
+          tbl.className = "cmp-table";
+          rows.forEach(function (r) {
+            var row = document.createElement("div");
+            row.className = "cmp-row";
+            var o = document.createElement("span"); o.className = "cmp-old"; o.textContent = r.old;
+            var ar = document.createElement("span"); ar.className = "cmp-arrow"; ar.textContent = "\u2192";
+            var nwEl = document.createElement("span"); nwEl.className = "cmp-new"; nwEl.textContent = r.new;
+            var s = document.createElement("span"); s.className = "cmp-subj"; s.textContent = lang === "hi" ? (r.subjectHi || r.subjectEn) : r.subjectEn;
+            row.appendChild(o); row.appendChild(ar); row.appendChild(nwEl); row.appendChild(s);
+            tbl.appendChild(row);
+          });
+          wrap.appendChild(tbl);
+        });
+        if (!total) {
+          var empty = document.createElement("p");
+          empty.className = "cmp-note";
+          empty.textContent = lang === "hi" ? "\u0915\u094b\u0908 \u092e\u0947\u0932 \u0928\u0939\u0940\u0902 \u092e\u093f\u0932\u093e\u0964" : "No matching sections found.";
+          wrap.appendChild(empty);
+        }
+      }
+
+/* ---------- Handwritten Notes ---------- */
       function getHandwrittenNotes() {
         try {
           var node = document.getElementById("handwrittenNotesData");
@@ -12812,6 +12988,8 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
       var libLimit = 30;
       var LIB_PAGE = 30;
       var libQuery = "";
+      var libCourtF = "all";
+      var libEraF = "all";
       var libBound = false;
 
       var SECTION_EQ = {"IPC:34": ["BNS:3"], "BNS:3": ["IPC:34"], "IPC:120b": ["BNS:61"], "BNS:61": ["IPC:120b"], "IPC:124a": ["BNS:152"], "BNS:152": ["IPC:124a"], "IPC:141": ["BNS:189"], "BNS:189": ["IPC:141"], "IPC:147": ["BNS:191"], "BNS:191": ["IPC:147"], "IPC:149": ["BNS:190"], "BNS:190": ["IPC:149"], "IPC:153a": ["BNS:196"], "BNS:196": ["IPC:153a"], "IPC:186": ["BNS:221"], "BNS:221": ["IPC:186"], "IPC:188": ["BNS:223"], "BNS:223": ["IPC:188"], "IPC:201": ["BNS:238"], "BNS:238": ["IPC:201"], "IPC:228a": ["BNS:72"], "BNS:72": ["IPC:228a"], "IPC:279": ["BNS:281"], "BNS:281": ["IPC:279"], "IPC:295a": ["BNS:299"], "BNS:299": ["IPC:295a"], "IPC:302": ["BNS:103"], "BNS:103": ["IPC:302"], "IPC:304": ["BNS:105"], "BNS:105": ["IPC:304"], "IPC:304a": ["BNS:106"], "BNS:106": ["IPC:304a"], "IPC:304b": ["BNS:80"], "BNS:80": ["IPC:304b"], "IPC:306": ["BNS:108"], "BNS:108": ["IPC:306"], "IPC:307": ["BNS:109"], "BNS:109": ["IPC:307"], "IPC:323": ["BNS:115"], "BNS:115": ["IPC:323"], "IPC:324": ["BNS:118"], "BNS:118": ["IPC:324", "IPC:326"], "IPC:325": ["BNS:117"], "BNS:117": ["IPC:325"], "IPC:326": ["BNS:118"], "IPC:326a": ["BNS:124"], "BNS:124": ["IPC:326a"], "IPC:337": ["BNS:125"], "BNS:125": ["IPC:337", "IPC:338"], "IPC:338": ["BNS:125"], "IPC:341": ["BNS:126"], "BNS:126": ["IPC:341"], "IPC:354": ["BNS:74"], "BNS:74": ["IPC:354"], "IPC:354a": ["BNS:75"], "BNS:75": ["IPC:354a"], "IPC:363": ["BNS:137"], "BNS:137": ["IPC:363"], "IPC:366": ["BNS:87"], "BNS:87": ["IPC:366"], "IPC:376": ["BNS:64"], "BNS:64": ["IPC:376"], "IPC:379": ["BNS:303"], "BNS:303": ["IPC:379"], "IPC:383": ["BNS:308"], "BNS:308": ["IPC:383"], "IPC:392": ["BNS:309"], "BNS:309": ["IPC:392"], "IPC:395": ["BNS:310"], "BNS:310": ["IPC:395"], "IPC:403": ["BNS:314"], "BNS:314": ["IPC:403"], "IPC:406": ["BNS:316"], "BNS:316": ["IPC:406"], "IPC:420": ["BNS:318"], "BNS:318": ["IPC:420"], "IPC:465": ["BNS:336"], "BNS:336": ["IPC:465"], "IPC:467": ["BNS:338"], "BNS:338": ["IPC:467"], "IPC:471": ["BNS:340"], "BNS:340": ["IPC:471"], "IPC:498a": ["BNS:85"], "BNS:85": ["IPC:498a"], "IPC:499": ["BNS:356"], "BNS:356": ["IPC:499", "IPC:500"], "IPC:500": ["BNS:356"], "IPC:504": ["BNS:352"], "BNS:352": ["IPC:504"], "IPC:506": ["BNS:351"], "BNS:351": ["IPC:506"], "IPC:509": ["BNS:79"], "BNS:79": ["IPC:509"], "CRPC:41": ["BNSS:35"], "BNSS:35": ["CRPC:41"], "CRPC:125": ["BNSS:144"], "BNSS:144": ["CRPC:125"], "CRPC:154": ["BNSS:173"], "BNSS:173": ["CRPC:154"], "CRPC:156": ["BNSS:175"], "BNSS:175": ["CRPC:156"], "CRPC:161": ["BNSS:180"], "BNSS:180": ["CRPC:161"], "CRPC:164": ["BNSS:183"], "BNSS:183": ["CRPC:164"], "CRPC:167": ["BNSS:187"], "BNSS:187": ["CRPC:167"], "CRPC:173": ["BNSS:193"], "BNSS:193": ["CRPC:173"], "CRPC:200": ["BNSS:223"], "BNSS:223": ["CRPC:200"], "CRPC:227": ["BNSS:250"], "BNSS:250": ["CRPC:227"], "CRPC:235": ["BNSS:258"], "BNSS:258": ["CRPC:235"], "CRPC:300": ["BNSS:337"], "BNSS:337": ["CRPC:300"], "CRPC:311": ["BNSS:348"], "BNSS:348": ["CRPC:311"], "CRPC:313": ["BNSS:351"], "BNSS:351": ["CRPC:313"], "CRPC:320": ["BNSS:359"], "BNSS:359": ["CRPC:320"], "CRPC:340": ["BNSS:379"], "BNSS:379": ["CRPC:340"], "CRPC:357": ["BNSS:395"], "BNSS:395": ["CRPC:357"], "CRPC:397": ["BNSS:438"], "BNSS:438": ["CRPC:397"], "CRPC:401": ["BNSS:442"], "BNSS:442": ["CRPC:401"], "CRPC:436": ["BNSS:478"], "BNSS:478": ["CRPC:436"], "CRPC:437": ["BNSS:480"], "BNSS:480": ["CRPC:437"], "CRPC:438": ["BNSS:482"], "BNSS:482": ["CRPC:438"], "CRPC:439": ["BNSS:483"], "BNSS:483": ["CRPC:439"], "CRPC:451": ["BNSS:497"], "BNSS:497": ["CRPC:451"], "CRPC:468": ["BNSS:514"], "BNSS:514": ["CRPC:468"], "CRPC:482": ["BNSS:528"], "BNSS:528": ["CRPC:482"], "IEA:6": ["BSA:4"], "BSA:4": ["IEA:6"], "IEA:25": ["BSA:23"], "BSA:23": ["IEA:25", "IEA:26", "IEA:27"], "IEA:26": ["BSA:23"], "IEA:27": ["BSA:23"], "IEA:32": ["BSA:26"], "BSA:26": ["IEA:32"], "IEA:45": ["BSA:39"], "BSA:39": ["IEA:45"], "IEA:65b": ["BSA:63"], "BSA:63": ["IEA:65b"], "IEA:101": ["BSA:104"], "BSA:104": ["IEA:101"], "IEA:102": ["BSA:105"], "BSA:105": ["IEA:102"], "IEA:103": ["BSA:106"], "BSA:106": ["IEA:103"], "IEA:105": ["BSA:108"], "BSA:108": ["IEA:105"], "IEA:106": ["BSA:109"], "BSA:109": ["IEA:106"], "IEA:107": ["BSA:110"], "BSA:110": ["IEA:107"], "IEA:108": ["BSA:111"], "BSA:111": ["IEA:108"], "IEA:113a": ["BSA:117"], "BSA:117": ["IEA:113a"], "IEA:113b": ["BSA:118"], "BSA:118": ["IEA:113b"], "IEA:114a": ["BSA:120"], "BSA:120": ["IEA:114a"], "IEA:118": ["BSA:124"], "BSA:124": ["IEA:118"], "IEA:137": ["BSA:143"], "BSA:143": ["IEA:137"], "IEA:145": ["BSA:148"], "BSA:148": ["IEA:145"], "IEA:154": ["BSA:157"], "BSA:157": ["IEA:154"]};
@@ -12864,6 +13042,29 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
         return true;
       }
 
+      function libFilterPass(item) {
+        if (libCourtF !== "all") {
+          var c = item.court ? (item.court.en || "") : "";
+          if (libCourtF === "sc" && c !== "Supreme Court of India") return false;
+          if (libCourtF === "allahabad" && c !== "Allahabad High Court") return false;
+          if (libCourtF === "otherhc" && (c === "Supreme Court of India" || c === "Allahabad High Court")) return false;
+        }
+        if (libEraF !== "all") {
+          var y = parseInt(item.year, 10) || 0;
+          if (libEraF === "e2020" && y < 2020) return false;
+          if (libEraF === "e2010" && (y < 2010 || y > 2019)) return false;
+          if (libEraF === "e2000" && (y < 2000 || y > 2009)) return false;
+          if (libEraF === "eold" && (y < 1950 || y > 1999)) return false;
+          if (libEraF === "epre" && y >= 1950) return false;
+        }
+        return true;
+      }
+      function initLibFilters() {
+        var cs = document.getElementById("libCourtFilter");
+        var es = document.getElementById("libEraFilter");
+        if (cs) cs.addEventListener("change", function () { libCourtF = cs.value; libLimit = LIB_PAGE; renderLibrary(); });
+        if (es) es.addEventListener("change", function () { libEraF = es.value; libLimit = LIB_PAGE; renderLibrary(); });
+      }
       function renderLibrary() {
         var grid = document.getElementById("libraryGrid");
         if (!grid) return;
@@ -12879,6 +13080,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
         var matched = 0;
         data.items.forEach(function (item) {
           if (!libraryItemMatches(item, q)) return;
+          if (!libFilterPass(item)) return;
           matched++;
           if (matched > libLimit) return;
           grid.appendChild(buildJudgementCard(item));
@@ -13479,6 +13681,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
       sectionFilter("documentsSectionSearch", ".document-note, .drive-tab", "documents");
       initLibraryMore();
       initLibLiveBar();
+      initLibFilters();
       (function () { var i = document.getElementById("draftsSectionSearch"); if (i) i.addEventListener("input", filterDrafts); })();
       (function () { var i = document.getElementById("draftGuideSearch"); if (i) i.addEventListener("input", filterDraftGuide); })();
 
@@ -15425,5 +15628,411 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
   else boot();
 })();
 </script>
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     BOOKMARKS FEATURE BLOCK — standalone patch package (NOT yet integrated)
+     Insert this whole block immediately before the TRUE </body> of index.html
+     (same pattern as the Settings block). Self-contained: <style> + modal HTML
+     + one IIFE <script>. It does NOT modify any existing render function:
+     star buttons are injected by a MutationObserver into cards rendered by
+     buildJudgementCard / buildDraftItem / hubCard(renderActs), and all clicks
+     are handled by one delegated document listener.
+     Storage: localStorage "akl-bookmarks" = [{type, id, title, meta, url, urlHi, ts}]
+     ═══════════════════════════════════════════════════════════════════════════ -->
+<style>
+#bookmarksModal[hidden]{display:none!important}
+.bm-card{max-width:560px;width:calc(100% - 32px);max-height:88vh;overflow-y:auto;text-align:left}
+.bm-card h3{text-align:center;margin-bottom:6px}
+.akl-bm-star{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;border:1px solid rgba(0,0,0,.28);background:#fff;color:#111;font-size:16px;line-height:1;cursor:pointer;padding:0;flex-shrink:0;transition:transform .15s ease,background .15s ease,color .15s ease}
+.akl-bm-star:hover{transform:scale(1.12)}
+.akl-bm-star.on{background:#111;color:#fff;border-color:#111}
+.judgement-meta .akl-bm-star{margin-left:auto}
+#hubActsGrid .akl-bm-star{margin-left:auto;width:28px;height:28px;font-size:14px}
+.bm-sec{border:1px solid #e5e7eb;border-radius:12px;padding:12px 16px;margin:12px 0;background:#fff}
+.bm-sec h4{margin:0 0 4px;font-size:.95rem}
+.bm-row{display:flex;gap:10px;align-items:flex-start;padding:9px 0;border-bottom:1px solid #f0f0f0}
+.bm-row:last-child{border-bottom:none}
+.bm-open{flex:1;background:none;border:none;text-align:left;cursor:pointer;padding:2px 0;display:flex;flex-direction:column;gap:2px;font:inherit}
+.bm-open:hover .bm-name{text-decoration:underline}
+.bm-name{font-weight:600;color:#111;font-size:.95rem;line-height:1.35}
+.bm-meta{font-size:.8rem;color:#6b7280}
+.bm-del{background:#f3f4f6;border:1px solid #d1d5db;color:#111;border-radius:8px;width:30px;height:30px;font-size:1rem;line-height:1;cursor:pointer;flex-shrink:0;padding:0}
+.bm-del:hover{background:#e5e7eb}
+.bm-empty{text-align:center;color:#4b5563;padding:20px 8px;line-height:1.65;font-size:.95rem}
+.bm-count{display:inline-block;background:#111;color:#fff;border-radius:999px;font-size:.72rem;font-weight:700;padding:1px 7px;margin-left:6px;vertical-align:middle}
+.bm-count[hidden]{display:none!important}
+.akl-bm-flash{animation:aklBmFlash 1.6s ease}
+@keyframes aklBmFlash{0%,60%{box-shadow:0 0 0 3px #111}100%{box-shadow:0 0 0 0 rgba(0,0,0,0)}}
+</style>
+<div id="bookmarksModal" class="auth-modal" hidden>
+  <div class="auth-card bm-card" role="dialog" aria-modal="true" aria-labelledby="bmTitle">
+    <button type="button" class="auth-close" id="bmClose" aria-label="Close">&times;</button>
+    <h3 id="bmTitle">&#11088; My Bookmarks</h3>
+    <div id="bmBody"></div>
+  </div>
+</div>
+<script>
+(function () {
+  "use strict";
+  var KEY = "akl-bookmarks";
+  var L = {
+    en: { title: "My Bookmarks", judgements: "Judgements", drafts: "Drafts", acts: "Bare Acts",
+      empty: "No bookmarks yet. Tap the \u2606 on any judgement, draft or act to save it here.",
+      add: "Add bookmark", remove: "Remove bookmark", close: "Close" },
+    hi: { title: "\u092e\u0947\u0930\u0947 \u092c\u0941\u0915\u092e\u093e\u0930\u094d\u0915", judgements: "\u0928\u093f\u0930\u094d\u0923\u092f", drafts: "\u092a\u094d\u0930\u093e\u0930\u0942\u092a", acts: "\u0905\u0927\u093f\u0928\u093f\u092f\u092e",
+      empty: "\u0905\u092d\u0940 \u0915\u094b\u0908 \u092c\u0941\u0915\u092e\u093e\u0930\u094d\u0915 \u0928\u0939\u0940\u0902 \u0939\u0948\u0964 \u0915\u093f\u0938\u0940 \u0928\u093f\u0930\u094d\u0923\u092f, \u092a\u094d\u0930\u093e\u0930\u0942\u092a \u092f\u093e \u0905\u0927\u093f\u0928\u093f\u092f\u092e \u092a\u0930 \u2606 \u0926\u092c\u093e\u0915\u0930 \u092f\u0939\u093e\u0901 \u0938\u0939\u0947\u091c\u0947\u0902\u0964",
+      add: "\u092c\u0941\u0915\u092e\u093e\u0930\u094d\u0915 \u091c\u094b\u0921\u093c\u0947\u0902", remove: "\u092c\u0941\u0915\u092e\u093e\u0930\u094d\u0915 \u0939\u091f\u093e\u090f\u0902", close: "\u092c\u0902\u0926 \u0915\u0930\u0947\u0902" }
+  };
+  function lang() { return document.documentElement.lang === "hi" ? "hi" : "en"; }
+  function t(k) { return L[lang()][k] || L.en[k] || k; }
+  function norm(s) { return String(s == null ? "" : s).replace(/\s+/g, " ").trim(); }
+  function el(id) { return document.getElementById(id); }
+
+  /* ---------- store ---------- */
+  function load() {
+    try { var v = JSON.parse(localStorage.getItem(KEY) || "[]"); return (v && v.length !== undefined) ? v : []; }
+    catch (e) { return []; }
+  }
+  function save(list) { try { localStorage.setItem(KEY, JSON.stringify(list)); } catch (e) {} }
+  function findIdx(list, type, id) {
+    for (var i = 0; i < list.length; i++) if (list[i].type === type && list[i].id === id) return i;
+    return -1;
+  }
+  function getEntry(type, id) { var l = load(); var i = findIdx(l, type, id); return i >= 0 ? l[i] : null; }
+  function isSaved(type, id) { return findIdx(load(), type, id) >= 0; }
+
+  /* ---------- identity extraction from rendered cards ----------
+     Judgement card (buildJudgementCard) carries NO data-id: identity = the
+     citation text (language-independent, printed on every card). Title/meta
+     are captured from the card at save time.
+     Draft card (buildDraftItem) carries data-draft-id: identity = that id.
+     Act card (hubCard inside #hubActsGrid only): the displayed name changes
+     with the site language, so identity = the first action link's href
+     (the official PDF / India Code URL, stable across languages). */
+  function judgementFromCard(card) {
+    var cit = card.querySelector(".judgement-citation");
+    var id = cit ? norm(cit.textContent) : "";
+    if (!id) return null;
+    var h = card.querySelector("h3");
+    var info = card.querySelector(".judgement-meta-info");
+    var link = card.querySelector("a.judgement-link");
+    return { type: "judgement", id: id, title: h ? norm(h.textContent) : id,
+      meta: info ? norm(info.textContent) : "", url: link ? link.href : "" };
+  }
+  function draftFromCard(card) {
+    var id = card.getAttribute("data-draft-id");
+    if (!id) return null;
+    var h = card.querySelector("h3");
+    var cat = card.querySelector(".draft-cat");
+    return { type: "draft", id: id, title: h ? norm(h.textContent) : id,
+      meta: cat ? norm(cat.textContent) : "", url: "" };
+  }
+  function actFromCard(card) {
+    var links = card.querySelectorAll(".hub-card-actions a.hub-btn");
+    if (!links.length) return null;
+    var h = card.querySelector("h3");
+    var meta = card.querySelector(".hub-card-meta");
+    return { type: "act", id: links[0].href, title: h ? norm(h.textContent) : links[0].href,
+      meta: meta ? norm(meta.textContent) : "", url: links[0].href,
+      urlHi: links.length > 1 ? links[1].href : "" };
+  }
+  function entryFromStar(star) {
+    var type = star.getAttribute("data-bm-type");
+    var card = star.closest ? (star.closest(".judgement-card") || star.closest(".draft-item") || star.closest(".hub-card")) : null;
+    if (!card) return null;
+    if (type === "judgement") return judgementFromCard(card);
+    if (type === "draft") return draftFromCard(card);
+    if (type === "act") return actFromCard(card);
+    return null;
+  }
+
+  /* ---------- star buttons ---------- */
+  function makeStar(type, id) {
+    var b = document.createElement("button");
+    b.type = "button";
+    b.className = "akl-bm-star";
+    b.setAttribute("data-bm-type", type);
+    b.setAttribute("data-bm-id", id);
+    b.textContent = "\u2606";
+    return b;
+  }
+  function syncStar(b) {
+    var on = isSaved(b.getAttribute("data-bm-type"), b.getAttribute("data-bm-id"));
+    b.classList.toggle("on", on);
+    b.textContent = on ? "\u2605" : "\u2606";
+    b.setAttribute("aria-pressed", on ? "true" : "false");
+    b.title = on ? t("remove") : t("add");
+  }
+  function syncAllStars() {
+    var stars = document.querySelectorAll(".akl-bm-star");
+    for (var i = 0; i < stars.length; i++) syncStar(stars[i]);
+  }
+
+  var observer = null, decorating = false, pending = false;
+  function decorate() {
+    if (decorating) return;
+    decorating = true;
+    if (observer) observer.disconnect();
+    try {
+      var i, cards, card, entry, star, host;
+      cards = document.querySelectorAll("#libraryGrid .judgement-card");
+      for (i = 0; i < cards.length; i++) {
+        card = cards[i];
+        if (!card.querySelector(".akl-bm-star")) {
+          entry = judgementFromCard(card);
+          if (!entry) continue;
+          star = makeStar("judgement", entry.id);
+          host = card.querySelector(".judgement-meta");
+          if (!host) continue;
+          var sw = host.querySelector(".draft-langswitch");
+          if (sw) host.insertBefore(star, sw); else host.appendChild(star);
+        }
+      }
+      cards = document.querySelectorAll("#draftsGrid .draft-item");
+      for (i = 0; i < cards.length; i++) {
+        card = cards[i];
+        if (!card.querySelector(".akl-bm-star")) {
+          entry = draftFromCard(card);
+          if (!entry) continue;
+          star = makeStar("draft", entry.id);
+          host = card.querySelector(".draft-top-actions") || card.querySelector(".draft-top") || card;
+          host.appendChild(star);
+        }
+      }
+      cards = document.querySelectorAll("#hubActsGrid .hub-card");
+      for (i = 0; i < cards.length; i++) {
+        card = cards[i];
+        if (!card.querySelector(".akl-bm-star")) {
+          entry = actFromCard(card);
+          if (!entry) continue;
+          star = makeStar("act", entry.id);
+          host = card.querySelector(".hub-card-meta") || card;
+          host.appendChild(star);
+        }
+      }
+      syncAllStars();
+    } catch (e) {}
+    if (observer) observeGrids();
+    decorating = false;
+  }
+  function scheduleDecorate() {
+    if (pending) return;
+    pending = true;
+    requestAnimationFrame(function () { pending = false; decorate(); });
+  }
+  function observeGrids() {
+    if (!observer) return;
+    ["libraryGrid", "draftsGrid", "hubActsGrid"].forEach(function (id) {
+      var g = el(id);
+      if (g) observer.observe(g, { childList: true, subtree: true });
+    });
+  }
+
+  /* ---------- toggle / remove ---------- */
+  function refreshUI() { syncAllStars(); updateCount(); var m = el("bookmarksModal"); if (m && !m.hidden) renderList(); }
+  function toggleFromStar(star) {
+    var type = star.getAttribute("data-bm-type"), id = star.getAttribute("data-bm-id");
+    var list = load();
+    var i = findIdx(list, type, id);
+    if (i >= 0) { list.splice(i, 1); }
+    else {
+      var entry = entryFromStar(star);
+      if (!entry) return;
+      entry.ts = Date.now();
+      list.push(entry);
+    }
+    save(list);
+    refreshUI();
+  }
+  function removeEntry(type, id) {
+    var list = load();
+    var i = findIdx(list, type, id);
+    if (i >= 0) { list.splice(i, 1); save(list); }
+    refreshUI();
+  }
+
+  /* ---------- bookmarks panel ---------- */
+  function updateCount() {
+    var c = el("navBookmarksCount");
+    if (!c) return;
+    var n = load().length;
+    c.textContent = n;
+    c.hidden = n === 0;
+  }
+  function renderList() {
+    var body = el("bmBody");
+    if (!body) return;
+    var title = el("bmTitle");
+    if (title) title.textContent = "\u2B50 " + t("title");
+    var list = load();
+    body.textContent = "";
+    if (!list.length) {
+      var p = document.createElement("p");
+      p.className = "bm-empty";
+      p.textContent = t("empty");
+      body.appendChild(p);
+      return;
+    }
+    [["judgement", "judgements"], ["draft", "drafts"], ["act", "acts"]].forEach(function (g) {
+      var items = list.filter(function (e) { return e.type === g[0]; });
+      if (!items.length) return;
+      var sec = document.createElement("div");
+      sec.className = "bm-sec";
+      var h = document.createElement("h4");
+      h.textContent = t(g[1]) + " (" + items.length + ")";
+      sec.appendChild(h);
+      items.forEach(function (e) {
+        var row = document.createElement("div");
+        row.className = "bm-row";
+        var main = document.createElement("button");
+        main.type = "button";
+        main.className = "bm-open";
+        main.setAttribute("data-bm-type", e.type);
+        main.setAttribute("data-bm-id", e.id);
+        var tt = document.createElement("span");
+        tt.className = "bm-name";
+        tt.textContent = e.title || e.id;
+        main.appendChild(tt);
+        if (e.meta) {
+          var mm = document.createElement("span");
+          mm.className = "bm-meta";
+          mm.textContent = e.meta;
+          main.appendChild(mm);
+        }
+        row.appendChild(main);
+        var del = document.createElement("button");
+        del.type = "button";
+        del.className = "bm-del";
+        del.setAttribute("data-bm-type", e.type);
+        del.setAttribute("data-bm-id", e.id);
+        del.setAttribute("aria-label", t("remove"));
+        del.textContent = "\u00D7";
+        row.appendChild(del);
+        sec.appendChild(row);
+      });
+      body.appendChild(sec);
+    });
+  }
+  function openBookmarks() {
+    renderList();
+    var m = el("bookmarksModal");
+    if (m) m.hidden = false;
+  }
+  function closeBookmarks() {
+    var m = el("bookmarksModal");
+    if (m) m.hidden = true;
+  }
+  function flash(elm) {
+    if (!elm) return;
+    elm.classList.remove("akl-bm-flash");
+    void elm.offsetWidth;
+    elm.classList.add("akl-bm-flash");
+    setTimeout(function () { elm.classList.remove("akl-bm-flash"); }, 1700);
+  }
+
+  /* ---------- jump to the original ---------- */
+  function jumpToEntry(type, id) {
+    var entry = getEntry(type, id);
+    closeBookmarks();
+    if (type === "draft") {
+      var input = el("draftsSectionSearch");
+      if (input && input.value) {
+        input.value = "";
+        input.dispatchEvent(new Event("input", { bubbles: true }));
+      }
+      setTimeout(function () {
+        var card = document.querySelector('.draft-item[data-draft-id="' + id + '"]');
+        if (card) {
+          card.scrollIntoView({ behavior: "smooth", block: "center" });
+          flash(card);
+          if (!card.classList.contains("open")) {
+            var tg = card.querySelector(".draft-toggle");
+            if (tg) tg.click();
+          }
+        } else {
+          window.location.hash = "draft-" + id;
+        }
+      }, 80);
+      return;
+    }
+    if (type === "judgement") {
+      var cards = document.querySelectorAll("#libraryGrid .judgement-card");
+      for (var i = 0; i < cards.length; i++) {
+        var cit = cards[i].querySelector(".judgement-citation");
+        if (cit && norm(cit.textContent) === id) {
+          cards[i].scrollIntoView({ behavior: "smooth", block: "center" });
+          flash(cards[i]);
+          return;
+        }
+      }
+      if (entry && entry.url) { window.open(entry.url, "_blank", "noopener"); return; }
+      var lib = el("library");
+      if (lib) lib.scrollIntoView({ behavior: "smooth" });
+      return;
+    }
+    if (type === "act") {
+      if (entry && entry.url) window.open(entry.url, "_blank", "noopener");
+    }
+  }
+
+  /* ---------- More-menu entry (mirrors #navSettingsBtn pattern) ---------- */
+  function applyLabels() {
+    var lbl = el("navBookmarksLabel");
+    if (lbl) lbl.textContent = t("title");
+    var close = el("bmClose");
+    if (close) close.setAttribute("aria-label", t("close"));
+    updateCount();
+    var m = el("bookmarksModal");
+    if (m && !m.hidden) renderList();
+    syncAllStars();
+  }
+  function injectMenuButton() {
+    var menu = el("navMoreMenu");
+    if (!menu || el("navBookmarksBtn")) return;
+    var b = document.createElement("button");
+    b.type = "button";
+    b.id = "navBookmarksBtn";
+    b.setAttribute("role", "menuitem");
+    b.innerHTML = "\u2B50 <span id=\"navBookmarksLabel\"></span><span id=\"navBookmarksCount\" class=\"bm-count\" hidden></span>";
+    var anchor = el("navSettingsBtn");
+    if (anchor && anchor.parentNode === menu && anchor.nextSibling) menu.insertBefore(b, anchor.nextSibling);
+    else menu.appendChild(b);
+    b.addEventListener("click", function () {
+      menu.hidden = true;
+      var mb = el("navMoreBtn");
+      if (mb) mb.setAttribute("aria-expanded", "false");
+      openBookmarks();
+    });
+  }
+
+  /* ---------- wiring ---------- */
+  document.addEventListener("click", function (ev) {
+    var node = ev.target;
+    if (!node || !node.closest) return;
+    var star = node.closest(".akl-bm-star");
+    if (star) { ev.preventDefault(); toggleFromStar(star); return; }
+    var del = node.closest(".bm-del");
+    if (del) { removeEntry(del.getAttribute("data-bm-type"), del.getAttribute("data-bm-id")); return; }
+    var open = node.closest(".bm-open");
+    if (open) { jumpToEntry(open.getAttribute("data-bm-type"), open.getAttribute("data-bm-id")); return; }
+  });
+  var modal = el("bookmarksModal");
+  if (modal) {
+    modal.addEventListener("click", function (ev) { if (ev.target === modal) closeBookmarks(); });
+    var cb = el("bmClose");
+    if (cb) cb.addEventListener("click", closeBookmarks);
+    document.addEventListener("keydown", function (ev) {
+      if (ev.key === "Escape" && !modal.hidden) closeBookmarks();
+    });
+  }
+  if (window.MutationObserver) {
+    observer = new MutationObserver(function () { scheduleDecorate(); });
+    new MutationObserver(function () { applyLabels(); }).observe(document.documentElement, { attributes: true, attributeFilter: ["lang"] });
+  }
+  function init() { injectMenuButton(); decorate(); applyLabels(); }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init);
+  else init();
+})();
+</script>
+
 </body>
 </html>
