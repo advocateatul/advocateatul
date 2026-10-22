@@ -506,11 +506,7 @@
     .live-btn:hover { background: #111; color: #fff; border-color: #111; transform: translateY(-1px); }
     html[data-theme="dark"] .live-btn { border-color: rgba(255,255,255,.35); }
     html[data-theme="dark"] .live-btn:hover { background: #fff; color: #111; border-color: #fff; }
-    .la-live { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; padding: 8px 14px 10px; background: #fff; }
-    .la-live .la-live-label { font-size: .75rem; font-weight: 600; color: #555; }
-    .la-live-btn { border: 1.5px solid #111; background: #fff; color: #111; border-radius: 999px; padding: 5px 11px; font-size: .75rem; font-weight: 600; text-decoration: none; }
-    .la-live-btn:hover { background: #111; color: #fff; }
-
+                
     .drafts { background: var(--paper); color: var(--ink); padding: clamp(54px, 7vw, 94px) 0; }
     .drafts-head { display: grid; grid-template-columns: .7fr 1.3fr; gap: 50px; align-items: end; margin-bottom: 14px; }
     .drafts h2 { font-size: clamp(1.45rem, 2.6vw, 2.15rem); line-height: 1.08; letter-spacing: -.035em; color: #111111; font-weight: 800; }
@@ -13722,12 +13718,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
           <input type="text" id="laInput" autocomplete="off" />
           <button type="submit" aria-label="Send">➤</button>
         </form>
-        <div class="la-live" id="laLiveRow">
-          <span class="la-live-label" id="laLiveLabel">Search live:</span>
-          <a class="la-live-btn" id="laLiveKanoon" href="https://indiankanoon.org/search/?formInput=legal%20help" target="_blank" rel="noopener">🔍 <span id="laLiveKanoonTxt">Indian Kanoon — Live</span></a>
-          <a class="la-live-btn" id="laLiveGoogle" href="https://www.google.com/search?q=legal%20help%20judgement" target="_blank" rel="noopener">🔍 <span id="laLiveGoogleTxt">Google — Live</span></a>
-        </div>
-      </section>
+              </section>
       <section class="la-pane" id="laPaneDrafting" role="tabpanel" hidden>
         <div class="la-ai-draft">
           <div class="la-ai-draft-head">🤖 <span id="laAiDraftTitle">AI Drafting</span></div>
@@ -14812,12 +14803,6 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
         if (mbt) mbt.textContent = L("Generate Summary", "सारांश बनाएं");
         var cdn = document.getElementById("laCaseDeadlineNote");
         if (cdn) cdn.placeholder = L("Deadline note (optional)", "डेडलाइन नोट (वैकल्पिक)");
-        var lvl = document.getElementById("laLiveLabel");
-        if (lvl) lvl.textContent = L("Search live:", "लाइव खोजें:");
-        var lvk = document.getElementById("laLiveKanoonTxt");
-        if (lvk) lvk.textContent = L("Indian Kanoon — Live", "इंडियन कानून — लाइव");
-        var lvg = document.getElementById("laLiveGoogleTxt");
-        if (lvg) lvg.textContent = L("Google — Live", "गूगल — लाइव");
       }
       function switchTab(name) {
         document.querySelectorAll(".la-tab").forEach(function (b) {
@@ -14876,19 +14861,6 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
         if (attBtn && fileInp) { attBtn.addEventListener("click", function () { fileInp.click(); }); fileInp.addEventListener("change", function () { if (fileInp.files[0]) laScanFile(fileInp.files[0]); fileInp.value = ""; }); }
         var dcBtn = document.getElementById("laDocCamBtn");
         if (dcBtn && camInp) dcBtn.addEventListener("click", function () { camInp.click(); });
-        /* ---- Live search deep links (Indian Kanoon / Google) ---- */
-        (function () {
-          var lq = document.getElementById("laInput");
-          var lk = document.getElementById("laLiveKanoon"), lg = document.getElementById("laLiveGoogle");
-          if (!lk || !lg) return;
-          function lupd() {
-            var v = (lq && lq.value ? lq.value.trim() : "") || "legal help";
-            lk.href = "https://indiankanoon.org/search/?formInput=" + encodeURIComponent(v);
-            lg.href = "https://www.google.com/search?q=" + encodeURIComponent(v + " judgement");
-          }
-          if (lq) lq.addEventListener("input", lupd);
-          lupd();
-        })();
         var dsearch = document.getElementById("laDraftSearch");
         if (dsearch) dsearch.addEventListener("input", renderDraftList);
         var abtn = document.getElementById("laAiDraftBtn");
