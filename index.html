@@ -5536,6 +5536,20 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
       var GEMINI_MODEL = "gemini-3.8-flash";
       var GROQ_KEY = "";
       var GROQ_MODEL = "qwen/qwen3.8-27b";
+      /* Conversation memory: LawAssist remembers the chat so follow-up questions
+         ("uske liye?", "aur iska process?") work like a proper AI assistant. */
+      var LA_HIST = [];
+      function laHistPush(role, text) {
+        try {
+          text = (text || "").replace(/\s+/g, " ").trim();
+          if (!text) return;
+          if (text.length > 700) text = text.slice(0, 700);
+          var last = LA_HIST[LA_HIST.length - 1];
+          if (last && last.role === role) { last.text = (last.text + " " + text).slice(0, 900); }
+          else { LA_HIST.push({ role: role, text: text }); }
+          while (LA_HIST.length > 8) LA_HIST.shift();
+        } catch (e) {}
+      }
       function geminiSystem(lang) {
         return lang === "hi"
           ? "Aap LawAssist hain — Advocate Atul Kumar (criminal lawyer, Bulandshahr District Court, UP) ki website ka AI sahayak. KEVAl Bharatiya kanoon par jawab dein, Hindi me. Sankshipt (120 shabdon ke andar), sateek, vyavharik. Sahi dhaaraon (BNS/BNSS/BSA/NI Act/CPC) ka naam lein. Kabhi farzi case citation na banayein. Ant me ek line jodein: 'Vistrit salah ke liye 7456022448 par WhatsApp karein.'"
@@ -5546,13 +5560,20 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
         var done = false;
         function fin(v) { if (!done) { done = true; cb(v); } }
         var to = setTimeout(function () { fin(null); }, hasGKey ? 30000 : 70000);
+        var turns = [];
+        try {
+          LA_HIST.slice(-8).forEach(function (h) { turns.push({ role: h.role, parts: [{ text: h.text }] }); });
+          while (turns.length && turns[0].role !== "user") turns.shift();
+          if (turns.length && turns[turns.length - 1].role === "user") { turns[turns.length - 1] = { role: "user", parts: [{ text: q }] }; }
+          else { turns.push({ role: "user", parts: [{ text: q }] }); }
+        } catch (e) { turns = [{ role: "user", parts: [{ text: q }] }]; }
         try {
           fetch(hasGKey ? "https://generativelanguage.googleapis.com/v1beta/models/" + GEMINI_MODEL + ":generateContent?key=" + GEMINI_KEY : GEMINI_PROXY + "/gemini", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
               systemInstruction: { parts: [{ text: sys || geminiSystem(lang) }] },
-              contents: [{ parts: [{ text: q }] }],
+              contents: turns,
               generationConfig: { temperature: 0.3, maxOutputTokens: tokens || 450 }
             })
           }).then(function (res) { if (!res.ok) { fin(null); return null; } return res.json(); })
@@ -5612,6 +5633,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
       function laBotSay(text, ai) {
         var tag = ai ? "<span class='la-ai-tag'>\u2728 AI</span> " : "";
         var msgDiv = addMsg(tag + esc(text).replace(/\n/g, "<br>"), "bot");
+        laHistPush("model", text);
         if (ai && msgDiv) {
           var cp = document.createElement("button");
           cp.type = "button"; cp.className = "la-copy";
@@ -5916,6 +5938,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
 
       function respond(q) {
         addMsg(esc(q), "user");
+        laHistPush("user", q);
         var lang = laLang();
         var thinking = null;
         try {
@@ -5929,6 +5952,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
           try { thinking && thinking.parentNode && thinking.parentNode.removeChild(thinking); } catch (e2) {}
           var tag = ai ? "<span class='la-ai-tag'>\u2728 AI</span> " : "";
           var msgDiv = addMsg(tag + esc(html).replace(/\n/g, "<br>"), "bot", sources);
+          laHistPush("model", html);
           if (ai && msgDiv) {
             var cp = document.createElement("button");
             cp.type = "button"; cp.className = "la-copy";
