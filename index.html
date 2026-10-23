@@ -5532,6 +5532,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
 
       /* Gemini AI (free tier) — tries AI first, falls back to built-in engine */
       var GEMINI_KEY = "";
+      var GEMINI_PROXY = "https://lawassist-proxy.onrender.com";
       var GEMINI_MODEL = "gemini-3.8-flash";
       var GROQ_KEY = "";
       var GROQ_MODEL = "qwen/qwen3.8-27b";
@@ -5541,12 +5542,12 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
           : "You are LawAssist — the AI assistant on Advocate Atul Kumar's website (criminal lawyer, Bulandshahr District Court, UP). Answer ONLY about Indian law, in English. Concise (under 120 words), accurate, practical. Name correct sections (BNS/BNSS/BSA/NI Act/CPC). Never invent case citations. End with one line: 'For detailed advice, WhatsApp 7456022448.'";
       }
       function askGemini(q, lang, cb, sys, tokens) {
-        if (!GEMINI_KEY || GEMINI_KEY.indexOf("<") !== -1 || GEMINI_KEY.length < 20) { cb(null); return; }
+        var hasGKey = GEMINI_KEY && GEMINI_KEY.indexOf("<") === -1 && GEMINI_KEY.length >= 20; if (!hasGKey && !GEMINI_PROXY) { cb(null); return; }
         var done = false;
         function fin(v) { if (!done) { done = true; cb(v); } }
-        var to = setTimeout(function () { fin(null); }, 30000);
+        var to = setTimeout(function () { fin(null); }, hasGKey ? 30000 : 70000);
         try {
-          fetch("https://generativelanguage.googleapis.com/v1beta/models/" + GEMINI_MODEL + ":generateContent?key=" + GEMINI_KEY, {
+          fetch(hasGKey ? "https://generativelanguage.googleapis.com/v1beta/models/" + GEMINI_MODEL + ":generateContent?key=" + GEMINI_KEY : GEMINI_PROXY + "/gemini", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
@@ -5683,14 +5684,14 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
         img.src = url;
       }
       function askGeminiVision(dataUrl, prompt, cb) {
-        if (!GEMINI_KEY || GEMINI_KEY.length < 20) { cb(null); return; }
+        var hasGKey = GEMINI_KEY && GEMINI_KEY.length >= 20; if (!hasGKey && !GEMINI_PROXY) { cb(null); return; }
         var done = false;
         function fin(v) { if (!done) { done = true; cb(v); } }
-        var to = setTimeout(function () { fin(null); }, 45000);
+        var to = setTimeout(function () { fin(null); }, hasGKey ? 45000 : 80000);
         try {
           var parts = String(dataUrl).split(",");
           var mime = (parts[0].match(/data:([^;]+)/) || [])[1] || "image/jpeg";
-          fetch("https://generativelanguage.googleapis.com/v1beta/models/" + GEMINI_MODEL + ":generateContent?key=" + GEMINI_KEY, {
+          fetch(hasGKey ? "https://generativelanguage.googleapis.com/v1beta/models/" + GEMINI_MODEL + ":generateContent?key=" + GEMINI_KEY : GEMINI_PROXY + "/gemini", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
@@ -6407,6 +6408,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
         var fab = document.getElementById("lawAssistFab"), panel = document.getElementById("lawAssistPanel");
         if (!fab || !panel) return;
         fab.addEventListener("click", function () {
+          if (GEMINI_PROXY) { try { fetch(GEMINI_PROXY + "/", { method: "GET", mode: "no-cors" }).catch(function () {}); } catch (e) {} }
           if (panel.hidden) openPanel(); else panel.hidden = true;
         });
         document.getElementById("laClose").addEventListener("click", function () { panel.hidden = true; });
