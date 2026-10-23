@@ -1480,54 +1480,8 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
 
 </style>
 
-
-<style id="appIntroStyle">
-/* Opening intro (app only): a calm, designed brand animation that lives in the
-   page itself, so it always plays in full - the Android splash can be cut short
-   when the page loads fast from cache, this one cannot. Failsafe: without the
-   .on class it stays invisible and never blocks the page. */
-#appIntro{position:fixed;inset:0;z-index:200000;background:#ffffff;display:flex;flex-direction:column;align-items:center;justify-content:center;visibility:hidden;opacity:0}
-#appIntro.on{visibility:visible;opacity:1;animation:aiKill .45s ease 2.9s forwards}
-#appIntro .ai-logo{width:168px;height:168px;object-fit:contain;opacity:0;animation:aiLogo 2.3s cubic-bezier(.22,.75,.25,1) .05s forwards}
-#appIntro .ai-name{margin-top:24px;font-family:Georgia,'Times New Roman',serif;font-size:29px;letter-spacing:.14em;color:#111111;text-transform:uppercase;opacity:0;animation:aiRise .9s ease .9s forwards}
-#appIntro .ai-line{margin-top:15px;width:0;height:1px;background:#111111;opacity:.5;animation:aiLine 1s ease 1.2s forwards}
-#appIntro .ai-sub{margin-top:13px;font-family:Georgia,'Times New Roman',serif;font-size:12px;letter-spacing:.32em;color:#555555;text-transform:uppercase;opacity:0;animation:aiRise .9s ease 1.4s forwards}
-@keyframes aiLogo{0%{opacity:0;transform:scale(.80)}55%{opacity:1}100%{opacity:1;transform:scale(1)}}
-@keyframes aiRise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-@keyframes aiLine{from{width:0}to{width:120px}}
-@keyframes aiKill{to{opacity:0;visibility:hidden}}
-</style>
 </head>
 <body id="top">
-<div id="appIntro" aria-hidden="true">
-  <img class="ai-logo" src="logo.webp" alt="">
-  <div class="ai-name">A.K Legal Law</div>
-  <div class="ai-line"></div>
-  <div class="ai-sub">Advocate Atul Kumar</div>
-</div>
-<script>
-/* Opening intro gate: app launches only (standalone / baked appv / saved app
-   flag), once per session, skipped for reduced-motion. Tap skips. The final
-   setTimeout always removes it, and the CSS aiKill fade hides it even if this
-   script dies midway - the page can never get stuck behind the intro. */
-(function () {
-  var el = document.getElementById('appIntro');
-  if (!el) return;
-  var app = false, seen = false;
-  try {
-    app = (window.matchMedia && window.matchMedia('(display-mode: standalone)').matches) || !!new URLSearchParams(location.search).get('appv') || !!localStorage.getItem('akl-appv');
-    seen = !!sessionStorage.getItem('akl-intro');
-    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) seen = true;
-  } catch (e) { app = false; }
-  if (!app || seen) { if (el.parentNode) el.parentNode.removeChild(el); return; }
-  try { sessionStorage.setItem('akl-intro', '1'); } catch (e) {}
-  el.classList.add('on');
-  var kill = function () { if (el.parentNode) el.parentNode.removeChild(el); };
-  el.addEventListener('pointerdown', function () { el.style.transition = 'opacity .25s ease'; el.style.opacity = '0'; setTimeout(kill, 280); });
-  setTimeout(kill, 3600);
-})();
-</script>
-
 <script>
 /* Round 2 data loader: bade datasets *.json se lazy-load hote hain */
 (function () {
