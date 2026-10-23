@@ -5,7 +5,7 @@
    saved copy in the background for the next open.
    Static files: stale-while-revalidate. Cross-origin requests untouched.
    All paths are relative to this script, so it works under any base path. */
-var CACHE = "aklegal-v3";
+var CACHE = "aklegal-v4";
 function abs(p) { return new URL(p, self.location.href).toString(); }
 var INDEX = abs("index.html");
 var CORE = ["", "index.html", "hero.webp", "manifest.webmanifest", "logo.webp", "icon-192.png", "icon-512.png", "icon-maskable-512.png", "apple-touch-icon.png"];
