@@ -1480,11 +1480,8 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
 
 </style>
 
-
-<style id="splashHoldStyle">#splashHold{position:fixed;inset:0;background:#ffffff;z-index:99999;display:none;align-items:center;justify-content:center;transition:opacity .32s ease}#splashHold.on{display:flex}#splashHold.bye{opacity:0}#splashHold img{width:132px;height:132px;animation:shGrow 1.2s cubic-bezier(.22,.68,.26,1) both}@keyframes shGrow{from{transform:scale(.90);opacity:.5}to{transform:scale(1);opacity:1}}</style>
 </head>
 <body id="top">
-<div id="splashHold" aria-hidden="true"><img src="logo.webp" alt=""></div><script>(function(){try{var app=window.matchMedia("(display-mode: standalone)").matches||/[?&]appv=/.test(location.search)||!!localStorage.getItem("akl-appv");if(!app)return;if(sessionStorage.getItem("akl-hold"))return;if(window.matchMedia("(prefers-reduced-motion: reduce)").matches)return;sessionStorage.setItem("akl-hold","1");var el=document.getElementById("splashHold");el.classList.add("on");var done=false;function off(){if(done)return;done=true;el.classList.add("bye");setTimeout(function(){if(el.parentNode)el.parentNode.removeChild(el)},360)}el.addEventListener("pointerdown",off);function arm(){setTimeout(off,800)}if(document.readyState==="complete")arm();else window.addEventListener("load",arm);setTimeout(off,4000);}catch(e){}})();</script>
 <script>
 /* Round 2 data loader: bade datasets *.json se lazy-load hote hain */
 (function () {
