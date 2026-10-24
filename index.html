@@ -138,7 +138,7 @@
         accent: "#1e1e1e",
         accentDark: "#f5f5f5",
         lightBackground: "#fafcff",
-        lightText: "#1e1e1e",
+        lightText: "#111111",
         darkBackground: "#1e1e1e",
         darkText: "#fafcff"
       }
@@ -149,8 +149,8 @@
       color-scheme: light;
       --paper: #fafcff;
       --paper-2: #ececec;
-      --ink: #1e1e1e;
-      --muted: #5a5a5a;
+      --ink: #111111;
+      --muted: #444444;
       --line: #d9d9d9;
       --wine: #2e2e2e;
       --wine-deep: #0a0a0a;
@@ -167,8 +167,8 @@
       :root {
         --paper: #fafcff;
         --paper-2: #ececec;
-        --ink: #222222;
-        --muted: #5a5a5a;
+        --ink: #111111;
+        --muted: #444444;
         --line: #d9d9d9;
         --wine: #2e2e2e;
         --wine-deep: #0a0a0a;
@@ -858,7 +858,7 @@
       .masthead, .hub-searchbar, .hub-tabs, .hub-filters, .hub-toolbar, .hub-results, .language-switch { display: none !important; }
       .knowledge { background: #fafcff; color: #1e1e1e; }
       .hub-card { break-inside: avoid; border-color: #ccc; background: #fafcff; }
-      .hub-card h3, .hub-card p { color: #1e1e1e; }
+      .hub-card h3, .hub-card p { color: #111111; }
     }
 
     /* ---------- Dark mode ---------- */
@@ -942,7 +942,7 @@
 
   
     /* All headings dark & bold (owner's choice) — light mode. */
-    h1, h2, h3 { color: #1e1e1e !important; font-weight: 700 !important; }
+    h1, h2, h3 { color: #111111 !important; font-weight: 700 !important; }
     .hero h1 { font-weight: 800 !important; }
     .contact h2 { color: #F5F5F5 !important; } /* keep readable on dark footer */
     /* Dark mode exception: headings turn light (must come after the global rule) */
@@ -962,11 +962,11 @@
     .top-search-results { position: absolute; top: 100%; left: 0; right: 0; z-index: 200; background: #fafcff; color: #1e1e1e; border-top: 1px solid #e2e2e2; box-shadow: 0 24px 60px rgba(0,0,0,.18); max-height: 70vh; overflow: auto; padding: 18px min(5vw, 40px); }
     .top-search-results[hidden] { display: none; }
     .top-search-results .hub-result-group { margin-bottom: 16px; }
-    .top-search-results h4 { margin: 0 0 8px; font: 700 .75rem var(--sans); text-transform: uppercase; letter-spacing: .08em; color: #555; }
+    .top-search-results h4 { margin: 0 0 8px; font: 700 .75rem var(--sans); text-transform: uppercase; letter-spacing: .08em; color: #444444; }
     .top-search-results .hub-result { display: block; padding: 10px 12px; border: 1px solid #e6e6e6; border-radius: 8px; margin-bottom: 6px; color: #1e1e1e; text-decoration: none; }
     .top-search-results .hub-result:hover { border-color: #1e1e1e; }
-    .top-search-results .hub-result small { display: block; color: #666; font-size: .75rem; margin-top: 3px; }
-    .top-search-results .hub-no-results { color: #555; padding: 12px 0; }
+    .top-search-results .hub-result small { display: block; color: #444444; font-size: .75rem; margin-top: 3px; }
+    .top-search-results .hub-no-results { color: #444444; padding: 12px 0; }
     html[data-theme="dark"] .top-search-results { background: #222222; color: #F5F5F5; border-top-color: #2c2c2c; }
     html[data-theme="dark"] .top-search-results .hub-result { border-color: #2c2c2c; color: #F5F5F5; }
     html[data-theme="dark"] .top-search-results .hub-result small { color: #b9b9b9; }
@@ -1028,7 +1028,7 @@
     .la-brand .la-sub { display: block; font-size: .72rem; opacity: .7; font-weight: 400; }
     .la-header #laClose { background: transparent; border: 1px solid rgba(255,255,255,.35); color: #F5F5F5; width: 32px; height: 32px; border-radius: 50%; cursor: pointer; font-size: .85rem; }
     .la-tabs { display: flex; background: #fafcff; border-bottom: 1px solid rgba(0,0,0,.1); }
-    .la-tab { flex: 1; border: 0; background: transparent; padding: 11px 4px; font: 700 .8rem/1.2 var(--sans); color: #555; cursor: pointer; border-bottom: 3px solid transparent; }
+    .la-tab { flex: 1; border: 0; background: transparent; padding: 11px 4px; font: 700 .8rem/1.2 var(--sans); color: #444444; cursor: pointer; border-bottom: 3px solid transparent; }
     .la-tab.active { color: #1e1e1e; border-bottom-color: #1e1e1e; background: #fafcff; }
     .la-body { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
     .la-pane { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
@@ -1088,14 +1088,14 @@ html[data-theme="dark"] .la-doc-row{background:rgba(255,255,255,.06)}
     .la-preview { border: 1px solid rgba(0,0,0,.15); border-radius: 12px; padding: 12px; font-size: .78rem; line-height: 1.6; white-space: pre-wrap; max-height: 260px; overflow-y: auto; background: #fafcff; font-family: Georgia, serif; }
     .la-ai-draft { border: 1px solid rgba(0,0,0,.15); border-radius: 12px; padding: 12px; margin: 10px 14px 4px; background: #fafcff; display: flex; flex-direction: column; gap: 8px; }
     .la-ai-draft-head { font-weight: 800; font-size: .88rem; }
-    .la-ai-draft-sub { font-size: .74rem; color: #5a5a5a; margin: 0; }
+    .la-ai-draft-sub { font-size: .74rem; color: #444444; margin: 0; }
     .la-ai-draft textarea { width: 100%; box-sizing: border-box; border: 1px solid rgba(0,0,0,.25); border-radius: 8px; padding: 8px; font: inherit; font-size: .8rem; resize: vertical; }
     .la-ai-draft .la-generate { height: 40px; border-radius: 999px; font-weight: 700; font-size: .82rem; cursor: pointer; background: #1e1e1e; color: #F5F5F5; border: 2px solid #1e1e1e; }
     .la-ai-draft .la-preview { margin: 0; }
     .la-doc-actions { display: flex; gap: 8px; }
     .la-doc-actions .la-generate { flex: 1; }
     a.la-copy { text-decoration: none; display: inline-block; }
-    .la-copy { margin-top: 6px; font-size: .7rem; border: 1px solid rgba(0,0,0,.25); background: transparent; border-radius: 999px; padding: 3px 10px; cursor: pointer; color: #5a5a5a; }
+    .la-copy { margin-top: 6px; font-size: .7rem; border: 1px solid rgba(0,0,0,.25); background: transparent; border-radius: 999px; padding: 3px 10px; cursor: pointer; color: #444444; }
     html[data-theme="dark"] .la-ai-draft { background: #222222; border-color: rgba(255,255,255,.15); }
     html[data-theme="dark"] .la-ai-draft-sub, html[data-theme="dark"] .la-copy { color: #b9b9b9; }
     html[data-theme="dark"] .la-ai-draft textarea { background: #1e1e1e; color: #eee; border-color: rgba(255,255,255,.2); }
@@ -1116,7 +1116,7 @@ html[data-theme="dark"] .la-doc-row{background:rgba(255,255,255,.06)}
     .la-badge.future { background: #fafcff; color: #374151; border: 1px solid #d1d5db; }
     .la-noteslog { margin-top: 9px; border-top: 1px dashed rgba(0,0,0,.18); padding-top: 8px; }
     .la-note-entry { display: flex; gap: 8px; align-items: flex-start; padding: 5px 0; }
-    .la-note-date { font-size: .72rem; font-weight: 700; color: #6b7280; white-space: nowrap; padding-top: 1px; }
+    .la-note-date { font-size: .72rem; font-weight: 700; color: #4b5563; white-space: nowrap; padding-top: 1px; }
     .la-note-text { flex: 1; font-size: .8rem; color: #222; }
     .la-note-del { background: transparent; border: none; color: #9ca3af; font-size: 1rem; cursor: pointer; line-height: 1; padding: 0 2px; }
     .la-note-addrow { display: flex; gap: 7px; margin-top: 7px; }
@@ -1334,13 +1334,13 @@ html[data-theme="dark"] .la-doc-row{background:rgba(255,255,255,.06)}
 
     .notes-content {
       font-family: "Kalam", "Caveat", "Segoe Print", "Bradley Hand", cursive;
-      font-size: 1.02rem; line-height: 32px; color: #0e2a52;
+      font-size: 1.02rem; line-height: 32px; color: #0a1f3d;
       padding-left: 28px;
     }
     html[data-theme="dark"] .notes-content { color: #a8c8e8; }
     .notes-content h3 {
       font-family: "Kalam", "Caveat", "Segoe Print", cursive;
-      font-size: 1.34rem; font-weight: 700; color: #b91c1c; margin: 26px 0 10px;
+      font-size: 1.34rem; font-weight: 700; color: #991b1b; margin: 26px 0 10px;
       padding: 2px 10px 4px; display: inline-block; border-radius: 3px;
       background: #fafcff;
       border-bottom: none;
@@ -1351,7 +1351,7 @@ html[data-theme="dark"] .la-doc-row{background:rgba(255,255,255,.06)}
     }
     .notes-content h4 {
       font-family: "Segoe Print", "Bradley Hand", cursive;
-      font-size: 1.08rem; color: #1e40af; margin: 20px 0 8px;
+      font-size: 1.08rem; color: #1e3a8a; margin: 20px 0 8px;
     }
     html[data-theme="dark"] .notes-content h4 { color: #93c5fd; }
     .notes-content ul { margin: 8px 0 16px 4px; padding: 0; list-style: none; }
@@ -1364,7 +1364,7 @@ html[data-theme="dark"] .la-doc-row{background:rgba(255,255,255,.06)}
     }
     html[data-theme="dark"] .notes-content .note-highlight { background: rgba(255,235,59,.2); }
     .notes-content .note-section-num {
-      display: inline-block; background: #1e40af; color: #F5F5F5;
+      display: inline-block; background: #1e3a8a; color: #F5F5F5;
       font-family: var(--sans); font-size: .75rem; font-weight: 700;
       padding: 2px 10px; border-radius: 999px; margin-right: 8px;
     }
@@ -1386,7 +1386,7 @@ html[data-theme="dark"] .la-doc-row{background:rgba(255,255,255,.06)}
     .vocab-term { background: var(--paper-2); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; animation: vocab-fade .5s cubic-bezier(0.22, 1, 0.36, 1) both; }
     @keyframes vocab-fade { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
     .vocab-term h3 { font-size: 1.15rem; font-weight: 800; margin: 0 0 6px; color: #1e1e1e; }
-    .vocab-term h3 .vocab-hi { color: #6b21a8; font-weight: 700; }
+    .vocab-term h3 .vocab-hi { color: #581c87; font-weight: 700; }
     .vocab-term .vocab-ex { font-size: .92rem; color: var(--ink); opacity: .85; margin: 8px 0 0; padding-left: 14px; border-left: 3px solid #3b82f6; }
     .vocab-term .vocab-ex-hi { font-size: .92rem; color: var(--ink); opacity: .75; margin: 4px 0 0; padding-left: 14px; }
     .vocab-count { margin-top: 20px; font-size: .85rem; opacity: .7; }
@@ -1439,7 +1439,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#fafcff}
 .auth-menu{position:absolute;top:calc(100% + 8px);right:0;background:#fafcff;color:#1e1e1e;border:1px solid #e2e2e2;border-radius:12px;box-shadow:0 12px 32px rgba(0,0,0,.18);min-width:220px;padding:14px;z-index:9990}
 .auth-menu[hidden]{display:none}
 .auth-menu .am-name{font-weight:700;font-size:.9rem;color:#1e1e1e;overflow:hidden;text-overflow:ellipsis}
-.auth-menu .am-email{font-size:.78rem;color:#666;margin:2px 0 12px;overflow:hidden;text-overflow:ellipsis}
+.auth-menu .am-email{font-size:.78rem;color:#444444;margin:2px 0 12px;overflow:hidden;text-overflow:ellipsis}
 .auth-menu .am-out{width:100%;background:#1e1e1e;color:#F5F5F5;border:none;border-radius:8px;padding:9px;font-size:.85rem;font-weight:600;cursor:pointer}
 .auth-menu .am-out:hover{background:#222}
 .auth-modal{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:9999;display:flex;align-items:center;justify-content:center;padding:20px}
@@ -1452,7 +1452,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#fafcff}
 .auth-prov{display:flex;align-items:center;gap:12px;width:100%;padding:12px 16px;margin:0 0 10px;border:1.5px solid #ddd;border-radius:10px;background:#fafcff;font-size:.95rem;font-weight:600;cursor:pointer;color:#1e1e1e;font-family:inherit}
 .auth-prov:hover{border-color:#1e1e1e;background:#fafcff}
 .auth-prov .p-ic{width:26px;height:26px;border-radius:50%;background:#1e1e1e;color:#F5F5F5;display:inline-flex;align-items:center;justify-content:center;font-weight:800;font-size:.85rem;flex:none}
-.auth-close{position:absolute;top:8px;right:12px;background:none;border:none;font-size:1.6rem;cursor:pointer;color:#666;line-height:1;padding:4px}
+.auth-close{position:absolute;top:8px;right:12px;background:none;border:none;font-size:1.6rem;cursor:pointer;color:#444444;line-height:1;padding:4px}
 .auth-note{font-size:.75rem;color:#777;margin:14px 0 0;text-align:center;line-height:1.5}
 .la-login-nudge{display:inline-block;margin-top:10px;background:#1e1e1e;color:#F5F5F5;border:none;border-radius:999px;padding:8px 16px;font-size:.82rem;font-weight:600;cursor:pointer}
 .la-login-nudge:hover{background:#222}
@@ -2033,7 +2033,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#fafcff}
           "--paper": SETTINGS.colors.lightBackground,
           "--paper-2": "#ececec",
           "--ink": SETTINGS.colors.lightText,
-          "--muted": "#5a5a5a",
+          "--muted": "#444444",
           "--line": "#d9d9d9",
           "--wine": SETTINGS.colors.primary,
           "--wine-deep": SETTINGS.colors.primaryDark,
@@ -3707,10 +3707,10 @@ html[data-theme="dark"] .auth-btn:hover{background:#fafcff}
           + "@page{size:A4;margin:15mm;}"
           + "body{font-family:'Kalam','Caveat',cursive;color:#1a3a5c;line-height:1.9;max-width:170mm;margin:0 auto;padding:20px;background:#fff;font-size:1.15rem;}"
           + ".kicker{font-family:'Caveat',cursive;font-size:1.1rem;font-weight:700;color:#7c3aed;margin:0 0 8px;}"
-          + "h1{font-family:'Kalam',cursive;font-size:1.9rem;color:#6b21a8;margin:0 0 16px;line-height:1.4;border-bottom:3px solid #3b82f6;padding-bottom:8px;}"
+          + "h1{font-family:'Kalam',cursive;font-size:1.9rem;color:#581c87;margin:0 0 16px;line-height:1.4;border-bottom:3px solid #3b82f6;padding-bottom:8px;}"
           + "ul{padding-left:24px;margin:0;}li{margin:0 0 14px;}"
           + "li::marker{color:#db2777;font-size:1.2em;}"
-          + ".foot{margin-top:32px;padding-top:12px;border-top:2px dashed #93c5fd;font-family:'Caveat',cursive;font-size:1.05rem;color:#6b7280;}"
+          + ".foot{margin-top:32px;padding-top:12px;border-top:2px dashed #93c5fd;font-family:'Caveat',cursive;font-size:1.05rem;color:#4b5563;}"
           + "@media print{body{padding:0;max-width:none;}}"
           + "</style></head><body>"
           + "<p class=\"kicker\">" + escapeHtml(label + " - Handwritten Notes") + "</p>"
@@ -4052,9 +4052,9 @@ html[data-theme="dark"] .auth-btn:hover{background:#fafcff}
           + '<meta name="viewport" content="width=device-width,initial-scale=1">'
           + '<title>' + esc(title) + '</title><style>'
           + 'body{font-family:Georgia,\'Times New Roman\',serif;color:#111;line-height:1.8;max-width:780px;margin:0 auto;padding:48px 32px;background:#fff;}'
-          + '.kicker{font-family:Arial,Helvetica,sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#555;margin:0 0 10px;}'
+          + '.kicker{font-family:Arial,Helvetica,sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#444444;margin:0 0 10px;}'
           + 'h1{font-size:1.65rem;margin:0 0 8px;line-height:1.4;border-bottom:2px solid #111;padding-bottom:14px;}'
-          + '.doc-cat{font-family:Arial,Helvetica,sans-serif;font-size:.82rem;color:#555;margin:0 0 28px;}'
+          + '.doc-cat{font-family:Arial,Helvetica,sans-serif;font-size:.82rem;color:#444444;margin:0 0 28px;}'
           + 'pre.doc{white-space:pre-wrap;font-family:Georgia,\'Times New Roman\',serif;font-size:.95rem;line-height:1.85;margin:0 0 30px;}'
           + '.dl-ref{background:#fafcff;border:1px solid #ddd;border-radius:8px;padding:20px 22px;margin:0 0 30px;}'
           + '.dl-ref h2{font-family:Arial,Helvetica,sans-serif;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;margin:0 0 12px;}'
@@ -6020,7 +6020,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#fafcff}
       function aiDraftDocHTML() {
         var body = esc(LA_AI_DRAFT.text).replace(/\n/g, "<br>");
         var title = L("AI Draft", "AI ड्राफ्ट") + " — " + LA_AI_DRAFT.desc.slice(0, 60);
-        return "<!DOCTYPE html><html><head><meta charset=\"utf-8\"><title>" + esc(title) + "</title><style>body{font-family:Georgia,serif;max-width:720px;margin:40px auto;padding:0 20px;line-height:1.8;color:#111}h1{font-size:1.3rem;text-align:center;margin-bottom:30px}.doc{white-space:pre-wrap}.foot{margin-top:40px;text-align:center;font-size:.8rem;color:#555;border-top:1px solid #ccc;padding-top:12px}</style></head><body><h1>" + esc(title) + "</h1><div class=\"doc\">" + body + "</div><div class=\"foot\">A.K Legal Law — Advocate Atul Kumar, Bulandshahr<br>" + esc(L("Generated with LawAssist", "LawAssist द्वारा तैयार")) + "</div></body></html>";
+        return "<!DOCTYPE html><html><head><meta charset=\"utf-8\"><title>" + esc(title) + "</title><style>body{font-family:Georgia,serif;max-width:720px;margin:40px auto;padding:0 20px;line-height:1.8;color:#111}h1{font-size:1.3rem;text-align:center;margin-bottom:30px}.doc{white-space:pre-wrap}.foot{margin-top:40px;text-align:center;font-size:.8rem;color:#444444;border-top:1px solid #ccc;padding-top:12px}</style></head><body><h1>" + esc(title) + "</h1><div class=\"doc\">" + body + "</div><div class=\"foot\">A.K Legal Law — Advocate Atul Kumar, Bulandshahr<br>" + esc(L("Generated with LawAssist", "LawAssist द्वारा तैयार")) + "</div></body></html>";
       }
       function aiDraftDownload() {
         var blob = new Blob([aiDraftDocHTML()], { type: "text/html;charset=utf-8" });
@@ -6211,7 +6211,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#fafcff}
       }
       function filledDocHTML() {
         var body = esc(filledText()).replace(/\n/g, "<br>");
-        return "<!DOCTYPE html><html><head><meta charset=\"utf-8\"><title>" + esc(LA_BUILDER.title) + "</title><style>body{font-family:Georgia,serif;max-width:720px;margin:40px auto;padding:0 20px;line-height:1.8;color:#111}h1{font-size:1.3rem;text-align:center;margin-bottom:30px}.doc{white-space:pre-wrap}.foot{margin-top:40px;text-align:center;font-size:.8rem;color:#555;border-top:1px solid #ccc;padding-top:12px}</style></head><body><h1>" + esc(LA_BUILDER.title) + "</h1><div class=\"doc\">" + body + "</div><div class=\"foot\">A.K Legal Law \\u2014 Advocate Atul Kumar, Bulandshahr<br>" + esc(L("Generated with LawAssist", "LawAssist द्वारा तैयार")) + "</div></body></html>";
+        return "<!DOCTYPE html><html><head><meta charset=\"utf-8\"><title>" + esc(LA_BUILDER.title) + "</title><style>body{font-family:Georgia,serif;max-width:720px;margin:40px auto;padding:0 20px;line-height:1.8;color:#111}h1{font-size:1.3rem;text-align:center;margin-bottom:30px}.doc{white-space:pre-wrap}.foot{margin-top:40px;text-align:center;font-size:.8rem;color:#444444;border-top:1px solid #ccc;padding-top:12px}</style></head><body><h1>" + esc(LA_BUILDER.title) + "</h1><div class=\"doc\">" + body + "</div><div class=\"foot\">A.K Legal Law \\u2014 Advocate Atul Kumar, Bulandshahr<br>" + esc(L("Generated with LawAssist", "LawAssist द्वारा तैयार")) + "</div></body></html>";
       }
       function downloadFilled() {
         var blob = new Blob([filledDocHTML()], { type: "text/html;charset=utf-8" });
@@ -7110,7 +7110,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#fafcff}
 .set-av-t{display:inline-flex;align-items:center;justify-content:center;background:#1e1e1e;color:#F5F5F5;font-size:1.35rem;font-weight:700}
 .set-pname{font-weight:700;font-size:1.02rem}
 .set-pmail{font-size:.88rem;color:#4b5563;word-break:break-all}
-.set-pprov{font-size:.82rem;color:#6b7280}
+.set-pprov{font-size:.82rem;color:#4b5563}
 .am-set{display:block;width:100%;text-align:left;background:none;border:none;border-top:1px solid #eee;padding:9px 4px;cursor:pointer;font-size:.93rem;color:#1e1e1e}
 #updateBanner{position:fixed;left:12px;right:12px;bottom:92px;z-index:950;background:#1e1e1e;color:#F5F5F5;border-radius:12px;padding:12px 14px;display:flex;align-items:center;gap:10px;box-shadow:0 8px 24px rgba(0,0,0,.35)}
 #updateBannerText{flex:1;font-size:.93rem}
@@ -7330,7 +7330,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#fafcff}
 .bm-open{flex:1;background:none;border:none;text-align:left;cursor:pointer;padding:2px 0;display:flex;flex-direction:column;gap:2px;font:inherit}
 .bm-open:hover .bm-name{text-decoration:underline}
 .bm-name{font-weight:600;color:#1e1e1e;font-size:.95rem;line-height:1.35}
-.bm-meta{font-size:.8rem;color:#6b7280}
+.bm-meta{font-size:.8rem;color:#4b5563}
 .bm-del{background:#fafcff;border:1px solid #d1d5db;color:#1e1e1e;border-radius:8px;width:30px;height:30px;font-size:1rem;line-height:1;cursor:pointer;flex-shrink:0;padding:0}
 .bm-del:hover{background:#e5e7eb}
 .bm-empty{text-align:center;color:#4b5563;padding:20px 8px;line-height:1.65;font-size:.95rem}
