@@ -1799,6 +1799,9 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
           .lib-filter-sel { flex: 1 1 160px; padding: 9px 12px; border: 1px solid rgba(0,0,0,.25); border-radius: 10px; background: #f8fafc; color: #111; font-size: .9rem; }
           .cmp-notes { margin: 6px 0 14px; }
           .cmp-note { font-size: .86rem; color: #444; margin: 4px 0; line-height: 1.5; }
+          .cmp-lang { display: flex; gap: 6px; margin: 2px 0 10px; }
+          .cmp-lang button { padding: 7px 16px; border-radius: 999px; border: 1.5px solid #111; background: #fff; color: #111; font-weight: 800; font-size: .82rem; cursor: pointer; }
+          .cmp-lang button.active { background: #111; color: #fff; }
           .cmp-head { margin: 20px 0 8px; font-size: 1.02rem; }
           .cmp-table { border: 1px solid rgba(0,0,0,.14); border-radius: 12px; overflow: hidden; }
           .cmp-row { display: flex; gap: 8px; align-items: baseline; padding: 8px 12px; background: #f8fafc; }
@@ -1813,6 +1816,10 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
           <div class="hub-grid" id="hubBillsGrid"></div>
         </div>
         <div class="hub-panel" id="hubPanel-compare" role="tabpanel" hidden>
+          <div class="cmp-lang" role="group" aria-label="Language">
+            <button type="button" data-cmp-lang="en">EN</button>
+            <button type="button" data-cmp-lang="hi">\u0939\u093f\u0902</button>
+          </div>
           <div class="section-search" role="search">
             <input type="search" id="compareSearch" placeholder="Search section number or topic\u2026" aria-label="Search old and new law comparison" autocomplete="off" />
           </div>
@@ -3364,6 +3371,13 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
             input.addEventListener("input", function () { cmpQuery = input.value; renderComparePanel(); });
           }
         }
+        document.querySelectorAll("[data-cmp-lang]").forEach(function (b) {
+          b.classList.toggle("active", b.getAttribute("data-cmp-lang") === lang);
+          if (!b._cmpLangBound) {
+            b._cmpLangBound = true;
+            b.addEventListener("click", function () { applyLanguage(b.getAttribute("data-cmp-lang")); });
+          }
+        });
         var nw = document.getElementById("compareNotes");
         if (nw) {
           nw.textContent = "";
