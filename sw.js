@@ -5,7 +5,7 @@
    saved copy in the background for the next open.
    Static files: stale-while-revalidate. Cross-origin requests untouched.
    All paths are relative to this script, so it works under any base path. */
-var CACHE = "aklegal-v4";
+var CACHE = "aklegal-v5";
 function abs(p) { return new URL(p, self.location.href).toString(); }
 var INDEX = abs("index.html");
 var CORE = ["", "index.html", "hero.webp", "manifest.webmanifest", "logo.webp", "icon-192.png", "icon-512.png", "icon-maskable-512.png", "apple-touch-icon.png"];
@@ -52,6 +52,10 @@ self.addEventListener("fetch", function (e) {
             return res;
           }).catch(function () { return null; });
           if (!cached) return net;
+          // App launch (?appv=): saved copy TURANT — opening fast, upar wali
+          // Chrome loading-line lagbhag gayab; network copy background me
+          // cache refresh karti rehti hai (net promise upar chal raha hai).
+          if (url.search.indexOf("appv=") !== -1) return cached;
           // Saved copy ready: fresh network within 1.2s wins, warna turant saved copy
           return Promise.race([
             net,
