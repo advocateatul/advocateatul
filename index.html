@@ -5620,10 +5620,39 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
           }).catch(function () { clearTimeout(to); fin(null); });
         } catch (e) { clearTimeout(to); fin(null); }
       }
+      /* OpenRouter free-model backup (text only) — via the Render proxy,
+         so no key ever lives in this public file. Runs after Gemini/Groq. */
+      function askOpenRouter(q, lang, cb, sys) {
+        if (!GEMINI_PROXY) { cb(null); return; }
+        var done = false;
+        function fin(v) { if (!done) { done = true; cb(v); } }
+        var to = setTimeout(function () { fin(null); }, 60000);
+        var prompt = "";
+        try {
+          prompt = (sys || geminiSystem(lang)) + "\n\n";
+          LA_HIST.slice(-8).forEach(function (h) { prompt += (h.role === "user" ? "User: " : "Assistant: ") + h.text + "\n"; });
+          prompt += "User: " + q;
+        } catch (e) { prompt = (sys || geminiSystem(lang)) + "\n\nUser: " + q; }
+        try {
+          fetch(GEMINI_PROXY + "/openrouter", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ prompt: prompt })
+          }).then(function (res) { if (!res.ok) { fin(null); return null; } return res.json(); })
+          .then(function (data) {
+            clearTimeout(to);
+            if (!data || !data.reply) { fin(null); return; }
+            fin(String(data.reply).trim() || null);
+          }).catch(function () { clearTimeout(to); fin(null); });
+        } catch (e) { clearTimeout(to); fin(null); }
+      }
       function aiAsk(q, lang, sys, tokens, cb) {
         askGemini(q, lang, function (gt) {
           if (gt) { cb(gt); return; }
-          askGroq(q, lang, cb, sys, tokens);
+          askGroq(q, lang, function (gq) {
+            if (gq) { cb(gq); return; }
+            askOpenRouter(q, lang, cb, sys);
+          }, sys, tokens);
         }, sys, tokens);
       }
 
@@ -5988,8 +6017,11 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
           askGemini(qAI, lang, function (aiText) {
             if (aiText) { done(aiText, builtin.sources, true); return; }
             askGroq(qAI, lang, function (gqText) {
-              if (gqText) done(gqText, builtin.sources, true);
-              else setTimeout(function () { done(builtin.html, builtin.sources, false); }, 350);
+              if (gqText) { done(gqText, builtin.sources, true); return; }
+              askOpenRouter(qAI, lang, function (orText) {
+                if (orText) done(orText, builtin.sources, true);
+                else setTimeout(function () { done(builtin.html, builtin.sources, false); }, 350);
+              });
             });
           });
         }
