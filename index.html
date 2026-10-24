@@ -4336,7 +4336,10 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
           var today = JSON.parse(document.getElementById("legalUpdatesData").textContent);
           (today.items || []).forEach(function (it) { upd.push({ d: today, it: it, archive: false }); });
           var arch = (getArchiveData() || { days: [] });
-          (arch.days || []).forEach(function (day) { (day.items || []).forEach(function (it) { upd.push({ d: day, it: it, archive: true }); }); });
+          (arch.days || []).forEach(function (day) {
+            if (today.date && day.date === today.date) return; /* today's items already added above — avoids duplicates in grouped results */
+            (day.items || []).forEach(function (it) { upd.push({ d: day, it: it, archive: true }); });
+          });
         } catch (e) {}
         var uHits = upd.filter(function (u) { return matches(u.it.title.en, u.it.title.hi, u.it.summary.en, u.it.summary.hi, u.it.court.en); }).slice(0, 6);
         if (uHits.length) groups.push({ title: t("hubResultUpdates"), items: uHits.map(function (u) { return { title: u.it.title[lang] || u.it.title.en, sub: (u.d["date" + (lang === "hi" ? "Hi" : "")] || u.d.date) + " · " + (u.it.court[lang] || u.it.court.en), go: function () { document.getElementById("updates").scrollIntoView({ behavior: "smooth" }); } }; }) });
