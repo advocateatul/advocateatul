@@ -4187,12 +4187,28 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
         window.scrollTo({ top: Math.max(0, y), behavior: "smooth" });
       }
       function jumpToDraft(id) {
+        var panel = document.getElementById("lawAssistPanel");
+        if (panel) panel.hidden = true;
         var target = document.querySelector('.draft-item[data-draft-id="' + id + '"]');
-        if (!target) return;
+        if (!target) {
+          try { if (typeof renderDrafts === "function") renderDrafts(); } catch (e) {}
+          target = document.querySelector('.draft-item[data-draft-id="' + id + '"]');
+        }
+        if (!target) {
+          var draftsSection0 = document.getElementById("drafts");
+          if (draftsSection0) draftsSection0.scrollIntoView({ behavior: "smooth" });
+          return;
+        }
         var draftsSection = document.getElementById("drafts");
         if (draftsSection) draftsSection.scrollIntoView({ behavior: "smooth" });
         setTimeout(function () {
-          scrollSlightlyAboveCenter(target);
+          try { scrollSlightlyAboveCenter(target); } catch (e) {}
+          try {
+            if (!target.classList.contains("open")) {
+              var tg = target.querySelector(".draft-toggle");
+              if (tg) tg.click();
+            }
+          } catch (e2) {}
         }, 650);
       }
       function buildGuideCard(d, lang) {
