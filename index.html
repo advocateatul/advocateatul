@@ -5674,6 +5674,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
       }
       function askGroqProxy(q, lang, cb, sys) { askProxyAI("/groq", 30000, q, lang, cb, sys); }
       function askHf(q, lang, cb, sys) { askProxyAI("/hf", 45000, q, lang, cb, sys); }
+      function askCf(q, lang, cb, sys) { askProxyAI("/cf", 45000, q, lang, cb, sys); }
       function aiAsk(q, lang, sys, tokens, cb) {
         askGemini(q, lang, function (gt) {
           if (gt) { cb(gt); return; }
@@ -5683,7 +5684,10 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
               if (gp) { cb(gp); return; }
               askOpenRouter(q, lang, function (or) {
                 if (or) { cb(or); return; }
-                askHf(q, lang, cb, sys);
+                askHf(q, lang, function (hf) {
+                  if (hf) { cb(hf); return; }
+                  askCf(q, lang, cb, sys);
+                }, sys);
               }, sys);
             }, sys);
           }, sys, tokens);
@@ -6057,8 +6061,11 @@ html[data-theme="dark"] .auth-btn:hover{background:#fff}
                 askOpenRouter(qAI, lang, function (orText) {
                   if (orText) { done(orText, builtin.sources, true); return; }
                   askHf(qAI, lang, function (hfText) {
-                    if (hfText) done(hfText, builtin.sources, true);
-                    else setTimeout(function () { done(builtin.html, builtin.sources, false); }, 350);
+                    if (hfText) { done(hfText, builtin.sources, true); return; }
+                    askCf(qAI, lang, function (cfText) {
+                      if (cfText) done(cfText, builtin.sources, true);
+                      else setTimeout(function () { done(builtin.html, builtin.sources, false); }, 350);
+                    });
                   });
                 });
               });
