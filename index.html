@@ -1305,7 +1305,8 @@ html[data-theme="dark"] .la-doc-row{background:rgba(255,255,255,.06)}
 
   
     /* ===== HANDWRITTEN NOTES SECTION ===== */
-    .notes { padding: 54px 0; background: var(--paper); }
+    .notes { padding: 54px 0; background: #f8fafc; }
+     html[data-theme="dark"] .notes { background: var(--paper); }
     .notes-head { margin-bottom: 36px; }
     .notes-tabs { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 28px; }
     .notes-tab { font: 700 .85rem var(--sans); letter-spacing: .06em; padding: 10px 22px; border: 1px solid rgba(0,0,0,.25); border-radius: 999px; background: transparent; color: var(--ink); cursor: pointer; transition: all .25s cubic-bezier(0.22, 1, 0.36, 1); }
@@ -1317,7 +1318,7 @@ html[data-theme="dark"] .la-doc-row{background:rgba(255,255,255,.06)}
 
     /* Plain white A4 paper */
     .notes-paper {
-      background-color: #fafcff;
+      background-color: #f8fafc;
       border: 1px solid rgba(0,0,0,.12);
       border-radius: 4px;
       padding: 32px 36px;
@@ -1342,12 +1343,12 @@ html[data-theme="dark"] .la-doc-row{background:rgba(255,255,255,.06)}
       font-family: "Kalam", "Caveat", "Segoe Print", cursive;
       font-size: 1.34rem; font-weight: 700; color: #991b1b; margin: 26px 0 10px;
       padding: 2px 10px 4px; display: inline-block; border-radius: 3px;
-      background: #fafcff;
+      background: #f8fafc;
       border-bottom: none;
     }
     html[data-theme="dark"] .notes-content h3 {
       color: #fca5a5;
-      background: linear-gradient(to top, rgba(253,224,71,.28) 38%, transparent 38%);
+      background: transparent;
     }
     .notes-content h4 {
       font-family: "Segoe Print", "Bradley Hand", cursive;
@@ -1359,10 +1360,10 @@ html[data-theme="dark"] .la-doc-row{background:rgba(255,255,255,.06)}
     .notes-content li::before { content: "\2713"; position: absolute; left: 0; color: #059669; font-weight: bold; }
     html[data-theme="dark"] .notes-content li::before { color: #34d399; }
     .notes-content .note-highlight {
-      background: #fafcff; padding: 2px 6px; border-radius: 3px;
+      background: #f8fafc; padding: 2px 6px; border-radius: 3px;
       font-weight: bold;
     }
-    html[data-theme="dark"] .notes-content .note-highlight { background: rgba(255,235,59,.2); }
+    html[data-theme="dark"] .notes-content .note-highlight { background: transparent; }
     .notes-content .note-section-num {
       display: inline-block; background: #1e3a8a; color: #F5F5F5;
       font-family: var(--sans); font-size: .75rem; font-weight: 700;
