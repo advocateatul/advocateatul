@@ -5707,7 +5707,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
       }
       function askGroqProxy(q, lang, cb, sys) { askProxyAI("/groq", 30000, q, lang, cb, sys); }
       function askHf(q, lang, cb, sys) { askProxyAI("/hf", 45000, q, lang, cb, sys); }
-      function askCf(q, lang, cb, sys) { askProxyAI("/cf", 45000, q, lang, cb, sys); }
+      function askCf(q, lang, cb, sys) { askProxyAI("/cf", 45000, q, lang, cb, sys); } function askNvidia(q, lang, cb, sys) { askProxyAI("/nvidia", 45000, q, lang, cb, sys); }
       function aiAsk(q, lang, sys, tokens, cb) {
         askGemini(q, lang, function (gt) {
           if (gt) { cb(gt); return; }
@@ -5719,7 +5719,10 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
                 if (or) { cb(or); return; }
                 askHf(q, lang, function (hf) {
                   if (hf) { cb(hf); return; }
-                  askCf(q, lang, cb, sys);
+                  askCf(q, lang, function (cf) {
+                    if (cf) { cb(cf); return; }
+                    askNvidia(q, lang, cb, sys);
+                  }, sys);
                 }, sys);
               }, sys);
             }, sys);
