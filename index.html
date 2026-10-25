@@ -7193,6 +7193,14 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
 <script>
 (function () {
   var APK_URL = "https://advocateatul.github.io/advocateatul/AKLegalLaw.apk";
+  // TWA ke andar seedha APK link dabane par download shuru nahi hota (Chrome tak
+  // pahunchta hi nahi) — isliye Download pehle Chrome ko intent se kholta hai,
+  // aur agar page wahi dikhe to seedhe link par fallback karta hai.
+  function openApkDownload() {
+    var intent = "intent://advocateatul.github.io/advocateatul/AKLegalLaw.apk#Intent;scheme=https;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;package=com.android.chrome;end";
+    window.location.href = intent;
+    setTimeout(function () { if (document.visibilityState === "visible") window.location.href = APK_URL; }, 1200);
+  }
   var S = {
     en: { nav: "⚙️ Settings", title: "⚙️ Settings", profile: "👤 Profile", app: "📲 App", ver: "App version", latest: "Latest version",
       check: "🔄 Check for update", checking: "Checking…", uptodate: "✅ Your app is up to date.", avail: "🆕 New version {v} is available!",
@@ -7330,9 +7338,11 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
     var tb = el("setThemeBtn");
     if (tb) tb.addEventListener("click", function () { var tt = el("themeToggle"); if (tt) tt.click(); });
     var bb = el("updateBannerBtn");
-    if (bb) bb.addEventListener("click", function () { markNotified(); var b2 = el("updateBanner"); if (b2) b2.hidden = true; window.location.href = APK_URL; });
+    if (bb) bb.addEventListener("click", function () { markNotified(); var b2 = el("updateBanner"); if (b2) b2.hidden = true; openApkDownload(); });
     var bc = el("updateBannerClose");
     if (bc) bc.addEventListener("click", function () { markNotified(); var b3 = el("updateBanner"); if (b3) b3.hidden = true; });
+    var dlBtn = el("setDlBtn");
+    if (dlBtn) dlBtn.addEventListener("click", function (ev) { ev.preventDefault(); openApkDownload(); });
     document.querySelectorAll("[data-language]").forEach(function (btn) {
       btn.addEventListener("click", function () { setTimeout(renderAll, 150); });
     });
