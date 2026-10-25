@@ -5,7 +5,7 @@
    saved copy in the background for the next open.
    Static files: stale-while-revalidate. Cross-origin requests untouched.
    All paths are relative to this script, so it works under any base path. */
-var CACHE = "aklegal-v6";
+var CACHE = "aklegal-v7"; // v7 (2026-10-26): force fresh index.html on every phone incl. the non-blocking-fonts fix — old cache deleted on activate
 function abs(p) { return new URL(p, self.location.href).toString(); }
 var INDEX = abs("index.html");
 var CORE = ["", "index.html", "hero.webp", "manifest.webmanifest", "logo.webp", "icon-192.png", "icon-512.png", "icon-maskable-512.png", "apple-touch-icon.png"];
