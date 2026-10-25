@@ -7736,7 +7736,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           var list = document.getElementById("practiceList");
           if (!list) return;
           var areas = (window.SETTINGS && window.SETTINGS.practiceAreas) || [];
-          var lang = (typeof window.currentLanguage !== "undefined" && window.currentLanguage === "hi") ? "hi" : "en";
+          var lang = (document.documentElement.lang === "hi") ? "hi" : "en";
           while (list.firstChild) list.removeChild(list.firstChild);
           for (var i = 0; i < areas.length; i++) {
             var a = areas[i] || {};
@@ -7759,6 +7759,10 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         var btns = document.querySelectorAll("[data-language]");
         for (var k = 0; k < btns.length; k++) {
           btns[k].addEventListener("click", function () { setTimeout(renderPractice, 60); });
+        }
+        /* Language lives on <html lang> (main script is an IIFE: currentLanguage is NOT global) — observe it so Hindi re-renders reliably. */
+        if (window.MutationObserver) {
+          new MutationObserver(function () { renderPractice(); }).observe(document.documentElement, { attributes: true, attributeFilter: ["lang"] });
         }
       })();
     </script>
