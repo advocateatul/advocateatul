@@ -6034,7 +6034,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         var lang = laLang();
         out.hidden = false; acts.hidden = true;
         out.innerHTML = "<span class='la-dots'><span></span><span></span><span></span></span>";
-        aiAsk("Draft this legal document: " + desc, lang, aiDraftSystem(lang), 800, function (txt) {
+        aiAsk("Draft this legal document: " + desc, lang, aiDraftSystem(lang), 1600, function (txt) {
           if (txt) {
             LA_AI_DRAFT = { text: txt, desc: desc };
             out.textContent = txt;
@@ -6109,9 +6109,12 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           } catch (e3) {}
         }
         var builtin = research(q);
+        var isDraftQ = /draft|format|template|vakalatnama|affidavit|likh|\u0921\u094d\u0930\u093e\u092b\u094d\u091f|\u092a\u094d\u0930\u093e\u0930\u0942\u092a|\u092a\u094d\u0930\u093e\u0930\u094d\u0925\u0928\u093e|\u0936\u093f\u0915\u093e\u092f\u0924|\u0928\u094b\u091f\u093f\u0938|\u0905\u0930\u094d\u091c\u0940/i.test(q);
+        var draftSys = isDraftQ ? aiDraftSystem(lang) : null;
+        var draftTok = isDraftQ ? 1600 : undefined;
         var qAI = q;
         if (LA_SCAN.text) { qAI = "The user has scanned a legal document named \"" + LA_SCAN.name + "\". Its text is below. Answer the user's question from this document first; if the answer is not in it, say so briefly, then give general legal guidance.\n--- DOCUMENT ---\n" + LA_SCAN.text.slice(0, 6000) + "\n--- END ---\nQuestion: " + q; }
-        function aiChain() {
+        function aiChain(sys, tokens) {
           askGemini(qAI, lang, function (aiText) {
             if (aiText) { done(aiText, builtin.sources, true); return; }
             askGroq(qAI, lang, function (gqText) {
@@ -6123,16 +6126,19 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
                   askHf(qAI, lang, function (hfText) {
                     if (hfText) { done(hfText, builtin.sources, true); return; }
                     askCf(qAI, lang, function (cfText) {
-                      if (cfText) done(cfText, builtin.sources, true);
-                      else setTimeout(function () { done(builtin.html, builtin.sources, false); }, 350);
-                    });
-                  });
-                });
-              });
-            });
-          });
+                      if (cfText) { done(cfText, builtin.sources, true); return; }
+                      askNvidia(qAI, lang, function (nvText) {
+                        if (nvText) done(nvText, builtin.sources, true);
+                        else setTimeout(function () { done(builtin.html, builtin.sources, false); }, 350);
+                      }, sys);
+                    }, sys);
+                  }, sys);
+                }, sys);
+              }, sys);
+            }, sys, tokens);
+          }, sys, tokens);
         }
-        if (!window.LA_AUTH || !window.LA_AUTH.ready) { aiChain(); }
+        if (!window.LA_AUTH || !window.LA_AUTH.ready) { aiChain(draftSys, draftTok); }
         else if (!window.LA_AUTH.user) {
           setTimeout(function () {
             done(builtin.html, builtin.sources, false);
@@ -6140,7 +6146,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           }, 350);
         } else {
           window.LA_AUTH.withQuota(function (ok) {
-            if (ok) aiChain();
+            if (ok) aiChain(draftSys, draftTok);
             else setTimeout(function () { done(builtin.html, builtin.sources, false); }, 350);
           });
         }
