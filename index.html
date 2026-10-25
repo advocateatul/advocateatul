@@ -1511,6 +1511,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         <div class="nav-strip">
         <a href="#updates" data-i18n="navUpdates">Updates</a>
         <a href="#library" data-i18n="navLibrary">Library</a>
+        <a href="#practice" class="nav-mid-hide" data-i18n="navPractice">Practice</a>
         <a href="#documents" data-i18n="navDocuments">Documents</a>
         <a href="#drafts" data-i18n="navDrafts">Drafts</a>
         <a href="#draft-guide" class="nav-mid-hide" data-i18n="navDraftGuide">Draft Guide</a>
@@ -1569,6 +1570,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
     <nav class="mobile-nav-panel" id="mobileNavPanel" hidden aria-label="Mobile navigation / \u092e\u094b\u092c\u093e\u0907\u0932 \u0928\u0947\u0935\u093f\u0917\u0947\u0936\u0928">
       <a href="#updates" data-i18n="navUpdates">Updates</a>
       <a href="#library" data-i18n="navLibrary">Library</a>
+      <a href="#practice" data-i18n="navPractice">Practice</a>
       <a href="#documents" data-i18n="navDocuments">Documents</a>
       <a href="#drafts" data-i18n="navDrafts">Drafts</a>
       <a href="#draft-guide" data-i18n="navDraftGuide">Draft Guide</a>
@@ -1598,6 +1600,19 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           <strong data-i18n="professionalProfile">Professional profile</strong>
           <span id="profileSummary">Criminal Lawyer · 2 years’ experience · Bulandshahr District Court</span>
         </aside>
+      </div>
+    </section>
+
+    <section class="practice" id="practice" aria-labelledby="practice-title">
+      <div class="shell">
+        <div class="practice-heading">
+          <div>
+            <p class="kicker" data-i18n="areaOfPractice">Area of practice</p>
+            <h2 id="practice-title" data-i18n="practiceTitle">Focused criminal-law support.</h2>
+          </div>
+          <p data-i18n="practiceCopy">Independent representation and procedural guidance for criminal-law matters.</p>
+        </div>
+        <div class="practice-list" id="practiceList"></div>
       </div>
     </section>
 
@@ -7714,5 +7729,38 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
 })();
 </script>
 
+    <script>
+      /* Practice areas (2026-10-25 health-check fix) — renders SETTINGS.practiceAreas into #practiceList; re-renders on language switch. No existing render function is modified. */
+      (function () {
+        function renderPractice() {
+          var list = document.getElementById("practiceList");
+          if (!list) return;
+          var areas = (window.SETTINGS && window.SETTINGS.practiceAreas) || [];
+          var lang = (typeof window.currentLanguage !== "undefined" && window.currentLanguage === "hi") ? "hi" : "en";
+          while (list.firstChild) list.removeChild(list.firstChild);
+          for (var i = 0; i < areas.length; i++) {
+            var a = areas[i] || {};
+            var item = document.createElement("div");
+            item.className = "practice-item";
+            var num = document.createElement("span");
+            num.className = "num";
+            num.textContent = ("0" + (i + 1)).slice(-2);
+            var h = document.createElement("h3");
+            h.textContent = lang === "hi" ? (a.titleHi || a.titleEn || "") : (a.titleEn || "");
+            var d = document.createElement("p");
+            d.textContent = lang === "hi" ? (a.descriptionHi || a.descriptionEn || "") : (a.descriptionEn || "");
+            item.appendChild(num);
+            item.appendChild(h);
+            item.appendChild(d);
+            list.appendChild(item);
+          }
+        }
+        renderPractice();
+        var btns = document.querySelectorAll("[data-language]");
+        for (var k = 0; k < btns.length; k++) {
+          btns[k].addEventListener("click", function () { setTimeout(renderPractice, 60); });
+        }
+      })();
+    </script>
 </body>
 </html>
