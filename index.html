@@ -5620,7 +5620,8 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         var hasGKey = GEMINI_KEY && GEMINI_KEY.indexOf("<") === -1 && GEMINI_KEY.length >= 20; if (!hasGKey && !GEMINI_PROXY) { cb(null); return; }
         var done = false;
         function fin(v) { if (!done) { done = true; cb(v); } }
-        var to = setTimeout(function () { fin(null); }, hasGKey ? 30000 : 70000);
+        var ctrl = (typeof AbortController !== "undefined") ? new AbortController() : null;
+        var to = setTimeout(function () { try { ctrl && ctrl.abort(); } catch (e) {} fin(null); }, (tokens && tokens >= 1000) ? 30000 : 12000);
         var turns = [];
         try {
           LA_HIST.slice(-8).forEach(function (h) { turns.push({ role: h.role, parts: [{ text: h.text }] }); });
@@ -5630,6 +5631,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         } catch (e) { turns = [{ role: "user", parts: [{ text: q }] }]; }
         try {
           fetch(hasGKey ? "https://generativelanguage.googleapis.com/v1beta/models/" + GEMINI_MODEL + ":generateContent?key=" + GEMINI_KEY : GEMINI_PROXY + "/gemini", {
+            signal: ctrl ? ctrl.signal : undefined,
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
@@ -5652,9 +5654,11 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         if (!GROQ_KEY || GROQ_KEY.indexOf("<") !== -1 || GROQ_KEY.length < 20) { cb(null); return; }
         var done = false;
         function fin(v) { if (!done) { done = true; cb(v); } }
-        var to = setTimeout(function () { fin(null); }, 30000);
+        var ctrl = (typeof AbortController !== "undefined") ? new AbortController() : null;
+        var to = setTimeout(function () { try { ctrl && ctrl.abort(); } catch (e) {} fin(null); }, (tokens && tokens >= 1000) ? 20000 : 12000);
         try {
           fetch("https://api.groq.com/openai/v1/chat/completions", {
+            signal: ctrl ? ctrl.signal : undefined,
             method: "POST",
             headers: { "Content-Type": "application/json", "Authorization": "Bearer " + GROQ_KEY },
             body: JSON.stringify({
@@ -5683,7 +5687,8 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         if (!GEMINI_PROXY) { cb(null); return; }
         var done = false;
         function fin(v) { if (!done) { done = true; cb(v); } }
-        var to = setTimeout(function () { fin(null); }, 60000);
+        var ctrl = (typeof AbortController !== "undefined") ? new AbortController() : null;
+        var to = setTimeout(function () { try { ctrl && ctrl.abort(); } catch (e) {} fin(null); }, 15000);
         var prompt = "";
         try {
           prompt = (sys || geminiSystem(lang)) + "\n\n";
@@ -5692,6 +5697,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         } catch (e) { prompt = (sys || geminiSystem(lang)) + "\n\nUser: " + q; }
         try {
           fetch(GEMINI_PROXY + "/openrouter", {
+            signal: ctrl ? ctrl.signal : undefined,
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ prompt: prompt })
@@ -5709,7 +5715,8 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         if (!GEMINI_PROXY) { cb(null); return; }
         var done = false;
         function fin(v) { if (!done) { done = true; cb(v); } }
-        var to = setTimeout(function () { fin(null); }, timeoutMs);
+        var ctrl = (typeof AbortController !== "undefined") ? new AbortController() : null;
+        var to = setTimeout(function () { try { ctrl && ctrl.abort(); } catch (e) {} fin(null); }, timeoutMs);
         var prompt = "";
         try {
           prompt = (sys || geminiSystem(lang)) + "\n\n";
@@ -5718,6 +5725,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         } catch (e) { prompt = (sys || geminiSystem(lang)) + "\n\nUser: " + q; }
         try {
           fetch(GEMINI_PROXY + route, {
+            signal: ctrl ? ctrl.signal : undefined,
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ prompt: prompt })
@@ -5729,9 +5737,9 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           }).catch(function () { clearTimeout(to); fin(null); });
         } catch (e) { clearTimeout(to); fin(null); }
       }
-      function askGroqProxy(q, lang, cb, sys) { askProxyAI("/groq", 30000, q, lang, cb, sys); }
-      function askHf(q, lang, cb, sys) { askProxyAI("/hf", 45000, q, lang, cb, sys); }
-      function askCf(q, lang, cb, sys) { askProxyAI("/cf", 45000, q, lang, cb, sys); } function askNvidia(q, lang, cb, sys) { askProxyAI("/nvidia", 45000, q, lang, cb, sys); }
+      function askGroqProxy(q, lang, cb, sys) { askProxyAI("/groq", 15000, q, lang, cb, sys); }
+      function askHf(q, lang, cb, sys) { askProxyAI("/hf", 15000, q, lang, cb, sys); }
+      function askCf(q, lang, cb, sys) { askProxyAI("/cf", 15000, q, lang, cb, sys); } function askNvidia(q, lang, cb, sys) { askProxyAI("/nvidia", 15000, q, lang, cb, sys); }
       function aiAsk(q, lang, sys, tokens, cb) {
         askGemini(q, lang, function (gt) {
           if (gt) { cb(gt); return; }
