@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <!-- App-open first paint: page background from the first bytes, so no white flash between splash and main CSS. -->
-  <style>html,body{background:#F9FCFF}</style>
+  <!-- App-open first paint: theme decided here, before any paint, so night openings never flash light. -->
+  <script>(function(){var theme="light";try{var manual=localStorage.getItem("akl-theme");if(manual==="dark"||manual==="light"){theme=manual;}else{var h=new Date().getHours();var sysDark=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches;if(sysDark||h>=19||h<7){theme="dark";}}}catch(e){}document.documentElement.setAttribute("data-theme",theme);var st=document.createElement("style");st.textContent="html,body{background:"+(theme==="dark"?"#1e1e1e":"#F9FCFF")+"}";document.head.appendChild(st);})();</script>
   <meta name="referrer" content="strict-origin-when-cross-origin" />
     <link rel="manifest" href="manifest.webmanifest" />
     <meta name="theme-color" content="#f9fcff" />
@@ -1435,8 +1435,7 @@ html[data-theme="dark"] .la-doc-row{background:rgba(255,255,255,.06)}
     html[data-theme="dark"] .notes-hindi-btn.active { background: #f9fcff; color: #1e1e1e; border-color: #f9fcff; }
   </style>
   <script>
-    /* Website always opens in light mode (owner's choice); the dark toggle is per-session only. */
-    document.documentElement.setAttribute("data-theme", "light");
+    /* Theme is decided by the early auto-night script at the top of <head> (manual choice, else device dark mode or 19:00-07:00). */
   </script>
 <!-- Firebase SDKs (official Google CDN) + visitor-auth styles -->
 <script>(function(){var u=["https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js","https://www.gstatic.com/firebasejs/10.12.5/firebase-auth-compat.js","https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js"];u.forEach(function(s){var e=document.createElement("script");e.src=s;e.async=false;document.head.appendChild(e);});})();</script>
@@ -2088,8 +2087,9 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         for (var key in vars) {
           if (Object.prototype.hasOwnProperty.call(vars, key)) root.style.setProperty(key, vars[key]);
         }
+        try { var mc = document.querySelector('meta[name="theme-color"]'); if (mc) mc.setAttribute("content", theme === "dark" ? "#1e1e1e" : "#f9fcff"); } catch (e2) {}
       }
-      var initialTheme = "light"; /* always open in light mode (owner's choice) */
+      var initialTheme = document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light"; /* set by the early auto-night script */
       applyThemeVars(initialTheme);
 
       var translations = {
@@ -4970,10 +4970,11 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
       /* Theme toggle: dark mode switch in the top header */
       (function initTheme() {
         var toggle = document.getElementById("themeToggle");
-        function setTheme(theme, animate) {
+        function setTheme(theme, animate, persist) {
           root.setAttribute("data-theme", theme);
           applyThemeVars(theme);
           if (toggle) toggle.setAttribute("aria-pressed", String(theme === "dark"));
+          if (persist) { try { localStorage.setItem("akl-theme", theme); } catch (e) {} }
           if (animate && !reduceMotion) {
             root.classList.add("theme-anim");
             setTimeout(function () { root.classList.remove("theme-anim"); }, 220);
@@ -4982,8 +4983,38 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         if (toggle) {
           toggle.setAttribute("aria-pressed", String(root.getAttribute("data-theme") === "dark"));
           toggle.addEventListener("click", function () {
-            setTheme(root.getAttribute("data-theme") === "dark" ? "light" : "dark", true);
+            setTheme(root.getAttribute("data-theme") === "dark" ? "light" : "dark", true, true);
           });
+        }
+
+        /* Auto night mode: with no saved manual choice, follow device dark mode or night hours (19:00-07:00). */
+        function hasManualTheme() { try { var v = localStorage.getItem("akl-theme"); return v === "dark" || v === "light"; } catch (e) { return false; } }
+        function autoTheme() {
+          var h = new Date().getHours();
+          var sysDark = false;
+          try { sysDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches; } catch (e2) {}
+          return (sysDark || h >= 19 || h < 7) ? "dark" : "light";
+        }
+        function scheduleAutoTheme() {
+          if (hasManualTheme()) return;
+          setTheme(autoTheme(), false, false);
+          try {
+            var now = new Date();
+            var next = new Date(now);
+            next.setMinutes(0, 0, 0);
+            if (now.getHours() < 7) next.setHours(7);
+            else if (now.getHours() < 19) next.setHours(19);
+            else { next.setDate(next.getDate() + 1); next.setHours(7); }
+            var ms = next - now;
+            if (ms > 0) setTimeout(scheduleAutoTheme, ms);
+          } catch (e3) {}
+        }
+        if (!hasManualTheme()) {
+          scheduleAutoTheme();
+          try {
+            var mql = window.matchMedia("(prefers-color-scheme: dark)");
+            if (mql && mql.addEventListener) mql.addEventListener("change", function () { if (!hasManualTheme()) setTheme(autoTheme(), false, false); });
+          } catch (e4) {}
         }
 
       /* Floating theme button: appears on scroll */
