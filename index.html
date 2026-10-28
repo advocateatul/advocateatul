@@ -4536,7 +4536,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
               setListening(false);
               if (box) { var fq = final; setTimeout(function () { hubSearchAll(fq, box); }, 400); }
             } else if (interim) {
-              if (input) input.value = interim;
+              if (input && !input.value) input.value = interim;
               showVoiceMsg("\uD83C\uDFA4 " + vL("Listening... ", "Sun raha hoon... ") + interim);
             }
           };
@@ -5874,6 +5874,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
 
       /* ---------------- Document Scan (camera / OCR / AI vision) ---------------- */
       var LA_SCAN = { text: "", name: "" };
+      var laLimitHit = false;
       function laAiGate(cb) {
         if (!window.LA_AUTH || !window.LA_AUTH.ready) { cb(true); return; }
         if (!window.LA_AUTH.user) { cb(false); return; }
@@ -6037,6 +6038,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         return row;
       }
       function laFinishScan(file, ocrText, visionText, statusDiv) {
+        var limitNote = laLimitHit; laLimitHit = false;
         var best = ocrText || visionText || "";
         if (!best) {
           statusDiv.textContent = L("Could not read this document. Try a clearer, straight photo in good light.", "Document पढ़ नहीं पाया। साफ़, सीधी photo अच्छी रोशनी में लेकर दोबारा try करें।");
@@ -6044,11 +6046,12 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         }
         laSetCtx(best, file.name || "Document");
         var ta = document.getElementById("laDocsInput");
-        if (ta && ocrText) ta.value = ocrText.slice(0, 4000);
+        if (ta && ocrText && !ta.value) ta.value = ocrText.slice(0, 4000);
         var head = "";
         if (!visionText) {
           head = L("Document scanned and attached. Ask me anything about it, or use the buttons below.", "Document scan होकर जुड़ गया है। इसके बारे में कुछ भी पूछिए, या नीचे के button use कीजिए।") + "\n";
           if (!window.LA_AUTH || !window.LA_AUTH.user) head += L("Tip: log in for a full AI analysis of the document.", "Tip: login करने पर document का full AI analysis मिलेगा।") + "\n";
+          else if (limitNote) head += L("Note: today's AI limit is reached, so this is the text-only result.", "Note: aaj ki AI limit poori ho gayi hai, isliye ye sirf text wala result hai.") + "\n";
           head += "\n";
         }
         try { if (statusDiv.parentNode) statusDiv.parentNode.removeChild(statusDiv); } catch (e) {}
@@ -6107,7 +6110,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
             if (finished && visionText && t) {
               try {
                 var ta2 = document.getElementById("laDocsInput");
-                if (ta2) ta2.value = t.slice(0, 4000);
+                if (ta2 && !ta2.value) ta2.value = t.slice(0, 4000);
                 laSetCtx(visionText + "\n\n--- Document text (OCR) ---\n" + t, file.name || "Document");
               } catch (e) {}
             }
@@ -6115,7 +6118,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           });
           });
           laAiGate(function (ok) {
-            if (!ok) { visDone = true; step(); return; }
+            if (!ok) { laLimitHit = !!(window.LA_AUTH && window.LA_AUTH.user); visDone = true; step(); return; }
             if (!du) { visDone = true; step(); return; }
             statusDiv.textContent = L("Photo received \u2014 AI is reading the document...", "Photo mil gayi \u2014 AI document padh raha hai...");
             askGeminiVision(du, laScanPrompt(), function (v) { visionText = v; visDone = true; step(); });
@@ -6131,7 +6134,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         }).catch(function () { cb(null); });
       }
       function laScanPdf(file, statusDiv) {
-        var pdfWatch = setTimeout(function () { statusDiv.textContent = L("Could not read this PDF. Try its photo/screenshot instead.", "यह PDF पढ़ नहीं पाया। इसकी photo/screenshot scan करके try करें।"); }, 70000);
+        var pdfWatch = setTimeout(function () { statusDiv.textContent = L("Could not read this PDF. Try its photo/screenshot instead.", "यह PDF पढ़ नहीं पाया। इसकी photo/screenshot scan करके try करें।"); }, 45000);
         function finishScanPdf() { clearTimeout(pdfWatch); laFinishScan.apply(null, arguments); }
         laPdfJs(function (mod) {
           if (!mod) { clearTimeout(pdfWatch); statusDiv.textContent = L("PDF reader could not load. Please scan the document's photo/screenshot instead.", "PDF reader load नहीं हुआ। Document की photo/screenshot scan करके try करें।"); return; }
@@ -6153,7 +6156,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
             var txt = (r.text || "").trim();
             if (txt.length >= 80) {
               laAiGate(function (ok) {
-                if (!ok) { finishScanPdf(file, txt, null, statusDiv); return; }
+                if (!ok) { laLimitHit = !!(window.LA_AUTH && window.LA_AUTH.user); finishScanPdf(file, txt, null, statusDiv); return; }
                 statusDiv.textContent = L("PDF text extracted — AI is analysing...", "PDF text निकल गया — AI analysis कर रहा है...");
                 var q = (laLang() === "hi" ? "नीचे एक legal document का text है। उसकी जानकारी इस format में दो (Document type, Parties, Case number, ज़रूरी dates, Sections, Summary, अगला step):\n\n" : "Below is the text of a legal document. Give its information in this format (Document type, Parties, Case number, Important dates, Sections, Summary, Next step):\n\n") + txt.slice(0, 7000);
                 aiAsk(q, laLang(), null, 1000, function (v) { finishScanPdf(file, txt, v, statusDiv); });
@@ -6175,12 +6178,12 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
                 if (!canvases.length) { finishScanPdf(file, null, null, statusDiv); return; }
                 var ocrAll = "", pending = canvases.length;
                 canvases.forEach(function (c) {
-                  laOcrTimed(c, 30000, function (t) {
+                  laOcrTimed(c, 20000, function (t) {
                     if (t) ocrAll += (ocrAll ? "\n" : "") + t;
                     pending--;
                     if (!pending) {
                       laAiGate(function (ok) {
-                        if (!ok) { finishScanPdf(file, ocrAll || null, null, statusDiv); return; }
+                        if (!ok) { laLimitHit = !!(window.LA_AUTH && window.LA_AUTH.user); finishScanPdf(file, ocrAll || null, null, statusDiv); return; }
                         askGeminiVision(canvases[0].toDataURL("image/jpeg", 0.85), laScanPrompt(), function (v) { finishScanPdf(file, ocrAll || null, v, statusDiv); });
                       });
                     }
@@ -6268,7 +6271,10 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         setTimeout(function () { w.print(); }, 400);
       }
 
+      var laBusy = false;
       function respond(q) {
+        if (laBusy) return false;
+        laBusy = true;
         addMsg(esc(q), "user");
         laHistPush("user", q);
         var lang = laLang();
@@ -6281,6 +6287,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           mb.appendChild(thinking); mb.scrollTop = mb.scrollHeight;
         } catch (e) {}
         function done(html, sources, ai) {
+          laBusy = false;
           try { thinking && thinking.parentNode && thinking.parentNode.removeChild(thinking); } catch (e2) {}
           var tag = ai ? "<span class='la-ai-tag'>\u2728 AI</span> " : "";
           var msgDiv = addMsg(tag + esc(html).replace(/\n/g, "<br>"), "bot", sources);
@@ -6306,7 +6313,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           }
           try {
             var arr = JSON.parse(localStorage.getItem("laMissed") || "[]");
-            if (!sources.length) { arr.push({ q: q, at: Date.now() }); localStorage.setItem("laMissed", JSON.stringify(arr.slice(-50))); }
+            if (!ai && !sources.length) { arr.push({ q: q, at: Date.now() }); localStorage.setItem("laMissed", JSON.stringify(arr.slice(-50))); }
           } catch (e3) {}
         }
         var builtin = research(q);
@@ -6348,9 +6355,10 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         } else {
           window.LA_AUTH.withQuota(function (ok) {
             if (ok) aiChain(draftSys, draftTok);
-            else setTimeout(function () { done(builtin.html, builtin.sources, false); }, 350);
+            else setTimeout(function () { done(L("Today's AI limit is reached — showing the built-in answer instead.", "Aaj ki AI limit poori ho gayi hai — isliye built-in jawab dikha raha hoon.") + "\n\n" + builtin.html, builtin.sources, false); }, 350);
           });
         }
+        return true;
       }
 
       /* ---------------- Drafting (guided template filler) ---------------- */
@@ -6792,7 +6800,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         document.getElementById("laForm").addEventListener("submit", function (e) {
           e.preventDefault();
           var inp = document.getElementById("laInput"), v = inp.value.trim();
-          if (v) { respond(v); inp.value = ""; }
+          if (v) { if (respond(v)) inp.value = ""; }
         });
         var camBtn = document.getElementById("laCamBtn"), camInp = document.getElementById("laCamInput");
         var attBtn = document.getElementById("laAttachBtn"), fileInp = document.getElementById("laFileInput");
@@ -6916,7 +6924,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
               var ocrWatch = setTimeout(function () {
                 if (settled) return; settled = true;
                 out.textContent = L("OCR failed. Try a clearer image.", "OCR vifal. Saaf image aazmayein.");
-              }, 30000);
+              }, 20000);
               function ocrDone(txt) {
                 if (settled) return; settled = true; clearTimeout(ocrWatch);
                 out.textContent = txt || L("No text found in image.", "Image mein koi text nahi mila.");
