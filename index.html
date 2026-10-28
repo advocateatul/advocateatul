@@ -6131,8 +6131,10 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         }).catch(function () { cb(null); });
       }
       function laScanPdf(file, statusDiv) {
+        var pdfWatch = setTimeout(function () { statusDiv.textContent = L("Could not read this PDF. Try its photo/screenshot instead.", "यह PDF पढ़ नहीं पाया। इसकी photo/screenshot scan करके try करें।"); }, 150000);
+        function finishScanPdf() { clearTimeout(pdfWatch); laFinishScan.apply(null, arguments); }
         laPdfJs(function (mod) {
-          if (!mod) { statusDiv.textContent = L("PDF reader could not load. Please scan the document's photo/screenshot instead.", "PDF reader load नहीं हुआ। Document की photo/screenshot scan करके try करें।"); return; }
+          if (!mod) { clearTimeout(pdfWatch); statusDiv.textContent = L("PDF reader could not load. Please scan the document's photo/screenshot instead.", "PDF reader load नहीं हुआ। Document की photo/screenshot scan करके try करें।"); return; }
           file.arrayBuffer().then(function (buf) {
             return mod.getDocument({ data: buf, cMapUrl: "https://cdn.jsdelivr.net/npm/pdfjs-dist@6.4.299/cmaps/", cMapPacked: true, standardFontDataUrl: "https://cdn.jsdelivr.net/npm/pdfjs-dist@6.4.299/standard_fonts/" }).promise;
           }).then(function (pdf) {
@@ -6151,10 +6153,10 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
             var txt = (r.text || "").trim();
             if (txt.length >= 80) {
               laAiGate(function (ok) {
-                if (!ok) { laFinishScan(file, txt, null, statusDiv); return; }
+                if (!ok) { finishScanPdf(file, txt, null, statusDiv); return; }
                 statusDiv.textContent = L("PDF text extracted — AI is analysing...", "PDF text निकल गया — AI analysis कर रहा है...");
                 var q = (laLang() === "hi" ? "नीचे एक legal document का text है। उसकी जानकारी इस format में दो (Document type, Parties, Case number, ज़रूरी dates, Sections, Summary, अगला step):\n\n" : "Below is the text of a legal document. Give its information in this format (Document type, Parties, Case number, Important dates, Sections, Summary, Next step):\n\n") + txt.slice(0, 7000);
-                aiAsk(q, laLang(), null, 1000, function (v) { laFinishScan(file, txt, v, statusDiv); });
+                aiAsk(q, laLang(), null, 1000, function (v) { finishScanPdf(file, txt, v, statusDiv); });
               });
             } else {
               var canvases = [], chain2 = Promise.resolve();
@@ -6170,7 +6172,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
                 });
               });
               chain2.then(function () {
-                if (!canvases.length) { laFinishScan(file, null, null, statusDiv); return; }
+                if (!canvases.length) { finishScanPdf(file, null, null, statusDiv); return; }
                 var ocrAll = "", pending = canvases.length;
                 canvases.forEach(function (c) {
                   laOcrTimed(c, 60000, function (t) {
@@ -6178,15 +6180,16 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
                     pending--;
                     if (!pending) {
                       laAiGate(function (ok) {
-                        if (!ok) { laFinishScan(file, ocrAll || null, null, statusDiv); return; }
-                        askGeminiVision(canvases[0].toDataURL("image/jpeg", 0.85), laScanPrompt(), function (v) { laFinishScan(file, ocrAll || null, v, statusDiv); });
+                        if (!ok) { finishScanPdf(file, ocrAll || null, null, statusDiv); return; }
+                        askGeminiVision(canvases[0].toDataURL("image/jpeg", 0.85), laScanPrompt(), function (v) { finishScanPdf(file, ocrAll || null, v, statusDiv); });
                       });
                     }
                   });
                 });
-              }).catch(function () { laFinishScan(file, null, null, statusDiv); });
+              }).catch(function () { finishScanPdf(file, null, null, statusDiv); });
             }
           }).catch(function () {
+            clearTimeout(pdfWatch);
             statusDiv.textContent = L("Could not read this PDF. Try its photo/screenshot instead.", "यह PDF पढ़ नहीं पाया। इसकी photo/screenshot scan करके try करें।");
           });
         });
@@ -6197,8 +6200,9 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         if (file.size > 25 * 1048576) { laBotSay(L("File is too large (max 25 MB).", "File बहुत बड़ी है (max 25 MB)।"), false); return; }
         var isPdf = /pdf/i.test(file.type || "") || /\.pdf$/i.test(file.name || "");
         var isImg = /^image\//.test(file.type || "") || /\.(jpg|jpeg|png|webp)$/i.test(file.name || "");
+        var isHeic = /heic|heif/i.test(file.type || "") || /\.(heic|heif)$/i.test(file.name || "");
         var um = addMsg("\uD83D\uDCC4 " + esc(file.name || "Document"), "user");
-        if (isImg && um) {
+        if (isImg && !isHeic && um) {
           var im = document.createElement("img");
           im.className = "la-scan-img"; im.alt = "";
           im.src = URL.createObjectURL(file);
@@ -6206,6 +6210,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         }
         var statusDiv = addMsg(L("Scanning document...", "Document scan हो रहा है..."), "bot");
         if (!statusDiv) return;
+        if (isHeic) { statusDiv.textContent = L("This photo format (HEIC) is not supported here — please send the photo as JPG or PNG.", "Ye photo format (HEIC) yahan supported nahi hai — photo ko JPG ya PNG me bhej dein."); return; }
         if (isPdf) laScanPdf(file, statusDiv);
         else if (isImg) laScanImage(file, statusDiv);
         else if (/text/.test(file.type || "") || /\.txt$/i.test(file.name || "")) {
@@ -6907,16 +6912,28 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
             out.hidden = false;
             out.textContent = L("Scanning... please wait.", "Scan ho raha hai... kripya prateeksha karein.");
             function run() {
-              Tesseract.recognize(f, "eng+hin").then(function (r) {
-                var txt = (r.data.text || "").trim();
+              var settled = false;
+              var ocrWatch = setTimeout(function () {
+                if (settled) return; settled = true;
+                out.textContent = L("OCR failed. Try a clearer image.", "OCR vifal. Saaf image aazmayein.");
+              }, 60000);
+              function ocrDone(txt) {
+                if (settled) return; settled = true; clearTimeout(ocrWatch);
                 out.textContent = txt || L("No text found in image.", "Image mein koi text nahi mila.");
                 if (txt) {
                   var ta = document.getElementById("laDocsInput");
                   if (ta) ta.value = txt.slice(0, 4000);
                 }
-              }).catch(function () {
+              }
+              function ocrFail() {
+                if (settled) return; settled = true; clearTimeout(ocrWatch);
                 out.textContent = L("OCR failed. Try a clearer image.", "OCR vifal. Saaf image aazmayein.");
-              });
+              }
+              try {
+                Tesseract.recognize(f, "eng+hin").then(function (r) {
+                  ocrDone(((r && r.data && r.data.text) || "").trim());
+                }).catch(function () { ocrFail(); });
+              } catch (e) { ocrFail(); }
             }
             if (window.Tesseract) { run(); return; }
             var s = document.createElement("script");
@@ -7098,18 +7115,22 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
     },
     signIn: function (kind) {
       var self = this;
+      function fail() {
+        try { self.openModal(t("Login failed — check your connection and popups, then try again.", "Login vifal — connection aur popups check karke dobara try karein.")); } catch (e) {}
+      }
       try {
+        if (!self.auth) { fail(); return; }
         var provider;
         if (kind === "github") provider = new firebase.auth.GithubAuthProvider();
         else if (kind === "yahoo") provider = new firebase.auth.OAuthProvider("yahoo.com");
         else provider = new firebase.auth.GoogleAuthProvider();
         var inApp = false;
         try { inApp = (window.matchMedia && window.matchMedia("(display-mode: standalone)").matches) || (document.referrer && document.referrer.indexOf("android-app://") === 0); } catch (e3) {}
-        if (inApp) { try { self.auth.signInWithRedirect(provider); return; } catch (e4) {} }
+        if (inApp) { try { self.auth.signInWithRedirect(provider); return; } catch (e4) { fail(); return; } }
         self.auth.signInWithPopup(provider).catch(function () {
-          try { self.auth.signInWithRedirect(provider); } catch (e2) {}
+          try { self.auth.signInWithRedirect(provider); } catch (e2) { fail(); }
         });
-      } catch (e) {}
+      } catch (e) { fail(); }
     },
     signOut: function () {
       var self = this;
