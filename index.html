@@ -5959,6 +5959,24 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         img.onerror = function () { URL.revokeObjectURL(url); laFileToDataUrl(file, cb); };
         img.src = url;
       }
+      function laOcrPrep(dataUrl, cb) {
+        if (!dataUrl) { cb(null); return; }
+        try {
+          var img = new Image();
+          img.onload = function () {
+            try {
+              var c = document.createElement("canvas");
+              c.width = img.naturalWidth; c.height = img.naturalHeight;
+              var ctx = c.getContext("2d");
+              try { ctx.filter = "grayscale(1) contrast(1.3)"; } catch (e) {}
+              ctx.drawImage(img, 0, 0);
+              cb(c.toDataURL("image/jpeg", 0.92));
+            } catch (e) { cb(dataUrl); }
+          };
+          img.onerror = function () { cb(dataUrl); };
+          img.src = dataUrl;
+        } catch (e) { cb(dataUrl); }
+      }
       function askGeminiVision(dataUrl, prompt, cb) {
         var hasGKey = GEMINI_KEY && GEMINI_KEY.length >= 20; if (!hasGKey && !GEMINI_PROXY) { cb(null); return; }
         var done = false;
@@ -6035,6 +6053,42 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         }
         try { if (statusDiv.parentNode) statusDiv.parentNode.removeChild(statusDiv); } catch (e) {}
         var msg = laBotSay(head + (visionText || ocrText.slice(0, 2500)), !!visionText);
+        if (msg && visionText && ocrText) {
+          try {
+            var det = document.createElement("details");
+            var sum = document.createElement("summary");
+            sum.textContent = L("Document text (OCR) \u2014 verify here", "Document ka asli text (OCR) \u2014 yahan verify karein");
+            det.appendChild(sum);
+            var pre = document.createElement("pre");
+            pre.style.whiteSpace = "pre-wrap"; pre.style.wordBreak = "break-word";
+            pre.textContent = ocrText.slice(0, 4000);
+            det.appendChild(pre);
+            var crow = document.createElement("div"); crow.className = "la-scan-actions";
+            var copyBtn = document.createElement("button"); copyBtn.type = "button";
+            copyBtn.textContent = L("Copy text", "Text copy karein");
+            copyBtn.addEventListener("click", function () {
+              try {
+                if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(ocrText);
+                else { var ta3 = document.createElement("textarea"); ta3.value = ocrText; document.body.appendChild(ta3); ta3.select(); document.execCommand("copy"); document.body.removeChild(ta3); }
+              } catch (e) {}
+            });
+            crow.appendChild(copyBtn);
+            var dlBtn = document.createElement("button"); dlBtn.type = "button";
+            dlBtn.textContent = L("Download .txt", "Download .txt");
+            dlBtn.addEventListener("click", function () {
+              try {
+                var blob = new Blob([ocrText], { type: "text/plain" });
+                var a = document.createElement("a");
+                a.href = URL.createObjectURL(blob);
+                a.download = (file.name || "Document").replace(/\.[^.]+$/, "") + ".txt";
+                document.body.appendChild(a); a.click(); document.body.removeChild(a);
+              } catch (e) {}
+            });
+            crow.appendChild(dlBtn);
+            det.appendChild(crow);
+            msg.appendChild(det);
+          } catch (e) {}
+        }
         if (msg) msg.appendChild(laScanActions(file, best));
       }
       function laScanImage(file, statusDiv) {
@@ -6047,7 +6101,8 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           if (ocrDone && !visDone && !grace) { grace = setTimeout(finish, 8000); }
         }
         laDownscale(file, function (du) {
-          laOcrTimed(du || file, 60000, function (t) {
+          laOcrPrep(du, function (prep) {
+          laOcrTimed(prep || du || file, 60000, function (t) {
             ocrText = t; ocrDone = true;
             if (finished && visionText && t) {
               try {
@@ -6057,6 +6112,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
               } catch (e) {}
             }
             step();
+          });
           });
           laAiGate(function (ok) {
             if (!ok) { visDone = true; step(); return; }
