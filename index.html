@@ -6238,7 +6238,8 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         var lang = laLang();
         out.hidden = false; acts.hidden = true;
         out.innerHTML = "<span class='la-dots'><span></span><span></span><span></span></span>";
-        aiAsk("Draft this legal document: " + desc, lang, aiDraftSystem(lang), 1600, function (txt) {
+        var doDraftAsk = function () { aiAsk("Draft this legal document: " + desc, lang, aiDraftSystem(lang), 1600, function (txt) {
+          if (!txt) { try { window.LA_AUTH && window.LA_AUTH.refundQuota && window.LA_AUTH.refundQuota(); } catch (e) {} }
           if (txt) {
             LA_AI_DRAFT = { text: txt, desc: desc };
             out.textContent = txt;
@@ -6247,7 +6248,10 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
             out.textContent = L("AI drafting is unavailable right now. Please try the template drafts below.", "AI ड्राफ्टिंग अभी उपलब्ध नहीं है। कृपया नीचे दिए गए टेम्पलेट ड्राफ्ट आज़माएं।");
           }
           try { out.scrollIntoView({ block: "nearest" }); } catch (e) {}
-        });
+        }); };
+        if (window.LA_AUTH && window.LA_AUTH.ready && window.LA_AUTH.user) {
+          window.LA_AUTH.withQuota(function (ok) { if (ok) doDraftAsk(); else { out.textContent = L("Today's AI limit is reached \u2014 please try the template drafts below.", "\u0906\u091c \u0915\u0940 AI \u0938\u0940\u092e\u093e \u092a\u0942\u0930\u0940 \u0939\u094b \u0917\u0908 \u0939\u0948 \u2014 \u0915\u0943\u092a\u092f\u093e \u0928\u0940\u091a\u0947 \u0926\u093f\u090f \u0917\u090f \u091f\u0947\u092e\u094d\u092a\u0932\u0947\u091f \u0921\u094d\u0930\u093e\u092b\u094d\u091f \u0906\u091c\u093c\u092e\u093e\u090f\u0902\u0964"); try { out.scrollIntoView({ block: "nearest" }); } catch (e) {} } });
+        } else doDraftAsk();
       }
       function aiDraftDocHTML() {
         var body = esc(LA_AI_DRAFT.text).replace(/\n/g, "<br>");
@@ -6322,7 +6326,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         var draftTok = isDraftQ ? 1600 : undefined;
         var qAI = q;
         if (LA_SCAN.text) { qAI = "The user has scanned a legal document named \"" + LA_SCAN.name + "\". Its text is below. Answer the user's question from this document first; if the answer is not in it, say so briefly, then give general legal guidance.\n--- DOCUMENT ---\n" + LA_SCAN.text.slice(0, 6000) + "\n--- END ---\nQuestion: " + q; }
-        function aiChain(sys, tokens) {
+        function aiChain(sys, tokens, counted) {
           askGemini(qAI, lang, function (aiText) {
             if (aiText) { done(aiText, builtin.sources, true); return; }
             askGroq(qAI, lang, function (gqText) {
@@ -6337,7 +6341,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
                       if (cfText) { done(cfText, builtin.sources, true); return; }
                       askNvidia(qAI, lang, function (nvText) {
                         if (nvText) done(nvText, builtin.sources, true);
-                        else setTimeout(function () { done(builtin.html, builtin.sources, false); }, 350);
+                        else setTimeout(function () { if (counted) { try { window.LA_AUTH && window.LA_AUTH.refundQuota && window.LA_AUTH.refundQuota(); } catch (e) {} } done(builtin.html, builtin.sources, false); }, 350);
                       }, sys);
                     }, sys);
                   }, sys);
@@ -6346,7 +6350,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
             }, sys, tokens);
           }, sys, tokens);
         }
-        if (!window.LA_AUTH || !window.LA_AUTH.ready) { aiChain(draftSys, draftTok); }
+        if (!window.LA_AUTH || !window.LA_AUTH.ready) { aiChain(draftSys, draftTok, false); }
         else if (!window.LA_AUTH.user) {
           setTimeout(function () {
             done(builtin.html, builtin.sources, false);
@@ -6354,7 +6358,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           }, 350);
         } else {
           window.LA_AUTH.withQuota(function (ok) {
-            if (ok) aiChain(draftSys, draftTok);
+            if (ok) aiChain(draftSys, draftTok, true);
             else setTimeout(function () { done(L("Today's AI limit is reached — showing the built-in answer instead.", "Aaj ki AI limit poori ho gayi hai — isliye built-in jawab dikha raha hoon.") + "\n\n" + builtin.html, builtin.sources, false); }, 350);
           });
         }
@@ -6496,11 +6500,15 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         var lang = laLang();
         out.hidden = false; acts.hidden = true;
         out.innerHTML = "<span class='la-dots'><span></span><span></span><span></span></span>";
-        aiAsk(txt.slice(0, 4000), lang, docSystem(lang, mode), 600, function (res) {
+        var doDocAsk = function () { aiAsk(txt.slice(0, 4000), lang, docSystem(lang, mode), 600, function (res) {
+          if (!res) { try { window.LA_AUTH && window.LA_AUTH.refundQuota && window.LA_AUTH.refundQuota(); } catch (e) {} }
           if (res) { out.textContent = res; acts.hidden = false; }
           else out.textContent = L("Document processing is unavailable right now.", "दस्तावेज़ प्रसंस्करण अभी उपलब्ध नहीं है।");
           try { out.scrollIntoView({ block: "nearest" }); } catch (e) {}
-        });
+        }); };
+        if (window.LA_AUTH && window.LA_AUTH.ready && window.LA_AUTH.user) {
+          window.LA_AUTH.withQuota(function (ok) { if (ok) doDocAsk(); else { out.textContent = L("Today's AI limit is reached.", "\u0906\u091c \u0915\u0940 AI \u0938\u0940\u092e\u093e \u092a\u0942\u0930\u0940 \u0939\u094b \u0917\u0908 \u0939\u0948\u0964"); try { out.scrollIntoView({ block: "nearest" }); } catch (e) {} } });
+        } else doDocAsk();
       }
       function docCopy() {
         var out = document.getElementById("laDocsOut");
@@ -6524,11 +6532,15 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         var lang = laLang();
         out.hidden = false; acts.hidden = true;
         out.innerHTML = "<span class='la-dots'><span></span><span></span><span></span></span>";
-        aiAsk(txt.slice(0, 4000), lang, meetSystem(lang), 600, function (res) {
+        var doMeetAsk = function () { aiAsk(txt.slice(0, 4000), lang, meetSystem(lang), 600, function (res) {
+          if (!res) { try { window.LA_AUTH && window.LA_AUTH.refundQuota && window.LA_AUTH.refundQuota(); } catch (e) {} }
           if (res) { LA_MEET_TXT = res; out.textContent = res; acts.hidden = false; }
           else out.textContent = L("Meeting summary is unavailable right now.", "मीटिंग सारांश अभी उपलब्ध नहीं है।");
           try { out.scrollIntoView({ block: "nearest" }); } catch (e) {}
-        });
+        }); };
+        if (window.LA_AUTH && window.LA_AUTH.ready && window.LA_AUTH.user) {
+          window.LA_AUTH.withQuota(function (ok) { if (ok) doMeetAsk(); else { out.textContent = L("Today's AI limit is reached.", "\u0906\u091c \u0915\u0940 AI \u0938\u0940\u092e\u093e \u092a\u0942\u0930\u0940 \u0939\u094b \u0917\u0908 \u0939\u0948\u0964"); try { out.scrollIntoView({ block: "nearest" }); } catch (e) {} } });
+        } else doMeetAsk();
       }
       function loadMeets() { try { return JSON.parse(localStorage.getItem("lawAssistMeets") || "[]"); } catch (e) { return []; } }
       function saveMeets(m) { try { localStorage.setItem("lawAssistMeets", JSON.stringify(m)); } catch (e) {} }
@@ -7147,12 +7159,26 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
       } catch (e) {}
       try { document.getElementById("authMenu").hidden = true; } catch (e2) {}
     },
-    /* Runs cb(true) if the user may make an AI call now (quota left), cb(false) if over limit. */
+    /* Runs cb(true) if the user may make an AI call now (quota left), cb(false) if over limit.
+       The call is counted immediately; if the AI then totally fails, refundQuota() gives it back.
+       If Firestore is unreachable, the same daily limit is enforced in localStorage instead of
+       silently allowing unlimited calls. */
     withQuota: function (cb) {
       var self = this;
       function allow(v) { try { cb(!!v); } catch (e) {} }
+      function localQuota() {
+        try {
+          var key = "laQuota-" + new Date().toISOString().slice(0, 10);
+          var n = parseInt(localStorage.getItem(key) || "0", 10) || 0;
+          if (n >= DAILY_AI_LIMIT) { self._qLocal = false; allow(false); return; }
+          localStorage.setItem(key, String(n + 1));
+          self._qLocal = true;
+          allow(true);
+        } catch (e) { allow(true); }
+      }
       try {
-        if (!self.user || !self.db) { allow(true); return; }
+        if (!self.user) { allow(true); return; }
+        if (!self.db) { localQuota(); return; }
         var day = new Date().toISOString().slice(0, 10);
         var ref = self.db.collection("usage").doc(self.user.uid).collection("days").doc(day);
         self.db.runTransaction(function (tx) {
@@ -7162,8 +7188,29 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
             tx.set(ref, { count: n + 1 }, { merge: true });
             return true;
           });
-        }).then(allow, function () { allow(true); });
-      } catch (e) { allow(true); }
+        }).then(function (ok) { self._qLocal = false; allow(ok); }, function () { localQuota(); });
+      } catch (e) { localQuota(); }
+    },
+    /* Gives back one counted call when the AI totally failed (best effort, floor 0). */
+    refundQuota: function () {
+      var self = this;
+      try {
+        if (self._qLocal) {
+          var key = "laQuota-" + new Date().toISOString().slice(0, 10);
+          var n = parseInt(localStorage.getItem(key) || "0", 10) || 0;
+          if (n > 0) localStorage.setItem(key, String(n - 1));
+          return;
+        }
+        if (!self.user || !self.db) return;
+        var day = new Date().toISOString().slice(0, 10);
+        var ref = self.db.collection("usage").doc(self.user.uid).collection("days").doc(day);
+        self.db.runTransaction(function (tx) {
+          return tx.get(ref).then(function (snap) {
+            var n = snap.exists ? (snap.data().count || 0) : 0;
+            if (n > 0) tx.set(ref, { count: n - 1 }, { merge: true });
+          });
+        }).catch(function () {});
+      } catch (e) {}
     },
     /* Adds a "login for AI answers" button under the last bot message. */
     nudgeLogin: function () {
