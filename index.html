@@ -6022,10 +6022,14 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         if (msg) msg.appendChild(laScanActions(file, best));
       }
       function laScanImage(file, statusDiv) {
-        var ocrText = null, visionText = null, ocrDone = false, visDone = false, finished = false;
-        function finish() { if (!finished) { finished = true; laFinishScan(file, ocrText, visionText, statusDiv); } }
+        var ocrText = null, visionText = null, ocrDone = false, visDone = false, finished = false, grace = null;
+        function finish() { if (!finished) { finished = true; if (grace) clearTimeout(grace); clearTimeout(watchdog); laFinishScan(file, ocrText, visionText, statusDiv); } }
         var watchdog = setTimeout(finish, 95000);
-        function step() { if (ocrDone && visDone) { clearTimeout(watchdog); finish(); } }
+        function step() {
+          if (visionText) { finish(); return; }
+          if (ocrDone && visDone) { finish(); return; }
+          if (ocrDone && !visDone && !grace) { grace = setTimeout(finish, 8000); }
+        }
         laDownscale(file, function (du) {
           laOcrTimed(du || file, 60000, function (t) { ocrText = t; ocrDone = true; step(); });
           laAiGate(function (ok) {
