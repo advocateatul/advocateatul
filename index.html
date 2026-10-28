@@ -967,6 +967,7 @@
     .top-search button:hover { background: rgba(255,255,255,.14); }
     .top-search .top-mic.listening { background: rgba(255,255,255,.25); animation: micPulseTop 1.2s infinite; }
     @keyframes micPulseTop { 0%,100% { box-shadow: 0 0 0 0 rgba(255,255,255,.4); } 50% { box-shadow: 0 0 0 8px rgba(255,255,255,0); } }
+    .top-search-results.voice-listening { text-align: center; font: 700 1rem var(--sans); }
     .top-search-results { position: absolute; top: 100%; left: 0; right: 0; z-index: 200; background: #f9fcff; color: #1e1e1e; border-top: 1px solid #e2e2e2; box-shadow: 0 24px 60px rgba(0,0,0,.18); max-height: 70vh; overflow: auto; padding: 18px min(5vw, 40px); }
     .top-search-results[hidden] { display: none; }
     .top-search-results .hub-result-group { margin-bottom: 16px; }
@@ -4472,6 +4473,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         if (!SR) { micBtn.style.display = "none"; return; }
         var recog = null;
         var listening = false;
+        var silenceTimer = null;
         var voiceMsg = false;
         function vL(en, hi) { return currentLanguage === "hi" ? hi : en; }
         function tbox() { return document.getElementById("topSearchResults"); }
@@ -4490,7 +4492,9 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         }
         function setListening(on) {
           listening = on;
+          if (!on) clearTimeout(silenceTimer);
           micBtn.classList.toggle("listening", on);
+          var lb = tbox(); if (lb) lb.classList.toggle("voice-listening", on);
           micBtn.setAttribute("aria-pressed", String(on));
           if (on) showVoiceMsg("\uD83C\uDFA4 " + vL("Listening... speak now.", "Sun raha hoon... boliye."));
         }
@@ -4502,6 +4506,14 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           if (e === "network") return vL("Network problem \u2014 voice service failed. Please try again.", "Network problem \u2014 voice service nahi chali. Dobara try karein.");
           return vL("Voice search failed. Please try again.", "Voice search nahi chala. Dobara try karein.");
         }
+        function armSilence() {
+          clearTimeout(silenceTimer);
+          silenceTimer = setTimeout(function () {
+            try { recog.stop(); } catch (e) {}
+            setListening(false);
+            showVoiceMsg(voiceErr("no-speech"));
+          }, 8000);
+        }
         micBtn.addEventListener("click", function () {
           if (listening) { try { recog.stop(); } catch (e) {} setListening(false); clearVoiceMsg(); return; }
           recog = new SR();
@@ -4509,6 +4521,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           recog.interimResults = true;
           recog.maxAlternatives = 1;
           recog.onresult = function (ev) {
+            armSilence();
             var interim = "", final = "";
             for (var i = ev.resultIndex; i < ev.results.length; i++) {
               if (ev.results[i].isFinal) final += ev.results[i][0].transcript;
@@ -4517,16 +4530,19 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
             var input = document.getElementById("topSearchInput");
             var box = tbox();
             if (final) {
-              if (input) { input.value = final; if (box) hubSearchAll(final, box); }
-              voiceMsg = false;
+              clearTimeout(silenceTimer);
+              if (input) input.value = final;
+              showVoiceMsg("\u2705 " + vL("Got it \u2014 searching...", "Sun liya \u2014 dhoondh raha hoon..."));
               setListening(false);
+              if (box) { var fq = final; setTimeout(function () { hubSearchAll(fq, box); }, 400); }
             } else if (interim) {
               if (input) input.value = interim;
+              showVoiceMsg("\uD83C\uDFA4 " + vL("Listening... ", "Sun raha hoon... ") + interim);
             }
           };
           recog.onerror = function (ev) { setListening(false); showVoiceMsg(voiceErr(ev && ev.error)); };
           recog.onend = function () { setListening(false); };
-          try { recog.start(); setListening(true); } catch (e) { setListening(false); showVoiceMsg(voiceErr("")); }
+          try { recog.start(); setListening(true); armSilence(); } catch (e) { setListening(false); showVoiceMsg(voiceErr("")); }
         });
       }
 
@@ -6031,7 +6047,17 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           if (ocrDone && !visDone && !grace) { grace = setTimeout(finish, 8000); }
         }
         laDownscale(file, function (du) {
-          laOcrTimed(du || file, 60000, function (t) { ocrText = t; ocrDone = true; step(); });
+          laOcrTimed(du || file, 60000, function (t) {
+            ocrText = t; ocrDone = true;
+            if (finished && visionText && t) {
+              try {
+                var ta2 = document.getElementById("laDocsInput");
+                if (ta2) ta2.value = t.slice(0, 4000);
+                laSetCtx(visionText + "\n\n--- Document text (OCR) ---\n" + t, file.name || "Document");
+              } catch (e) {}
+            }
+            step();
+          });
           laAiGate(function (ok) {
             if (!ok) { visDone = true; step(); return; }
             if (!du) { visDone = true; step(); return; }
