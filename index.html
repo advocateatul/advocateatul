@@ -5658,7 +5658,8 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
       function getKB() { try { var el = document.getElementById("aiKnowledgeData"); var d = el ? JSON.parse(el.textContent) : null; return (d && d.knowledge) ? d.knowledge : []; } catch (e) { return []; } }
       function getJudgements() { try { if (window.AK_STORE && window.AK_STORE.usefulJudgementsData) return (window.AK_STORE.usefulJudgementsData.items || []); var el = document.getElementById("usefulJudgementsData"); var d = el ? JSON.parse(el.textContent) : null; return (d && d.items) ? d.items : []; } catch (e) { return []; } }
       function getVocab() { try { if (window.AK_STORE && window.AK_STORE.legalVocabData) return (window.AK_STORE.legalVocabData.terms || []); var el = document.getElementById("legalVocabData"); var d = el ? JSON.parse(el.textContent) : null; return (d && d.terms) ? d.terms : []; } catch (e) { return []; } }
-      function tokens(s) { return String(s || "").toLowerCase().replace(/[^\p{L}\p{N}\s]/gu, " ").split(/\s+/).filter(function (w) { return w.length > 1; }); }
+      var LA_STOP = { what:1, is:1, the:1, a:1, an:1, of:1, to:1, in:1, on:1, for:1, and:1, or:1, how:1, why:1, when:1, where:1, who:1, does:1, do:1, did:1, are:1, was:1, were:1, be:1, been:1, this:1, that:1, it:1, its:1, with:1, by:1, from:1, about:1, into:1, after:1, before:1, can:1, could:1, should:1, would:1, will:1, shall:1, may:1, am:1, me:1, kya:1, hai:1, ka:1, ki:1, ke:1, ko:1, se:1, mein:1, par:1, aur:1, jo:1, toh:1, bhi:1, hain:1, tha:1, thi:1, kab:1, kaise:1, kahan:1, kis:1, kyon:1, kyun:1, kaun:1, yeh:1, woh:1, ye:1, wo:1, ne:1 };
+      function tokens(s) { return String(s || "").toLowerCase().replace(/[^\p{L}\p{N}\s]/gu, " ").split(/\s+/).filter(function (w) { return w.length > 1 && !LA_STOP[w]; }); }
       function overlap(q, text) {
         var qt = tokens(q), tt = {}, i, score = 0;
         tokens(text).forEach(function (w) { tt[w] = 1; });
@@ -5695,7 +5696,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           s = 0; k = kb[i];
           (k.q || []).forEach(function (qq) { s = Math.max(s, overlap(query, qq) * 3); });
           s = Math.max(s, overlap(query, (k.a && (k.a.en + " " + k.a.hi)) || ""));
-          if (s > bestScore) { bestScore = s; best = { type: "kb", item: k, score: s }; }
+          if (s > bestScore && s >= 4) { bestScore = s; best = { type: "kb", item: k, score: s }; }
         }
         // 2. Landmark judgements
         for (i = 0; i < judges.length; i++) {
@@ -5713,7 +5714,10 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         // 4. Intent → drafts
         var matchedDrafts = [];
         INTENTS.forEach(function (in_) {
-          var hit = in_.kw.some(function (kw) { return query.toLowerCase().indexOf(kw.toLowerCase()) !== -1; });
+          var hit = in_.kw.some(function (kw) {
+            var escKw = kw.toLowerCase().replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+            return new RegExp("(^|[^\\p{L}\\p{N}])" + escKw + "([^\\p{L}\\p{N}]|$)", "u").test(query.toLowerCase());
+          });
           if (hit) in_.drafts.forEach(function (id) { if (matchedDrafts.indexOf(id) === -1) matchedDrafts.push(id); });
         });
 
@@ -5751,6 +5755,9 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
             sources.push({ t: "draft", d: dbest });
           }
         }
+        if (!html && matchedDrafts.length) {
+          html = L("Here are the drafts on this topic:", "Is vishay par ye drafts hain:");
+        }
         if (!html) {
           html = L(
             "I couldn't find a precise answer on this website. Try asking about bail, FIR, cheque bounce, divorce, property, or tap a suggestion below. For detailed advice, WhatsApp 7456022448.",
@@ -5759,7 +5766,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         return { html: html, sources: sources.slice(0, 6) };
       }
 
-      function addMsg(html, who, sources) {
+      function addMsg(html, who, sources, related) {
         var box = document.getElementById("laMessages");
         if (!box) return;
         var div = document.createElement("div");
@@ -5769,7 +5776,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           var src = document.createElement("span");
           src.className = "la-src";
           var sh = document.createElement("strong");
-          sh.textContent = L("📚 Sources:", "📚 स्रोत:");
+          sh.textContent = related ? L("🔗 Related on this website:", "🔗 इस वेबसाइट पर संबंधित:") : L("📚 Sources:", "📚 स्रोत:");
           src.appendChild(sh);
           sources.forEach(function (x) {
             if (x.t === "judge") {
@@ -5820,6 +5827,11 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         return lang === "hi"
           ? "Aap LawAssist hain — Advocate Atul Kumar (criminal lawyer, Bulandshahr District Court, UP) ki website ka AI sahayak. KEVAl Bharatiya kanoon par jawab dein, Hindi me. Sankshipt (120 shabdon ke andar), sateek, vyavharik. Sahi dhaaraon (BNS/BNSS/BSA/NI Act/CPC) ka naam lein. Kabhi farzi case citation na banayein. Ant me ek line jodein: 'Vistrit salah ke liye 7456022448 par WhatsApp karein.'"
           : "You are LawAssist — the AI assistant on Advocate Atul Kumar's website (criminal lawyer, Bulandshahr District Court, UP). Answer ONLY about Indian law, in English. Concise (under 120 words), accurate, practical. Name correct sections (BNS/BNSS/BSA/NI Act/CPC). Never invent case citations. End with one line: 'For detailed advice, WhatsApp 7456022448.'";
+      }
+      function laScanSystem(lang) {
+        return lang === "hi"
+          ? "Aap LawAssist hain — Advocate Atul Kumar ki website ka AI sahayak. Neeche diye gaye legal document ke text/photo ka poora, structured analysis Hindi me den (Document type, Parties, Case number, zaroori dates, Sections, Summary, agla step). Shabdon ki koi seema nahi — poori jaankari den. Kabhi farzi citation na banayein; jo na mile use 'nahin mila' likhen."
+          : "You are LawAssist — the AI assistant on Advocate Atul Kumar's website. Give a complete, structured analysis of the legal document text/photo below in English (Document type, Parties, Case number, Important dates, Sections, Summary, Next step). There is no word limit — be thorough. Never invent citations; write 'not found' for anything missing.";
       }
       function askGemini(q, lang, cb, sys, tokens) {
         var hasGKey = GEMINI_KEY && GEMINI_KEY.indexOf("<") === -1 && GEMINI_KEY.length >= 20; if (!hasGKey && !GEMINI_PROXY) { cb(null); return; }
@@ -5968,7 +5980,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
       }
 
       /* ---------------- Document Scan (camera / OCR / AI vision) ---------------- */
-      var LA_SCAN = { text: "", name: "" };
+      var LA_SCAN = { text: "", name: "", left: 0 };
       var laLimitHit = false;
       function laAiGate(cb) {
         if (!window.LA_AUTH || !window.LA_AUTH.ready) { cb(true); return; }
@@ -6002,19 +6014,19 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           bar.hidden = false;
           bar.innerHTML = "";
           var s = document.createElement("span");
-          s.textContent = "\uD83D\uDCC4 " + LA_SCAN.name + " — " + L("attached. Ask anything about it.", "जुड़ा है। इसके बारे में कुछ भी पूछें।");
+          s.textContent = "\uD83D\uDCC4 " + LA_SCAN.name + " — " + L("attached. Ask anything about it.", "जुड़ा है। इसके बारे में कुछ भी पूछें।") + (LA_SCAN.left ? " (" + LA_SCAN.left + " " + L("questions left", "सवाल बाकी") + ")" : "");
           var b = document.createElement("button");
           b.type = "button"; b.textContent = "\u2715 " + L("Remove", "हटाएँ");
-          b.addEventListener("click", function () { LA_SCAN.text = ""; LA_SCAN.name = ""; laCtxRender(); });
+          b.addEventListener("click", function () { LA_SCAN.text = ""; LA_SCAN.name = ""; LA_SCAN.left = 0; laCtxRender(); });
           bar.appendChild(s); bar.appendChild(b);
         } else { bar.hidden = true; }
       }
-      function laSetCtx(text, name) { LA_SCAN.text = text || ""; LA_SCAN.name = name || "Document"; laCtxRender(); }
+      function laSetCtx(text, name) { LA_SCAN.text = text || ""; LA_SCAN.name = name || "Document"; LA_SCAN.left = LA_SCAN.text ? 3 : 0; laCtxRender(); }
       /* Clears the in-memory chat + scan workspace (used on logout so the next user sees nothing). */
       window.laClearWorkspace = function () {
         try {
           LA_HIST.length = 0;
-          LA_SCAN.text = ""; LA_SCAN.name = "";
+          LA_SCAN.text = ""; LA_SCAN.name = ""; LA_SCAN.left = 0;
           laCtxRender();
           var msgs = document.getElementById("laMessages");
           if (msgs) msgs.textContent = "";
@@ -6095,7 +6107,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
-              systemInstruction: { parts: [{ text: geminiSystem(laLang()) }] },
+              systemInstruction: { parts: [{ text: laScanSystem(laLang()) }] },
               contents: [{ parts: [{ text: prompt }, { inline_data: { mime_type: mime, data: parts[1] || "" } }] }],
               generationConfig: { temperature: 0.2, maxOutputTokens: 1000 }
             })
@@ -6129,7 +6141,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         function mk(label, fn) { var b = document.createElement("button"); b.type = "button"; b.textContent = label; b.addEventListener("click", fn); row.appendChild(b); }
         mk("\uD83D\uDCDD " + L("Summary", "सारांश"), function () { respond(L("Summarise this document in simple words.", "Is document ka saransh saral shabdon me do.")); });
         mk("\uD83D\uDCC5 " + L("Dates & details", "तारीखें व विवरण"), function () { respond(L("List all important dates, names, case numbers and sections in this document.", "Is document ki sabhi zaroori dates, naam, case number aur sections ki list do.")); });
-        mk("\uD83C\uDF10 " + L("Translate", "अनुवाद"), function () { respond(laLang() === "hi" ? "Translate this document into English." : "Is document ka Hindi anuvaad karo."); });
+        mk("\uD83C\uDF10 " + L("Translate", "अनुवाद"), function () { respond(laLang() === "hi" ? "Translate this document into English." : "Is document ka Hindi anuvaad karo.", laLang() === "hi" ? "Translate the document text below into accurate English. Keep legal terminology correct. Write only the translation." : "Neeche diye gaye document text ka sahi Hindi anuvaad karo. Kanooni shabdavali sahi rakho. Sirf anuvaad likho."); });
         mk("\uD83D\uDCE5 " + L("Save to My Documents", "My Documents में save करें"), function () { try { laDocUploadFiles([file]).then(function (r) { laBotSay(r.failed ? L("Could not save this file to My Documents. Please try again.", "Ye file My Documents me save nahi hui. Dobara try karein.") : L("Saved to My Documents (Docs tab).", "My Documents (Docs tab) में save हो गया।"), false); }).catch(function () { laBotSay(L("Could not save this file to My Documents. Please try again.", "Ye file My Documents me save nahi hui. Dobara try karein."), false); }); } catch (e) {} });
         mk("\u2795 " + L("Add to My Cases", "My Cases में जोड़ें"), function () {
           try {
@@ -6264,7 +6276,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
                 if (!ok) { laLimitHit = !!(window.LA_AUTH && window.LA_AUTH.user); finishScanPdf(file, txt, null, statusDiv); return; }
                 statusDiv.textContent = L("PDF text extracted — AI is analysing...", "PDF text निकल गया — AI analysis कर रहा है...");
                 var q = (laLang() === "hi" ? "नीचे एक legal document का text है। उसकी जानकारी इस format में दो (Document type, Parties, Case number, ज़रूरी dates, Sections, Summary, अगला step):\n\n" : "Below is the text of a legal document. Give its information in this format (Document type, Parties, Case number, Important dates, Sections, Summary, Next step):\n\n") + txt.slice(0, 7000);
-                aiAsk(q, laLang(), null, 1000, function (v) { finishScanPdf(file, txt, v, statusDiv); });
+                aiAsk(q, laLang(), laScanSystem(laLang()), 1000, function (v) { finishScanPdf(file, txt, v, statusDiv); });
               });
             } else {
               var canvases = [], chain2 = Promise.resolve();
@@ -6381,7 +6393,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
       }
 
       var laBusy = false;
-      function respond(q) {
+      function respond(q, sysOverride) {
         if (laBusy) return false;
         laBusy = true;
         addMsg(esc(q), "user");
@@ -6399,7 +6411,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           laBusy = false;
           try { thinking && thinking.parentNode && thinking.parentNode.removeChild(thinking); } catch (e2) {}
           var tag = ai ? "<span class='la-ai-tag'>\u2728 AI</span> " : "";
-          var msgDiv = addMsg(tag + esc(html).replace(/\n/g, "<br>"), "bot", sources);
+          var msgDiv = addMsg(tag + esc(html).replace(/\n/g, "<br>"), "bot", sources, ai);
           laHistPush("model", html);
           if (ai && msgDiv) {
             var cp = document.createElement("button");
@@ -6426,11 +6438,17 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           } catch (e3) {}
         }
         var builtin = research(q);
-        var isDraftQ = /draft|format|template|vakalatnama|affidavit|likh|\u0921\u094d\u0930\u093e\u092b\u094d\u091f|\u092a\u094d\u0930\u093e\u0930\u0942\u092a|\u092a\u094d\u0930\u093e\u0930\u094d\u0925\u0928\u093e|\u0936\u093f\u0915\u093e\u092f\u0924|\u0928\u094b\u091f\u093f\u0938|\u0905\u0930\u094d\u091c\u0940/i.test(q);
-        var draftSys = isDraftQ ? aiDraftSystem(lang) : null;
-        var draftTok = isDraftQ ? 1600 : undefined;
+        var laDraftNoun = "(draft|format|template|vakalatnama|affidavit|application|notice|complaint|\u0921\u094d\u0930\u093e\u092b\u094d\u091f|\u092a\u094d\u0930\u093e\u0930\u0942\u092a|\u0936\u093f\u0915\u093e\u092f\u0924|\u0928\u094b\u091f\u093f\u0938|\u0905\u0930\u094d\u091c\u0940)";
+        var laDraftVerb = "(banao|bana|banaye|banaiye|prepare|create|make|write|want|need|get|likh|likho|likhna|chahiye|taiyar|dikhao|dikhaye|show|dein|\u092c\u0928\u093e\u0913|\u091a\u093e\u0939\u093f\u090f|\u0924\u0948\u092f\u093e\u0930|\u0932\u093f\u0916\u094b|\u092c\u0928\u093e\u0928\u093e)";
+        var isDraftQ = sysOverride ? false : new RegExp(laDraftNoun + "[^.!?]{0,40}" + laDraftVerb + "|" + laDraftVerb + "[^.!?]{0,40}" + laDraftNoun, "i").test(q);
+        var draftSys = sysOverride || (isDraftQ ? aiDraftSystem(lang) : null);
+        var draftTok = sysOverride ? 1000 : (isDraftQ ? 1600 : undefined);
         var qAI = q;
-        if (LA_SCAN.text) { qAI = "The user has scanned a legal document named \"" + LA_SCAN.name + "\". Its text is below. Answer the user's question from this document first; if the answer is not in it, say so briefly, then give general legal guidance.\n--- DOCUMENT ---\n" + LA_SCAN.text.slice(0, 6000) + "\n--- END ---\nQuestion: " + q; }
+        if (LA_SCAN.text) {
+          qAI = "The user has scanned a legal document named \"" + LA_SCAN.name + "\". Its text is below. Answer the user's question from this document first; if the answer is not in it, say so briefly, then give general legal guidance.\n--- DOCUMENT ---\n" + LA_SCAN.text.slice(0, 6000) + "\n--- END ---\nQuestion: " + q;
+          if (--LA_SCAN.left <= 0) { LA_SCAN.text = ""; LA_SCAN.name = ""; LA_SCAN.left = 0; }
+          laCtxRender();
+        }
         function aiChain(sys, tokens, counted) {
           askGemini(qAI, lang, function (aiText) {
             if (aiText) { done(aiText, builtin.sources, true); return; }
@@ -6605,7 +6623,8 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         var lang = laLang();
         out.hidden = false; acts.hidden = true;
         out.innerHTML = "<span class='la-dots'><span></span><span></span><span></span></span>";
-        var doDocAsk = function () { aiAsk(txt.slice(0, 4000), lang, docSystem(lang, mode), 600, function (res) {
+        var trLang = (mode === "tr") ? (/[\u0900-\u097F]/.test(txt) ? "en" : "hi") : lang;
+        var doDocAsk = function () { aiAsk(txt.slice(0, 4000), trLang, docSystem(trLang, mode), 600, function (res) {
           if (!res) { try { window.LA_AUTH && window.LA_AUTH.refundQuota && window.LA_AUTH.refundQuota(); } catch (e) {} }
           if (res) { out.textContent = res; acts.hidden = false; }
           else out.textContent = L("Document processing is unavailable right now.", "दस्तावेज़ प्रसंस्करण अभी उपलब्ध नहीं है।");
