@@ -6131,7 +6131,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         }).catch(function () { cb(null); });
       }
       function laScanPdf(file, statusDiv) {
-        var pdfWatch = setTimeout(function () { statusDiv.textContent = L("Could not read this PDF. Try its photo/screenshot instead.", "यह PDF पढ़ नहीं पाया। इसकी photo/screenshot scan करके try करें।"); }, 150000);
+        var pdfWatch = setTimeout(function () { statusDiv.textContent = L("Could not read this PDF. Try its photo/screenshot instead.", "यह PDF पढ़ नहीं पाया। इसकी photo/screenshot scan करके try करें।"); }, 70000);
         function finishScanPdf() { clearTimeout(pdfWatch); laFinishScan.apply(null, arguments); }
         laPdfJs(function (mod) {
           if (!mod) { clearTimeout(pdfWatch); statusDiv.textContent = L("PDF reader could not load. Please scan the document's photo/screenshot instead.", "PDF reader load नहीं हुआ। Document की photo/screenshot scan करके try करें।"); return; }
@@ -6175,7 +6175,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
                 if (!canvases.length) { finishScanPdf(file, null, null, statusDiv); return; }
                 var ocrAll = "", pending = canvases.length;
                 canvases.forEach(function (c) {
-                  laOcrTimed(c, 60000, function (t) {
+                  laOcrTimed(c, 30000, function (t) {
                     if (t) ocrAll += (ocrAll ? "\n" : "") + t;
                     pending--;
                     if (!pending) {
@@ -6916,7 +6916,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
               var ocrWatch = setTimeout(function () {
                 if (settled) return; settled = true;
                 out.textContent = L("OCR failed. Try a clearer image.", "OCR vifal. Saaf image aazmayein.");
-              }, 60000);
+              }, 30000);
               function ocrDone(txt) {
                 if (settled) return; settled = true; clearTimeout(ocrWatch);
                 out.textContent = txt || L("No text found in image.", "Image mein koi text nahi mila.");
