@@ -1540,6 +1540,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
             <a href="#drafts" role="menuitem" data-i18n="navDrafts">🗂️ Drafts</a>
             <a href="#library" role="menuitem" data-i18n="navLibrary">⚖️ Important Judgement</a>
             <a href="#draft-guide" role="menuitem" data-i18n="navDraftGuide">📋 Draft Guide</a>
+            <button type="button" class="hub-jump" data-hub-tab="links" role="menuitem"><span class="hj-ic" aria-hidden="true">🔗</span><span data-i18n="hubTabLinks">Useful Links</span></button>
             <a href="#notes" role="menuitem" data-i18n="navNotes">📒 Notes</a>
             <a href="#vocabulary" role="menuitem" data-i18n="navVocab">📖 Legal Vocabulary</a>
             <a href="https://indiacode.gov.in/" target="_blank" rel="noopener" role="menuitem">🇮🇳 India Code</a>
@@ -1556,7 +1557,6 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
             <button type="button" class="hub-jump" data-hub-tab="consumer" role="menuitem"><span class="hj-ic" aria-hidden="true">🛒</span><span data-i18n="hubTabConsumer">Consumer</span></button>
             <button type="button" class="hub-jump" data-hub-tab="bar" role="menuitem"><span class="hj-ic" aria-hidden="true">🎓</span><span data-i18n="hubTabBar">AIBE &amp; Bar</span></button>
             <button type="button" class="hub-jump" data-hub-tab="drafts" role="menuitem"><span class="hj-ic" aria-hidden="true">📁</span><span data-i18n="hubTabDrafts">Drafts &amp; Library</span></button>
-            <button type="button" class="hub-jump" data-hub-tab="links" role="menuitem"><span class="hj-ic" aria-hidden="true">🔗</span><span data-i18n="hubTabLinks">Useful Links</span></button>
             <button type="button" class="hub-jump" data-hub-tab="toolkit" role="menuitem"><span class="hj-ic" aria-hidden="true">⚖️</span><span data-i18n="hubTabToolkit">Criminal Toolkit</span></button>
           </div>
         </div>
@@ -1678,6 +1678,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           <span class="live-label" data-i18n="liveSearchLabel">Search live for the latest judgements/orders:</span>
           <a class="live-btn" id="libLiveKanoon" href="https://indiankanoon.org/search/?formInput=latest%20judgements" target="_blank" rel="noopener" data-i18n="liveKanoon">🔍 Indian Kanoon — Live</a>
           <a class="live-btn" id="libLiveGoogle" href="https://www.google.com/search?q=latest%20judgements%20judgement" target="_blank" rel="noopener" data-i18n="liveGoogle">🔍 Google — Live</a>
+          <a class="live-btn" id="libLiveKanoonHi" href="https://indiankanoon-org.translate.goog/search/?formInput=latest%20judgements&_x_tr_sl=en&_x_tr_tl=hi&_x_tr_hl=hi" target="_blank" rel="noopener" data-i18n="liveKanoonHi">🔍 Indian Kanoon — Hindi</a>
         </div>
         <div class="lib-filters reveal">
           <select id="libCourtFilter" class="lib-filter-sel" aria-label="Filter by court">
@@ -1700,6 +1701,83 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           <button type="button" class="vocab-cat" id="libraryMoreBtn" style="font-size:.95rem;padding:12px 32px;"></button>
         </div>
         <p class="library-note reveal" data-i18n="libraryNote">Summaries are brief explainers, not legal advice. Full judgements open on Indian Kanoon, which publishes the complete text of court decisions.</p>
+      </div>
+    </section>
+
+    <section class="library" id="linkDirectory" aria-labelledby="linkDirectory-title">
+      <div class="shell">
+        <div class="library-head reveal">
+          <div>
+            <span class="section-index">02-A</span>
+            <p class="kicker">Links Directory</p>
+            <h2 id="linkDirectory-title">🔗 Judgment &amp; Draft Links. · निर्णय और ड्राफ्ट लिंक।</h2>
+          </div>
+          <p>Every judgment source and draft format, linked from here — nothing is copied onto this site, so it stays small. Links open on their own official or publisher site. / हर निर्णय स्रोत और ड्राफ्ट फॉर्मेट का लिंक यहीं से — कुछ भी इस साइट पर कॉपी नहीं किया गया है, इसलिए साइट हल्की रहती है। लिंक उनकी अपनी आधिकारिक या प्रकाशक साइट पर खुलेंगे।</p>
+        </div>
+        <p class="library-note reveal">For courts whose official judgments page could not be verified, the link opens an Indian Kanoon search for that court. / जिन न्यायालयों का आधिकारिक निर्णय पृष्ठ सत्यापित नहीं हो सका, उनके लिए Indian Kanoon खोज का लिंक दिया गया है।</p>
+        <h3 style="margin:28px 0 10px;font-size:1.05rem;">All-India Search · पूरे भारत में खोज</h3>
+        <div class="live-bar reveal">
+          <a class="live-btn" href="https://indiankanoon.org/" target="_blank" rel="noopener">🔍 Indian Kanoon — Search · इंडियन कानून — खोज</a>
+          <a class="live-btn" href="https://indiankanoon-org.translate.goog/?_x_tr_sl=en&_x_tr_tl=hi&_x_tr_hl=hi" target="_blank" rel="noopener">🔍 Indian Kanoon — Hindi · इंडियन कानून — हिंदी</a>
+        </div>
+        <h3 style="margin:28px 0 10px;font-size:1.05rem;">Supreme Court · सर्वोच्च न्यायालय</h3>
+        <div class="live-bar reveal">
+          <a class="live-btn" href="https://verdictfinder.sci.gov.in" target="_blank" rel="noopener">Supreme Court — Verdict Finder (Search) · सर्वोच्च न्यायालय — वर्डिक्ट फाइंडर (खोज)</a>
+          <a class="live-btn" href="https://www.sci.gov.in/landmark-judgment-summaries/" target="_blank" rel="noopener">Supreme Court — Landmark Summaries · सर्वोच्च न्यायालय — महत्वपूर्ण सारांश</a>
+        </div>
+        <h3 style="margin:28px 0 10px;font-size:1.05rem;">High Courts · उच्च न्यायालय</h3>
+        <div class="live-bar reveal">
+          <a class="live-btn" href="http://elegalix.allahabadhighcourt.in/elegalix/StartWebSearch.do" target="_blank" rel="noopener">Allahabad — Search · इलाहाबाद — खोज</a>
+          <a class="live-btn" href="https://elegalix.allahabadhighcourt.in/elegalix/AllHeadLines.do" target="_blank" rel="noopener">Allahabad — List · इलाहाबाद — सूची</a>
+          <a class="live-btn" href="https://www.bombayhighcourt.nic.in/judfbench.php?auth=am9mbGFnPUomcGFnZW5vPTE=" target="_blank" rel="noopener">Bombay — List · बम्बई — सूची</a>
+          <a class="live-btn" href="https://calcuttahighcourt.gov.in/Order-Judgments?side=P" target="_blank" rel="noopener">Calcutta — Search · कलकत्ता — खोज</a>
+          <a class="live-btn" href="https://edhcr.nic.in/" target="_blank" rel="noopener">Delhi — Search · दिल्ली — खोज</a>
+          <a class="live-btn" href="https://www.mhc.tn.gov.in/judis" target="_blank" rel="noopener">Madras — Search · मद्रास — खोज</a>
+          <a class="live-btn" href="https://karnatakajudiciary.kar.nic.in/case_status.php" target="_blank" rel="noopener">Karnataka — Search · कर्नाटक — खोज</a>
+          <a class="live-btn" href="https://hckinfo.kerala.gov.in/" target="_blank" rel="noopener">Kerala — Search · केरल — खोज</a>
+          <a class="live-btn" href="https://gujarathc-casestatus.nic.in/gujarathc/NCSearch.jsp" target="_blank" rel="noopener">Gujarat — Search · गुजरात — खोज</a>
+          <a class="live-btn" href="https://gujarathighcourt.nic.in/gujaratijudgments" target="_blank" rel="noopener">Gujarat — Gujarati Judgments · गुजरात — गुजराती निर्णय</a>
+          <a class="live-btn" href="https://hcraj.nic.in/hcraj/repJudgments.php?estt=P" target="_blank" rel="noopener">Rajasthan — List · राजस्थान — सूची</a>
+          <a class="live-btn" href="https://highcourtchd.gov.in/" target="_blank" rel="noopener">Punjab &amp; Haryana — Court Site · पंजाब और हरियाणा — कोर्ट साइट</a>
+          <a class="live-btn" href="https://mphc.gov.in/case-status" target="_blank" rel="noopener">Madhya Pradesh — Search · मध्य प्रदेश — खोज</a>
+          <a class="live-btn" href="https://patnahighcourt.gov.in/" target="_blank" rel="noopener">Patna — Court Site · पटना — कोर्ट साइट</a>
+          <a class="live-btn" href="https://hcservices.ecourts.gov.in/" target="_blank" rel="noopener">Orissa — Search · उड़ीसा — खोज</a>
+          <a class="live-btn" href="https://indiankanoon.org/search/?formInput=Jharkhand%20High%20Court%20judgments" target="_blank" rel="noopener">Jharkhand — Indian Kanoon Search · झारखंड — इंडियन कानून खोज</a>
+          <a class="live-btn" href="https://highcourt.cg.gov.in/Afr/index.php" target="_blank" rel="noopener">Chhattisgarh — List · छत्तीसगढ़ — सूची</a>
+          <a class="live-btn" href="https://indiankanoon.org/search/?formInput=Uttarakhand%20High%20Court%20judgments" target="_blank" rel="noopener">Uttarakhand — Indian Kanoon Search · उत्तराखंड — इंडियन कानून खोज</a>
+          <a class="live-btn" href="https://hphighcourt.nic.in/" target="_blank" rel="noopener">Himachal Pradesh — Court Site · हिमाचल प्रदेश — कोर्ट साइट</a>
+          <a class="live-btn" href="https://indiankanoon.org/search/?formInput=Jammu%20Kashmir%20High%20Court%20judgments" target="_blank" rel="noopener">Jammu &amp; Kashmir and Ladakh — Indian Kanoon Search · जम्मू-कश्मीर और लद्दाख — इंडियन कानून खोज</a>
+          <a class="live-btn" href="https://ghconline.gov.in/" target="_blank" rel="noopener">Gauhati — Court Site · गुवाहाटी — कोर्ट साइट</a>
+          <a class="live-btn" href="https://hcmimphal.nic.in/judgmentOption.html" target="_blank" rel="noopener">Manipur — Search · मणिपुर — खोज</a>
+          <a class="live-btn" href="https://hcmimphal.nic.in/judgment_order_translated.html" target="_blank" rel="noopener">Manipur — Translated Orders · मणिपुर — अनुवादित आदेश</a>
+          <a class="live-btn" href="https://mhcapp.meghalayahighcourt.nic.in/v2" target="_blank" rel="noopener">Meghalaya — Search · मेघालय — खोज</a>
+          <a class="live-btn" href="https://thc.nic.in/" target="_blank" rel="noopener">Tripura — Court Site · त्रिपुरा — कोर्ट साइट</a>
+          <a class="live-btn" href="https://tshc.gov.in/ehcr" target="_blank" rel="noopener">Telangana — Search · तेलंगाना — खोज</a>
+          <a class="live-btn" href="https://aphc.gov.in/view.php" target="_blank" rel="noopener">Andhra Pradesh — Search &amp; List · आंध्र प्रदेश — खोज और सूची</a>
+          <a class="live-btn" href="https://hcs.gov.in/hcs/" target="_blank" rel="noopener">Sikkim — List · सिक्किम — सूची</a>
+        </div>
+        <h3 style="margin:28px 0 10px;font-size:1.05rem;">Tribunals · अधिकरण</h3>
+        <div class="live-bar reveal">
+          <a class="live-btn" href="https://cgat.gov.in/" target="_blank" rel="noopener">CAT — Court Site · केंद्रीय प्रशासनिक अधिकरण — कोर्ट साइट</a>
+          <a class="live-btn" href="https://efiling.nclt.gov.in/casehistorybeforeloginmenutrue.drt" target="_blank" rel="noopener">NCLT — Case Search · राष्ट्रीय कंपनी विधि अधिकरण — केस खोज</a>
+          <a class="live-btn" href="https://cestat.gov.in/" target="_blank" rel="noopener">CESTAT — Court Site · सीमा शुल्क अपीलीय अधिकरण — कोर्ट साइट</a>
+          <a class="live-btn" href="https://itat.gov.in/judicial/tribunalorders" target="_blank" rel="noopener">ITAT — Orders · आयकर अपीलीय अधिकरण — आदेश</a>
+          <a class="live-btn" href="https://www.greentribunal.gov.in/judgementOrder/zonalbenchwise" target="_blank" rel="noopener">NGT — Orders · राष्ट्रीय हरित अधिकरण — आदेश</a>
+        </div>
+        <h3 style="margin:28px 0 10px;font-size:1.05rem;">Draft Formats — Outside Links · ड्राफ्ट फॉर्मेट — बाहरी लिंक</h3>
+        <div class="live-bar reveal">
+          <a class="live-btn" href="https://www.sci.gov.in/forms/" target="_blank" rel="noopener">Supreme Court Forms · सर्वोच्च न्यायालय फॉर्म</a>
+          <a class="live-btn" href="https://services.ecourts.gov.in/" target="_blank" rel="noopener">eCourts Forms for Advocates · ई-कोर्ट अधिवक्ता फॉर्म</a>
+          <a class="live-btn" href="https://delhihighcourt.nic.in/web/online-forms-downloadable-forms" target="_blank" rel="noopener">Delhi HC Forms · दिल्ली उच्च न्यायालय फॉर्म</a>
+          <a class="live-btn" href="https://edaakhil.nic.in/eDaakhil/" target="_blank" rel="noopener">e-Daakhil (Consumer) · ई-दाखिल (उपभोक्ता)</a>
+          <a class="live-btn" href="https://nalsa.gov.in/legal-aid/" target="_blank" rel="noopener">NALSA Legal Aid · नालसा विधिक सहायता</a>
+          <a class="live-btn" href="https://delhi.nalsa.gov.in/legal-aid/" target="_blank" rel="noopener">NALSA Legal Aid (Delhi) · नालसा विधिक सहायता (दिल्ली)</a>
+          <a class="live-btn" href="https://www.advocatekhoj.com/library/legalforms/formsfor/index.php?Fno=delhihighcourt.php" target="_blank" rel="noopener">AdvocateKhoj — Delhi HC Forms · एडवोकेट खोज — दिल्ली उच्च न्यायालय फॉर्म</a>
+          <a class="live-btn" href="https://www.advocatekhoj.com/library/legalforms/uttarpradesh/index.php" target="_blank" rel="noopener">AdvocateKhoj — UP Forms · एडवोकेट खोज — उत्तर प्रदेश फॉर्म</a>
+          <a class="live-btn" href="https://www.advocatekhoj.com/library/legalforms/affidavits/index.php?Fno=notices1.php" target="_blank" rel="noopener">AdvocateKhoj — Affidavits &amp; Notices · एडवोकेट खोज — शपथपत्र और नोटिस</a>
+          <a class="live-btn" href="https://www.aaptaxlaw.com/Legal-formats-Suits-affidavits-Criminal-Complaints-Additional-Documents.html" target="_blank" rel="noopener">Aap Tax Law Formats · आप टैक्स लॉ फॉर्मेट</a>
+          <a class="live-btn" href="https://getnyay.in/" target="_blank" rel="noopener">GetNyay · गेट न्याय</a>
+        </div>
       </div>
     </section>
 
@@ -2341,6 +2419,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           liveSearchLabel: "Search live for the latest judgements/orders:",
           liveKanoon: "🔍 Indian Kanoon — Live",
           liveGoogle: "🔍 Google — Live",
+          liveKanoonHi: "🔍 Indian Kanoon — Hindi",
           hubResultJudgements: "Judgements",
           hubResultUpdates: "Legal Updates",
           hubResultLinks: "Links",
@@ -2613,6 +2692,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           liveSearchLabel: "ताज़ा निर्णय/आदेश लाइव खोजें:",
           liveKanoon: "🔍 इंडियन कानून — लाइव",
           liveGoogle: "🔍 गूगल — लाइव",
+          liveKanoonHi: "🔍 इंडियन कानून — हिंदी",
           hubResultJudgements: "निर्णय",
           hubResultUpdates: "कानूनी अपडेट",
           hubResultLinks: "लिंक",
@@ -4425,7 +4505,8 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         var liveQ = (q || "").trim() || query;
         groups.push({ title: t("hubResultLive"), items: [
           { title: t("liveKanoon"), sub: "indiankanoon.org", go: function () { window.open("https://indiankanoon.org/search/?formInput=" + encodeURIComponent(liveQ), "_blank", "noopener"); } },
-          { title: t("liveGoogle"), sub: "google.com", go: function () { window.open("https://www.google.com/search?q=" + encodeURIComponent(liveQ + " judgement"), "_blank", "noopener"); } }
+          { title: t("liveGoogle"), sub: "google.com", go: function () { window.open("https://www.google.com/search?q=" + encodeURIComponent(liveQ + " judgement"), "_blank", "noopener"); } },
+          { title: t("liveKanoonHi"), sub: "indiankanoon.org (Hindi)", go: function () { window.open("https://indiankanoon-org.translate.goog/search/?formInput=" + encodeURIComponent(liveQ) + "&_x_tr_sl=en&_x_tr_tl=hi&_x_tr_hl=hi", "_blank", "noopener"); } }
         ] });
         if (groups.length === 1) {
           box.appendChild(hubEl("div", "hub-no-results", t("hubNoResults")));
@@ -4743,6 +4824,21 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
             ? "\u0915\u094b\u0908 \u0928\u093f\u0930\u094d\u0923\u092f \u0928\u0939\u0940\u0902 \u092e\u093f\u0932\u093e\u0964"
             : "No judgements found.";
           grid.appendChild(empty);
+          var finder = document.createElement("div");
+          finder.style.textAlign = "center";
+          finder.style.marginTop = "12px";
+          var fk = document.createElement("a");
+          fk.className = "live-btn";
+          fk.target = "_blank"; fk.rel = "noopener";
+          fk.href = "https://indiankanoon.org/search/?formInput=" + encodeURIComponent(libQuery);
+          fk.textContent = currentLanguage === "hi" ? "🔍 पूरे भारत के निर्णय Indian Kanoon पर खोजें" : "🔍 Search all-India judgments on Indian Kanoon";
+          var fh = document.createElement("a");
+          fh.className = "live-btn";
+          fh.target = "_blank"; fh.rel = "noopener";
+          fh.href = "https://indiankanoon-org.translate.goog/search/?formInput=" + encodeURIComponent(libQuery) + "&_x_tr_sl=en&_x_tr_tl=hi&_x_tr_hl=hi";
+          fh.textContent = currentLanguage === "hi" ? "🌐 हिंदी में पढ़ें (अनुवादित)" : "🌐 Read in Hindi (translated)";
+          finder.appendChild(fk); finder.appendChild(fh);
+          grid.appendChild(finder);
         }
         if (moreWrap && moreBtn) {
           if (matched > libLimit) {
@@ -4757,12 +4853,13 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
       /* ---------- Library live search deep links ---------- */
       function initLibLiveBar() {
         var input = document.getElementById("librarySectionSearch");
-        var k = document.getElementById("libLiveKanoon"), g = document.getElementById("libLiveGoogle");
-        if (!k || !g) return;
+        var k = document.getElementById("libLiveKanoon"), g = document.getElementById("libLiveGoogle"), h = document.getElementById("libLiveKanoonHi");
+        if (!k || !g || !h) return;
         function upd() {
           var v = (input && input.value ? input.value.trim() : "") || "latest judgements";
           k.href = "https://indiankanoon.org/search/?formInput=" + encodeURIComponent(v);
           g.href = "https://www.google.com/search?q=" + encodeURIComponent(v + " judgement");
+          h.href = "https://indiankanoon-org.translate.goog/search/?formInput=" + encodeURIComponent(v) + "&_x_tr_sl=en&_x_tr_tl=hi&_x_tr_hl=hi";
         }
         if (input) input.addEventListener("input", upd);
         upd();
