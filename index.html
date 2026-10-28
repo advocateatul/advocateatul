@@ -4469,28 +4469,61 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         if (!SR) { micBtn.style.display = "none"; return; }
         var recog = null;
         var listening = false;
+        var voiceMsg = false;
+        function vL(en, hi) { return currentLanguage === "hi" ? hi : en; }
+        function tbox() { return document.getElementById("topSearchResults"); }
+        function showVoiceMsg(text) {
+          var box = tbox();
+          if (!box) return;
+          box.textContent = text;
+          box.hidden = false;
+          voiceMsg = true;
+        }
+        function clearVoiceMsg() {
+          if (!voiceMsg) return;
+          var box = tbox();
+          if (box) { box.textContent = ""; box.hidden = true; }
+          voiceMsg = false;
+        }
         function setListening(on) {
           listening = on;
           micBtn.classList.toggle("listening", on);
           micBtn.setAttribute("aria-pressed", String(on));
-          var label = null;
+          if (on) showVoiceMsg("\uD83C\uDFA4 " + vL("Listening... speak now.", "Sun raha hoon... boliye."));
+        }
+        function voiceErr(err) {
+          var e = err || "";
+          if (e === "not-allowed" || e === "service-not-allowed") return vL("Microphone permission was denied. Allow mic access in your browser/app settings, then try again.", "Mic ki permission nahi mili. Browser/app settings me mic allow karein, phir dobara try karein.");
+          if (e === "no-speech") return vL("Didn't catch that. Please speak again.", "Kuch sunai nahi diya. Kripya dobara boliye.");
+          if (e === "audio-capture") return vL("No microphone found on this device.", "Is device par koi mic nahi mila.");
+          if (e === "network") return vL("Network problem \u2014 voice service failed. Please try again.", "Network problem \u2014 voice service nahi chali. Dobara try karein.");
+          return vL("Voice search failed. Please try again.", "Voice search nahi chala. Dobara try karein.");
         }
         micBtn.addEventListener("click", function () {
-          if (listening) { try { recog.stop(); } catch (e) {} setListening(false); return; }
+          if (listening) { try { recog.stop(); } catch (e) {} setListening(false); clearVoiceMsg(); return; }
           recog = new SR();
           recog.lang = currentLanguage === "hi" ? "hi-IN" : "en-IN";
-          recog.interimResults = false;
+          recog.interimResults = true;
           recog.maxAlternatives = 1;
           recog.onresult = function (ev) {
-            var transcript = ev.results[0][0].transcript;
+            var interim = "", final = "";
+            for (var i = ev.resultIndex; i < ev.results.length; i++) {
+              if (ev.results[i].isFinal) final += ev.results[i][0].transcript;
+              else interim += ev.results[i][0].transcript;
+            }
             var input = document.getElementById("topSearchInput");
-            var tbox = document.getElementById("topSearchResults");
-            if (input) { input.value = transcript; if (tbox) hubSearchAll(transcript, tbox); }
-            setListening(false);
+            var box = tbox();
+            if (final) {
+              if (input) { input.value = final; if (box) hubSearchAll(final, box); }
+              voiceMsg = false;
+              setListening(false);
+            } else if (interim) {
+              if (input) input.value = interim;
+            }
           };
-          recog.onerror = function () { setListening(false); };
+          recog.onerror = function (ev) { setListening(false); showVoiceMsg(voiceErr(ev && ev.error)); };
           recog.onend = function () { setListening(false); };
-          try { recog.start(); setListening(true); } catch (e) { setListening(false); }
+          try { recog.start(); setListening(true); } catch (e) { setListening(false); showVoiceMsg(voiceErr("")); }
         });
       }
 
@@ -5879,6 +5912,11 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           } catch (e) { cb(null); }
         });
       }
+      function laOcrTimed(input, timeoutMs, cb) {
+        var done = false;
+        var to = setTimeout(function () { if (!done) { done = true; cb(null); } }, timeoutMs);
+        laOcr(input, function (t) { if (!done) { done = true; clearTimeout(to); cb(t); } });
+      }
       function laFileToDataUrl(file, cb) {
         var r = new FileReader();
         r.onload = function () { cb(r.result); };
@@ -5980,18 +6018,21 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         if (msg) msg.appendChild(laScanActions(file, best));
       }
       function laScanImage(file, statusDiv) {
-        var ocrText = null, visionText = null, ocrDone = false, visDone = false;
-        function step() { if (ocrDone && visDone) laFinishScan(file, ocrText, visionText, statusDiv); }
-        laOcr(file, function (t) { ocrText = t; ocrDone = true; step(); });
-        laAiGate(function (ok) {
-          if (!ok) { visDone = true; step(); return; }
-          laDownscale(file, function (du) {
+        var ocrText = null, visionText = null, ocrDone = false, visDone = false, finished = false;
+        function finish() { if (!finished) { finished = true; laFinishScan(file, ocrText, visionText, statusDiv); } }
+        var watchdog = setTimeout(finish, 95000);
+        function step() { if (ocrDone && visDone) { clearTimeout(watchdog); finish(); } }
+        laDownscale(file, function (du) {
+          laOcrTimed(du || file, 60000, function (t) { ocrText = t; ocrDone = true; step(); });
+          laAiGate(function (ok) {
+            if (!ok) { visDone = true; step(); return; }
             if (!du) { visDone = true; step(); return; }
-            statusDiv.textContent = L("Photo received — AI is reading the document...", "Photo मिल गई — AI document पढ़ रहा है...");
+            statusDiv.textContent = L("Photo received \u2014 AI is reading the document...", "Photo mil gayi \u2014 AI document padh raha hai...");
             askGeminiVision(du, laScanPrompt(), function (v) { visionText = v; visDone = true; step(); });
           });
         });
       }
+
       function laPdfJs(cb) {
         if (window.__laPdfjs) { cb(window.__laPdfjs); return; }
         import("https://cdn.jsdelivr.net/npm/pdfjs-dist@6.4.299/build/pdf.min.mjs").then(function (mod) {
@@ -6042,7 +6083,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
                 if (!canvases.length) { laFinishScan(file, null, null, statusDiv); return; }
                 var ocrAll = "", pending = canvases.length;
                 canvases.forEach(function (c) {
-                  laOcr(c, function (t) {
+                  laOcrTimed(c, 60000, function (t) {
                     if (t) ocrAll += (ocrAll ? "\n" : "") + t;
                     pending--;
                     if (!pending) {
