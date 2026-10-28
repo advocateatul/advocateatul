@@ -5493,6 +5493,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
             <button type="button" id="laDocCamBtn" class="la-generate">📷 <span data-t-en="Camera Scan" data-t-hi="कैमरा स्कैन">Camera Scan</span></button>
             <button type="button" id="laDocOcrBtn" class="la-generate">🔍 <span data-t-en="Scan Text (OCR)" data-t-hi="टेक्स्ट स्कैन (OCR)">Scan Text (OCR)</span></button>
           </div>
+          <div id="laDocUploadMsg" class="la-empty" hidden></div>
           <div id="laDocOcrOut" class="la-preview" hidden></div>
           <div id="laDocList" class="la-doc-list"></div>
         </div>
@@ -5915,6 +5916,16 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         } else { bar.hidden = true; }
       }
       function laSetCtx(text, name) { LA_SCAN.text = text || ""; LA_SCAN.name = name || "Document"; laCtxRender(); }
+      /* Clears the in-memory chat + scan workspace (used on logout so the next user sees nothing). */
+      window.laClearWorkspace = function () {
+        try {
+          LA_HIST.length = 0;
+          LA_SCAN.text = ""; LA_SCAN.name = "";
+          laCtxRender();
+          var msgs = document.getElementById("laMessages");
+          if (msgs) msgs.textContent = "";
+        } catch (e) {}
+      };
       function laLoadOcr(cb) {
         if (window.Tesseract) { cb(true); return; }
         var s = document.createElement("script");
@@ -6025,7 +6036,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         mk("\uD83D\uDCDD " + L("Summary", "सारांश"), function () { respond(L("Summarise this document in simple words.", "Is document ka saransh saral shabdon me do.")); });
         mk("\uD83D\uDCC5 " + L("Dates & details", "तारीखें व विवरण"), function () { respond(L("List all important dates, names, case numbers and sections in this document.", "Is document ki sabhi zaroori dates, naam, case number aur sections ki list do.")); });
         mk("\uD83C\uDF10 " + L("Translate", "अनुवाद"), function () { respond(laLang() === "hi" ? "Translate this document into English." : "Is document ka Hindi anuvaad karo."); });
-        mk("\uD83D\uDCE5 " + L("Save to My Documents", "My Documents में save करें"), function () { try { laDocUploadFiles([file]); laBotSay(L("Saved to My Documents (Docs tab).", "My Documents (Docs tab) में save हो गया।"), false); } catch (e) {} });
+        mk("\uD83D\uDCE5 " + L("Save to My Documents", "My Documents में save करें"), function () { try { laDocUploadFiles([file]).then(function (r) { laBotSay(r.failed ? L("Could not save this file to My Documents. Please try again.", "Ye file My Documents me save nahi hui. Dobara try karein.") : L("Saved to My Documents (Docs tab).", "My Documents (Docs tab) में save हो गया।"), false); }).catch(function () { laBotSay(L("Could not save this file to My Documents. Please try again.", "Ye file My Documents me save nahi hui. Dobara try karein."), false); }); } catch (e) {} });
         mk("\u2795 " + L("Add to My Cases", "My Cases में जोड़ें"), function () {
           try {
             switchTab("cases");
@@ -6915,13 +6926,19 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           });
         }
         function laDocUploadFiles(files) {
-          var done = 0;
-          Array.prototype.forEach.call(files, function (f) {
-            if (f.size > 25 * 1048576) { done++; return; }
-            laDocSave({ id: "d" + Date.now() + Math.random().toString(36).slice(2, 7), name: f.name, size: f.size, type: f.type, ts: Date.now(), blob: f })
-              .then(function () { done++; if (done === files.length) renderDocList(); });
+          var list = Array.prototype.slice.call(files || []);
+          if (!list.length) { renderDocList(); return Promise.resolve({ saved: 0, failed: 0 }); }
+          var jobs = list.map(function (f) {
+            if (f.size > 25 * 1048576) return Promise.resolve(false);
+            return laDocSave({ id: "d" + Date.now() + Math.random().toString(36).slice(2, 7), name: f.name, size: f.size, type: f.type, ts: Date.now(), blob: f })
+              .then(function () { return true; }, function () { return false; });
           });
-          if (!files.length) renderDocList();
+          return Promise.all(jobs).then(function (results) {
+            var saved = 0, failed = 0;
+            results.forEach(function (ok) { if (ok) saved++; else failed++; });
+            renderDocList();
+            return { saved: saved, failed: failed };
+          });
         }
         function laDocOcr() {
           var inp = document.createElement("input");
@@ -6971,7 +6988,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         var upInp = document.getElementById("laDocUpload");
         if (upBtn && upInp) {
           upBtn.addEventListener("click", function () { upInp.click(); });
-          upInp.addEventListener("change", function () { laDocUploadFiles(upInp.files); upInp.value = ""; });
+          upInp.addEventListener("change", function () { laDocUploadFiles(upInp.files).then(function (r) { var m = document.getElementById("laDocUploadMsg"); if (!m) return; if (r.failed) { m.hidden = false; m.textContent = L("Could not save " + r.failed + " file(s). Please try again.", r.failed + " file save nahi hui. Dobara try karein."); } else { m.hidden = true; } }).catch(function () {}); upInp.value = ""; });
         }
         var ocrBtn = document.getElementById("laDocOcrBtn");
         if (ocrBtn) ocrBtn.addEventListener("click", laDocOcr);
@@ -7154,6 +7171,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
     },
     signOut: function () {
       var self = this;
+      try { window.laClearWorkspace && window.laClearWorkspace(); } catch (e3) {}
       try {
         self.auth.signOut().then(function () { renderAuthBtn(); }).catch(function () {});
       } catch (e) {}
