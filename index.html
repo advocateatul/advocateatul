@@ -1540,7 +1540,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
             <a href="#drafts" role="menuitem" data-i18n="navDrafts">🗂️ Drafts</a>
             <a href="#library" role="menuitem" data-i18n="navLibrary">⚖️ Important Judgement</a>
             <a href="#draft-guide" role="menuitem" data-i18n="navDraftGuide">📋 Draft Guide</a>
-            <button type="button" class="hub-jump" data-hub-tab="links" role="menuitem"><span class="hj-ic" aria-hidden="true">🔗</span><span data-i18n="hubTabLinks">Useful Links</span></button>
+            <a href="#linkDirectory" role="menuitem" data-i18n="hubTabLinks">🔗 Useful Links</a>
             <a href="#notes" role="menuitem" data-i18n="navNotes">📒 Notes</a>
             <a href="#vocabulary" role="menuitem" data-i18n="navVocab">📖 Legal Vocabulary</a>
             <a href="https://indiacode.gov.in/" target="_blank" rel="noopener" role="menuitem">🇮🇳 India Code</a>
@@ -1710,7 +1710,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           <div>
             <span class="section-index">02-A</span>
             <p class="kicker">Links Directory</p>
-            <h2 id="linkDirectory-title">🔗 Judgment &amp; Draft Links. · निर्णय और ड्राफ्ट लिंक।</h2>
+            <h2 id="linkDirectory-title">🔗 Useful Links · उपयोगी लिंक</h2>
           </div>
           <p>Every judgment source and draft format, linked from here — nothing is copied onto this site, so it stays small. Links open on their own official or publisher site. / हर निर्णय स्रोत और ड्राफ्ट फॉर्मेट का लिंक यहीं से — कुछ भी इस साइट पर कॉपी नहीं किया गया है, इसलिए साइट हल्की रहती है। लिंक उनकी अपनी आधिकारिक या प्रकाशक साइट पर खुलेंगे।</p>
         </div>
@@ -1830,9 +1830,6 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           <div class="hub-grid" id="hubDraftsGrid"></div>
         </div>
 
-        <div class="hub-panel" id="hubPanel-links" role="tabpanel" hidden>
-          <div class="hub-grid" id="hubLinksGrid"></div>
-        </div>
 
         <div class="hub-panel" id="hubPanel-toolkit" role="tabpanel" hidden>
           <div class="hub-grid cf-grid">
@@ -3014,7 +3011,6 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         { id: "consumer", labelKey: "hubTabConsumer", panel: "hubPanel-consumer" },
         { id: "bar", labelKey: "hubTabBar", panel: "hubPanel-bar" },
         { id: "drafts", labelKey: "hubTabDrafts", panel: "hubPanel-drafts" },
-        { id: "links", labelKey: "hubTabLinks", panel: "hubPanel-links" },
         { id: "toolkit", labelKey: "hubTabToolkit", panel: "hubPanel-toolkit" },
         { id: "bills", labelKey: "hubTabBills", panel: "hubPanel-bills" },
         { id: "compare", labelKey: "hubTabCompare", panel: "hubPanel-compare" }
@@ -3032,7 +3028,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         { id: "other", labelKey: "hubFilterOther" }
       ];
 
-      var HUB_TAB_ICONS = { acts: "\u{1F4DC}", constitution: "\u{1F4D6}", courts: "\u{1F3DB}\uFE0F", consumer: "\u{1F6D2}", bar: "\u{1F393}", drafts: "\u{1F4C1}", links: "\u{1F517}", toolkit: "\u2696\uFE0F", bills: "\u{1F4C4}", compare: "\u{1F500}" };
+      var HUB_TAB_ICONS = { acts: "\u{1F4DC}", constitution: "\u{1F4D6}", courts: "\u{1F3DB}\uFE0F", consumer: "\u{1F6D2}", bar: "\u{1F393}", drafts: "\u{1F4C1}", toolkit: "\u2696\uFE0F", bills: "\u{1F4C4}", compare: "\u{1F500}" };
       function renderHubTabs() {
         var wrap = document.getElementById("hubTabs");
         if (!wrap) return;
@@ -3173,7 +3169,6 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           { title: t("hubLibraryCardTitle"), desc: t("hubLibraryCardDesc"), actions: [{ label: t("hubOpenSection"), href: "#library" }] },
           { title: t("hubUpdatesCardTitle"), desc: t("hubUpdatesCardDesc"), actions: [{ label: t("hubOpenSection"), href: "#updates" }] }
         ]);
-        fill("hubLinksGrid", (data.recommendedLinks || []).map(function (l) { return linkCard(l); }));
         renderToolkit();
       }
 
