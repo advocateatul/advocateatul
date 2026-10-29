@@ -15,7 +15,7 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
     <style>@media (display-mode: standalone) { #installAppBtn { display: none !important; } } html.appmode.startup .reveal.visible { animation: none !important; }</style><script>try{if(window.matchMedia("(display-mode: standalone)").matches||(document.referrer&&document.referrer.indexOf("android-app://")===0)){document.documentElement.classList.add("appmode","startup");var __rm=function(){document.documentElement.classList.remove("startup")};window.addEventListener("load",function(){setTimeout(__rm,1600)});setTimeout(__rm,4000);}}catch(e){}</script>
   <!-- v163-rebuild -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content" />
   <meta name="color-scheme" content="light dark" />
   <meta name="description" content="Atul Kumar — Criminal Lawyer at Bulandshahr District Court, Uttar Pradesh. Bail matters, criminal defense, cheque bounce (NI Act 138), family disputes, civil litigation. Legal drafts, daily judgements, knowledge hub in Hindi & English." />
   <meta name="keywords" content="criminal lawyer Bulandshahr, advocate Bulandshahr, bail lawyer UP, cheque bounce lawyer, Atul Kumar advocate, Bulandshahr district court lawyer, criminal defense Uttar Pradesh" />
@@ -1065,6 +1065,12 @@
     .la-form { display: flex; gap: 8px; padding: 10px 14px; background: #f9fcff; border-top: 1px solid rgba(0,0,0,.1); }
     .la-form input { flex: 1; height: 42px; border: 2px solid #1e1e1e; border-radius: 999px; padding: 0 16px; font-size: .85rem; outline: none; min-width: 0; }
     .la-form button { width: 42px; height: 42px; flex: 0 0 42px; border: 2px solid #1e1e1e; border-radius: 50%; background: #1e1e1e; color: #F5F5F5; font-size: 1rem; cursor: pointer; }
+    .la-form .la-ctl { display: flex; flex-direction: column; align-items: center; gap: 2px; }
+    .la-form .la-ctl-inp { flex: 1; min-width: 0; align-items: stretch; }
+    .la-form .la-ctl-inp input { width: 100%; flex: none; }
+    .la-form .la-ctl-inp .la-cap { text-align: center; }
+    .la-cap { font-size: 9px; line-height: 1.1; opacity: .7; white-space: nowrap; }
+    .la-meet-micwrap { display: inline-flex; flex-direction: column; align-items: center; gap: 2px; vertical-align: middle; margin-right: 8px; margin-bottom: 8px; }
     #laDetailBtn.la-detail-on { background: #f9fcff; color: #1e1e1e; }
     #laMockBtn.la-mock-on { background: #f9fcff; color: #1e1e1e; }
     .la-ctx { display: flex; align-items: center; gap: 8px; padding: 8px 14px; background: #1e1e1e; color: #F5F5F5; font-size: .78rem; }
@@ -6083,15 +6089,15 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         <div id="laChips" class="la-chips ai-chips"></div>
         <div id="laCtxBar" class="la-ctx" hidden></div>
         <form id="laForm" class="la-form">
-          <button type="button" id="laCamBtn" aria-label="Camera scan">📷</button>
-          <button type="button" id="laAttachBtn" aria-label="Attach document">📎</button>
-          <button type="button" id="laMicBtn" aria-label="Voice input">🎤</button>
-          <button type="button" id="laDetailBtn" aria-label="Detailed research" title="Detailed research / विस्तृत शोध">🔍</button>
-          <button type="button" id="laMockBtn" aria-label="Mock argument" title="Mock argument / मॉक बहस">⚖️</button>
+          <span class="la-ctl"><button type="button" id="laCamBtn" aria-label="Camera scan">📷</button><span class="la-cap" data-la-cap="cam"></span></span>
+          <span class="la-ctl"><button type="button" id="laAttachBtn" aria-label="Attach document">📎</button><span class="la-cap" data-la-cap="attach"></span></span>
+          <span class="la-ctl"><button type="button" id="laMicBtn" aria-label="Voice input">🎤</button><span class="la-cap" data-la-cap="mic"></span></span>
+          <span class="la-ctl"><button type="button" id="laDetailBtn" aria-label="Detailed research" title="Detailed research / विस्तृत शोध">🔍</button><span class="la-cap" data-la-cap="detail"></span></span>
+          <span class="la-ctl"><button type="button" id="laMockBtn" aria-label="Mock argument" title="Mock argument / मॉक बहस">⚖️</button><span class="la-cap" data-la-cap="mock"></span></span>
           <input type="file" id="laCamInput" accept="image/*" capture="environment" hidden>
           <input type="file" id="laFileInput" accept="image/*,.pdf,.txt,.doc,.docx" hidden>
-          <input type="text" id="laInput" autocomplete="off" maxlength="2000" title="Max 2000 characters / अधिकतम 2000 अक्षर" />
-          <button type="submit" aria-label="Send">➤</button>
+          <span class="la-ctl la-ctl-inp"><input type="text" id="laInput" autocomplete="off" maxlength="2000" title="Max 2000 characters / अधिकतम 2000 अक्षर" /><span class="la-cap" data-la-cap="input"></span></span>
+          <span class="la-ctl"><button type="submit" aria-label="Send">➤</button><span class="la-cap" data-la-cap="send"></span></span>
         </form>
               </section>
       <section class="la-pane" id="laPaneDrafting" role="tabpanel" hidden>
@@ -6144,7 +6150,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           <div class="la-ai-draft-head">🎙️ <span id="laMeetTitle">Meeting Assistant</span></div>
           <p class="la-ai-draft-sub" id="laMeetSub">Paste meeting notes — AI makes the summary.</p>
           <textarea id="laMeetInput" rows="4"></textarea>
-          <button type="button" id="laMeetMicBtn" aria-label="Voice note" title="Record voice note" style="font-size:1.3rem;padding:6px 14px;cursor:pointer;border-radius:8px;margin-bottom:8px;">🎤</button>
+          <span class="la-meet-micwrap"><button type="button" id="laMeetMicBtn" aria-label="Voice note" title="Record voice note" style="font-size:1.3rem;padding:6px 14px;cursor:pointer;border-radius:8px;">🎤</button><span class="la-cap" data-la-cap="meetmic"></span></span>
           <button type="button" id="laMeetBtn" class="la-generate">✨ <span id="laMeetBtnTxt">Generate Summary</span></button>
           <div id="laMeetOut" class="la-preview" hidden></div>
           <div id="laMeetActions" class="la-preview-actions" hidden>
@@ -7691,6 +7697,8 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         if (sub) sub.textContent = L("AI Legal Workspace", "AI विधिक कार्यक्षेत्र");
         var inp = document.getElementById("laInput");
         if (inp) inp.placeholder = L("Ask about law, drafts, judgements…", "कानून, ड्राफ्ट, निर्णयों के बारे में पूछें…");
+        var caps = { cam: L("Scan", "स्कैन"), attach: L("Attach", "अटैच"), mic: L("Mic", "माइक"), detail: L("Detail", "विस्तार"), mock: L("Mock", "मॉक"), input: L("Ask", "पूछें"), send: L("Send", "भेजें"), meetmic: L("Voice note", "वॉइस नोट") };
+        document.querySelectorAll("[data-la-cap]").forEach(function (sp) { var k = sp.getAttribute("data-la-cap"); if (caps[k]) sp.textContent = caps[k]; });
         var ds = document.getElementById("laDraftSearch");
         if (ds) ds.placeholder = L("Search 342 drafts…", "342 ड्राफ्ट खोजें…");
         var ct = document.getElementById("laCaseTitle");
@@ -7820,6 +7828,19 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           var inp = document.getElementById("laInput"), v = inp.value.trim();
           if (v) { if (respond(v)) inp.value = ""; }
         });
+        (function () {
+          var vv = window.visualViewport, panelKb = document.getElementById("lawAssistPanel");
+          if (!vv || !panelKb) return;
+          function syncKb() {
+            var kh = Math.max(0, Math.round(window.innerHeight - vv.height - (vv.offsetTop || 0)));
+            if (kh > 40) {
+              panelKb.style.bottom = (84 + kh) + "px";
+              panelKb.style.height = "min(600px, " + Math.max(240, Math.round(vv.height - 120)) + "px)";
+            } else { panelKb.style.bottom = ""; panelKb.style.height = ""; }
+          }
+          vv.addEventListener("resize", syncKb);
+          vv.addEventListener("scroll", syncKb);
+        })();
         (function () {
           var db = document.getElementById("laDetailBtn");
           if (!db) return;
