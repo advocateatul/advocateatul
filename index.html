@@ -1429,6 +1429,10 @@ html[data-theme="dark"] .la-doc-row{background:rgba(255,255,255,.06)}
     #notesReader .nr-hint { text-align: center; font: .8rem var(--sans); color: var(--muted); padding: 0 16px 6px; }
     .notes-print-btn { font: 700 .85rem var(--sans); padding: 10px 22px; border: 1px solid rgba(0,0,0,.25); border-radius: 999px; background: transparent; color: var(--ink); cursor: pointer; margin-bottom: 8px; margin-left: 8px; }
     .notes-print-btn:hover { border-color: #1e1e1e; }
+    .notes-speak-btn { font: 700 .85rem var(--sans); padding: 10px 22px; border: 1px solid rgba(0,0,0,.25); border-radius: 999px; background: transparent; color: var(--ink); cursor: pointer; margin-bottom: 8px; margin-left: 8px; }
+    .notes-speak-btn:hover { border-color: #1e1e1e; }
+    html[data-theme="dark"] .notes-speak-btn { border-color: rgba(255,255,255,.3); }
+    html[data-theme="dark"] .notes-speak-btn:hover { border-color: #f9fcff; }
     html[data-theme="dark"] .notes-print-btn { border-color: rgba(255,255,255,.3); }
     html[data-theme="dark"] .notes-print-btn:hover { border-color: #f9fcff; }
     /* Legal Vocabulary */
@@ -3720,6 +3724,19 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         }
         return out;
       }
+      function notesSpeakTopic(btn) {
+        try {
+          if (!notesOpen || !window.laSpeak) return;
+          var data = getHandwrittenNotes();
+          var topics = data[notesOpen.subj];
+          var topic = topics && topics[notesOpen.ti];
+          if (!topic) return;
+          var lang = notesLang;
+          var text = notesText(topic.title, lang);
+          (topic.points || []).forEach(function (pt) { text += ". " + notesText(pt, lang); });
+          window.laSpeak(text, btn, (lang === "hi" || lang === "hinglish") ? "hi" : "en");
+        } catch (e) {}
+      }
       function notesPrintTopic() {
         try {
           if (!notesOpen) return;
@@ -3815,6 +3832,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         var backLabel = lang === "hi" ? "← सभी टॉपिक" : (lang === "hinglish" ? "← Sabhi topics" : "← All topics");
         var fullLabel = lang === "hi" ? "📖 पूरा पेज पढ़ें" : (lang === "hinglish" ? "📖 Full page padhein" : "📖 Full page");
         var printLabel = lang === "hi" ? "🖨 नोट्स प्रिंट करें" : (lang === "hinglish" ? "🖨 Notes print karein" : "🖨 Print Notes");
+        var speakLabel = lang === "hi" ? "🔊 सुनें" : (lang === "hinglish" ? "🔊 Sunein" : "🔊 Listen");
         var htmlOut = "";
         function indexItem(subj, ti, topic, badge) {
           var title = notesText(topic.title, lang);
@@ -3834,6 +3852,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
             htmlOut += '<button type="button" class="notes-back-btn">' + escapeHtml(backLabel) + "</button>";
             htmlOut += '<button type="button" class="notes-full-btn">' + escapeHtml(fullLabel) + "</button>";
             htmlOut += '<button type="button" class="notes-print-btn">' + escapeHtml(printLabel) + "</button>";
+            if (window.speechSynthesis) htmlOut += '<button type="button" class="notes-speak-btn">' + escapeHtml(speakLabel) + "</button>";
             htmlOut += renderTopicHtml(notesOpen.subj, notesOpen.ti, oTopic, lang, dlLabel);
             container.innerHTML = htmlOut;
             return;
@@ -4038,6 +4057,8 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
             if (fl) { if (notesOpen) notesReaderOpen(notesOpen.subj, notesOpen.ti); return; }
             var prt = (t && t.closest) ? t.closest(".notes-print-btn") : null;
             if (prt) { notesPrintTopic(); return; }
+            var spk = (t && t.closest) ? t.closest(".notes-speak-btn") : null;
+            if (spk) { notesSpeakTopic(spk); return; }
             var item = (t && t.closest) ? t.closest(".notes-index-item") : null;
             if (item) {
               notesOpen = { subj: item.getAttribute("data-subj"), ti: parseInt(item.getAttribute("data-ti"), 10) };
@@ -4919,6 +4940,19 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           if (window.laAskAbout) window.laAskAbout(lang === "hi" ? "Is faisle ke baare me batao: " + nm : "Explain this judgment: " + nm + (item.citation ? " (" + item.citation + ")" : ""));
         });
         card.appendChild(askJ);
+        if (window.speechSynthesis) {
+          var spkJ = document.createElement("button");
+          spkJ.type = "button";
+          spkJ.className = "judgement-ask";
+          spkJ.textContent = lang === "hi" ? "🔊 सुनें" : "🔊 Listen";
+          spkJ.addEventListener("click", function () {
+            if (!window.laSpeak) return;
+            var nm2 = (lang === "hi" && item.caseNameHi) ? item.caseNameHi : item.caseName;
+            var sum2 = (lang === "hi" ? (item.summary.hi || item.summary.en) : item.summary.en) || "";
+            window.laSpeak(nm2 + ". " + sum2, spkJ, lang);
+          });
+          card.appendChild(spkJ);
+        }
         return card;
       }
 
@@ -6672,7 +6706,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
 
       var laBusy = false;
       var laSpeakBtn = null;
-      function laSpeak(text, btn) {
+      function laSpeak(text, btn, langOv) {
         try {
           if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) return false;
           var synth = window.speechSynthesis;
@@ -6688,7 +6722,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           var clean = (text || "").replace(/\*\*/g, "").replace(/^#{1,6}\s?/gm, "").replace(/\s+/g, " ").trim();
           if (!clean) return false;
           var u = new SpeechSynthesisUtterance(clean);
-          u.lang = laLang() === "hi" ? "hi-IN" : "en-IN";
+          u.lang = langOv === "hi" ? "hi-IN" : (langOv === "en" ? "en-IN" : (laLang() === "hi" ? "hi-IN" : "en-IN"));
           var reset = function () { if (btn) btn.textContent = "🔊 " + L("Listen", "सुनें"); if (laSpeakBtn === btn) laSpeakBtn = null; };
           u.onend = reset;
           u.onerror = reset;
@@ -6698,6 +6732,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           return true;
         } catch (e) { return false; }
       }
+      window.laSpeak = laSpeak;
       function respond(q, sysOverride) {
         if (laBusy) return false;
         try { if (window.speechSynthesis) window.speechSynthesis.cancel(); if (laSpeakBtn) laSpeakBtn.textContent = "🔊 " + L("Listen", "सुनें"); laSpeakBtn = null; } catch (e) {}
