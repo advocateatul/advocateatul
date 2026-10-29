@@ -4790,7 +4790,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         var micBtn = document.getElementById("topMicBtn");
         if (!micBtn) return;
         var SR = window.SpeechRecognition || window.webkitSpeechRecognition;
-        if (!SR) { micBtn.style.display = "none"; return; }
+        if (!SR) { micBtn.disabled = true; micBtn.style.opacity = "0.35"; micBtn.title = vL("Voice input not supported in this browser", "Is browser me voice input nahi hai"); micBtn.setAttribute("aria-label", micBtn.title); return; }
         var recog = null;
         var listening = false;
         var silenceTimer = null;
@@ -7403,7 +7403,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         if (attBtn && fileInp) { attBtn.addEventListener("click", function () { fileInp.click(); }); fileInp.addEventListener("change", function () { if (fileInp.files[0]) laScanFile(fileInp.files[0]); fileInp.value = ""; }); }
         var micBtn = document.getElementById("laMicBtn"), micInp = document.getElementById("laInput");
         var SR = window.SpeechRecognition || window.webkitSpeechRecognition;
-        if (micBtn && !SR) micBtn.style.display = "none";
+        if (micBtn && !SR) { micBtn.disabled = true; micBtn.style.opacity = "0.35"; micBtn.title = laLang() === "hi" ? "Is browser me voice input nahi hai" : "Voice input not supported in this browser"; micBtn.setAttribute("aria-label", micBtn.title); }
         if (micBtn && SR && micInp) micBtn.addEventListener("click", function () {
           if (micBtn.dataset.live === "1") return;
           try {
