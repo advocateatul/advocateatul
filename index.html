@@ -6399,8 +6399,8 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
       }
       function laMockSystem(lang) {
         return lang === "hi"
-          ? "आप एक mock court hearing में विरोधी पक्ष के वकील हैं। User अपने पक्ष की तैयारी कर रहा है। User की स्थिति के विरुद्ध सबसे मज़बूत कानूनी counter-arguments दें: संबंधित धाराएँ और वास्तविक, प्रसिद्ध निर्णयों का हवाला दें, user के तर्क की कमज़ोरियाँ बताएँ, और वे आपत्तियाँ उठाएँ जो एक असली विरोधी उठाएगा। उत्तर की संरचना: (1) विरोधी तर्क, (2) दूसरे पक्ष के लिए सबसे मज़बूत धाराएँ व case law, (3) user की स्थिति की कमज़ोरियाँ, (4) एक पंक्ति में user इसका जवाब कैसे दे सकता है। कठोर लेकिन निष्पक्ष रहें — कोई case या धारा गढ़ें नहीं; अनिश्चित हो तो वही लिखें। अगर user ने documents या case share किया है तो उन्हीं तथ्यों से तर्क करें। केवल भारतीय कानून पर उत्तर दें। केवल देवनागरी लिपि में लिखें — रोमन लिपि का बिल्कुल प्रयोग न करें।"
-          : "You are the opposing counsel in a mock court hearing. The user is preparing their side of a case. Argue AGAINST the user's position with the strongest possible legal counter-arguments: cite the relevant sections and real, well-known cases, point out the weaknesses in the user's reasoning, and raise the objections a real opponent would raise. Structure your answer: (1) Opposing argument, (2) Strongest sections and case law for the other side, (3) Weaknesses in the user's position, (4) One line on how the user could counter. Be rigorous but fair — never invent a case or section; if unsure, say so. If the user has shared documents or a case, argue from those facts. Answer ONLY about Indian law.";
+          ? "आप एक mock court hearing में विरोधी पक्ष के वकील हैं। User अपने पक्ष की तैयारी कर रहा है। पहले user की स्थिति को एक पंक्ति में दोहराएँ (Restate), ताकि लगे कि आपने उसे सुना है। फिर उसी स्थिति के विरुद्ध सबसे मज़बूत कानूनी हमला करें, ठीक इसी संरचना में: (1) user का पक्ष — एक पंक्ति में। (2) विरोधी तर्क — संबंधित धाराएँ और वास्तविक, प्रसिद्ध निर्णयों के साथ। (3) user के तर्क की कमज़ोरियाँ — जहाँ चोट पहुँचे वहाँ user के अपने शब्दों को उद्धृत करके दिखाएँ कि वे क्यों कमज़ोर हैं। (4) Cross questions — 2-3 तीखे सवाल जो विरोधी अदालत में user से पूछेगा। (5) Risk rating — user का पक्ष Strong, Moderate या Weak है, एक पंक्ति में कारण सहित, और एक पंक्ति में user इसका जवाब कैसे दे सकता है। कठोर लेकिन निष्पक्ष रहें — कोई case या धारा गढ़ें नहीं; अनिश्चित हो तो वही लिखें। अगर user ने documents या case share किया है तो उन्हीं तथ्यों से तर्क करें। केवल भारतीय कानून पर उत्तर दें। केवल देवनागरी लिपि में लिखें — रोमन लिपि का बिल्कुल प्रयोग न करें।"
+          : "You are the opposing counsel in a mock court hearing. The user is preparing their side of a case. First restate the user's position in one line, so it is clear you listened. Then attack that position with the strongest possible legal case, in exactly this structure: (1) The user's position — one line. (2) Opposing argument — with the relevant sections and real, well-known cases. (3) Weaknesses in the user's position — quote the user's own words back where they hurt, and show why they are weak. (4) Cross questions — 2-3 sharp questions the opponent would ask the user in court. (5) Risk rating — whether the user's position is Strong, Moderate or Weak, with one line of reason, and one line on how the user could counter. Be rigorous but fair — never invent a case or section; if unsure, say so. If the user has shared documents or a case, argue from those facts. Answer ONLY about Indian law.";
       }
       function laScanSystem(lang) {
         return lang === "hi"
@@ -7248,7 +7248,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         if (!window.LA_AUTH || !window.LA_AUTH.ready) { aiChain(draftSys, draftTok, false); }
         else if (!window.LA_AUTH.user) {
           setTimeout(function () {
-            done(builtin.html, builtin.sources, false);
+            done((laMock ? L("Mock argument needs login — showing the built-in answer instead. Login and ask again, and I will argue the other side.", "Mock argument ke liye login zaroori hai — abhi built-in jawab dikha raha hoon. Login karke dobara poochhein, tab main doosre paksh ki dalil dunga.") + "\n\n" : "") + builtin.html, builtin.sources, false);
             window.LA_AUTH.nudgeLogin();
           }, 350);
         } else {
@@ -7840,7 +7840,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
             laMock = !laMock;
             try { localStorage.setItem("laMock", laMock ? "1" : "0"); } catch (e) {}
             syncMock();
-            laBotSay(laMock ? L("Mock argument is ON — I will now argue the other side, with the strongest counter-arguments, so you can practise your reply.", "Mock argument ON hai — ab main doosre paksh ki taraf se sabse mazboot counter-arguments dunga, taaki aap apni bahas ki practice kar sakein.") : L("Mock argument is OFF — answers will be neutral again.", "Mock argument OFF hai — jawab phir neutral milenge."), false);
+            laBotSay(laMock ? L("Mock argument is ON — write your side now (for example: \u201cBail should be granted because...\u201d), and I will argue the other side with counter-arguments and cross questions.", "Mock argument ON hai — ab apna paksh likho (jaise \u201cBail milni chahiye kyunki...\u201d), main doosre paksh ki taraf se counter-arguments aur cross questions dunga.") : L("Mock argument is OFF — answers will be neutral again.", "Mock argument OFF hai — jawab phir neutral milenge."), false);
           });
         })();
         var camBtn = document.getElementById("laCamBtn"), camInp = document.getElementById("laCamInput");
