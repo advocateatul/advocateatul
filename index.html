@@ -798,7 +798,6 @@
     .hub-filter.active { background: #1e1e1e; border-color: #1e1e1e; color: #F5F5F5; }
     .hub-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
     .cf-grid { margin-bottom: 20px; }
-    .cf-grid .hub-card { grid-column: 1 / -1; }
     .cf-panel { border: 1px solid var(--line); border-radius: 16px; background: #f9fcff; padding: 24px 22px; margin: 0 0 28px; animation: hubFade .45s cubic-bezier(0.22, 1, 0.36, 1) both; }
     .cf-panel[hidden] { display: none; }
     .cf-form { display: flex; flex-wrap: wrap; gap: 14px; align-items: flex-end; }
@@ -1851,13 +1850,20 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         <div class="hub-panel" id="hubPanel-toolkit" role="tabpanel" hidden>
           <div class="hub-grid cf-grid">
             <article class="hub-card cf-card">
-              <div class="hub-card-meta"><span class="hub-badge" data-i18n="hubOfficialBadge">Official</span><span id="cfStateBadge">UP · Schedule I</span></div>
-              <h3 data-i18n="cfTitle">🧮 Court Fee Calculator</h3>
-              <p data-i18n="cfDesc">Court fee for civil suits and appeals in Uttar Pradesh and Delhi — Court Fees Act, 1870, Schedule I (ad valorem).</p>
-              <div class="hub-card-actions"><button type="button" class="hub-btn solid" id="cfToggleBtn" data-i18n="cfOpen">Open Calculator</button></div>
+              <div class="hub-card-meta"><span class="hub-badge" data-i18n="hubOfficialBadge">Official</span></div>
+              <h3 data-i18n="cfTitleUP">🏛️ UP Court Fee Calculator</h3>
+              <p data-i18n="cfDescUP">Court fee for civil suits and appeals in Uttar Pradesh — Court Fees Act, 1870, Schedule I (ad valorem, uncapped).</p>
+              <div class="hub-card-actions"><button type="button" class="hub-btn solid" id="cfOpenUPBtn" data-i18n="cfOpen">Open Calculator</button></div>
+            </article>
+            <article class="hub-card cf-card">
+              <div class="hub-card-meta"><span class="hub-badge" data-i18n="hubOfficialBadge">Official</span></div>
+              <h3 data-i18n="cfTitleDelhi">⚖️ Delhi Court Fee Calculator</h3>
+              <p data-i18n="cfDescDelhi">Court fee for civil suits and appeals in Delhi — Court Fees Act, 1870, Schedule I (pre-2012 table, uncapped).</p>
+              <div class="hub-card-actions"><button type="button" class="hub-btn solid" id="cfOpenDelhiBtn" data-i18n="cfOpen">Open Calculator</button></div>
             </article>
           </div>
           <div class="cf-panel" id="cfPanel" hidden>
+            <div class="hub-card-meta"><span id="cfStateBadge">UP · Schedule I</span></div>
             <div class="cf-form">
               <div class="cf-field">
                 <label for="cfState" data-i18n="cfState">State</label>
@@ -2370,6 +2376,10 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           libEraPre: "Before 1950",
           cfTitle: "🧮 Court Fee Calculator",
           cfDesc: "Court fee for civil suits and appeals in Uttar Pradesh and Delhi — Court Fees Act, 1870, Schedule I (ad valorem).",
+          cfTitleUP: "🏛️ UP Court Fee Calculator",
+          cfDescUP: "Court fee for civil suits and appeals in Uttar Pradesh — Court Fees Act, 1870, Schedule I (ad valorem, uncapped).",
+          cfTitleDelhi: "⚖️ Delhi Court Fee Calculator",
+          cfDescDelhi: "Court fee for civil suits and appeals in Delhi — Court Fees Act, 1870, Schedule I (pre-2012 table, uncapped).",
           cfOpen: "Open Calculator",
           cfClose: "Close",
           cfType: "Case / document type",
@@ -2643,6 +2653,10 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           libEraPre: "1950 से पहले",
           cfTitle: "🧮 न्यायालय शुल्क कैलकुलेटर",
           cfDesc: "उत्तर प्रदेश और दिल्ली में सिविल वाद और अपील हेतु न्यायालय शुल्क — न्यायालय शुल्क अधिनियम, 1870, अनुसूची I (मूल्यानुसार)।",
+          cfTitleUP: "🏛️ यूपी कोर्ट फीस कैलकुलेटर",
+          cfDescUP: "उत्तर प्रदेश में दीवानी मुकदमों और अपीलों की कोर्ट फीस — कोर्ट फीस अधिनियम, 1870, अनुसूची I (मूल्यानुसार, बिना सीमा)।",
+          cfTitleDelhi: "⚖️ दिल्ली कोर्ट फीस कैलकुलेटर",
+          cfDescDelhi: "दिल्ली में दीवानी मुकदमों और अपीलों की कोर्ट फीस — कोर्ट फीस अधिनियम, 1870, अनुसूची I (2012 से पहले की तालिका, बिना सीमा)।",
           cfOpen: "कैलकुलेटर खोलें",
           cfClose: "बंद करें",
           cfType: "वाद / दस्तावेज़ का प्रकार",
@@ -3400,18 +3414,24 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         if (totEl) totEl.textContent = "\u20B9" + cfFmt(r.total * factor);
         resEl.hidden = false;
       }
-      (function () {
-        var btn = document.getElementById("cfToggleBtn");
+      function cfOpenState(state) {
+        var stateEl = document.getElementById("cfState");
         var panel = document.getElementById("cfPanel");
-        if (!btn || !panel) return;
-        btn.addEventListener("click", function () {
-          var open = panel.hidden;
-          panel.hidden = !open;
-          btn.setAttribute("data-i18n", open ? "cfClose" : "cfOpen");
-          btn.textContent = t(open ? "cfClose" : "cfOpen");
-          btn.setAttribute("aria-expanded", String(open));
-          if (open) { var inp = document.getElementById("cfValue"); if (inp) inp.focus(); }
-        });
+        if (!stateEl || !panel) return;
+        var wasOpen = !panel.hidden;
+        var sameState = (stateEl.value === state);
+        stateEl.value = state;
+        cfApplyState();
+        panel.hidden = (wasOpen && sameState);
+        if (!panel.hidden) { var inp = document.getElementById("cfValue"); if (inp) inp.focus(); }
+      }
+      (function () {
+        var upBtn = document.getElementById("cfOpenUPBtn");
+        if (upBtn) upBtn.addEventListener("click", function () { cfOpenState("up"); });
+        var dlBtn = document.getElementById("cfOpenDelhiBtn");
+        if (dlBtn) dlBtn.addEventListener("click", function () { cfOpenState("delhi"); });
+        var panel = document.getElementById("cfPanel");
+        if (!panel) return;
         var calcBtn = document.getElementById("cfCalcBtn");
         if (calcBtn) calcBtn.addEventListener("click", cfRender);
         var valEl = document.getElementById("cfValue");
@@ -5906,7 +5926,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
       }
       function laScanSystem(lang) {
         return lang === "hi"
-          ? "Aap LawAssist hain — Advocate Atul Kumar ki website ka AI sahayak. Neeche diye gaye legal document ke text/photo ka poora, structured analysis Hindi me den (Document type, Parties, Case number, zaroori dates, Sections, Summary, agla step). Shabdon ki koi seema nahi — poori jaankari den. Kabhi farzi citation na banayein; jo na mile use 'nahin mila' likhen."
+          ? "आप LawAssist हैं — Advocate Atul Kumar की वेबसाइट के AI सहायक। नीचे दिए गए कानूनी दस्तावेज़ के पाठ/फ़ोटो का पूरा, संरचित विश्लेषण हिंदी में दें (Document type, Parties, Case number, ज़रूरी dates, Sections, Summary, अगला step)। शब्दों की कोई सीमा नहीं — पूरी जानकारी दें। कभी फ़र्ज़ी citation न बनाएं; जो न मिले उसे 'नहीं मिला' लिखें। मार्कडाउन फॉर्मेटिंग का प्रयोग न करें (कोई **, कोई ### नहीं) — सादा पाठ लिखें। केवल देवनागरी लिपि में लिखें — रोमन लिपि का बिल्कुल प्रयोग न करें।"
           : "You are LawAssist — the AI assistant on Advocate Atul Kumar's website. Give a complete, structured analysis of the legal document text/photo below in English (Document type, Parties, Case number, Important dates, Sections, Summary, Next step). There is no word limit — be thorough. Never invent citations; write 'not found' for anything missing.";
       }
       function askGemini(q, lang, cb, sys, tokens) {
@@ -6065,7 +6085,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
       }
       function laBotSay(text, ai) {
         var tag = ai ? "<span class='la-ai-tag'>\u2728 AI</span> " : "";
-        var msgDiv = addMsg(tag + esc(text).replace(/\n/g, "<br>"), "bot");
+        var msgDiv = addMsg(tag + laDraftHtml(text), "bot");
         laHistPush("model", text);
         if (ai && msgDiv) {
           var cp = document.createElement("button");
@@ -6219,21 +6239,22 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         function mk(label, fn) { var b = document.createElement("button"); b.type = "button"; b.textContent = label; b.addEventListener("click", fn); row.appendChild(b); }
         mk("\uD83D\uDCDD " + L("Summary", "सारांश"), function () { respond(L("Summarise this document in simple words.", "Is document ka saransh saral shabdon me do.")); });
         mk("\uD83D\uDCC5 " + L("Dates & details", "तारीखें व विवरण"), function () { respond(L("List all important dates, names, case numbers and sections in this document.", "Is document ki sabhi zaroori dates, naam, case number aur sections ki list do.")); });
-        mk("\uD83C\uDF10 " + L("Translate", "अनुवाद"), function () { respond(laLang() === "hi" ? "Translate this document into English." : "Is document ka Hindi anuvaad karo.", laLang() === "hi" ? "Translate the document text below into accurate English. Keep legal terminology correct. Write only the translation." : "Neeche diye gaye document text ka sahi Hindi anuvaad karo. Kanooni shabdavali sahi rakho. Sirf anuvaad likho."); });
+        mk("\uD83C\uDF10 " + L("Translate", "अनुवाद"), function () { respond(laLang() === "hi" ? "Translate this document into English." : "Is document ka Hindi anuvaad karo.", laLang() === "hi" ? "Translate the document text below into accurate English. Keep legal terminology correct. Write only the translation." : "नीचे दिए गए दस्तावेज़ के पाठ का सही हिंदी अनुवाद करें। कानूनी शब्दावली सही रखें। केवल अनुवाद लिखें। मार्कडाउन फॉर्मेटिंग का प्रयोग न करें — सादा पाठ लिखें। केवल देवनागरी लिपि में लिखें।"); });
         mk("\uD83D\uDCE5 " + L("Save to My Documents", "My Documents में save करें"), function () { try { laDocUploadFiles([file]).then(function (r) { laBotSay(r.failed ? L("Could not save this file to My Documents. Please try again.", "Ye file My Documents me save nahi hui. Dobara try karein.") : L("Saved to My Documents (Docs tab).", "My Documents (Docs tab) में save हो गया।"), false); }).catch(function () { laBotSay(L("Could not save this file to My Documents. Please try again.", "Ye file My Documents me save nahi hui. Dobara try karein."), false); }); } catch (e) {} });
         mk("\u2795 " + L("Add to My Cases", "My Cases में जोड़ें"), function () {
           try {
             switchTab("cases");
             var lines = (text || "").split("\n").filter(function (x) { return x.trim().length > 8; });
             var ti = document.getElementById("laCaseTitle"); if (ti) ti.value = (lines[0] || file.name || "").trim().slice(0, 90);
-            var dt = laFirstDate(text); var di = document.getElementById("laCaseDate"); if (di && dt) di.value = dt;
+            /* Hearing date is never auto-filled here: the first date in a document is rarely the next hearing date (audit item 28) — the user sets it. */
             var ni = document.getElementById("laCaseNotes"); if (ni) ni.value = (text || "").slice(0, 300);
           } catch (e) {}
         });
         return row;
       }
-      function laFinishScan(file, ocrText, visionText, statusDiv) {
+      function laFinishScan(file, ocrText, visionText, statusDiv, note) {
         var limitNote = laLimitHit; laLimitHit = false;
+        var head0 = note ? note + "\n\n" : "";
         var best = ocrText || visionText || "";
         if (!best) {
           statusDiv.textContent = L("Could not read this document. Try a clearer, straight photo in good light.", "Document पढ़ नहीं पाया। साफ़, सीधी photo अच्छी रोशनी में लेकर दोबारा try करें।");
@@ -6242,9 +6263,9 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         laSetCtx(best, file.name || "Document");
         var ta = document.getElementById("laDocsInput");
         if (ta && ocrText && !ta.value) ta.value = ocrText.slice(0, 4000);
-        var head = "";
+        var head = head0;
         if (!visionText) {
-          head = L("Document scanned and attached. Ask me anything about it, or use the buttons below.", "Document scan होकर जुड़ गया है। इसके बारे में कुछ भी पूछिए, या नीचे के button use कीजिए।") + "\n";
+          head += L("Document scanned and attached. Ask me anything about it, or use the buttons below.", "Document scan होकर जुड़ गया है। इसके बारे में कुछ भी पूछिए, या नीचे के button use कीजिए।") + "\n";
           if (!window.LA_AUTH || !window.LA_AUTH.user) head += L("Tip: log in for a full AI analysis of the document.", "Tip: login करने पर document का full AI analysis मिलेगा।") + "\n";
           else if (limitNote) head += L("Note: today's AI limit is reached, so this is the text-only result.", "Note: aaj ki AI limit poori ho gayi hai, isliye ye sirf text wala result hai.") + "\n";
           head += "\n";
@@ -6349,14 +6370,16 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
             return chain.then(function () { return { pdf: pdf, text: texts.join("\n") }; });
           }).then(function (r) {
             var txt = (r.text || "").trim();
+            var truncNote = (r.pdf.numPages > 6) ? L("Note: only the first 6 pages of this PDF were read (the PDF has " + r.pdf.numPages + " pages). For the remaining pages, scan them as photos.", "नोट: इस PDF के केवल पहले 6 पेज पढ़े गए हैं (कुल " + r.pdf.numPages + " पेज हैं)। बाकी पेजों के लिए उनकी photo scan करें।") : "";
             if (txt.length >= 80) {
               laAiGate(function (ok) {
-                if (!ok) { laLimitHit = !!(window.LA_AUTH && window.LA_AUTH.user); finishScanPdf(file, txt, null, statusDiv); return; }
+                if (!ok) { laLimitHit = !!(window.LA_AUTH && window.LA_AUTH.user); finishScanPdf(file, txt, null, statusDiv, truncNote); return; }
                 statusDiv.textContent = L("PDF text extracted — AI is analysing...", "PDF text निकल गया — AI analysis कर रहा है...");
                 var q = (laLang() === "hi" ? "नीचे एक legal document का text है। उसकी जानकारी इस format में दो (Document type, Parties, Case number, ज़रूरी dates, Sections, Summary, अगला step):\n\n" : "Below is the text of a legal document. Give its information in this format (Document type, Parties, Case number, Important dates, Sections, Summary, Next step):\n\n") + txt.slice(0, 7000);
-                aiAsk(q, laLang(), laScanSystem(laLang()), 1000, function (v) { finishScanPdf(file, txt, v, statusDiv); });
+                aiAsk(q, laLang(), laScanSystem(laLang()), 1000, function (v) { finishScanPdf(file, txt, v, statusDiv, truncNote); });
               });
             } else {
+              var truncNoteS = (r.pdf.numPages > 2) ? L("Note: only the first 2 pages of this scanned PDF were read (the PDF has " + r.pdf.numPages + " pages). For the remaining pages, scan them as photos.", "नोट: इस स्कैन किए गए PDF के केवल पहले 2 पेज पढ़े गए हैं (कुल " + r.pdf.numPages + " पेज हैं)। बाकी पेजों के लिए उनकी photo scan करें।") : "";
               var canvases = [], chain2 = Promise.resolve();
               [1, 2].forEach(function (pno) {
                 if (pno > r.pdf.numPages) return;
@@ -6373,15 +6396,19 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
                 if (!canvases.length) { finishScanPdf(file, null, null, statusDiv); return; }
                 var ocrAll = "", pending = canvases.length;
                 canvases.forEach(function (c) {
-                  laOcrTimed(c, 20000, function (t) {
-                    if (t) ocrAll += (ocrAll ? "\n" : "") + t;
-                    pending--;
-                    if (!pending) {
-                      laAiGate(function (ok) {
-                        if (!ok) { laLimitHit = !!(window.LA_AUTH && window.LA_AUTH.user); finishScanPdf(file, ocrAll || null, null, statusDiv); return; }
-                        askGeminiVision(canvases[0].toDataURL("image/jpeg", 0.85), laScanPrompt(), function (v) { finishScanPdf(file, ocrAll || null, v, statusDiv); });
-                      });
-                    }
+                  var du0 = null;
+                  try { du0 = c.toDataURL("image/jpeg", 0.92); } catch (e) {}
+                  laOcrPrep(du0, function (prep) {
+                    laOcrTimed(prep || du0 || c, 20000, function (t) {
+                      if (t) ocrAll += (ocrAll ? "\n" : "") + t;
+                      pending--;
+                      if (!pending) {
+                        laAiGate(function (ok) {
+                          if (!ok) { laLimitHit = !!(window.LA_AUTH && window.LA_AUTH.user); finishScanPdf(file, ocrAll || null, null, statusDiv, truncNoteS); return; }
+                          askGeminiVision(canvases[0].toDataURL("image/jpeg", 0.85), laScanPrompt(), function (v) { finishScanPdf(file, ocrAll || null, v, statusDiv, truncNoteS); });
+                        });
+                      }
+                    });
                   });
                 });
               }).catch(function () { finishScanPdf(file, null, null, statusDiv); });
@@ -6447,8 +6474,14 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
       var LA_AI_DRAFT = { text: "", desc: "" };
       function aiDraftSystem(lang) {
         return lang === "hi"
-          ? "Aap LawAssist hain — Advocate Atul Kumar (criminal lawyer, Bulandshahr District Court, UP) ki website ke AI legal drafting assistant. Neeche diye gaye vivaran par ek aupcharik Bharatiya kanooni dastavej taiyar karen. Niyam: Paramparik Bharatiya nyayalaya format — uchit sheershak, pakshkar, kramankit paragraph, prarthana khand. Naam, tithi, case number aadi jo user ne nahi diye, unke liye [BRACKETED] placeholder rakhen. Sirf draft dastavej likhen, koi vyakhya nahi. Poorn lekin sankshipt (600 shabdon ke andar). Case number ya adesh mat gaden. Hindi me likhen. Ant me ye line joden: 'Dakhil karne me sahayta hetu WhatsApp karen: 7456022448'."
-          : "You are LawAssist — the AI legal drafting assistant on Advocate Atul Kumar's website (criminal lawyer, Bulandshahr District Court, UP). Draft a formal Indian legal document from the description below. Rules: Traditional Indian court format — proper title, parties, numbered paragraphs, prayer clause. Use [BRACKETED] placeholders for names, dates, case numbers and details the user did not give. Write ONLY the draft document, no explanations. Complete but concise (under 600 words). Never invent case numbers or court orders. Write in English. End with the line: 'For filing assistance, WhatsApp: 7456022448'.";
+          ? "आप LawAssist हैं — Advocate Atul Kumar (आपराधिक वकील, बुलंदशहर जिला न्यायालय, उत्तर प्रदेश) की वेबसाइट के AI विधिक प्रारूप सहायक। नीचे दिए गए विवरण पर एक औपचारिक भारतीय कानूनी दस्तावेज़ तैयार करें। नियम: पारंपरिक भारतीय न्यायालय प्रारूप — उचित शीर्षक, पक्षकार, क्रमांकित अनुच्छेद, प्रार्थना खंड। नाम, तिथि, केस नंबर आदि जो उपयोगकर्ता ने नहीं दिए हैं, उनके लिए [BRACKETED] प्लेसहोल्डर रखें — साल भी खुद न लिखें, उसे [वर्ष] रखें। केवल प्रारूप दस्तावेज़ लिखें, कोई व्याख्या नहीं। पूर्ण लेकिन संक्षिप्त (600 शब्दों के अंदर)। केस नंबर या आदेश कभी न गढ़ें। केवल देवनागरी लिपि में लिखें — रोमन लिपि का बिल्कुल प्रयोग न करें। मार्कडाउन फॉर्मेटिंग का प्रयोग न करें (कोई **, कोई ### नहीं) — सादा पाठ लिखें। अंत में यह पंक्ति जोड़ें: 'दाखिल करने में सहायता हेतु WhatsApp करें: 7456022448'।"
+          : "You are LawAssist — the AI legal drafting assistant on Advocate Atul Kumar's website (criminal lawyer, Bulandshahr District Court, UP). Draft a formal Indian legal document from the description below. Rules: Traditional Indian court format — proper title, parties, numbered paragraphs, prayer clause. Use [BRACKETED] placeholders for names, dates, case numbers and details the user did not give. Write ONLY the draft document, no explanations. Complete but concise (under 600 words). Never invent case numbers or court orders. Do not use markdown formatting (no asterisks, no # headings) — plain text only. Never invent the year — leave it as [Year]. Write in English. End with the line: 'For filing assistance, WhatsApp: 7456022448'.";
+      }
+      function laDraftHtml(txt) {
+        var h = esc(txt || "");
+        h = h.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>").replace(/\*\*/g, "");
+        h = h.replace(/^#{1,6}\s?/gm, "");
+        return h.replace(/\n/g, "<br>");
       }
       function aiDraftGenerate() {
         if (window.LA_AUTH && window.LA_AUTH.ready && !window.LA_AUTH.user) { window.LA_AUTH.requireLogin(function () { aiDraftGenerate(); }); return; }
@@ -6462,7 +6495,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           if (!txt) { try { window.LA_AUTH && window.LA_AUTH.refundQuota && window.LA_AUTH.refundQuota(); } catch (e) {} }
           if (txt) {
             LA_AI_DRAFT = { text: txt, desc: desc };
-            out.textContent = txt;
+            out.innerHTML = laDraftHtml(txt);
             acts.hidden = false;
           } else {
             out.textContent = L("AI drafting is unavailable right now. Please try the template drafts below.", "AI ड्राफ्टिंग अभी उपलब्ध नहीं है। कृपया नीचे दिए गए टेम्पलेट ड्राफ्ट आज़माएं।");
@@ -6474,7 +6507,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         } else doDraftAsk();
       }
       function aiDraftDocHTML() {
-        var body = esc(LA_AI_DRAFT.text).replace(/\n/g, "<br>");
+        var body = laDraftHtml(LA_AI_DRAFT.text);
         var title = L("AI Draft", "AI ड्राफ्ट") + " — " + LA_AI_DRAFT.desc.slice(0, 60);
         return "<!DOCTYPE html><html><head><meta charset=\"utf-8\"><title>" + esc(title) + "</title><style>body{font-family:Georgia,serif;max-width:720px;margin:40px auto;padding:0 20px;line-height:1.8;color:#111}h1{font-size:1.3rem;text-align:center;margin-bottom:30px}.doc{white-space:pre-wrap}.foot{margin-top:40px;text-align:center;font-size:.8rem;color:#444444;border-top:1px solid #ccc;padding-top:12px}</style></head><body><h1>" + esc(title) + "</h1><div class=\"doc\">" + body + "</div><div class=\"foot\">A.K Legal Law — Advocate Atul Kumar, Bulandshahr<br>" + esc(L("Generated with LawAssist", "LawAssist द्वारा तैयार")) + "</div></body></html>";
       }
@@ -6515,7 +6548,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           laBusy = false;
           try { thinking && thinking.parentNode && thinking.parentNode.removeChild(thinking); } catch (e2) {}
           var tag = ai ? "<span class='la-ai-tag'>\u2728 AI</span> " : "";
-          var msgDiv = addMsg(tag + esc(html).replace(/\n/g, "<br>"), "bot", sources, ai);
+          var msgDiv = addMsg(tag + laDraftHtml(html), "bot", sources, ai);
           laChatSave("bot", html);
           laHistPush("model", html);
           if (ai && msgDiv) {
@@ -6555,6 +6588,20 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
               });
               msgDiv.appendChild(dd);
             }
+          }
+          if (!ai && msgDiv) {
+            var cp2 = document.createElement("button");
+            cp2.type = "button"; cp2.className = "la-copy";
+            cp2.textContent = "\uD83D\uDCCB " + L("Copy", "कॉपी");
+            cp2.addEventListener("click", function () {
+              var okTxt2 = "\u2713 " + L("Copied", "कॉपी हुआ");
+              try {
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                  navigator.clipboard.writeText(html).then(function () { cp2.textContent = okTxt2; }, function () {});
+                }
+              } catch (e) {}
+            });
+            msgDiv.appendChild(cp2);
           }
           try {
             var arr = JSON.parse(localStorage.getItem("laMissed") || "[]");
@@ -6728,17 +6775,17 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
       /* ---------------- Documents (AI document tools) ---------------- */
       function docSystem(lang, mode) {
         var base = lang === "hi"
-          ? "Aap LawAssist hain — Advocate Atul Kumar ki website ke AI document assistant. "
+          ? "आप LawAssist हैं — Advocate Atul Kumar की वेबसाइट के AI दस्तावेज़ सहायक। "
           : "You are LawAssist — the AI document assistant on Advocate Atul Kumar's website. ";
         if (mode === "sum") return base + (lang === "hi"
-          ? "Neeche diye gaye kanooni text ka sankshipt saransh Hindi me den (150 shabdon ke andar). Sirf saransh likhen, koi vyakhya nahi."
-          : "Summarise the legal text below in under 150 words. Write only the summary, no explanations.");
+          ? "नीचे दिए गए कानूनी पाठ का संक्षिप्त सारांश हिंदी में दें (150 शब्दों के अंदर)। केवल सारांश लिखें, कोई व्याख्या नहीं। मार्कडाउन फॉर्मेटिंग का प्रयोग न करें (कोई **, कोई ### नहीं) — सादा पाठ लिखें। केवल देवनागरी लिपि में लिखें।"
+          : "Summarise the legal text below in under 150 words. Write only the summary, no explanations. Do not use markdown formatting (no asterisks, no # headings) — plain text only.");
         if (mode === "tr") return base + (lang === "hi"
-          ? "Neeche diye gaye English kanooni text ka sahi Hindi anuvad karen. Kanooni shabdavali sahi rakhen. Sirf anuvad likhen."
-          : "Translate the Hindi legal text below into accurate English. Keep legal terminology correct. Write only the translation.");
+          ? "नीचे दिए गए अंग्रेज़ी कानूनी पाठ का सही हिंदी अनुवाद करें। कानूनी शब्दावली सही रखें। केवल अनुवाद लिखें। मार्कडाउन फॉर्मेटिंग का प्रयोग न करें — सादा पाठ लिखें। केवल देवनागरी लिपि में लिखें।"
+          : "Translate the Hindi legal text below into accurate English. Keep legal terminology correct. Write only the translation. Do not use markdown formatting — plain text only.");
         return base + (lang === "hi"
-          ? "Neeche diye gaye text ke mukhya bindu sankhya suchi me Hindi me den. Sirf suchi likhen."
-          : "List the key points of the text below as a numbered list. Write only the list.");
+          ? "नीचे दिए गए पाठ के मुख्य बिंदु संख्या सूची में हिंदी में दें। केवल सूची लिखें। मार्कडाउन फॉर्मेटिंग का प्रयोग न करें (कोई **, कोई ### नहीं) — सादा पाठ लिखें। केवल देवनागरी लिपि में लिखें।"
+          : "List the key points of the text below as a numbered list. Write only the list. Do not use markdown formatting (no asterisks, no # headings) — plain text only.");
       }
       function docProcess(mode) {
         if (window.LA_AUTH && window.LA_AUTH.ready && !window.LA_AUTH.user) { window.LA_AUTH.requireLogin(function () { docProcess(mode); }); return; }
@@ -6751,7 +6798,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         var trLang = (mode === "tr") ? (/[\u0900-\u097F]/.test(txt) ? "en" : "hi") : lang;
         var doDocAsk = function () { aiAsk(txt.slice(0, 4000), trLang, docSystem(trLang, mode), 600, function (res) {
           if (!res) { try { window.LA_AUTH && window.LA_AUTH.refundQuota && window.LA_AUTH.refundQuota(); } catch (e) {} }
-          if (res) { out.textContent = res; acts.hidden = false; }
+          if (res) { out.innerHTML = laDraftHtml(res); acts.hidden = false; }
           else out.textContent = L("Document processing is unavailable right now.", "दस्तावेज़ प्रसंस्करण अभी उपलब्ध नहीं है।");
           try { out.scrollIntoView({ block: "nearest" }); } catch (e) {}
         }); };
@@ -6770,8 +6817,8 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
       var LA_MEET_TXT = "";
       function meetSystem(lang) {
         return lang === "hi"
-          ? "Aap LawAssist hain — Advocate Atul Kumar ki website ke AI meeting assistant. Neeche diye gaye meeting notes ka structured summary Hindi me banayen: 1) मुख्य बिंदु 2) कार्यवाही — kaun kya karega 3) अगले चरण. Sankshipt aur spasht likhen."
-          : "You are LawAssist — the AI meeting assistant on Advocate Atul Kumar's website. Make a structured summary of the meeting notes below in English: 1) Key points 2) Action items — who does what 3) Next steps. Keep it concise and clear.";
+          ? "आप LawAssist हैं — Advocate Atul Kumar की वेबसाइट के AI मीटिंग सहायक। नीचे दिए गए मीटिंग नोट्स का संरचित सारांश हिंदी में बनाएं: 1) मुख्य बिंदु 2) कार्यवाही — कौन क्या करेगा 3) अगले चरण। संक्षिप्त और स्पष्ट लिखें। सीधे सारांश लिखें, कोई अभिवादन या प्रस्तावना नहीं। मार्कडाउन फॉर्मेटिंग का प्रयोग न करें (कोई **, कोई ### नहीं) — सादा पाठ लिखें। केवल देवनागरी लिपि में लिखें — रोमन लिपि का बिल्कुल प्रयोग न करें।"
+          : "You are LawAssist — the AI meeting assistant on Advocate Atul Kumar's website. Make a structured summary of the meeting notes below in English: 1) Key points 2) Action items — who does what 3) Next steps. Keep it concise and clear. Write the summary directly, no greeting or preamble. Do not use markdown formatting (no asterisks, no # headings) — plain text only.";
       }
       function meetGenerate() {
         if (window.LA_AUTH && window.LA_AUTH.ready && !window.LA_AUTH.user) { window.LA_AUTH.requireLogin(function () { meetGenerate(); }); return; }
@@ -6783,7 +6830,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         out.innerHTML = "<span class='la-dots'><span></span><span></span><span></span></span>";
         var doMeetAsk = function () { aiAsk(txt.slice(0, 4000), lang, meetSystem(lang), 600, function (res) {
           if (!res) { try { window.LA_AUTH && window.LA_AUTH.refundQuota && window.LA_AUTH.refundQuota(); } catch (e) {} }
-          if (res) { LA_MEET_TXT = res; out.textContent = res; acts.hidden = false; }
+          if (res) { LA_MEET_TXT = res.replace(/\*\*/g, "").replace(/^#{1,6}\s?/gm, ""); out.innerHTML = laDraftHtml(res); acts.hidden = false; }
           else out.textContent = L("Meeting summary is unavailable right now.", "मीटिंग सारांश अभी उपलब्ध नहीं है।");
           try { out.scrollIntoView({ block: "nearest" }); } catch (e) {}
         }); };
@@ -6843,7 +6890,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
             return diff >= 0 && diff <= 2;
           });
           if (urgent.length && "Notification" in window) {
-            var key = "laNotif_" + today0.toISOString().slice(0, 10);
+            var key = "laNotif_" + today0.getFullYear() + "-" + ("0" + (today0.getMonth() + 1)).slice(-2) + "-" + ("0" + today0.getDate()).slice(-2);
             if (!localStorage.getItem(key)) {
               localStorage.setItem(key, "1");
               var show = function () {
@@ -6867,7 +6914,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           e.textContent = L("No cases yet. Add your first case above — LawAssist will keep track of hearing dates.", "अभी कोई केस नहीं। ऊपर अपना पहला केस जोड़ें — LawAssist सुनवाई तिथियों का ध्यान रखेगा।");
           list.appendChild(e); return;
         }
-        var today = new Date().toISOString().slice(0, 10);
+        var _td = new Date(); var today = _td.getFullYear() + "-" + ("0" + (_td.getMonth() + 1)).slice(-2) + "-" + ("0" + _td.getDate()).slice(-2);
         cases.forEach(function (c) {
           var div = document.createElement("div");
           div.className = "la-case" + (c.nextDate && c.nextDate <= today ? " soon" : "");
@@ -7040,7 +7087,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           arr.slice(-40).forEach(function (m) {
             if (!m || !m.text) return;
             if (m.who === "user") addMsg(esc(m.text), "user");
-            else addMsg(esc(m.text).replace(/\n/g, "<br>"), "bot");
+            else addMsg(laDraftHtml(m.text), "bot");
           });
           return true;
         } catch (e) { return false; }
@@ -7264,18 +7311,22 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
                 out.textContent = txt || L("No text found in image.", "Image mein koi text nahi mila.");
                 if (txt) {
                   var ta = document.getElementById("laDocsInput");
-                  if (ta) ta.value = txt.slice(0, 4000);
+                  if (ta && !ta.value) ta.value = txt.slice(0, 4000);
                 }
               }
               function ocrFail() {
                 if (settled) return; settled = true; clearTimeout(ocrWatch);
                 out.textContent = L("OCR failed. Try a clearer image.", "OCR vifal. Saaf image aazmayein.");
               }
-              try {
-                Tesseract.recognize(f, "eng+hin").then(function (r) {
-                  ocrDone(((r && r.data && r.data.text) || "").trim());
-                }).catch(function () { ocrFail(); });
-              } catch (e) { ocrFail(); }
+              laFileToDataUrl(f, function (du) {
+                laOcrPrep(du, function (prep) {
+                  try {
+                    Tesseract.recognize(prep || du || f, "eng+hin").then(function (r) {
+                      ocrDone(((r && r.data && r.data.text) || "").trim());
+                    }).catch(function () { ocrFail(); });
+                  } catch (e) { ocrFail(); }
+                });
+              });
             }
             if (window.Tesseract) { run(); return; }
             var s = document.createElement("script");
@@ -7348,7 +7399,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
 {"id":"bns-trespass-329","q":["trespass","अतिक्रमण","ghuspaith","house trespass","जबरन घुसना"],"a":{"en":"Criminal trespass: Sec. 329 BNS (up to 3 months jail and/or ₹5,000 fine). House-trespass: Sec. 331 BNS (up to 2 years). Lurking house-trespass by night: Sec. 332-333 BNS (up to 7-10 years).","hi":"आपराधिक अतिक्रमण: धारा 329 BNS (3 माह तक कारावास और/या ₹5,000 जुर्माना)। गृह-अतिचार: धारा 331 BNS (2 वर्ष तक)। रात्रि में छिपकर गृह-अतिचार: धारा 332-333 BNS (7-10 वर्ष तक)।"},"drafts":["fir-direction-173","temp-injunction"]},
 {"id":"bns-defamation-356","q":["defamation","मानहानि","badnami","slander","libel"],"a":{"en":"Defamation: Sec. 356 BNS (up to 2 years jail and/or fine). Exceptions: truth for public good, fair comment on public conduct, court reports. Civil suit for damages is also possible.","hi":"मानहानि: धारा 356 BNS (2 वर्ष तक कारावास और/या जुर्माना)। अपवाद: लोकहित में सत्य, लोक आचरण पर निष्पक्ष टिप्पणी, न्यायालय रिपोर्ट। हर्जाने हेतु दीवानी वाद भी संभव है।"},"drafts":["legal-notice-general","recovery-suit"]},
 {"id":"bns-kidnap-137","q":["kidnapping","अपहरण","abduction","bachcha gayab","child missing"],"a":{"en":"Kidnapping: Sec. 137 BNS (up to 7 years). Kidnapping for ransom: Sec. 140 BNS (death/life imprisonment). Abduction: Sec. 138 BNS. File FIR immediately under Sec. 173 BNSS; also approach SP/Magistrate if police don't act.","hi":"अपहरण: धारा 137 BNS (7 वर्ष तक)। फिरौती हेतु अपहरण: धारा 140 BNS (मृत्यु/आजीवन कारावास)। व्यपहरण: धारा 138 BNS। धारा 173 BNSS के अधीन तुरंत FIR दर्ज कराएं; पुलिस कार्रवाई न करे तो SP/मजिस्ट्रेट के पास जाएं।"},"drafts":["fir-direction-173","habeas-corpus-226"]},
-{"id":"bnss-fir-173","q":["fir procedure","fir kaise likhe","fir format","zero fir","जीरो fir","e-fir"],"a":{"en":"FIR (Sec. 173 BNSS): Give written info to the officer-in-charge of the police station. You get a free copy — it's your right. Zero FIR can be filed at ANY police station regardless of jurisdiction. E-FIR facility is available in many states for certain offences. If refused: write to SP, then apply to Magistrate under Sec. 175(3) BNSS.","hi":"FIR (धारा 173 BNSS): थाने के प्रभारी अधिकारी को लिखित सूचना दें। निःशुल्क प्रति पाना आपका अधिकार है। जीरो FIR किसी भी थाने में दर्ज हो सकती है, क्षेत्राधिकार की परवाह किए बिना। कई राज्यों में कुछ अपराधों हेतु ई-FIR सुविधा है। इनकार पर: SP को लिखें, फिर धारा 175(3) BNSS के अधीन मजिस्ट्रेट के पास आवेदन करें।"},"drafts":["fir-direction-173","complaint-magistrate-175"]},
+{"id":"bnss-fir-173","q":["fir procedure","fir kaise likhe","fir format","zero fir","जीरो fir","e-fir","how to file fir","fir kaise file kare","fir kaise darj kare","how to register fir","fir darj karne ka tarika"],"a":{"en":"FIR (Sec. 173 BNSS): Give written info to the officer-in-charge of the police station. You get a free copy — it's your right. Zero FIR can be filed at ANY police station regardless of jurisdiction. E-FIR facility is available in many states for certain offences. If refused: write to SP, then apply to Magistrate under Sec. 175(3) BNSS.","hi":"FIR (धारा 173 BNSS): थाने के प्रभारी अधिकारी को लिखित सूचना दें। निःशुल्क प्रति पाना आपका अधिकार है। जीरो FIR किसी भी थाने में दर्ज हो सकती है, क्षेत्राधिकार की परवाह किए बिना। कई राज्यों में कुछ अपराधों हेतु ई-FIR सुविधा है। इनकार पर: SP को लिखें, फिर धारा 175(3) BNSS के अधीन मजिस्ट्रेट के पास आवेदन करें।"},"drafts":["fir-direction-173","complaint-magistrate-175"]},
 {"id":"bnss-arrest-35","q":["arrest rights","गिरफ्तारी के अधिकार","police arrest","arrest procedure","गिरफ्तार"],"a":{"en":"On arrest (Sec. 35-47 BNSS): Police must inform grounds of arrest, allow informing a relative/friend, produce before Magistrate within 24 hours (Sec. 187 BNSS), allow medical examination, and provide free legal aid if indigent. Arrest memo must be signed. Women cannot be arrested after sunset/before sunrise except in exceptional circumstances with Magistrate's permission.","hi":"गिरफ्तारी पर (धारा 35-47 BNSS): पुलिस को गिरफ्तारी के आधार बताने होंगे, रिश्तेदार/मित्र को सूचित करने दें, 24 घंटे में मजिस्ट्रेट के समक्ष पेश करें (धारा 187 BNSS), चिकित्सा परीक्षण की अनुमति दें, और निर्धन को निःशुल्क विधिक सहायता दें। गिरफ्तारी मेमो पर हस्ताक्षर आवश्यक। महिलाओं की सूर्यास्त के बाद/सूर्योदय से पहले गिरफ्तारी वर्जित, सिवाय असाधारण परिस्थिति में मजिस्ट्रेट की अनुमति के।"},"drafts":["remand-objection-187","anticipatory-bail","medical-examination-53"]},
 {"id":"bnss-remand-187","q":["remand","रिमांड","police custody","पुलिस हिरासत","judicial custody","न्यायिक हिरासत","14 days"],"a":{"en":"Remand (Sec. 187 BNSS): Police custody max 15 days total; judicial custody up to 60 days (offences punishable ≤10 years) or 90 days (punishable with death/life/10+ years). If chargesheet isn't filed in time, the accused gets DEFAULT BAIL as of right. Always oppose remand with written objections.","hi":"रिमांड (धारा 187 BNSS): पुलिस हिरासत कुल अधिकतम 15 दिन; न्यायिक हिरासत 60 दिन (10 वर्ष तक दंडनीय अपराध) या 90 दिन (मृत्यु/आजीवन/10+ वर्ष दंडनीय)। समय पर आरोपपत्र दाखिल न हो तो अभियुक्त को डिफॉल्ट जमानत अधिकार के रूप में मिलती है। रिमांड का लिखित आपत्ति से विरोध करें।"},"drafts":["remand-objection-187","default-bail-187"]},
 {"id":"bnss-chargesheet-193","q":["chargesheet","आरोपपत्र","challan","चालान","investigation time","जांच समय"],"a":{"en":"Chargesheet (Sec. 193 BNSS): Police must complete investigation and file the report within the remand period (60/90 days). The accused gets free copies of all documents (Sec. 230 BNSS). Further investigation is possible even after chargesheet (Sec. 193(9) BNSS).","hi":"आरोपपत्र (धारा 193 BNSS): पुलिस को रिमांड अवधि (60/90 दिन) में जांच पूर्ण कर रिपोर्ट दाखिल करनी होगी। अभियुक्त को सभी दस्तावेजों की निःशुल्क प्रतियां मिलती हैं (धारा 230 BNSS)। आरोपपत्र के बाद भी अग्रिम जांच संभव है (धारा 193(9) BNSS)।"},"drafts":["further-investigation-193","criminal-appeal"]},
