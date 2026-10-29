@@ -7082,6 +7082,9 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
       }
       function loadMeets() { try { return JSON.parse(localStorage.getItem("lawAssistMeets") || "[]"); } catch (e) { return []; } }
       function saveMeets(m) { try { localStorage.setItem("lawAssistMeets", JSON.stringify(m)); } catch (e) {} }
+      function laConfirmDel(msg) {
+        try { return window.confirm(msg); } catch (e) { return false; }
+      }
       function renderMeets() {
         var list = document.getElementById("laMeetList");
         if (!list) return;
@@ -7100,7 +7103,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           pv.textContent = m.text.slice(0, 300);
           var rm = document.createElement("button"); rm.type = "button"; rm.className = "la-copy";
           rm.textContent = "✕ " + L("Remove", "हटाएं");
-          rm.addEventListener("click", function () { var a = loadMeets(); a.splice(idx, 1); saveMeets(a); renderMeets(); });
+          rm.addEventListener("click", function () { if (!laConfirmDel(L("Remove this meeting?", "Ye meeting hatayein?"))) return; var a = loadMeets(); a.splice(idx, 1); saveMeets(a); renderMeets(); });
           div.appendChild(st); div.appendChild(pv); div.appendChild(rm);
           list.appendChild(div);
         });
@@ -7203,6 +7206,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
             var tx2 = document.createElement("span"); tx2.className = "la-note-text"; tx2.textContent = en2.text;
             var dx2 = document.createElement("button"); dx2.type = "button"; dx2.className = "la-note-del"; dx2.textContent = "\u00D7"; dx2.setAttribute("aria-label", "Delete note");
             dx2.addEventListener("click", function () {
+              if (!laConfirmDel(L("Delete this note?", "Ye note delete karein?"))) return;
               var all2 = loadCases();
               for (var q2 = 0; q2 < all2.length; q2++) { if (all2[q2].id === c.id && Array.isArray(all2[q2].notesLog)) { all2[q2].notesLog.splice(idx2, 1); saveCases(all2); break; } }
               renderCases();
@@ -7235,7 +7239,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           div.appendChild(logBox);
           var del = document.createElement("button");
           del.type = "button"; del.className = "la-case-del"; del.textContent = L("Remove", "हटाएं");
-          del.addEventListener("click", function () { saveCases(loadCases().filter(function (x) { return x.id !== c.id; })); renderCases(); });
+          del.addEventListener("click", function () { if (!laConfirmDel(L("Delete this case and all its notes permanently?", "Ye case aur uske saare notes hamesha ke liye delete karein?"))) return; saveCases(loadCases().filter(function (x) { return x.id !== c.id; })); renderCases(); });
           div.appendChild(del);
           list.appendChild(div);
         });
@@ -7524,7 +7528,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
               });
               var rm = document.createElement("button"); rm.type = "button"; rm.className = "la-case-del"; rm.textContent = "\u2715";
               rm.setAttribute("aria-label", L("Remove", "Hatayein"));
-              rm.addEventListener("click", function () { laDocDelete(d.id).then(renderDocList); });
+              rm.addEventListener("click", function () { if (laConfirmDel(L("Delete this document permanently?", "Ye dastavez hamesha ke liye delete karein?"))) laDocDelete(d.id).then(renderDocList); });
               row.appendChild(nm); row.appendChild(sz); row.appendChild(dl); row.appendChild(rm);
               list.appendChild(row);
             });
