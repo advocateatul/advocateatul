@@ -2307,6 +2307,74 @@
     "en": "Electronic Record Certificate (Sec 63(4) BSA)",
     "hi": "इलेक्ट्रॉनिक रिकॉर्ड प्रमाणपत्र (धारा 63(4) BSA)"
    }
+  },
+  {
+   "title": {
+    "en": "Judicial Notice (Sec 52-55 BSA)",
+    "hi": "न्यायिक नोटिस (धारा 52-55 BSA)"
+   },
+   "sections": "Sec 52-55 BSA (Sec 56-58 IEA)",
+   "cases": "",
+   "points": [
+    {
+     "en": "Judicial notice means the court accepts certain facts WITHOUT any proof — because they are so well-known or officially recorded that asking for evidence would be pointless.",
+     "hi": "न्यायिक नोटिस का मतलब है कि न्यायालय कुछ तथ्यों को बिना किसी सबूत के मान लेता है — क्योंकि वे इतने प्रसिद्ध या आधिकारिक रूप से दर्ज होते हैं कि सबूत माँगना बेकार होगा।"
+    },
+    {
+     "en": "The court MUST take judicial notice of: laws in force in India, Acts of Parliament and State legislatures, Gazette notifications, and seals of courts and the government.",
+     "hi": "न्यायालय को इनका न्यायिक नोटिस लेना ही होगा: भारत में लागू कानून, संसद और राज्य विधानमंडलों के अधिनियम, गजट अधिसूचनाएँ, और न्यायालयों व सरकार की मुहरें।"
+    },
+    {
+     "en": "Facts the parties themselves admit need no proof either — if both sides agree a fact is true, the court simply records it and moves on.",
+     "hi": "जिन तथ्यों को दोनों पक्ष स्वयं स्वीकार कर लें, उनका भी सबूत नहीं चाहिए — अगर दोनों पक्ष किसी बात पर सहमत हैं, तो न्यायालय उसे दर्ज करके आगे बढ़ जाता है।"
+    },
+    {
+     "en": "Judicial notice is different from presumption: in notice, the court KNOWS the fact itself; in presumption, the court only ASSUMES it until someone disproves it.",
+     "hi": "न्यायिक नोटिस और उपधारणा (presumption) में फर्क है: नोटिस में न्यायालय तथ्य को खुद जानता है; उपधारणा में वह उसे सिर्फ तब तक मानता है जब तक कोई उसे गलत साबित न कर दे।"
+    },
+    {
+     "en": "In arguments, you can invite the court to take judicial notice — \"My Lord may take judicial notice of the Gazette notification dated...\" — it saves the time of proving official documents.",
+     "hi": "बहस में आप न्यायालय से न्यायिक नोटिस लेने का निवेदन कर सकते हैं — \"माननीय न्यायालय गजट अधिसूचना का न्यायिक नोटिस ले\" — इससे आधिकारिक दस्तावेज़ साबित करने का समय बचता है।"
+    },
+    {
+     "en": "The limit: only clear, undoubted facts qualify. A disputed fact — one the other side genuinely contests — can never be judicially noticed; the judge will refuse and ask for proof.",
+     "hi": "सीमा यह है: सिर्फ साफ और निर्विवाद तथ्य ही इसके दायरे में आते हैं। कोई विवादित तथ्य — जिसे दूसरा पक्ष सच में चुनौती दे रहा हो — उसका न्यायिक नोटिस कभी नहीं लिया जा सकता; न्यायाधीश मना करके सबूत माँगेगा।"
+    }
+   ]
+  },
+  {
+   "title": {
+    "en": "Estoppel (Sec 121-123 BSA)",
+    "hi": "एस्टॉपल (धारा 121-123 BSA)"
+   },
+   "sections": "Sec 121-123 BSA (Sec 115-117 IEA)",
+   "cases": "",
+   "points": [
+    {
+     "en": "Estoppel is the rule that stops a person from \"blowing hot and cold\" — if by your words, act or silence you made someone believe something, and they acted on that belief, you cannot later deny it.",
+     "hi": "एस्टॉपल वह नियम है जो किसी व्यक्ति को \"दो मुँह की बात\" करने से रोकता है — अगर आपके शब्दों, काम या चुप्पी से किसी ने कुछ सच मान लिया और उसी पर काम किया, तो आप बाद में उससे मुकर नहीं सकते।"
+    },
+    {
+     "en": "Section 121 states the general rule: when one person intentionally causes another to believe a thing to be true and to act upon that belief, the first person cannot deny its truth in any suit.",
+     "hi": "धारा 121 सामान्य नियम बताती है: जब कोई व्यक्ति जानबूझकर दूसरे को किसी बात पर विश्वास दिलाता है और दूसरा उस पर अमल करता है, तो पहला व्यक्ति किसी मुकदमे में उस बात की सच्चाई से इनकार नहीं कर सकता।"
+    },
+    {
+     "en": "Section 122 is about tenants and licensees: a tenant cannot deny that the landlord had the title to the property at the beginning of the tenancy, and a licensee cannot deny the licensor's title.",
+     "hi": "धारा 122 किरायेदारों और लाइसेंसधारियों के बारे में है: किरायेदार इस बात से इनकार नहीं कर सकता कि किरायेदारी की शुरुआत में मकान मालिक के पास संपत्ति का हक था, और लाइसेंसधारी लाइसेंस देने वाले के हक से इनकार नहीं कर सकता।"
+    },
+    {
+     "en": "Section 123 covers bills of exchange and bailment: the acceptor of a bill cannot deny the drawer's authority to draw it, and a bailee or licensee cannot deny the bailor's or licensor's title.",
+     "hi": "धारा 123 विनिमय-पत्र और उपनिधान (bailment) के बारे में है: बिल स्वीकार करने वाला यह इनकार नहीं कर सकता कि बिल बनाने वाले को उसे बनाने का अधिकार था, और उपनिधाता या लाइसेंसधारी उपनिधाता या लाइसेंस देने वाले के हक से इनकार नहीं कर सकता।"
+    },
+    {
+     "en": "Estoppel is a rule of evidence, not a cause of action — it only blocks a denial; it does not by itself create a right where none exists.",
+     "hi": "एस्टॉपल सबूत का नियम है, वाद का कारण नहीं — यह सिर्फ इनकार को रोकता है; अपने आप में यह कोई ऐसा अधिकार पैदा नहीं करता जो मौजूद ही न हो।"
+    },
+    {
+     "en": "Do not confuse admission with estoppel: an admission can still be explained or contradicted later, but estoppel shuts the door — once the other side has relied on your stand, you cannot take the opposite stand.",
+     "hi": "स्वीकृति (admission) और एस्टॉपल को गड्डमड्ड मत करो: स्वीकृति को बाद में समझाया या खंडित किया जा सकता है, लेकिन एस्टॉपल दरवाज़ा बंद कर देता है — एक बार दूसरा पक्ष आपके रुख पर भरोसा कर ले, तो आप उल्टा रुख नहीं अपना सकते।"
+    }
+   ]
   }
  ],
  "cpc": [
@@ -2889,6 +2957,142 @@
     "en": "Review, Revision & Reference (Sec 113-115 CPC)",
     "hi": "पुनर्विलोकन, पुनरीक्षण और निर्देश (धारा 113-115 CPC)"
    }
+  },
+  {
+   "title": {
+    "en": "Section 89 — Settlement of Disputes Outside Court (ADR)",
+    "hi": "धारा 89 — अदालत के बाहर विवाद निपटारा (ADR)"
+   },
+   "sections": "Sec 89 CPC (with Order X Rule 1A)",
+   "cases": "Afcons Infrastructure Ltd. v. Cherian Varkey Construction Co. (Sec 89 & mediation)",
+   "points": [
+    {
+     "en": "Section 89 CPC is the court's ADR door: when a case looks fit for settlement, the court can send the parties outside the courtroom — to arbitration, conciliation, judicial settlement (Lok Adalat), or mediation.",
+     "hi": "धारा 89 CPC न्यायालय का ADR द्वार है: जब कोई मामला सुलह के लायक लगे, तो न्यायालय पक्षों को अदालत के बाहर भेज सकता है — मध्यस्थता (arbitration), सुलह (conciliation), न्यायिक समझौता (लोक अदालत), या मध्यस्थता-सुलह (mediation) के लिए।"
+    },
+    {
+     "en": "Order X Rule 1A makes the court consider ADR first: after pleadings are complete, the judge asks whether the dispute can be settled without a full trial.",
+     "hi": "आदेश X नियम 1A न्यायालय को पहले ADR पर विचार करने को कहता है: अभिवचन पूरे होने के बाद न्यायाधीश पूछता है कि क्या विवाद बिना पूरी सुनवाई के सुलझ सकता है।"
+    },
+    {
+     "en": "The four paths differ: arbitration gives a binding award from a private judge; conciliation has a conciliator helping the parties agree; mediation has a mediator helping the parties reach their OWN settlement; Lok Adalat settlements become a decree of the court, with no appeal.",
+     "hi": "चारों रास्ते अलग हैं: arbitration में निजी न्यायाधीश का बाध्यकारी निर्णय होता है; conciliation में सुलहकार पक्षों को सहमत होने में मदद करता है; mediation में मध्यस्थ पक्षों को अपना खुद का समझौता करने में मदद करता है; लोक अदालत का समझौता न्यायालय की डिक्री बन जाता है, जिस पर अपील नहीं होती।"
+    },
+    {
+     "en": "Why courts push ADR: it is faster, cheaper, and it keeps relationships alive — and it cuts the huge pendency of cases.",
+     "hi": "न्यायालय ADR को बढ़ावा क्यों देते हैं: यह तेज़ है, सस्ता है, और रिश्तों को बचा लेता है — और मामलों के भारी बोझ को कम करता है।"
+    },
+    {
+     "en": "The Afcons case (2010) gave the working rules: arbitration, conciliation and mediation need the consent of both sides, but the court can refer a case to Lok Adalat or judicial settlement on its own assessment that settlement is possible.",
+     "hi": "एफकॉन्स मामला (2010) ने कामकाजी नियम दिए: arbitration, conciliation और mediation के लिए दोनों पक्षों की सहमति चाहिए, लेकिन न्यायालय लोक अदालत या न्यायिक समझौते के लिए अपने आकलन से मामला भेज सकता है कि समझौता संभव है।"
+    },
+    {
+     "en": "Practical tip: if your client's real goal is money or a workable compromise rather than a long fight, ask for Section 89 referral early — it often ends the matter in months, not years.",
+     "hi": "व्यावहारिक सलाह: अगर आपके मुवक्किल का असली लक्ष्य लंबी लड़ाई नहीं बल्कि पैसा या कामकाजी समझौता है, तो धारा 89 के तहत रेफरल जल्दी माँगो — इससे मामला अक्सर सालों की बजाय महीनों में खत्म हो जाता है।"
+    }
+   ]
+  },
+  {
+   "title": {
+    "en": "Restitution (Sec 144 CPC)",
+    "hi": "प्रत्यास्थापन (धारा 144 CPC)"
+   },
+   "sections": "Sec 144 CPC",
+   "cases": "",
+   "points": [
+    {
+     "en": "Restitution means putting the parties back where they were before a decree or order that later got varied or reversed in appeal — undoing what the wrong order did.",
+     "hi": "प्रत्यास्थापन (restitution) का मतलब है पक्षों को उस स्थिति में वापस लाना जहाँ वे उस डिक्री या आदेश से पहले थे जिसे बाद में अपील में बदला या पलटा गया — गलत आदेश के असर को खत्म करना।"
+    },
+    {
+     "en": "The principle is simple: the act of the court shall prejudice no man. If you lost money or property only because a court order said so, and that order turns out to be wrong, the court must repair the harm.",
+     "hi": "सिद्धांत सीधा है: न्यायालय के काम से किसी का अहित नहीं होना चाहिए। अगर आपने पैसा या संपत्ति सिर्फ इसलिए खोई क्योंकि न्यायालय के आदेश ने कहा था, और वह आदेश गलत निकला, तो न्यायालय को नुकसान की भरपाई करनी होगी।"
+    },
+    {
+     "en": "Classic example: the decree-holder executes the decree and takes the money; the appeal reverses the decree — the court orders the money back, with interest where needed.",
+     "hi": "क्लासिक उदाहरण: डिक्री-धारक डिक्री का निष्पादन करके पैसा ले लेता है; अपील में डिक्री पलट जाती है — न्यायालय पैसा वापस करने का आदेश देता है, ज़रूरत पड़ने पर ब्याज सहित।"
+    },
+    {
+     "en": "You apply under Section 144 to the same court that passed the original decree — no separate suit is needed for restitution.",
+     "hi": "आप धारा 144 के तहत उसी न्यायालय में आवेदन करते हैं जिसने मूल डिक्री पारित की थी — प्रत्यास्थापन के लिए अलग मुकदमा ज़रूरी नहीं है।"
+    },
+    {
+     "en": "Restitution runs between the parties to the case: a genuine outsider who bought property in good faith during execution is usually protected, and cannot simply be stripped of it.",
+     "hi": "प्रत्यास्थापन मामले के पक्षों के बीच चलता है: निष्पादन के दौरान सद्भाव से संपत्ति खरीदने वाला असली बाहरी व्यक्ति आमतौर पर सुरक्षित रहता है, उससे संपत्ति यूँ ही नहीं छीनी जा सकती।"
+    },
+    {
+     "en": "Practical point: file the Section 144 application promptly after the reversal — delay weakens the claim, and the court can also award compensation for loss caused by the wrong execution.",
+     "hi": "व्यावहारिक बात: पलटने के तुरंत बाद धारा 144 का आवेदन दाखिल करो — देरी दावे को कमज़ोर करती है, और न्यायालय गलत निष्पादन से हुए नुकसान के लिए मुआवज़ा भी दे सकता है।"
+    }
+   ]
+  },
+  {
+   "title": {
+    "en": "Death, Marriage & Insolvency of Parties (Order XXII CPC)",
+    "hi": "पक्षों की मृत्यु, विवाह व दिवालिया (आदेश XXII CPC)"
+   },
+   "sections": "Order XXII CPC (death, marriage & insolvency of parties)",
+   "cases": "",
+   "points": [
+    {
+     "en": "When a party dies, marries, or becomes insolvent DURING a suit, the suit does not automatically die — Order XXII decides who continues and how.",
+     "hi": "जब मुकदमे के दौरान कोई पक्ष मर जाता है, शादी कर लेता है, या दिवालिया हो जाता है, तो मुकदमा अपने आप खत्म नहीं होता — आदेश XXII तय करता है कि कौन आगे बढ़ेगा और कैसे।"
+    },
+    {
+     "en": "On death: if the right to sue survives, the legal representatives (heirs) of the deceased are brought on record — the application must come within 90 days (Limitation Act, Article 120), or the suit abates against that party.",
+     "hi": "मृत्यु पर: अगर मुकदमा करने का अधिकार बचा रहता है, तो मृतक के विधिक प्रतिनिधियों (वारिसों) को रिकॉर्ड पर लाया जाता है — आवेदन 90 दिनों के अंदर आना चाहिए (परिसीमा अधिनियम, अनुच्छेद 120), वरना उस पक्ष के खिलाफ मुकदमा समाप्त (abatement) हो जाता है।"
+    },
+    {
+     "en": "Abatement is not always final: if there was sufficient cause for the delay, the court can set aside the abatement and let the heirs come on record.",
+     "hi": "समाप्ति हमेशा अंतिम नहीं होती: अगर देरी का पर्याप्त कारण था, तो न्यायालय समाप्ति को रद्द करके वारिसों को रिकॉर्ड पर आने दे सकता है।"
+    },
+    {
+     "en": "The pleader has a duty: under Order XXII Rule 10A, the advocate must inform the court when a party dies — hiding it helps nobody.",
+     "hi": "वकील का कर्तव्य है: आदेश XXII नियम 10A के तहत वकील को न्यायालय को बताना होगा जब कोई पक्ष मर जाए — इसे छिपाने से किसी का भला नहीं होता।"
+    },
+    {
+     "en": "On marriage or insolvency, the suit continues: in insolvency, the Official Receiver or assignee steps in wherever the right to sue passes to them.",
+     "hi": "शादी या दिवालिया होने पर मुकदमा जारी रहता है: दिवालिया होने पर आधिकारिक प्राप्तकर्ता (Official Receiver) या समनुदेशिती वहाँ कदम रखता है जहाँ मुकदमा करने का अधिकार उसे मिल जाता है।"
+    },
+    {
+     "en": "Practical warning: the moment you learn a party has died, start the 90-day clock — missing it can kill an otherwise winning claim.",
+     "hi": "व्यावहारिक चेतावनी: जैसे ही पता चले कि कोई पक्ष मर गया है, 90 दिन की घड़ी शुरू कर दो — इसे चूकना एक जीतने वाले दावे को भी मार सकता है।"
+    }
+   ]
+  },
+  {
+   "title": {
+    "en": "Suits by Indigent Persons (Order XXXIII CPC)",
+    "hi": "निर्धन व्यक्तियों के मुकदमे (आदेश XXXIII CPC)"
+   },
+   "sections": "Order XXXIII CPC (suits by indigent persons)",
+   "cases": "",
+   "points": [
+    {
+     "en": "A person too poor to pay court fee can still sue — as an \"indigent person\". Order XXXIII is the door to court for the poor.",
+     "hi": "न्यायालय शुल्क देने में असमर्थ गरीब व्यक्ति भी मुकदमा कर सकता है — \"निर्धन व्यक्ति\" (indigent person) के रूप में। आदेश XXXIII गरीबों के लिए अदालत का दरवाज़ा है।"
+    },
+    {
+     "en": "The test: the applicant must not possess sufficient means (beyond property exempt from attachment) to pay the fee. The court holds an inquiry, can examine the applicant, and can reject the application if it is not in order, shows no cause of action, or the person actually has means.",
+     "hi": "कसौटी: आवेदक के पास शुल्क देने के लिए पर्याप्त साधन (कुर्की से छूट वाली संपत्ति के अलावा) नहीं होने चाहिए। न्यायालय जाँच करता है, आवेदक से पूछताछ कर सकता है, और अगर आवेदन सही ढंग से न बना हो, उसमें वाद-कारण न दिखे, या व्यक्ति के पास वास्तव में साधन हों, तो उसे खारिज कर सकता है।"
+    },
+    {
+     "en": "If allowed, no court fee is charged upfront — the suit proceeds like any other suit.",
+     "hi": "अगर अनुमति मिल जाए, तो पहले कोई न्यायालय शुल्क नहीं लिया जाता — मुकदमा आम मुकदमों की तरह चलता है।"
+    },
+    {
+     "en": "If the plaintiff wins, the court fee is recovered as the court directs (usually from the decree or the defendant).",
+     "hi": "अगर वादी जीत जाए, तो न्यायालय शुल्क न्यायालय के निर्देशानुसार वसूला जाता है (आमतौर पर डिक्री या प्रतिवादी से)।"
+    },
+    {
+     "en": "If the plaintiff loses or the suit is dismissed, the court can still order the plaintiff to pay the fee — indigence is a deferral, not always a waiver.",
+     "hi": "अगर वादी हार जाए या मुकदमा खारिज हो जाए, तो भी न्यायालय वादी को शुल्क देने का आदेश दे सकता है — निर्धनता स्थगन है, हमेशा छूट नहीं।"
+    },
+    {
+     "en": "Note the difference from legal aid: NALSA legal aid gives a free lawyer; Order XXXIII only deals with court fee. A poor client may need both.",
+     "hi": "विधिक सहायता से फर्क समझो: नालसा विधिक सहायता मुफ्त वकील देती है; आदेश XXXIII सिर्फ न्यायालय शुल्क से जुड़ा है। गरीब मुवक्किल को दोनों की ज़रूरत पड़ सकती है।"
+    }
+   ]
   }
  ],
  "majorActs": [
@@ -3631,6 +3835,142 @@
     "en": "POCSO Act, 2012 — Special Courts & Child-Friendly Procedure",
     "hi": "पॉक्सो अधिनियम, 2012 — विशेष न्यायालय और बाल-अनुकूल प्रक्रिया"
    }
+  },
+  {
+   "title": {
+    "en": "Domestic Violence Act, 2005 — Protection of Women",
+    "hi": "घरेलू हिंसा अधिनियम, 2005 — महिलाओं का संरक्षण"
+   },
+   "sections": "Protection of Women from Domestic Violence Act, 2005 (Sec 12, 17-22)",
+   "cases": "S.R. Batra v. Taruna Batra (shared household)",
+   "points": [
+    {
+     "en": "The Protection of Women from Domestic Violence Act, 2005 gives a woman a CIVIL remedy against domestic violence — it is not itself a criminal trial, though breaking a protection order becomes a crime under Section 31.",
+     "hi": "घरेलू हिंसा से महिलाओं का संरक्षण अधिनियम, 2005 महिला को घरेलू हिंसा के खिलाफ दीवानी उपाय देता है — यह अपने आप में आपराधिक मुकदमा नहीं है, हालाँकि संरक्षण आदेश तोड़ना धारा 31 के तहत अपराध बन जाता है।"
+    },
+    {
+     "en": "Who can complain: an \"aggrieved person\" — a woman in a domestic relationship: wife, live-in partner, mother, sister. Violence includes physical, sexual, verbal and emotional, and economic abuse.",
+     "hi": "शिकायत कौन कर सकती है: \"पीड़ित व्यक्ति\" — घरेलू रिश्ते में रहने वाली महिला: पत्नी, लिव-इन पार्टनर, माँ, बहन। हिंसा में शारीरिक, यौन, मौखिक और भावनात्मक, और आर्थिक दुर्व्यवहार शामिल है।"
+    },
+    {
+     "en": "The shared household and the right to reside (Section 17): a woman cannot be thrown out of the shared household, even if she does not own it.",
+     "hi": "साझा घर और रहने का अधिकार (धारा 17): महिला को साझा घर से बाहर नहीं निकाला जा सकता, भले ही वह उसकी मालिक न हो।"
+    },
+    {
+     "en": "The Magistrate can pass: protection orders (18), residence orders (19), monetary relief (20), custody orders (21), and compensation orders (22).",
+     "hi": "मजिस्ट्रेट ये आदेश दे सकता है: संरक्षण आदेश (18), निवास आदेश (19), आर्थिक राहत (20), अभिरक्षा आदेश (21), और मुआवज़ा आदेश (22)।"
+    },
+    {
+     "en": "Help is built in: Protection Officers and service providers help file the application (Section 12) and arrange shelter and medical aid.",
+     "hi": "मदद की व्यवस्था है: संरक्षण अधिकारी और सेवा प्रदाता आवेदन (धारा 12) दाखिल करने में मदद करते हैं और आश्रय व चिकित्सा सहायता का इंतज़ाम करते हैं।"
+    },
+    {
+     "en": "S.R. Batra (2007): \"shared household\" means the house where the woman actually lived in the domestic relationship — not every property owned by the in-laws where she never lived.",
+     "hi": "एस.आर. बत्रा (2007): \"साझा घर\" का मतलब वह घर है जहाँ महिला वास्तव में घरेलू रिश्ते में रही थी — ससुराल की हर संपत्ति नहीं जहाँ वह कभी रही ही नहीं।"
+    }
+   ]
+  },
+  {
+   "title": {
+    "en": "Juvenile Justice Act, 2015 — Children in Conflict with Law",
+    "hi": "किशोर न्याय अधिनियम, 2015 — विधि से संघर्षरत बच्चे"
+   },
+   "sections": "Juvenile Justice (Care and Protection of Children) Act, 2015",
+   "cases": "",
+   "points": [
+    {
+     "en": "The Juvenile Justice (Care and Protection of Children) Act, 2015 covers every child below 18 — with two separate tracks.",
+     "hi": "किशोर न्याय (बालकों की देखरेख और संरक्षण) अधिनियम, 2015 18 साल से कम के हर बच्चे पर लागू होता है — दो अलग रास्तों के साथ।"
+    },
+    {
+     "en": "A child in conflict with law (accused of an offence) goes before the Juvenile Justice Board; a child in need of care and protection goes before the Child Welfare Committee.",
+     "hi": "विधि से संघर्षरत बच्चा (अपराध का आरोपी) किशोर न्याय बोर्ड के सामने जाता है; देखरेख और संरक्षण की ज़रूरत वाला बच्चा बाल कल्याण समिति के सामने जाता है।"
+    },
+    {
+     "en": "For heinous offences by 16–18-year-olds, the Board first does a preliminary assessment: the child's mental and physical capacity and the circumstances of the offence. Only if the Board finds the child can be tried as an adult does the case go to the Children's Court.",
+     "hi": "16–18 साल के बच्चों के जघन्य अपराधों के लिए बोर्ड पहले प्रारंभिक आकलन करता है: बच्चे की मानसिक और शारीरिक क्षमता और अपराध की परिस्थितियाँ। सिर्फ अगर बोर्ड पाता है कि बच्चे पर वयस्क की तरह मुकदमा चल सकता है, तभी मामला बाल न्यायालय (Children's Court) जाता है।"
+    },
+    {
+     "en": "No death penalty and no life imprisonment without release for children — the whole Act leans towards reform: counselling, probation, and fit institutions, not punishment.",
+     "hi": "बच्चों के लिए न मृत्युदंड है, न बिना रिहाई वाला आजीवन कारावास — पूरा अधिनियम सुधार की ओर झुका है: परामर्श, परिवीक्षा, और उपयुक्त संस्थाएँ, सज़ा नहीं।"
+    },
+    {
+     "en": "The Act also covers adoption (through CARA and specialised adoption agencies) and offences against children, like cruelty (Section 75).",
+     "hi": "यह अधिनियम दत्तक ग्रहण (कारा और विशेष दत्तक एजेंसियों के माध्यम से) और बच्चों के खिलाफ अपराधों, जैसे क्रूरता (धारा 75), को भी कवर करता है।"
+    },
+    {
+     "en": "Practical point: age proof decides everything — school records come first, and medical age determination only when documents are missing. Get the age record right at the start.",
+     "hi": "व्यावहारिक बात: उम्र का सबूत सब कुछ तय करता है — स्कूल रिकॉर्ड पहले आते हैं, और चिकित्सा उम्र निर्धारण सिर्फ तब जब दस्तावेज़ न हों। शुरुआत में ही उम्र का रिकॉर्ड सही कर लो।"
+    }
+   ]
+  },
+  {
+   "title": {
+    "en": "Prevention of Corruption Act, 1988 — Bribery by Public Servants",
+    "hi": "भ्रष्टाचार निवारण अधिनियम, 1988 — लोक सेवकों की रिश्वत"
+   },
+   "sections": "Prevention of Corruption Act, 1988 (as amended 2018) (Sec 7, 13, 17A)",
+   "cases": "P. Satyanarayana Murthy v. District Inspector of Police (demand & acceptance must be proved)",
+   "points": [
+    {
+     "en": "The Prevention of Corruption Act, 1988 is the main anti-bribery law for public servants.",
+     "hi": "भ्रष्टाचार निवारण अधिनियम, 1988 लोक सेवकों के लिए मुख्य रिश्वत-विरोधी कानून है।"
+    },
+    {
+     "en": "Section 7 is the core offence: taking a gratification (a bribe) for doing, or not doing, an official act.",
+     "hi": "धारा 7 मुख्य अपराध है: किसी आधिकारिक काम को करने या न करने के लिए परितोषण (रिश्वत) लेना।"
+    },
+    {
+     "en": "Section 13 covers criminal misconduct — including possessing assets disproportionate to known sources of income.",
+     "hi": "धारा 13 आपराधिक कदाचार को कवर करती है — जिसमें आय के ज्ञात स्रोतों से अनुपातहीन संपत्ति रखना भी शामिल है।"
+    },
+    {
+     "en": "The 2018 amendment added Section 17A: before even INVESTIGATING a public servant for a decision taken in office, prior approval is needed — protection against harassment, but also a real hurdle for complainants.",
+     "hi": "2018 के संशोधन ने धारा 17A जोड़ी: किसी लोक सेवक के खिलाफ उसके पद पर लिए गए फैसले के लिए जाँच शुरू करने से पहले भी पूर्व अनुमति चाहिए — उत्पीड़न से सुरक्षा, लेकिन शिकायतकर्ताओं के लिए एक असली बाधा भी।"
+    },
+    {
+     "en": "The 2018 amendment also brought companies in: a commercial organisation can be punished for bribing (Section 9), so businesses need real anti-bribery procedures.",
+     "hi": "2018 के संशोधन ने कंपनियों को भी दायरे में लाया: वाणिज्यिक संगठन रिश्वत देने के लिए दंडित हो सकता है (धारा 9), इसलिए व्यवसायों को असली रिश्वत-विरोधी प्रक्रिया चाहिए।"
+    },
+    {
+     "en": "Proof rule from P. Satyanarayana Murthy (2015): mere recovery of money from the accused is not enough — the prosecution must prove DEMAND and ACCEPTANCE of the bribe.",
+     "hi": "पी. सत्यनारायण मूर्ति (2015) का सबूत नियम: आरोपी से सिर्फ पैसा बरामद होना काफी नहीं है — अभियोजन को रिश्वत की माँग और स्वीकृति दोनों साबित करनी होगी।"
+    }
+   ]
+  },
+  {
+   "title": {
+    "en": "UP Gangsters Act, 1986 & UP Control of Goondas Act, 1970",
+    "hi": "यूपी गैंगस्टर अधिनियम, 1986 व गुंडा नियंत्रण अधिनियम, 1970"
+   },
+   "sections": "UP Gangsters Act, 1986 & UP Control of Goondas Act, 1970",
+   "cases": "",
+   "points": [
+    {
+     "en": "Uttar Pradesh has two special laws for habitual criminals: the Gangsters Act, 1986 and the Control of Goondas Act, 1970.",
+     "hi": "उत्तर प्रदेश में आदतन अपराधियों के लिए दो विशेष कानून हैं: गैंगस्टर अधिनियम, 1986 और गुंडा नियंत्रण अधिनियम, 1970।"
+    },
+    {
+     "en": "Gangsters Act: a \"gang\" is a group of persons indulging in anti-social activities — violence, extortion, and the like. A gangster faces imprisonment of 2 to 10 years plus fine, and these cases are tried by special courts.",
+     "hi": "गैंगस्टर अधिनियम: \"गिरोह\" का मतलब समाज-विरोधी गतिविधियों में लिप्त व्यक्तियों का समूह है — हिंसा, जबरन वसूली, आदि। गैंगस्टर को 2 से 10 साल की कैद और जुर्माना हो सकता है, और इन मामलों की सुनवाई विशेष न्यायालय करते हैं।"
+    },
+    {
+     "en": "Goondas Act: a \"goonda\" is a habitual offender known for threats, intimidation, and offences against person or property. The District Magistrate can extern (banish) him from the district for up to 6 months.",
+     "hi": "गुंडा अधिनियम: \"गुंडा\" वह आदतन अपराधी है जो धमकियों, डराने-धमकाने, और व्यक्ति या संपत्ति के खिलाफ अपराधों के लिए जाना जाता है। जिलाधिकारी उसे ज़िले से 6 महीने तक के लिए बाहर (extern) कर सकता है।"
+    },
+    {
+     "en": "Procedure matters: externment needs a notice and a chance to be heard; a Gangsters charge needs the gang AND its anti-social activities proved — a bad record alone is not enough.",
+     "hi": "प्रक्रिया मायने रखती है: बाहर करने के लिए नोटिस और सुनवाई का मौका चाहिए; गैंगस्टर आरोप के लिए गिरोह और उसकी समाज-विरोधी गतिविधियाँ दोनों साबित होनी चाहिए — सिर्फ खराब रिकॉर्ड काफी नहीं है।"
+    },
+    {
+     "en": "Why they matter in UP practice: these are the go-to provisions against repeat offenders, and bail in Gangsters cases is genuinely tough because of the special-court setup and strict approach.",
+     "hi": "यूपी की प्रैक्टिस में ये क्यों मायने रखते हैं: ये आदतन अपराधियों के खिलाफ मुख्य प्रावधान हैं, और गैंगस्टर मामलों में ज़मानत सच में मुश्किल होती है क्योंकि विशेष न्यायालय और सख्त रुख होता है।"
+    },
+    {
+     "en": "Defence angle: attack the \"gang\" tag itself — if the prosecution cannot prove a real gang and its activities, the special-law charge collapses back to ordinary offences.",
+     "hi": "बचाव का कोण: \"गिरोह\" के टैग पर ही हमला करो — अगर अभियोजन असली गिरोह और उसकी गतिविधियाँ साबित नहीं कर पाता, तो विशेष कानून का आरोप ढहकर सामान्य अपराधों तक रह जाता है।"
+    }
+   ]
   }
  ]
 }
