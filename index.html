@@ -1424,6 +1424,7 @@ html[data-theme="dark"] .la-doc-row{background:rgba(255,255,255,.06)}
     #notesReader .nr-nav button { flex: 1; font: 700 .9rem var(--sans); padding: 12px; border-radius: 999px; border: 1px solid rgba(0,0,0,.25); background: transparent; color: inherit; cursor: pointer; }
     #notesReader .nr-nav button:disabled { opacity: .35; cursor: default; }
     html[data-theme="dark"] #notesReader .nr-close, html[data-theme="dark"] #notesReader .nr-nav button { border-color: rgba(255,255,255,.3); }
+    #notesReader .nr-hint { text-align: center; font: .8rem var(--sans); color: var(--muted); padding: 0 16px 6px; }
     .notes-print-btn { font: 700 .85rem var(--sans); padding: 10px 22px; border: 1px solid rgba(0,0,0,.25); border-radius: 999px; background: transparent; color: var(--ink); cursor: pointer; margin-bottom: 8px; margin-left: 8px; }
     .notes-print-btn:hover { border-color: #1e1e1e; }
     html[data-theme="dark"] .notes-print-btn { border-color: rgba(255,255,255,.3); }
@@ -3750,6 +3751,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         var subjLabel = notesSubjectLabels[notesReader.subj] || notesReader.subj;
         ov.querySelector(".nr-body").innerHTML = "<div class=\"nr-sub\">" + escapeHtml(subjLabel) + "</div><h2>" + escapeHtml(title) + "</h2><ul>" + lis + "</ul>";
         ov.querySelector(".nr-count").textContent = (notesReader.ti + 1) + " / " + list.length;
+        ov.querySelector(".nr-hint").textContent = lang === "hi" ? "अगले/पिछले टॉपिक के लिए बाएँ/दाएँ स्वाइप करें" : (lang === "hinglish" ? "Left/right swipe se agla/pichhla topic" : "Swipe left/right to move between topics");
         ov.querySelector(".nr-prev").disabled = notesReader.ti <= 0;
         ov.querySelector(".nr-next").disabled = notesReader.ti >= list.length - 1;
         ov.querySelector(".nr-scroll").scrollTop = 0;
@@ -3785,7 +3787,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         if (!ov) {
           ov = document.createElement("div");
           ov.id = "notesReader";
-          ov.innerHTML = "<div class=\"nr-top\"><button type=\"button\" class=\"nr-close\" aria-label=\"Close\">✕</button><span class=\"nr-count\"></span></div><div class=\"nr-scroll\"><div class=\"nr-body\"></div></div><div class=\"nr-nav\"><button type=\"button\" class=\"nr-prev\">◀ Prev</button><button type=\"button\" class=\"nr-next\">Next ▶</button></div>";
+          ov.innerHTML = "<div class=\"nr-top\"><button type=\"button\" class=\"nr-close\" aria-label=\"Close\">✕</button><span class=\"nr-count\"></span></div><div class=\"nr-scroll\"><div class=\"nr-body\"></div></div><div class=\"nr-hint\"></div><div class=\"nr-nav\"><button type=\"button\" class=\"nr-prev\">◀ Prev</button><button type=\"button\" class=\"nr-next\">Next ▶</button></div>";
           document.body.appendChild(ov);
           ov.querySelector(".nr-close").addEventListener("click", notesReaderClose);
           ov.querySelector(".nr-prev").addEventListener("click", function () { notesReaderNav(-1); });
