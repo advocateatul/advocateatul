@@ -1054,6 +1054,7 @@
     .la-msg .la-src strong { display: block; margin-bottom: 3px; color: #1e1e1e; }
     .la-msg .la-goto { display: inline-block; margin: 4px 6px 0 0; padding: 5px 11px; border: 1.5px solid #1e1e1e; border-radius: 999px; background: #f9fcff; color: #1e1e1e; font-size: .76rem; font-weight: 700; cursor: pointer; }
     .la-msg .la-goto:hover { background: #1e1e1e; color: #F5F5F5; }
+    .la-msg a.la-goto { text-decoration: none; }
     .la-thinking { opacity: .85; }
     .la-dots span { display: inline-block; width: 7px; height: 7px; margin-right: 4px; border-radius: 50%; background: #888; animation: laBlink 1.2s infinite; }
     .la-dots span:nth-child(2) { animation-delay: .2s; }
@@ -5997,9 +5998,18 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           src.appendChild(sh);
           sources.forEach(function (x) {
             if (x.t === "judge") {
-              var p = document.createElement("span");
-              p.textContent = "⚖️ " + (laLang() === "hi" && x.j.caseNameHi ? x.j.caseNameHi : x.j.caseName) + " " + (x.j.citation || "");
-              src.appendChild(p); src.appendChild(document.createElement("br"));
+              if (x.j.pdfUrl) {
+                var a = document.createElement("a");
+                a.className = "la-goto"; a.target = "_blank"; a.rel = "noopener";
+                a.href = x.j.pdfUrl;
+                a.textContent = "⚖️ " + (laLang() === "hi" && x.j.caseNameHi ? x.j.caseNameHi : x.j.caseName) + " " + (x.j.citation || "");
+                src.appendChild(a);
+              } else {
+                var p = document.createElement("span");
+                p.textContent = "⚖️ " + (laLang() === "hi" && x.j.caseNameHi ? x.j.caseNameHi : x.j.caseName) + " " + (x.j.citation || "");
+                src.appendChild(p);
+              }
+              src.appendChild(document.createElement("br"));
             } else if (x.t === "draft") {
               var b = document.createElement("button");
               b.type = "button"; b.className = "la-goto";
