@@ -1972,6 +1972,16 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           .cmp-new { font-weight: 700; white-space: nowrap; min-width: 92px; }
           .cmp-subj { color: #333; font-size: .88rem; }
           @media (max-width: 560px) { .cmp-row { flex-wrap: wrap; } .cmp-subj { flex-basis: 100%; } }
+          .cmp-acts { display: flex; gap: 6px; margin: 2px 0 10px; flex-wrap: wrap; }
+          .cmp-acts button { padding: 7px 14px; border-radius: 999px; border: 1.5px solid #1e1e1e; background: #f9fcff; color: #1e1e1e; font-weight: 800; font-size: .82rem; cursor: pointer; }
+          .cmp-acts button.active { background: #1e1e1e; color: #F5F5F5; }
+          .cmp-rel-btn { margin-left: auto; padding: 4px 10px; border-radius: 999px; border: 1.5px solid #1e1e1e; background: #fff; color: #1e1e1e; font-weight: 700; font-size: .78rem; cursor: pointer; white-space: nowrap; }
+          .cmp-rel-btn.open { background: #1e1e1e; color: #F5F5F5; }
+          .cmp-related { padding: 10px 12px 12px; background: #fff; border-top: 1px dashed rgba(0,0,0,.2); }
+          .cmp-rel-group { margin: 8px 0; }
+          .cmp-rel-group h4 { margin: 0 0 6px; font-size: .88rem; }
+          .cmp-rel-item { display: block; width: 100%; text-align: left; padding: 6px 10px; margin: 4px 0; border-radius: 8px; border: 1px solid rgba(0,0,0,.14); background: #f9fcff; color: #1e1e1e; font-size: .85rem; cursor: pointer; }
+          .cmp-rel-empty { font-size: .86rem; color: #444; }
         </style>
         <div class="hub-panel" id="hubPanel-bills" role="tabpanel" hidden>
           <div class="hub-grid" id="hubBillsGrid"></div>
@@ -3531,13 +3541,103 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
 
       /* ---------- Old <-> New law comparison (2026-10-22) ---------- */
       var cmpQuery = "";
+      var cmpAct = "all";
+      var cmpOpenKey = null;
+      var cmpAkBound = false;
       function getCompareData() {
         try { return JSON.parse(document.getElementById("lawCompareData").textContent); }
         catch (e) { return null; }
       }
+      function cmpParseCode(code) {
+        var m = String(code || "").trim().toUpperCase().match(/^(IPC|CRPC|IEA|BNSS|BNS|BSA)\s*(\d+)([A-Z])?/);
+        if (!m) return null;
+        return { fam: m[1], num: m[2], suf: m[3] || "" };
+      }
+      function cmpNorm(code) { var p = cmpParseCode(code); return p ? p.fam + p.num + p.suf : ""; }
+      function cmpRelated(r) {
+        var oldP = cmpParseCode(r.old), newP = cmpParseCode(r.new);
+        var out = { j: [], n: [], d: [] };
+        try { var jd = getUsefulJudgements(); (jd.items || []).forEach(function (it) {
+          var secs = it.sections || [];
+          for (var i = 0; i < secs.length; i++) { var nc = cmpNorm(secs[i]); if (nc && (nc === cmpNorm(r.old) || nc === cmpNorm(r.new))) { out.j.push(it); break; } }
+        }); } catch (e) {}
+        try { var nd = getHandwrittenNotes(); ["bns", "bnss", "bsa", "cpc", "majorActs"].forEach(function (subj) {
+          (nd[subj] || []).forEach(function (tp, ti) {
+            var s = tp.sections || "";
+            var re = /Sec\.?\s*(\d+)(?:\s*-\s*(\d+))?\s*(BNSS|BNS|BSA|IPC|CRPC|IEA|CPC)\b/g, m2, hit = false;
+            while ((m2 = re.exec(s)) !== null) { var a = m2[3], lo = parseInt(m2[1], 10), hi = m2[2] ? parseInt(m2[2], 10) : lo;
+              [oldP, newP].forEach(function (p) { if (p && p.fam === a && parseInt(p.num, 10) >= lo && parseInt(p.num, 10) <= hi) hit = true; }); }
+            if (hit) out.n.push({ subj: subj, ti: ti, topic: tp });
+          });
+        }); } catch (e) {}
+        try { var dd = getLegalDrafts(); (dd.drafts || []).forEach(function (d) {
+          var secTxt = ((d.sections && (d.sections.en || "")) + " " + ((d.sections && (d.sections.hi || "")) || ""));
+          var re2 = /\b(BNSS|BNS|BSA|IPC|CRPC|IEA)\s*(\d+)/g, m3, hit2 = false;
+          while ((m3 = re2.exec(secTxt)) !== null) { [oldP, newP].forEach(function (p) { if (p && p.fam === m3[1] && p.num === m3[2]) hit2 = true; }); }
+          var re3 = /(?:Sec\.?|धारा)\s*(\d+)\s*(BNSS|BNS|BSA|IPC|CRPC|IEA)\b/g, m4;
+          while ((m4 = re3.exec(secTxt)) !== null) { [oldP, newP].forEach(function (p) { if (p && p.fam === m4[2] && p.num === m4[1]) hit2 = true; }); }
+          if (hit2) out.d.push(d);
+        }); } catch (e) {}
+        return out;
+      }
+      function buildCmpRelated(r, lang) {
+        var rel = cmpRelated(r);
+        var hi = lang === "hi";
+        var box = document.createElement("div"); box.className = "cmp-related";
+        function group(title, items, makeBtn) {
+          var g = document.createElement("div"); g.className = "cmp-rel-group";
+          var h = document.createElement("h4"); h.textContent = title + " (" + items.length + ")"; g.appendChild(h);
+          items.slice(0, 12).forEach(function (it) { g.appendChild(makeBtn(it)); });
+          if (items.length > 12) { var more = document.createElement("p"); more.className = "cmp-rel-empty"; more.textContent = (hi ? "और " : "And ") + (items.length - 12) + (hi ? " और हैं।" : " more."); g.appendChild(more); }
+          box.appendChild(g);
+        }
+        group(hi ? "⚖️ निर्णय" : "⚖️ Judgments", rel.j, function (it) {
+          var b = document.createElement("button"); b.type = "button"; b.className = "cmp-rel-item";
+          b.textContent = (hi && it.caseNameHi ? it.caseNameHi : it.caseName) || "";
+          b.addEventListener("click", function () {
+            var inp = document.getElementById("librarySectionSearch");
+            if (inp) { inp.value = r.new; inp.dispatchEvent(new Event("input", { bubbles: true })); }
+            var sec = document.getElementById("library"); if (sec) sec.scrollIntoView({ behavior: "smooth" });
+          });
+          return b;
+        });
+        group(hi ? "📒 नोट्स" : "📒 Notes", rel.n, function (nt) {
+          var b = document.createElement("button"); b.type = "button"; b.className = "cmp-rel-item";
+          var ttl = nt.topic.title || {};
+          b.textContent = (hi && ttl.hi ? ttl.hi : ttl.en) || "";
+          b.addEventListener("click", function () {
+            var tab = document.querySelector('.notes-tab[data-subject="' + nt.subj + '"]');
+            if (tab) tab.click();
+            var si = document.getElementById("notesSearchInput");
+            var tv = (hi && ttl.hi ? ttl.hi : ttl.en) || "";
+            if (si) { si.value = tv; si.dispatchEvent(new Event("input", { bubbles: true })); }
+            var sec = document.getElementById("notes"); if (sec) sec.scrollIntoView({ behavior: "smooth" });
+          });
+          return b;
+        });
+        group(hi ? "📄 ड्राफ्ट" : "📄 Drafts", rel.d, function (d) {
+          var b = document.createElement("button"); b.type = "button"; b.className = "cmp-rel-item";
+          var ttl = d.title || {};
+          b.textContent = (hi && ttl.hi ? ttl.hi : ttl.en) || d.id || "";
+          b.addEventListener("click", function () {
+            var inp = document.getElementById("draftGuideSearch");
+            var tv = (hi && ttl.hi ? ttl.hi : ttl.en) || "";
+            if (inp) { inp.value = tv; inp.dispatchEvent(new Event("input", { bubbles: true })); }
+            var grid = document.getElementById("draftGuideGrid"); if (grid) grid.scrollIntoView({ behavior: "smooth" });
+          });
+          return b;
+        });
+        if (!rel.j.length && !rel.n.length && !rel.d.length) {
+          var e = document.createElement("p"); e.className = "cmp-rel-empty";
+          e.textContent = hi ? "इस धारा से जुड़ा कोई निर्णय, नोट्स या ड्राफ्ट अभी साइट पर नहीं है।" : "No judgments, notes or drafts linked to this section yet.";
+          box.appendChild(e);
+        }
+        return box;
+      }
       function renderComparePanel() {
         var wrap = document.getElementById("compareTables");
         if (!wrap) return;
+        if (!cmpAkBound) { cmpAkBound = true; document.addEventListener("ak-data", function () { if (cmpOpenKey) renderComparePanel(); }); }
         var data = getCompareData();
         if (!data) return;
         var lang = hubLang();
@@ -3568,8 +3668,20 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         }
         var q = cmpQuery.trim().toLowerCase();
         wrap.textContent = "";
+        var actsBar = document.createElement("div");
+        actsBar.className = "cmp-acts";
+        [["all", "All"], ["ipc_bns", "IPC \u2192 BNS"], ["crpc_bnss", "CrPC \u2192 BNSS"], ["iea_bsa", "IEA \u2192 BSA"]].forEach(function (a) {
+          var ab = document.createElement("button");
+          ab.type = "button";
+          ab.textContent = a[0] === "all" ? (lang === "hi" ? "सभी" : "All") : a[1];
+          if (cmpAct === a[0]) ab.className = "active";
+          ab.addEventListener("click", function () { cmpAct = a[0]; cmpOpenKey = null; renderComparePanel(); });
+          actsBar.appendChild(ab);
+        });
+        wrap.appendChild(actsBar);
         var total = 0;
         [["ipc_bns", "IPC", "BNS"], ["crpc_bnss", "CrPC", "BNSS"], ["iea_bsa", "IEA (Evidence Act)", "BSA"]].forEach(function (sec) {
+          if (cmpAct !== "all" && cmpAct !== sec[0]) return;
           var rows = (data[sec[0]] || []).filter(function (r) {
             return !q || (r.old + " " + r.new + " " + (r.subjectEn || "") + " " + (r.subjectHi || "")).toLowerCase().indexOf(q) !== -1;
           });
@@ -3581,15 +3693,27 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           wrap.appendChild(h);
           var tbl = document.createElement("div");
           tbl.className = "cmp-table";
-          rows.forEach(function (r) {
+          rows.forEach(function (r, ri) {
             var row = document.createElement("div");
             row.className = "cmp-row";
             var o = document.createElement("span"); o.className = "cmp-old"; o.textContent = r.old;
             var ar = document.createElement("span"); ar.className = "cmp-arrow"; ar.textContent = "\u2192";
             var nwEl = document.createElement("span"); nwEl.className = "cmp-new"; nwEl.textContent = r.new;
             var s = document.createElement("span"); s.className = "cmp-subj"; s.textContent = lang === "hi" ? (r.subjectHi || r.subjectEn) : r.subjectEn;
+            var rb = document.createElement("button");
+            rb.type = "button";
+            rb.className = "cmp-rel-btn" + (cmpOpenKey === sec[0] + ":" + ri ? " open" : "");
+            rb.textContent = lang === "hi" ? "🔗 संबंधित" : "🔗 Related";
+            rb.addEventListener("click", function () {
+              var key = sec[0] + ":" + ri;
+              cmpOpenKey = (cmpOpenKey === key) ? null : key;
+              if (window.akLoad) { try { window.akLoad("usefulJudgementsData"); window.akLoad("legalDraftsData"); window.akLoad("handwrittenNotesData"); } catch (e) {} }
+              renderComparePanel();
+            });
             row.appendChild(o); row.appendChild(ar); row.appendChild(nwEl); row.appendChild(s);
+            row.appendChild(rb);
             tbl.appendChild(row);
+            if (cmpOpenKey === sec[0] + ":" + ri) tbl.appendChild(buildCmpRelated(r, lang));
           });
           wrap.appendChild(tbl);
         });
