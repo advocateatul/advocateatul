@@ -6144,6 +6144,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           <div class="la-ai-draft-head">🎙️ <span id="laMeetTitle">Meeting Assistant</span></div>
           <p class="la-ai-draft-sub" id="laMeetSub">Paste meeting notes — AI makes the summary.</p>
           <textarea id="laMeetInput" rows="4"></textarea>
+          <button type="button" id="laMeetMicBtn" aria-label="Voice note" title="Record voice note" style="font-size:1.3rem;padding:6px 14px;cursor:pointer;border-radius:8px;margin-bottom:8px;">🎤</button>
           <button type="button" id="laMeetBtn" class="la-generate">✨ <span id="laMeetBtnTxt">Generate Summary</span></button>
           <div id="laMeetOut" class="la-preview" hidden></div>
           <div id="laMeetActions" class="la-preview-actions" hidden>
@@ -7892,6 +7893,45 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
             rec.onerror = function (ev) { micBtn.dataset.live = ""; micBtn.textContent = "🎤"; laMicRec = null; if (micStopTap) { micStopTap = false; hadErr = false; return; } hadErr = true; laBotSay(laMicErr(ev && ev.error), false); };
             rec.start();
           } catch (e) { micBtn.dataset.live = ""; micBtn.textContent = "🎤"; laMicRec = null; laBotSay(laMicErr(""), false); }
+        });
+        /* B17: Meetings voice notes — record into the notes box, then Generate Summary. */
+        var meetMicBtn = document.getElementById("laMeetMicBtn"), meetMicInp = document.getElementById("laMeetInput");
+        var meetSR = window.SpeechRecognition || window.webkitSpeechRecognition;
+        if (meetMicBtn && !meetSR) { meetMicBtn.disabled = true; meetMicBtn.style.opacity = "0.35"; meetMicBtn.title = L("Voice input not supported in this browser", "Is browser me voice input nahi hai"); meetMicBtn.setAttribute("aria-label", meetMicBtn.title); }
+        var meetMicRec = null;
+        if (meetMicBtn && meetSR && meetMicInp) meetMicBtn.addEventListener("click", function () {
+          if (meetMicBtn.dataset.live === "1") { if (!meetMicRec) { meetMicBtn.dataset.live = ""; meetMicBtn.textContent = "🎤"; return; } try { meetMicRec.stop(); } catch (e) {} return; }
+          try {
+            var rec = new meetSR();
+            meetMicRec = rec;
+            rec.lang = laLang() === "hi" ? "hi-IN" : "en-IN";
+            rec.interimResults = true;
+            meetMicBtn.dataset.live = "1";
+            meetMicBtn.textContent = "🔴";
+            var baseTxt = meetMicInp.value.trim();
+            var finalTxt = "";
+            var hadErr = false;
+            rec.onresult = function (ev) {
+              var inter = "", fin = "";
+              for (var ri = ev.resultIndex; ri < ev.results.length; ri++) {
+                if (ev.results[ri].isFinal) fin += ev.results[ri][0].transcript;
+                else inter += ev.results[ri][0].transcript;
+              }
+              if (fin) finalTxt += fin;
+              var spoken = (finalTxt + inter).trim();
+              meetMicInp.value = baseTxt ? (spoken ? baseTxt + " " + spoken : baseTxt) : spoken;
+            };
+            rec.onend = function () {
+              meetMicBtn.dataset.live = "";
+              meetMicBtn.textContent = "🎤";
+              meetMicRec = null;
+              var v = meetMicInp.value.trim();
+              if (!v && !hadErr) { var o = document.getElementById("laMeetOut"); if (o) { o.hidden = false; o.textContent = laMicErr("no-speech"); } }
+              hadErr = false;
+            };
+            rec.onerror = function (ev) { meetMicBtn.dataset.live = ""; meetMicBtn.textContent = "🎤"; meetMicRec = null; hadErr = true; var o = document.getElementById("laMeetOut"); if (o) { o.hidden = false; o.textContent = laMicErr(ev && ev.error); } };
+            rec.start();
+          } catch (e) { meetMicBtn.dataset.live = ""; meetMicBtn.textContent = "🎤"; meetMicRec = null; var o2 = document.getElementById("laMeetOut"); if (o2) { o2.hidden = false; o2.textContent = laMicErr(""); } }
         });
         var dcBtn = document.getElementById("laDocCamBtn");
         if (dcBtn && camInp) dcBtn.addEventListener("click", function () { camInp.click(); });
