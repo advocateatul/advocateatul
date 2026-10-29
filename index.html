@@ -1041,7 +1041,6 @@
     .la-brand strong { display: block; font-size: 1.05rem; letter-spacing: .02em; }
     .la-brand .la-sub { display: block; font-size: .72rem; opacity: .7; font-weight: 400; }
     .la-header #laClose { background: transparent; border: 1px solid rgba(255,255,255,.35); color: #F5F5F5; width: 32px; height: 32px; border-radius: 50%; cursor: pointer; font-size: .85rem; }
-    .la-header .la-head-btn { background: transparent; border: 1px solid rgba(255,255,255,.35); color: #F5F5F5; border-radius: 999px; padding: 6px 11px; cursor: pointer; font-size: .85rem; }
     .la-tabs { display: flex; background: #f9fcff; border-bottom: 1px solid rgba(0,0,0,.1); }
     .la-tab { flex: 1; border: 0; background: transparent; padding: 11px 4px; font: 700 .8rem/1.2 var(--sans); color: #444444; cursor: pointer; border-bottom: 3px solid transparent; }
     .la-tab.active { color: #1e1e1e; border-bottom-color: #1e1e1e; background: #f9fcff; }
@@ -5591,8 +5590,6 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
   <div id="lawAssistPanel" class="lawassist-panel" hidden role="dialog" aria-label="LawAssist — AI Legal Workspace">
     <div class="la-header">
       <div class="la-brand"><span class="la-logo" aria-hidden="true">⚖️</span><div><strong>LawAssist</strong><span class="la-sub" id="laSubtitle">AI Legal Workspace</span></div></div>
-      <button type="button" id="laCopyChat" class="la-head-btn" aria-label="Copy chat" title="Copy chat">📋</button>
-      <button type="button" id="laDlChat" class="la-head-btn" aria-label="Download chat" title="Download chat">⬇</button>
       <button type="button" id="laClose" aria-label="Close">✕</button>
     </div>
     <div class="la-tabs" role="tablist">
@@ -7153,38 +7150,6 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         if (dtr) dtr.addEventListener("click", function () { docProcess("tr"); });
         var dkey = document.getElementById("laDocsKey");
         if (dkey) dkey.addEventListener("click", function () { docProcess("key"); });
-        function laChatText() {
-          var out = [];
-          document.querySelectorAll("#laMessages .la-msg").forEach(function (dv) {
-            var who = dv.className.indexOf("user") !== -1 ? L("You", "आप") : "LawAssist";
-            var cl = dv.cloneNode(true);
-            cl.querySelectorAll("button, a.la-copy").forEach(function (x) { x.remove(); });
-            var tx = (cl.textContent || "").trim();
-            if (tx) out.push(who + ": " + tx);
-          });
-          return out.join("\n\n");
-        }
-        var cpChat = document.getElementById("laCopyChat");
-        if (cpChat) cpChat.addEventListener("click", function () {
-          var txt = laChatText();
-          if (!txt) return;
-          try {
-            if (navigator.clipboard && navigator.clipboard.writeText) {
-              navigator.clipboard.writeText(txt).then(function () { cpChat.textContent = "✓"; setTimeout(function () { cpChat.textContent = "📋"; }, 1500); }, function () { cpChat.textContent = "✕"; setTimeout(function () { cpChat.textContent = "📋"; }, 1500); });
-            }
-          } catch (e) {}
-        });
-        var dlChat = document.getElementById("laDlChat");
-        if (dlChat) dlChat.addEventListener("click", function () {
-          var txt = laChatText();
-          if (!txt) return;
-          var blob = new Blob([txt], { type: "text/plain;charset=utf-8" });
-          var a = document.createElement("a");
-          a.href = URL.createObjectURL(blob);
-          a.download = "lawassist-chat.txt";
-          document.body.appendChild(a); a.click();
-          setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 2000);
-        });
         /* ---- My Documents: IndexedDB storage + OCR ---- */
         var LA_DOC_DB = "lawassist_docs", LA_DOC_STORE = "docs";
         function laDocDb() {
