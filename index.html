@@ -1143,6 +1143,11 @@ html[data-theme="dark"] .la-doc-row{background:rgba(255,255,255,.06)}
     .la-case .la-case-del { margin-top: 8px; background: transparent; border: 1px solid rgba(0,0,0,.25); border-radius: 999px; padding: 4px 12px; font-size: .72rem; cursor: pointer; color: #b91c1c; border-color: rgba(185,28,28,.4); }
     .la-case .la-case-chat { margin-top: 8px; margin-right: 8px; background: transparent; border: 1px solid rgba(0,0,0,.25); border-radius: 999px; padding: 4px 12px; font-size: .72rem; cursor: pointer; }
     html[data-theme="dark"] .la-case .la-case-chat { border-color: rgba(255,255,255,.35); }
+    .la-rem-list { margin-top: 12px; }
+    .la-rem-list .la-rem-head { font-weight: 700; margin-bottom: 6px; }
+    .la-rem-item { display: flex; justify-content: space-between; gap: 8px; padding: 6px 0; border-top: 1px solid rgba(0,0,0,.12); font-size: .85rem; }
+    html[data-theme="dark"] .la-rem-item { border-color: rgba(255,255,255,.15); }
+    .la-rem-del { background: transparent; border: 1px solid rgba(185,28,28,.4); color: #b91c1c; border-radius: 999px; padding: 2px 10px; font-size: .7rem; cursor: pointer; flex-shrink: 0; }
     .la-empty { text-align: center; color: var(--muted); font-size: .82rem; padding: 24px 10px; }
     @keyframes laIn { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
     .lawassist-panel:not([hidden]) { animation: laIn .35s cubic-bezier(0.22, 1, 0.36, 1); }
@@ -6015,6 +6020,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           <button type="submit" id="laCaseAdd">+ Add Case</button>
         </form>
         <div id="laCaseList" class="la-case-list"></div>
+        <div id="laRemList" class="la-rem-list"></div>
       </section>
     </div>
   </div>
@@ -6599,6 +6605,15 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         function askDoc(q, sys) { if (window.LA_AUTH && window.LA_AUTH.ready && !window.LA_AUTH.user) { window.LA_AUTH.requireLogin(function () { respond(q, sys); }); return; } respond(q, sys); }
         mk("\uD83D\uDCDD " + L("Summary", "सारांश"), function () { askDoc(L("Summarise this document in simple words.", "Is document ka saransh saral shabdon me do.")); });
         mk("\uD83D\uDCC5 " + L("Dates & details", "तारीखें व विवरण"), function () { askDoc(L("List all important dates, names, case numbers and sections in this document.", "Is document ki sabhi zaroori dates, naam, case number aur sections ki list do.")); });
+        mk("⏰ " + L("Add all dates as reminders", "सभी तिथियाँ रिमाइंडर में जोड़ें"), function () {
+          var ds = laExtractDates(text || "");
+          if (!ds.length) { laBotSay(L("No dates found in this document.", "Is document me koi date nahi mili."), false); return; }
+          var all = loadReminders(); var newDates = [];
+          ds.forEach(function (d) { var dup = false; for (var i = 0; i < all.length; i++) { if (all[i].date === d.date) dup = true; } if (!dup) { all.push({ id: "r" + Date.now() + Math.floor(Math.random() * 100000), date: d.date, label: (file.name || "") + ": " + d.label, src: file.name || "" }); newDates.push(d.date); } });
+          if (!newDates.length) { laBotSay(L("These dates are already in your reminders.", "Ye dates pehle se hi reminders me hain."), false); return; }
+          saveReminders(all); renderReminders();
+          laBotSay(L("Added " + newDates.length + " reminder(s): " + newDates.join(", ") + ". See the Cases tab.", "Ye reminder jud gaye (" + newDates.length + "): " + newDates.join(", ") + ". Cases tab me dekhein."), false);
+        });
         mk("\u26A0\uFE0F " + L("Risks & gaps", "जोखिम व कमियाँ"), function () { askDoc(L("List the risks, gaps and missing points in this document, in simple words.", "Is document ke jokhim, kamiyan aur missing points saral shabdon me batao.")); });
         mk("\uD83D\uDD00 " + L("Compare with tray", "ट्रे से तुलना"), function () { if (!LA_MULTI || !LA_MULTI.length) { laBotSay(L("To compare, first add another document to the tray from the Docs tab (tap the \u2795 button on a document row), then tap Compare again.", "Tulna ke liye pehle Docs tab me kisi doosre document par \u2795 dabakar use tray me daalein, phir dobara Compare dabayein."), false); return; } askDoc(L("Compare this document with the document(s) in the tray: list differences, conflicting dates, names or amounts, and which version looks newer or stronger.", "Is document ki tray wale document(s) se tulna karo: antar, alag dates, naam ya rakam, aur kaunsa version naya ya mazboot lagta hai, ye sab batao.")); });
         mk("\uD83D\uDC65 " + L("Parties & citations", "पक्षकार व उद्धरण"), function () { askDoc(L("Extract from this document as a structured list: parties with their roles, advocates, citations, amounts and important dates.", "Is document se ek structured list banao: pakshkar unki bhoomika ke saath, vakil, citations, rakam aur zaroori dates.")); });
@@ -7324,7 +7339,59 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
       /* ---------------- My Cases (local case manager) ---------------- */
       function loadCases() { try { return JSON.parse(localStorage.getItem("lawAssistCases") || "[]"); } catch (e) { return []; } }
       function saveCases(c) { try { localStorage.setItem("lawAssistCases", JSON.stringify(c)); } catch (e) {} }
+      function loadReminders() { try { var a = JSON.parse(localStorage.getItem("lawAssistReminders") || "[]"); return Array.isArray(a) ? a : []; } catch (e) { return []; } }
+      function saveReminders(a) { try { localStorage.setItem("lawAssistReminders", JSON.stringify(a)); } catch (e) {} }
+      function laExtractDates(text) {
+        var out = [], seen = {};
+        try {
+          var dev = { "०": "0", "१": "1", "२": "2", "३": "3", "४": "4", "५": "5", "६": "6", "७": "7", "८": "8", "९": "9" };
+          var norm = String(text || "").replace(/[०-९]/g, function (d) { return dev[d]; });
+          var months = { january: 1, jan: 1, february: 2, feb: 2, march: 3, mar: 3, april: 4, apr: 4, may: 5, june: 6, jun: 6, july: 7, jul: 7, august: 8, aug: 8, september: 9, sep: 9, sept: 9, october: 10, oct: 10, november: 11, nov: 11, december: 12, dec: 12, "जनवरी": 1, "फरवरी": 2, "मार्च": 3, "अप्रैल": 4, "मई": 5, "जून": 6, "जुलाई": 7, "अगस्त": 8, "सितंबर": 9, "सितम्बर": 9, "अक्टूबर": 10, "नवंबर": 11, "नवम्बर": 11, "दिसंबर": 12, "दिसम्बर": 12 };
+          var mkeys = Object.keys(months).join("|");
+          function push(y, mo, da, at) {
+            y = +y; mo = +mo; da = +da;
+            if (!(mo >= 1 && mo <= 12 && da >= 1 && da <= 31)) return;
+            var dt = new Date(y, mo - 1, da);
+            if (dt.getFullYear() !== y || dt.getMonth() !== mo - 1 || dt.getDate() !== da) return;
+            var iso = y + "-" + ("0" + mo).slice(-2) + "-" + ("0" + da).slice(-2);
+            if (seen[iso]) return; seen[iso] = true;
+            var snip = norm.slice(Math.max(0, at - 30), Math.min(norm.length, at + 40)).replace(/\s+/g, " ").trim();
+            out.push({ date: iso, label: snip });
+          }
+          var re, m;
+          re = /(\d{1,2})[\/\-](\d{1,2})[\/\-](\d{4})/g;
+          while ((m = re.exec(norm))) { var d1 = +m[1], d2 = +m[2]; if (d2 > 12 && d1 <= 12) { var tmp = d1; d1 = d2; d2 = tmp; } push(m[3], d2, d1, m.index); }
+          re = /(\d{4})-(\d{2})-(\d{2})/g;
+          while ((m = re.exec(norm))) { push(m[1], m[2], m[3], m.index); }
+          var curY = new Date().getFullYear();
+          re = new RegExp("(\\d{1,2})\\s+(" + mkeys + ")\\s*,?\\s*(\\d{4})?", "gi");
+          while ((m = re.exec(norm))) { push(m[3] || curY, months[m[2].toLowerCase()] || months[m[2]], m[1], m.index); }
+          re = new RegExp("(" + mkeys + ")\\s+(\\d{1,2})(?:\\s*,\\s*(\\d{4}))?", "gi");
+          while ((m = re.exec(norm))) { push(m[3] || curY, months[m[1].toLowerCase()] || months[m[1]], m[2], m.index); }
+        } catch (e) {}
+        out.sort(function (a, b) { return a.date.localeCompare(b.date); });
+        return out;
+      }
+      function renderReminders() {
+        try {
+          var box = document.getElementById("laRemList"); if (!box) return;
+          var rems = loadReminders();
+          box.textContent = "";
+          if (!rems.length) return;
+          var h = document.createElement("div"); h.className = "la-rem-head"; h.textContent = "⏰ " + L("Reminders from documents", "दस्तावेज़ों से रिमाइंडर");
+          box.appendChild(h);
+          rems.sort(function (a, b) { return (a.date || "9999").localeCompare(b.date || "9999"); });
+          rems.forEach(function (r) {
+            var it = document.createElement("div"); it.className = "la-rem-item";
+            var sp = document.createElement("span"); sp.textContent = r.date + " — " + (r.label || "");
+            var del = document.createElement("button"); del.type = "button"; del.className = "la-rem-del"; del.textContent = "✕";
+            del.addEventListener("click", function () { if (!laConfirmDel(L("Delete this reminder?", "Ye reminder delete karein?"))) return; saveReminders(loadReminders().filter(function (x) { return x.id !== r.id; })); renderReminders(); });
+            it.appendChild(sp); it.appendChild(del); box.appendChild(it);
+          });
+        } catch (e) {}
+      }
       function renderCases() {
+        renderReminders();
         try {
           var cases0 = loadCases();
           var today0 = new Date(); today0.setHours(0, 0, 0, 0);
@@ -7334,14 +7401,15 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
             var diff = Math.round((d - today0) / 86400000);
             return diff >= 0 && diff <= 2;
           });
-          if (urgent.length && "Notification" in window) {
+          var remUrgent = loadReminders().filter(function (r) { if (!r.date) return false; var dd = new Date(r.date + "T00:00:00"); dd.setHours(0, 0, 0, 0); var df = Math.round((dd - today0) / 86400000); return df >= 0 && df <= 2; });
+          if ((urgent.length || remUrgent.length) && "Notification" in window) {
             var key = "laNotif_" + today0.getFullYear() + "-" + ("0" + (today0.getMonth() + 1)).slice(-2) + "-" + ("0" + today0.getDate()).slice(-2);
             if (!localStorage.getItem(key)) {
               localStorage.setItem(key, "1");
               var show = function () {
                 try {
                   new Notification(L("LawAssist: Deadline approaching", "LawAssist: डेडलाइन नज़दीक"), {
-                    body: urgent.map(function (c) { return c.title + " — " + c.deadline; }).join("\n").slice(0, 200)
+                    body: (urgent.map(function (c) { return c.title + " — " + c.deadline; }).concat(remUrgent.map(function (r) { return "⏰ " + r.date + " — " + (r.label || ""); }))).join("\n").slice(0, 200)
                   });
                 } catch (e) {}
               };
