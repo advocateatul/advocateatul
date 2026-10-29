@@ -7585,6 +7585,14 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         var micBtn = document.getElementById("laMicBtn"), micInp = document.getElementById("laInput");
         var SR = window.SpeechRecognition || window.webkitSpeechRecognition;
         if (micBtn && !SR) { micBtn.disabled = true; micBtn.style.opacity = "0.35"; micBtn.title = laLang() === "hi" ? "Is browser me voice input nahi hai" : "Voice input not supported in this browser"; micBtn.setAttribute("aria-label", micBtn.title); }
+        function laMicErr(e) {
+          var err = e || "";
+          if (err === "not-allowed" || err === "service-not-allowed") return L("Microphone permission was denied. Allow mic access in your browser/app settings, then try again.", "Mic ki permission nahi mili. Browser/app settings me mic allow karein, phir dobara try karein.");
+          if (err === "no-speech") return L("Didn't catch that. Please speak again.", "Kuch sunai nahi diya. Kripya dobara boliye.");
+          if (err === "audio-capture") return L("No microphone found on this device.", "Is device par koi mic nahi mila.");
+          if (err === "network") return L("Network problem — voice service failed. Please try again.", "Network problem — voice service nahi chali. Dobara try karein.");
+          return L("Voice input failed. Please try again.", "Voice input nahi chala. Dobara try karein.");
+        }
         if (micBtn && SR && micInp) micBtn.addEventListener("click", function () {
           if (micBtn.dataset.live === "1") return;
           try {
@@ -7594,6 +7602,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
             micBtn.dataset.live = "1";
             micBtn.textContent = "🔴";
             var finalTxt = "";
+            var hadErr = false;
             rec.onresult = function (ev) {
               var inter = "", fin = "";
               for (var ri = ev.resultIndex; ri < ev.results.length; ri++) {
@@ -7608,10 +7617,12 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
               micBtn.textContent = "🎤";
               var v = micInp.value.trim();
               if (v) { if (respond(v)) micInp.value = ""; }
+              else if (!hadErr) { laBotSay(laMicErr("no-speech"), false); }
+              hadErr = false;
             };
-            rec.onerror = function () { micBtn.dataset.live = ""; micBtn.textContent = "🎤"; };
+            rec.onerror = function (ev) { micBtn.dataset.live = ""; micBtn.textContent = "🎤"; hadErr = true; laBotSay(laMicErr(ev && ev.error), false); };
             rec.start();
-          } catch (e) { micBtn.dataset.live = ""; micBtn.textContent = "🎤"; }
+          } catch (e) { micBtn.dataset.live = ""; micBtn.textContent = "🎤"; laBotSay(laMicErr(""), false); }
         });
         var dcBtn = document.getElementById("laDocCamBtn");
         if (dcBtn && camInp) dcBtn.addEventListener("click", function () { camInp.click(); });
