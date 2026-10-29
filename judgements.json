@@ -649,7 +649,10 @@
         "hi": "न्यायालय ने शीघ्र न्याय के लिए 1999 और 2002 के सीपीसी संशोधनों को बरकरार रखा — स्थगन सीमित करना, समयबद्ध अभिवचन और मुख्य परीक्षा के बजाय शपथपत्र। निचली अदालतों को दशकों की देरी कम करने का व्यावहारिक मार्गदर्शन मिला।"
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Salem%20Advocate%20Bar%20Association%20v.%20Union%20of%20India",
-      "sourceName": "Indian Kanoon"
+      "sourceName": "Indian Kanoon",
+      "sections": [
+        "CPC 89"
+      ]
     },
     {
       "caseName": "State of Maharashtra v. Praful Desai",
@@ -891,7 +894,11 @@
       },
       "pdfUrl": "https://indiankanoon.org/doc/1596139/",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "के.एम. नानावटी बनाम महाराष्ट्र राज्य"
+      "caseNameHi": "के.एम. नानावटी बनाम महाराष्ट्र राज्य",
+      "sections": [
+        "IPC 302",
+        "CRPC 307"
+      ]
     },
     {
       "caseName": "Sakal Papers (P) Ltd. v. Union of India",
@@ -1388,7 +1395,10 @@
       },
       "pdfUrl": "https://indiankanoon.org/doc/1505859/",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "शरद बिरदीचंद सारदा बनाम महाराष्ट्र राज्य"
+      "caseNameHi": "शरद बिरदीचंद सारदा बनाम महाराष्ट्र राज्य",
+      "sections": [
+        "IPC 302"
+      ]
     },
     {
       "caseName": "Gian Devi Anand v. Jeevan Kumar",
@@ -2493,7 +2503,11 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Sakshi%20v.%20Union%20of%20India",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "साक्षी बनाम भारत संघ"
+      "caseNameHi": "साक्षी बनाम भारत संघ",
+      "sections": [
+        "IPC 375",
+        "CRPC 327"
+      ]
     },
     {
       "caseName": "Tata Consultancy Services v. State of Andhra Pradesh",
@@ -2777,7 +2791,11 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Gaurav%20Nagpal%20vs%20Sumedha%20Nagpal",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "गौरव नागपाल बनाम सुमेधा नागपाल"
+      "caseNameHi": "गौरव नागपाल बनाम सुमेधा नागपाल",
+      "sections": [
+        "Section 13, Hindu Minority and Guardianship Act, 1956",
+        "Section 25, Guardians and Wards Act, 1890"
+      ]
     },
     {
       "caseName": "Krishna Janardhan Bhat v. Dattatraya G. Hegde",
@@ -3089,7 +3107,12 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Manu%20Sharma%20v%20State%20NCT%20of%20Delhi",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "सिद्धार्थ वशिष्ठ उर्फ़ मनु शर्मा बनाम दिल्ली राष्ट्रीय राजधानी क्षेत्र राज्य"
+      "caseNameHi": "सिद्धार्थ वशिष्ठ उर्फ़ मनु शर्मा बनाम दिल्ली राष्ट्रीय राजधानी क्षेत्र राज्य",
+      "sections": [
+        "IPC 302",
+        "IPC 201",
+        "IPC 120B"
+      ]
     },
     {
       "caseName": "Aruna Ramachandra Shanbaug v. Union of India",
@@ -4095,7 +4118,10 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Asokan+K.M.+v.+State+of+Kerala+Hadiya",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "असोकन के.एम. बनाम केरल राज्य (हादिया मामला)"
+      "caseNameHi": "असोकन के.एम. बनाम केरल राज्य (हादिया मामला)",
+      "sections": [
+        "ART 226"
+      ]
     },
     {
       "caseName": "Dr. (Mrs.) Nupur Talwar v. State of Uttar Pradesh",
@@ -5620,7 +5646,11 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Javed+Ahmad+Hajam+v.+State+of+Maharashtra",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "जावेद अहमद हाजम बनाम महाराष्ट्र राज्य"
+      "caseNameHi": "जावेद अहमद हाजम बनाम महाराष्ट्र राज्य",
+      "sections": [
+        "IPC 153A",
+        "ART 19"
+      ]
     },
     {
       "caseName": "Manish Sisodia v. Central Bureau of Investigation",
@@ -5788,7 +5818,10 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Arvind+Kejriwal+v.+Directorate+of+Enforcement",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "अरविंद केजरीवाल बनाम प्रवर्तन निदेशालय"
+      "caseNameHi": "अरविंद केजरीवाल बनाम प्रवर्तन निदेशालय",
+      "sections": [
+        "Section 19, PMLA"
+      ]
     },
     {
       "caseName": "Association for Democratic Reforms v. Union of India",
@@ -5984,7 +6017,11 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Prabir%20Purkayastha%20v.%20State",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "प्रबीर पुरकायस्थ बनाम राज्य (दिल्ली राष्ट्रीय राजधानी क्षेत्र)"
+      "caseNameHi": "प्रबीर पुरकायस्थ बनाम राज्य (दिल्ली राष्ट्रीय राजधानी क्षेत्र)",
+      "sections": [
+        "ART 22",
+        "Section 43B(1), UAPA"
+      ]
     },
     {
       "caseName": "Property Owners Association v. State of Maharashtra",
@@ -6275,7 +6312,11 @@
         "en": "A confession must be accepted or rejected as a whole; a statement containing self-exculpatory matter that negatives the offence is not a confession at all.",
         "hi": "इकबालिया बयान को समग्र रूप में या तो स्वीकार किया जाना चाहिए या अस्वीकार; वह कथन जिसमें आत्म-निर्दोषकारी विषयवस्तु अपराध को नकारती हो, इकबालिया बयान ही नहीं है।"
       },
-      "year": 1952
+      "year": 1952,
+      "sections": [
+        "IPC 302",
+        "IPC 201"
+      ]
     },
     {
       "caseName": "Kashmira Singh v. State of Madhya Pradesh",
@@ -6425,7 +6466,11 @@
         "en": "There is no absolute rule against acting on a retracted confession, but as a rule of prudence it should not be the sole basis of conviction without material corroboration.",
         "hi": "यह अभिनिर्धारित किया गया कि वापस लिए गए इकबालिया कथन पर कार्रवाई करने के विरुद्ध कोई निरपेक्ष नियम नहीं है, किन्तु विवेक के नियम के रूप में, तात्त्विक पुष्टि के बिना उसे दोषसिद्धि का एकमात्र आधार नहीं बनाया जाना चाहिए।"
       },
-      "year": 1957
+      "year": 1957,
+      "sections": [
+        "IPC 302",
+        "CRPC 164"
+      ]
     },
     {
       "caseName": "Deoki Nandan v. Murlidhar",
@@ -6553,7 +6598,11 @@
         "en": "A High Court may set aside an acquittal in revision only in exceptional cases — glaring procedural defect, evidence wrongly shut out, or a flagrant miscarriage of justice.",
         "hi": "न्यायालय ने अभिनिर्धारित किया कि उच्च न्यायालय पुनरीक्षण में दोषमुक्ति को केवल असाधारण मामलों में ही निरस्त कर सकता है — जैसे प्रकट प्रक्रियात्मक दोष, साक्ष्य को अनुचित रूप से बाहर रखा जाना, या न्याय की घोर विफलता।"
       },
-      "year": 1962
+      "year": 1962,
+      "sections": [
+        "CRPC 439",
+        "IEA 27"
+      ]
     },
     {
       "caseName": "State of Rajasthan v. Vidhyawati",
@@ -6746,7 +6795,10 @@
         "en": "Upheld the contempt conviction of Kerala's Chief Minister for calling judges class-biased at a press conference, holding that lack of intent is no defence where the words lower the prestige of courts",
         "hi": "केरल के मुख्यमंत्री द्वारा प्रेस कॉन्फ़्रेंस में न्यायाधीशों को वर्ग-पक्षपाती कहने पर की गई उनकी अवमानना दोषसिद्धि बरकरार रखी गई। न्यायालय ने अभिनिर्धारित किया कि जहाँ शब्द न्यायालयों की प्रतिष्ठा को अवनत करते हों, वहाँ आशय का अभाव कोई बचाव नहीं है।"
       },
-      "year": 1970
+      "year": 1970,
+      "sections": [
+        "ART 19"
+      ]
     },
     {
       "caseName": "D.A.V. College v. State of Punjab",
@@ -7645,7 +7697,10 @@
         "en": "An extradited fugitive can be tried only for the offences mentioned in the extradition decree and for no other offence.",
         "hi": "न्यायालय ने अभिनिर्धारित किया कि प्रत्यर्पित भगोड़े का विचारण केवल प्रत्यर्पण डिक्री में उल्लिखित अपराधों के लिए ही किया जा सकता है, किसी अन्य अपराध के लिए नहीं।"
       },
-      "year": 2001
+      "year": 2001,
+      "sections": [
+        "Section 21, Extradition Act, 1962"
+      ]
     },
     {
       "caseName": "Hinch Lal Tiwari v. Kamala Devi",
@@ -7744,7 +7799,10 @@
         "en": "Suo motu contempt: her statements scandalising the court in response to a contempt notice were punishable, attracting a symbolic sentence of one day's imprisonment and a fine of Rs. 2,000",
         "hi": "स्वतः संज्ञान अवमानना कार्यवाही में अभिनिर्धारित किया गया कि अवमानना नोटिस के जवाब में न्यायालय को कलंकित करने वाले उनके कथन दण्डनीय थे। उन्हें प्रतीकात्मक दण्ड के रूप में एक दिन का कारावास और 2,000 रुपये का जुर्माना लगाया गया।"
       },
-      "year": 2002
+      "year": 2002,
+      "sections": [
+        "Section 12, Contempt of Courts Act, 1971"
+      ]
     },
     {
       "caseName": "Shamim Ara v. State of U.P.",
@@ -10766,7 +10824,11 @@
         "en": "In a split verdict on \"bulldozer justice\", the lead opinion framed a two-year shield against demolition of an accused's dwelling after FIR registration and a one-year prior notice before municipal demolition action, to curb punitive demolitions.",
         "hi": "“बुलडोज़र न्याय” पर दिए गए विभाजित निर्णय में अग्रणी मत ने व्यवस्था दी कि प्रथम सूचना रिपोर्ट दर्ज होने के पश्चात अभियुक्त के निवास के विध्वंस के विरुद्ध दो वर्ष की सुरक्षा रहेगी तथा नगरपालिका द्वारा विध्वंस की कार्रवाई से पूर्व एक वर्ष की पूर्व सूचना आवश्यक होगी, ताकि दण्डात्मक विध्वंसों पर अंकुश लगाया जा सके।"
       },
-      "year": 2026
+      "year": 2026,
+      "sections": [
+        "ART 226",
+        "ART 21"
+      ]
     },
     {
       "caseName": "Kuntesh v. State of U.P.",
