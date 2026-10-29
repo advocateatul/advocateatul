@@ -6291,7 +6291,13 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           cp.type = "button"; cp.className = "la-copy";
           cp.textContent = "\uD83D\uDCCB " + L("Copy", "कॉपी");
           cp.addEventListener("click", function () {
-            try { if (navigator.clipboard) navigator.clipboard.writeText(text); cp.textContent = "\u2713 " + L("Copied", "कॉपी हुआ"); } catch (e) {}
+            try {
+              if (navigator.clipboard && navigator.clipboard.writeText) {
+                var pr0 = navigator.clipboard.writeText(text);
+                if (pr0 && pr0.then) pr0.then(function () { cp.textContent = "\u2713 " + L("Copied", "कॉपी हुआ"); }, function () { cp.textContent = "\u2715 " + L("Copy failed", "कॉपी नहीं हुआ"); });
+                else cp.textContent = "\u2713 " + L("Copied", "कॉपी हुआ");
+              }
+            } catch (e) { cp.textContent = "\u2715 " + L("Copy failed", "कॉपी नहीं हुआ"); }
           });
           msgDiv.appendChild(cp);
           var wa = document.createElement("a");
@@ -6485,11 +6491,15 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
             var copyBtn = document.createElement("button"); copyBtn.type = "button";
             copyBtn.textContent = L("Copy text", "Text copy karein");
             copyBtn.addEventListener("click", function () {
+              var old3 = copyBtn.textContent;
+              function flash3(ok) { copyBtn.textContent = ok ? "\u2713 " + L("Copied", "कॉपी हुआ") : "\u2715 " + L("Copy failed", "कॉपी नहीं हुआ"); setTimeout(function () { copyBtn.textContent = old3; }, 1500); }
               try {
-                if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(ocrText);
-                else { var ta3 = document.createElement("textarea"); ta3.value = ocrText; document.body.appendChild(ta3); ta3.select(); document.execCommand("copy"); document.body.removeChild(ta3); }
-                var old3 = copyBtn.textContent; copyBtn.textContent = "\u2713 " + L("Copied", "कॉपी हुआ"); setTimeout(function () { copyBtn.textContent = old3; }, 1500);
-              } catch (e) {}
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                  var pr3 = navigator.clipboard.writeText(ocrText);
+                  if (pr3 && pr3.then) pr3.then(function () { flash3(true); }, function () { flash3(false); });
+                  else flash3(true);
+                } else { var ta3 = document.createElement("textarea"); ta3.value = ocrText; document.body.appendChild(ta3); ta3.select(); var ok3 = false; try { ok3 = document.execCommand("copy"); } catch (e3) {} document.body.removeChild(ta3); flash3(!!ok3); }
+              } catch (e) { flash3(false); }
             });
             crow.appendChild(copyBtn);
             var dlBtn = document.createElement("button"); dlBtn.type = "button";
@@ -6793,7 +6803,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
               var okTxt = "✓ " + L("Copied", "कॉपी हुआ");
               try {
                 if (navigator.clipboard && navigator.clipboard.writeText) {
-                  navigator.clipboard.writeText(html).then(function () { cp.textContent = okTxt; }, function () {});
+                  navigator.clipboard.writeText(html).then(function () { cp.textContent = okTxt; }, function () { cp.textContent = "\u2715 " + L("Copy failed", "कॉपी नहीं हुआ"); });
                 }
               } catch (e) {}
             });
@@ -6833,7 +6843,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
               var okTxt2 = "\u2713 " + L("Copied", "कॉपी हुआ");
               try {
                 if (navigator.clipboard && navigator.clipboard.writeText) {
-                  navigator.clipboard.writeText(html).then(function () { cp2.textContent = okTxt2; }, function () {});
+                  navigator.clipboard.writeText(html).then(function () { cp2.textContent = okTxt2; }, function () { cp2.textContent = "\u2715 " + L("Copy failed", "कॉपी नहीं हुआ"); });
                 }
               } catch (e) {}
             });
@@ -7052,10 +7062,14 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
       function docCopy(ev) {
         var out = document.getElementById("laDocsOut");
         var btn = ev && ev.currentTarget;
+        function flash(ok) { if (btn) { var old = btn.textContent; btn.textContent = ok ? "\u2713 " + L("Copied", "कॉपी हुआ") : "\u2715 " + L("Copy failed", "कॉपी नहीं हुआ"); setTimeout(function () { btn.textContent = old; }, 1500); } }
         try {
-          if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(out.textContent);
-          if (btn) { var old = btn.textContent; btn.textContent = "\u2713 " + L("Copied", "कॉपी हुआ"); setTimeout(function () { btn.textContent = old; }, 1500); }
-        } catch (e) {}
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            var pr = navigator.clipboard.writeText(out.textContent);
+            if (pr && pr.then) pr.then(function () { flash(true); }, function () { flash(false); });
+            else flash(true);
+          } else { var ta = document.createElement("textarea"); ta.value = out.textContent; document.body.appendChild(ta); ta.select(); var okd = false; try { okd = document.execCommand("copy"); } catch (e2) {} document.body.removeChild(ta); flash(!!okd); }
+        } catch (e) { flash(false); }
       }
 
       /* ---------------- Meetings (AI meeting assistant) ---------------- */
@@ -7120,10 +7134,14 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
       }
       function meetCopy(ev) {
         var btn = ev && ev.currentTarget;
+        function flash(ok) { if (btn) { var old = btn.textContent; btn.textContent = ok ? "\u2713 " + L("Copied", "कॉपी हुआ") : "\u2715 " + L("Copy failed", "कॉपी नहीं हुआ"); setTimeout(function () { btn.textContent = old; }, 1500); } }
         try {
-          if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(LA_MEET_TXT);
-          if (btn) { var old = btn.textContent; btn.textContent = "\u2713 " + L("Copied", "कॉपी हुआ"); setTimeout(function () { btn.textContent = old; }, 1500); }
-        } catch (e) {}
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            var pr = navigator.clipboard.writeText(LA_MEET_TXT);
+            if (pr && pr.then) pr.then(function () { flash(true); }, function () { flash(false); });
+            else flash(true);
+          } else { var ta = document.createElement("textarea"); ta.value = LA_MEET_TXT; document.body.appendChild(ta); ta.select(); var okm = false; try { okm = document.execCommand("copy"); } catch (e2) {} document.body.removeChild(ta); flash(!!okm); }
+        } catch (e) { flash(false); }
       }
 
       /* ---------------- My Cases (local case manager) ---------------- */
