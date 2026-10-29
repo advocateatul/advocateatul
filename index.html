@@ -6398,6 +6398,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
 
       /* ---------------- Document Scan (camera / OCR / AI vision) ---------------- */
       var LA_SCAN = { text: "", name: "", left: 0 };
+      var LA_MULTI = [];
       var laDetailed = false;
       try { laDetailed = localStorage.getItem("laDetailed") === "1"; } catch (e) {}
       var laLimitHit = false;
@@ -6435,6 +6436,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
       function laCtxRender() {
         var bar = document.getElementById("laCtxBar");
         if (!bar) return;
+        bar.innerHTML = "";
         if (LA_SCAN.text) {
           bar.hidden = false;
           bar.innerHTML = "";
@@ -6442,19 +6444,35 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           s.textContent = "\uD83D\uDCC4 " + LA_SCAN.name + " — " + L("attached. Ask anything about it.", "जुड़ा है। इसके बारे में कुछ भी पूछें।") + (LA_SCAN.left ? " (" + LA_SCAN.left + " " + L("questions left", "सवाल बाकी") + ")" : "");
           var b = document.createElement("button");
           b.type = "button"; b.textContent = "\u2715 " + L("Remove", "हटाएँ");
-          b.addEventListener("click", function () { LA_SCAN.text = ""; LA_SCAN.name = ""; LA_SCAN.left = 0; laCtxRender(); });
+          b.addEventListener("click", function () { LA_SCAN.text = ""; LA_SCAN.name = ""; LA_SCAN.left = 0; if (LA_MULTI.length) LA_SCAN.left = 3; laCtxRender(); });
           bar.appendChild(s); bar.appendChild(b);
-        } else { bar.hidden = true; }
+        }
+        if (LA_MULTI.length) {
+          bar.hidden = false;
+          var s2 = document.createElement("span");
+          s2.textContent = "📚 " + LA_MULTI.map(function (x) { return x.name; }).join(", ") + " — " + L("in tray. Ask about them together.", "ट्रे में हैं। इनके बारे में एक साथ पूछें।") + (LA_SCAN.left ? " (" + LA_SCAN.left + " " + L("questions left", "सवाल बाकी") + ")" : "");
+          var b2 = document.createElement("button");
+          b2.type = "button"; b2.textContent = "✕ " + L("Clear tray", "ट्रे साफ़ करें");
+          b2.addEventListener("click", function () { LA_MULTI.length = 0; laCtxRender(); renderDocList(); });
+          bar.appendChild(s2); bar.appendChild(b2);
+        } else if (!LA_SCAN.text) { bar.hidden = true; }
       }
-      function laSetCtx(text, name) { LA_SCAN.text = text || ""; LA_SCAN.name = name || "Document"; LA_SCAN.left = LA_SCAN.text ? 3 : 0; laCtxRender(); }
+      function laSetCtx(text, name) {
+        if (LA_SCAN.text && text && LA_SCAN.name !== name) {
+          var dup = false; for (var di = 0; di < LA_MULTI.length; di++) { if (LA_MULTI[di].name === LA_SCAN.name) dup = true; }
+          if (!dup) { if (LA_MULTI.length >= 5) LA_MULTI.shift(); LA_MULTI.push({ id: "scan-" + Date.now(), name: LA_SCAN.name, text: LA_SCAN.text }); }
+        }
+        LA_SCAN.text = text || ""; LA_SCAN.name = name || "Document"; LA_SCAN.left = LA_SCAN.text ? 3 : 0; laCtxRender();
+      }
       /* Clears the in-memory chat + scan workspace (used on logout so the next user sees nothing). */
       window.laAskAbout = function (q) { try { openPanel(); switchTab("research"); respond(q); } catch (e) {} };
       window.laClearWorkspace = function () {
         try {
           LA_HIST.length = 0;
           try { localStorage.removeItem("laHist"); localStorage.removeItem("laChatMsgs"); } catch (e2) {}
-          LA_SCAN.text = ""; LA_SCAN.name = ""; LA_SCAN.left = 0;
+          LA_SCAN.text = ""; LA_SCAN.name = ""; LA_SCAN.left = 0; LA_MULTI.length = 0;
           laCtxRender();
+          renderDocList();
           var msgs = document.getElementById("laMessages");
           if (msgs) msgs.textContent = "";
         } catch (e) {}
@@ -6994,10 +7012,18 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         var draftSys = sysOverride || (isDraftQ ? aiDraftSystem(lang) : (laDetailed ? laDetailSystem(lang) : null));
         var draftTok = sysOverride ? 1000 : (isDraftQ ? 1600 : (laDetailed ? 1500 : undefined));
         var qAI = q;
-        if (LA_SCAN.text) {
-          qAI = "The user has scanned a legal document named \"" + LA_SCAN.name + "\". Its text is below. Answer the user's question from this document first; if the answer is not in it, say so briefly, then give general legal guidance.\n--- DOCUMENT ---\n" + LA_SCAN.text.slice(0, 6000) + "\n--- END ---\nQuestion: " + q;
-          if (--LA_SCAN.left <= 0) { LA_SCAN.text = ""; LA_SCAN.name = ""; LA_SCAN.left = 0; }
+        var ctxParts = [];
+        var hadTray = LA_MULTI.length > 0;
+        if (LA_SCAN.text) ctxParts.push({ name: LA_SCAN.name, text: LA_SCAN.text });
+        LA_MULTI.forEach(function (m) { ctxParts.push(m); });
+        if (ctxParts.length) {
+          var perDoc = ctxParts.length === 1 ? 6000 : Math.max(1000, Math.floor(12000 / ctxParts.length));
+          var ctxText = ctxParts.map(function (p) { return "--- DOCUMENT: " + p.name + " ---\n" + p.text.slice(0, perDoc); }).join("\n");
+          qAI = "The user has attached " + ctxParts.length + " document(s). Their text is below. Answer the user's question from these documents first; if the answer is not in them, say so briefly, then give general legal guidance.\n" + ctxText.slice(0, 12000) + "\n--- END ---\nQuestion: " + q;
+          if (LA_SCAN.left <= 0) LA_SCAN.left = 3;
+          if (--LA_SCAN.left <= 0) { LA_SCAN.text = ""; LA_SCAN.name = ""; LA_SCAN.left = 0; LA_MULTI.length = 0; }
           laCtxRender();
+          if (hadTray && !LA_MULTI.length) { try { renderDocList(); } catch (e) {} }
         }
         function aiOk(tx) { try { var s = laDraftHtml(tx || "").replace(/<[^>]*>/g, "").replace(/[\s*#_`>\-]/g, ""); return !!s; } catch (e) { return !!tx; } }
         function aiChain(sys, tokens, counted) {
@@ -7649,6 +7675,34 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
             });
           });
         }
+        function laTrayExtract(blob, name, cb) {
+          var nm = (name || "").toLowerCase();
+          var isPdf = /pdf/i.test(blob.type || "") || /\.pdf$/i.test(nm);
+          var isImg = /^image\//.test(blob.type || "") || /\.(jpg|jpeg|png|webp)$/i.test(nm);
+          var isDocx = /wordprocessingml/i.test(blob.type || "") || /\.docx$/i.test(nm);
+          var isDoc = /\.doc$/i.test(nm) && !isDocx;
+          var isTxt = /text|plain/i.test(blob.type || "") || /\.txt$/i.test(nm);
+          if (isTxt) { var fr = new FileReader(); fr.onload = function () { cb(((fr.result || "").trim()) || null); }; fr.onerror = function () { cb(null); }; try { fr.readAsText(blob); } catch (e) { cb(null); } return; }
+          if (isPdf) {
+            laPdfJs(function (mod) {
+              if (!mod) { cb(null); return; }
+              blob.arrayBuffer().then(function (buf) { return mod.getDocument({ data: buf, cMapUrl: "https://cdn.jsdelivr.net/npm/pdfjs-dist@6.4.299/cmaps/", cMapPacked: true, standardFontDataUrl: "https://cdn.jsdelivr.net/npm/pdfjs-dist@6.4.299/standard_fonts/" }).promise; }).then(function (pdf) {
+                var n = Math.min(pdf.numPages, 6), texts = [], chain = Promise.resolve();
+                for (var i = 1; i <= n; i++) { (function (pno) { chain = chain.then(function () { return pdf.getPage(pno).then(function (page) { return page.getTextContent().then(function (tc) { texts.push(tc.items.map(function (it) { return it.str; }).join(" ")); }); }); }); })(i); }
+                return chain.then(function () { cb(texts.join("\n").trim() || null); });
+              }).catch(function () { cb(null); });
+            });
+            return;
+          }
+          if (isDocx || isDoc) {
+            function ext() { try { blob.arrayBuffer().then(function (buf) { return window.mammoth.extractRawText({ arrayBuffer: buf }); }).then(function (res) { cb((res && res.value ? res.value.trim() : "") || null); }).catch(function () { cb(null); }); } catch (e) { cb(null); } }
+            if (window.mammoth && window.mammoth.extractRawText) { ext(); return; }
+            var s = document.createElement("script"); s.src = "https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js";
+            s.onload = ext; s.onerror = function () { cb(null); }; document.head.appendChild(s); return;
+          }
+          if (isImg) { laOcrTimed(blob, 20000, cb); return; }
+          cb(null);
+        }
         function renderDocList() {
           var list = document.getElementById("laDocList");
           if (!list) return;
@@ -7677,8 +7731,27 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
               });
               var rm = document.createElement("button"); rm.type = "button"; rm.className = "la-case-del"; rm.textContent = "\u2715";
               rm.setAttribute("aria-label", L("Remove", "Hatayein"));
-              rm.addEventListener("click", function () { if (laConfirmDel(L("Delete this document permanently?", "Ye dastavez hamesha ke liye delete karein?"))) laDocDelete(d.id).then(renderDocList); });
-              row.appendChild(nm); row.appendChild(sz); row.appendChild(dl); row.appendChild(rm);
+              rm.addEventListener("click", function () { if (laConfirmDel(L("Delete this document permanently?", "Ye dastavez hamesha ke liye delete karein?"))) laDocDelete(d.id).then(function () { for (var k = LA_MULTI.length - 1; k >= 0; k--) { if (LA_MULTI[k].id === d.id) LA_MULTI.splice(k, 1); } laCtxRender(); renderDocList(); }); });
+              var inTray = false; for (var txi = 0; txi < LA_MULTI.length; txi++) { if (LA_MULTI[txi].id === d.id) inTray = true; }
+              var tb = document.createElement("button"); tb.type = "button"; tb.className = "la-dl"; tb.textContent = inTray ? "✓" : "➕";
+              tb.setAttribute("aria-label", L("Add to question tray", "सवाल ट्रे में जोड़ें"));
+              tb.addEventListener("click", function () {
+                var ix = -1; for (var k = 0; k < LA_MULTI.length; k++) { if (LA_MULTI[k].id === d.id) ix = k; }
+                if (ix >= 0) { LA_MULTI.splice(ix, 1); tb.textContent = "➕"; laCtxRender(); return; }
+                tb.textContent = "…"; tb.disabled = true;
+                laDocGet(d.id).then(function (doc) {
+                  if (!doc) { tb.textContent = "➕"; tb.disabled = false; return; }
+                  laTrayExtract(doc.blob, doc.name, function (txt) {
+                    tb.disabled = false;
+                    if (!txt) { tb.textContent = "✕"; setTimeout(function () { tb.textContent = "➕"; }, 2000); return; }
+                    if (!LA_SCAN.text && LA_SCAN.left <= 0) LA_SCAN.left = 3;
+                    if (LA_MULTI.length >= 5) LA_MULTI.shift();
+                    LA_MULTI.push({ id: d.id, name: doc.name, text: txt });
+                    tb.textContent = "✓"; laCtxRender();
+                  });
+                });
+              });
+              row.appendChild(nm); row.appendChild(sz); row.appendChild(dl); row.appendChild(tb); row.appendChild(rm);
               list.appendChild(row);
             });
           });
