@@ -3776,10 +3776,29 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         ov.querySelector(".nr-hint").textContent = lang === "hi" ? "अगले/पिछले टॉपिक के लिए बाएँ/दाएँ स्वाइप करें" : (lang === "hinglish" ? "Left/right swipe se agla/pichhla topic" : "Swipe left/right to move between topics");
         ov.querySelector(".nr-prev").disabled = notesReader.ti <= 0;
         ov.querySelector(".nr-next").disabled = notesReader.ti >= list.length - 1;
+        var nrSpk = ov.querySelector(".nr-speak");
+        if (nrSpk) {
+          nrSpk.style.display = window.speechSynthesis ? "" : "none";
+          if (nrSpk.textContent.indexOf("⏹") !== 0) nrSpk.textContent = lang === "hi" ? "🔊 सुनें" : (lang === "hinglish" ? "🔊 Sunein" : "🔊 Listen");
+        }
         ov.querySelector(".nr-scroll").scrollTop = 0;
+      }
+      function notesReaderSpeak(btn) {
+        try {
+          if (!notesReader || !window.laSpeak) return;
+          var data = getHandwrittenNotes();
+          var list = data[notesReader.subj] || [];
+          var topic = list[notesReader.ti];
+          if (!topic) return;
+          var lang = notesLang;
+          var text = notesText(topic.title, lang);
+          (topic.points || []).forEach(function (pt) { text += ". " + notesText(pt, lang); });
+          window.laSpeak(text, btn, (lang === "hi" || lang === "hinglish") ? "hi" : "en");
+        } catch (e) {}
       }
       function notesReaderNav(dir) {
         if (!notesReader) return;
+        try { if (window.speechSynthesis) window.speechSynthesis.cancel(); } catch (e) {}
         var list = (getHandwrittenNotes()[notesReader.subj] || []);
         var nt = notesReader.ti + dir;
         if (nt < 0 || nt >= list.length) return;
@@ -3794,6 +3813,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
       }
       function notesReaderClose() {
         if (!notesReader) return;
+        try { if (window.speechSynthesis) window.speechSynthesis.cancel(); } catch (e) {}
         var ov = document.getElementById("notesReader");
         if (ov) ov.classList.remove("open");
         document.body.style.overflow = "";
@@ -3809,11 +3829,12 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         if (!ov) {
           ov = document.createElement("div");
           ov.id = "notesReader";
-          ov.innerHTML = "<div class=\"nr-top\"><button type=\"button\" class=\"nr-close\" aria-label=\"Close\">✕</button><span class=\"nr-count\"></span></div><div class=\"nr-scroll\"><div class=\"nr-body\"></div></div><div class=\"nr-hint\"></div><div class=\"nr-nav\"><button type=\"button\" class=\"nr-prev\">◀ Prev</button><button type=\"button\" class=\"nr-next\">Next ▶</button></div>";
+          ov.innerHTML = "<div class=\"nr-top\"><button type=\"button\" class=\"nr-close\" aria-label=\"Close\">✕</button><span class=\"nr-count\"></span></div><div class=\"nr-scroll\"><div class=\"nr-body\"></div></div><div class=\"nr-hint\"></div><div class=\"nr-nav\"><button type=\"button\" class=\"nr-prev\">◀ Prev</button><button type=\"button\" class=\"nr-speak\">🔊 Listen</button><button type=\"button\" class=\"nr-next\">Next ▶</button></div>";
           document.body.appendChild(ov);
           ov.querySelector(".nr-close").addEventListener("click", notesReaderClose);
           ov.querySelector(".nr-prev").addEventListener("click", function () { notesReaderNav(-1); });
           ov.querySelector(".nr-next").addEventListener("click", function () { notesReaderNav(1); });
+          ov.querySelector(".nr-speak").addEventListener("click", function () { notesReaderSpeak(this); });
           var tsX = 0, tsY = 0;
           ov.addEventListener("touchstart", function (e) { var tt = (e.changedTouches && e.changedTouches[0]) || (e.touches && e.touches[0]); if (tt) { tsX = tt.clientX; tsY = tt.clientY; } }, { passive: true });
           ov.addEventListener("touchend", function (e) { var tt = (e.changedTouches && e.changedTouches[0]) || (e.touches && e.touches[0]); if (!tt) return; var dx = tt.clientX - tsX, dy = tt.clientY - tsY; if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) { if (dx < 0) notesReaderNav(1); else notesReaderNav(-1); } }, { passive: true });
