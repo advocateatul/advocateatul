@@ -6488,6 +6488,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
               try {
                 if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(ocrText);
                 else { var ta3 = document.createElement("textarea"); ta3.value = ocrText; document.body.appendChild(ta3); ta3.select(); document.execCommand("copy"); document.body.removeChild(ta3); }
+                var old3 = copyBtn.textContent; copyBtn.textContent = "\u2713 " + L("Copied", "कॉपी हुआ"); setTimeout(function () { copyBtn.textContent = old3; }, 1500);
               } catch (e) {}
             });
             crow.appendChild(copyBtn);
@@ -7048,10 +7049,12 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           window.LA_AUTH.withQuota(function (ok) { if (ok) doDocAsk(); else { out.textContent = L("Today's AI limit is reached.", "\u0906\u091c \u0915\u0940 AI \u0938\u0940\u092e\u093e \u092a\u0942\u0930\u0940 \u0939\u094b \u0917\u0908 \u0939\u0948\u0964"); try { out.scrollIntoView({ block: "nearest" }); } catch (e) {} } });
         } else doDocAsk();
       }
-      function docCopy() {
+      function docCopy(ev) {
         var out = document.getElementById("laDocsOut");
+        var btn = ev && ev.currentTarget;
         try {
           if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(out.textContent);
+          if (btn) { var old = btn.textContent; btn.textContent = "\u2713 " + L("Copied", "कॉपी हुआ"); setTimeout(function () { btn.textContent = old; }, 1500); }
         } catch (e) {}
       }
 
@@ -7115,9 +7118,11 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         ms.unshift({ title: L("Meeting", "मीटिंग") + " — " + tstr, text: LA_MEET_TXT });
         saveMeets(ms.slice(0, 20)); renderMeets();
       }
-      function meetCopy() {
+      function meetCopy(ev) {
+        var btn = ev && ev.currentTarget;
         try {
           if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(LA_MEET_TXT);
+          if (btn) { var old = btn.textContent; btn.textContent = "\u2713 " + L("Copied", "कॉपी हुआ"); setTimeout(function () { btn.textContent = old; }, 1500); }
         } catch (e) {}
       }
 
