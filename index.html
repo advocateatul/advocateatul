@@ -6101,9 +6101,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           text = (text || "").replace(/\s+/g, " ").trim();
           if (!text) return;
           if (text.length > 700) text = text.slice(0, 700);
-          var last = LA_HIST[LA_HIST.length - 1];
-          if (last && last.role === role) { last.text = (last.text + " " + text).slice(0, 900); }
-          else { LA_HIST.push({ role: role, text: text }); }
+          LA_HIST.push({ role: role, text: text });
           while (LA_HIST.length > 8) LA_HIST.shift();
           try { localStorage.setItem("laHist", JSON.stringify(LA_HIST)); } catch (e2) {}
         } catch (e) {}
@@ -6132,7 +6130,11 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         var to = setTimeout(function () { try { ctrl && ctrl.abort(); } catch (e) {} fin(null); }, (tokens && tokens >= 1000) ? 30000 : 12000);
         var turns = [];
         try {
-          LA_HIST.slice(-8).forEach(function (h) { turns.push({ role: h.role, parts: [{ text: h.text }] }); });
+          LA_HIST.slice(-8).forEach(function (h) {
+            var lt = turns[turns.length - 1];
+            if (lt && lt.role === h.role) { lt.parts[0].text += "\n\n" + h.text; }
+            else { turns.push({ role: h.role, parts: [{ text: h.text }] }); }
+          });
           while (turns.length && turns[0].role !== "user") turns.shift();
           if (turns.length && turns[turns.length - 1].role === "user") { turns[turns.length - 1] = { role: "user", parts: [{ text: q }] }; }
           else { turns.push({ role: "user", parts: [{ text: q }] }); }
