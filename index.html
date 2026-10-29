@@ -6584,13 +6584,14 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         var row = document.createElement("div");
         row.className = "la-scan-actions";
         function mk(label, fn) { var b = document.createElement("button"); b.type = "button"; b.textContent = label; b.addEventListener("click", fn); row.appendChild(b); }
-        mk("\uD83D\uDCDD " + L("Summary", "सारांश"), function () { respond(L("Summarise this document in simple words.", "Is document ka saransh saral shabdon me do.")); });
-        mk("\uD83D\uDCC5 " + L("Dates & details", "तारीखें व विवरण"), function () { respond(L("List all important dates, names, case numbers and sections in this document.", "Is document ki sabhi zaroori dates, naam, case number aur sections ki list do.")); });
-        mk("\u26A0\uFE0F " + L("Risks & gaps", "जोखिम व कमियाँ"), function () { respond(L("List the risks, gaps and missing points in this document, in simple words.", "Is document ke jokhim, kamiyan aur missing points saral shabdon me batao.")); });
-        mk("\uD83D\uDD00 " + L("Compare with tray", "ट्रे से तुलना"), function () { if (!LA_MULTI || !LA_MULTI.length) { laBotSay(L("To compare, first add another document to the tray from the Docs tab (tap the \u2795 button on a document row), then tap Compare again.", "Tulna ke liye pehle Docs tab me kisi doosre document par \u2795 dabakar use tray me daalein, phir dobara Compare dabayein."), false); return; } respond(L("Compare this document with the document(s) in the tray: list differences, conflicting dates, names or amounts, and which version looks newer or stronger.", "Is document ki tray wale document(s) se tulna karo: antar, alag dates, naam ya rakam, aur kaunsa version naya ya mazboot lagta hai, ye sab batao.")); });
-        mk("\uD83D\uDC65 " + L("Parties & citations", "पक्षकार व उद्धरण"), function () { respond(L("Extract from this document as a structured list: parties with their roles, advocates, citations, amounts and important dates.", "Is document se ek structured list banao: pakshkar unki bhoomika ke saath, vakil, citations, rakam aur zaroori dates.")); });
-        mk("\uD83D\uDD50 " + L("Make timeline", "समयरेखा बनाएं"), function () { respond(L("Make a chronological timeline of all dated events in this document, oldest first, with dates and one-line descriptions. Mark dates that are unclear.", "Is document ke sabhi dated events ki chronological timeline banao, sabse purani date se shuru, har event ke saath date aur ek line ka vivaran. Jo date unclear ho use mark karo.")); });
-        mk("\uD83C\uDF10 " + L("Translate", "अनुवाद"), function () { respond(laLang() === "hi" ? "Translate this document into English." : "Is document ka Hindi anuvaad karo.", laLang() === "hi" ? "Translate the document text below into accurate English. Keep legal terminology correct. Write only the translation." : "नीचे दिए गए दस्तावेज़ के पाठ का सही हिंदी अनुवाद करें। कानूनी शब्दावली सही रखें। केवल अनुवाद लिखें। मार्कडाउन फॉर्मेटिंग का प्रयोग न करें — सादा पाठ लिखें। केवल देवनागरी लिपि में लिखें।"); });
+        function askDoc(q, sys) { if (window.LA_AUTH && window.LA_AUTH.ready && !window.LA_AUTH.user) { window.LA_AUTH.requireLogin(function () { respond(q, sys); }); return; } respond(q, sys); }
+        mk("\uD83D\uDCDD " + L("Summary", "सारांश"), function () { askDoc(L("Summarise this document in simple words.", "Is document ka saransh saral shabdon me do.")); });
+        mk("\uD83D\uDCC5 " + L("Dates & details", "तारीखें व विवरण"), function () { askDoc(L("List all important dates, names, case numbers and sections in this document.", "Is document ki sabhi zaroori dates, naam, case number aur sections ki list do.")); });
+        mk("\u26A0\uFE0F " + L("Risks & gaps", "जोखिम व कमियाँ"), function () { askDoc(L("List the risks, gaps and missing points in this document, in simple words.", "Is document ke jokhim, kamiyan aur missing points saral shabdon me batao.")); });
+        mk("\uD83D\uDD00 " + L("Compare with tray", "ट्रे से तुलना"), function () { if (!LA_MULTI || !LA_MULTI.length) { laBotSay(L("To compare, first add another document to the tray from the Docs tab (tap the \u2795 button on a document row), then tap Compare again.", "Tulna ke liye pehle Docs tab me kisi doosre document par \u2795 dabakar use tray me daalein, phir dobara Compare dabayein."), false); return; } askDoc(L("Compare this document with the document(s) in the tray: list differences, conflicting dates, names or amounts, and which version looks newer or stronger.", "Is document ki tray wale document(s) se tulna karo: antar, alag dates, naam ya rakam, aur kaunsa version naya ya mazboot lagta hai, ye sab batao.")); });
+        mk("\uD83D\uDC65 " + L("Parties & citations", "पक्षकार व उद्धरण"), function () { askDoc(L("Extract from this document as a structured list: parties with their roles, advocates, citations, amounts and important dates.", "Is document se ek structured list banao: pakshkar unki bhoomika ke saath, vakil, citations, rakam aur zaroori dates.")); });
+        mk("\uD83D\uDD50 " + L("Make timeline", "समयरेखा बनाएं"), function () { askDoc(L("Make a chronological timeline of all dated events in this document, oldest first, with dates and one-line descriptions. Mark dates that are unclear.", "Is document ke sabhi dated events ki chronological timeline banao, sabse purani date se shuru, har event ke saath date aur ek line ka vivaran. Jo date unclear ho use mark karo.")); });
+        mk("\uD83C\uDF10 " + L("Translate", "अनुवाद"), function () { askDoc(laLang() === "hi" ? "Translate this document into English." : "Is document ka Hindi anuvaad karo.", laLang() === "hi" ? "Translate the document text below into accurate English. Keep legal terminology correct. Write only the translation." : "नीचे दिए गए दस्तावेज़ के पाठ का सही हिंदी अनुवाद करें। कानूनी शब्दावली सही रखें। केवल अनुवाद लिखें। मार्कडाउन फॉर्मेटिंग का प्रयोग न करें — सादा पाठ लिखें। केवल देवनागरी लिपि में लिखें।"); });
         mk("\uD83D\uDCE5 " + L("Save to My Documents", "My Documents में save करें"), function () { try { laDocUploadFiles([file]).then(function (r) { laBotSay(r.failed ? L("Could not save this file to My Documents. Please try again.", "Ye file My Documents me save nahi hui. Dobara try karein.") : L("Saved to My Documents (Docs tab).", "My Documents (Docs tab) में save हो गया।"), false); }).catch(function () { laBotSay(L("Could not save this file to My Documents. Please try again.", "Ye file My Documents me save nahi hui. Dobara try karein."), false); }); } catch (e) {} });
         mk("\u2795 " + L("Add to My Cases", "My Cases में जोड़ें"), function () {
           try {
@@ -7574,12 +7575,13 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         (function () {
           var db = document.getElementById("laDetailBtn");
           if (!db) return;
-          function syncDetail() { db.classList.toggle("la-detail-on", !!laDetailed); db.setAttribute("aria-pressed", laDetailed ? "true" : "false"); }
+          function syncDetail() { db.classList.toggle("la-detail-on", !!laDetailed); db.setAttribute("aria-pressed", laDetailed ? "true" : "false"); db.textContent = laDetailed ? "🔍✓" : "🔍"; }
           syncDetail();
           db.addEventListener("click", function () {
             laDetailed = !laDetailed;
             try { localStorage.setItem("laDetailed", laDetailed ? "1" : "0"); } catch (e) {}
             syncDetail();
+            laBotSay(laDetailed ? L("Detailed research is ON — your next questions will get longer, detailed answers.", "Detailed research ON hai — ab aapke sawalon ke lambe, detail wale jawab milenge.") : L("Detailed research is OFF — answers will be short again.", "Detailed research OFF hai — jawab phir chhote milenge."), false);
           });
         })();
         var camBtn = document.getElementById("laCamBtn"), camInp = document.getElementById("laCamInput");
@@ -7597,10 +7599,12 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           if (err === "network") return L("Network problem — voice service failed. Please try again.", "Network problem — voice service nahi chali. Dobara try karein.");
           return L("Voice input failed. Please try again.", "Voice input nahi chala. Dobara try karein.");
         }
+        var laMicRec = null; var micStopTap = false;
         if (micBtn && SR && micInp) micBtn.addEventListener("click", function () {
-          if (micBtn.dataset.live === "1") return;
+          if (micBtn.dataset.live === "1") { if (!laMicRec) { micBtn.dataset.live = ""; micBtn.textContent = "🎤"; return; } micStopTap = true; try { laMicRec.stop(); } catch (e) {} return; }
           try {
             var rec = new SR();
+            laMicRec = rec;
             rec.lang = laLang() === "hi" ? "hi-IN" : "en-IN";
             rec.interimResults = true;
             micBtn.dataset.live = "1";
@@ -7619,14 +7623,16 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
             rec.onend = function () {
               micBtn.dataset.live = "";
               micBtn.textContent = "🎤";
+              laMicRec = null;
               var v = micInp.value.trim();
+              if (micStopTap) { micStopTap = false; if (v) { if (respond(v)) micInp.value = ""; } return; }
               if (v) { if (respond(v)) micInp.value = ""; }
               else if (!hadErr) { laBotSay(laMicErr("no-speech"), false); }
               hadErr = false;
             };
-            rec.onerror = function (ev) { micBtn.dataset.live = ""; micBtn.textContent = "🎤"; hadErr = true; laBotSay(laMicErr(ev && ev.error), false); };
+            rec.onerror = function (ev) { micBtn.dataset.live = ""; micBtn.textContent = "🎤"; laMicRec = null; if (micStopTap) { micStopTap = false; hadErr = false; return; } hadErr = true; laBotSay(laMicErr(ev && ev.error), false); };
             rec.start();
-          } catch (e) { micBtn.dataset.live = ""; micBtn.textContent = "🎤"; laBotSay(laMicErr(""), false); }
+          } catch (e) { micBtn.dataset.live = ""; micBtn.textContent = "🎤"; laMicRec = null; laBotSay(laMicErr(""), false); }
         });
         var dcBtn = document.getElementById("laDocCamBtn");
         if (dcBtn && camInp) dcBtn.addEventListener("click", function () { camInp.click(); });
