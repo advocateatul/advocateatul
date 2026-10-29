@@ -14534,6 +14534,1025 @@
           "हुई हानि / क्षति का विवरण"
         ]
       }
+    },
+    {
+      "id": "appeal-against-acquittal-general",
+      "category": {
+        "en": "Criminal",
+        "hi": "आपराधिक"
+      },
+      "title": {
+        "en": "Appeal Against Acquittal (Sec. 419 BNSS / 378 CrPC) — General Criminal Appeal",
+        "hi": "दोषमुक्ति के विरुद्ध अपील (धारा 419 BNSS / 378 CrPC) — सामान्य आपराधिक अपील"
+      },
+      "use": {
+        "en": "File this when a trial court acquits the accused and the State or the complainant wants the High Court to set aside the acquittal. Also called acquittal appeal, State appeal against acquittal.",
+        "hi": "जब विचारण न्यायालय आरोपी को दोषमुक्त कर दे और राज्य या परिवादी उच्च न्यायालय से दोषमुक्ति को रद्द कराना चाहे, तब इसे दाखिल करें। इसे दोषमुक्ति अपील या राज्य की दोषमुक्ति-विरुद्ध अपील भी कहते हैं।"
+      },
+      "template": "IN THE HIGH COURT OF JUDICATURE AT [NAME OF HIGH COURT]\n\nCriminal Appeal No. [____] of [YEAR]\nUnder Section 419 of the Bharatiya Nagarik Suraksha Sanhita, 2023\n(Section 378 of the Code of Criminal Procedure, 1973)\n\nIN THE MATTER OF:\n[STATE OF (STATE NAME) / COMPLAINANT NAME]                                     ... Appellant\n\nVERSUS\n\n[ACCUSED NAME], S/o / D/o [FATHER'S NAME], R/o [FULL ADDRESS]                ... Respondent / Accused\n\n(Arising out of Judgment and Order dated [DATE] passed by the learned [Additional Sessions Judge / Judicial Magistrate] in Sessions Trial / Criminal Case No. [____] of [YEAR], Police Station [NAME], District [NAME], whereby the respondent was acquitted of the offence(s) under Section(s) [____] of [BNS, 2023 / IPC, 1860])\n\nAPPEAL AGAINST ACQUITTAL ON BEHALF OF THE APPELLANT\n\nMay it please this Hon'ble Court:\n\n1. That the appellant is the [State, through the Public Prosecutor / complainant in the case]. The respondent was tried for the offence(s) mentioned above, and by the impugned judgment dated [DATE], the learned trial court acquitted the respondent of all charges.\n\n2. That the impugned judgment is contrary to law and to the weight of evidence on record. The learned trial court failed to appreciate the testimony of the prosecution witnesses, particularly [PW-1 NAME] and [PW-2 NAME], whose statements were consistent and corroborated by the medical / documentary evidence, namely [DESCRIBE EVIDENCE, e.g. injury report / recovery memo].\n\n3. That the learned trial court recorded perverse findings. It disbelieved the prosecution case on minor contradictions which did not go to the root of the matter, and it ignored the settled principle that the evidence of a witness is to be read as a whole and not picked apart sentence by sentence.\n\n4. That the learned trial court misread the provisions of [SECTION(S)] and failed to consider that the prosecution had proved its case beyond reasonable doubt. The acquittal is therefore liable to be set aside.\n\n5. That [where the appellant is the complainant] the appellant is filing this appeal along with an application for grant of leave to appeal, as required by law, and the delay, if any, is neither wilful nor wanton.\n\n6. That no other appeal or revision against the impugned judgment is pending before any court, and this appeal is filed within the period of limitation.\n\nPRAYER:\nIt is, therefore, most respectfully prayed that this Hon'ble Court may be pleased to:\n(a) admit this appeal and call for the record of the trial court;\n(b) set aside the judgment and order of acquittal dated [DATE]; and\n(c) convict the respondent for the offence(s) charged, or, in the alternative, remand the case for re-trial in accordance with law.\nAny other order which this Hon'ble Court deems fit and proper in the facts of the case may also kindly be passed.\n\nPlace: [CITY]\nDate: [DATE]\n\n[ADVOCATE NAME]\nCounsel for the Appellant\n[Enrolment No. / Chamber Address / Mobile No.]\n\nVERIFICATION:\nI, [NAME], [Public Prosecutor / complainant], do hereby verify that the contents of this appeal are true to my knowledge and based on the record of the trial court. Verified at [CITY] on [DATE].\n[Signature of Appellant / Counsel]",
+      "templateHi": "[उच्च न्यायालय का नाम] उच्च न्यायालय में\n\nआपराधिक अपील संख्या [____] सन् [वर्ष]\nभारतीय नागरिक सुरक्षा संहिता, 2023 की धारा 419 के अधीन\n(दण्ड प्रक्रिया संहिता, 1973 की धारा 378 के अधीन)\n\nविषय में:\n[राज्य (राज्य का नाम) / परिवादी का नाम]                                     ... अपीलार्थी\n\nबनाम\n\n[आरोपी का नाम], पुत्र/पुत्री [पिता का नाम], निवासी [पूरा पता]                ... प्रत्यर्थी / आरोपी\n\n([विद्वान अपर सत्र न्यायाधीश / न्यायिक मजिस्ट्रेट] द्वारा सत्र विचारण / आपराधिक वाद संख्या [____] सन् [वर्ष], थाना [नाम], जिला [नाम] में दिनांक [तारीख] को पारित निर्णय एवं आदेश से उद्भूत, जिसके द्वारा प्रत्यर्थी को धारा [____] [भारतीय न्याय संहिता, 2023 / भारतीय दण्ड संहिता, 1860] के अपराध से दोषमुक्त किया गया था)\n\nअपीलार्थी की ओर से दोषमुक्ति के विरुद्ध अपील\n\nमाननीय न्यायालय की सेवा में सादर निवेदन है कि:\n\n1. अपीलार्थी [लोक अभियोजक के माध्यम से राज्य / वाद का परिवादी] है। प्रत्यर्थी पर उपर्युक्त अपराध का विचारण हुआ था, और दिनांक [तारीख] के आक्षेपित निर्णय द्वारा विद्वान विचारण न्यायालय ने प्रत्यर्थी को सभी आरोपों से दोषमुक्त कर दिया।\n\n2. आक्षेपित निर्णय विधि के विरुद्ध और अभिलेख पर उपलब्ध साक्ष्य के भार के विरुद्ध है। विद्वान विचारण न्यायालय ने अभियोजन साक्षियों, विशेषकर [गवाह-1 का नाम] और [गवाह-2 का नाम] के कथनों का सही मूल्यांकन नहीं किया, जिनके कथन संगत थे और चिकित्सीय / दस्तावेजी साक्ष्य, अर्थात् [साक्ष्य का वर्णन, जैसे चोट रिपोर्ट / बरामदगी मेमो] से समर्थित थे।\n\n3. विद्वान विचारण न्यायालय ने विकृत निष्कर्ष दर्ज किए। उसने अभियोजन पक्ष को मामूली विरोधाभासों के आधार पर अविश्वसनीय माना, जो मामले की जड़ तक नहीं जाते थे, और इस स्थापित सिद्धांत की उपेक्षा की कि साक्षी के साक्ष्य को समग्र रूप से पढ़ा जाना चाहिए, वाक्य-दर-वाक्य छाँटकर नहीं।\n\n4. विद्वान विचारण न्यायालय ने [धारा(ओं)] के प्रावधानों को गलत ढंग से पढ़ा और इस बात पर विचार नहीं किया कि अभियोजन ने अपना मामला संदेह से परे सिद्ध कर दिया था। इसलिए दोषमुक्ति रद्द किए जाने योग्य है।\n\n5. [जहाँ अपीलार्थी परिवादी हो] अपीलार्थी यह अपील विधि के अनुसार अपील की अनुमति हेतु आवेदन के साथ दाखिल कर रहा है, और यदि कोई विलम्ब है तो वह न तो जानबूझकर है और न ही उपेक्षापूर्ण।\n\n6. आक्षेपित निर्णय के विरुद्ध कोई अन्य अपील या पुनरीक्षण किसी न्यायालय में लंबित नहीं है, और यह अपील परिसीमा अवधि के भीतर दाखिल की गई है।\n\nप्रार्थना:\nअतः अत्यंत आदरपूर्वक प्रार्थना है कि माननीय न्यायालय कृपया:\n(क) इस अपील को स्वीकार करे और विचारण न्यायालय का अभिलेख मँगाए;\n(ख) दिनांक [तारीख] का दोषमुक्ति का निर्णय एवं आदेश रद्द करे; और\n(ग) प्रत्यर्थी को आरोपित अपराध के लिए दोषी ठहराए, अथवा विकल्प में, मामले को विधि के अनुसार पुनः विचारण हेतु वापस भेजे।\nमामले के तथ्यों में माननीय न्यायालय जो भी अन्य आदेश उचित समझे, वह भी पारित करने की कृपा करे।\n\nस्थान: [शहर]\nदिनांक: [तारीख]\n\n[अधिवक्ता का नाम]\nअपीलार्थी के अधिवक्ता\n[नामांकन संख्या / चैम्बर पता / मोबाइल नंबर]\n\nसत्यापन:\nमैं, [नाम], [लोक अभियोजक / परिवादी], सत्यापित करता हूँ कि इस अपील की विषय-वस्तु मेरी जानकारी में सत्य है और विचारण न्यायालय के अभिलेख पर आधारित है। [शहर] में दिनांक [तारीख] को सत्यापित।\n[अपीलार्थी / अधिवक्ता के हस्ताक्षर]",
+      "filedIn": {
+        "en": "High Court",
+        "hi": "उच्च न्यायालय"
+      },
+      "sections": {
+        "en": "Sec. 419 BNSS (Sec. 378 CrPC) — appeal in case of acquittal; leave of the High Court is required where the appeal is by the complainant",
+        "hi": "धारा 419 BNSS (धारा 378 CrPC) — दोषमुक्ति के मामले में अपील; जहाँ अपील परिवादी द्वारा की जाती है, वहाँ उच्च न्यायालय की अनुमति आवश्यक है"
+      },
+      "jurisdiction": {
+        "en": "High Court having appellate jurisdiction over the trial court which passed the acquittal. The State files through the Public Prosecutor; a complainant files with leave of the High Court.",
+        "hi": "दोषमुक्ति पारित करने वाले विचारण न्यायालय पर अपीलीय क्षेत्राधिकार रखने वाला उच्च न्यायालय। राज्य लोक अभियोजक के माध्यम से दाखिल करता है; परिवादी उच्च न्यायालय की अनुमति से दाखिल करता है।"
+      },
+      "requirements": {
+        "en": [
+          "Certified copy of the judgment of acquittal",
+          "Copy of FIR and chargesheet",
+          "Trial court record / list of prosecution witnesses",
+          "Application for leave to appeal (if filed by complainant)",
+          "ID proof and vakalatnama"
+        ],
+        "hi": [
+          "दोषमुक्ति के निर्णय की प्रमाणित प्रति",
+          "FIR और आरोपपत्र की प्रति",
+          "विचारण न्यायालय का अभिलेख / अभियोजन साक्षियों की सूची",
+          "अपील की अनुमति हेतु आवेदन (यदि परिवादी द्वारा दाखिल हो)",
+          "पहचान प्रमाण और वकालतनामा"
+        ]
+      }
+    },
+    {
+      "id": "summoning-witnesses-criminal",
+      "category": {
+        "en": "Criminal",
+        "hi": "आपराधिक"
+      },
+      "title": {
+        "en": "Application for Summoning Witnesses in Criminal Case (Sec. 348 BNSS / 311 CrPC) — Material Witness Application",
+        "hi": "आपराधिक वाद में साक्षियों को बुलाने हेतु आवेदन (धारा 348 BNSS / 311 CrPC) — महत्वपूर्ण साक्षी आवेदन"
+      },
+      "use": {
+        "en": "File this during a criminal trial when a material witness who knows important facts has not been examined and the court should summon him. Different from civil summoning (Order XVI CPC) and from recall of an already-examined witness.",
+        "hi": "आपराधिक विचारण के दौरान इसे दाखिल करें जब कोई महत्वपूर्ण साक्षी, जो महत्त्वपूर्ण तथ्यों को जानता है, परीक्षित नहीं हुआ हो और न्यायालय को उसे बुलाना चाहिए। यह सिविल समन (आदेश XVI CPC) और पहले से परीक्षित साक्षी को पुनः बुलाने से भिन्न है।"
+      },
+      "template": "IN THE COURT OF THE [ADDITIONAL SESSIONS JUDGE / JUDICIAL MAGISTRATE FIRST CLASS], [DISTRICT NAME]\n\nCriminal Case / Sessions Trial No. [____] of [YEAR]\n[STATE] Versus [ACCUSED NAME]\nFIR No. [____] dated [DATE], Police Station [NAME]\nOffences: Section(s) [____] of [BNS, 2023 / IPC, 1860]\n\nAPPLICATION UNDER SECTION 348 OF THE BHARATIYA NAGARIK SURAKSHA SANHITA, 2023 (SECTION 311 OF THE CODE OF CRIMINAL PROCEDURE, 1973) FOR SUMMONING MATERIAL WITNESS\n\nMay it please the Court:\n\n1. That the applicant is the [prosecution / complainant / accused] in the above case, which is presently at the stage of [prosecution evidence / defence evidence].\n\n2. That [WITNESS NAME], S/o / D/o [FATHER'S NAME], R/o [ADDRESS], is a material witness in this case. He / She [was present at the place of occurrence on the date of the incident / prepared the document dated [DATE] / treated the injured / conducted the investigation at the initial stage — DESCRIBE THE WITNESS'S CONNECTION WITH THE FACTS].\n\n3. That the said witness has not been examined so far, although his / her evidence is essential for the just decision of the case. Without his / her testimony, the true facts cannot come before this Hon'ble Court and a grave failure of justice is likely to occur.\n\n4. That the power of this Hon'ble Court to summon any person as a witness at any stage of the proceedings, before judgment is pronounced, is wide and is meant to be exercised to arrive at the truth. The applicant is not seeking to fill up any lacuna or to delay the trial; the witness is genuinely material and his / her address is available for service of summons.\n\n5. That the balance of convenience is in favour of summoning the witness, and no prejudice will be caused to the opposite party, who will get full opportunity to cross-examine the witness.\n\nPRAYER:\nIt is, therefore, most respectfully prayed that this Hon'ble Court may be pleased to summon [WITNESS NAME] as a witness in this case and issue summons / warrant, as deemed fit, for his / her appearance on the next date of hearing. Any other order deemed fit and proper may also kindly be passed.\n\nPlace: [CITY]\nDate: [DATE]\n\n[ADVOCATE NAME]\nCounsel for the Applicant\n[Enrolment No. / Chamber Address / Mobile No.]\n\nVERIFICATION:\nI, [NAME], applicant, do hereby verify that the contents of this application are true to my knowledge. Verified at [CITY] on [DATE].\n[Signature of Applicant / Counsel]",
+      "templateHi": "[अपर सत्र न्यायाधीश / प्रथम श्रेणी न्यायिक मजिस्ट्रेट], [जिला का नाम] के न्यायालय में\n\nआपराधिक वाद / सत्र विचारण संख्या [____] सन् [वर्ष]\n[राज्य] बनाम [आरोपी का नाम]\nFIR संख्या [____] दिनांक [तारीख], थाना [नाम]\nअपराध: धारा [____] [भारतीय न्याय संहिता, 2023 / भारतीय दण्ड संहिता, 1860]\n\nभारतीय नागरिक सुरक्षा संहिता, 2023 की धारा 348 (दण्ड प्रक्रिया संहिता, 1973 की धारा 311) के अधीन महत्वपूर्ण साक्षी को बुलाने हेतु आवेदन\n\nमाननीय न्यायालय की सेवा में सादर निवेदन है कि:\n\n1. आवेदक उपर्युक्त वाद में [अभियोजन / परिवादी / आरोपी] है, जो वर्तमान में [अभियोजन साक्ष्य / बचाव साक्ष्य] की अवस्था में है।\n\n2. [साक्षी का नाम], पुत्र/पुत्री [पिता का नाम], निवासी [पता], इस वाद में एक महत्वपूर्ण साक्षी है। वह [घटना की तारीख को घटनास्थल पर उपस्थित था / दिनांक [तारीख] के दस्तावेज को तैयार करने वाला था / घायल का उपचार करने वाला था / प्रारंभिक अवस्था में जाँच करने वाला था — साक्षी का तथ्यों से संबंध वर्णित करें]।\n\n3. उक्त साक्षी की अब तक परीक्षा नहीं हुई है, यद्यपि उसका साक्ष्य मामले के न्यायपूर्ण निर्णय के लिए आवश्यक है। उसके कथन के बिना सत्य तथ्य माननीय न्यायालय के समक्ष नहीं आ सकेंगे और न्याय की गंभीर विफलता की संभावना है।\n\n4. निर्णय सुनाए जाने से पूर्व कार्यवाही की किसी भी अवस्था में किसी भी व्यक्ति को साक्षी के रूप में बुलाने की माननीय न्यायालय की शक्ति व्यापक है और इसका उद्देश्य सत्य तक पहुँचना है। आवेदक किसी कमी को पूरा करने या विचारण में विलम्ब करने का प्रयास नहीं कर रहा है; साक्षी वास्तव में महत्वपूर्ण है और समन तामील हेतु उसका पता उपलब्ध है।\n\n5. सुविधा का संतुलन साक्षी को बुलाने के पक्ष में है, और विरोधी पक्ष को कोई प्रतिकूल प्रभाव नहीं होगा, क्योंकि उसे साक्षी से जिरह करने का पूर्ण अवसर मिलेगा।\n\nप्रार्थना:\nअतः अत्यंत आदरपूर्वक प्रार्थना है कि माननीय न्यायालय कृपया [साक्षी का नाम] को इस वाद में साक्षी के रूप में बुलाए और अगली सुनवाई की तारीख पर उसकी उपस्थिति हेतु समन / वारंट, जैसा उचित समझे, जारी करे। जो भी अन्य आदेश उचित समझा जाए, वह भी पारित करने की कृपा करे।\n\nस्थान: [शहर]\nदिनांक: [तारीख]\n\n[अधिवक्ता का नाम]\nआवेदक के अधिवक्ता\n[नामांकन संख्या / चैम्बर पता / मोबाइल नंबर]\n\nसत्यापन:\nमैं, [नाम], आवेदक, सत्यापित करता हूँ कि इस आवेदन की विषय-वस्तु मेरी जानकारी में सत्य है। [शहर] में दिनांक [तारीख] को सत्यापित।\n[आवेदक / अधिवक्ता के हस्ताक्षर]",
+      "filedIn": {
+        "en": "Trial Court (Sessions Court / Magistrate's Court)",
+        "hi": "विचारण न्यायालय (सत्र न्यायालय / मजिस्ट्रेट न्यायालय)"
+      },
+      "sections": {
+        "en": "Sec. 348 BNSS (Sec. 311 CrPC) — power to summon material witness, or examine person present, at any stage before judgment",
+        "hi": "धारा 348 BNSS (धारा 311 CrPC) — निर्णय से पूर्व किसी भी अवस्था में महत्वपूर्ण साक्षी को बुलाने या उपस्थित व्यक्ति की परीक्षा करने की शक्ति"
+      },
+      "jurisdiction": {
+        "en": "The trial court seized of the case, at any stage before judgment is pronounced. The witness must be shown to be material to a just decision.",
+        "hi": "वाद से संलग्न विचारण न्यायालय, निर्णय सुनाए जाने से पूर्व किसी भी अवस्था में। साक्षी का न्यायपूर्ण निर्णय के लिए महत्वपूर्ण होना दिखाना आवश्यक है।"
+      },
+      "requirements": {
+        "en": [
+          "Details and address of the proposed witness",
+          "Brief note on what the witness will prove",
+          "Copy of chargesheet / list of witnesses (if any)",
+          "Vakalatnama"
+        ],
+        "hi": [
+          "प्रस्तावित साक्षी का विवरण और पता",
+          "साक्षी क्या सिद्ध करेगा, इस पर संक्षिप्त टिप्पणी",
+          "आरोपपत्र / साक्षियों की सूची की प्रति (यदि कोई हो)",
+          "वकालतनामा"
+        ]
+      }
+    },
+    {
+      "id": "early-hearing-criminal",
+      "category": {
+        "en": "Criminal",
+        "hi": "आपराधिक"
+      },
+      "title": {
+        "en": "Application for Early / Out-of-Turn Hearing in Criminal Case — Urgent Listing Application",
+        "hi": "आपराधिक वाद में शीघ्र / क्रम से पूर्व सुनवाई हेतु आवेदन — तत्काल सूचीबद्धता आवेदन"
+      },
+      "use": {
+        "en": "File this when a criminal case needs to be heard out of turn — accused in long custody, aged or ailing witness, or a witness about to leave the country. Also called urgent hearing application, early date application.",
+        "hi": "जब किसी आपराधिक वाद की क्रम से पूर्व सुनवाई आवश्यक हो — आरोपी लंबी हिरासत में हो, वृद्ध या बीमार साक्षी हो, या कोई साक्षी देश छोड़ने वाला हो — तब इसे दाखिल करें। इसे तत्काल सुनवाई आवेदन या शीघ्र तारीख आवेदन भी कहते हैं।"
+      },
+      "template": "IN THE COURT OF THE [ADDITIONAL SESSIONS JUDGE / JUDICIAL MAGISTRATE FIRST CLASS], [DISTRICT NAME]\n\nCriminal Case / Sessions Trial No. [____] of [YEAR]\n[STATE] Versus [ACCUSED NAME]\nFIR No. [____] dated [DATE], Police Station [NAME]\nOffences: Section(s) [____] of [BNS, 2023 / IPC, 1860]\n\nAPPLICATION FOR EARLY / OUT-OF-TURN HEARING OF THE ABOVE CASE\n\nMay it please the Court:\n\n1. That the applicant is the [accused / complainant / prosecution] in the above case, which is pending before this Hon'ble Court since [YEAR] and is presently at the stage of [STAGE, e.g. prosecution evidence / arguments].\n\n2. That there are special and urgent reasons for an early hearing of this case:\n   (a) [The accused has been in judicial custody since [DATE], and a long delay in trial directly affects his liberty];\n   (b) [The star witness, [NAME], aged about [AGE] years, is suffering from [AILMENT] and his / her evidence may be lost if the trial is delayed];\n   (c) [A material witness is scheduled to leave India on [DATE] for [REASON]];\n   (d) [The case is one of the oldest pending cases on the board of this Hon'ble Court].\n   [RETAIN THE GROUNDS THAT APPLY AND DELETE THE REST.]\n\n3. That the applicant is not seeking any adjournment or delay; on the contrary, the applicant undertakes to remain present on every date fixed by this Hon'ble Court and to conclude his / her evidence / arguments expeditiously.\n\n4. That no prejudice will be caused to the opposite party by an early hearing; on the contrary, an early disposal will serve the interests of justice and reduce the burden of pending cases.\n\n5. That this application is bona fide and is filed in the interest of a speedy trial, which is a part of the right to a fair trial.\n\nPRAYER:\nIt is, therefore, most respectfully prayed that this Hon'ble Court may be pleased to take up the above case out of turn and fix it for early hearing on a short date, preferably within [NUMBER] weeks. Any other order deemed fit and proper may also kindly be passed.\n\nPlace: [CITY]\nDate: [DATE]\n\n[ADVOCATE NAME]\nCounsel for the Applicant\n[Enrolment No. / Chamber Address / Mobile No.]\n\nVERIFICATION:\nI, [NAME], applicant, do hereby verify that the contents of this application are true to my knowledge. Verified at [CITY] on [DATE].\n[Signature of Applicant / Counsel]",
+      "templateHi": "[अपर सत्र न्यायाधीश / प्रथम श्रेणी न्यायिक मजिस्ट्रेट], [जिला का नाम] के न्यायालय में\n\nआपराधिक वाद / सत्र विचारण संख्या [____] सन् [वर्ष]\n[राज्य] बनाम [आरोपी का नाम]\nFIR संख्या [____] दिनांक [तारीख], थाना [नाम]\nअपराध: धारा [____] [भारतीय न्याय संहिता, 2023 / भारतीय दण्ड संहिता, 1860]\n\nउपर्युक्त वाद की शीघ्र / क्रम से पूर्व सुनवाई हेतु आवेदन\n\nमाननीय न्यायालय की सेवा में सादर निवेदन है कि:\n\n1. आवेदक उपर्युक्त वाद में [आरोपी / परिवादी / अभियोजन] है, जो सन् [वर्ष] से माननीय न्यायालय के समक्ष लंबित है और वर्तमान में [अवस्था, जैसे अभियोजन साक्ष्य / बहस] की अवस्था में है।\n\n2. इस वाद की शीघ्र सुनवाई के लिए विशेष और तत्काल कारण हैं:\n   (क) [आरोपी दिनांक [तारीख] से न्यायिक हिरासत में है, और विचारण में लंबा विलम्ब उसकी स्वतंत्रता को सीधे प्रभावित करता है];\n   (ख) [मुख्य साक्षी, [नाम], आयु लगभग [आयु] वर्ष, [बीमारी] से पीड़ित है और विचारण में विलम्ब होने पर उसका साक्ष्य नष्ट हो सकता है];\n   (ग) [एक महत्वपूर्ण साक्षी [तारीख] को [कारण] से भारत छोड़ने वाला है];\n   (घ) [यह वाद माननीय न्यायालय के बोर्ड पर लंबित सबसे पुराने वादों में से एक है]।\n   [जो आधार लागू हों, उन्हें रखें और शेष हटा दें।]\n\n3. आवेदक कोई स्थगन या विलम्ब नहीं चाहता है; इसके विपरीत, आवेदक यह वचन देता है कि वह माननीय न्यायालय द्वारा नियत प्रत्येक तारीख पर उपस्थित रहेगा और अपने साक्ष्य / बहस को शीघ्रता से समाप्त करेगा।\n\n4. शीघ्र सुनवाई से विरोधी पक्ष को कोई प्रतिकूल प्रभाव नहीं होगा; इसके विपरीत, शीघ्र निस्तारण से न्याय के हितों की पूर्ति होगी और लंबित वादों का बोझ कम होगा।\n\n5. यह आवेदन सद्भावपूर्वक और शीघ्र विचारण के हित में दाखिल किया गया है, जो निष्पक्ष विचारण के अधिकार का एक भाग है।\n\nप्रार्थना:\nअतः अत्यंत आदरपूर्वक प्रार्थना है कि माननीय न्यायालय कृपया उपर्युक्त वाद को क्रम से पूर्व उठाए और इसे शीघ्र सुनवाई हेतु कम अवधि की तारीख पर नियत करे, अधिमानतः [संख्या] सप्ताह के भीतर। जो भी अन्य आदेश उचित समझा जाए, वह भी पारित करने की कृपा करे।\n\nस्थान: [शहर]\nदिनांक: [तारीख]\n\n[अधिवक्ता का नाम]\nआवेदक के अधिवक्ता\n[नामांकन संख्या / चैम्बर पता / मोबाइल नंबर]\n\nसत्यापन:\nमैं, [नाम], आवेदक, सत्यापित करता हूँ कि इस आवेदन की विषय-वस्तु मेरी जानकारी में सत्य है। [शहर] में दिनांक [तारीख] को सत्यापित।\n[आवेदक / अधिवक्ता के हस्ताक्षर]",
+      "filedIn": {
+        "en": "Trial Court (Sessions Court / Magistrate's Court); High Court in appropriate cases",
+        "hi": "विचारण न्यायालय (सत्र न्यायालय / मजिस्ट्रेट न्यायालय); उपयुक्त मामलों में उच्च न्यायालय"
+      },
+      "sections": {
+        "en": "No dedicated section — discretionary prayer to the court seized of the case; before the High Court, Sec. 528 BNSS (Sec. 482 CrPC) inherent powers may be invoked",
+        "hi": "कोई विशेष धारा नहीं — वाद से संलग्न न्यायालय से विवेकाधीन प्रार्थना; उच्च न्यायालय के समक्ष धारा 528 BNSS (धारा 482 CrPC) की अंतर्निहित शक्तियों का आश्रय लिया जा सकता है"
+      },
+      "jurisdiction": {
+        "en": "The court where the case is pending. Urgency must be shown with documents — custody period, medical record, travel tickets, or the age of the case.",
+        "hi": "जिस न्यायालय में वाद लंबित है। तात्कालिकता दस्तावेजों से दिखानी होगी — हिरासत की अवधि, चिकित्सा अभिलेख, यात्रा टिकट, या वाद की पुरानगी।"
+      },
+      "requirements": {
+        "en": [
+          "Proof of urgency (custody memo / medical certificate / travel tickets)",
+          "Latest order sheet of the case",
+          "Vakalatnama"
+        ],
+        "hi": [
+          "तात्कालिकता का प्रमाण (हिरासत मेमो / चिकित्सा प्रमाणपत्र / यात्रा टिकट)",
+          "वाद की नवीनतम आदेश पत्रक",
+          "वकालतनामा"
+        ]
+      }
+    },
+    {
+      "id": "correction-clerical-error-criminal",
+      "category": {
+        "en": "Criminal",
+        "hi": "आपराधिक"
+      },
+      "title": {
+        "en": "Application for Correction of Clerical / Arithmetical Error in Judgment (Sec. 403 BNSS / 362 CrPC) — Speaking to the Minutes",
+        "hi": "निर्णय में लिपिकीय / अंकगणितीय त्रुटि के सुधार हेतु आवेदन (धारा 403 BNSS / 362 CrPC) — स्पीकिंग टू द मिनट्स"
+      },
+      "use": {
+        "en": "File this when a signed criminal judgment or final order contains a typing, spelling, date, section-number or calculation mistake. Also called speaking to the minutes application. It cannot be used to change the merits of the decision.",
+        "hi": "जब किसी हस्ताक्षरित आपराधिक निर्णय या अंतिम आदेश में टंकण, वर्तनी, तारीख, धारा-संख्या या गणना की गलती हो, तब इसे दाखिल करें। इसे स्पीकिंग टू द मिनट्स आवेदन भी कहते हैं। इसका उपयोग निर्णय के गुण-दोष बदलने के लिए नहीं किया जा सकता।"
+      },
+      "template": "IN THE COURT OF THE [ADDITIONAL SESSIONS JUDGE / JUDICIAL MAGISTRATE FIRST CLASS], [DISTRICT NAME]\n\nCriminal Case / Sessions Trial No. [____] of [YEAR]\n[STATE] Versus [ACCUSED NAME]\nFIR No. [____] dated [DATE], Police Station [NAME]\n\nAPPLICATION UNDER SECTION 403 OF THE BHARATIYA NAGARIK SURAKSHA SANHITA, 2023 (SECTION 362 OF THE CODE OF CRIMINAL PROCEDURE, 1973) FOR CORRECTION OF CLERICAL / ARITHMETICAL ERROR IN THE JUDGMENT DATED [DATE]\n\nMay it please the Court:\n\n1. That this Hon'ble Court passed the judgment / final order dated [DATE] in the above case, whereby [the accused was convicted / acquitted / sentenced — STATE THE RESULT BRIEFLY].\n\n2. That the said judgment contains a clerical / arithmetical error, which is apparent on the face of the record and does not require any reconsideration of the merits of the case. The error is as under:\n   (a) At page [NUMBER], paragraph [NUMBER] of the judgment, [the name of the accused / witness has been wrongly typed as [WRONG] instead of [CORRECT] / the date has been wrongly typed as [WRONG DATE] instead of [CORRECT DATE] / the section has been wrongly mentioned as Section [WRONG] instead of Section [CORRECT] / the period of sentence / fine amount has been wrongly calculated as [WRONG] instead of [CORRECT]].\n   [RETAIN THE ERROR THAT APPLIES AND DELETE THE REST.]\n\n3. That the correct position is clear from the record itself, namely [CITE THE SOURCE — FIR / chargesheet / deposition of PW-[NUMBER] / order sheet dated [DATE]], and the correction sought is purely accidental and mechanical in nature.\n\n4. That Section 403 of the BNSS expressly permits a court to correct a clerical or arithmetical error in its signed judgment or final order. The applicant is not seeking any alteration or review of the decision on merits, which the law does not permit.\n\n5. That if the error is not corrected, it is likely to create difficulty at the stage of execution of the sentence / appeal / record, and may cause serious prejudice to the applicant.\n\nPRAYER:\nIt is, therefore, most respectfully prayed that this Hon'ble Court may be pleased to correct the clerical / arithmetical error pointed out above in the judgment / final order dated [DATE] and issue a corrected copy of the same. Any other order deemed fit and proper may also kindly be passed.\n\nPlace: [CITY]\nDate: [DATE]\n\n[ADVOCATE NAME]\nCounsel for the Applicant\n[Enrolment No. / Chamber Address / Mobile No.]\n\nVERIFICATION:\nI, [NAME], applicant, do hereby verify that the contents of this application are true to my knowledge and based on the record of the case. Verified at [CITY] on [DATE].\n[Signature of Applicant / Counsel]",
+      "templateHi": "[अपर सत्र न्यायाधीश / प्रथम श्रेणी न्यायिक मजिस्ट्रेट], [जिला का नाम] के न्यायालय में\n\nआपराधिक वाद / सत्र विचारण संख्या [____] सन् [वर्ष]\n[राज्य] बनाम [आरोपी का नाम]\nFIR संख्या [____] दिनांक [तारीख], थाना [नाम]\n\nदिनांक [तारीख] के निर्णय में लिपिकीय / अंकगणितीय त्रुटि के सुधार हेतु भारतीय नागरिक सुरक्षा संहिता, 2023 की धारा 403 (दण्ड प्रक्रिया संहिता, 1973 की धारा 362) के अधीन आवेदन\n\nमाननीय न्यायालय की सेवा में सादर निवेदन है कि:\n\n1. माननीय न्यायालय ने उपर्युक्त वाद में दिनांक [तारीख] को निर्णय / अंतिम आदेश पारित किया था, जिसके द्वारा [आरोपी को दोषी ठहराया गया / दोषमुक्त किया गया / दण्डादेश दिया गया — परिणाम संक्षेप में बताएँ]।\n\n2. उक्त निर्णय में एक लिपिकीय / अंकगणितीय त्रुटि है, जो अभिलेख के देखने मात्र से स्पष्ट है और जिसके लिए मामले के गुण-दोष पर पुनर्विचार की आवश्यकता नहीं है। त्रुटि इस प्रकार है:\n   (क) निर्णय के पृष्ठ [संख्या], अनुच्छेद [संख्या] पर, [आरोपी / साक्षी का नाम गलती से [गलत] के रूप में टंकित हो गया है, जबकि सही [सही] है / तारीख गलती से [गलत तारीख] के रूप में टंकित हो गई है, जबकि सही [सही तारीख] है / धारा गलती से धारा [गलत] के रूप में उल्लिखित हो गई है, जबकि सही धारा [सही] है / दण्ड की अवधि / जुर्माने की राशि की गणना गलती से [गलत] हो गई है, जबकि सही [सही] है]।\n   [जो त्रुटि लागू हो, उसे रखें और शेष हटा दें।]\n\n3. सही स्थिति अभिलेख से ही स्पष्ट है, अर्थात् [स्रोत का उल्लेख करें — FIR / आरोपपत्र / गवाह संख्या-[संख्या] का बयान / दिनांक [तारीख] की आदेश पत्रक], और माँगा गया सुधार पूर्णतः आकस्मिक और यांत्रिक प्रकृति का है।\n\n4. BNSS की धारा 403 किसी न्यायालय को अपने हस्ताक्षरित निर्णय या अंतिम आदेश में लिपिकीय या अंकगणितीय त्रुटि को सुधारने की स्पष्ट अनुमति देती है। आवेदक गुण-दोष पर निर्णय में किसी परिवर्तन या पुनरावलोकन की माँग नहीं कर रहा है, जिसकी विधि अनुमति नहीं देती।\n\n5. यदि त्रुटि का सुधार नहीं किया गया, तो दण्ड के निष्पादन / अपील / अभिलेख के चरण में कठिनाई उत्पन्न होने की संभावना है, और आवेदक को गंभीर प्रतिकूल प्रभाव हो सकता है।\n\nप्रार्थना:\nअतः अत्यंत आदरपूर्वक प्रार्थना है कि माननीय न्यायालय कृपया दिनांक [तारीख] के निर्णय / अंतिम आदेश में ऊपर बताई गई लिपिकीय / अंकगणितीय त्रुटि का सुधार करे और उसकी सुधारी हुई प्रति जारी करे। जो भी अन्य आदेश उचित समझा जाए, वह भी पारित करने की कृपा करे।\n\nस्थान: [शहर]\nदिनांक: [तारीख]\n\n[अधिवक्ता का नाम]\nआवेदक के अधिवक्ता\n[नामांकन संख्या / चैम्बर पता / मोबाइल नंबर]\n\nसत्यापन:\nमैं, [नाम], आवेदक, सत्यापित करता हूँ कि इस आवेदन की विषय-वस्तु मेरी जानकारी में सत्य है और वाद के अभिलेख पर आधारित है। [शहर] में दिनांक [तारीख] को सत्यापित।\n[आवेदक / अधिवक्ता के हस्ताक्षर]",
+      "filedIn": {
+        "en": "The same court which passed the judgment or final order",
+        "hi": "वही न्यायालय जिसने निर्णय या अंतिम आदेश पारित किया था"
+      },
+      "sections": {
+        "en": "Sec. 403 BNSS (Sec. 362 CrPC) — court not to alter judgment except to correct a clerical or arithmetical error",
+        "hi": "धारा 403 BNSS (धारा 362 CrPC) — न्यायालय निर्णय में परिवर्तन नहीं करेगा, सिवाय लिपिकीय या अंकगणितीय त्रुटि के सुधार के"
+      },
+      "jurisdiction": {
+        "en": "Only the court which signed the judgment or final order. The error must be clerical or arithmetical; a change on merits is barred.",
+        "hi": "केवल वही न्यायालय जिसने निर्णय या अंतिम आदेश पर हस्ताक्षर किए हों। त्रुटि लिपिकीय या अंकगणितीय होनी चाहिए; गुण-दोष पर परिवर्तन वर्जित है।"
+      },
+      "requirements": {
+        "en": [
+          "Certified copy of the judgment / final order",
+          "Document showing the correct position (FIR / chargesheet / deposition)",
+          "Vakalatnama"
+        ],
+        "hi": [
+          "निर्णय / अंतिम आदेश की प्रमाणित प्रति",
+          "सही स्थिति दर्शाने वाला दस्तावेज (FIR / आरोपपत्र / बयान)",
+          "वकालतनामा"
+        ]
+      }
+    },
+    {
+      "id": "inspection-case-diary",
+      "category": {
+        "en": "Criminal",
+        "hi": "आपराधिक"
+      },
+      "title": {
+        "en": "Application for Inspection of Case Diary (Sec. 192 BNSS / 172 CrPC) — Case Diary Perusal Application",
+        "hi": "केस डायरी के निरीक्षण हेतु आवेदन (धारा 192 BNSS / 172 CrPC) — केस डायरी अवलोकन आवेदन"
+      },
+      "use": {
+        "en": "File this when the accused wants the trial court to peruse the police case diary, for example to test the investigation or to seek use of an entry as permitted by law. The diary is not supplied to the accused as of right.",
+        "hi": "जब आरोपी चाहता है कि विचारण न्यायालय पुलिस केस डायरी का अवलोकन करे — जैसे जाँच को परखने के लिए या विधि द्वारा अनुमत सीमा तक किसी प्रविष्टि का उपयोग चाहने के लिए — तब इसे दाखिल करें। केस डायरी आरोपी को अधिकार के रूप में नहीं दी जाती।"
+      },
+      "template": "IN THE COURT OF THE [ADDITIONAL SESSIONS JUDGE / JUDICIAL MAGISTRATE FIRST CLASS], [DISTRICT NAME]\n\nCriminal Case / Sessions Trial No. [____] of [YEAR]\n[STATE] Versus [ACCUSED NAME]\nFIR No. [____] dated [DATE], Police Station [NAME]\nOffences: Section(s) [____] of [BNS, 2023 / IPC, 1860]\n\nAPPLICATION UNDER SECTION 192 OF THE BHARATIYA NAGARIK SURAKSHA SANHITA, 2023 (SECTION 172 OF THE CODE OF CRIMINAL PROCEDURE, 1973) FOR PERUSAL / INSPECTION OF THE CASE DIARY\n\nMay it please the Court:\n\n1. That the applicant is the accused in the above case, which is presently at the stage of [framing of charge / prosecution evidence / arguments].\n\n2. That the investigating officer maintained a case diary during the investigation of this case, recording the proceedings of the investigation day by day, including the statements of witnesses, the places visited, and the steps taken.\n\n3. That [the prosecution has relied upon / referred to the investigation in a manner that makes it necessary for this Hon'ble Court to peruse the case diary / there are serious discrepancies between the version in the chargesheet and the statements recorded during investigation, and the case diary is necessary to bring the true facts before the Court / the applicant apprehends that material facts recorded in the diary have been withheld from the Court].\n   [RETAIN THE GROUND THAT APPLIES.]\n\n4. That the applicant is aware that the case diary is a privileged document and is not supplied to the accused as a matter of right. The applicant, therefore, prays that this Hon'ble Court may itself call for and peruse the case diary, and may permit the applicant to refer to such parts of it as this Hon'ble Court deems just and permissible in law, particularly where any entry is used for contradicting a witness or for aiding the Court in the trial.\n\n5. That no prejudice will be caused to the prosecution by the Court perusing the diary, since the diary is already in the custody of the investigating agency and the prayer is only for judicial perusal and lawful use.\n\nPRAYER:\nIt is, therefore, most respectfully prayed that this Hon'ble Court may be pleased to:\n(a) call for the case diary relating to FIR No. [____] dated [DATE], Police Station [NAME]; and\n(b) peruse the same and permit the applicant to refer to such parts thereof as are permissible in law.\nAny other order deemed fit and proper may also kindly be passed.\n\nPlace: [CITY]\nDate: [DATE]\n\n[ADVOCATE NAME]\nCounsel for the Applicant / Accused\n[Enrolment No. / Chamber Address / Mobile No.]\n\nVERIFICATION:\nI, [NAME], applicant, do hereby verify that the contents of this application are true to my knowledge. Verified at [CITY] on [DATE].\n[Signature of Applicant / Counsel]",
+      "templateHi": "[अपर सत्र न्यायाधीश / प्रथम श्रेणी न्यायिक मजिस्ट्रेट], [जिला का नाम] के न्यायालय में\n\nआपराधिक वाद / सत्र विचारण संख्या [____] सन् [वर्ष]\n[राज्य] बनाम [आरोपी का नाम]\nFIR संख्या [____] दिनांक [तारीख], थाना [नाम]\nअपराध: धारा [____] [भारतीय न्याय संहिता, 2023 / भारतीय दण्ड संहिता, 1860]\n\nकेस डायरी के अवलोकन / निरीक्षण हेतु भारतीय नागरिक सुरक्षा संहिता, 2023 की धारा 192 (दण्ड प्रक्रिया संहिता, 1973 की धारा 172) के अधीन आवेदन\n\nमाननीय न्यायालय की सेवा में सादर निवेदन है कि:\n\n1. आवेदक उपर्युक्त वाद में आरोपी है, जो वर्तमान में [आरोप विरचित करने / अभियोजन साक्ष्य / बहस] की अवस्था में है।\n\n2. इस वाद की जाँच के दौरान जाँच अधिकारी ने एक केस डायरी संधारित की थी, जिसमें दिन-प्रतिदिन जाँच की कार्यवाही दर्ज है, जिसमें साक्षियों के बयान, देखे गए स्थान और उठाए गए कदम शामिल हैं।\n\n3. [अभियोजन ने जाँच का इस प्रकार आश्रय लिया है कि माननीय न्यायालय के लिए केस डायरी का अवलोकन आवश्यक हो गया है / आरोपपत्र के विवरण और जाँच के दौरान दर्ज बयानों के बीच गंभीर विसंगतियाँ हैं, और सत्य तथ्यों को न्यायालय के समक्ष लाने के लिए केस डायरी आवश्यक है / आवेदक को आशंका है कि डायरी में दर्ज महत्वपूर्ण तथ्य न्यायालय से छिपाए गए हैं]।\n   [जो आधार लागू हो, उसे रखें।]\n\n4. आवेदक जानता है कि केस डायरी एक विशेषाधिकार प्राप्त दस्तावेज है और आरोपी को अधिकार के रूप में नहीं दी जाती। इसलिए आवेदक प्रार्थना करता है कि माननीय न्यायालय स्वयं केस डायरी मँगाकर उसका अवलोकन करे, और आवेदक को उसके उन भागों का उल्लेख करने की अनुमति दे, जिन्हें माननीय न्यायालय विधि में न्यायसंगत और अनुमत समझे, विशेषकर जहाँ किसी प्रविष्टि का उपयोग किसी साक्षी का खंडन करने या विचारण में न्यायालय की सहायता के लिए किया जाए।\n\n5. न्यायालय द्वारा डायरी के अवलोकन से अभियोजन को कोई प्रतिकूल प्रभाव नहीं होगा, क्योंकि डायरी पहले से ही जाँच एजेंसी की अभिरक्षा में है और प्रार्थना केवल न्यायिक अवलोकन और विधिसम्मत उपयोग के लिए है।\n\nप्रार्थना:\nअतः अत्यंत आदरपूर्वक प्रार्थना है कि माननीय न्यायालय कृपया:\n(क) FIR संख्या [____] दिनांक [तारीख], थाना [नाम] से संबंधित केस डायरी मँगाए; और\n(ख) उसका अवलोकन करे और आवेदक को उसके उन भागों का उल्लेख करने की अनुमति दे, जो विधि में अनुमत हैं।\nजो भी अन्य आदेश उचित समझा जाए, वह भी पारित करने की कृपा करे।\n\nस्थान: [शहर]\nदिनांक: [तारीख]\n\n[अधिवक्ता का नाम]\nआवेदक / आरोपी के अधिवक्ता\n[नामांकन संख्या / चैम्बर पता / मोबाइल नंबर]\n\nसत्यापन:\nमैं, [नाम], आवेदक, सत्यापित करता हूँ कि इस आवेदन की विषय-वस्तु मेरी जानकारी में सत्य है। [शहर] में दिनांक [तारीख] को सत्यापित।\n[आवेदक / अधिवक्ता के हस्ताक्षर]",
+      "filedIn": {
+        "en": "Trial Court (Sessions Court / Magistrate's Court)",
+        "hi": "विचारण न्यायालय (सत्र न्यायालय / मजिस्ट्रेट न्यायालय)"
+      },
+      "sections": {
+        "en": "Sec. 192 BNSS (Sec. 172 CrPC) — diary of proceedings in investigation; use of entries by the court",
+        "hi": "धारा 192 BNSS (धारा 172 CrPC) — जाँच की कार्यवाही की डायरी; न्यायालय द्वारा प्रविष्टियों का उपयोग"
+      },
+      "jurisdiction": {
+        "en": "The trial court seized of the case. The diary is perused by the court; it is not handed to the accused as of right, and its entries can be used only as permitted by law.",
+        "hi": "वाद से संलग्न विचारण न्यायालय। डायरी का अवलोकन न्यायालय करता है; यह आरोपी को अधिकार के रूप में नहीं सौंपी जाती, और उसकी प्रविष्टियों का उपयोग केवल विधि द्वारा अनुमत सीमा तक किया जा सकता है।"
+      },
+      "requirements": {
+        "en": [
+          "Copy of FIR and chargesheet",
+          "Latest order sheet",
+          "Note on why diary perusal is needed",
+          "Vakalatnama"
+        ],
+        "hi": [
+          "FIR और आरोपपत्र की प्रति",
+          "नवीनतम आदेश पत्रक",
+          "डायरी अवलोकन क्यों आवश्यक है, इस पर टिप्पणी",
+          "वकालतनामा"
+        ]
+      }
+    },
+    {
+      "id": "police-protection",
+      "category": {
+        "en": "Criminal",
+        "hi": "आपराधिक"
+      },
+      "title": {
+        "en": "Application for Police Protection — Threat to Life and Liberty (Article 21, Constitution of India)",
+        "hi": "पुलिस सुरक्षा हेतु आवेदन — जीवन और स्वतंत्रता को खतरा (भारत के संविधान का अनुच्छेद 21)"
+      },
+      "use": {
+        "en": "File this when a person, witness or complainant faces a genuine threat to life or liberty from the accused or their associates. Also called protection application, security application, threat protection plea.",
+        "hi": "जब किसी व्यक्ति, साक्षी या परिवादी को आरोपी या उसके सहयोगियों से जीवन या स्वतंत्रता को वास्तविक खतरा हो, तब इसे दाखिल करें। इसे सुरक्षा आवेदन या खतरे से संरक्षण की प्रार्थना भी कहते हैं।"
+      },
+      "template": "IN THE COURT OF THE [ADDITIONAL SESSIONS JUDGE / DISTRICT AND SESSIONS JUDGE], [DISTRICT NAME]\n[OR, BEFORE THE HON'BLE HIGH COURT OF JUDICATURE AT [NAME OF HIGH COURT]]\n\nCriminal Miscellaneous Application No. [____] of [YEAR]\n\nIN THE MATTER OF:\n[APPLICANT NAME], S/o / D/o [FATHER'S NAME], R/o [FULL ADDRESS]                ... Applicant\n\nVERSUS\n\n1. State of [STATE], through the Superintendent of Police, District [NAME]\n2. Station House Officer, Police Station [NAME], District [NAME]\n3. [NAMES OF PERSONS GIVING THREATS, IF KNOWN]                                 ... Respondents\n\nAPPLICATION FOR GRANT OF POLICE PROTECTION ON ACCOUNT OF THREAT TO LIFE AND LIBERTY UNDER ARTICLE 21 OF THE CONSTITUTION OF INDIA\n\nMay it please the Court:\n\n1. That the applicant is the [complainant / witness / victim] in FIR No. [____] dated [DATE], Police Station [NAME], registered for offences under Section(s) [____] of [BNS, 2023 / IPC, 1860], which is pending before the court of [COURT NAME].\n\n2. That ever since the registration of the said FIR / the applicant's statement before the police and the court, the applicant has been receiving serious threats from the accused persons and their associates. On [DATE], [DESCRIBE THE INCIDENT — e.g. the accused persons came to the applicant's house and threatened to kill him if he deposes against them / the applicant received threatening phone calls from mobile number [NUMBER]].\n\n3. That the applicant has reported these threats to the police vide written complaint dated [DATE] given to the Station House Officer, Police Station [NAME], [and Diary No. [____] was recorded], but no effective protection has been provided so far.\n\n4. That the applicant genuinely apprehends danger to his / her life and liberty, and also to the lives of his / her family members. Without police protection, the applicant will not be able to depose freely and fearlessly before the court, which will seriously hamper the trial and the cause of justice.\n\n5. That the right to life and personal liberty guaranteed by Article 21 of the Constitution of India includes the right to live without fear, and this Hon'ble Court has the power to direct the police authorities to assess the threat and provide adequate protection.\n\nPRAYER:\nIt is, therefore, most respectfully prayed that this Hon'ble Court may be pleased to:\n(a) direct the respondents to assess the threat perception to the applicant and his / her family and to provide adequate police protection forthwith;\n(b) direct the Station House Officer, Police Station [NAME], to ensure that no harm is caused to the applicant and to take action on the complaint dated [DATE]; and\n(c) pass any other order deemed fit and proper in the interest of justice.\n\nPlace: [CITY]\nDate: [DATE]\n\n[ADVOCATE NAME]\nCounsel for the Applicant\n[Enrolment No. / Chamber Address / Mobile No.]\n\nVERIFICATION:\nI, [NAME], applicant, do hereby verify that the contents of this application are true to my knowledge. Verified at [CITY] on [DATE].\n[Signature of Applicant / Counsel]",
+      "templateHi": "[अपर सत्र न्यायाधीश / जिला एवं सत्र न्यायाधीश], [जिला का नाम] के न्यायालय में\n[अथवा, [उच्च न्यायालय का नाम] माननीय उच्च न्यायालय के समक्ष]\n\nआपराधिक विविध आवेदन संख्या [____] सन् [वर्ष]\n\nविषय में:\n[आवेदक का नाम], पुत्र/पुत्री [पिता का नाम], निवासी [पूरा पता]                ... आवेदक\n\nबनाम\n\n1. राज्य [राज्य का नाम], पुलिस अधीक्षक, जिला [नाम] के माध्यम से\n2. थाना प्रभारी, थाना [नाम], जिला [नाम]\n3. [धमकी देने वाले व्यक्तियों के नाम, यदि ज्ञात हों]                                 ... प्रत्यर्थीगण\n\nभारत के संविधान के अनुच्छेद 21 के अधीन जीवन और स्वतंत्रता को खतरे के कारण पुलिस सुरक्षा प्रदान करने हेतु आवेदन\n\nमाननीय न्यायालय की सेवा में सादर निवेदन है कि:\n\n1. आवेदक FIR संख्या [____] दिनांक [तारीख], थाना [नाम], में [परिवादी / साक्षी / पीड़ित] है, जो धारा [____] [भारतीय न्याय संहिता, 2023 / भारतीय दण्ड संहिता, 1860] के अपराधों के लिए दर्ज है और [न्यायालय का नाम] के समक्ष लंबित है।\n\n2. उक्त FIR के दर्ज होने / पुलिस और न्यायालय के समक्ष आवेदक के बयान के बाद से ही आवेदक को आरोपी व्यक्तियों और उनके सहयोगियों से गंभीर धमकियाँ मिल रही हैं। दिनांक [तारीख] को, [घटना का वर्णन करें — जैसे आरोपी व्यक्ति आवेदक के घर आए और उसके विरुद्ध बयान देने पर जान से मारने की धमकी दी / आवेदक को मोबाइल नंबर [नंबर] से धमकी भरे फोन आए]।\n\n3. आवेदक ने इन धमकियों की सूचना दिनांक [तारीख] की लिखित शिकायत द्वारा थाना प्रभारी, थाना [नाम] को दी थी, [और डायरी संख्या [____] दर्ज हुई थी], परंतु अब तक कोई प्रभावी सुरक्षा प्रदान नहीं की गई है।\n\n4. आवेदक को अपने और अपने परिवार के सदस्यों के जीवन के लिए वास्तविक खतरे की आशंका है। पुलिस सुरक्षा के बिना आवेदक न्यायालय के समक्ष स्वतंत्रता और निर्भयता से बयान नहीं दे सकेगा, जिससे विचारण और न्याय के हित को गंभीर क्षति होगी।\n\n5. भारत के संविधान के अनुच्छेद 21 द्वारा प्रत्याभूत जीवन और व्यक्तिगत स्वतंत्रता के अधिकार में भयमुक्त जीवन जीने का अधिकार शामिल है, और माननीय न्यायालय को पुलिस अधिकारियों को खतरे का आकलन करने और पर्याप्त सुरक्षा प्रदान करने का निर्देश देने की शक्ति है।\n\nप्रार्थना:\nअतः अत्यंत आदरपूर्वक प्रार्थना है कि माननीय न्यायालय कृपया:\n(क) प्रत्यर्थियों को आवेदक और उसके परिवार के प्रति खतरे का आकलन करने और तत्काल पर्याप्त पुलिस सुरक्षा प्रदान करने का निर्देश दे;\n(ख) थाना प्रभारी, थाना [नाम] को यह सुनिश्चित करने का निर्देश दे कि आवेदक को कोई क्षति न पहुँचे और दिनांक [तारीख] की शिकायत पर कार्रवाई की जाए; और\n(ग) न्याय के हित में जो भी अन्य आदेश उचित समझा जाए, वह पारित करे।\n\nस्थान: [शहर]\nदिनांक: [तारीख]\n\n[अधिवक्ता का नाम]\nआवेदक के अधिवक्ता\n[नामांकन संख्या / चैम्बर पता / मोबाइल नंबर]\n\nसत्यापन:\nमैं, [नाम], आवेदक, सत्यापित करता हूँ कि इस आवेदन की विषय-वस्तु मेरी जानकारी में सत्य है। [शहर] में दिनांक [तारीख] को सत्यापित।\n[आवेदक / अधिवक्ता के हस्ताक्षर]",
+      "filedIn": {
+        "en": "Sessions Court / High Court",
+        "hi": "सत्र न्यायालय / उच्च न्यायालय"
+      },
+      "sections": {
+        "en": "Article 21, Constitution of India — protection of life and personal liberty; before the High Court, Sec. 528 BNSS (Sec. 482 CrPC) inherent powers may also be invoked",
+        "hi": "भारत के संविधान का अनुच्छेद 21 — जीवन और व्यक्तिगत स्वतंत्रता का संरक्षण; उच्च न्यायालय के समक्ष धारा 528 BNSS (धारा 482 CrPC) की अंतर्निहित शक्तियों का भी आश्रय लिया जा सकता है"
+      },
+      "jurisdiction": {
+        "en": "Sessions Court where the case is pending, or the High Court. The threat must be shown with some material — a written police complaint, call records, or an incident report.",
+        "hi": "सत्र न्यायालय जहाँ वाद लंबित है, या उच्च न्यायालय। खतरे को किसी सामग्री से दिखाना होगा — लिखित पुलिस शिकायत, कॉल रिकॉर्ड, या घटना की रिपोर्ट।"
+      },
+      "requirements": {
+        "en": [
+          "Copy of FIR",
+          "Written complaint about threats with police receipt",
+          "Call records / messages showing threats (if any)",
+          "ID proof",
+          "Vakalatnama"
+        ],
+        "hi": [
+          "FIR की प्रति",
+          "धमकियों के बारे में पुलिस प्राप्ति सहित लिखित शिकायत",
+          "धमकियाँ दर्शाने वाले कॉल रिकॉर्ड / संदेश (यदि कोई हों)",
+          "पहचान प्रमाण",
+          "वकालतनामा"
+        ]
+      }
+    },
+    {
+      "id": "discharge-of-surety",
+      "category": {
+        "en": "Criminal",
+        "hi": "आपराधिक"
+      },
+      "title": {
+        "en": "Application for Discharge / Cancellation of Surety (Sec. 489 BNSS / 444 CrPC) — Surety Withdrawal Application",
+        "hi": "जमानतदार की मुक्ति / रद्दीकरण हेतु आवेदन (धारा 489 BNSS / 444 CrPC) — जमानतदार वापसी आवेदन"
+      },
+      "use": {
+        "en": "File this when a person who stood surety for an accused on bail wants to withdraw and be discharged from the bond. Also called surety discharge application, withdrawal of surety.",
+        "hi": "जब कोई व्यक्ति, जो जमानत पर आरोपी के लिए जमानतदार बना था, वापस हटना और बंधपत्र से मुक्त होना चाहता है, तब इसे दाखिल करें। इसे जमानतदार मुक्ति आवेदन या जमानतदार वापसी आवेदन भी कहते हैं।"
+      },
+      "template": "IN THE COURT OF THE [JUDICIAL MAGISTRATE FIRST CLASS / ADDITIONAL SESSIONS JUDGE], [DISTRICT NAME]\n\nCriminal Case / Sessions Trial No. [____] of [YEAR]\n[STATE] Versus [ACCUSED NAME]\nFIR No. [____] dated [DATE], Police Station [NAME]\nBail Order dated [DATE] passed by [COURT NAME]\n\nAPPLICATION UNDER SECTION 489 OF THE BHARATIYA NAGARIK SURAKSHA SANHITA, 2023 (SECTION 444 OF THE CODE OF CRIMINAL PROCEDURE, 1973) FOR DISCHARGE OF SURETY\n\nMay it please the Court:\n\n1. That the applicant stood as surety for the accused, [ACCUSED NAME], in the above case, and executed a surety bond for a sum of Rs. [AMOUNT] on [DATE], pursuant to the bail order dated [DATE].\n\n2. That the applicant now seeks discharge from the surety bond for the following bona fide reasons: [the applicant's financial condition has deteriorated due to [REASON] / the applicant is suffering from serious illness, namely [AILMENT], and is unable to bear the responsibility / relations between the applicant and the accused have broken down / the accused is misusing his liberty and is not complying with the bail conditions / the applicant is leaving the district permanently on account of [REASON]].\n   [RETAIN THE REASONS THAT APPLY AND DELETE THE REST.]\n\n3. That the applicant undertakes to produce / surrender the accused before this Hon'ble Court, or to cooperate with the process of the Court for securing the presence of the accused, as the law requires before a surety is discharged.\n\n4. That the applicant has no intention to defeat the ends of justice; the prayer is only for release from a personal obligation which the applicant is no longer in a position to honour, and the accused can be called upon to furnish other sufficient sureties.\n\nPRAYER:\nIt is, therefore, most respectfully prayed that this Hon'ble Court may be pleased to:\n(a) discharge the applicant from the surety bond executed on [DATE] for the accused;\n(b) direct that the accused be called upon to furnish other sufficient sureties, as required by law; and\n(c) pass any other order deemed fit and proper.\n\nPlace: [CITY]\nDate: [DATE]\n\n[ADVOCATE NAME]\nCounsel for the Applicant / Surety\n[Enrolment No. / Chamber Address / Mobile No.]\n\nVERIFICATION:\nI, [NAME], applicant / surety, do hereby verify that the contents of this application are true to my knowledge. Verified at [CITY] on [DATE].\n[Signature of Applicant / Counsel]",
+      "templateHi": "[प्रथम श्रेणी न्यायिक मजिस्ट्रेट / अपर सत्र न्यायाधीश], [जिला का नाम] के न्यायालय में\n\nआपराधिक वाद / सत्र विचारण संख्या [____] सन् [वर्ष]\n[राज्य] बनाम [आरोपी का नाम]\nFIR संख्या [____] दिनांक [तारीख], थाना [नाम]\nजमानत आदेश दिनांक [तारीख], [न्यायालय का नाम] द्वारा पारित\n\nजमानतदार की मुक्ति हेतु भारतीय नागरिक सुरक्षा संहिता, 2023 की धारा 489 (दण्ड प्रक्रिया संहिता, 1973 की धारा 444) के अधीन आवेदन\n\nमाननीय न्यायालय की सेवा में सादर निवेदन है कि:\n\n1. आवेदक उपर्युक्त वाद में आरोपी, [आरोपी का नाम], के लिए जमानतदार बना था, और दिनांक [तारीख] के जमानत आदेश के अनुसरण में दिनांक [तारीख] को [राशि] रुपये का जमानत बंधपत्र निष्पादित किया था।\n\n2. आवेदक अब निम्नलिखित सद्भावपूर्ण कारणों से जमानत बंधपत्र से मुक्ति चाहता है: [आवेदक की आर्थिक स्थिति [कारण] से बिगड़ गई है / आवेदक गंभीर बीमारी, अर्थात् [बीमारी], से पीड़ित है और दायित्व वहन करने में असमर्थ है / आवेदक और आरोपी के बीच संबंध टूट गए हैं / आरोपी अपनी स्वतंत्रता का दुरुपयोग कर रहा है और जमानत की शर्तों का पालन नहीं कर रहा है / आवेदक [कारण] से स्थायी रूप से जिला छोड़ रहा है]।\n   [जो कारण लागू हों, उन्हें रखें और शेष हटा दें।]\n\n3. आवेदक यह वचन देता है कि वह आरोपी को माननीय न्यायालय के समक्ष प्रस्तुत / समर्पित करेगा, अथवा आरोपी की उपस्थिति सुनिश्चित करने के लिए न्यायालय की प्रक्रिया में सहयोग करेगा, जैसा कि जमानतदार की मुक्ति से पूर्व विधि में अपेक्षित है।\n\n4. आवेदक का न्याय के उद्देश्यों को विफल करने का कोई इरादा नहीं है; प्रार्थना केवल उस व्यक्तिगत दायित्व से मुक्ति के लिए है, जिसे आवेदक अब निभाने की स्थिति में नहीं है, और आरोपी से अन्य पर्याप्त जमानतदार प्रस्तुत करने को कहा जा सकता है।\n\nप्रार्थना:\nअतः अत्यंत आदरपूर्वक प्रार्थना है कि माननीय न्यायालय कृपया:\n(क) आवेदक को दिनांक [तारीख] को आरोपी के लिए निष्पादित जमानत बंधपत्र से मुक्त करे;\n(ख) आरोपी को विधि के अनुसार अन्य पर्याप्त जमानतदार प्रस्तुत करने को कहे; और\n(ग) जो भी अन्य आदेश उचित समझा जाए, वह पारित करे।\n\nस्थान: [शहर]\nदिनांक: [तारीख]\n\n[अधिवक्ता का नाम]\nआवेदक / जमानतदार के अधिवक्ता\n[नामांकन संख्या / चैम्बर पता / मोबाइल नंबर]\n\nसत्यापन:\nमैं, [नाम], आवेदक / जमानतदार, सत्यापित करता हूँ कि इस आवेदन की विषय-वस्तु मेरी जानकारी में सत्य है। [शहर] में दिनांक [तारीख] को सत्यापित।\n[आवेदक / अधिवक्ता के हस्ताक्षर]",
+      "filedIn": {
+        "en": "Court which accepted the surety bond (Magistrate's Court / Sessions Court)",
+        "hi": "वह न्यायालय जिसने जमानत बंधपत्र स्वीकार किया था (मजिस्ट्रेट न्यायालय / सत्र न्यायालय)"
+      },
+      "sections": {
+        "en": "Sec. 489 BNSS (Sec. 444 CrPC) — discharge of sureties",
+        "hi": "धारा 489 BNSS (धारा 444 CrPC) — जमानतदारों की मुक्ति"
+      },
+      "jurisdiction": {
+        "en": "The Magistrate / court which took the bond. On the surety's application, the accused is produced or surrenders, the bond is discharged, and the accused is called upon to furnish other sufficient sureties.",
+        "hi": "वह मजिस्ट्रेट / न्यायालय जिसने बंधपत्र लिया था। जमानतदार के आवेदन पर आरोपी को प्रस्तुत किया जाता है या वह समर्पण करता है, बंधपत्र मुक्त किया जाता है, और आरोपी से अन्य पर्याप्त जमानतदार प्रस्तुत करने को कहा जाता है।"
+      },
+      "requirements": {
+        "en": [
+          "Copy of the surety bond",
+          "Copy of the bail order",
+          "Document supporting the reason (medical certificate / proof of shifting, if any)",
+          "ID proof of surety",
+          "Vakalatnama"
+        ],
+        "hi": [
+          "जमानत बंधपत्र की प्रति",
+          "जमानत आदेश की प्रति",
+          "कारण का समर्थन करने वाला दस्तावेज (चिकित्सा प्रमाणपत्र / स्थानांतरण का प्रमाण, यदि कोई हो)",
+          "जमानतदार का पहचान प्रमाण",
+          "वकालतनामा"
+        ]
+      }
+    },
+    {
+      "id": "refund-bail-bond-surety-amount",
+      "category": {
+        "en": "Criminal",
+        "hi": "आपराधिक"
+      },
+      "title": {
+        "en": "Application for Refund of Bail Bond / Surety Deposit (Sec. 489 & 490 BNSS / 444 & 445 CrPC) — Cash Security Refund Application",
+        "hi": "जमानत बंधपत्र / जमानत जमा राशि की वापसी हेतु आवेदन (धारा 489 और 490 BNSS / 444 और 445 CrPC) — नकद प्रतिभूति वापसी आवेदन"
+      },
+      "use": {
+        "en": "File this when cash or security deposited in court in lieu of a surety bond is to be refunded — after discharge of the surety, acquittal, or disposal of the case. Also called surety amount refund, bail security refund, deposit refund application.",
+        "hi": "जब जमानत बंधपत्र के बदले न्यायालय में जमा की गई नकद राशि या प्रतिभूति वापस की जानी हो — जमानतदार की मुक्ति, दोषमुक्ति, या वाद के निस्तारण के बाद — तब इसे दाखिल करें। इसे जमानत राशि वापसी, जमानत प्रतिभूति वापसी, या जमा वापसी आवेदन भी कहते हैं।"
+      },
+      "template": "IN THE COURT OF THE [JUDICIAL MAGISTRATE FIRST CLASS / ADDITIONAL SESSIONS JUDGE], [DISTRICT NAME]\n\nCriminal Case / Sessions Trial No. [____] of [YEAR]\n[STATE] Versus [ACCUSED NAME]\nFIR No. [____] dated [DATE], Police Station [NAME]\n\nAPPLICATION UNDER SECTIONS 489 AND 490 OF THE BHARATIYA NAGARIK SURAKSHA SANHITA, 2023 (SECTIONS 444 AND 445 OF THE CODE OF CRIMINAL PROCEDURE, 1973) FOR REFUND OF AMOUNT DEPOSITED IN LIEU OF SURETY BOND\n\nMay it please the Court:\n\n1. That the applicant, [NAME], stood as surety / deposited security for the accused, [ACCUSED NAME], in the above case. In lieu of executing a surety bond, the applicant deposited a sum of Rs. [AMOUNT] in cash / Government promissory notes with this Hon'ble Court on [DATE], vide Challan / Deposit Receipt No. [____] dated [DATE].\n\n2. That the bond obligation has now come to an end, because [the accused has been acquitted by judgment dated [DATE] / the case has been disposed of by order dated [DATE] / the surety has been discharged by order dated [DATE] passed by this Hon'ble Court / the accused has been discharged].\n   [RETAIN THE EVENT THAT APPLIES AND DELETE THE REST.]\n\n3. That no amount is due from the applicant under the bond, the bond has never been forfeited, and no penalty proceedings are pending against the applicant. The deposited amount is, therefore, liable to be refunded to the applicant in full.\n\n4. That the applicant is the rightful person entitled to receive the refund, being the depositor as per the challan / deposit receipt, and undertakes to produce his / her identity proof and the original deposit receipt at the time of payment.\n\nPRAYER:\nIt is, therefore, most respectfully prayed that this Hon'ble Court may be pleased to direct the refund of Rs. [AMOUNT], deposited vide Challan / Deposit Receipt No. [____] dated [DATE], to the applicant, after due verification. Any other order deemed fit and proper may also kindly be passed.\n\nPlace: [CITY]\nDate: [DATE]\n\n[ADVOCATE NAME]\nCounsel for the Applicant\n[Enrolment No. / Chamber Address / Mobile No.]\n\nVERIFICATION:\nI, [NAME], applicant, do hereby verify that the contents of this application are true to my knowledge. Verified at [CITY] on [DATE].\n[Signature of Applicant / Counsel]",
+      "templateHi": "[प्रथम श्रेणी न्यायिक मजिस्ट्रेट / अपर सत्र न्यायाधीश], [जिला का नाम] के न्यायालय में\n\nआपराधिक वाद / सत्र विचारण संख्या [____] सन् [वर्ष]\n[राज्य] बनाम [आरोपी का नाम]\nFIR संख्या [____] दिनांक [तारीख], थाना [नाम]\n\nजमानत बंधपत्र के बदले जमा की गई राशि की वापसी हेतु भारतीय नागरिक सुरक्षा संहिता, 2023 की धारा 489 और 490 (दण्ड प्रक्रिया संहिता, 1973 की धारा 444 और 445) के अधीन आवेदन\n\nमाननीय न्यायालय की सेवा में सादर निवेदन है कि:\n\n1. आवेदक, [नाम], उपर्युक्त वाद में आरोपी, [आरोपी का नाम], के लिए जमानतदार बना था / प्रतिभूति जमा की थी। जमानत बंधपत्र निष्पादित करने के बदले, आवेदक ने दिनांक [तारीख] को माननीय न्यायालय में [राशि] रुपये नकद / सरकारी वचनपत्रों के रूप में जमा किए थे, चालान / जमा रसीद संख्या [____] दिनांक [तारीख] के अनुसार।\n\n2. बंधपत्र का दायित्व अब समाप्त हो गया है, क्योंकि [आरोपी को दिनांक [तारीख] के निर्णय द्वारा दोषमुक्त कर दिया गया है / वाद का दिनांक [तारीख] के आदेश द्वारा निस्तारण हो गया है / जमानतदार को माननीय न्यायालय के दिनांक [तारीख] के आदेश द्वारा मुक्त कर दिया गया है / आरोपी को उन्मोचित कर दिया गया है]।\n   [जो घटना लागू हो, उसे रखें और शेष हटा दें।]\n\n3. आवेदक से बंधपत्र के अधीन कोई राशि देय नहीं है, बंधपत्र कभी जब्त नहीं हुआ है, और आवेदक के विरुद्ध कोई शास्ति कार्यवाही लंबित नहीं है। इसलिए जमा की गई राशि पूर्ण रूप से आवेदक को वापस की जानी चाहिए।\n\n4. आवेदक चालान / जमा रसीद के अनुसार जमाकर्ता होने के कारण वापसी प्राप्त करने का सही हकदार व्यक्ति है, और भुगतान के समय अपना पहचान प्रमाण और मूल जमा रसीद प्रस्तुत करने का वचन देता है।\n\nप्रार्थना:\nअतः अत्यंत आदरपूर्वक प्रार्थना है कि माननीय न्यायालय कृपया चालान / जमा रसीद संख्या [____] दिनांक [तारीख] के अनुसार जमा किए गए [राशि] रुपये की वापसी, उचित सत्यापन के बाद, आवेदक को करने का निर्देश दे। जो भी अन्य आदेश उचित समझा जाए, वह भी पारित करने की कृपा करे।\n\nस्थान: [शहर]\nदिनांक: [तारीख]\n\n[अधिवक्ता का नाम]\nआवेदक के अधिवक्ता\n[नामांकन संख्या / चैम्बर पता / मोबाइल नंबर]\n\nसत्यापन:\nमैं, [नाम], आवेदक, सत्यापित करता हूँ कि इस आवेदन की विषय-वस्तु मेरी जानकारी में सत्य है। [शहर] में दिनांक [तारीख] को सत्यापित।\n[आवेदक / अधिवक्ता के हस्ताक्षर]",
+      "filedIn": {
+        "en": "Court which accepted the deposit (Magistrate's Court / Sessions Court)",
+        "hi": "वह न्यायालय जिसने जमा स्वीकार किया था (मजिस्ट्रेट न्यायालय / सत्र न्यायालय)"
+      },
+      "sections": {
+        "en": "Sec. 489 BNSS (Sec. 444 CrPC) — discharge of sureties; Sec. 490 BNSS (Sec. 445 CrPC) — deposit instead of recognizance; refund follows discharge of the bond obligation or disposal of the case",
+        "hi": "धारा 489 BNSS (धारा 444 CrPC) — जमानतदारों की मुक्ति; धारा 490 BNSS (धारा 445 CrPC) — बंधपत्र के बदले जमा; बंधपत्र दायित्व की मुक्ति या वाद के निस्तारण के बाद वापसी होती है"
+      },
+      "jurisdiction": {
+        "en": "The court which took the deposit. Refund is claimed after the bond obligation ends — acquittal, discharge, disposal, or discharge of the surety — and after verification that the bond was never forfeited.",
+        "hi": "वह न्यायालय जिसने जमा लिया था। वापसी बंधपत्र दायित्व समाप्त होने के बाद माँगी जाती है — दोषमुक्ति, उन्मोचन, निस्तारण, या जमानतदार की मुक्ति — और यह सत्यापन के बाद कि बंधपत्र कभी जब्त नहीं हुआ।"
+      },
+      "requirements": {
+        "en": [
+          "Original challan / deposit receipt",
+          "Order of acquittal / discharge / disposal / discharge of surety",
+          "Copy of the surety bond (if executed)",
+          "ID proof of the depositor",
+          "Vakalatnama"
+        ],
+        "hi": [
+          "मूल चालान / जमा रसीद",
+          "दोषमुक्ति / उन्मोचन / निस्तारण / जमानतदार की मुक्ति का आदेश",
+          "जमानत बंधपत्र की प्रति (यदि निष्पादित हुआ हो)",
+          "जमाकर्ता का पहचान प्रमाण",
+          "वकालतनामा"
+        ]
+      }
+    },
+    {
+      "category": {
+        "en": "Criminal",
+        "hi": "आपराधिक"
+      },
+      "filedIn": {
+        "en": "High Court or Court of Session (revisional or appellate jurisdiction)",
+        "hi": "उच्च न्यायालय या सत्र न्यायालय (पुनरीक्षण या अपीलीय क्षेत्राधिकार)"
+      },
+      "id": "stay-of-proceedings-revision-appeal",
+      "jurisdiction": {
+        "en": "The High Court or Court of Session within whose jurisdiction the trial court that passed the impugned order is situated; revision lies only against orders that are not purely interlocutory (Sec. 438(2) BNSS).",
+        "hi": "वह उच्च न्यायालय या सत्र न्यायालय, जिसके क्षेत्राधिकार में आक्षेपित आदेश पारित करने वाला विचारण न्यायालय स्थित है; पुनरीक्षण केवल ऐसे आदेशों के विरुद्ध होता है जो पूर्णतः अंतरिम प्रकृति के न हों (धारा 438(2) BNSS)।"
+      },
+      "requirements": {
+        "en": [
+          "Certified copy of the impugned order",
+          "Copy of the revision / appeal memo",
+          "Copies of the trial court record or relevant orders",
+          "Affidavit in support of the application",
+          "Vakalatnama"
+        ],
+        "hi": [
+          "आक्षेपित आदेश की प्रमाणित प्रति",
+          "पुनरीक्षण / अपील ज्ञापन की प्रति",
+          "विचारण न्यायालय के अभिलेख या संबंधित आदेशों की प्रतियाँ",
+          "आवेदन के समर्थन में शपथपत्र",
+          "वकालतनामा"
+        ]
+      },
+      "sections": {
+        "en": "Sec. 438 BNSS (Sec. 397 CrPC) — calling for records in revision, including power to suspend execution of any sentence or order; Sec. 430 BNSS (Sec. 389 CrPC) — suspension pending appeal; Sec. 528 BNSS (Sec. 482 CrPC) — inherent powers of the High Court",
+        "hi": "धारा 438 BNSS (धारा 397 CrPC) — पुनरीक्षण में अभिलेख मँगाना, जिसमें किसी दंडादेश या आदेश के निष्पादन को निलंबित करने की शक्ति भी है; धारा 430 BNSS (धारा 389 CrPC) — अपील लंबित रहने तक निलंबन; धारा 528 BNSS (धारा 482 CrPC) — उच्च न्यायालय की अंतर्निहित शक्तियाँ"
+      },
+      "template": "IN THE HIGH COURT OF JUDICATURE AT [PLACE]\n\nCriminal Revision / Appeal No. [____] of [YEAR]\n\n[APPLICANT NAME], S/o / D/o [FATHER'S NAME], R/o [FULL ADDRESS] ... Applicant / Petitioner\n\nVERSUS\n\nState of [STATE] / [OPPOSITE PARTY NAME] ... Respondent\n\nAPPLICATION FOR STAY OF PROCEEDINGS PENDING DISPOSAL OF THE REVISION / APPEAL\n\nUnder Section 438 of the Bharatiya Nagarik Suraksha Sanhita, 2023 (Section 397 of the Code of Criminal Procedure, 1973) read with Section 430 BNSS (Section 389 CrPC) and Section 528 BNSS (Section 482 CrPC)\n\nMay it please this Hon'ble Court:\n\n1. That the applicant has filed the accompanying revision / appeal against the order dated [DATE] passed by the learned [TRIAL COURT] in Case No. [____], whereby [BRIEF DESCRIPTION OF THE IMPUGNED ORDER].\n\n2. That the impugned order suffers from illegality and material irregularity, inasmuch as [GROUNDS IN BRIEF, e.g., the learned court failed to consider the material on record and passed the order without affording a proper hearing]. The applicant has a strong prima facie case, and the balance of convenience lies in favour of a stay.\n\n3. That if the proceedings before the trial court are allowed to continue during the pendency of the revision / appeal, the very purpose of the revision / appeal shall stand frustrated, and the applicant shall suffer irreparable loss which cannot be compensated in any manner.\n\n4. That the applicant undertakes to cooperate fully with the proceedings and not to seek any unnecessary adjournment, and no prejudice shall be caused to the opposite party if the proceedings are stayed for a limited period.\n\n5. That this application is bona fide and is being filed in the interest of justice.\n\nPRAYER\n\nIt is, therefore, most respectfully prayed that this Hon'ble Court may graciously be pleased to:\n\n(a) Stay the proceedings / operation of the impugned order dated [DATE] passed in Case No. [____] during the pendency of the accompanying revision / appeal; and\n\n(b) Pass such other and further orders as this Hon'ble Court may deem fit and proper in the facts and circumstances of the case.\n\nPlace: [PLACE]\nDate: [DATE]\n\n[APPLICANT NAME]\nApplicant\n\nThrough Counsel\n[ADVOCATE NAME], Advocate\n[ENROLMENT NO.]",
+      "templateHi": "माननीय उच्च न्यायालय, [स्थान] के समक्ष\n\nआपराधिक पुनरीक्षण / अपील संख्या [____] सन् [वर्ष]\n\n[आवेदक का नाम], पुत्र / पुत्री [पिता का नाम], निवासी [पूरा पता] ... आवेदक / याचिकाकर्ता\n\nबनाम\n\nउत्तर प्रदेश राज्य / [विपक्षी का नाम] ... विपक्षी\n\nपुनरीक्षण / अपील के निपटारे तक कार्यवाही पर रोक हेतु आवेदन\n\nभारतीय नागरिक सुरक्षा संहिता, 2023 की धारा 438 (दंड प्रक्रिया संहिता, 1973 की धारा 397) के साथ धारा 430 BNSS (धारा 389 CrPC) एवं धारा 528 BNSS (धारा 482 CrPC) के अंतर्गत\n\nमाननीय न्यायालय की सेवा में सादर निवेदन है:\n\n1. कि आवेदक ने विद्वान [विचारण न्यायालय] द्वारा प्रकरण संख्या [____] में दिनांक [तारीख] को पारित आदेश के विरुद्ध साथ में पुनरीक्षण / अपील दाखिल की है, जिसके द्वारा [आक्षेपित आदेश का संक्षिप्त विवरण] किया गया है।\n\n2. कि आक्षेपित आदेश अवैधता एवं तात्विक अनियमितता से ग्रस्त है, क्योंकि [संक्षिप्त आधार, जैसे विद्वान न्यायालय ने अभिलेख की सामग्री पर विचार किए बिना एवं समुचित सुनवाई दिए बिना आदेश पारित किया]। आवेदक का प्रथम दृष्टया सशक्त मामला बनता है तथा सुविधा का संतुलन रोक के पक्ष में है।\n\n3. कि यदि पुनरीक्षण / अपील लंबित रहने के दौरान विचारण न्यायालय की कार्यवाही चलती रही, तो पुनरीक्षण / अपील का उद्देश्य ही समाप्त हो जाएगा तथा आवेदक को अपूरणीय क्षति होगी, जिसकी किसी भी प्रकार से भरपाई नहीं हो सकती।\n\n4. कि आवेदक कार्यवाही में पूर्ण सहयोग करने तथा कोई अनावश्यक स्थगन न माँगने का वचन देता है, और सीमित अवधि के लिए कार्यवाही रुकने से विपक्षी को कोई प्रतिकूल प्रभाव नहीं होगा।\n\n5. कि यह आवेदन सद्भावना से एवं न्याय के हित में दाखिल किया जा रहा है।\n\nप्रार्थना\n\nअतः अत्यंत आदरपूर्वक प्रार्थना है कि माननीय न्यायालय कृपा करके:\n\n(क) साथ में दाखिल पुनरीक्षण / अपील के लंबित रहने तक प्रकरण संख्या [____] में दिनांक [तारीख] को पारित आक्षेपित आदेश के पालन / कार्यवाही पर रोक लगाए; तथा\n\n(ख) प्रकरण के तथ्यों एवं परिस्थितियों में ऐसा अन्य एवं उचित आदेश पारित करे, जैसा माननीय न्यायालय उचित समझे।\n\nस्थान: [स्थान]\nदिनांक: [तारीख]\n\n[आवेदक का नाम]\nआवेदक\n\nअधिवक्ता के माध्यम से\n[अधिवक्ता का नाम], अधिवक्ता\n[पंजीकरण संख्या]",
+      "title": {
+        "en": "Application for Stay of Proceedings pending Revision / Appeal (Sec. 438 / 430 BNSS)",
+        "hi": "पुनरीक्षण / अपील लंबित रहने तक कार्यवाही पर रोक हेतु आवेदन (धारा 438 / 430 BNSS)"
+      },
+      "use": {
+        "en": "File this before the revisional or appellate court when the trial or the operation of an order should be paused while the revision or appeal is pending, so that the revision or appeal does not become meaningless. Also called: stay application, interim stay, stay of trial.",
+        "hi": "जब पुनरीक्षण या अपील लंबित हो और मुकदमे की कार्यवाही या किसी आदेश का पालन रुकवाना हो, ताकि पुनरीक्षण या अपील निरर्थक न हो जाए, तब इसे पुनरीक्षण या अपीलीय न्यायालय में दाखिल करें। इसे स्थगन आवेदन या अंतरिम रोक भी कहते हैं।"
+      }
+    },
+    {
+      "category": {
+        "en": "Criminal",
+        "hi": "आपराधिक"
+      },
+      "filedIn": {
+        "en": "Appellate Court — High Court or Court of Session, as per the appeal",
+        "hi": "अपीलीय न्यायालय — अपील के अनुसार उच्च न्यायालय या सत्र न्यायालय"
+      },
+      "id": "suspension-of-conviction-appeal",
+      "jurisdiction": {
+        "en": "The appellate court hearing the appeal against conviction; for sentences of death, life imprisonment or ten years or more, the Public Prosecutor must be heard before release (Sec. 430(1) BNSS).",
+        "hi": "दोषसिद्धि के विरुद्ध अपील की सुनवाई करने वाला अपीलीय न्यायालय; मृत्यु, आजीवन कारावास या दस वर्ष या अधिक के दंड में रिहाई से पूर्व लोक अभियोजक को सुना जाना आवश्यक है (धारा 430(1) BNSS)।"
+      },
+      "requirements": {
+        "en": [
+          "Certified copy of the judgment and order of conviction",
+          "Copy of the appeal memo",
+          "Proof of the specific consequence of conviction (service rules / election law / licence terms)",
+          "Bail papers and custody record",
+          "Affidavit in support"
+        ],
+        "hi": [
+          "दोषसिद्धि के निर्णय एवं आदेश की प्रमाणित प्रति",
+          "अपील ज्ञापन की प्रति",
+          "दोषसिद्धि के विशिष्ट परिणाम का प्रमाण (सेवा नियम / चुनाव विधि / लाइसेंस शर्तें)",
+          "जमानत पत्र एवं हिरासत अभिलेख",
+          "समर्थन में शपथपत्र"
+        ]
+      },
+      "sections": {
+        "en": "Sec. 430 BNSS (Sec. 389 CrPC) — suspension of sentence pending appeal; release of appellant on bail. Suspension of CONVICTION under the same provision is an exceptional relief, granted only where the conviction itself causes irreversible consequences (see Rama Narang v. Ramesh Narang; Navjot Singh Sidhu v. State of Punjab).",
+        "hi": "धारा 430 BNSS (धारा 389 CrPC) — अपील लंबित रहने तक दंडादेश का निलंबन; अपीलार्थी की जमानत पर रिहाई। उसी प्रावधान के अंतर्गत दोषसिद्धि का निलंबन एक असाधारण राहत है, जो केवल वहाँ मिलती है जहाँ दोषसिद्धि से ही अपरिवर्तनीय परिणाम होते हों (देखें: रामा नारंग बनाम रमेश नारंग; नवजोत सिंह सिद्धू बनाम पंजाब राज्य)।"
+      },
+      "template": "IN THE HIGH COURT OF JUDICATURE AT [PLACE]\n\nCriminal Appeal No. [____] of [YEAR]\n\n[APPELLANT NAME], S/o / D/o [FATHER'S NAME], R/o [FULL ADDRESS] ... Appellant / Applicant\n\nVERSUS\n\nState of [STATE] ... Respondent\n\nAPPLICATION FOR SUSPENSION OF CONVICTION PENDING DISPOSAL OF THE APPEAL\n\nUnder Section 430 of the Bharatiya Nagarik Suraksha Sanhita, 2023 (Section 389 of the Code of Criminal Procedure, 1973)\n\nMay it please this Hon'ble Court:\n\n1. That the applicant has been convicted by the learned [TRIAL COURT] vide judgment and order dated [DATE] in Case No. [____] for offences punishable under Section(s) [____] of [BNS, 2023 / other Act], and has been sentenced to [SENTENCE]. The applicant has preferred the accompanying appeal against the said conviction and sentence.\n\n2. That the applicant seeks suspension of the CONVICTION itself, and not merely of the sentence, because the conviction, if allowed to operate during the appeal, shall entail [SPECIFIC CONSEQUENCE, e.g., dismissal from government service / disqualification from contesting elections / cancellation of professional licence], which cannot be undone even if the appeal ultimately succeeds.\n\n3. That the appeal raises substantial and arguable points, namely [GROUNDS IN BRIEF, e.g., the trial court misread the evidence / the conviction rests on a single interested witness / a point of law in favour of the applicant was not considered], and there is a reasonable prospect of the appeal succeeding.\n\n4. That the applicant was on bail during the trial, has never misused the liberty granted, and undertakes to appear regularly and to abide by all conditions imposed by this Hon'ble Court.\n\n5. That the applicant has no criminal antecedents except the present case [or: the antecedents are as follows: ____]. The balance of convenience and the ends of justice demand that the conviction be suspended during the pendency of the appeal.\n\nPRAYER\n\nIt is, therefore, most respectfully prayed that this Hon'ble Court may graciously be pleased to:\n\n(a) Suspend the operation of the conviction recorded against the applicant by the judgment and order dated [DATE] during the pendency of the accompanying appeal; and\n\n(b) Pass such other and further orders as this Hon'ble Court may deem fit and proper in the facts and circumstances of the case.\n\nPlace: [PLACE]\nDate: [DATE]\n\n[APPELLANT NAME]\nAppellant / Applicant\n\nThrough Counsel\n[ADVOCATE NAME], Advocate\n[ENROLMENT NO.]",
+      "templateHi": "माननीय उच्च न्यायालय, [स्थान] के समक्ष\n\nआपराधिक अपील संख्या [____] सन् [वर्ष]\n\n[अपीलार्थी का नाम], पुत्र / पुत्री [पिता का नाम], निवासी [पूरा पता] ... अपीलार्थी / आवेदक\n\nबनाम\n\n[राज्य] राज्य ... विपक्षी\n\nअपील के निपटारे तक दोषसिद्धि के निलंबन हेतु आवेदन\n\nभारतीय नागरिक सुरक्षा संहिता, 2023 की धारा 430 (दंड प्रक्रिया संहिता, 1973 की धारा 389) के अंतर्गत\n\nमाननीय न्यायालय की सेवा में सादर निवेदन है:\n\n1. कि आवेदक को विद्वान [विचारण न्यायालय] द्वारा प्रकरण संख्या [____] में दिनांक [तारीख] के निर्णय एवं आदेश से [BNS, 2023 / अन्य अधिनियम] की धारा [____] के अंतर्गत दोषसिद्ध किया गया है तथा [दंडादेश] का दंड दिया गया है। आवेदक ने उक्त दोषसिद्धि एवं दंडादेश के विरुद्ध साथ में अपील दाखिल की है।\n\n2. कि आवेदक केवल दंडादेश का नहीं, बल्कि दोषसिद्धि का ही निलंबन चाहता है, क्योंकि अपील के दौरान दोषसिद्धि लागू रहने पर [विशिष्ट परिणाम, जैसे सरकारी सेवा से बर्खास्तगी / चुनाव लड़ने से अयोग्यता / व्यावसायिक लाइसेंस का निरस्तीकरण] होगा, जो अपील सफल होने पर भी वापस नहीं हो सकेगा।\n\n3. कि अपील में सारवान एवं तर्कसंगत बिंदु उठते हैं, जैसे [संक्षिप्त आधार, जैसे विचारण न्यायालय ने साक्ष्य को गलत पढ़ा / दोषसिद्धि एकमात्र हितबद्ध साक्षी पर आधारित है / आवेदक के पक्ष के विधि-बिंदु पर विचार नहीं किया गया], तथा अपील की सफलता की उचित संभावना है।\n\n4. कि आवेदक विचारण के दौरान जमानत पर था, उसने दी गई स्वतंत्रता का कभी दुरुपयोग नहीं किया, तथा वह नियमित रूप से उपस्थित रहने एवं माननीय न्यायालय द्वारा लगाई गई सभी शर्तों का पालन करने का वचन देता है।\n\n5. कि वर्तमान प्रकरण के अतिरिक्त आवेदक का कोई आपराधिक इतिहास नहीं है [अथवा: इतिहास इस प्रकार है: ____]। सुविधा का संतुलन एवं न्याय के उद्देश्य यही माँगते हैं कि अपील लंबित रहने तक दोषसिद्धि निलंबित की जाए।\n\nप्रार्थना\n\nअतः अत्यंत आदरपूर्वक प्रार्थना है कि माननीय न्यायालय कृपा करके:\n\n(क) साथ में दाखिल अपील के लंबित रहने तक दिनांक [तारीख] के निर्णय एवं आदेश से आवेदक के विरुद्ध दर्ज दोषसिद्धि के प्रवर्तन को निलंबित करे; तथा\n\n(ख) प्रकरण के तथ्यों एवं परिस्थितियों में ऐसा अन्य एवं उचित आदेश पारित करे, जैसा माननीय न्यायालय उचित समझे।\n\nस्थान: [स्थान]\nदिनांक: [तारीख]\n\n[अपीलार्थी का नाम]\nअपीलार्थी / आवेदक\n\nअधिवक्ता के माध्यम से\n[अधिवक्ता का नाम], अधिवक्ता\n[पंजीकरण संख्या]",
+      "title": {
+        "en": "Application for Suspension of Conviction pending Appeal (Sec. 430 BNSS)",
+        "hi": "अपील लंबित रहने तक दोषसिद्धि के निलंबन हेतु आवेदन (धारा 430 BNSS)"
+      },
+      "use": {
+        "en": "File this with the appeal when the convicted person needs the CONVICTION itself stayed — not merely the sentence — for example where conviction causes disqualification from service, election, licence or profession. Suspension of conviction is an exceptional relief, granted only for special reasons, and is different from suspension of sentence.",
+        "hi": "जब दोषसिद्ध व्यक्ति को केवल दंडादेश नहीं, बल्कि दोषसिद्धि ही रुकवानी हो — जैसे दोषसिद्धि से सेवा, चुनाव, लाइसेंस या व्यवसाय से अयोग्यता होती हो — तब अपील के साथ इसे दाखिल करें। दोषसिद्धि का निलंबन एक असाधारण राहत है, जो केवल विशेष कारणों पर मिलती है, और यह दंडादेश के निलंबन से भिन्न है।"
+      }
+    },
+    {
+      "category": {
+        "en": "Criminal",
+        "hi": "आपराधिक"
+      },
+      "filedIn": {
+        "en": "Court of Session or High Court — preferably the court that cancelled the bail, or its superior court",
+        "hi": "सत्र न्यायालय या उच्च न्यायालय — अधिमानतः वह न्यायालय जिसने जमानत निरस्त की थी, या उसका वरिष्ठ न्यायालय"
+      },
+      "id": "restoration-of-cancelled-bail",
+      "jurisdiction": {
+        "en": "The court that granted the bail, or the Court of Session / High Court; restoration is normally sought before the same court that passed the cancellation order.",
+        "hi": "जमानत देने वाला न्यायालय, या सत्र न्यायालय / उच्च न्यायालय; बहाली सामान्यतः उसी न्यायालय से माँगी जाती है जिसने निरस्तीकरण आदेश पारित किया था।"
+      },
+      "requirements": {
+        "en": [
+          "Copy of the original bail order",
+          "Copy of the cancellation order",
+          "Proof of sufficient cause for the default (medical record / proof of non-service)",
+          "Fresh surety details with address proof",
+          "Custody / surrender memo, if any"
+        ],
+        "hi": [
+          "मूल जमानत आदेश की प्रति",
+          "निरस्तीकरण आदेश की प्रति",
+          "चूक के पर्याप्त कारण का प्रमाण (चिकित्सा अभिलेख / सूचना न मिलने का प्रमाण)",
+          "नए जमानतदारों का विवरण पता प्रमाण सहित",
+          "हिरासत / समर्पण मेमो, यदि कोई हो"
+        ]
+      },
+      "sections": {
+        "en": "Sec. 483 BNSS (Sec. 439 CrPC) — special powers of High Court and Court of Session regarding bail; cancellation under Sec. 483(3) BNSS (Sec. 439(2) CrPC) and Sec. 480(5) BNSS (Sec. 437(5) CrPC) — cancellation by the court that granted the bail",
+        "hi": "धारा 483 BNSS (धारा 439 CrPC) — जमानत के संबंध में उच्च न्यायालय एवं सत्र न्यायालय की विशेष शक्तियाँ; निरस्तीकरण धारा 483(3) BNSS (धारा 439(2) CrPC) एवं धारा 480(5) BNSS (धारा 437(5) CrPC) के अंतर्गत — जमानत देने वाले न्यायालय द्वारा निरस्तीकरण"
+      },
+      "template": "IN THE COURT OF THE SESSIONS JUDGE, [DISTRICT NAME], [STATE]\n\nBail Application No. [____] of [YEAR]\n\n[APPLICANT NAME], S/o / D/o [FATHER'S NAME], R/o [FULL ADDRESS] ... Applicant / Accused\n\nVERSUS\n\nState of [STATE], Through S.H.O., Police Station [NAME], District [NAME] ... Respondent\n\nFIR No. [____] dated [DATE], P.S. [NAME]\nOffences: Section(s) [____] of [BNS, 2023 / other Act]\n\nAPPLICATION FOR RESTORATION OF CANCELLED BAIL / GRANT OF FRESH BAIL\n\nUnder Section 483 of the Bharatiya Nagarik Suraksha Sanhita, 2023 (Section 439 of the Code of Criminal Procedure, 1973)\n\nMay it please the Court:\n\n1. That the applicant was granted bail vide order dated [DATE] passed by [COURT] in Bail Application No. [____], and was released on furnishing bail bonds.\n\n2. That the said bail was cancelled vide order dated [DATE] passed by [COURT] under Section 483(3) BNSS (Section 439(2) CrPC) / Section 480(5) BNSS (Section 437(5) CrPC), on the ground of [GROUND STATED IN THE CANCELLATION ORDER, e.g., non-appearance on [DATE] / alleged breach of condition].\n\n3. That the default was neither deliberate nor wilful, inasmuch as [SUFFICIENT CAUSE, e.g., the applicant was seriously ill and was hospitalised from [DATE] to [DATE], as per the medical record enclosed / the applicant was not served with the date and had no notice of the hearing]. The applicant has the highest regard for the orders of this Hon'ble Court.\n\n4. That the circumstances have since changed, inasmuch as [CHANGED CIRCUMSTANCES, e.g., the applicant has now surrendered before the court / the investigation is complete and the charge-sheet has been filed / the witnesses cited have already been examined]. There is no longer any apprehension of absconding or tampering with evidence.\n\n5. That the applicant undertakes to appear on every date without fail, to abide by all conditions that may be imposed, and to furnish fresh sureties to the satisfaction of the court.\n\n6. That the applicant is in custody since [DATE] and has already suffered incarceration on account of the cancellation.\n\nPRAYER\n\nIt is, therefore, most respectfully prayed that this Hon'ble Court may graciously be pleased to:\n\n(a) Recall the cancellation order dated [DATE] and restore the bail earlier granted to the applicant, or in the alternative, grant fresh bail to the applicant on such terms and conditions as this Hon'ble Court may deem fit; and\n\n(b) Pass such other and further orders as this Hon'ble Court may deem fit and proper in the facts and circumstances of the case.\n\nPlace: [PLACE]\nDate: [DATE]\n\n[APPLICANT NAME]\nApplicant / Accused\n\nThrough Counsel\n[ADVOCATE NAME], Advocate\n[ENROLMENT NO.]",
+      "templateHi": "[जिला का नाम], [राज्य] के सत्र न्यायाधीश के न्यायालय में\n\nजमानत आवेदन संख्या [____] सन् [वर्ष]\n\n[आवेदक का नाम], पुत्र / पुत्री [पिता का नाम], निवासी [पूरा पता] ... आवेदक / अभियुक्त\n\nबनाम\n\n[राज्य] राज्य, थाना प्रभारी अधिकारी के माध्यम से, थाना [नाम], जिला [नाम] ... विपक्षी\n\nप्रथम सूचना रिपोर्ट संख्या [____] दिनांक [तारीख], थाना [नाम]\nअपराध: [BNS, 2023 / अन्य अधिनियम] की धारा [____]\n\nनिरस्त जमानत की बहाली / नई जमानत हेतु आवेदन\n\nभारतीय नागरिक सुरक्षा संहिता, 2023 की धारा 483 (दंड प्रक्रिया संहिता, 1973 की धारा 439) के अंतर्गत\n\nमाननीय न्यायालय की सेवा में सादर निवेदन है:\n\n1. कि आवेदक को [न्यायालय] द्वारा जमानत आवेदन संख्या [____] में दिनांक [तारीख] के आदेश से जमानत प्रदान की गई थी तथा जमानत बंधपत्र देने पर वह रिहा हुआ था।\n\n2. कि उक्त जमानत [न्यायालय] द्वारा दिनांक [तारीख] के आदेश से धारा 483(3) BNSS (धारा 439(2) CrPC) / धारा 480(5) BNSS (धारा 437(5) CrPC) के अंतर्गत इस आधार पर निरस्त कर दी गई कि [निरस्तीकरण आदेश में उल्लिखित आधार, जैसे दिनांक [तारीख] को अनुपस्थिति / शर्त के उल्लंघन का आरोप]।\n\n3. कि चूक न तो जानबूझकर की गई थी और न ही स्वेच्छा से, क्योंकि [पर्याप्त कारण, जैसे आवेदक गंभीर रूप से बीमार था तथा दिनांक [तारीख] से [तारीख] तक अस्पताल में भर्ती था, संलग्न चिकित्सा अभिलेख के अनुसार / आवेदक को सुनवाई की तारीख की सूचना ही नहीं मिली थी]। आवेदक को माननीय न्यायालय के आदेशों के प्रति पूर्ण सम्मान है।\n\n4. कि परिस्थितियाँ अब बदल गई हैं, क्योंकि [बदली परिस्थितियाँ, जैसे आवेदक ने अब न्यायालय के समक्ष समर्पण कर दिया है / अन्वेषण पूर्ण हो गया है तथा आरोपपत्र दाखिल हो गया है / उद्धृत साक्षियों का परीक्षण हो चुका है]। अब फरार होने या साक्ष्य से छेड़छाड़ की कोई आशंका नहीं रह गई है।\n\n5. कि आवेदक प्रत्येक तारीख पर बिना चूक उपस्थित रहने, लगाई जाने वाली सभी शर्तों का पालन करने तथा न्यायालय की संतुष्टि के अनुसार नए जमानतदार प्रस्तुत करने का वचन देता है।\n\n6. कि आवेदक दिनांक [तारीख] से हिरासत में है तथा निरस्तीकरण के कारण पहले ही कारावास भुगत चुका है।\n\nप्रार्थना\n\nअतः अत्यंत आदरपूर्वक प्रार्थना है कि माननीय न्यायालय कृपा करके:\n\n(क) दिनांक [तारीख] के निरस्तीकरण आदेश को वापस लेकर आवेदक को पहले दी गई जमानत बहाल करे, अथवा विकल्पतः ऐसी शर्तों पर नई जमानत प्रदान करे, जैसी माननीय न्यायालय उचित समझे; तथा\n\n(ख) प्रकरण के तथ्यों एवं परिस्थितियों में ऐसा अन्य एवं उचित आदेश पारित करे, जैसा माननीय न्यायालय उचित समझे।\n\nस्थान: [स्थान]\nदिनांक: [तारीख]\n\n[आवेदक का नाम]\nआवेदक / अभियुक्त\n\nअधिवक्ता के माध्यम से\n[अधिवक्ता का नाम], अधिवक्ता\n[पंजीकरण संख्या]",
+      "title": {
+        "en": "Application for Restoration of Cancelled Bail / Fresh Bail after Cancellation (Sec. 483 BNSS)",
+        "hi": "निरस्त जमानत की बहाली / निरस्तीकरण के पश्चात नई जमानत हेतु आवेदन (धारा 483 BNSS)"
+      },
+      "use": {
+        "en": "File this when bail already granted has been cancelled — for example for non-appearance or alleged breach of conditions — and the accused seeks restoration or fresh bail on changed circumstances, compliance, or sufficient cause for the earlier default. Also called: bail restoration application, re-grant of bail.",
+        "hi": "जब पहले दी गई जमानत निरस्त हो चुकी हो — जैसे अनुपस्थिति या शर्तों के उल्लंघन के आरोप पर — और आरोपी बदली परिस्थितियों, अनुपालन या पूर्व चूक के पर्याप्त कारण के आधार पर बहाली या नई जमानत चाहता हो, तब इसे दाखिल करें। इसे जमानत बहाली आवेदन भी कहते हैं।"
+      }
+    },
+    {
+      "category": {
+        "en": "Criminal",
+        "hi": "आपराधिक"
+      },
+      "filedIn": {
+        "en": "Court of Judicial Magistrate First Class having local jurisdiction",
+        "hi": "स्थानीय क्षेत्राधिकार वाले प्रथम श्रेणी न्यायिक मजिस्ट्रेट का न्यायालय"
+      },
+      "id": "complaint-cheating-318",
+      "jurisdiction": {
+        "en": "The Magistrate within whose local jurisdiction the cheating took place or the money / property was delivered.",
+        "hi": "वह मजिस्ट्रेट, जिसके स्थानीय क्षेत्राधिकार में छल किया गया या धन / संपत्ति दी गई।"
+      },
+      "requirements": {
+        "en": [
+          "Proof of payment (receipt / bank statement / cheque copy)",
+          "Agreement or written communication, if any",
+          "Complaint given to police and its receipt, if any",
+          "ID proof of complainant",
+          "List of witnesses with addresses"
+        ],
+        "hi": [
+          "भुगतान का प्रमाण (रसीद / बैंक विवरण / चेक की प्रति)",
+          "अनुबंध या लिखित संचार, यदि कोई हो",
+          "पुलिस को दी गई शिकायत एवं उसकी प्राप्ति, यदि कोई हो",
+          "शिकायतकर्ता का पहचान प्रमाण",
+          "पते सहित साक्षियों की सूची"
+        ]
+      },
+      "sections": {
+        "en": "Sec. 318 BNS (Secs. 415 and 420 IPC) — cheating; punishment under Sec. 318(4) BNS up to seven years. Procedure: Sec. 210 BNSS (Sec. 190 CrPC) — cognizance; Sec. 223 BNSS (Sec. 200 CrPC) — examination of complainant",
+        "hi": "धारा 318 BNS (धारा 415 एवं 420 IPC) — छल; धारा 318(4) BNS के अंतर्गत दंड सात वर्ष तक। प्रक्रिया: धारा 210 BNSS (धारा 190 CrPC) — संज्ञान; धारा 223 BNSS (धारा 200 CrPC) — शिकायतकर्ता का परीक्षण"
+      },
+      "template": "IN THE COURT OF THE JUDICIAL MAGISTRATE FIRST CLASS, [DISTRICT NAME], [STATE]\n\nComplaint Case No. [____] of [YEAR]\n\n[COMPLAINANT NAME], S/o / D/o [FATHER'S NAME], R/o [FULL ADDRESS] ... Complainant\n\nVERSUS\n\n[ACCUSED NAME], S/o / D/o [FATHER'S NAME], R/o [FULL ADDRESS] ... Accused\n\nCOMPLAINT UNDER SECTION 210 READ WITH SECTION 223 OF THE BHARATIYA NAGARIK SURAKSHA SANHITA, 2023 (SECTIONS 190 AND 200 OF THE CODE OF CRIMINAL PROCEDURE, 1973)\n\nOffence: Cheating punishable under Section 318 of the Bharatiya Nyaya Sanhita, 2023 (Sections 415 and 420 of the Indian Penal Code, 1860)\n\nMay it please the Court:\n\n1. That the complainant is a law-abiding citizen residing at the address given above, and the accused is known to the complainant inasmuch as [RELATIONSHIP / HOW THEY MET].\n\n2. That on [DATE], at [PLACE], the accused, with a dishonest intention from the very beginning, represented to the complainant that [FALSE REPRESENTATION, e.g., the accused owned the plot in question and would sell it to the complainant / the accused would supply goods against advance payment].\n\n3. That relying upon the said false representation, the complainant delivered to the accused a sum of Rs. [AMOUNT] on [DATE] by [MODE OF PAYMENT — cash / bank transfer / cheque], as evidenced by [RECEIPT / BANK STATEMENT / AGREEMENT].\n\n4. That the accused never intended to honour the promise, and has neither [DELIVERED THE PROPERTY / SUPPLIED THE GOODS / RETURNED THE MONEY] nor refunded the amount despite repeated demands made by the complainant on [DATES]. The accused has thereby dishonestly induced the complainant to deliver property, and has committed the offence of cheating.\n\n5. That the complainant approached Police Station [NAME] on [DATE] for registration of an FIR, but no FIR was registered [or: the police refused to register the case], hence the complainant is approaching this Hon'ble Court directly.\n\n6. That the cause of action arose within the local jurisdiction of this Hon'ble Court, where the money was delivered and the cheating took place.\n\nPRAYER\n\nIt is, therefore, most respectfully prayed that this Hon'ble Court may graciously be pleased to:\n\n(a) Take cognizance of the offence under Section 318 of the Bharatiya Nyaya Sanhita, 2023, examine the complainant and the witnesses, and issue process / summons against the accused; and\n\n(b) Pass such other and further orders as this Hon'ble Court may deem fit and proper in the facts and circumstances of the case.\n\nLIST OF WITNESSES:\n1. [WITNESS NAME, ADDRESS]\n2. [WITNESS NAME, ADDRESS]\n\nLIST OF DOCUMENTS:\n1. [RECEIPT / AGREEMENT / BANK STATEMENT]\n2. [ANY WRITTEN COMMUNICATION]\n\nPlace: [PLACE]\nDate: [DATE]\n\n[COMPLAINANT NAME]\nComplainant\n\nThrough Counsel\n[ADVOCATE NAME], Advocate\n[ENROLMENT NO.]\n\nVERIFICATION\n\nI, [COMPLAINANT NAME], the complainant above named, do hereby verify that the contents of this complaint are true to my personal knowledge, and nothing material has been concealed.\n\nVerified at [PLACE] on [DATE].\n\n[COMPLAINANT NAME]\nComplainant",
+      "templateHi": "[जिला का नाम], [राज्य] के प्रथम श्रेणी न्यायिक मजिस्ट्रेट के न्यायालय में\n\nशिकायत प्रकरण संख्या [____] सन् [वर्ष]\n\n[शिकायतकर्ता का नाम], पुत्र / पुत्री [पिता का नाम], निवासी [पूरा पता] ... शिकायतकर्ता\n\nबनाम\n\n[अभियुक्त का नाम], पुत्र / पुत्री [पिता का नाम], निवासी [पूरा पता] ... अभियुक्त\n\nभारतीय नागरिक सुरक्षा संहिता, 2023 की धारा 210 के साथ धारा 223 (दंड प्रक्रिया संहिता, 1973 की धारा 190 एवं 200) के अंतर्गत शिकायत\n\nअपराध: भारतीय न्याय संहिता, 2023 की धारा 318 (भारतीय दंड संहिता, 1860 की धारा 415 एवं 420) के अंतर्गत दंडनीय छल\n\nमाननीय न्यायालय की सेवा में सादर निवेदन है:\n\n1. कि शिकायतकर्ता उपर्युक्त पते का विधिपालक नागरिक है तथा अभियुक्त शिकायतकर्ता से इस प्रकार परिचित है कि [संबंध / परिचय का विवरण]।\n\n2. कि दिनांक [तारीख] को [स्थान] पर अभियुक्त ने प्रारंभ से ही बेईमानी की नीयत से शिकायतकर्ता के समक्ष यह मिथ्या अभ्यावेदन किया कि [मिथ्या अभ्यावेदन, जैसे अभियुक्त संबंधित भूखंड का स्वामी है तथा उसे शिकायतकर्ता को बेचेगा / अभियुक्त अग्रिम भुगतान के बदले माल की आपूर्ति करेगा]।\n\n3. कि उक्त मिथ्या अभ्यावेदन पर विश्वास करके शिकायतकर्ता ने दिनांक [तारीख] को [भुगतान का माध्यम — नकद / बैंक अंतरण / चेक] से अभियुक्त को [राशि] रुपये दिए, जिसका प्रमाण [रसीद / बैंक विवरण / अनुबंध] है।\n\n4. कि अभियुक्त का वचन पूरा करने का कभी कोई इरादा नहीं था, और उसने न तो [संपत्ति दी / माल की आपूर्ति की / धन लौटाया] है और न ही शिकायतकर्ता की दिनांक [तारीखों] को की गई बार-बार की माँगों के बावजूद राशि वापस की है। इस प्रकार अभियुक्त ने शिकायतकर्ता को बेईमानी से संपत्ति दिलवाकर छल का अपराध किया है।\n\n5. कि शिकायतकर्ता ने दिनांक [तारीख] को थाना [नाम] में FIR दर्ज कराने का प्रयास किया, किंतु FIR दर्ज नहीं की गई [अथवा: पुलिस ने प्रकरण दर्ज करने से मना कर दिया], अतः शिकायतकर्ता सीधे माननीय न्यायालय के समक्ष आया है।\n\n6. कि वाद-कारण माननीय न्यायालय के स्थानीय क्षेत्राधिकार में उत्पन्न हुआ है, जहाँ धन दिया गया तथा छल किया गया।\n\nप्रार्थना\n\nअतः अत्यंत आदरपूर्वक प्रार्थना है कि माननीय न्यायालय कृपा करके:\n\n(क) भारतीय न्याय संहिता, 2023 की धारा 318 के अंतर्गत अपराध का संज्ञान लेकर शिकायतकर्ता एवं साक्षियों का परीक्षण करे तथा अभियुक्त के विरुद्ध प्रक्रिया / समन जारी करे; तथा\n\n(ख) प्रकरण के तथ्यों एवं परिस्थितियों में ऐसा अन्य एवं उचित आदेश पारित करे, जैसा माननीय न्यायालय उचित समझे।\n\nसाक्षियों की सूची:\n1. [साक्षी का नाम, पता]\n2. [साक्षी का नाम, पता]\n\nदस्तावेजों की सूची:\n1. [रसीद / अनुबंध / बैंक विवरण]\n2. [कोई लिखित संचार]\n\nस्थान: [स्थान]\nदिनांक: [तारीख]\n\n[शिकायतकर्ता का नाम]\nशिकायतकर्ता\n\nअधिवक्ता के माध्यम से\n[अधिवक्ता का नाम], अधिवक्ता\n[पंजीकरण संख्या]\n\nसत्यापन\n\nमैं, [शिकायतकर्ता का नाम], उपर्युक्त शिकायतकर्ता, सत्यापित करता हूँ कि इस शिकायत की विषयवस्तु मेरी व्यक्तिगत जानकारी में सत्य है तथा कोई तात्विक बात छिपाई नहीं गई है।\n\n[स्थान] में दिनांक [तारीख] को सत्यापित।\n\n[शिकायतकर्ता का नाम]\nशिकायतकर्ता",
+      "title": {
+        "en": "Criminal Complaint for Cheating (Sec. 318 BNS) — Cheating Complaint / Fraud Complaint",
+        "hi": "छल (धोखाधड़ी) की आपराधिक शिकायत (धारा 318 BNS) — धोखाधड़ी शिकायत"
+      },
+      "use": {
+        "en": "File this private complaint before the Magistrate when someone has cheated you — for example by dishonestly inducing you to deliver money, property or a valuable security — and the police have not registered an FIR. The Magistrate examines the complainant and may summon the accused.",
+        "hi": "जब किसी ने आपको छलकर धन, संपत्ति या मूल्यवान प्रतिभूति दिलवा ली हो और पुलिस ने FIR दर्ज न की हो, तब मजिस्ट्रेट के समक्ष यह निजी शिकायत दाखिल करें। मजिस्ट्रेट शिकायतकर्ता का परीक्षण करता है तथा अभियुक्त को समन कर सकता है।"
+      }
+    },
+    {
+      "category": {
+        "en": "Criminal",
+        "hi": "आपराधिक"
+      },
+      "filedIn": {
+        "en": "Court of Judicial Magistrate First Class having local jurisdiction",
+        "hi": "स्थानीय क्षेत्राधिकार वाले प्रथम श्रेणी न्यायिक मजिस्ट्रेट का न्यायालय"
+      },
+      "id": "complaint-theft-303",
+      "jurisdiction": {
+        "en": "The Magistrate within whose local jurisdiction the property was taken out of the complainant's possession.",
+        "hi": "वह मजिस्ट्रेट, जिसके स्थानीय क्षेत्राधिकार में संपत्ति शिकायतकर्ता के कब्जे से ली गई।"
+      },
+      "requirements": {
+        "en": [
+          "Ownership proof of the property (bill / registration / receipt)",
+          "Complaint given to police and its receipt, if any",
+          "ID proof of complainant",
+          "List of witnesses with addresses",
+          "Photographs or CCTV footage, if available"
+        ],
+        "hi": [
+          "संपत्ति का स्वामित्व प्रमाण (बिल / पंजीकरण / रसीद)",
+          "पुलिस को दी गई शिकायत एवं उसकी प्राप्ति, यदि कोई हो",
+          "शिकायतकर्ता का पहचान प्रमाण",
+          "पते सहित साक्षियों की सूची",
+          "फोटोग्राफ या सीसीटीवी फुटेज, यदि उपलब्ध हों"
+        ]
+      },
+      "sections": {
+        "en": "Sec. 303 BNS (Secs. 378 and 379 IPC) — theft; punishment under Sec. 303(2) BNS up to three years, or fine, or both. Procedure: Sec. 210 BNSS (Sec. 190 CrPC) — cognizance; Sec. 223 BNSS (Sec. 200 CrPC) — examination of complainant",
+        "hi": "धारा 303 BNS (धारा 378 एवं 379 IPC) — चोरी; धारा 303(2) BNS के अंतर्गत दंड तीन वर्ष तक, या जुर्माना, या दोनों। प्रक्रिया: धारा 210 BNSS (धारा 190 CrPC) — संज्ञान; धारा 223 BNSS (धारा 200 CrPC) — शिकायतकर्ता का परीक्षण"
+      },
+      "template": "IN THE COURT OF THE JUDICIAL MAGISTRATE FIRST CLASS, [DISTRICT NAME], [STATE]\n\nComplaint Case No. [____] of [YEAR]\n\n[COMPLAINANT NAME], S/o / D/o [FATHER'S NAME], R/o [FULL ADDRESS] ... Complainant\n\nVERSUS\n\n[ACCUSED NAME], S/o / D/o [FATHER'S NAME], R/o [FULL ADDRESS] ... Accused\n\nCOMPLAINT UNDER SECTION 210 READ WITH SECTION 223 OF THE BHARATIYA NAGARIK SURAKSHA SANHITA, 2023 (SECTIONS 190 AND 200 OF THE CODE OF CRIMINAL PROCEDURE, 1973)\n\nOffence: Theft punishable under Section 303 of the Bharatiya Nyaya Sanhita, 2023 (Sections 378 and 379 of the Indian Penal Code, 1860)\n\nMay it please the Court:\n\n1. That the complainant is the owner and was in possession of the following movable property: [DESCRIPTION OF PROPERTY, e.g., cash of Rs. [AMOUNT] / gold chain weighing [WEIGHT] / motorcycle bearing registration No. [____]].\n\n2. That on [DATE], at about [TIME], at [PLACE], the accused, with a dishonest intention, took the said property out of the possession of the complainant without the consent of the complainant, inasmuch as [HOW THE THEFT OCCURRED, e.g., the accused entered the complainant's shop in his absence and removed the cash box / the accused took the vehicle parked outside the house].\n\n3. That the act was witnessed by [WITNESS NAME(S)], who saw the accused taking away the property, and the complainant immediately searched for the property and reported the matter to [PERSON / POLICE STATION] on [DATE].\n\n4. That the accused has dishonestly misappropriated / retained the property and, despite demand, has refused to return it. The ingredients of theft — dishonest intention, moving of movable property out of the possession of another without consent — are fully made out.\n\n5. That the complainant approached Police Station [NAME] on [DATE] for registration of an FIR, but no FIR was registered, hence the complainant is approaching this Hon'ble Court directly.\n\n6. That the cause of action arose within the local jurisdiction of this Hon'ble Court, where the property was taken.\n\nPRAYER\n\nIt is, therefore, most respectfully prayed that this Hon'ble Court may graciously be pleased to:\n\n(a) Take cognizance of the offence under Section 303 of the Bharatiya Nyaya Sanhita, 2023, examine the complainant and the witnesses, and issue process / summons against the accused, and order recovery / restoration of the property; and\n\n(b) Pass such other and further orders as this Hon'ble Court may deem fit and proper in the facts and circumstances of the case.\n\nLIST OF WITNESSES:\n1. [WITNESS NAME, ADDRESS]\n2. [WITNESS NAME, ADDRESS]\n\nLIST OF DOCUMENTS:\n1. [PURCHASE BILL / OWNERSHIP PROOF OF THE PROPERTY]\n2. [ANY CCTV FOOTAGE / PHOTOGRAPHS, IF AVAILABLE]\n\nPlace: [PLACE]\nDate: [DATE]\n\n[COMPLAINANT NAME]\nComplainant\n\nThrough Counsel\n[ADVOCATE NAME], Advocate\n[ENROLMENT NO.]\n\nVERIFICATION\n\nI, [COMPLAINANT NAME], the complainant above named, do hereby verify that the contents of this complaint are true to my personal knowledge, and nothing material has been concealed.\n\nVerified at [PLACE] on [DATE].\n\n[COMPLAINANT NAME]\nComplainant",
+      "templateHi": "[जिला का नाम], [राज्य] के प्रथम श्रेणी न्यायिक मजिस्ट्रेट के न्यायालय में\n\nशिकायत प्रकरण संख्या [____] सन् [वर्ष]\n\n[शिकायतकर्ता का नाम], पुत्र / पुत्री [पिता का नाम], निवासी [पूरा पता] ... शिकायतकर्ता\n\nबनाम\n\n[अभियुक्त का नाम], पुत्र / पुत्री [पिता का नाम], निवासी [पूरा पता] ... अभियुक्त\n\nभारतीय नागरिक सुरक्षा संहिता, 2023 की धारा 210 के साथ धारा 223 (दंड प्रक्रिया संहिता, 1973 की धारा 190 एवं 200) के अंतर्गत शिकायत\n\nअपराध: भारतीय न्याय संहिता, 2023 की धारा 303 (भारतीय दंड संहिता, 1860 की धारा 378 एवं 379) के अंतर्गत दंडनीय चोरी\n\nमाननीय न्यायालय की सेवा में सादर निवेदन है:\n\n1. कि शिकायतकर्ता निम्नलिखित चल संपत्ति का स्वामी था तथा उसके कब्जे में थी: [संपत्ति का विवरण, जैसे [राशि] रुपये नकद / [वजन] की सोने की चेन / पंजीकरण संख्या [____] वाली मोटरसाइकिल]।\n\n2. कि दिनांक [तारीख] को लगभग [समय] बजे [स्थान] पर अभियुक्त ने बेईमानी की नीयत से उक्त संपत्ति शिकायतकर्ता की सहमति के बिना उसके कब्जे से ले ली, क्योंकि [चोरी का तरीका, जैसे अभियुक्त शिकायतकर्ता की अनुपस्थिति में उसकी दुकान में घुसा तथा नकदी का बक्सा उठा ले गया / अभियुक्त घर के बाहर खड़ा वाहन ले गया]।\n\n3. कि इस कृत्य को [साक्षी के नाम] ने देखा, जिन्होंने अभियुक्त को संपत्ति ले जाते हुए देखा, तथा शिकायतकर्ता ने तत्काल संपत्ति की खोज की और दिनांक [तारीख] को [व्यक्ति / थाना] को इसकी सूचना दी।\n\n4. कि अभियुक्त ने बेईमानी से संपत्ति का दुरुपयोग / अपने पास रखना जारी रखा है तथा माँग के बावजूद उसे लौटाने से मना कर दिया है। चोरी के सभी तत्व — बेईमानी की नीयत, दूसरे के कब्जे से चल संपत्ति को बिना सहमति हटाना — पूर्णतः सिद्ध होते हैं।\n\n5. कि शिकायतकर्ता ने दिनांक [तारीख] को थाना [नाम] में FIR दर्ज कराने का प्रयास किया, किंतु FIR दर्ज नहीं की गई, अतः शिकायतकर्ता सीधे माननीय न्यायालय के समक्ष आया है।\n\n6. कि वाद-कारण माननीय न्यायालय के स्थानीय क्षेत्राधिकार में उत्पन्न हुआ है, जहाँ संपत्ति ली गई।\n\nप्रार्थना\n\nअतः अत्यंत आदरपूर्वक प्रार्थना है कि माननीय न्यायालय कृपा करके:\n\n(क) भारतीय न्याय संहिता, 2023 की धारा 303 के अंतर्गत अपराध का संज्ञान लेकर शिकायतकर्ता एवं साक्षियों का परीक्षण करे तथा अभियुक्त के विरुद्ध प्रक्रिया / समन जारी करे और संपत्ति की बरामदगी / वापसी का आदेश दे; तथा\n\n(ख) प्रकरण के तथ्यों एवं परिस्थितियों में ऐसा अन्य एवं उचित आदेश पारित करे, जैसा माननीय न्यायालय उचित समझे।\n\nसाक्षियों की सूची:\n1. [साक्षी का नाम, पता]\n2. [साक्षी का नाम, पता]\n\nदस्तावेजों की सूची:\n1. [संपत्ति का क्रय बिल / स्वामित्व प्रमाण]\n2. [सीसीटीवी फुटेज / फोटोग्राफ, यदि उपलब्ध हों]\n\nस्थान: [स्थान]\nदिनांक: [तारीख]\n\n[शिकायतकर्ता का नाम]\nशिकायतकर्ता\n\nअधिवक्ता के माध्यम से\n[अधिवक्ता का नाम], अधिवक्ता\n[पंजीकरण संख्या]\n\nसत्यापन\n\nमैं, [शिकायतकर्ता का नाम], उपर्युक्त शिकायतकर्ता, सत्यापित करता हूँ कि इस शिकायत की विषयवस्तु मेरी व्यक्तिगत जानकारी में सत्य है तथा कोई तात्विक बात छिपाई नहीं गई है।\n\n[स्थान] में दिनांक [तारीख] को सत्यापित।\n\n[शिकायतकर्ता का नाम]\nशिकायतकर्ता",
+      "title": {
+        "en": "Criminal Complaint for Theft (Sec. 303 BNS) — Theft Complaint / Chori Complaint",
+        "hi": "चोरी की आपराधिक शिकायत (धारा 303 BNS) — चोरी शिकायत"
+      },
+      "use": {
+        "en": "File this private complaint before the Magistrate when someone has dishonestly taken your movable property out of your possession without consent — for example cash, jewellery, a vehicle or goods — and the police have not registered an FIR.",
+        "hi": "जब किसी ने आपकी चल संपत्ति — जैसे नकद, आभूषण, वाहन या माल — आपकी सहमति के बिना बेईमानी से आपके कब्जे से ले ली हो और पुलिस ने FIR दर्ज न की हो, तब मजिस्ट्रेट के समक्ष यह निजी शिकायत दाखिल करें।"
+      }
+    },
+    {
+      "category": {
+        "en": "Criminal",
+        "hi": "आपराधिक"
+      },
+      "filedIn": {
+        "en": "Court of Judicial Magistrate First Class having local jurisdiction",
+        "hi": "स्थानीय क्षेत्राधिकार वाले प्रथम श्रेणी न्यायिक मजिस्ट्रेट का न्यायालय"
+      },
+      "id": "complaint-hurt-115",
+      "jurisdiction": {
+        "en": "The Magistrate within whose local jurisdiction the hurt was caused.",
+        "hi": "वह मजिस्ट्रेट, जिसके स्थानीय क्षेत्राधिकार में उपहति पहुँचाई गई।"
+      },
+      "requirements": {
+        "en": [
+          "Medico-legal / injury report",
+          "Discharge slip or prescriptions, if any",
+          "Complaint given to police and its receipt, if any",
+          "ID proof of complainant",
+          "List of witnesses with addresses"
+        ],
+        "hi": [
+          "चिकित्सा-कानूनी / चोट रिपोर्ट",
+          "अस्पताल से छुट्टी पर्ची या नुस्खे, यदि कोई हों",
+          "पुलिस को दी गई शिकायत एवं उसकी प्राप्ति, यदि कोई हो",
+          "शिकायतकर्ता का पहचान प्रमाण",
+          "पते सहित साक्षियों की सूची"
+        ]
+      },
+      "sections": {
+        "en": "Sec. 114 BNS (Sec. 319 IPC) — hurt defined as bodily pain, disease or infirmity; Sec. 115 BNS (Sec. 323 IPC) — voluntarily causing hurt, punishable up to one year or fine up to Rs. 10,000 or both; Sec. 117 BNS (Sec. 325 IPC) — voluntarily causing grievous hurt, up to seven years. Procedure: Sec. 210 BNSS (Sec. 190 CrPC); Sec. 223 BNSS (Sec. 200 CrPC)",
+        "hi": "धारा 114 BNS (धारा 319 IPC) — उपहति की परिभाषा: शारीरिक पीड़ा, रोग या दुर्बलता; धारा 115 BNS (धारा 323 IPC) — स्वेच्छा से उपहति पहुँचाना, दंड एक वर्ष तक या 10,000 रुपये तक जुर्माना या दोनों; धारा 117 BNS (धारा 325 IPC) — स्वेच्छा से गंभीर उपहति पहुँचाना, सात वर्ष तक। प्रक्रिया: धारा 210 BNSS (धारा 190 CrPC); धारा 223 BNSS (धारा 200 CrPC)"
+      },
+      "template": "IN THE COURT OF THE JUDICIAL MAGISTRATE FIRST CLASS, [DISTRICT NAME], [STATE]\n\nComplaint Case No. [____] of [YEAR]\n\n[COMPLAINANT NAME], S/o / D/o [FATHER'S NAME], R/o [FULL ADDRESS] ... Complainant\n\nVERSUS\n\n[ACCUSED NAME], S/o / D/o [FATHER'S NAME], R/o [FULL ADDRESS] ... Accused\n\nCOMPLAINT UNDER SECTION 210 READ WITH SECTION 223 OF THE BHARATIYA NAGARIK SURAKSHA SANHITA, 2023 (SECTIONS 190 AND 200 OF THE CODE OF CRIMINAL PROCEDURE, 1973)\n\nOffence: Voluntarily causing hurt punishable under Section 115 of the Bharatiya Nyaya Sanhita, 2023 (Sections 319 and 323 of the Indian Penal Code, 1860); hurt defined under Section 114 BNS\n\nMay it please the Court:\n\n1. That the complainant is a resident of the address given above, and the accused is [RELATIONSHIP / ACQUAINTANCE, e.g., a neighbour / a co-villager].\n\n2. That on [DATE], at about [TIME], at [PLACE], on account of [BACKGROUND, e.g., a dispute over a passage / an old enmity], the accused, with the intention of causing hurt to the complainant and with the knowledge that his act was likely to cause hurt, [ACT, e.g., caught hold of the complainant, beat him with fists and kicks / struck him with a lathi], causing bodily pain and injuries to the complainant.\n\n3. That the complainant sustained the following injuries: [INJURIES, e.g., swelling on the left arm, bruises on the back, bleeding from the nose], as recorded in the medico-legal examination conducted at [HOSPITAL NAME] on [DATE], a copy of which is enclosed.\n\n4. That the act was witnessed by [WITNESS NAME(S)], who were present at the spot and intervened to save the complainant. The accused fled from the spot thereafter and also threatened the complainant with dire consequences if the matter was reported.\n\n5. That the complainant approached Police Station [NAME] on [DATE] for registration of an FIR and for medical examination, but no FIR was registered, hence the complainant is approaching this Hon'ble Court directly.\n\n6. That the cause of action arose within the local jurisdiction of this Hon'ble Court, where the hurt was caused.\n\nPRAYER\n\nIt is, therefore, most respectfully prayed that this Hon'ble Court may graciously be pleased to:\n\n(a) Take cognizance of the offence under Section 115 of the Bharatiya Nyaya Sanhita, 2023 (and Section 117 BNS, if the injuries are found to be grievous), examine the complainant and the witnesses, and issue process / summons against the accused; and\n\n(b) Pass such other and further orders as this Hon'ble Court may deem fit and proper in the facts and circumstances of the case.\n\nLIST OF WITNESSES:\n1. [WITNESS NAME, ADDRESS]\n2. [WITNESS NAME, ADDRESS]\n\nLIST OF DOCUMENTS:\n1. [MEDICO-LEGAL REPORT / INJURY REPORT]\n2. [DISCHARGE SLIP / PRESCRIPTION, IF ANY]\n\nPlace: [PLACE]\nDate: [DATE]\n\n[COMPLAINANT NAME]\nComplainant\n\nThrough Counsel\n[ADVOCATE NAME], Advocate\n[ENROLMENT NO.]\n\nVERIFICATION\n\nI, [COMPLAINANT NAME], the complainant above named, do hereby verify that the contents of this complaint are true to my personal knowledge, and nothing material has been concealed.\n\nVerified at [PLACE] on [DATE].\n\n[COMPLAINANT NAME]\nComplainant",
+      "templateHi": "[जिला का नाम], [राज्य] के प्रथम श्रेणी न्यायिक मजिस्ट्रेट के न्यायालय में\n\nशिकायत प्रकरण संख्या [____] सन् [वर्ष]\n\n[शिकायतकर्ता का नाम], पुत्र / पुत्री [पिता का नाम], निवासी [पूरा पता] ... शिकायतकर्ता\n\nबनाम\n\n[अभियुक्त का नाम], पुत्र / पुत्री [पिता का नाम], निवासी [पूरा पता] ... अभियुक्त\n\nभारतीय नागरिक सुरक्षा संहिता, 2023 की धारा 210 के साथ धारा 223 (दंड प्रक्रिया संहिता, 1973 की धारा 190 एवं 200) के अंतर्गत शिकायत\n\nअपराध: भारतीय न्याय संहिता, 2023 की धारा 115 (भारतीय दंड संहिता, 1860 की धारा 319 एवं 323) के अंतर्गत दंडनीय स्वेच्छा से उपहति पहुँचाना; उपहति की परिभाषा धारा 114 BNS में है\n\nमाननीय न्यायालय की सेवा में सादर निवेदन है:\n\n1. कि शिकायतकर्ता उपर्युक्त पते का निवासी है तथा अभियुक्त [संबंध / परिचय, जैसे पड़ोसी / सह-ग्रामीण] है।\n\n2. कि दिनांक [तारीख] को लगभग [समय] बजे [स्थान] पर [पृष्ठभूमि, जैसे रास्ते को लेकर विवाद / पुरानी रंजिश] के कारण अभियुक्त ने शिकायतकर्ता को उपहति पहुँचाने के आशय से तथा यह जानते हुए कि उसका कृत्य उपहति पहुँचाने की संभावना रखता है, [कृत्य, जैसे शिकायतकर्ता को पकड़कर घूँसों एवं लातों से पीटा / लाठी से मारा], जिससे शिकायतकर्ता को शारीरिक पीड़ा एवं चोटें आईं।\n\n3. कि शिकायतकर्ता को निम्नलिखित चोटें आईं: [चोटें, जैसे बाएँ हाथ में सूजन, पीठ पर खरोंच, नाक से रक्तस्राव], जैसा कि दिनांक [तारीख] को [अस्पताल का नाम] में की गई चिकित्सा-कानूनी परीक्षा में दर्ज है, जिसकी प्रति संलग्न है।\n\n4. कि इस कृत्य को [साक्षी के नाम] ने देखा, जो मौके पर उपस्थित थे तथा जिन्होंने शिकायतकर्ता को बचाने के लिए हस्तक्षेप किया। इसके बाद अभियुक्त मौके से भाग गया तथा शिकायतकर्ता को मामले की सूचना देने पर गंभीर परिणाम भुगतने की धमकी भी दी।\n\n5. कि शिकायतकर्ता ने दिनांक [तारीख] को थाना [नाम] में FIR दर्ज कराने तथा चिकित्सा परीक्षा हेतु संपर्क किया, किंतु FIR दर्ज नहीं की गई, अतः शिकायतकर्ता सीधे माननीय न्यायालय के समक्ष आया है।\n\n6. कि वाद-कारण माननीय न्यायालय के स्थानीय क्षेत्राधिकार में उत्पन्न हुआ है, जहाँ उपहति पहुँचाई गई।\n\nप्रार्थना\n\nअतः अत्यंत आदरपूर्वक प्रार्थना है कि माननीय न्यायालय कृपा करके:\n\n(क) भारतीय न्याय संहिता, 2023 की धारा 115 (तथा चोटें गंभीर पाए जाने पर धारा 117 BNS) के अंतर्गत अपराध का संज्ञान लेकर शिकायतकर्ता एवं साक्षियों का परीक्षण करे तथा अभियुक्त के विरुद्ध प्रक्रिया / समन जारी करे; तथा\n\n(ख) प्रकरण के तथ्यों एवं परिस्थितियों में ऐसा अन्य एवं उचित आदेश पारित करे, जैसा माननीय न्यायालय उचित समझे।\n\nसाक्षियों की सूची:\n1. [साक्षी का नाम, पता]\n2. [साक्षी का नाम, पता]\n\nदस्तावेजों की सूची:\n1. [चिकित्सा-कानूनी रिपोर्ट / चोट रिपोर्ट]\n2. [अस्पताल से छुट्टी पर्ची / नुस्खा, यदि कोई हो]\n\nस्थान: [स्थान]\nदिनांक: [तारीख]\n\n[शिकायतकर्ता का नाम]\nशिकायतकर्ता\n\nअधिवक्ता के माध्यम से\n[अधिवक्ता का नाम], अधिवक्ता\n[पंजीकरण संख्या]\n\nसत्यापन\n\nमैं, [शिकायतकर्ता का नाम], उपर्युक्त शिकायतकर्ता, सत्यापित करता हूँ कि इस शिकायत की विषयवस्तु मेरी व्यक्तिगत जानकारी में सत्य है तथा कोई तात्विक बात छिपाई नहीं गई है।\n\n[स्थान] में दिनांक [तारीख] को सत्यापित।\n\n[शिकायतकर्ता का नाम]\nशिकायतकर्ता",
+      "title": {
+        "en": "Criminal Complaint for Hurt (Sec. 115 BNS) — Hurt Complaint / Marpeet Complaint",
+        "hi": "उपहति (चोट) की आपराधिक शिकायत (धारा 115 BNS) — मारपीट शिकायत"
+      },
+      "use": {
+        "en": "File this private complaint before the Magistrate when someone has voluntarily caused you hurt — for example by beating, slapping or pushing you — causing bodily pain, disease or infirmity, and the police have not registered an FIR. If the injury is grievous (fracture, permanent disfigurement, 15 days of severe pain), Sec. 117 BNS applies instead.",
+        "hi": "जब किसी ने स्वेच्छा से आपको उपहति पहुँचाई हो — जैसे मारपीट, थप्पड़ या धक्का देकर शारीरिक पीड़ा, रोग या दुर्बलता पहुँचाई हो — और पुलिस ने FIR दर्ज न की हो, तब मजिस्ट्रेट के समक्ष यह निजी शिकायत दाखिल करें। यदि चोट गंभीर हो (हड्डी टूटना, स्थायी विरूपण, 15 दिन तक तीव्र पीड़ा), तो धारा 117 BNS लागू होती है।"
+      }
+    },
+    {
+      "category": {
+        "en": "Criminal",
+        "hi": "आपराधिक"
+      },
+      "filedIn": {
+        "en": "Court of Judicial Magistrate First Class having local jurisdiction",
+        "hi": "स्थानीय क्षेत्राधिकार वाले प्रथम श्रेणी न्यायिक मजिस्ट्रेट का न्यायालय"
+      },
+      "id": "complaint-criminal-intimidation-351",
+      "jurisdiction": {
+        "en": "The Magistrate within whose local jurisdiction the threat was made or received by the complainant.",
+        "hi": "वह मजिस्ट्रेट, जिसके स्थानीय क्षेत्राधिकार में धमकी दी गई या शिकायतकर्ता को प्राप्त हुई।"
+      },
+      "requirements": {
+        "en": [
+          "Transcript / screenshot / recording of the threat, if electronic",
+          "Non-cognizable report or police receipt, if any",
+          "ID proof of complainant",
+          "List of witnesses with addresses"
+        ],
+        "hi": [
+          "धमकी की प्रतिलिपि / स्क्रीनशॉट / रिकॉर्डिंग, यदि इलेक्ट्रॉनिक माध्यम से दी गई हो",
+          "असंज्ञेय रिपोर्ट या पुलिस प्राप्ति, यदि कोई हो",
+          "शिकायतकर्ता का पहचान प्रमाण",
+          "पते सहित साक्षियों की सूची"
+        ]
+      },
+      "sections": {
+        "en": "Sec. 351 BNS (Secs. 503 and 506 IPC) — criminal intimidation; Sec. 351(2) BNS up to two years for simple intimidation; Sec. 351(3) BNS up to seven years where the threat is of death, grievous hurt, arson or imputing unchastity. Threats by electronic communication are expressly covered. Procedure: Sec. 210 BNSS (Sec. 190 CrPC); Sec. 223 BNSS (Sec. 200 CrPC). The offence is non-cognizable and bailable in its basic form.",
+        "hi": "धारा 351 BNS (धारा 503 एवं 506 IPC) — आपराधिक धमकी; धारा 351(2) BNS साधारण धमकी पर दो वर्ष तक; धारा 351(3) BNS मृत्यु, गंभीर उपहति, आगजनी या शीलभंग के आरोप की धमकी पर सात वर्ष तक। इलेक्ट्रॉनिक संचार द्वारा दी गई धमकियाँ स्पष्ट रूप से इसमें शामिल हैं। प्रक्रिया: धारा 210 BNSS (धारा 190 CrPC); धारा 223 BNSS (धारा 200 CrPC)। अपने मूल रूप में यह अपराध असंज्ञेय एवं जमानती है।"
+      },
+      "template": "IN THE COURT OF THE JUDICIAL MAGISTRATE FIRST CLASS, [DISTRICT NAME], [STATE]\n\nComplaint Case No. [____] of [YEAR]\n\n[COMPLAINANT NAME], S/o / D/o [FATHER'S NAME], R/o [FULL ADDRESS] ... Complainant\n\nVERSUS\n\n[ACCUSED NAME], S/o / D/o [FATHER'S NAME], R/o [FULL ADDRESS] ... Accused\n\nCOMPLAINT UNDER SECTION 210 READ WITH SECTION 223 OF THE BHARATIYA NAGARIK SURAKSHA SANHITA, 2023 (SECTIONS 190 AND 200 OF THE CODE OF CRIMINAL PROCEDURE, 1973)\n\nOffence: Criminal intimidation punishable under Section 351 of the Bharatiya Nyaya Sanhita, 2023 (Sections 503 and 506 of the Indian Penal Code, 1860)\n\nMay it please the Court:\n\n1. That the complainant is a resident of the address given above, and the accused is [RELATIONSHIP / ACQUAINTANCE].\n\n2. That on [DATE], at about [TIME], at [PLACE / BY TELEPHONE / BY WHATSAPP MESSAGE], the accused threatened the complainant in the following words: [EXACT THREAT IN QUOTES, e.g., If you do not withdraw the case, I will kill you and your family / I will burn your house].\n\n3. That the threat was made with the intention of causing alarm to the complainant and of compelling the complainant to [DO / OMIT, e.g., withdraw the pending civil suit / vacate the shop / pay a sum of Rs. [AMOUNT]], which the complainant is not legally bound to do.\n\n4. That the complainant was genuinely alarmed by the threat, inasmuch as [EFFECT, e.g., the complainant has stopped going out alone after dark / the complainant's family is living in fear], and the threat is not a mere angry outburst but a deliberate threat of injury to the person / reputation / property of the complainant.\n\n5. That the threat [WAS WITNESSED BY [WITNESS NAME(S)] / IS RECORDED IN THE CALL RECORDING / WHATSAPP CHAT, a transcript / screenshot of which is enclosed].\n\n6. That the complainant approached Police Station [NAME] on [DATE], but since the offence is non-cognizable, the police recorded a non-cognizable report and advised the complainant to approach the court, hence the complainant is approaching this Hon'ble Court directly.\n\n7. That the cause of action arose within the local jurisdiction of this Hon'ble Court, where the threat was made / received.\n\nPRAYER\n\nIt is, therefore, most respectfully prayed that this Hon'ble Court may graciously be pleased to:\n\n(a) Take cognizance of the offence under Section 351 of the Bharatiya Nyaya Sanhita, 2023, examine the complainant and the witnesses, and issue process / summons against the accused; and\n\n(b) Pass such other and further orders as this Hon'ble Court may deem fit and proper in the facts and circumstances of the case.\n\nLIST OF WITNESSES:\n1. [WITNESS NAME, ADDRESS]\n2. [WITNESS NAME, ADDRESS]\n\nLIST OF DOCUMENTS:\n1. [TRANSCRIPT / SCREENSHOT OF THE THREAT, IF ELECTRONIC]\n2. [NON-COGNIZABLE REPORT / POLICE RECEIPT, IF ANY]\n\nPlace: [PLACE]\nDate: [DATE]\n\n[COMPLAINANT NAME]\nComplainant\n\nThrough Counsel\n[ADVOCATE NAME], Advocate\n[ENROLMENT NO.]\n\nVERIFICATION\n\nI, [COMPLAINANT NAME], the complainant above named, do hereby verify that the contents of this complaint are true to my personal knowledge, and nothing material has been concealed.\n\nVerified at [PLACE] on [DATE].\n\n[COMPLAINANT NAME]\nComplainant",
+      "templateHi": "[जिला का नाम], [राज्य] के प्रथम श्रेणी न्यायिक मजिस्ट्रेट के न्यायालय में\n\nशिकायत प्रकरण संख्या [____] सन् [वर्ष]\n\n[शिकायतकर्ता का नाम], पुत्र / पुत्री [पिता का नाम], निवासी [पूरा पता] ... शिकायतकर्ता\n\nबनाम\n\n[अभियुक्त का नाम], पुत्र / पुत्री [पिता का नाम], निवासी [पूरा पता] ... अभियुक्त\n\nभारतीय नागरिक सुरक्षा संहिता, 2023 की धारा 210 के साथ धारा 223 (दंड प्रक्रिया संहिता, 1973 की धारा 190 एवं 200) के अंतर्गत शिकायत\n\nअपराध: भारतीय न्याय संहिता, 2023 की धारा 351 (भारतीय दंड संहिता, 1860 की धारा 503 एवं 506) के अंतर्गत दंडनीय आपराधिक धमकी\n\nमाननीय न्यायालय की सेवा में सादर निवेदन है:\n\n1. कि शिकायतकर्ता उपर्युक्त पते का निवासी है तथा अभियुक्त [संबंध / परिचय] है।\n\n2. कि दिनांक [तारीख] को लगभग [समय] बजे [स्थान पर / टेलीफोन द्वारा / व्हाट्सऐप संदेश द्वारा] अभियुक्त ने शिकायतकर्ता को निम्नलिखित शब्दों में धमकी दी: [धमकी के ठीक शब्द उद्धरण सहित, जैसे यदि तुमने मुकदमा वापस नहीं लिया, तो मैं तुम्हें तथा तुम्हारे परिवार को जान से मार दूँगा / मैं तुम्हारा घर जला दूँगा]।\n\n3. कि धमकी शिकायतकर्ता को भयभीत करने तथा उसे [करने / न करने, जैसे लंबित दीवानी वाद वापस लेने / दुकान खाली करने / [राशि] रुपये देने] के लिए मजबूर करने के आशय से दी गई थी, जिसे करने के लिए शिकायतकर्ता कानूनी रूप से बाध्य नहीं है।\n\n4. कि शिकायतकर्ता धमकी से वास्तव में भयभीत हुआ है, क्योंकि [प्रभाव, जैसे शिकायतकर्ता अँधेरा होने के बाद अकेले बाहर जाना बंद कर चुका है / शिकायतकर्ता का परिवार भय में जी रहा है], तथा यह धमकी केवल क्रोध में कही गई बात नहीं, बल्कि शिकायतकर्ता के शरीर / प्रतिष्ठा / संपत्ति को क्षति पहुँचाने की सोची-समझी धमकी है।\n\n5. कि धमकी [साक्षी [नाम] ने सुनी / कॉल रिकॉर्डिंग / व्हाट्सऐप चैट में दर्ज है, जिसकी प्रतिलिपि / स्क्रीनशॉट संलग्न है]।\n\n6. कि शिकायतकर्ता ने दिनांक [तारीख] को थाना [नाम] में संपर्क किया, किंतु अपराध असंज्ञेय होने के कारण पुलिस ने असंज्ञेय रिपोर्ट दर्ज की तथा शिकायतकर्ता को न्यायालय जाने की सलाह दी, अतः शिकायतकर्ता सीधे माननीय न्यायालय के समक्ष आया है।\n\n7. कि वाद-कारण माननीय न्यायालय के स्थानीय क्षेत्राधिकार में उत्पन्न हुआ है, जहाँ धमकी दी गई / प्राप्त हुई।\n\nप्रार्थना\n\nअतः अत्यंत आदरपूर्वक प्रार्थना है कि माननीय न्यायालय कृपा करके:\n\n(क) भारतीय न्याय संहिता, 2023 की धारा 351 के अंतर्गत अपराध का संज्ञान लेकर शिकायतकर्ता एवं साक्षियों का परीक्षण करे तथा अभियुक्त के विरुद्ध प्रक्रिया / समन जारी करे; तथा\n\n(ख) प्रकरण के तथ्यों एवं परिस्थितियों में ऐसा अन्य एवं उचित आदेश पारित करे, जैसा माननीय न्यायालय उचित समझे।\n\nसाक्षियों की सूची:\n1. [साक्षी का नाम, पता]\n2. [साक्षी का नाम, पता]\n\nदस्तावेजों की सूची:\n1. [धमकी की प्रतिलिपि / स्क्रीनशॉट, यदि इलेक्ट्रॉनिक माध्यम से दी गई हो]\n2. [असंज्ञेय रिपोर्ट / पुलिस प्राप्ति, यदि कोई हो]\n\nस्थान: [स्थान]\nदिनांक: [तारीख]\n\n[शिकायतकर्ता का नाम]\nशिकायतकर्ता\n\nअधिवक्ता के माध्यम से\n[अधिवक्ता का नाम], अधिवक्ता\n[पंजीकरण संख्या]\n\nसत्यापन\n\nमैं, [शिकायतकर्ता का नाम], उपर्युक्त शिकायतकर्ता, सत्यापित करता हूँ कि इस शिकायत की विषयवस्तु मेरी व्यक्तिगत जानकारी में सत्य है तथा कोई तात्विक बात छिपाई नहीं गई है।\n\n[स्थान] में दिनांक [तारीख] को सत्यापित।\n\n[शिकायतकर्ता का नाम]\nशिकायतकर्ता",
+      "title": {
+        "en": "Criminal Complaint for Criminal Intimidation (Sec. 351 BNS) — Dhamki Complaint / Threat Complaint",
+        "hi": "आपराधिक धमकी की शिकायत (धारा 351 BNS) — धमकी शिकायत"
+      },
+      "use": {
+        "en": "File this private complaint before the Magistrate when someone has threatened you with injury to your person, reputation or property — including threats of death or grievous hurt, or threats sent by phone, WhatsApp or other electronic means — in order to cause alarm or to compel you to do or omit something. Criminal intimidation is non-cognizable, so the complaint route before the Magistrate is the usual route.",
+        "hi": "जब किसी ने आपको आपके शरीर, प्रतिष्ठा या संपत्ति को क्षति पहुँचाने की धमकी दी हो — जिसमें जान से मारने या गंभीर चोट की धमकी, या फोन, व्हाट्सऐप या अन्य इलेक्ट्रॉनिक माध्यम से दी गई धमकी भी शामिल है — ताकि आपको भयभीत किया जा सके या कोई काम करने या न करने के लिए मजबूर किया जा सके, तब मजिस्ट्रेट के समक्ष यह निजी शिकायत दाखिल करें। आपराधिक धमकी असंज्ञेय अपराध है, इसलिए मजिस्ट्रेट के समक्ष शिकायत का मार्ग ही सामान्य मार्ग है।"
+      }
+    },
+    {
+      "category": {
+        "en": "Criminal",
+        "hi": "आपराधिक"
+      },
+      "filedIn": {
+        "en": "Court of Session (or Judicial Magistrate where the punishment permits) / High Court",
+        "hi": "सत्र न्यायालय (या जहाँ दंड की अनुमति हो वहाँ न्यायिक मजिस्ट्रेट) / उच्च न्यायालय"
+      },
+      "id": "bail-arms-act-25",
+      "jurisdiction": {
+        "en": "The Sessions Court or High Court within whose jurisdiction the FIR is registered; the Magistrate's court where the offence is triable by a Magistrate and the punishment permits.",
+        "hi": "वह सत्र न्यायालय या उच्च न्यायालय, जिसके क्षेत्राधिकार में FIR दर्ज है; मजिस्ट्रेट का न्यायालय, जहाँ अपराध मजिस्ट्रेट द्वारा विचारणीय हो तथा दंड इसकी अनुमति देता हो।"
+      },
+      "requirements": {
+        "en": [
+          "Copy of FIR",
+          "Arrest memo / custody details",
+          "Licence of the arms, if the accused holds one",
+          "Proof of sanction under Sec. 39 Arms Act, if filed",
+          "ID proof and surety details with address proof"
+        ],
+        "hi": [
+          "FIR की प्रति",
+          "गिरफ्तारी मेमो / हिरासत का विवरण",
+          "हथियार का लाइसेंस, यदि अभियुक्त के पास हो",
+          "धारा 39 आयुध अधिनियम के अंतर्गत मंजूरी का प्रमाण, यदि दाखिल हो",
+          "पहचान प्रमाण एवं पता प्रमाण सहित जमानतदारों का विवरण"
+        ]
+      },
+      "sections": {
+        "en": "Sec. 25 Arms Act, 1959 — punishment for contravention; Sec. 25(1B) for ordinary arms (two to five years); higher terms for prohibited arms. Sec. 39 Arms Act — previous sanction for prosecution is mandatory. Bail: Sec. 483 BNSS (Sec. 439 CrPC) before the Sessions Court / High Court; Sec. 480 BNSS (Sec. 437 CrPC) before the Magistrate",
+        "hi": "धारा 25 आयुध अधिनियम, 1959 — उल्लंघन के लिए दंड; साधारण हथियारों के लिए धारा 25(1B) (दो से पाँच वर्ष); प्रतिषिद्ध हथियारों के लिए अधिक दंड। धारा 39 आयुध अधिनियम — अभियोजन हेतु पूर्व मंजूरी अनिवार्य है। जमानत: सत्र न्यायालय / उच्च न्यायालय के समक्ष धारा 483 BNSS (धारा 439 CrPC); मजिस्ट्रेट के समक्ष धारा 480 BNSS (धारा 437 CrPC)"
+      },
+      "template": "IN THE COURT OF THE SESSIONS JUDGE, [DISTRICT NAME], [STATE]\n\nBail Application No. [____] of [YEAR]\n\nUnder Section 483 of the Bharatiya Nagarik Suraksha Sanhita, 2023 (Section 439 of the Code of Criminal Procedure, 1973)\n\n[APPLICANT NAME], S/o / D/o [FATHER'S NAME], R/o [FULL ADDRESS] ... Applicant / Accused\n\nVERSUS\n\nState of [STATE], Through S.H.O., Police Station [NAME], District [NAME] ... Respondent\n\nFIR No. [____] dated [DATE], P.S. [NAME]\nOffences: Section 25 of the Arms Act, 1959 [and Section(s) [____] of BNS, 2023, if any]\n\nAPPLICATION FOR GRANT OF BAIL ON BEHALF OF THE APPLICANT / ACCUSED\n\nMay it please the Court:\n\n1. That the applicant is the accused in the above-noted FIR, registered on the allegation that [BRIEF ALLEGATION, e.g., a country-made pistol and [NUMBER] live cartridges were recovered from the possession of the applicant on [DATE] at [PLACE]]. The applicant was arrested on [DATE] and is presently in judicial custody in [JAIL NAME].\n\n2. That the applicant is innocent and has been falsely implicated. The applicant is [OCCUPATION / BACKGROUND, e.g., an agriculturist with no criminal antecedents], and the alleged recovery is disputed, inasmuch as [DEFENCE IN BRIEF, e.g., no independent public witness was joined at the time of recovery / the place of recovery is a public place accessible to all / the sanction for prosecution under Section 39 of the Arms Act has not been obtained so far].\n\n3. That the investigation is [COMPLETE / AT AN ADVANCED STAGE], the alleged weapon has already been seized and sent for forensic examination, and nothing further is to be recovered from the applicant. Continued custody of the applicant shall serve no useful purpose.\n\n4. That the offence under Section 25(1B) of the Arms Act, relating to ordinary arms, is punishable with imprisonment of two to five years, and the applicant undertakes to abide by all conditions that may be imposed, including regular appearance before the trial court.\n\n5. That the applicant has permanent residence at the address given above, has deep roots in society, and there is no apprehension of his absconding or tampering with evidence.\n\nPRAYER\n\nIt is, therefore, most respectfully prayed that this Hon'ble Court may graciously be pleased to:\n\n(a) Release the applicant on bail in FIR No. [____] dated [DATE], P.S. [NAME], on such terms and conditions as this Hon'ble Court may deem fit; and\n\n(b) Pass such other and further orders as this Hon'ble Court may deem fit and proper in the facts and circumstances of the case.\n\nPlace: [PLACE]\nDate: [DATE]\n\n[APPLICANT NAME]\nApplicant / Accused\n\nThrough Counsel\n[ADVOCATE NAME], Advocate\n[ENROLMENT NO.]",
+      "templateHi": "[जिला का नाम], [राज्य] के सत्र न्यायाधीश के न्यायालय में\n\nजमानत आवेदन संख्या [____] सन् [वर्ष]\n\nभारतीय नागरिक सुरक्षा संहिता, 2023 की धारा 483 (दंड प्रक्रिया संहिता, 1973 की धारा 439) के अंतर्गत\n\n[आवेदक का नाम], पुत्र / पुत्री [पिता का नाम], निवासी [पूरा पता] ... आवेदक / अभियुक्त\n\nबनाम\n\n[राज्य] राज्य, थाना प्रभारी अधिकारी के माध्यम से, थाना [नाम], जिला [नाम] ... विपक्षी\n\nप्रथम सूचना रिपोर्ट संख्या [____] दिनांक [तारीख], थाना [नाम]\nअपराध: आयुध अधिनियम, 1959 की धारा 25 [तथा BNS, 2023 की धारा [____], यदि कोई हो]\n\nआवेदक / अभियुक्त की ओर से जमानत प्रदान करने हेतु आवेदन\n\nमाननीय न्यायालय की सेवा में सादर निवेदन है:\n\n1. कि आवेदक उपर्युक्त FIR में अभियुक्त है, जो इस आरोप पर दर्ज की गई है कि [संक्षिप्त आरोप, जैसे दिनांक [तारीख] को [स्थान] पर आवेदक के कब्जे से एक देशी पिस्तौल तथा [संख्या] जिंदा कारतूस बरामद हुए]। आवेदक को दिनांक [तारीख] को गिरफ्तार किया गया था तथा वह वर्तमान में [कारागार का नाम] में न्यायिक हिरासत में है।\n\n2. कि आवेदक निर्दोष है तथा उसे झूठा फँसाया गया है। आवेदक [व्यवसाय / पृष्ठभूमि, जैसे बिना आपराधिक इतिहास वाला कृषक] है, तथा कथित बरामदगी विवादित है, क्योंकि [संक्षिप्त बचाव, जैसे बरामदगी के समय कोई स्वतंत्र लोक साक्षी शामिल नहीं किया गया / बरामदगी का स्थान सभी के लिए सुलभ सार्वजनिक स्थान है / आयुध अधिनियम की धारा 39 के अंतर्गत अभियोजन की मंजूरी अभी तक प्राप्त नहीं हुई है]।\n\n3. कि अन्वेषण [पूर्ण / उन्नत चरण में] है, कथित हथियार पहले ही जब्त करके विधि-विज्ञान परीक्षा हेतु भेजा जा चुका है, तथा आवेदक से अब कुछ और बरामद नहीं होना है। आवेदक की निरंतर हिरासत का कोई उपयोगी उद्देश्य नहीं रहेगा।\n\n4. कि साधारण हथियारों से संबंधित आयुध अधिनियम की धारा 25(1B) के अंतर्गत अपराध दो से पाँच वर्ष के कारावास से दंडनीय है, तथा आवेदक नियमित रूप से विचारण न्यायालय में उपस्थित रहने सहित लगाई जाने वाली सभी शर्तों का पालन करने का वचन देता है।\n\n5. कि आवेदक का उपर्युक्त पते पर स्थायी निवास है, समाज में उसकी गहरी जड़ें हैं, तथा उसके फरार होने या साक्ष्य से छेड़छाड़ करने की कोई आशंका नहीं है।\n\nप्रार्थना\n\nअतः अत्यंत आदरपूर्वक प्रार्थना है कि माननीय न्यायालय कृपा करके:\n\n(क) FIR संख्या [____] दिनांक [तारीख], थाना [नाम] में आवेदक को ऐसी शर्तों पर जमानत पर रिहा करे, जैसी माननीय न्यायालय उचित समझे; तथा\n\n(ख) प्रकरण के तथ्यों एवं परिस्थितियों में ऐसा अन्य एवं उचित आदेश पारित करे, जैसा माननीय न्यायालय उचित समझे।\n\nस्थान: [स्थान]\nदिनांक: [तारीख]\n\n[आवेदक का नाम]\nआवेदक / अभियुक्त\n\nअधिवक्ता के माध्यम से\n[अधिवक्ता का नाम], अधिवक्ता\n[पंजीकरण संख्या]",
+      "title": {
+        "en": "Bail Application under the Arms Act, 1959 (Sec. 25 Arms Act; Sec. 483 BNSS)",
+        "hi": "आयुध अधिनियम, 1959 के अंतर्गत जमानत आवेदन (धारा 25 आयुध अधिनियम; धारा 483 BNSS)"
+      },
+      "use": {
+        "en": "File this when the accused is in custody in a case under Sec. 25 of the Arms Act, 1959 — for example alleged possession of an unlicensed firearm or ammunition — and seeks release on bail. Where the offence is punishable with two to five years (ordinary arms), the Magistrate or Sessions Court may grant bail; for prohibited arms carrying higher punishment, the Sessions Court or High Court is approached.",
+        "hi": "जब अभियुक्त आयुध अधिनियम, 1959 की धारा 25 के प्रकरण में हिरासत में हो — जैसे बिना लाइसेंस हथियार या गोला-बारूद रखने का आरोप हो — और जमानत पर रिहाई चाहता हो, तब इसे दाखिल करें। साधारण हथियारों पर दो से पाँच वर्ष के दंड वाले अपराधों में मजिस्ट्रेट या सत्र न्यायालय जमानत दे सकता है; प्रतिषिद्ध हथियारों के अधिक दंड वाले मामलों में सत्र न्यायालय या उच्च न्यायालय का रुख किया जाता है।"
+      }
+    },
+    {
+      "id": "bail-up-gangsters-act",
+      "category": {
+        "en": "Criminal",
+        "hi": "आपराधिक"
+      },
+      "title": {
+        "en": "Bail Application under the U.P. Gangsters and Anti-Social Activities (Prevention) Act, 1986 (Sec. 483 BNSS read with Sec. 19(4) Gangsters Act)",
+        "hi": "उत्तर प्रदेश गुण्डा एवं समाज विरोधी क्रियाकलाप (निवारण) अधिनियम, 1986 के अंतर्गत जमानत आवेदन (धारा 483 BNSS व धारा 19(4) गुण्डा अधिनियम)"
+      },
+      "use": {
+        "en": "File this when an accused in custody in a U.P. Gangsters Act case seeks bail from the Special Court. Also called Gangster Act bail, UP Gangsters bail, gang-chart bail. The application must satisfy the two additional conditions of Section 19(4) of the Act.",
+        "hi": "जब उत्तर प्रदेश गुण्डा अधिनियम के मामले में हिरासत में बंद आरोपी विशेष न्यायालय से जमानत चाहता हो, तब इसे दाखिल करें। इसे गैंगस्टर एक्ट जमानत, यूपी गैंगस्टर जमानत, गैंग-चार्ट जमानत भी कहते हैं। आवेदन में अधिनियम की धारा 19(4) की दो अतिरिक्त शर्तों को पूरा करना होगा।"
+      },
+      "template": "IN THE COURT OF THE SPECIAL JUDGE (U.P. GANGSTERS AND ANTI-SOCIAL ACTIVITIES (PREVENTION) ACT, 1986), [DISTRICT NAME]\n\nBail Application No. [____] of [YEAR]\nUnder Section 483 of the Bharatiya Nagarik Suraksha Sanhita, 2023 read with Section 19(4) of the U.P. Gangsters and Anti-Social Activities (Prevention) Act, 1986\n(Section 439 of the Code of Criminal Procedure, 1973)\n\nIN THE MATTER OF:\n[APPLICANT NAME], S/o / D/o [FATHER'S NAME],\nR/o [FULL ADDRESS] ... Applicant / Accused\n\nVERSUS\n\nState of Uttar Pradesh, Through S.H.O.,\nPolice Station [NAME], District [NAME] ... Opposite Party\n\nCase Crime No. [____] of [YEAR], P.S. [NAME]\nOffence: Section 3(1) of the U.P. Gangsters Act, 1986\n\nAPPLICATION FOR GRANT OF BAIL ON BEHALF OF THE APPLICANT/ACCUSED\n\nMay it please the Court:\n\n1. That the applicant is the accused in the above-noted case and is in judicial custody since [DATE OF ARREST]. The applicant is a permanent resident of the address given above and has deep roots in society.\n\n2. That the case has been registered on the basis of a gang-chart prepared by the police, showing [NUMBER] predicate cases against the applicant. The applicant submits that the gang-chart alone does not make the applicant a gangster within Section 2(b) and 2(c) of the Act, because [STATE FACTS: e.g., the applicant has been acquitted or enlarged on bail in the predicate cases / the predicate cases are old and unrelated / the applicant is not a member, leader or organiser of any gang].\n\n3. That Section 19(4) of the Gangsters Act lays down two additional conditions for bail: (a) the Public Prosecutor must be given an opportunity to oppose the application, and (b) where the Public Prosecutor opposes, the Court must be satisfied that there are reasonable grounds for believing that the applicant is not guilty of the offence and that he is not likely to commit any offence while on bail. The applicant respectfully requests that the learned Public Prosecutor be heard, and addresses both conditions in this application.\n\n4. That there are reasonable grounds for believing that the applicant is not guilty of the offence under the Act, because [STATE GROUNDS: e.g., no act of violence, intimidation or coercion for pecuniary or temporal advantage is attributed to the applicant; the predicate cases do not disclose a gang acting collectively; the applicant's role, if any, is not that of a gangster].\n\n5. That the applicant is not likely to commit any offence while on bail, because [STATE GROUNDS: e.g., the applicant has no criminal antecedents apart from the predicate cases shown in the gang-chart / the applicant has remained on bail in the predicate cases without misuse / the applicant undertakes to abide by all conditions].\n\n6. That the applicant has been in custody since [DATE] and the trial is likely to take a long time, as [STATE REASON: e.g., witnesses are yet to be examined / the predicate cases are still pending]. Continued detention would cause grave prejudice to the applicant.\n\n7. That the applicant undertakes to appear before the Court on every date, not to tamper with evidence or influence witnesses, not to leave the district without permission, and to abide by every condition imposed by this Hon'ble Court.\n\nPRAYER\n\nIt is, therefore, most respectfully prayed that this Hon'ble Court may be pleased to enlarge the applicant on bail in Case Crime No. [____] of [YEAR], P.S. [NAME], under Section 3(1) of the U.P. Gangsters Act, 1986, on such terms and conditions as this Hon'ble Court deems fit and proper.\n\nAnd for this act of kindness, the applicant shall ever pray.\n\nPlace: [DISTRICT]\nDate: [DATE]\n\n[ADVOCATE NAME]\nCounsel for the Applicant\n\nVERIFICATION\n\nI, [APPLICANT NAME], the applicant above-named, do hereby verify that the contents of paragraphs 1 to 7 of this application are true to my personal knowledge and belief, and nothing material has been concealed.\n\nVerified at [PLACE] on [DATE].\n\n[APPLICANT NAME]\nApplicant",
+      "templateHi": "विशेष न्यायाधीश (उत्तर प्रदेश गुण्डा एवं समाज विरोधी क्रियाकलाप (निवारण) अधिनियम, 1986) के न्यायालय में, [जिले का नाम]\n\nजमानत आवेदन संख्या [____] सन् [वर्ष]\nभारतीय नागरिक सुरक्षा संहिता, 2023 की धारा 483 व उत्तर प्रदेश गुण्डा एवं समाज विरोधी क्रियाकलाप (निवारण) अधिनियम, 1986 की धारा 19(4) के अंतर्गत\n(दण्ड प्रक्रिया संहिता, 1973 की धारा 439)\n\nमामले में:\n[आवेदक का नाम], पुत्र/पुत्री [पिता का नाम],\nनिवासी [पूरा पता] ... आवेदक / अभियुक्त\n\nबनाम\n\nउत्तर प्रदेश राज्य, द्वारा थानाध्यक्ष,\nथाना [नाम], जिला [नाम] ... विपक्षी\n\nमुकदमा अपराध संख्या [____] सन् [वर्ष], थाना [नाम]\nअपराध: उत्तर प्रदेश गुण्डा अधिनियम, 1986 की धारा 3(1)\n\nआवेदक/अभियुक्त की ओर से जमानत प्रदान करने हेतु आवेदन\n\nमाननीय न्यायालय की सेवा में:\n\n1. यह कि आवेदक उपरोक्त मामले में अभियुक्त है और [गिरफ्तारी की तिथि] से न्यायिक हिरासत में है। आवेदक उपरोक्त पते का स्थायी निवासी है और समाज में उसकी गहरी जड़ें हैं।\n\n2. यह कि यह मामला पुलिस द्वारा तैयार किए गए गैंग-चार्ट के आधार पर दर्ज किया गया है, जिसमें आवेदक के विरुद्ध [संख्या] आधारभूत (predicate) मामले दिखाए गए हैं। आवेदक का निवेदन है कि केवल गैंग-चार्ट से आवेदक अधिनियम की धारा 2(ख) और 2(ग) के अर्थ में गुण्डा नहीं हो जाता, क्योंकि [तथ्य लिखें: जैसे, आवेदक आधारभूत मामलों में बरी हो चुका है या जमानत पर है / आधारभूत मामले पुराने और असंबंधित हैं / आवेदक किसी गिरोह का सदस्य, नेता या आयोजक नहीं है]।\n\n3. यह कि गुण्डा अधिनियम की धारा 19(4) जमानत के लिए दो अतिरिक्त शर्तें रखती है: (क) लोक अभियोजक को आवेदन का विरोध करने का अवसर दिया जाए, और (ख) यदि लोक अभियोजक विरोध करे, तो न्यायालय को यह समाधान हो कि आवेदक के अपराध का दोषी न होने के युक्तियुक्त आधार हैं और जमानत पर रहते हुए उसके कोई अपराध करने की संभावना नहीं है। आवेदक सादर निवेदन करता है कि विद्वान लोक अभियोजक को सुना जाए, और इस आवेदन में दोनों शर्तों पर अपना पक्ष रखता है।\n\n4. यह कि आवेदक के अपराध का दोषी न होने के युक्तियुक्त आधार हैं, क्योंकि [आधार लिखें: जैसे, आवेदक पर धन या सांसारिक लाभ के लिए हिंसा, धमकी या उत्पीड़न का कोई कार्य आरोपित नहीं है; आधारभूत मामले सामूहिक रूप से कार्य करने वाले किसी गिरोह को प्रकट नहीं करते; आवेदक की भूमिका, यदि कोई है, तो वह गुण्डे की नहीं है]।\n\n5. यह कि जमानत पर रहते हुए आवेदक के कोई अपराध करने की संभावना नहीं है, क्योंकि [आधार लिखें: जैसे, गैंग-चार्ट में दिखाए गए आधारभूत मामलों के अतिरिक्त आवेदक का कोई आपराधिक इतिहास नहीं है / आवेदक आधारभूत मामलों में बिना दुरुपयोग के जमानत पर रहा है / आवेदक सभी शर्तों का पालन करने का वचन देता है]।\n\n6. यह कि आवेदक [तिथि] से हिरासत में है और मुकदमे में लंबा समय लगने की संभावना है, क्योंकि [कारण लिखें: जैसे, गवाहों की परीक्षा अभी बाकी है / आधारभूत मामले अभी लंबित हैं]। लगातार हिरासत से आवेदक को गंभीर क्षति होगी।\n\n7. यह कि आवेदक प्रत्येक तिथि पर न्यायालय में उपस्थित होने, साक्ष्य से छेड़छाड़ न करने या गवाहों को प्रभावित न करने, बिना अनुमति जिले से बाहर न जाने, और इस माननीय न्यायालय द्वारा लगाई गई प्रत्येक शर्त का पालन करने का वचन देता है।\n\nप्रार्थना\n\nअतः अत्यंत सादर प्रार्थना है कि यह माननीय न्यायालय मुकदमा अपराध संख्या [____] सन् [वर्ष], थाना [नाम], उत्तर प्रदेश गुण्डा अधिनियम, 1986 की धारा 3(1) के अंतर्गत आवेदक को ऐसी शर्तों पर जमानत पर रिहा करने की कृपा करे, जैसा कि यह माननीय न्यायालय उचित समझे।\n\nऔर इस दया के लिए आवेदक सदैव प्रार्थी रहेगा।\n\nस्थान: [जिला]\nदिनांक: [तिथि]\n\n[अधिवक्ता का नाम]\nआवेदक के अधिवक्ता\n\nसत्यापन\n\nमैं, [आवेदक का नाम], उपरोक्त आवेदक, सत्यापित करता हूँ कि इस आवेदन के पैरा 1 से 7 की बातें मेरी व्यक्तिगत जानकारी और विश्वास के अनुसार सत्य हैं, और कोई महत्वपूर्ण बात छिपाई नहीं गई है।\n\n[स्थान] में [तिथि] को सत्यापित।\n\n[आवेदक का नाम]\nआवेदक",
+      "filedIn": {
+        "en": "Special Court (U.P. Gangsters Act) / Court of Sessions",
+        "hi": "विशेष न्यायालय (उत्तर प्रदेश गुण्डा अधिनियम) / सत्र न्यायालय"
+      },
+      "sections": {
+        "en": "Sec. 483 BNSS (Sec. 439 CrPC) — bail; Sec. 19(4) U.P. Gangsters Act, 1986 — additional bail conditions (Public Prosecutor to be heard; reasonable grounds of innocence and no likelihood of re-offending); Sec. 3 Gangsters Act — penalty; Sec. 2(b) and 2(c) — definitions of gang and gangster; Sec. 5 — Special Court",
+        "hi": "धारा 483 BNSS (धारा 439 CrPC) — जमानत; धारा 19(4) उत्तर प्रदेश गुण्डा अधिनियम, 1986 — जमानत की अतिरिक्त शर्तें (लोक अभियोजक को सुना जाना; निर्दोष होने के युक्तियुक्त आधार और पुनः अपराध की संभावना न होना); धारा 3 गुण्डा अधिनियम — दण्ड; धारा 2(ख) और 2(ग) — गिरोह और गुण्डे की परिभाषा; धारा 5 — विशेष न्यायालय"
+      },
+      "jurisdiction": {
+        "en": "Special Court constituted under Section 5 of the U.P. Gangsters Act, 1986 for the district where the offence was committed or where the applicant is in custody.",
+        "hi": "उत्तर प्रदेश गुण्डा अधिनियम, 1986 की धारा 5 के अंतर्गत गठित विशेष न्यायालय — जिस जिले में अपराध हुआ हो या जहाँ आवेदक हिरासत में हो।"
+      },
+      "requirements": {
+        "en": [
+          "Copy of FIR and gang-chart",
+          "Arrest memo and custody / remand papers",
+          "Orders in predicate cases (bail / acquittal, if any)",
+          "ID proof of applicant and sureties",
+          "Surety details with address proof"
+        ],
+        "hi": [
+          "FIR और गैंग-चार्ट की प्रति",
+          "गिरफ्तारी मेमो और हिरासत / रिमांड के कागजात",
+          "आधारभूत मामलों के आदेश (जमानत / बरी, यदि कोई हो)",
+          "आवेदक और जमानतदारों का पहचान प्रमाण",
+          "जमानतदारों का विवरण पता प्रमाण सहित"
+        ]
+      }
+    },
+    {
+      "id": "release-vehicle-excise-act",
+      "category": {
+        "en": "Criminal",
+        "hi": "आपराधिक"
+      },
+      "title": {
+        "en": "Application for Release of Vehicle Seized under the U.P. Excise Act, 1910 (Sec. 72 Excise Act — Interim Release / Release on Fine in Lieu of Confiscation)",
+        "hi": "उत्तर प्रदेश आबकारी अधिनियम, 1910 के अंतर्गत जब्त वाहन की रिहाई हेतु आवेदन (धारा 72 आबकारी अधिनियम — अंतरिम रिहाई / जब्ती के बदले जुर्माना)"
+      },
+      "use": {
+        "en": "File this when a vehicle seized for alleged illicit liquor transport is sought back by its owner. Also called Excise vehicle release, superdari of excise-seized vehicle, gadi ki rihai (Excise). Note: while confiscation proceedings under Section 72 are pending before the Collector, the Magistrate has no jurisdiction to release the vehicle (Allahabad High Court) — this application is therefore made to the Collector, with the Magistrate route under Section 503 BNSS as the alternative where no confiscation proceedings are pending.",
+        "hi": "जब अवैध शराब के परिवहन के आरोप में जब्त वाहन को उसका स्वामी वापस चाहता हो, तब इसे दाखिल करें। इसे आबकारी वाहन रिहाई, जब्त वाहन की सुपुर्दारी, गाड़ी की रिहाई (आबकारी) भी कहते हैं। ध्यान दें: धारा 72 के अंतर्गत कलेक्टर के समक्ष जब्ती की कार्यवाही लंबित रहने तक मजिस्ट्रेट को वाहन रिहा करने का अधिकार नहीं है (इलाहाबाद उच्च न्यायालय) — इसलिए यह आवेदन कलेक्टर को दिया जाता है; जहाँ जब्ती की कार्यवाही लंबित न हो, वहाँ धारा 503 BNSS के अंतर्गत मजिस्ट्रेट से रिहाई माँगी जा सकती है।"
+      },
+      "template": "BEFORE THE COLLECTOR / DISTRICT MAGISTRATE, [DISTRICT NAME]\n(Confiscation Proceedings under Section 72 of the U.P. Excise Act, 1910)\n\nApplication No. [____] of [YEAR]\nUnder Section 72 of the United Provinces Excise Act, 1910\n\nIN THE MATTER OF:\n[APPLICANT NAME], S/o / D/o [FATHER'S NAME],\nR/o [FULL ADDRESS] ... Applicant / Registered Owner\n\nVERSUS\n\nState of Uttar Pradesh, Through Excise Inspector /\nS.H.O., Police Station [NAME], District [NAME] ... Opposite Party\n\nSeizure Memo dated [DATE]; Vehicle No. [REGISTRATION NUMBER]\n\nAPPLICATION FOR RELEASE OF THE SEIZED VEHICLE ON SUPERDARI / ON PAYMENT OF FINE IN LIEU OF CONFISCATION\n\nMay it please this Authority:\n\n1. That the applicant is the registered owner of the vehicle bearing registration No. [NUMBER], [MAKE AND MODEL], seized on [DATE] at [PLACE] by [EXCISE OFFICER / POLICE] on the allegation of illicit transport of liquor under the U.P. Excise Act, 1910.\n\n2. That the vehicle is the applicant's [SOURCE OF LIVELIHOOD / ONLY MEANS OF TRANSPORT — STATE FACTS], and its continued detention is causing daily loss and hardship to the applicant and his family. The vehicle, if kept idle in the open, will suffer speedy wear and tear and natural decay, reducing its value to nil.\n\n3. That the applicant [STATE POSITION: e.g., was not present at the time of seizure and had no knowledge that the vehicle was being used for any illegal purpose / had given the vehicle on hire in the ordinary course / is not an accused in the criminal case]. The applicant is ready to prove ownership and bona fides before this Authority.\n\n4. That under the proviso to sub-section (2) of Section 72 of the Act, in the case of anything except an intoxicant, the owner shall be given an option to pay, in lieu of its confiscation, such fine as the Collector thinks adequate, not exceeding its market value on the date of seizure. Further, sub-section (3) of Section 72 confers power on the Collector to release the vehicle where it is considered expedient in public interest or where the thing is subject to speedy wear and tear or natural decay.\n\n5. That the applicant undertakes to furnish adequate security / surety, to produce the vehicle before this Authority or the Court whenever required, not to sell, transfer or alter the vehicle during the pendency of proceedings, and to abide by every condition imposed.\n\n6. That the applicant also submits, without prejudice, that if this Authority is of the view that confiscation proceedings are not pending, the vehicle may be released by the learned Magistrate under Section 503 of the Bharatiya Nagarik Suraksha Sanhita, 2023 (Section 451 CrPC) on the same grounds.\n\nPRAYER\n\nIt is, therefore, most respectfully prayed that this Authority may be pleased to release the vehicle bearing registration No. [NUMBER] to the applicant on superdari / on payment of such fine in lieu of confiscation as this Authority deems adequate, on such terms and conditions as deemed fit and proper.\n\nAnd for this act of kindness, the applicant shall ever pray.\n\nPlace: [DISTRICT]\nDate: [DATE]\n\n[ADVOCATE NAME]\nCounsel for the Applicant\n\nVERIFICATION\n\nI, [APPLICANT NAME], the applicant above-named, do hereby verify that the contents of paragraphs 1 to 6 of this application are true to my personal knowledge and belief, and nothing material has been concealed.\n\nVerified at [PLACE] on [DATE].\n\n[APPLICANT NAME]\nApplicant",
+      "templateHi": "कलेक्टर / जिला मजिस्ट्रेट के समक्ष, [जिले का नाम]\n(उत्तर प्रदेश आबकारी अधिनियम, 1910 की धारा 72 के अंतर्गत जब्ती की कार्यवाही)\n\nआवेदन संख्या [____] सन् [वर्ष]\nसंयुक्त प्रांत आबकारी अधिनियम, 1910 की धारा 72 के अंतर्गत\n\nमामले में:\n[आवेदक का नाम], पुत्र/पुत्री [पिता का नाम],\nनिवासी [पूरा पता] ... आवेदक / पंजीकृत स्वामी\n\nबनाम\n\nउत्तर प्रदेश राज्य, द्वारा आबकारी निरीक्षक /\nथानाध्यक्ष, थाना [नाम], जिला [नाम] ... विपक्षी\n\nजब्ती मेमो दिनांक [तिथि]; वाहन संख्या [पंजीकरण संख्या]\n\nजब्त वाहन की सुपुर्दारी पर रिहाई / जब्ती के बदले जुर्माना देकर रिहाई हेतु आवेदन\n\nइस प्राधिकारी की सेवा में:\n\n1. यह कि आवेदक वाहन संख्या [संख्या], [कंपनी और मॉडल] का पंजीकृत स्वामी है, जिसे [तिथि] को [स्थान] पर [आबकारी अधिकारी / पुलिस] द्वारा उत्तर प्रदेश आबकारी अधिनियम, 1910 के अंतर्गत अवैध शराब के परिवहन के आरोप में जब्त किया गया था।\n\n2. यह कि यह वाहन आवेदक की [आजीविका का साधन / परिवहन का एकमात्र साधन — तथ्य लिखें] है, और इसे रोके रखने से आवेदक और उसके परिवार को प्रतिदिन हानि और कठिनाई हो रही है। वाहन खुले में बेकार खड़ा रहने से शीघ्र टूट-फूट और प्राकृतिक क्षय का शिकार होगा, जिससे उसका मूल्य समाप्त हो जाएगा।\n\n3. यह कि आवेदक [स्थिति लिखें: जैसे, जब्ती के समय उपस्थित नहीं था और उसे इस बात की जानकारी नहीं थी कि वाहन का किसी अवैध कार्य में प्रयोग हो रहा है / उसने वाहन सामान्य किराए पर दिया था / वह आपराधिक मामले में अभियुक्त नहीं है]। आवेदक अपना स्वामित्व और सद्भाव इस प्राधिकारी के समक्ष सिद्ध करने को तैयार है।\n\n4. यह कि अधिनियम की धारा 72 की उपधारा (2) के परंतुक के अनुसार, मदिरा के अतिरिक्त किसी वस्तु के मामले में, स्वामी को उसकी जब्ती के बदले ऐसा जुर्माना देने का विकल्प दिया जाएगा, जो कलेक्टर उचित समझे और जो जब्ती की तिथि को उसके बाजार मूल्य से अधिक न हो। इसके अतिरिक्त, धारा 72 की उपधारा (3) कलेक्टर को यह शक्ति देती है कि लोकहित में समीचीन होने पर या वस्तु के शीघ्र टूट-फूट या प्राकृतिक क्षय का शिकार होने पर वाहन को रिहा कर दे।\n\n5. यह कि आवेदक पर्याप्त प्रतिभूति / जमानत देने, जब भी आवश्यकता हो वाहन को इस प्राधिकारी या न्यायालय के समक्ष प्रस्तुत करने, कार्यवाही लंबित रहने तक वाहन को बेचने, हस्तांतरित करने या बदलने से बचने, और लगाई गई प्रत्येक शर्त का पालन करने का वचन देता है।\n\n6. यह कि आवेदक बिना किसी पूर्वाग्रह के यह भी निवेदन करता है कि यदि इस प्राधिकारी का यह मत हो कि जब्ती की कार्यवाही लंबित नहीं है, तो वाहन को विद्वान मजिस्ट्रेट द्वारा भारतीय नागरिक सुरक्षा संहिता, 2023 की धारा 503 (धारा 451 CrPC) के अंतर्गत उन्हीं आधारों पर रिहा किया जा सकता है।\n\nप्रार्थना\n\nअतः अत्यंत सादर प्रार्थना है कि यह प्राधिकारी वाहन संख्या [संख्या] को आवेदक को सुपुर्दारी पर / जब्ती के बदले ऐसे जुर्माने पर, जो यह प्राधिकारी पर्याप्त समझे, ऐसी शर्तों पर रिहा करने की कृपा करे, जैसा कि उचित समझा जाए।\n\nऔर इस दया के लिए आवेदक सदैव प्रार्थी रहेगा।\n\nस्थान: [जिला]\nदिनांक: [तिथि]\n\n[अधिवक्ता का नाम]\nआवेदक के अधिवक्ता\n\nसत्यापन\n\nमैं, [आवेदक का नाम], उपरोक्त आवेदक, सत्यापित करता हूँ कि इस आवेदन के पैरा 1 से 6 की बातें मेरी व्यक्तिगत जानकारी और विश्वास के अनुसार सत्य हैं, और कोई महत्वपूर्ण बात छिपाई नहीं गई है।\n\n[स्थान] में [तिथि] को सत्यापित।\n\n[आवेदक का नाम]\nआवेदक",
+      "filedIn": {
+        "en": "Collector / District Magistrate (Section 72 confiscation proceedings); alternatively, Judicial Magistrate under Sec. 503 BNSS where no confiscation proceedings are pending",
+        "hi": "कलेक्टर / जिला मजिस्ट्रेट (धारा 72 जब्ती की कार्यवाही); वैकल्पिक रूप से, जहाँ जब्ती की कार्यवाही लंबित न हो, वहाँ धारा 503 BNSS के अंतर्गत न्यायिक मजिस्ट्रेट"
+      },
+      "sections": {
+        "en": "Sec. 72 U.P. Excise Act, 1910 — things liable to confiscation, including conveyance under Sec. 72(1)(e); proviso to Sec. 72(2) — fine in lieu of confiscation; Sec. 72(3) — release by Collector; alternatively Sec. 503 BNSS (Sec. 451 CrPC) — custody of property pending trial",
+        "hi": "धारा 72 उत्तर प्रदेश आबकारी अधिनियम, 1910 — जब्ती के योग्य वस्तुएँ, जिनमें धारा 72(1)(ङ) के अंतर्गत वाहन भी है; धारा 72(2) का परंतुक — जब्ती के बदले जुर्माना; धारा 72(3) — कलेक्टर द्वारा रिहाई; वैकल्पिक रूप से धारा 503 BNSS (धारा 451 CrPC) — मुकदमा लंबित रहने तक संपत्ति की अभिरक्षा"
+      },
+      "jurisdiction": {
+        "en": "Collector / District Magistrate of the district where the seizure was made and confiscation proceedings are pending; the Magistrate route is available only where no Section 72 proceedings are pending (Allahabad High Court position).",
+        "hi": "उस जिले के कलेक्टर / जिला मजिस्ट्रेट जहाँ जब्ती हुई हो और जब्ती की कार्यवाही लंबित हो; मजिस्ट्रेट का मार्ग केवल वहाँ उपलब्ध है जहाँ धारा 72 की कार्यवाही लंबित न हो (इलाहाबाद उच्च न्यायालय की स्थिति)।"
+      },
+      "requirements": {
+        "en": [
+          "Registration certificate (RC) of the vehicle",
+          "Insurance papers",
+          "Seizure memo",
+          "Proof of ownership / purchase documents",
+          "ID proof of applicant",
+          "Undertaking and security / surety papers"
+        ],
+        "hi": [
+          "वाहन का पंजीकरण प्रमाणपत्र (RC)",
+          "बीमा के कागजात",
+          "जब्ती मेमो",
+          "स्वामित्व / क्रय के दस्तावेजों का प्रमाण",
+          "आवेदक का पहचान प्रमाण",
+          "वचनपत्र और प्रतिभूति / जमानत के कागजात"
+        ]
+      }
+    },
+    {
+      "id": "anticipatory-bail-ndps",
+      "category": {
+        "en": "Criminal",
+        "hi": "आपराधिक"
+      },
+      "title": {
+        "en": "Anticipatory Bail Application in NDPS Case (Sec. 482 BNSS / 438 CrPC read with Sec. 37 NDPS Act)",
+        "hi": "एनडीपीएस मामले में अग्रिम जमानत आवेदन (धारा 482 BNSS / 438 CrPC व धारा 37 एनडीपीएस अधिनियम)"
+      },
+      "use": {
+        "en": "File this when a person apprehends arrest in an NDPS case and seeks pre-arrest bail. Also called NDPS anticipatory bail, NDPS pre-arrest bail. The application must address the twin conditions of Section 37 of the NDPS Act, which courts apply to anticipatory bail as well.",
+        "hi": "जब किसी व्यक्ति को एनडीपीएस मामले में गिरफ्तारी की आशंका हो और वह गिरफ्तारी से पहले जमानत चाहता हो, तब इसे दाखिल करें। इसे एनडीपीएस अग्रिम जमानत, एनडीपीएस गिरफ्तारी-पूर्व जमानत भी कहते हैं। आवेदन में एनडीपीएस अधिनियम की धारा 37 की दोहरी शर्तों पर पक्ष रखना होगा, जिन्हें न्यायालय अग्रिम जमानत पर भी लागू करते हैं।"
+      },
+      "template": "IN THE COURT OF THE SPECIAL JUDGE (NDPS ACT) / SESSIONS JUDGE, [DISTRICT NAME]\n\nAnticipatory Bail Application No. [____] of [YEAR]\nUnder Section 482 of the Bharatiya Nagarik Suraksha Sanhita, 2023 read with Section 37 of the Narcotic Drugs and Psychotropic Substances Act, 1985\n(Section 438 of the Code of Criminal Procedure, 1973)\n\nIN THE MATTER OF:\n[APPLICANT NAME], S/o / D/o [FATHER'S NAME],\nR/o [FULL ADDRESS] ... Applicant\n\nVERSUS\n\nState / Union of India, Through [NCB / S.H.O.],\nPolice Station [NAME], District [NAME] ... Opposite Party\n\nCase Crime No. / NCB Case No. [____] of [YEAR]\nOffences: Section(s) [____] of the NDPS Act, 1985\n\nAPPLICATION FOR GRANT OF ANTICIPATORY BAIL ON BEHALF OF THE APPLICANT\n\nMay it please the Court:\n\n1. That the applicant apprehends arrest in the above-noted case, because [STATE REASON: e.g., the applicant's name has surfaced in the disclosure statement of a co-accused / the applicant has received notice / inquiry from the investigating agency / the applicant is being sought in connection with the alleged recovery]. The applicant is a permanent resident of the address given above and has deep roots in society.\n\n2. That the alleged recovery is of [QUANTITY] of [SUBSTANCE], which is a [SMALL / INTERMEDIATE / COMMERCIAL — STATE WHICH] quantity. The applicant submits that [STATE FACTS: e.g., no recovery was made from the applicant's possession or at his instance; the applicant has been falsely implicated on the basis of a disclosure statement alone, which is not substantive evidence; the applicant has no connection with the alleged contraband].\n\n3. That Section 37 of the NDPS Act imposes twin conditions for bail in cases involving commercial quantity: the Court must be satisfied that there are reasonable grounds for believing that the applicant is not guilty of the offence and that he is not likely to commit any offence while on bail. The applicant respectfully addresses both conditions: [STATE GROUNDS: e.g., there are reasonable grounds for believing the applicant is not guilty because no recovery, no call-detail link, and no financial trail connects him with the contraband; the applicant is not likely to commit any offence while on bail because he has no criminal antecedents / has never been involved in any drug offence / is a person of clean record].\n\n4. That the applicant undertakes to join and cooperate with the investigation as and when called, to appear before the investigating officer and the Court on every date, not to tamper with evidence or influence witnesses, not to leave the country without permission, and to abide by every condition imposed by this Hon'ble Court.\n\n5. That the applicant has no criminal antecedents [OR: the applicant's previous cases, if any, are as follows: ____, and the applicant has never misused bail]. Custodial interrogation is not required, as the applicant is ready to cooperate fully and no recovery is to be made at his instance.\n\n6. That in the event of arrest, the applicant will suffer irreparable loss and grave prejudice, including loss of reputation and livelihood, although the allegations are yet to be tested at trial.\n\nPRAYER\n\nIt is, therefore, most respectfully prayed that this Hon'ble Court may be pleased to direct that in the event of arrest of the applicant in Case Crime No. / NCB Case No. [____] of [YEAR], the applicant be released on anticipatory bail on such terms and conditions as this Hon'ble Court deems fit and proper.\n\nAnd for this act of kindness, the applicant shall ever pray.\n\nPlace: [DISTRICT]\nDate: [DATE]\n\n[ADVOCATE NAME]\nCounsel for the Applicant\n\nVERIFICATION\n\nI, [APPLICANT NAME], the applicant above-named, do hereby verify that the contents of paragraphs 1 to 6 of this application are true to my personal knowledge and belief, and nothing material has been concealed.\n\nVerified at [PLACE] on [DATE].\n\n[APPLICANT NAME]\nApplicant",
+      "templateHi": "विशेष न्यायाधीश (एनडीपीएस अधिनियम) / सत्र न्यायाधीश के न्यायालय में, [जिले का नाम]\n\nअग्रिम जमानत आवेदन संख्या [____] सन् [वर्ष]\nभारतीय नागरिक सुरक्षा संहिता, 2023 की धारा 482 व स्वापक औषधि और मनःप्रभावी पदार्थ अधिनियम, 1985 की धारा 37 के अंतर्गत\n(दण्ड प्रक्रिया संहिता, 1973 की धारा 438)\n\nमामले में:\n[आवेदक का नाम], पुत्र/पुत्री [पिता का नाम],\nनिवासी [पूरा पता] ... आवेदक\n\nबनाम\n\nराज्य / भारत संघ, द्वारा [एनसीबी / थानाध्यक्ष],\nथाना [नाम], जिला [नाम] ... विपक्षी\n\nमुकदमा अपराध संख्या / एनसीबी मामला संख्या [____] सन् [वर्ष]\nअपराध: एनडीपीएस अधिनियम, 1985 की धारा [____]\n\nआवेदक की ओर से अग्रिम जमानत प्रदान करने हेतु आवेदन\n\nमाननीय न्यायालय की सेवा में:\n\n1. यह कि आवेदक को उपरोक्त मामले में गिरफ्तारी की आशंका है, क्योंकि [कारण लिखें: जैसे, सह-अभियुक्त के प्रकटीकरण कथन में आवेदक का नाम आया है / आवेदक को जाँच एजेंसी से नोटिस / पूछताछ प्राप्त हुई है / कथित बरामदगी के संबंध में आवेदक की तलाश की जा रही है]। आवेदक उपरोक्त पते का स्थायी निवासी है और समाज में उसकी गहरी जड़ें हैं।\n\n2. यह कि कथित बरामदगी [पदार्थ] की [मात्रा] है, जो [छोटी / मध्यम / वाणिज्यिक — जो लागू हो वह लिखें] मात्रा है। आवेदक का निवेदन है कि [तथ्य लिखें: जैसे, आवेदक के कब्जे से या उसकी निशानदेही पर कोई बरामदगी नहीं हुई है; आवेदक को केवल प्रकटीकरण कथन के आधार पर झूठा फँसाया गया है, जो सारवान साक्ष्य नहीं है; आवेदक का कथित प्रतिबंधित पदार्थ से कोई संबंध नहीं है]।\n\n3. यह कि एनडीपीएस अधिनियम की धारा 37 वाणिज्यिक मात्रा वाले मामलों में जमानत के लिए दोहरी शर्तें रखती है: न्यायालय को यह समाधान होना चाहिए कि आवेदक के अपराध का दोषी न होने के युक्तियुक्त आधार हैं और जमानत पर रहते हुए उसके कोई अपराध करने की संभावना नहीं है। आवेदक सादर दोनों शर्तों पर अपना पक्ष रखता है: [आधार लिखें: जैसे, आवेदक के दोषी न होने के युक्तियुक्त आधार हैं क्योंकि कोई बरामदगी, कोई कॉल-विवरण संबंध और कोई वित्तीय लेन-देन उसे प्रतिबंधित पदार्थ से नहीं जोड़ता; जमानत पर रहते हुए उसके कोई अपराध करने की संभावना नहीं है क्योंकि उसका कोई आपराधिक इतिहास नहीं है / वह कभी किसी मादक पदार्थ अपराध में शामिल नहीं रहा / वह स्वच्छ छवि का व्यक्ति है]।\n\n4. यह कि आवेदक जब भी बुलाया जाए, जाँच में सम्मिलित होने और सहयोग करने, जाँच अधिकारी और न्यायालय के समक्ष प्रत्येक तिथि पर उपस्थित होने, साक्ष्य से छेड़छाड़ न करने या गवाहों को प्रभावित न करने, बिना अनुमति देश से बाहर न जाने, और इस माननीय न्यायालय द्वारा लगाई गई प्रत्येक शर्त का पालन करने का वचन देता है।\n\n5. यह कि आवेदक का कोई आपराधिक इतिहास नहीं है [अथवा: आवेदक के पिछले मामले, यदि कोई हों, इस प्रकार हैं: ____, और आवेदक ने कभी जमानत का दुरुपयोग नहीं किया है]। हिरासत में पूछताछ की आवश्यकता नहीं है, क्योंकि आवेदक पूर्ण सहयोग को तैयार है और उसकी निशानदेही पर कोई बरामदगी नहीं होनी है।\n\n6. यह कि गिरफ्तारी की स्थिति में आवेदक को अपूरणीय हानि और गंभीर क्षति होगी, जिसमें प्रतिष्ठा और आजीविका की हानि भी शामिल है, हालाँकि आरोपों का परीक्षण मुकदमे में अभी बाकी है।\n\nप्रार्थना\n\nअतः अत्यंत सादर प्रार्थना है कि यह माननीय न्यायालय निर्देश दे कि मुकदमा अपराध संख्या / एनसीबी मामला संख्या [____] सन् [वर्ष] में आवेदक की गिरफ्तारी की स्थिति में आवेदक को ऐसी शर्तों पर अग्रिम जमानत पर रिहा किया जाए, जैसा कि यह माननीय न्यायालय उचित समझे।\n\nऔर इस दया के लिए आवेदक सदैव प्रार्थी रहेगा।\n\nस्थान: [जिला]\nदिनांक: [तिथि]\n\n[अधिवक्ता का नाम]\nआवेदक के अधिवक्ता\n\nसत्यापन\n\nमैं, [आवेदक का नाम], उपरोक्त आवेदक, सत्यापित करता हूँ कि इस आवेदन के पैरा 1 से 6 की बातें मेरी व्यक्तिगत जानकारी और विश्वास के अनुसार सत्य हैं, और कोई महत्वपूर्ण बात छिपाई नहीं गई है।\n\n[स्थान] में [तिथि] को सत्यापित।\n\n[आवेदक का नाम]\nआवेदक",
+      "filedIn": {
+        "en": "Special Court (NDPS Act) / Court of Sessions",
+        "hi": "विशेष न्यायालय (एनडीपीएस अधिनियम) / सत्र न्यायालय"
+      },
+      "sections": {
+        "en": "Sec. 482 BNSS (Sec. 438 CrPC) — anticipatory bail; Sec. 37 NDPS Act, 1985 — twin conditions for bail; Sec. 36A NDPS Act — Special Court; relevant charging sections of the NDPS Act (e.g., Sec. 21, 22, 27A, 29)",
+        "hi": "धारा 482 BNSS (धारा 438 CrPC) — अग्रिम जमानत; धारा 37 एनडीपीएस अधिनियम, 1985 — जमानत की दोहरी शर्तें; धारा 36A एनडीपीएस अधिनियम — विशेष न्यायालय; एनडीपीएस अधिनियम की संबंधित आरोप धाराएँ (जैसे, धारा 21, 22, 27A, 29)"
+      },
+      "jurisdiction": {
+        "en": "Special Court (NDPS Act) / Court of Sessions having jurisdiction over the place of the alleged offence or where the applicant apprehends arrest.",
+        "hi": "विशेष न्यायालय (एनडीपीएस अधिनियम) / सत्र न्यायालय — जिस क्षेत्र में कथित अपराध हुआ हो या जहाँ आवेदक को गिरफ्तारी की आशंका हो।"
+      },
+      "requirements": {
+        "en": [
+          "Copy of FIR / NCB case papers",
+          "Grounds showing apprehension of arrest (notice / inquiry papers, if any)",
+          "Proof of residence and roots in society",
+          "Medical / age documents, if relied upon",
+          "Surety details with address proof"
+        ],
+        "hi": [
+          "FIR / एनसीबी मामला कागजातों की प्रति",
+          "गिरफ्तारी की आशंका दर्शाने वाले आधार (नोटिस / पूछताछ के कागजात, यदि कोई हों)",
+          "निवास और समाज में जड़ों का प्रमाण",
+          "चिकित्सीय / आयु के दस्तावेज, यदि निर्भर हों",
+          "जमानतदारों का विवरण पता प्रमाण सहित"
+        ]
+      }
+    },
+    {
+      "id": "discharge-ndps",
+      "category": {
+        "en": "Criminal",
+        "hi": "आपराधिक"
+      },
+      "title": {
+        "en": "Application for Discharge in NDPS Case (Sec. 250 BNSS / 227 CrPC — No Prima Facie Case)",
+        "hi": "एनडीपीएस मामले में उन्मोचन आवेदन (धारा 250 BNSS / 227 CrPC — प्रथम दृष्टया मामला नहीं)"
+      },
+      "use": {
+        "en": "File this at the charge stage when an accused in an NDPS trial seeks discharge because the prosecution material discloses no prima facie case. Also called NDPS discharge application, NDPS case discharge.",
+        "hi": "जब एनडीपीएस मुकदमे में अभियुक्त आरोप-विरचना के चरण में उन्मोचन चाहता हो, क्योंकि अभियोजन की सामग्री से कोई प्रथम दृष्टया मामला नहीं बनता, तब इसे दाखिल करें। इसे एनडीपीएस उन्मोचन आवेदन, एनडीपीएस मामला उन्मोचन भी कहते हैं।"
+      },
+      "template": "IN THE COURT OF THE SPECIAL JUDGE (NDPS ACT), [DISTRICT NAME]\n\nApplication No. [____] of [YEAR]\nUnder Section 250 of the Bharatiya Nagarik Suraksha Sanhita, 2023\n(Section 227 of the Code of Criminal Procedure, 1973)\n\nIN THE MATTER OF:\n[APPLICANT NAME], S/o / D/o [FATHER'S NAME],\nR/o [FULL ADDRESS] ... Applicant / Accused\n\nVERSUS\n\nState / Union of India, Through [NCB / S.H.O.],\nPolice Station [NAME], District [NAME] ... Opposite Party\n\nSessions Trial / NDPS Case No. [____] of [YEAR]\nOffences: Section(s) [____] of the NDPS Act, 1985\n\nAPPLICATION FOR DISCHARGE OF THE APPLICANT/ACCUSED\n\nMay it please the Court:\n\n1. That the applicant is facing trial in the above-noted case and the matter is at the stage of consideration of charge. The applicant seeks discharge on the ground that the material placed on record by the prosecution does not disclose a prima facie case against him.\n\n2. That the prosecution case, in brief, is [SUMMARISE: e.g., recovery of ____ from ____ on ____]. The applicant submits that even if the prosecution material is taken at its face value and accepted in its entirety, it does not make out the offence alleged against the applicant, because [STATE GROUNDS — CHOOSE THOSE THAT APPLY: (a) no recovery was made from the applicant's possession, and conscious possession is not established; (b) the applicant's name appears only in a disclosure statement of a co-accused, which is not substantive evidence; (c) the sampling and sealing were not done in accordance with the prescribed procedure and the standing instructions, and the link between the seized substance and the sample sent for chemical examination is broken; (d) the mandatory provisions, including search and seizure safeguards, were not complied with; (e) there is no material showing the applicant's participation, knowledge or control over the contraband].\n\n3. That at the stage of charge, the Court is required to consider whether there is sufficient ground for proceeding against the accused. Where the material raises no grave suspicion, and the case rests on suspicion alone, the accused is entitled to discharge. The present case is one of mere suspicion, not grave suspicion.\n\n4. That the applicant has no criminal antecedents [OR: the applicant's record is as follows: ____], and no purpose would be served by framing a charge and subjecting the applicant to a long trial on material that cannot sustain a conviction.\n\nPRAYER\n\nIt is, therefore, most respectfully prayed that this Hon'ble Court may be pleased to discharge the applicant in Sessions Trial / NDPS Case No. [____] of [YEAR], and to pass such other order as this Hon'ble Court deems fit and proper.\n\nAnd for this act of kindness, the applicant shall ever pray.\n\nPlace: [DISTRICT]\nDate: [DATE]\n\n[ADVOCATE NAME]\nCounsel for the Applicant\n\nVERIFICATION\n\nI, [APPLICANT NAME], the applicant above-named, do hereby verify that the contents of paragraphs 1 to 4 of this application are true to my personal knowledge and belief, and nothing material has been concealed.\n\nVerified at [PLACE] on [DATE].\n\n[APPLICANT NAME]\nApplicant",
+      "templateHi": "विशेष न्यायाधीश (एनडीपीएस अधिनियम) के न्यायालय में, [जिले का नाम]\n\nआवेदन संख्या [____] सन् [वर्ष]\nभारतीय नागरिक सुरक्षा संहिता, 2023 की धारा 250 के अंतर्गत\n(दण्ड प्रक्रिया संहिता, 1973 की धारा 227)\n\nमामले में:\n[आवेदक का नाम], पुत्र/पुत्री [पिता का नाम],\nनिवासी [पूरा पता] ... आवेदक / अभियुक्त\n\nबनाम\n\nराज्य / भारत संघ, द्वारा [एनसीबी / थानाध्यक्ष],\nथाना [नाम], जिला [नाम] ... विपक्षी\n\nसत्र मुकदमा / एनडीपीएस मामला संख्या [____] सन् [वर्ष]\nअपराध: एनडीपीएस अधिनियम, 1985 की धारा [____]\n\nआवेदक/अभियुक्त के उन्मोचन हेतु आवेदन\n\nमाननीय न्यायालय की सेवा में:\n\n1. यह कि आवेदक उपरोक्त मामले में मुकदमे का सामना कर रहा है और मामला आरोप पर विचार के चरण में है। आवेदक उन्मोचन चाहता है, क्योंकि अभियोजन द्वारा प्रस्तुत सामग्री से उसके विरुद्ध कोई प्रथम दृष्टया मामला नहीं बनता है।\n\n2. यह कि अभियोजन का मामला संक्षेप में इस प्रकार है [सार लिखें: जैसे, ____ से ____ को ____ की बरामदगी]। आवेदक का निवेदन है कि अभियोजन की सामग्री को उसके प्रत्यक्ष मूल्य पर लेकर पूर्णतः स्वीकार कर लेने पर भी, उससे आवेदक के विरुद्ध आरोपित अपराध नहीं बनता है, क्योंकि [जो आधार लागू हों वे लिखें: (क) आवेदक के कब्जे से कोई बरामदगी नहीं हुई है, और सचेत कब्जा सिद्ध नहीं होता है; (ख) आवेदक का नाम केवल सह-अभियुक्त के प्रकटीकरण कथन में आता है, जो सारवान साक्ष्य नहीं है; (ग) नमूना लेना और सीलबंद करना निर्धारित प्रक्रिया और स्थायी निर्देशों के अनुसार नहीं हुआ है, और जब्त पदार्थ तथा रासायनिक परीक्षा हेतु भेजे गए नमूने के बीच की कड़ी टूटी हुई है; (घ) तलाशी और जब्ती के अनिवार्य प्रावधानों का पालन नहीं हुआ है; (ङ) प्रतिबंधित पदार्थ पर आवेदक की भागीदारी, जानकारी या नियंत्रण दर्शाने वाली कोई सामग्री नहीं है]।\n\n3. यह कि आरोप के चरण में न्यायालय को यह देखना होता है कि क्या अभियुक्त के विरुद्ध कार्यवाही के लिए पर्याप्त आधार है। जहाँ सामग्री से गंभीर संदेह नहीं उठता है, और मामला केवल संदेह पर टिका है, वहाँ अभियुक्त उन्मोचन का हकदार है। वर्तमान मामला गंभीर संदेह का नहीं, बल्कि मात्र संदेह का है।\n\n4. यह कि आवेदक का कोई आपराधिक इतिहास नहीं है [अथवा: आवेदक का रिकॉर्ड इस प्रकार है: ____], और ऐसी सामग्री पर आरोप तय करके आवेदक को लंबे मुकदमे में डालने से कोई प्रयोजन सिद्ध नहीं होगा, जो दोषसिद्धि को कायम नहीं रख सकती।\n\nप्रार्थना\n\nअतः अत्यंत सादर प्रार्थना है कि यह माननीय न्यायालय सत्र मुकदमा / एनडीपीएस मामला संख्या [____] सन् [वर्ष] में आवेदक को उन्मोचित करने और ऐसा अन्य आदेश देने की कृपा करे, जैसा कि यह माननीय न्यायालय उचित समझे।\n\nऔर इस दया के लिए आवेदक सदैव प्रार्थी रहेगा।\n\nस्थान: [जिला]\nदिनांक: [तिथि]\n\n[अधिवक्ता का नाम]\nआवेदक के अधिवक्ता\n\nसत्यापन\n\nमैं, [आवेदक का नाम], उपरोक्त आवेदक, सत्यापित करता हूँ कि इस आवेदन के पैरा 1 से 4 की बातें मेरी व्यक्तिगत जानकारी और विश्वास के अनुसार सत्य हैं, और कोई महत्वपूर्ण बात छिपाई नहीं गई है।\n\n[स्थान] में [तिथि] को सत्यापित।\n\n[आवेदक का नाम]\nआवेदक",
+      "filedIn": {
+        "en": "Special Court (NDPS Act)",
+        "hi": "विशेष न्यायालय (एनडीपीएस अधिनियम)"
+      },
+      "sections": {
+        "en": "Sec. 250 BNSS (Sec. 227 CrPC) — discharge in a case triable by a Court of Session; Sec. 36A NDPS Act, 1985 — Special Court to try NDPS offences as a Court of Session; relevant charging sections of the NDPS Act",
+        "hi": "धारा 250 BNSS (धारा 227 CrPC) — सत्र न्यायालय द्वारा विचारणीय मामले में उन्मोचन; धारा 36A एनडीपीएस अधिनियम, 1985 — विशेष न्यायालय द्वारा सत्र न्यायालय की भाँति एनडीपीएस अपराधों का विचारण; एनडीपीएस अधिनियम की संबंधित आरोप धाराएँ"
+      },
+      "jurisdiction": {
+        "en": "Special Court (NDPS Act) trying the case, being a Court of Session for the purposes of the NDPS Act.",
+        "hi": "मामले का विचारण करने वाला विशेष न्यायालय (एनडीपीएस अधिनियम), जो एनडीपीएस अधिनियम के प्रयोजनों के लिए सत्र न्यायालय है।"
+      },
+      "requirements": {
+        "en": [
+          "Copy of chargesheet / complaint",
+          "Seizure memo and panchnama",
+          "FSL / chemical examination report",
+          "Statements of witnesses relied upon",
+          "Inventory and sampling documents"
+        ],
+        "hi": [
+          "आरोपपत्र / परिवाद की प्रति",
+          "जब्ती मेमो और पंचनामा",
+          "एफएसएल / रासायनिक परीक्षा रिपोर्ट",
+          "जिन गवाहों के कथनों पर निर्भरता है, उनके कथन",
+          "सूची और नमूना लेने के दस्तावेज"
+        ]
+      }
+    },
+    {
+      "id": "discharge-uapa",
+      "category": {
+        "en": "Criminal",
+        "hi": "आपराधिक"
+      },
+      "title": {
+        "en": "Application for Discharge under UAPA (Sec. 250 BNSS / 227 CrPC read with UAPA — No Prima Facie Case)",
+        "hi": "यूएपीए के अंतर्गत उन्मोचन आवेदन (धारा 250 BNSS / 227 CrPC व यूएपीए — प्रथम दृष्टया मामला नहीं)"
+      },
+      "use": {
+        "en": "File this at the charge stage when an accused in a UAPA case seeks discharge because the prosecution material discloses no prima facie case of a terrorist act, membership, or support. Also called UAPA discharge application, unlawful activities discharge.",
+        "hi": "जब यूएपीए मामले में अभियुक्त आरोप-विरचना के चरण में उन्मोचन चाहता हो, क्योंकि अभियोजन की सामग्री से आतंकवादी कृत्य, सदस्यता या समर्थन का कोई प्रथम दृष्टया मामला नहीं बनता, तब इसे दाखिल करें। इसे यूएपीए उन्मोचन आवेदन, गैरकानूनी गतिविधियाँ उन्मोचन भी कहते हैं।"
+      },
+      "template": "IN THE COURT OF THE SPECIAL JUDGE (UAPA / NIA ACT), [DISTRICT NAME]\n\nApplication No. [____] of [YEAR]\nUnder Section 250 of the Bharatiya Nagarik Suraksha Sanhita, 2023 read with the Unlawful Activities (Prevention) Act, 1967\n(Section 227 of the Code of Criminal Procedure, 1973)\n\nIN THE MATTER OF:\n[APPLICANT NAME], S/o / D/o [FATHER'S NAME],\nR/o [FULL ADDRESS] ... Applicant / Accused\n\nVERSUS\n\nState / National Investigation Agency,\nThrough [NIA / S.H.O.], Police Station [NAME] ... Opposite Party\n\nSessions Trial / Special Case No. [____] of [YEAR]\nOffences: Section(s) [____] of the UAPA, 1967\n\nAPPLICATION FOR DISCHARGE OF THE APPLICANT/ACCUSED\n\nMay it please the Court:\n\n1. That the applicant is facing trial in the above-noted case and the matter is at the stage of consideration of charge. The applicant seeks discharge on the ground that the material placed on record by the prosecution does not disclose a prima facie case against him under the UAPA.\n\n2. That the prosecution case, in brief, is [SUMMARISE]. The applicant submits that even if the prosecution material is taken at its face value, it does not make out any offence under the UAPA against the applicant, because [STATE GROUNDS — CHOOSE THOSE THAT APPLY: (a) mere association with, or presence alongside, persons accused of unlawful activity, without any act of furthering, supporting or participating in a terrorist act, does not constitute an offence; (b) no recovery of arms, funds, literature or communication linking the applicant with any terrorist organisation has been made; (c) the alleged material is vague, hearsay, or based on disclosure statements of co-accused, which are not substantive evidence; (d) the sanction for prosecution under Section 45 of the UAPA is [STATE POSITION: e.g., absent / defective / granted without application of mind — ONLY IF APPLICABLE]; (e) no prima facie material shows the applicant's intention, knowledge or participation in any terrorist act as defined in Section 15 of the Act].\n\n3. That the applicant respectfully submits that the stringent bail standard of Section 43D(5) of the UAPA, which applies at the bail stage, does not lower the test at the discharge stage. At this stage the question is only whether the material discloses a prima facie case; if it does not, the applicant is entitled to discharge, and the rigour of the bail provision cannot be used to frame a charge on inadequate material.\n\n4. That the applicant has no criminal antecedents [OR: the applicant's record is as follows: ____], and subjecting the applicant to a long trial on material that cannot sustain a conviction would cause grave prejudice.\n\nPRAYER\n\nIt is, therefore, most respectfully prayed that this Hon'ble Court may be pleased to discharge the applicant in Sessions Trial / Special Case No. [____] of [YEAR], and to pass such other order as this Hon'ble Court deems fit and proper.\n\nAnd for this act of kindness, the applicant shall ever pray.\n\nPlace: [DISTRICT]\nDate: [DATE]\n\n[ADVOCATE NAME]\nCounsel for the Applicant\n\nVERIFICATION\n\nI, [APPLICANT NAME], the applicant above-named, do hereby verify that the contents of paragraphs 1 to 4 of this application are true to my personal knowledge and belief, and nothing material has been concealed.\n\nVerified at [PLACE] on [DATE].\n\n[APPLICANT NAME]\nApplicant",
+      "templateHi": "विशेष न्यायाधीश (यूएपीए / एनआईए अधिनियम) के न्यायालय में, [जिले का नाम]\n\nआवेदन संख्या [____] सन् [वर्ष]\nभारतीय नागरिक सुरक्षा संहिता, 2023 की धारा 250 व विधिविरुद्ध क्रियाकलाप (निवारण) अधिनियम, 1967 के अंतर्गत\n(दण्ड प्रक्रिया संहिता, 1973 की धारा 227)\n\nमामले में:\n[आवेदक का नाम], पुत्र/पुत्री [पिता का नाम],\nनिवासी [पूरा पता] ... आवेदक / अभियुक्त\n\nबनाम\n\nराज्य / राष्ट्रीय जाँच एजेंसी,\nद्वारा [एनआईए / थानाध्यक्ष], थाना [नाम] ... विपक्षी\n\nसत्र मुकदमा / विशेष मामला संख्या [____] सन् [वर्ष]\nअपराध: यूएपीए, 1967 की धारा [____]\n\nआवेदक/अभियुक्त के उन्मोचन हेतु आवेदन\n\nमाननीय न्यायालय की सेवा में:\n\n1. यह कि आवेदक उपरोक्त मामले में मुकदमे का सामना कर रहा है और मामला आरोप पर विचार के चरण में है। आवेदक उन्मोचन चाहता है, क्योंकि अभियोजन द्वारा प्रस्तुत सामग्री से उसके विरुद्ध यूएपीए के अंतर्गत कोई प्रथम दृष्टया मामला नहीं बनता है।\n\n2. यह कि अभियोजन का मामला संक्षेप में इस प्रकार है [सार लिखें]। आवेदक का निवेदन है कि अभियोजन की सामग्री को उसके प्रत्यक्ष मूल्य पर लेने पर भी, उससे आवेदक के विरुद्ध यूएपीए के अंतर्गत कोई अपराध नहीं बनता है, क्योंकि [जो आधार लागू हों वे लिखें: (क) गैरकानूनी गतिविधि के आरोपियों के साथ मात्र संबंध या साथ में उपस्थिति, बिना किसी आतंकवादी कृत्य को आगे बढ़ाने, समर्थन देने या उसमें भाग लेने के कार्य के, अपराध नहीं बनती है; (ख) आवेदक को किसी आतंकवादी संगठन से जोड़ने वाले हथियार, धन, साहित्य या संचार की कोई बरामदगी नहीं हुई है; (ग) कथित सामग्री अस्पष्ट है, सुनी-सुनाई बात है, या सह-अभियुक्तों के प्रकटीकरण कथनों पर आधारित है, जो सारवान साक्ष्य नहीं हैं; (घ) यूएपीए की धारा 45 के अंतर्गत अभियोजन की मंजूरी [स्थिति लिखें: जैसे, अनुपस्थित / दोषपूर्ण / बिना विवेक लगाए दी गई — केवल यदि लागू हो]; (ङ) कोई प्रथम दृष्टया सामग्री अधिनियम की धारा 15 में परिभाषित किसी आतंकवादी कृत्य में आवेदक की मंशा, जानकारी या भागीदारी नहीं दर्शाती है]।\n\n3. यह कि आवेदक सादर निवेदन करता है कि यूएपीए की धारा 43D(5) का कठोर जमानत मानदण्ड, जो जमानत के चरण में लागू होता है, उन्मोचन के चरण में परीक्षण को कम नहीं करता है। इस चरण में प्रश्न केवल यह है कि क्या सामग्री से प्रथम दृष्टया मामला बनता है; यदि नहीं बनता है, तो आवेदक उन्मोचन का हकदार है, और जमानत प्रावधान की कठोरता का उपयोग अपर्याप्त सामग्री पर आरोप तय करने के लिए नहीं किया जा सकता है।\n\n4. यह कि आवेदक का कोई आपराधिक इतिहास नहीं है [अथवा: आवेदक का रिकॉर्ड इस प्रकार है: ____], और ऐसी सामग्री पर आवेदक को लंबे मुकदमे में डालने से, जो दोषसिद्धि को कायम नहीं रख सकती, गंभीर क्षति होगी।\n\nप्रार्थना\n\nअतः अत्यंत सादर प्रार्थना है कि यह माननीय न्यायालय सत्र मुकदमा / विशेष मामला संख्या [____] सन् [वर्ष] में आवेदक को उन्मोचित करने और ऐसा अन्य आदेश देने की कृपा करे, जैसा कि यह माननीय न्यायालय उचित समझे।\n\nऔर इस दया के लिए आवेदक सदैव प्रार्थी रहेगा।\n\nस्थान: [जिला]\nदिनांक: [तिथि]\n\n[अधिवक्ता का नाम]\nआवेदक के अधिवक्ता\n\nसत्यापन\n\nमैं, [आवेदक का नाम], उपरोक्त आवेदक, सत्यापित करता हूँ कि इस आवेदन के पैरा 1 से 4 की बातें मेरी व्यक्तिगत जानकारी और विश्वास के अनुसार सत्य हैं, और कोई महत्वपूर्ण बात छिपाई नहीं गई है।\n\n[स्थान] में [तिथि] को सत्यापित।\n\n[आवेदक का नाम]\nआवेदक",
+      "filedIn": {
+        "en": "Special Court (UAPA / NIA Act)",
+        "hi": "विशेष न्यायालय (यूएपीए / एनआईए अधिनियम)"
+      },
+      "sections": {
+        "en": "Sec. 250 BNSS (Sec. 227 CrPC) — discharge; Sec. 45 UAPA — sanction for prosecution; Sec. 43D(5) UAPA — bail standard (context only at discharge stage); Sec. 15 UAPA — definition of terrorist act; Sec. 13, 16, 17, 18 UAPA as applicable",
+        "hi": "धारा 250 BNSS (धारा 227 CrPC) — उन्मोचन; धारा 45 यूएपीए — अभियोजन की मंजूरी; धारा 43D(5) यूएपीए — जमानत मानदण्ड (उन्मोचन चरण में केवल संदर्भ हेतु); धारा 15 यूएपीए — आतंकवादी कृत्य की परिभाषा; धारा 13, 16, 17, 18 यूएपीए जो लागू हों"
+      },
+      "jurisdiction": {
+        "en": "Special Court (UAPA / NIA Act) trying the case.",
+        "hi": "मामले का विचारण करने वाला विशेष न्यायालय (यूएपीए / एनआईए अधिनियम)।"
+      },
+      "requirements": {
+        "en": [
+          "Copy of chargesheet",
+          "Sanction order under Section 45 UAPA",
+          "Statements of witnesses relied upon",
+          "Seizure documents and electronic evidence relied upon"
+        ],
+        "hi": [
+          "आरोपपत्र की प्रति",
+          "यूएपीए की धारा 45 के अंतर्गत मंजूरी आदेश",
+          "जिन गवाहों के कथनों पर निर्भरता है, उनके कथन",
+          "जब्ती के दस्तावेज और जिन इलेक्ट्रॉनिक साक्ष्यों पर निर्भरता है, वे"
+        ]
+      }
+    },
+    {
+      "id": "discharge-pmla",
+      "category": {
+        "en": "Criminal",
+        "hi": "आपराधिक"
+      },
+      "title": {
+        "en": "Application for Discharge under PMLA (Sec. 250 BNSS / 227 CrPC read with PMLA — No Prima Facie Case)",
+        "hi": "पीएमएलए के अंतर्गत उन्मोचन आवेदन (धारा 250 BNSS / 227 CrPC व पीएमएलए — प्रथम दृष्टया मामला नहीं)"
+      },
+      "use": {
+        "en": "File this at the charge stage when an accused in a money-laundering case seeks discharge because no proceeds of crime or link with a scheduled offence is shown. Also called PMLA discharge application, money-laundering discharge.",
+        "hi": "जब धन-शोधन मामले में अभियुक्त आरोप-विरचना के चरण में उन्मोचन चाहता हो, क्योंकि अपराध से प्राप्त संपत्ति या अनुसूचित अपराध से कोई संबंध नहीं दर्शाया गया है, तब इसे दाखिल करें। इसे पीएमएलए उन्मोचन आवेदन, धन-शोधन उन्मोचन भी कहते हैं।"
+      },
+      "template": "IN THE COURT OF THE SPECIAL JUDGE (PREVENTION OF MONEY-LAUNDERING ACT, 2002), [DISTRICT NAME]\n\nApplication No. [____] of [YEAR]\nUnder Section 250 of the Bharatiya Nagarik Suraksha Sanhita, 2023 read with the Prevention of Money-Laundering Act, 2002\n(Section 227 of the Code of Criminal Procedure, 1973)\n\nIN THE MATTER OF:\n[APPLICANT NAME], S/o / D/o [FATHER'S NAME],\nR/o [FULL ADDRESS] ... Applicant / Accused\n\nVERSUS\n\nDirectorate of Enforcement,\nThrough Assistant Director, [ZONE / SUB-ZONE] ... Opposite Party\n\nSpecial Case (PMLA) No. [____] of [YEAR]\nOffence: Section 3 of the PMLA, 2002\n\nAPPLICATION FOR DISCHARGE OF THE APPLICANT/ACCUSED\n\nMay it please the Court:\n\n1. That the applicant is facing trial in the above-noted case and the matter is at the stage of consideration of charge. The applicant seeks discharge on the ground that the material placed on record by the prosecution does not disclose a prima facie case of money-laundering against him.\n\n2. That the offence of money-laundering under Section 3 of the PMLA requires, first, a scheduled offence, and second, proceeds of crime derived from that scheduled offence, with which the accused is connected through concealment, possession, acquisition, use, or projection as untainted property. The prosecution case, in brief, is [SUMMARISE]. The applicant submits that even if the prosecution material is taken at its face value, it does not make out the offence, because [STATE GROUNDS — CHOOSE THOSE THAT APPLY: (a) the alleged scheduled offence itself is not made out, or has been quashed, compounded, or has ended in acquittal, so there can be no proceeds of crime; (b) the property attributed to the applicant is not shown to be derived from criminal activity relating to a scheduled offence; (c) the applicant's transactions are explained by lawful income and tax-paid sources, and no material shows knowledge or intention to launder; (d) the applicant is neither shown to have concealed, possessed, acquired, used, nor projected any property as untainted; (e) the complaint rests on assumptions and statements of co-accused without independent corroboration].\n\n3. That the applicant respectfully submits that the twin conditions of Section 45 of the PMLA, which govern bail, do not lower the test at the discharge stage. At this stage the question is only whether the material discloses a prima facie case; if it does not, the applicant is entitled to discharge.\n\n4. That the applicant has no criminal antecedents [OR: the applicant's record is as follows: ____], and subjecting the applicant to a long trial on material that cannot sustain a conviction would cause grave prejudice.\n\nPRAYER\n\nIt is, therefore, most respectfully prayed that this Hon'ble Court may be pleased to discharge the applicant in Special Case (PMLA) No. [____] of [YEAR], and to pass such other order as this Hon'ble Court deems fit and proper.\n\nAnd for this act of kindness, the applicant shall ever pray.\n\nPlace: [DISTRICT]\nDate: [DATE]\n\n[ADVOCATE NAME]\nCounsel for the Applicant\n\nVERIFICATION\n\nI, [APPLICANT NAME], the applicant above-named, do hereby verify that the contents of paragraphs 1 to 4 of this application are true to my personal knowledge and belief, and nothing material has been concealed.\n\nVerified at [PLACE] on [DATE].\n\n[APPLICANT NAME]\nApplicant",
+      "templateHi": "विशेष न्यायाधीश (धन-शोधन निवारण अधिनियम, 2002) के न्यायालय में, [जिले का नाम]\n\nआवेदन संख्या [____] सन् [वर्ष]\nभारतीय नागरिक सुरक्षा संहिता, 2023 की धारा 250 व धन-शोधन निवारण अधिनियम, 2002 के अंतर्गत\n(दण्ड प्रक्रिया संहिता, 1973 की धारा 227)\n\nमामले में:\n[आवेदक का नाम], पुत्र/पुत्री [पिता का नाम],\nनिवासी [पूरा पता] ... आवेदक / अभियुक्त\n\nबनाम\n\nप्रवर्तन निदेशालय,\nद्वारा सहायक निदेशक, [क्षेत्र / उप-क्षेत्र] ... विपक्षी\n\nविशेष मामला (पीएमएलए) संख्या [____] सन् [वर्ष]\nअपराध: पीएमएलए, 2002 की धारा 3\n\nआवेदक/अभियुक्त के उन्मोचन हेतु आवेदन\n\nमाननीय न्यायालय की सेवा में:\n\n1. यह कि आवेदक उपरोक्त मामले में मुकदमे का सामना कर रहा है और मामला आरोप पर विचार के चरण में है। आवेदक उन्मोचन चाहता है, क्योंकि अभियोजन द्वारा प्रस्तुत सामग्री से उसके विरुद्ध धन-शोधन का कोई प्रथम दृष्टया मामला नहीं बनता है।\n\n2. यह कि पीएमएलए की धारा 3 के अंतर्गत धन-शोधन के अपराध के लिए, पहले, एक अनुसूचित अपराध, और दूसरे, उस अनुसूचित अपराध से प्राप्त अपराध की संपत्ति आवश्यक है, जिससे अभियुक्त छिपाने, कब्जे, अर्जन, उपयोग, या अदूषित संपत्ति के रूप में प्रस्तुत करने के माध्यम से जुड़ा हो। अभियोजन का मामला संक्षेप में इस प्रकार है [सार लिखें]। आवेदक का निवेदन है कि अभियोजन की सामग्री को उसके प्रत्यक्ष मूल्य पर लेने पर भी, उससे अपराध नहीं बनता है, क्योंकि [जो आधार लागू हों वे लिखें: (क) कथित अनुसूचित अपराध ही नहीं बनता है, या उसे रद्द कर दिया गया है, समझौता हो गया है, या उसमें बरी कर दिया गया है, इसलिए अपराध की कोई संपत्ति हो ही नहीं सकती; (ख) आवेदक को आरोपित संपत्ति अनुसूचित अपराध से संबंधित आपराधिक गतिविधि से प्राप्त होना नहीं दर्शाया गया है; (ग) आवेदक के लेन-देन वैध आय और कर-युक्त स्रोतों से स्पष्ट होते हैं, और शोधन की जानकारी या मंशा दर्शाने वाली कोई सामग्री नहीं है; (घ) आवेदक को किसी संपत्ति को छिपाने, कब्जा करने, अर्जित करने, उपयोग करने, या अदूषित के रूप में प्रस्तुत करने वाला नहीं दर्शाया गया है; (ङ) परिवाद अनुमानों और सह-अभियुक्तों के कथनों पर टिका है, बिना स्वतंत्र पुष्टि के]।\n\n3. यह कि आवेदक सादर निवेदन करता है कि पीएमएलए की धारा 45 की दोहरी शर्तें, जो जमानत को नियंत्रित करती हैं, उन्मोचन के चरण में परीक्षण को कम नहीं करती हैं। इस चरण में प्रश्न केवल यह है कि क्या सामग्री से प्रथम दृष्टया मामला बनता है; यदि नहीं बनता है, तो आवेदक उन्मोचन का हकदार है।\n\n4. यह कि आवेदक का कोई आपराधिक इतिहास नहीं है [अथवा: आवेदक का रिकॉर्ड इस प्रकार है: ____], और ऐसी सामग्री पर आवेदक को लंबे मुकदमे में डालने से, जो दोषसिद्धि को कायम नहीं रख सकती, गंभीर क्षति होगी।\n\nप्रार्थना\n\nअतः अत्यंत सादर प्रार्थना है कि यह माननीय न्यायालय विशेष मामला (पीएमएलए) संख्या [____] सन् [वर्ष] में आवेदक को उन्मोचित करने और ऐसा अन्य आदेश देने की कृपा करे, जैसा कि यह माननीय न्यायालय उचित समझे।\n\nऔर इस दया के लिए आवेदक सदैव प्रार्थी रहेगा।\n\nस्थान: [जिला]\nदिनांक: [तिथि]\n\n[अधिवक्ता का नाम]\nआवेदक के अधिवक्ता\n\nसत्यापन\n\nमैं, [आवेदक का नाम], उपरोक्त आवेदक, सत्यापित करता हूँ कि इस आवेदन के पैरा 1 से 4 की बातें मेरी व्यक्तिगत जानकारी और विश्वास के अनुसार सत्य हैं, और कोई महत्वपूर्ण बात छिपाई नहीं गई है।\n\n[स्थान] में [तिथि] को सत्यापित।\n\n[आवेदक का नाम]\nआवेदक",
+      "filedIn": {
+        "en": "Special Court (PMLA)",
+        "hi": "विशेष न्यायालय (पीएमएलए)"
+      },
+      "sections": {
+        "en": "Sec. 250 BNSS (Sec. 227 CrPC) — discharge; Sec. 3 PMLA, 2002 — offence of money-laundering; Sec. 43 PMLA — Special Court; Sec. 45 PMLA — twin conditions for bail (context only at discharge stage); Sec. 2(1)(u) PMLA — proceeds of crime",
+        "hi": "धारा 250 BNSS (धारा 227 CrPC) — उन्मोचन; धारा 3 पीएमएलए, 2002 — धन-शोधन का अपराध; धारा 43 पीएमएलए — विशेष न्यायालय; धारा 45 पीएमएलए — जमानत की दोहरी शर्तें (उन्मोचन चरण में केवल संदर्भ हेतु); धारा 2(1)(u) पीएमएलए — अपराध की संपत्ति"
+      },
+      "jurisdiction": {
+        "en": "Special Court (PMLA) trying the case.",
+        "hi": "मामले का विचारण करने वाला विशेष न्यायालय (पीएमएलए)।"
+      },
+      "requirements": {
+        "en": [
+          "Copy of complaint (ECIR) and prosecution complaint",
+          "Details of the predicate / scheduled offence",
+          "Attachment order, if any",
+          "Bank statements and documents relied upon by the prosecution"
+        ],
+        "hi": [
+          "परिवाद (ECIR) और अभियोजन परिवाद की प्रति",
+          "आधारभूत / अनुसूचित अपराध का विवरण",
+          "कुर्की आदेश, यदि कोई हो",
+          "बैंक विवरण और जिन दस्तावेजों पर अभियोजन ने निर्भरता की है, वे"
+        ]
+      }
+    },
+    {
+      "id": "dna-profiling-criminal-case",
+      "category": {
+        "en": "Criminal",
+        "hi": "आपराधिक"
+      },
+      "title": {
+        "en": "Application for DNA Profiling in a Criminal Case (Sec. 52 BNSS / 53A CrPC — Direction for DNA Examination of the Accused)",
+        "hi": "आपराधिक मामले में डीएनए प्रोफाइलिंग हेतु आवेदन (धारा 52 BNSS / 53A CrPC — आरोपी की डीएनए जाँच का निर्देश)"
+      },
+      "use": {
+        "en": "File this when DNA profiling of the accused or of collected samples is needed in a criminal case — for example, to compare the accused's DNA with biological material from the scene or the victim. Also called DNA test application, DNA profiling application, DNA examination application. Distinct from paternity DNA drafts.",
+        "hi": "जब किसी आपराधिक मामले में आरोपी की या एकत्र नमूनों की डीएनए प्रोफाइलिंग आवश्यक हो — जैसे, आरोपी के डीएनए की तुलना घटनास्थल या पीड़िता से प्राप्त जैविक सामग्री से करने के लिए — तब इसे दाखिल करें। इसे डीएनए टेस्ट आवेदन, डीएनए प्रोफाइलिंग आवेदन, डीएनए जाँच आवेदन भी कहते हैं। यह पितृत्व डीएनए प्रारूपों से भिन्न है।"
+      },
+      "template": "IN THE COURT OF THE [JUDICIAL MAGISTRATE / SESSIONS JUDGE / SPECIAL JUDGE], [DISTRICT NAME]\n\nApplication No. [____] of [YEAR]\nUnder Section 52 of the Bharatiya Nagarik Suraksha Sanhita, 2023\n(Section 53A of the Code of Criminal Procedure, 1973)\n\nIN THE MATTER OF:\n[APPLICANT NAME — PROSECUTION / COMPLAINANT / ACCUSED],\n[ADDRESS] ... Applicant\n\nVERSUS\n\n[OPPOSITE PARTY — STATE / ACCUSED],\n[DETAILS] ... Opposite Party\n\nCase Crime No. / Sessions Trial No. [____] of [YEAR]\nOffences: Section(s) [____] of [BNS, 2023 / SPECIAL ACT]\n\nAPPLICATION FOR DIRECTION FOR DNA PROFILING / DNA EXAMINATION OF THE ACCUSED AND COMPARISON WITH THE COLLECTED SAMPLES\n\nMay it please the Court:\n\n1. That the above-noted case is pending [AT THE STAGE OF INVESTIGATION / BEFORE THIS HON'BLE COURT AT TRIAL STAGE]. The case involves biological material, namely [DESCRIBE: e.g., blood, semen, hair, swabs, clothes, or other articles] collected from [THE SCENE OF OCCURRENCE / THE VICTIM / THE ACCUSED].\n\n2. That DNA profiling of the accused and comparison with the collected material is essential for the just decision of the case, because [STATE REASON: e.g., the identity of the offender is in dispute / the prosecution case depends on connecting the accused with the biological material / the accused seeks the test to establish innocence]. The samples are presently [WITH THE INVESTIGATING OFFICER / DEPOSITED WITH THE FORENSIC SCIENCE LABORATORY / IN THE CASE PROPERTY].\n\n3. That Section 52 of the BNSS (Section 53A CrPC) provides for the medical examination of a person accused of rape or an attempt to commit rape, and the description of material taken from the person of the accused for DNA profiling is a mandatory part of the medical report. The applicant submits that the same scientific approach — lawful medical examination and DNA comparison — is necessary in the present case for establishing the truth.\n\n4. That DNA profiling does not amount to testimonial compulsion within Article 20(3) of the Constitution, as settled by the courts, because it involves physical and biological material and not testimony. The examination is to be conducted by a registered medical practitioner, with reasonable force only if necessary, and the report is to be forwarded through the investigating officer to the Court.\n\n5. That where the case is not a sexual offence, the prayer is for a direction during investigation or trial for scientific examination and DNA comparison of the samples already collected, for the just decision of the case, and the applicant undertakes to bear / abide by the procedure prescribed by the Court for sample collection, sealing, and chain of custody.\n\n6. That no prejudice will be caused to the opposite party, as the test is a scientific and objective exercise, and the report will be available to both sides.\n\nPRAYER\n\nIt is, therefore, most respectfully prayed that this Hon'ble Court may be pleased to direct the investigating officer / registered medical practitioner to conduct the DNA profiling / DNA examination of the accused and to compare the same with the collected samples, and to place the report on record, and to pass such other order as this Hon'ble Court deems fit and proper.\n\nAnd for this act of kindness, the applicant shall ever pray.\n\nPlace: [DISTRICT]\nDate: [DATE]\n\n[ADVOCATE NAME]\nCounsel for the Applicant\n\nVERIFICATION\n\nI, [APPLICANT NAME], the applicant above-named, do hereby verify that the contents of paragraphs 1 to 6 of this application are true to my personal knowledge and belief, and nothing material has been concealed.\n\nVerified at [PLACE] on [DATE].\n\n[APPLICANT NAME]\nApplicant",
+      "templateHi": "[न्यायिक मजिस्ट्रेट / सत्र न्यायाधीश / विशेष न्यायाधीश] के न्यायालय में, [जिले का नाम]\n\nआवेदन संख्या [____] सन् [वर्ष]\nभारतीय नागरिक सुरक्षा संहिता, 2023 की धारा 52 के अंतर्गत\n(दण्ड प्रक्रिया संहिता, 1973 की धारा 53A)\n\nमामले में:\n[आवेदक का नाम — अभियोजन / शिकायतकर्ता / अभियुक्त],\n[पता] ... आवेदक\n\nबनाम\n\n[विपक्षी — राज्य / अभियुक्त],\n[विवरण] ... विपक्षी\n\nमुकदमा अपराध संख्या / सत्र मुकदमा संख्या [____] सन् [वर्ष]\nअपराध: [BNS, 2023 / विशेष अधिनियम] की धारा [____]\n\nआरोपी की डीएनए प्रोफाइलिंग / डीएनए जाँच और एकत्र नमूनों से तुलना के निर्देश हेतु आवेदन\n\nमाननीय न्यायालय की सेवा में:\n\n1. यह कि उपरोक्त मामला [जाँच के चरण में / इस माननीय न्यायालय के समक्ष मुकदमे के चरण में] लंबित है। मामले में जैविक सामग्री शामिल है, अर्थात् [वर्णन लिखें: जैसे, रक्त, वीर्य, बाल, स्वाब, कपड़े, या अन्य वस्तुएँ] जो [घटनास्थल / पीड़िता / अभियुक्त] से एकत्र की गई हैं।\n\n2. यह कि आरोपी की डीएनए प्रोफाइलिंग और एकत्र सामग्री से उसकी तुलना मामले के न्यायपूर्ण निर्णय के लिए आवश्यक है, क्योंकि [कारण लिखें: जैसे, अपराधी की पहचान विवादित है / अभियोजन का मामला आरोपी को जैविक सामग्री से जोड़ने पर निर्भर है / अभियुक्त अपनी निर्दोषता सिद्ध करने के लिए यह परीक्षण चाहता है]। नमूने वर्तमान में [जाँच अधिकारी के पास / विधि विज्ञान प्रयोगशाला में जमा / मामला संपत्ति में] हैं।\n\n3. यह कि BNSS की धारा 52 (धारा 53A CrPC) बलात्कार या बलात्कार के प्रयास के आरोपी व्यक्ति की चिकित्सीय परीक्षा का प्रावधान करती है, और आरोपी के शरीर से डीएनए प्रोफाइलिंग हेतु ली गई सामग्री का विवरण चिकित्सीय रिपोर्ट का अनिवार्य भाग है। आवेदक का निवेदन है कि वही वैज्ञानिक दृष्टिकोण — विधिपूर्ण चिकित्सीय परीक्षा और डीएनए तुलना — सत्य स्थापित करने के लिए वर्तमान मामले में भी आवश्यक है।\n\n4. यह कि डीएनए प्रोफाइलिंग संविधान के अनुच्छेद 20(3) के अंतर्गत साक्ष्यात्मक बाध्यता नहीं है, जैसा कि न्यायालयों द्वारा स्थापित है, क्योंकि इसमें शारीरिक और जैविक सामग्री शामिल है, न कि गवाही। परीक्षा एक पंजीकृत चिकित्सक द्वारा की जानी है, केवल आवश्यकता होने पर युक्तियुक्त बल के साथ, और रिपोर्ट जाँच अधिकारी के माध्यम से न्यायालय को भेजी जानी है।\n\n5. यह कि जहाँ मामला यौन अपराध का नहीं है, वहाँ प्रार्थना जाँच या मुकदमे के दौरान पहले से एकत्र नमूनों की वैज्ञानिक परीक्षा और डीएनए तुलना के निर्देश के लिए है, मामले के न्यायपूर्ण निर्णय हेतु, और आवेदक नमूना संग्रह, सीलबंद करने और अभिरक्षा श्रृंखला के लिए न्यायालय द्वारा निर्धारित प्रक्रिया का पालन करने का वचन देता है।\n\n6. यह कि विपक्षी को कोई क्षति नहीं होगी, क्योंकि यह परीक्षण एक वैज्ञानिक और वस्तुनिष्ठ प्रक्रिया है, और रिपोर्ट दोनों पक्षों को उपलब्ध रहेगी।\n\nप्रार्थना\n\nअतः अत्यंत सादर प्रार्थना है कि यह माननीय न्यायालय जाँच अधिकारी / पंजीकृत चिकित्सक को आरोपी की डीएनए प्रोफाइलिंग / डीएनए जाँच करने और उसकी एकत्र नमूनों से तुलना करने का निर्देश दे, और रिपोर्ट को रिकॉर्ड पर लेने, तथा ऐसा अन्य आदेश देने की कृपा करे, जैसा कि यह माननीय न्यायालय उचित समझे।\n\nऔर इस दया के लिए आवेदक सदैव प्रार्थी रहेगा।\n\nस्थान: [जिला]\nदिनांक: [तिथि]\n\n[अधिवक्ता का नाम]\nआवेदक के अधिवक्ता\n\nसत्यापन\n\nमैं, [आवेदक का नाम], उपरोक्त आवेदक, सत्यापित करता हूँ कि इस आवेदन के पैरा 1 से 6 की बातें मेरी व्यक्तिगत जानकारी और विश्वास के अनुसार सत्य हैं, और कोई महत्वपूर्ण बात छिपाई नहीं गई है।\n\n[स्थान] में [तिथि] को सत्यापित।\n\n[आवेदक का नाम]\nआवेदक",
+      "filedIn": {
+        "en": "Judicial Magistrate / Court of Sessions / Special Court where the case is pending or investigation is supervised",
+        "hi": "न्यायिक मजिस्ट्रेट / सत्र न्यायालय / विशेष न्यायालय — जहाँ मामला लंबित हो या जाँच की निगरानी हो रही हो"
+      },
+      "sections": {
+        "en": "Sec. 52 BNSS (Sec. 53A CrPC) — examination of person accused of rape by medical practitioner, including description of material taken for DNA profiling; Sec. 184 BNSS (Sec. 164A CrPC) — medical examination of the victim of rape, including material taken for DNA profiling; Sec. 193(9) BNSS (Sec. 173(8) CrPC) — further investigation",
+        "hi": "धारा 52 BNSS (धारा 53A CrPC) — बलात्कार के आरोपी व्यक्ति की चिकित्सक द्वारा परीक्षा, जिसमें डीएनए प्रोफाइलिंग हेतु ली गई सामग्री का विवरण भी है; धारा 184 BNSS (धारा 164A CrPC) — बलात्कार की पीड़िता की चिकित्सीय परीक्षा, जिसमें डीएनए प्रोफाइलिंग हेतु ली गई सामग्री का विवरण भी है; धारा 193(9) BNSS (धारा 173(8) CrPC) — अतिरिक्त जाँच"
+      },
+      "jurisdiction": {
+        "en": "Court where the case is pending, or the Magistrate supervising the investigation in the district where the offence occurred.",
+        "hi": "वह न्यायालय जहाँ मामला लंबित हो, या वह मजिस्ट्रेट जो उस जिले में जाँच की निगरानी कर रहा हो जहाँ अपराध हुआ हो।"
+      },
+      "requirements": {
+        "en": [
+          "Copy of FIR / case papers",
+          "Medical examination papers, if any",
+          "Sample collection / seizure memo",
+          "FSL reference or case property details",
+          "Details of the biological material to be compared"
+        ],
+        "hi": [
+          "FIR / मामला कागजातों की प्रति",
+          "चिकित्सीय परीक्षा के कागजात, यदि कोई हों",
+          "नमूना संग्रह / जब्ती मेमो",
+          "एफएसएल संदर्भ या मामला संपत्ति का विवरण",
+          "तुलना की जाने वाली जैविक सामग्री का विवरण"
+        ]
+      }
     }
   ]
 }
