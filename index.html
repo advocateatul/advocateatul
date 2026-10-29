@@ -1032,7 +1032,7 @@
     .lawassist-fab:hover { transform: translateY(-2px) translateZ(0); }
     .lawassist-fab-label { display: none; } /* Round icon-only FAB — chosen by Atul 2026-10-20 */
     .lawassist-fab span[aria-hidden="true"] { font-size: 1.3rem; }
-    .lawassist-panel { position: fixed; right: 18px; bottom: 84px; z-index: 501; width: min(420px, calc(100vw - 36px)); height: min(600px, calc(100vh - 120px)); display: flex; flex-direction: column; background: #f9fcff; border: 2px solid #1e1e1e; border-radius: 18px; box-shadow: 0 24px 64px rgba(0,0,0,.3); overflow: hidden; }
+    .lawassist-panel { position: fixed; right: 18px; bottom: 84px; z-index: 960; width: min(420px, calc(100vw - 36px)); height: min(600px, calc(100vh - 120px)); display: flex; flex-direction: column; background: #f9fcff; border: 2px solid #1e1e1e; border-radius: 18px; box-shadow: 0 24px 64px rgba(0,0,0,.3); overflow: hidden; }
     .lawassist-panel[hidden] { display: none; }
     .la-header { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; background: #1e1e1e; color: #F5F5F5; }
     .la-brand { display: flex; align-items: center; gap: 10px; }
@@ -1535,6 +1535,12 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
 .auth-menu .am-out{width:100%;background:#1e1e1e;color:#F5F5F5;border:none;border-radius:8px;padding:9px;font-size:.85rem;font-weight:600;cursor:pointer}
 .auth-menu .am-out:hover{background:#222}
 .auth-modal{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:9999;display:flex;align-items:center;justify-content:center;padding:20px}
+.request-modal{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:9999;display:flex;align-items:center;justify-content:center;padding:20px;overflow-y:auto}
+.request-modal[hidden]{display:none}
+.request-box{background:#f9fcff;color:#1e1e1e;border-radius:16px;max-width:420px;width:100%;padding:24px;box-shadow:0 20px 60px rgba(0,0,0,.35);max-height:92vh;overflow:auto}
+.request-box label{display:block;margin:10px 0}
+.request-box input,.request-box textarea{width:100%;box-sizing:border-box;margin-top:4px;padding:9px 12px;border:2px solid #1e1e1e;border-radius:10px;font:inherit}
+.request-submit{background:#1e1e1e;color:#F5F5F5;border:none;border-radius:10px;padding:11px 16px;font-weight:700;cursor:pointer;width:100%;margin-top:12px}
 .auth-modal[hidden]{display:none}
 .auth-card{background:#f9fcff;color:#1e1e1e;border-radius:16px;max-width:380px;width:100%;padding:28px 26px 24px;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.35);max-height:92vh;overflow:auto}
 .auth-card h3{margin:0 0 6px;font-size:1.25rem;color:#1e1e1e}
