@@ -6109,7 +6109,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
       try { var _laHistSaved = JSON.parse(localStorage.getItem("laHist") || "[]"); if (Array.isArray(_laHistSaved)) { _laHistSaved.forEach(function (h) { if (h && (h.role === "user" || h.role === "model") && h.text) LA_HIST.push({ role: h.role, text: String(h.text).slice(0, 900) }); }); while (LA_HIST.length > 8) LA_HIST.shift(); } } catch (e3) {}
       function geminiSystem(lang) {
         return lang === "hi"
-          ? "Aap LawAssist hain — Advocate Atul Kumar (criminal lawyer, Bulandshahr District Court, UP) ki website ka AI sahayak. KEVAl Bharatiya kanoon par jawab dein, Hindi me. Sankshipt (120 shabdon ke andar), sateek, vyavharik. Sahi dhaaraon (BNS/BNSS/BSA/NI Act/CPC) ka naam lein. Kabhi farzi case citation na banayein. Ant me ek line jodein: 'Vistrit salah ke liye 7456022448 par WhatsApp karein.'"
+          ? "आप LawAssist हैं — Advocate Atul Kumar (आपराधिक वकील, बुलंदशहर जिला न्यायालय, उत्तर प्रदेश) की वेबसाइट के AI सहायक। केवल भारतीय कानून पर उत्तर दें, हिंदी में। संक्षिप्त (120 शब्दों के अंदर), सटीक, व्यावहारिक। सही धाराओं (BNS/BNSS/BSA/NI Act/CPC) का नाम लें। कभी फ़र्ज़ी case citation न बनाएँ। केवल देवनागरी लिपि में लिखें — रोमन लिपि का बिल्कुल प्रयोग न करें। अंत में एक पंक्ति जोड़ें: 'विस्तृत सलाह के लिए 7456022448 पर WhatsApp करें।'"
           : "You are LawAssist — the AI assistant on Advocate Atul Kumar's website (criminal lawyer, Bulandshahr District Court, UP). Answer ONLY about Indian law, in English. Concise (under 120 words), accurate, practical. Name correct sections (BNS/BNSS/BSA/NI Act/CPC). Never invent case citations. End with one line: 'For detailed advice, WhatsApp 7456022448.'";
       }
       function laDetailSystem(lang) {
@@ -6687,7 +6687,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         if (window.LA_AUTH && window.LA_AUTH.ready && !window.LA_AUTH.user) { window.LA_AUTH.requireLogin(function () { aiDraftGenerate(); }); return; }
         var inp = document.getElementById("laAiDraftInput"), desc = inp.value.trim();
         var out = document.getElementById("laAiDraftOut"), acts = document.getElementById("laAiDraftActions");
-        if (!desc) return;
+        if (!desc) { out.hidden = false; out.textContent = L("Please enter text first.", "पहले कुछ लिखें।"); return; }
         var lang = laLang();
         out.hidden = false; acts.hidden = true;
         out.innerHTML = "<span class='la-dots'><span></span><span></span><span></span></span>";
@@ -7034,7 +7034,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         if (window.LA_AUTH && window.LA_AUTH.ready && !window.LA_AUTH.user) { window.LA_AUTH.requireLogin(function () { docProcess(mode); }); return; }
         var inp = document.getElementById("laDocsInput"), txt = inp.value.trim();
         var out = document.getElementById("laDocsOut"), acts = document.getElementById("laDocsActions");
-        if (!txt) return;
+        if (!txt) { out.hidden = false; out.textContent = L("Please enter text first.", "पहले कुछ लिखें।"); return; }
         var lang = laLang();
         out.hidden = false; acts.hidden = true;
         out.innerHTML = "<span class='la-dots'><span></span><span></span><span></span></span>";
@@ -7069,7 +7069,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         if (window.LA_AUTH && window.LA_AUTH.ready && !window.LA_AUTH.user) { window.LA_AUTH.requireLogin(function () { meetGenerate(); }); return; }
         var inp = document.getElementById("laMeetInput"), txt = inp.value.trim();
         var out = document.getElementById("laMeetOut"), acts = document.getElementById("laMeetActions");
-        if (!txt) return;
+        if (!txt) { out.hidden = false; out.textContent = L("Please enter text first.", "पहले कुछ लिखें।"); return; }
         var lang = laLang();
         out.hidden = false; acts.hidden = true;
         out.innerHTML = "<span class='la-dots'><span></span><span></span><span></span></span>";
@@ -7623,7 +7623,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           if (!title) return;
           var cases = loadCases();
           cases.push({
-            id: "c" + Date.now(),
+            id: "c" + Date.now() + Math.random().toString(36).slice(2, 7),
             title: title,
             court: document.getElementById("laCaseCourt").value.trim(),
             nextDate: document.getElementById("laCaseDate").value,
@@ -7751,7 +7751,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
     ready: false,
     auth: null,
     db: null,
-    _pending: null,
+    _pending: [],
     needsLogin: function () { return this.ready && !this.user; },
     openModal: function (msg) {
       try {
@@ -7765,7 +7765,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
       try { document.getElementById("authModal").hidden = true; } catch (e) {}
     },
     requireLogin: function (cb) {
-      this._pending = (typeof cb === "function") ? cb : null;
+      if (typeof cb === "function") this._pending.push(cb);
       this.openModal(t("Please login to use this AI feature.", "Ye AI feature use karne ke liye login karein."));
     },
     signIn: function (kind) {
@@ -7968,11 +7968,9 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         if (u) {
           saveClientRecord(u);
           LA_AUTH.closeModal();
-          if (LA_AUTH._pending) {
-            var cb = LA_AUTH._pending;
-            LA_AUTH._pending = null;
-            try { cb(); } catch (e) {}
-          }
+          var cbs = LA_AUTH._pending || [];
+          LA_AUTH._pending = [];
+          cbs.forEach(function (cb) { try { cb(); } catch (e) {} });
         }
       });
       setTimeout(function () { if (!LA_AUTH.ready) { LA_AUTH.ready = true; renderAuthBtn(); } }, 6000);
