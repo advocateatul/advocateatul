@@ -1065,6 +1065,7 @@
     .la-form { display: flex; gap: 8px; padding: 10px 14px; background: #f9fcff; border-top: 1px solid rgba(0,0,0,.1); }
     .la-form input { flex: 1; height: 42px; border: 2px solid #1e1e1e; border-radius: 999px; padding: 0 16px; font-size: .85rem; outline: none; min-width: 0; }
     .la-form button { width: 42px; height: 42px; flex: 0 0 42px; border: 2px solid #1e1e1e; border-radius: 50%; background: #1e1e1e; color: #F5F5F5; font-size: 1rem; cursor: pointer; }
+    #laDetailBtn.la-detail-on { background: #f9fcff; color: #1e1e1e; }
     .la-ctx { display: flex; align-items: center; gap: 8px; padding: 8px 14px; background: #1e1e1e; color: #F5F5F5; font-size: .78rem; }
     .la-ctx[hidden] { display: none; }
     .la-ctx button { margin-left: auto; flex: 0 0 auto; background: #f9fcff; color: #1e1e1e; border: 0; border-radius: 999px; padding: 4px 12px; font-size: .75rem; cursor: pointer; }
@@ -5752,6 +5753,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           <button type="button" id="laCamBtn" aria-label="Camera scan">📷</button>
           <button type="button" id="laAttachBtn" aria-label="Attach document">📎</button>
           <button type="button" id="laMicBtn" aria-label="Voice input">🎤</button>
+          <button type="button" id="laDetailBtn" aria-label="Detailed research" title="Detailed research / विस्तृत शोध">🔍</button>
           <input type="file" id="laCamInput" accept="image/*" capture="environment" hidden>
           <input type="file" id="laFileInput" accept="image/*,.pdf,.txt,.doc,.docx" hidden>
           <input type="text" id="laInput" autocomplete="off" />
@@ -6057,6 +6059,11 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           ? "Aap LawAssist hain — Advocate Atul Kumar (criminal lawyer, Bulandshahr District Court, UP) ki website ka AI sahayak. KEVAl Bharatiya kanoon par jawab dein, Hindi me. Sankshipt (120 shabdon ke andar), sateek, vyavharik. Sahi dhaaraon (BNS/BNSS/BSA/NI Act/CPC) ka naam lein. Kabhi farzi case citation na banayein. Ant me ek line jodein: 'Vistrit salah ke liye 7456022448 par WhatsApp karein.'"
           : "You are LawAssist — the AI assistant on Advocate Atul Kumar's website (criminal lawyer, Bulandshahr District Court, UP). Answer ONLY about Indian law, in English. Concise (under 120 words), accurate, practical. Name correct sections (BNS/BNSS/BSA/NI Act/CPC). Never invent case citations. End with one line: 'For detailed advice, WhatsApp 7456022448.'";
       }
+      function laDetailSystem(lang) {
+        return lang === "hi"
+          ? "आप LawAssist हैं — Advocate Atul Kumar की वेबसाइट के AI सहायक (आपराधिक वकील, बुलंदशहर जिला न्यायालय, उत्तर प्रदेश)। केवल भारतीय कानून पर उत्तर दें, हिंदी में। एक विस्तृत शोध उत्तर दें (संक्षिप्त उत्तर नहीं), बोल्ड शीर्षकों के साथ ठीक इसी संरचना में: **संक्षिप्त उत्तर:** एक अनुच्छेद में निष्कर्ष। **लागू कानून:** सही धाराएँ (BNS/BNSS/BSA/NI Act/CPC) और प्रत्येक का प्रावधान। **मुख्य निर्णय:** केवल वास्तविक, प्रसिद्ध निर्णय; कभी फ़र्ज़ी citation न बनाएँ — अनिश्चित हो तो वही लिखें। **प्रक्रिया / अगले कदम:** क्रमवार व्यावहारिक कदम। **सावधानी:** सीमाएँ और किस बात पर वकील की समीक्षा ज़रूरी है। सटीक और व्यावहारिक रहें। केवल देवनागरी लिपि में लिखें — रोमन लिपि का बिल्कुल प्रयोग न करें। अंत में एक पंक्ति जोड़ें: 'विस्तृत सलाह के लिए 7456022448 पर WhatsApp करें।'"
+          : "You are LawAssist — the AI assistant on Advocate Atul Kumar's website (criminal lawyer, Bulandshahr District Court, UP). Answer ONLY about Indian law, in English. Give a DETAILED research answer (not a short reply), structured with bold section labels exactly like this: **Short answer:** one-paragraph conclusion. **Applicable law:** the correct sections (BNS/BNSS/BSA/NI Act/CPC) and what each provides. **Key cases:** only real, well-known cases; never invent a case citation — if unsure, say so. **Procedure / next steps:** practical steps in order. **Caution:** limits and what needs a lawyer's review. Be accurate and practical. End with one line: 'For detailed advice, WhatsApp 7456022448.'";
+      }
       function laScanSystem(lang) {
         return lang === "hi"
           ? "आप LawAssist हैं — Advocate Atul Kumar की वेबसाइट के AI सहायक। नीचे दिए गए कानूनी दस्तावेज़ के पाठ/फ़ोटो का पूरा, संरचित विश्लेषण हिंदी में दें (Document type, Parties, Case number, ज़रूरी dates, Sections, Summary, अगला step)। शब्दों की कोई सीमा नहीं — पूरी जानकारी दें। कभी फ़र्ज़ी citation न बनाएं; जो न मिले उसे 'नहीं मिला' लिखें। मार्कडाउन फॉर्मेटिंग का प्रयोग न करें (कोई **, कोई ### नहीं) — सादा पाठ लिखें। केवल देवनागरी लिपि में लिखें — रोमन लिपि का बिल्कुल प्रयोग न करें।"
@@ -6210,6 +6217,8 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
 
       /* ---------------- Document Scan (camera / OCR / AI vision) ---------------- */
       var LA_SCAN = { text: "", name: "", left: 0 };
+      var laDetailed = false;
+      try { laDetailed = localStorage.getItem("laDetailed") === "1"; } catch (e) {}
       var laLimitHit = false;
       function laAiGate(cb) {
         if (!window.LA_AUTH || !window.LA_AUTH.ready) { cb(true); return; }
@@ -6746,8 +6755,8 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         var laDraftNoun = "(draft|format|template|vakalatnama|affidavit|application|notice|complaint|\u0921\u094d\u0930\u093e\u092b\u094d\u091f|\u092a\u094d\u0930\u093e\u0930\u0942\u092a|\u0936\u093f\u0915\u093e\u092f\u0924|\u0928\u094b\u091f\u093f\u0938|\u0905\u0930\u094d\u091c\u0940)";
         var laDraftVerb = "(banao|bana|banaye|banaiye|prepare|create|make|write|want|need|get|likh|likho|likhna|chahiye|taiyar|dikhao|dikhaye|show|dein|\u092c\u0928\u093e\u0913|\u091a\u093e\u0939\u093f\u090f|\u0924\u0948\u092f\u093e\u0930|\u0932\u093f\u0916\u094b|\u092c\u0928\u093e\u0928\u093e)";
         var isDraftQ = sysOverride ? false : new RegExp(laDraftNoun + "[^.!?]{0,40}" + laDraftVerb + "|" + laDraftVerb + "[^.!?]{0,40}" + laDraftNoun, "i").test(q);
-        var draftSys = sysOverride || (isDraftQ ? aiDraftSystem(lang) : null);
-        var draftTok = sysOverride ? 1000 : (isDraftQ ? 1600 : undefined);
+        var draftSys = sysOverride || (isDraftQ ? aiDraftSystem(lang) : (laDetailed ? laDetailSystem(lang) : null));
+        var draftTok = sysOverride ? 1000 : (isDraftQ ? 1600 : (laDetailed ? 1500 : undefined));
         var qAI = q;
         if (LA_SCAN.text) {
           qAI = "The user has scanned a legal document named \"" + LA_SCAN.name + "\". Its text is below. Answer the user's question from this document first; if the answer is not in it, say so briefly, then give general legal guidance.\n--- DOCUMENT ---\n" + LA_SCAN.text.slice(0, 6000) + "\n--- END ---\nQuestion: " + q;
@@ -7279,6 +7288,17 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           var inp = document.getElementById("laInput"), v = inp.value.trim();
           if (v) { if (respond(v)) inp.value = ""; }
         });
+        (function () {
+          var db = document.getElementById("laDetailBtn");
+          if (!db) return;
+          function syncDetail() { db.classList.toggle("la-detail-on", !!laDetailed); db.setAttribute("aria-pressed", laDetailed ? "true" : "false"); }
+          syncDetail();
+          db.addEventListener("click", function () {
+            laDetailed = !laDetailed;
+            try { localStorage.setItem("laDetailed", laDetailed ? "1" : "0"); } catch (e) {}
+            syncDetail();
+          });
+        })();
         var camBtn = document.getElementById("laCamBtn"), camInp = document.getElementById("laCamInput");
         var attBtn = document.getElementById("laAttachBtn"), fileInp = document.getElementById("laFileInput");
         if (camBtn && camInp) { camBtn.addEventListener("click", function () { camInp.click(); }); camInp.addEventListener("change", function () { if (camInp.files[0]) laScanFile(camInp.files[0]); camInp.value = ""; }); }
