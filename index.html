@@ -6671,8 +6671,36 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
       }
 
       var laBusy = false;
+      var laSpeakBtn = null;
+      function laSpeak(text, btn) {
+        try {
+          if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) return false;
+          var synth = window.speechSynthesis;
+          if (laSpeakBtn === btn) {
+            synth.cancel();
+            btn.textContent = "🔊 " + L("Listen", "सुनें");
+            laSpeakBtn = null;
+            return true;
+          }
+          synth.cancel();
+          if (laSpeakBtn) laSpeakBtn.textContent = "🔊 " + L("Listen", "सुनें");
+          laSpeakBtn = null;
+          var clean = (text || "").replace(/\*\*/g, "").replace(/^#{1,6}\s?/gm, "").replace(/\s+/g, " ").trim();
+          if (!clean) return false;
+          var u = new SpeechSynthesisUtterance(clean);
+          u.lang = laLang() === "hi" ? "hi-IN" : "en-IN";
+          var reset = function () { if (btn) btn.textContent = "🔊 " + L("Listen", "सुनें"); if (laSpeakBtn === btn) laSpeakBtn = null; };
+          u.onend = reset;
+          u.onerror = reset;
+          laSpeakBtn = btn;
+          if (btn) btn.textContent = "⏹ " + L("Stop", "रोकें");
+          synth.speak(u);
+          return true;
+        } catch (e) { return false; }
+      }
       function respond(q, sysOverride) {
         if (laBusy) return false;
+        try { if (window.speechSynthesis) window.speechSynthesis.cancel(); if (laSpeakBtn) laSpeakBtn.textContent = "🔊 " + L("Listen", "सुनें"); laSpeakBtn = null; } catch (e) {}
         laBusy = true;
         addMsg(esc(q), "user");
         laChatSave("user", q);
@@ -6711,6 +6739,13 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
               } catch (e) {}
             });
             msgDiv.appendChild(cp);
+            if (window.speechSynthesis) {
+              var sp = document.createElement("button");
+              sp.type = "button"; sp.className = "la-copy";
+              sp.textContent = "🔊 " + L("Listen", "सुनें");
+              sp.addEventListener("click", function () { laSpeak(html, sp); });
+              msgDiv.appendChild(sp);
+            }
             var wa = document.createElement("a");
             wa.className = "la-copy"; wa.target = "_blank"; wa.rel = "noopener";
             wa.href = "https://wa.me/?text=" + encodeURIComponent(html);
@@ -6744,6 +6779,13 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
               } catch (e) {}
             });
             msgDiv.appendChild(cp2);
+            if (window.speechSynthesis) {
+              var sp2 = document.createElement("button");
+              sp2.type = "button"; sp2.className = "la-copy";
+              sp2.textContent = "🔊 " + L("Listen", "सुनें");
+              sp2.addEventListener("click", function () { laSpeak(html, sp2); });
+              msgDiv.appendChild(sp2);
+            }
           }
           try {
             var arr = JSON.parse(localStorage.getItem("laMissed") || "[]");
@@ -7279,7 +7321,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           if (GEMINI_PROXY) { try { fetch(GEMINI_PROXY + "/", { method: "GET", mode: "no-cors" }).catch(function () {}); } catch (e) {} }
           if (panel.hidden) openPanel(); else panel.hidden = true;
         });
-        document.getElementById("laClose").addEventListener("click", function () { panel.hidden = true; });
+        document.getElementById("laClose").addEventListener("click", function () { try { if (window.speechSynthesis) window.speechSynthesis.cancel(); } catch (e) {} panel.hidden = true; });
         document.querySelectorAll(".la-tab").forEach(function (b) {
           b.addEventListener("click", function () { switchTab(b.getAttribute("data-latab")); });
         });
