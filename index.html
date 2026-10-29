@@ -1725,6 +1725,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
             <option value="sc" data-i18n="libCourtSC">Supreme Court</option>
             <option value="allahabad" data-i18n="libCourtAhd">Allahabad High Court</option>
             <option value="otherhc" data-i18n="libCourtOther">Other High Courts</option>
+            <option value="tribunal" data-i18n="libCourtTribunal">Tribunals</option>
           </select>
           <select id="libEraFilter" class="lib-filter-sel" aria-label="Filter by period">
             <option value="all" data-i18n="libEraAll">All Years</option>
@@ -2392,6 +2393,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           libCourtSC: "Supreme Court",
           libCourtAhd: "Allahabad High Court",
           libCourtOther: "Other High Courts",
+          libCourtTribunal: "Tribunals",
           libEraAll: "All Years",
           libEra2020: "2020 \u2013 2026",
           libEra2010: "2010 \u2013 2019",
@@ -2669,6 +2671,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           libCourtSC: "सर्वोच्च न्यायालय",
           libCourtAhd: "इलाहाबाद उच्च न्यायालय",
           libCourtOther: "अन्य उच्च न्यायालय",
+          libCourtTribunal: "अधिकरण",
           libEraAll: "सभी वर्ष",
           libEra2020: "2020 \u2013 2026",
           libEra2010: "2010 \u2013 2019",
@@ -4921,6 +4924,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
       var LIB_PAGE = 30;
       var libQuery = "";
       var libCourtF = "all";
+      var TRIBUNAL_COURTS = ["National Green Tribunal", "National Consumer Disputes Redressal Commission", "National Company Law Appellate Tribunal", "National Company Law Tribunal", "Income Tax Appellate Tribunal", "Customs, Excise and Service Tax Appellate Tribunal"];
       var libEraF = "all";
       var libBound = false;
 
@@ -4979,7 +4983,8 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           var c = item.court ? (item.court.en || "") : "";
           if (libCourtF === "sc" && c !== "Supreme Court of India") return false;
           if (libCourtF === "allahabad" && c !== "Allahabad High Court") return false;
-          if (libCourtF === "otherhc" && (c === "Supreme Court of India" || c === "Allahabad High Court")) return false;
+          if (libCourtF === "otherhc" && (c === "Supreme Court of India" || c === "Allahabad High Court" || TRIBUNAL_COURTS.indexOf(c) !== -1)) return false;
+          if (libCourtF === "tribunal" && TRIBUNAL_COURTS.indexOf(c) === -1) return false;
         }
         if (libEraF !== "all") {
           var y = parseInt(item.year, 10) || 0;
