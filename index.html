@@ -1141,6 +1141,8 @@ html[data-theme="dark"] .la-doc-row{background:rgba(255,255,255,.06)}
     .la-case .la-case-meta { font-size: .74rem; color: var(--muted); margin-top: 3px; }
     .la-case .la-case-notes { font-size: .78rem; margin-top: 6px; color: #333; }
     .la-case .la-case-del { margin-top: 8px; background: transparent; border: 1px solid rgba(0,0,0,.25); border-radius: 999px; padding: 4px 12px; font-size: .72rem; cursor: pointer; color: #b91c1c; border-color: rgba(185,28,28,.4); }
+    .la-case .la-case-chat { margin-top: 8px; margin-right: 8px; background: transparent; border: 1px solid rgba(0,0,0,.25); border-radius: 999px; padding: 4px 12px; font-size: .72rem; cursor: pointer; }
+    html[data-theme="dark"] .la-case .la-case-chat { border-color: rgba(255,255,255,.35); }
     .la-empty { text-align: center; color: var(--muted); font-size: .82rem; padding: 24px 10px; }
     @keyframes laIn { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
     .lawassist-panel:not([hidden]) { animation: laIn .35s cubic-bezier(0.22, 1, 0.36, 1); }
@@ -6399,6 +6401,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
       /* ---------------- Document Scan (camera / OCR / AI vision) ---------------- */
       var LA_SCAN = { text: "", name: "", left: 0 };
       var LA_MULTI = [];
+      var LA_CASE = null;
       var laDetailed = false;
       try { laDetailed = localStorage.getItem("laDetailed") === "1"; } catch (e) {}
       var laLimitHit = false;
@@ -6437,6 +6440,15 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         var bar = document.getElementById("laCtxBar");
         if (!bar) return;
         bar.innerHTML = "";
+        if (LA_CASE) {
+          bar.hidden = false;
+          var cs = document.createElement("span");
+          cs.textContent = "\uD83D\uDCBC " + LA_CASE.title + " — " + L("chat scoped to this case. Questions will use its details.", "is case par chat hai. Sawal isi ke details se jawab diye jayenge.");
+          var cb = document.createElement("button");
+          cb.type = "button"; cb.textContent = "\u2715 " + L("Clear case", "केस हटाएँ");
+          cb.addEventListener("click", function () { LA_CASE = null; laCtxRender(); });
+          bar.appendChild(cs); bar.appendChild(cb);
+        }
         if (LA_SCAN.text) {
           bar.hidden = false;
           bar.innerHTML = "";
@@ -6455,7 +6467,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           b2.type = "button"; b2.textContent = "✕ " + L("Clear tray", "ट्रे साफ़ करें");
           b2.addEventListener("click", function () { LA_MULTI.length = 0; laCtxRender(); renderDocList(); });
           bar.appendChild(s2); bar.appendChild(b2);
-        } else if (!LA_SCAN.text) { bar.hidden = true; }
+        } else if (!LA_SCAN.text && !LA_CASE) { bar.hidden = true; }
       }
       function laSetCtx(text, name) {
         if (LA_SCAN.text && text && LA_SCAN.name !== name) {
@@ -6470,7 +6482,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         try {
           LA_HIST.length = 0;
           try { localStorage.removeItem("laHist"); localStorage.removeItem("laChatMsgs"); } catch (e2) {}
-          LA_SCAN.text = ""; LA_SCAN.name = ""; LA_SCAN.left = 0; LA_MULTI.length = 0;
+          LA_SCAN.text = ""; LA_SCAN.name = ""; LA_SCAN.left = 0; LA_MULTI.length = 0; LA_CASE = null;
           laCtxRender();
           renderDocList();
           var msgs = document.getElementById("laMessages");
@@ -7030,6 +7042,14 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           laCtxRender();
           if (hadTray && !LA_MULTI.length) { try { renderDocList(); } catch (e) {} }
         }
+        if (LA_CASE) {
+          var caseLines = [];
+          if (LA_CASE.court) caseLines.push("Court: " + LA_CASE.court);
+          if (LA_CASE.nextDate) caseLines.push("Next date: " + LA_CASE.nextDate);
+          if (LA_CASE.deadline) caseLines.push("Deadline: " + LA_CASE.deadline + (LA_CASE.deadlineNote ? " (" + LA_CASE.deadlineNote + ")" : ""));
+          if (LA_CASE.notes) caseLines.push("Notes: " + String(LA_CASE.notes).slice(0, 1000));
+          qAI = "The user is asking about their case '" + LA_CASE.title + "'. Use these case details first when answering; if the question is unrelated to the case, answer generally.\n--- CASE: " + LA_CASE.title + " ---\n" + caseLines.join("\n") + "\n--- END CASE ---\n" + qAI;
+        }
         function aiOk(tx) { try { var s = laDraftHtml(tx || "").replace(/<[^>]*>/g, "").replace(/[\s*#_`>\-]/g, ""); return !!s; } catch (e) { return !!tx; } }
         function aiChain(sys, tokens, counted) {
           askGemini(qAI, lang, function (aiText) {
@@ -7417,9 +7437,13 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           addRow2.appendChild(nin2); addRow2.appendChild(nbtn2);
           logBox.appendChild(addRow2);
           div.appendChild(logBox);
+          var chatBtn = document.createElement("button");
+          chatBtn.type = "button"; chatBtn.className = "la-case-chat"; chatBtn.textContent = "\uD83D\uDCAC " + L("Chat", "चैट");
+          chatBtn.addEventListener("click", function () { LA_CASE = { id: c.id, title: c.title, court: c.court, nextDate: c.nextDate, notes: c.notes, deadline: c.deadline, deadlineNote: c.deadlineNote }; switchTab("research"); laCtxRender(); try { document.getElementById("laInput").focus(); } catch (e) {} });
+          div.appendChild(chatBtn);
           var del = document.createElement("button");
           del.type = "button"; del.className = "la-case-del"; del.textContent = L("Remove", "हटाएं");
-          del.addEventListener("click", function () { if (!laConfirmDel(L("Delete this case and all its notes permanently?", "Ye case aur uske saare notes hamesha ke liye delete karein?"))) return; saveCases(loadCases().filter(function (x) { return x.id !== c.id; })); renderCases(); });
+          del.addEventListener("click", function () { if (!laConfirmDel(L("Delete this case and all its notes permanently?", "Ye case aur uske saare notes hamesha ke liye delete karein?"))) return; saveCases(loadCases().filter(function (x) { return x.id !== c.id; })); if (LA_CASE && LA_CASE.id === c.id) { LA_CASE = null; laCtxRender(); } renderCases(); });
           div.appendChild(del);
           list.appendChild(div);
         });
