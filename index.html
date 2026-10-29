@@ -5811,7 +5811,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           <button type="button" id="laDetailBtn" aria-label="Detailed research" title="Detailed research / विस्तृत शोध">🔍</button>
           <input type="file" id="laCamInput" accept="image/*" capture="environment" hidden>
           <input type="file" id="laFileInput" accept="image/*,.pdf,.txt,.doc,.docx" hidden>
-          <input type="text" id="laInput" autocomplete="off" />
+          <input type="text" id="laInput" autocomplete="off" maxlength="2000" title="Max 2000 characters / अधिकतम 2000 अक्षर" />
           <button type="submit" aria-label="Send">➤</button>
         </form>
               </section>
@@ -6090,7 +6090,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
       /* Gemini AI (free tier) — tries AI first, falls back to built-in engine */
       var GEMINI_KEY = "";
       var GEMINI_PROXY = "https://lawassist-proxy.onrender.com";
-      var GEMINI_MODEL = "gemini-3.8-flash";
+      var GEMINI_MODEL = "gemini-3.1-flash-lite";
       var GROQ_KEY = "";
       var GROQ_MODEL = "qwen/qwen3.8-27b";
       /* Conversation memory: LawAssist remembers the chat so follow-up questions
@@ -6731,7 +6731,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
       }
       function aiDraftPrint() {
         var w = window.open("", "_blank");
-        if (!w) return;
+        if (!w) { var o = document.getElementById("laAiDraftOut"); if (o) { o.hidden = false; o.textContent = L("Popup blocked — allow popups to print.", "पॉपअप ब्लॉक हो गया है — प्रिंट के लिए पॉपअप की अनुमति दें।"); } return; }
         w.document.write(aiDraftDocHTML());
         w.document.close();
         w.focus();
@@ -6783,8 +6783,9 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           var mb = document.getElementById("laMessages");
           mb.appendChild(thinking); mb.scrollTop = mb.scrollHeight;
         } catch (e) {}
-        function done(html, sources, ai) {
+        function done(html, sources, ai, aiFailed) {
           laBusy = false;
+          if (aiFailed) html = L("AI couldn't answer right now — showing the built-in answer instead.", "AI abhi jawab nahi de saka — isliye built-in jawab dikha raha hoon.") + "\n\n" + html;
           try { thinking && thinking.parentNode && thinking.parentNode.removeChild(thinking); } catch (e2) {}
           var tag = ai ? "<span class='la-ai-tag'>\u2728 AI</span> " : "";
           var msgDiv = addMsg(tag + laDraftHtml(html), "bot", sources, ai);
@@ -6874,22 +6875,23 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           if (--LA_SCAN.left <= 0) { LA_SCAN.text = ""; LA_SCAN.name = ""; LA_SCAN.left = 0; }
           laCtxRender();
         }
+        function aiOk(tx) { try { var s = laDraftHtml(tx || "").replace(/<[^>]*>/g, "").replace(/[\s*#_`>\-]/g, ""); return !!s; } catch (e) { return !!tx; } }
         function aiChain(sys, tokens, counted) {
           askGemini(qAI, lang, function (aiText) {
-            if (aiText) { done(aiText, builtin.sources, true); return; }
+            if (aiOk(aiText)) { done(aiText, builtin.sources, true); return; }
             askGroq(qAI, lang, function (gqText) {
-              if (gqText) { done(gqText, builtin.sources, true); return; }
+              if (aiOk(gqText)) { done(gqText, builtin.sources, true); return; }
               askGroqProxy(qAI, lang, function (gpText) {
-                if (gpText) { done(gpText, builtin.sources, true); return; }
+                if (aiOk(gpText)) { done(gpText, builtin.sources, true); return; }
                 askOpenRouter(qAI, lang, function (orText) {
-                  if (orText) { done(orText, builtin.sources, true); return; }
+                  if (aiOk(orText)) { done(orText, builtin.sources, true); return; }
                   askHf(qAI, lang, function (hfText) {
-                    if (hfText) { done(hfText, builtin.sources, true); return; }
+                    if (aiOk(hfText)) { done(hfText, builtin.sources, true); return; }
                     askCf(qAI, lang, function (cfText) {
-                      if (cfText) { done(cfText, builtin.sources, true); return; }
+                      if (aiOk(cfText)) { done(cfText, builtin.sources, true); return; }
                       askNvidia(qAI, lang, function (nvText) {
-                        if (nvText) done(nvText, builtin.sources, true);
-                        else setTimeout(function () { if (counted) { try { window.LA_AUTH && window.LA_AUTH.refundQuota && window.LA_AUTH.refundQuota(); } catch (e) {} } done(builtin.html, builtin.sources, false); }, 350);
+                        if (aiOk(nvText)) done(nvText, builtin.sources, true);
+                        else setTimeout(function () { if (counted) { try { window.LA_AUTH && window.LA_AUTH.refundQuota && window.LA_AUTH.refundQuota(); } catch (e) {} } done(builtin.html, builtin.sources, false, true); }, 350);
                       }, sys);
                     }, sys);
                   }, sys);
@@ -7018,7 +7020,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
       }
       function printFilled() {
         var w = window.open("", "_blank");
-        if (!w) return;
+        if (!w) { var o = document.getElementById("laPreview"); if (o) { o.hidden = false; o.textContent = L("Popup blocked — allow popups to print.", "पॉपअप ब्लॉक हो गया है — प्रिंट के लिए पॉपअप की अनुमति दें।"); } return; }
         w.document.write(filledDocHTML());
         w.document.close();
         w.focus();
