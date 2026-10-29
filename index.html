@@ -1405,6 +1405,29 @@ html[data-theme="dark"] .la-doc-row{background:rgba(255,255,255,.06)}
     .notes-back-btn:hover { border-color: #1e1e1e; }
     html[data-theme="dark"] .notes-back-btn { border-color: rgba(255,255,255,.3); }
     html[data-theme="dark"] .notes-back-btn:hover { border-color: #f9fcff; }
+    .notes-full-btn { font: 700 .85rem var(--sans); padding: 10px 22px; border: 1px solid rgba(0,0,0,.25); border-radius: 999px; background: transparent; color: var(--ink); cursor: pointer; margin-bottom: 8px; margin-left: 8px; }
+    .notes-full-btn:hover { border-color: #1e1e1e; }
+    html[data-theme="dark"] .notes-full-btn { border-color: rgba(255,255,255,.3); }
+    html[data-theme="dark"] .notes-full-btn:hover { border-color: #f9fcff; }
+    #notesReader { display: none; position: fixed; inset: 0; z-index: 10000; background: #f9fcff; color: #111111; flex-direction: column; }
+    #notesReader.open { display: flex; }
+    html[data-theme="dark"] #notesReader { background: #1e1e1e; color: #F5F5F5; }
+    #notesReader .nr-top { display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; }
+    #notesReader .nr-close { font-size: 1.2rem; line-height: 1; background: transparent; border: 1px solid rgba(0,0,0,.25); border-radius: 50%; width: 38px; height: 38px; cursor: pointer; color: inherit; }
+    #notesReader .nr-count { font: 700 .85rem var(--sans); color: var(--muted); }
+    #notesReader .nr-scroll { flex: 1; overflow-y: auto; padding: 8px 22px 30px; }
+    #notesReader .nr-body { max-width: 720px; margin: 0 auto; font-family: Georgia, serif; font-size: 1.12rem; line-height: 1.9; }
+    #notesReader .nr-body h2 { font-size: 1.4rem; line-height: 1.4; margin: 6px 0 16px; }
+    #notesReader .nr-body li { margin-bottom: 12px; }
+    #notesReader .nr-sub { color: var(--muted); font-size: .85rem; margin-bottom: 4px; font-family: var(--sans); }
+    #notesReader .nr-nav { display: flex; gap: 12px; padding: 14px 16px 18px; }
+    #notesReader .nr-nav button { flex: 1; font: 700 .9rem var(--sans); padding: 12px; border-radius: 999px; border: 1px solid rgba(0,0,0,.25); background: transparent; color: inherit; cursor: pointer; }
+    #notesReader .nr-nav button:disabled { opacity: .35; cursor: default; }
+    html[data-theme="dark"] #notesReader .nr-close, html[data-theme="dark"] #notesReader .nr-nav button { border-color: rgba(255,255,255,.3); }
+    .notes-print-btn { font: 700 .85rem var(--sans); padding: 10px 22px; border: 1px solid rgba(0,0,0,.25); border-radius: 999px; background: transparent; color: var(--ink); cursor: pointer; margin-bottom: 8px; margin-left: 8px; }
+    .notes-print-btn:hover { border-color: #1e1e1e; }
+    html[data-theme="dark"] .notes-print-btn { border-color: rgba(255,255,255,.3); }
+    html[data-theme="dark"] .notes-print-btn:hover { border-color: #f9fcff; }
     /* Legal Vocabulary */
     .vocabulary { padding: 54px 0; background: var(--paper); }
     .vocab-head { margin-bottom: 28px; }
@@ -3691,6 +3714,91 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         }
         return out;
       }
+      function notesPrintTopic() {
+        try {
+          if (!notesOpen) return;
+          var data = getHandwrittenNotes();
+          var topics = data[notesOpen.subj];
+          var topic = topics && topics[notesOpen.ti];
+          if (!topic) return;
+          var lang = notesLang;
+          var title = notesText(topic.title, lang);
+          var subjLabel = notesSubjectLabels[notesOpen.subj] || notesOpen.subj;
+          var lis = "";
+          (topic.points || []).forEach(function (pt) { lis += "<li>" + escapeHtml(notesText(pt, lang)) + "</li>"; });
+          var doc = "<!DOCTYPE html><html><head><meta charset=\"utf-8\"><title>" + escapeHtml(title) + "</title><style>body{font-family:Georgia,serif;max-width:720px;margin:40px auto;padding:0 20px;line-height:1.8;color:#111}h1{font-size:1.3rem;text-align:center;margin-bottom:8px}.sub{text-align:center;color:#555;margin-bottom:24px}li{margin-bottom:10px}.foot{margin-top:40px;text-align:center;font-size:.8rem;color:#444;border-top:1px solid #ccc;padding-top:12px}</style></head><body><h1>" + escapeHtml(title) + "</h1><div class=\"sub\">" + escapeHtml(subjLabel) + "</div><ul>" + lis + "</ul><div class=\"foot\">A.K Legal Law — Advocate Atul Kumar, Bulandshahr</div></body></html>";
+          var w = window.open("", "_blank");
+          if (!w) return;
+          w.document.write(doc);
+          w.document.close();
+          w.focus();
+          setTimeout(function () { w.print(); }, 400);
+        } catch (e) {}
+      }
+      var notesReader = null;
+      function notesReaderRender() {
+        if (!notesReader) return;
+        var data = getHandwrittenNotes();
+        var list = data[notesReader.subj] || [];
+        var topic = list[notesReader.ti];
+        var ov = document.getElementById("notesReader");
+        if (!ov || !topic) { notesReaderClose(); return; }
+        var lang = notesLang;
+        var title = notesText(topic.title, lang);
+        var lis = "";
+        (topic.points || []).forEach(function (pt) { lis += "<li>" + escapeHtml(notesText(pt, lang)) + "</li>"; });
+        var subjLabel = notesSubjectLabels[notesReader.subj] || notesReader.subj;
+        ov.querySelector(".nr-body").innerHTML = "<div class=\"nr-sub\">" + escapeHtml(subjLabel) + "</div><h2>" + escapeHtml(title) + "</h2><ul>" + lis + "</ul>";
+        ov.querySelector(".nr-count").textContent = (notesReader.ti + 1) + " / " + list.length;
+        ov.querySelector(".nr-prev").disabled = notesReader.ti <= 0;
+        ov.querySelector(".nr-next").disabled = notesReader.ti >= list.length - 1;
+        ov.querySelector(".nr-scroll").scrollTop = 0;
+      }
+      function notesReaderNav(dir) {
+        if (!notesReader) return;
+        var list = (getHandwrittenNotes()[notesReader.subj] || []);
+        var nt = notesReader.ti + dir;
+        if (nt < 0 || nt >= list.length) return;
+        notesReader.ti = nt;
+        notesReaderRender();
+      }
+      function notesReaderKeys(e) {
+        if (!notesReader) return;
+        if (e.key === "ArrowLeft") notesReaderNav(-1);
+        else if (e.key === "ArrowRight") notesReaderNav(1);
+        else if (e.key === "Escape") notesReaderClose();
+      }
+      function notesReaderClose() {
+        if (!notesReader) return;
+        var ov = document.getElementById("notesReader");
+        if (ov) ov.classList.remove("open");
+        document.body.style.overflow = "";
+        var last = notesReader;
+        notesReader = null;
+        notesOpen = { subj: last.subj, ti: last.ti };
+        renderNotes();
+        try { document.getElementById("notes").scrollIntoView({ behavior: "smooth" }); } catch (e) {}
+      }
+      function notesReaderOpen(subj, ti) {
+        notesReader = { subj: subj, ti: ti };
+        var ov = document.getElementById("notesReader");
+        if (!ov) {
+          ov = document.createElement("div");
+          ov.id = "notesReader";
+          ov.innerHTML = "<div class=\"nr-top\"><button type=\"button\" class=\"nr-close\" aria-label=\"Close\">✕</button><span class=\"nr-count\"></span></div><div class=\"nr-scroll\"><div class=\"nr-body\"></div></div><div class=\"nr-nav\"><button type=\"button\" class=\"nr-prev\">◀ Prev</button><button type=\"button\" class=\"nr-next\">Next ▶</button></div>";
+          document.body.appendChild(ov);
+          ov.querySelector(".nr-close").addEventListener("click", notesReaderClose);
+          ov.querySelector(".nr-prev").addEventListener("click", function () { notesReaderNav(-1); });
+          ov.querySelector(".nr-next").addEventListener("click", function () { notesReaderNav(1); });
+          var tsX = 0, tsY = 0;
+          ov.addEventListener("touchstart", function (e) { var tt = (e.changedTouches && e.changedTouches[0]) || (e.touches && e.touches[0]); if (tt) { tsX = tt.clientX; tsY = tt.clientY; } }, { passive: true });
+          ov.addEventListener("touchend", function (e) { var tt = (e.changedTouches && e.changedTouches[0]) || (e.touches && e.touches[0]); if (!tt) return; var dx = tt.clientX - tsX, dy = tt.clientY - tsY; if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) { if (dx < 0) notesReaderNav(1); else notesReaderNav(-1); } }, { passive: true });
+          document.addEventListener("keydown", notesReaderKeys);
+        }
+        ov.classList.add("open");
+        document.body.style.overflow = "hidden";
+        notesReaderRender();
+      }
       function renderNotes() {
         var data = getHandwrittenNotes();
         var container = document.getElementById("notesContent");
@@ -3698,6 +3806,8 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         var lang = notesLang;
         var dlLabel = lang === "hi" ? "इस टॉपिक को डाउनलोड करें" : (lang === "hinglish" ? "Is topic ko download karein" : "Download this topic");
         var backLabel = lang === "hi" ? "← सभी टॉपिक" : (lang === "hinglish" ? "← Sabhi topics" : "← All topics");
+        var fullLabel = lang === "hi" ? "📖 पूरा पेज पढ़ें" : (lang === "hinglish" ? "📖 Full page padhein" : "📖 Full page");
+        var printLabel = lang === "hi" ? "🖨 नोट्स प्रिंट करें" : (lang === "hinglish" ? "🖨 Notes print karein" : "🖨 Print Notes");
         var htmlOut = "";
         function indexItem(subj, ti, topic, badge) {
           var title = notesText(topic.title, lang);
@@ -3715,6 +3825,8 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           if (!oTopic) { notesOpen = null; }
           else {
             htmlOut += '<button type="button" class="notes-back-btn">' + escapeHtml(backLabel) + "</button>";
+            htmlOut += '<button type="button" class="notes-full-btn">' + escapeHtml(fullLabel) + "</button>";
+            htmlOut += '<button type="button" class="notes-print-btn">' + escapeHtml(printLabel) + "</button>";
             htmlOut += renderTopicHtml(notesOpen.subj, notesOpen.ti, oTopic, lang, dlLabel);
             container.innerHTML = htmlOut;
             return;
@@ -3915,6 +4027,10 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
             if (btn) { downloadTopic(btn.getAttribute("data-subj"), parseInt(btn.getAttribute("data-ti"), 10)); return; }
             var back = (t && t.closest) ? t.closest(".notes-back-btn") : null;
             if (back) { notesOpen = null; renderNotes(); document.getElementById("notes").scrollIntoView({ behavior: "smooth" }); return; }
+            var fl = (t && t.closest) ? t.closest(".notes-full-btn") : null;
+            if (fl) { if (notesOpen) notesReaderOpen(notesOpen.subj, notesOpen.ti); return; }
+            var prt = (t && t.closest) ? t.closest(".notes-print-btn") : null;
+            if (prt) { notesPrintTopic(); return; }
             var item = (t && t.closest) ? t.closest(".notes-index-item") : null;
             if (item) {
               notesOpen = { subj: item.getAttribute("data-subj"), ti: parseInt(item.getAttribute("data-ti"), 10) };
