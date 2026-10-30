@@ -1082,7 +1082,6 @@
     }
     .la-cap { font-size: 9px; line-height: 1.1; opacity: .7; white-space: nowrap; }
     .la-meet-micwrap { display: inline-flex; flex-direction: column; align-items: center; gap: 2px; vertical-align: middle; margin-right: 8px; margin-bottom: 8px; }
-    #laDetailBtn.la-detail-on { background: #f9fcff; color: #1e1e1e; }
     #laMockBtn.la-mock-on { background: #f9fcff; color: #1e1e1e; }
     .la-ctx { display: flex; align-items: center; gap: 8px; padding: 8px 14px; background: #1e1e1e; color: #F5F5F5; font-size: .78rem; }
     .la-ctx[hidden] { display: none; }
@@ -6679,7 +6678,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
       }
       /* Clears the in-memory chat + scan workspace (used on logout so the next user sees nothing). */
       window.laAskAbout = function (q) { try { openPanel(); switchTab("research"); respond(q); } catch (e) {} };
-      window.laAskDetailed = function (q) { try { laDetailed = true; try { localStorage.setItem("laDetailed", "1"); } catch (e2) {} var db2 = document.getElementById("laDetailBtn"); if (db2) { db2.classList.add("la-detail-on"); db2.setAttribute("aria-pressed", "true"); db2.textContent = "\uD83D\uDD0D\u2713"; } openPanel(); switchTab("research"); respond(q); } catch (e) {} };
+      window.laAskDetailed = function (q) { try { laDetailed = true; try { localStorage.setItem("laDetailed", "1"); } catch (e2) {} var db2 = document.getElementById("laDetailBtn"); if (db2) { db2.classList.add("la-detail-on"); db2.setAttribute("aria-pressed", "true"); db2.textContent = "\uD83D\uDD0D"; } openPanel(); switchTab("research"); respond(q); } catch (e) {} };
       window.laClearWorkspace = function () {
         try {
           LA_HIST.length = 0;
@@ -7878,7 +7877,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         (function () {
           var db = document.getElementById("laDetailBtn");
           if (!db) return;
-          function syncDetail() { db.classList.toggle("la-detail-on", !!laDetailed); db.setAttribute("aria-pressed", laDetailed ? "true" : "false"); db.textContent = laDetailed ? "🔍✓" : "🔍"; }
+          function syncDetail() { db.classList.toggle("la-detail-on", !!laDetailed); db.setAttribute("aria-pressed", laDetailed ? "true" : "false"); db.textContent = laDetailed ? "🔍" : "🔍"; }
           syncDetail();
           db.addEventListener("click", function () {
             laDetailed = !laDetailed;
