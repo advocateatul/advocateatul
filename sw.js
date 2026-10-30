@@ -1,4 +1,4 @@
-/* A.K Legal Law — service worker.
+/* Legal Law — service worker.
    Pages (navigations): INSTANT-FIRST — the copy saved on the phone is shown
    immediately (native-app feel); a fast network answer (within ~1.2s) still
    wins so updates arrive fresh, and the network copy always refreshes the
