@@ -1628,6 +1628,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         <div class="nav-more-wrap">
           <button type="button" id="navMoreBtn" class="nav-more-btn" aria-haspopup="true" aria-expanded="false"><span data-i18n="navMore">More</span> ▾</button>
           <div class="nav-more-menu" id="navMoreMenu" hidden role="menu" aria-label="More links">
+            <a href="#heroAskForm" id="navAskDoubtLink" role="menuitem" data-i18n="navAskDoubt">❓ Ask any doubt</a>
             <a href="#drafts" role="menuitem" data-i18n="navDrafts">🗂️ Drafts</a>
             <a href="#library" role="menuitem" data-i18n="navLibrary">⚖️ Important Judgement</a>
             <a href="#draft-guide" role="menuitem" data-i18n="navDraftGuide">📋 Draft Guide</a>
@@ -2302,6 +2303,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           navUpdates: "📰 Updates",
           navDocuments: "📄 Documents",
           navDrafts: "🗂️ Drafts",
+          navAskDoubt: "❓ Ask any doubt",
           navDraftGuide: "📋 Draft Guide",
           navNotes: "📒 Notes",
           navVocab: "Legal Vocabulary",
@@ -2582,6 +2584,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           navUpdates: "📰 अपडेट",
           navDocuments: "📄 दस्तावेज़",
           navDrafts: "🗂️ \u092a\u094d\u0930\u093e\u0930\u0942\u092a",
+          navAskDoubt: "❓ कोई भी सवाल पूछें",
           navDraftGuide: "📋 \u0921\u094d\u0930\u093e\u092b\u094d\u091f \u092e\u093e\u0930\u094d\u0917\u0926\u0930\u094d\u0936\u093f\u0915\u093e",
           navNotes: "📒 \u0928\u094b\u091f\u094d\u0938",
           navVocab: "विधिक शब्दावली",
@@ -5897,6 +5900,15 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
               moreBtn.setAttribute("aria-expanded", "false");
             });
           });
+          var askLink = document.getElementById("navAskDoubtLink");
+          if (askLink) {
+            askLink.addEventListener("click", function () {
+              setTimeout(function () {
+                var inp = document.getElementById("heroAskInput");
+                if (inp) { try { inp.focus({ preventScroll: true }); } catch (e) { inp.focus(); } }
+              }, 350);
+            });
+          }
           document.addEventListener("keydown", function (e) {
             if (e.key === "Escape" && !moreMenu.hidden) {
               moreMenu.hidden = true;
