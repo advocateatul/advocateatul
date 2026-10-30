@@ -3891,6 +3891,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           return res;
         }).join('');
       }
+      window.akDevToRoman = devToRoman;
       var NOTES_LANGS = ["en", "hi", "hinglish"];
       var NOTES_LANG_LABELS = { en: "English", hi: "\u0939\u093f\u0902\u0926\u0940", hinglish: "Hinglish" };
       function notesText(obj, lang) {
@@ -6239,6 +6240,14 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
     (function () {
       "use strict";
       function laLang() { if (typeof currentLanguage !== "undefined" && currentLanguage === "hi") return "hi"; var dl = null; try { dl = document.documentElement.getAttribute("lang"); } catch (e) {} return dl === "hi" ? "hi" : "en"; }
+      function laDetectLang(q) {
+        var s = String(q || "");
+        if (/[\u0900-\u097F]/.test(s)) return "hi";
+        var toks = s.toLowerCase().match(/[a-z]+/g) || [];
+        var M = { kya:1, hai:1, hain:1, kaise:1, kyun:1, kyon:1, kab:1, kahan:1, kidhar:1, kaun:1, karo:1, kare:1, karein:1, karna:1, kre:1, kro:1, chahiye:1, sakta:1, sakte:1, sakti:1, wala:1, wali:1, wale:1, ne:1, ko:1, ka:1, ki:1, ke:1, se:1, par:1, mera:1, meri:1, mere:1, tumhara:1, uska:1, iska:1, jameen:1, zameen:1, dhoka:1, dhoke:1, kanoon:1, vakil:1, adalat:1 };
+        for (var i = 0; i < toks.length; i++) { if (M[toks[i]]) return "hinglish"; }
+        return null;
+      }
       function L(en, hi) { return laLang() === "hi" ? hi : en; }
       function esc(s) { return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); }
       function getDrafts() { try { if (window.AK_STORE && window.AK_STORE.legalDraftsData) return (window.AK_STORE.legalDraftsData.drafts || []); var el = document.getElementById("legalDraftsData"); return el ? JSON.parse(el.textContent).drafts : []; } catch (e) { return []; } }
@@ -6281,8 +6290,9 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         { en: "Maintenance law", hi: "भरण-पोषण कानून" }
       ];
 
-      function research(query) {
-        var lang = laLang(), drafts = getDrafts(), kb = getKB(), judges = getJudgements(), vocab = getVocab();
+      function research(query, langOv) {
+        var lang = langOv || laLang(), drafts = getDrafts(), kb = getKB(), judges = getJudgements(), vocab = getVocab();
+        function laT(o) { if (!o) return ""; if (lang === "hinglish") { var h = o.hi || o.en || ""; try { if (typeof window.akDevToRoman === "function") return window.akDevToRoman(h); } catch (e) {} return h; } return lang === "hi" ? (o.hi || o.en || "") : (o.en || ""); }
         var best = null, bestScore = 0, i, s, k;
         // 1. Knowledge base (42 entries)
         for (i = 0; i < kb.length; i++) {
@@ -6317,15 +6327,15 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
 
         var html = "", sources = [];
         function draftById(id) { for (var x = 0; x < drafts.length; x++) if (drafts[x].id === id) return drafts[x]; return null; }
-        function draftTitle(d) { return (lang === "hi" && d.title.hi) ? d.title.hi : d.title.en; }
+        function draftTitle(d) { return laT(d.title); }
 
         if (best && best.type === "kb") {
           var k2 = best.item;
-          html = esc(k2.a[lang] || k2.a.en);
+          html = esc(laT(k2.a));
           (k2.drafts || []).forEach(function (id) { var d = draftById(id); if (d) sources.push({ t: "draft", d: d }); });
         } else if (best && best.type === "judge") {
           var j2 = best.item;
-          html = esc(lang === "hi" ? (j2.summary.hi || j2.summary.en) : j2.summary.en);
+          html = esc(laT(j2.summary));
           sources.push({ t: "judge", j: j2 });
         }
         matchedDrafts.slice(0, 6).forEach(function (id) {
@@ -6334,7 +6344,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         });
         // Fallback: vocab term
         if (!html && vbest && vscore >= 4) {
-          html = esc(vbest.en) + " — " + esc(vbest.hi) + (vbest.example ? "\n" + esc(lang === "hi" ? vbest.example.hi : vbest.example.en) : "");
+          html = esc(vbest.en) + " — " + esc(lang === "hinglish" ? laT(vbest) : vbest.hi) + (vbest.example ? "\n" + esc(lang === "hinglish" ? laT(vbest.example) : (lang === "hi" ? vbest.example.hi : vbest.example.en)) : "");
           sources.push({ t: "vocab", v: vbest });
         }
         // Fallback: draft title search
@@ -6427,22 +6437,30 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
       }
       try { var _laHistSaved = JSON.parse(localStorage.getItem("laHist") || "[]"); if (Array.isArray(_laHistSaved)) { _laHistSaved.forEach(function (h) { if (h && (h.role === "user" || h.role === "model") && h.text) LA_HIST.push({ role: h.role, text: String(h.text).slice(0, 900) }); }); while (LA_HIST.length > 8) LA_HIST.shift(); } } catch (e3) {}
       function geminiSystem(lang) {
-        return lang === "hi"
+        return lang === "hinglish"
+          ? "You are LawAssist — the AI assistant on Advocate Atul Kumar's website (criminal lawyer, Bulandshahr District Court, UP). Answer ONLY about Indian law, in Hinglish (Roman Hindi written in Latin script only — never use Devanagari script). Concise (under 120 words), accurate, practical. Name correct sections (BNS/BNSS/BSA/NI Act/CPC). Never invent case citations. End with one line: 'Vistar se salah ke liye 7456022448 par WhatsApp karein.'"
+          : lang === "hi"
           ? "आप LawAssist हैं — Advocate Atul Kumar (आपराधिक वकील, बुलंदशहर जिला न्यायालय, उत्तर प्रदेश) की वेबसाइट के AI सहायक। केवल भारतीय कानून पर उत्तर दें, हिंदी में। संक्षिप्त (120 शब्दों के अंदर), सटीक, व्यावहारिक। सही धाराओं (BNS/BNSS/BSA/NI Act/CPC) का नाम लें। कभी फ़र्ज़ी case citation न बनाएँ। केवल देवनागरी लिपि में लिखें — रोमन लिपि का बिल्कुल प्रयोग न करें। अंत में एक पंक्ति जोड़ें: 'विस्तृत सलाह के लिए 7456022448 पर WhatsApp करें।'"
           : "You are LawAssist — the AI assistant on Advocate Atul Kumar's website (criminal lawyer, Bulandshahr District Court, UP). Answer ONLY about Indian law, in English. Concise (under 120 words), accurate, practical. Name correct sections (BNS/BNSS/BSA/NI Act/CPC). Never invent case citations. End with one line: 'For detailed advice, WhatsApp 7456022448.'";
       }
       function laDetailSystem(lang) {
-        return lang === "hi"
+        return lang === "hinglish"
+          ? "You are LawAssist — the AI assistant on Advocate Atul Kumar's website (criminal lawyer, Bulandshahr District Court, UP). Answer ONLY about Indian law, in Hinglish (Roman Hindi written in Latin script only — never use Devanagari script). Give a DETAILED research answer (not a short reply), structured with bold section labels exactly like this: **Short answer:** ek paragraph me nishkarsh. **Applicable law:** sahi dharaayein (BNS/BNSS/BSA/NI Act/CPC) aur har ek ka pravdhan. **Key cases:** keval asli, mashhoor cases; kabhi farzi citation mat banao — agar sure nahi ho to wahi likho. Har dhara number ko dobara check karo; jis dhara ke baare me sure nahi ho use likhne ke bajay chhod do. **Procedure / next steps:** kramwar vyavharik kadam. **Caution:** seemayein aur kis baat par vakil ki sameeksha zaroori hai. Sateek aur vyavharik raho. End with one line: 'Vistar se salah ke liye 7456022448 par WhatsApp karein.'"
+          : lang === "hi"
           ? "आप LawAssist हैं — Advocate Atul Kumar की वेबसाइट के AI सहायक (आपराधिक वकील, बुलंदशहर जिला न्यायालय, उत्तर प्रदेश)। केवल भारतीय कानून पर उत्तर दें, हिंदी में। एक विस्तृत शोध उत्तर दें (संक्षिप्त उत्तर नहीं), बोल्ड शीर्षकों के साथ ठीक इसी संरचना में: **संक्षिप्त उत्तर:** एक अनुच्छेद में निष्कर्ष। **लागू कानून:** सही धाराएँ (BNS/BNSS/BSA/NI Act/CPC) और प्रत्येक का प्रावधान। **मुख्य निर्णय:** केवल वास्तविक, प्रसिद्ध निर्णय; कभी फ़र्ज़ी citation न बनाएँ — अनिश्चित हो तो वही लिखें। हर धारा संख्या को दोबारा जाँचें; जिस धारा के बारे में पक्का न हों उसे लिखने के बजाय छोड़ दें। **प्रक्रिया / अगले कदम:** क्रमवार व्यावहारिक कदम। **सावधानी:** सीमाएँ और किस बात पर वकील की समीक्षा ज़रूरी है। सटीक और व्यावहारिक रहें। केवल देवनागरी लिपि में लिखें — रोमन लिपि का बिल्कुल प्रयोग न करें। अंत में एक पंक्ति जोड़ें: 'विस्तृत सलाह के लिए 7456022448 पर WhatsApp करें।'"
           : "You are LawAssist — the AI assistant on Advocate Atul Kumar's website (criminal lawyer, Bulandshahr District Court, UP). Answer ONLY about Indian law, in English. Give a DETAILED research answer (not a short reply), structured with bold section labels exactly like this: **Short answer:** one-paragraph conclusion. **Applicable law:** the correct sections (BNS/BNSS/BSA/NI Act/CPC) and what each provides. **Key cases:** only real, well-known cases; never invent a case citation — if unsure, say so. Double-check every section number you cite; omit any section you are not sure about instead of guessing. **Procedure / next steps:** practical steps in order. **Caution:** limits and what needs a lawyer's review. Be accurate and practical. End with one line: 'For detailed advice, WhatsApp 7456022448.'";
       }
       function laMockSystem(lang) {
-        return lang === "hi"
+        return lang === "hinglish"
+          ? "You are the opposing counsel in a mock court hearing. The user is preparing their side of a case. First restate the user's position in one line, so it is clear you listened. Then attack that position with the strongest possible legal case, in exactly this structure: (1) User ka paksh — ek line me. (2) Virodhi tark — sambandhit dharaayein aur asli, mashhoor cases ke saath. (3) User ke tark ki kamzoriyaan — jahan chot pahunche wahan user ke apne shabdon ko uddhrit karke dikhao ki ve kyun kamzor hain. (4) Cross questions — 2-3 teekhe sawal jo virodhi adalat me user se poochhega. (5) Risk rating — user ka paksh Strong, Moderate ya Weak hai, ek line me kaaran sahit, aur ek line me user iska jawab kaise de sakta hai. Kathor lekin nishpaksh raho — koi case ya dhara mat gadho; agar sure nahi ho to wahi likho. Agar user ne documents ya case share kiya hai to unhi tathyon se tark karo. Answer ONLY about Indian law, in Hinglish (Roman Hindi written in Latin script only — never use Devanagari script)."
+          : lang === "hi"
           ? "आप एक mock court hearing में विरोधी पक्ष के वकील हैं। User अपने पक्ष की तैयारी कर रहा है। पहले user की स्थिति को एक पंक्ति में दोहराएँ (Restate), ताकि लगे कि आपने उसे सुना है। फिर उसी स्थिति के विरुद्ध सबसे मज़बूत कानूनी हमला करें, ठीक इसी संरचना में: (1) user का पक्ष — एक पंक्ति में। (2) विरोधी तर्क — संबंधित धाराएँ और वास्तविक, प्रसिद्ध निर्णयों के साथ। (3) user के तर्क की कमज़ोरियाँ — जहाँ चोट पहुँचे वहाँ user के अपने शब्दों को उद्धृत करके दिखाएँ कि वे क्यों कमज़ोर हैं। (4) Cross questions — 2-3 तीखे सवाल जो विरोधी अदालत में user से पूछेगा। (5) Risk rating — user का पक्ष Strong, Moderate या Weak है, एक पंक्ति में कारण सहित, और एक पंक्ति में user इसका जवाब कैसे दे सकता है। कठोर लेकिन निष्पक्ष रहें — कोई case या धारा गढ़ें नहीं; अनिश्चित हो तो वही लिखें। अगर user ने documents या case share किया है तो उन्हीं तथ्यों से तर्क करें। केवल भारतीय कानून पर उत्तर दें। केवल देवनागरी लिपि में लिखें — रोमन लिपि का बिल्कुल प्रयोग न करें।"
           : "You are the opposing counsel in a mock court hearing. The user is preparing their side of a case. First restate the user's position in one line, so it is clear you listened. Then attack that position with the strongest possible legal case, in exactly this structure: (1) The user's position — one line. (2) Opposing argument — with the relevant sections and real, well-known cases. (3) Weaknesses in the user's position — quote the user's own words back where they hurt, and show why they are weak. (4) Cross questions — 2-3 sharp questions the opponent would ask the user in court. (5) Risk rating — whether the user's position is Strong, Moderate or Weak, with one line of reason, and one line on how the user could counter. Be rigorous but fair — never invent a case or section; if unsure, say so. If the user has shared documents or a case, argue from those facts. Answer ONLY about Indian law.";
       }
       function laScanSystem(lang) {
-        return lang === "hi"
+        return lang === "hinglish"
+          ? "You are LawAssist — the AI assistant on Advocate Atul Kumar's website. Give a complete, structured analysis of the legal document text/photo below in Hinglish (Roman Hindi written in Latin script only — never use Devanagari script) (Document type, Parties, Case number, Zaroori dates, Sections, Summary, Agla step). There is no word limit — be thorough. Never invent citations; write 'nahi mila' for anything missing. Do not use markdown formatting (no asterisks, no # headings) — plain text only."
+          : lang === "hi"
           ? "आप LawAssist हैं — Advocate Atul Kumar की वेबसाइट के AI सहायक। नीचे दिए गए कानूनी दस्तावेज़ के पाठ/फ़ोटो का पूरा, संरचित विश्लेषण हिंदी में दें (Document type, Parties, Case number, ज़रूरी dates, Sections, Summary, अगला step)। शब्दों की कोई सीमा नहीं — पूरी जानकारी दें। कभी फ़र्ज़ी citation न बनाएं; जो न मिले उसे 'नहीं मिला' लिखें। मार्कडाउन फॉर्मेटिंग का प्रयोग न करें (कोई **, कोई ### नहीं) — सादा पाठ लिखें। केवल देवनागरी लिपि में लिखें — रोमन लिपि का बिल्कुल प्रयोग न करें।"
           : "You are LawAssist — the AI assistant on Advocate Atul Kumar's website. Give a complete, structured analysis of the legal document text/photo below in English (Document type, Parties, Case number, Important dates, Sections, Summary, Next step). There is no word limit — be thorough. Never invent citations; write 'not found' for anything missing.";
       }
@@ -7052,7 +7070,9 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
       /* ---------------- AI Drafting (AI-generated legal documents) ---------------- */
       var LA_AI_DRAFT = { text: "", desc: "" };
       function aiDraftSystem(lang) {
-        return lang === "hi"
+        return lang === "hinglish"
+          ? "You are LawAssist — the AI legal drafting assistant on Advocate Atul Kumar's website (criminal lawyer, Bulandshahr District Court, UP). Draft a formal Indian legal document from the description below, in Hinglish (Roman Hindi written in Latin script only — never use Devanagari script). Rules: Traditional Indian court format — proper title, parties, numbered paragraphs, prayer clause. Use [BRACKETED] placeholders for names, dates, case numbers and details the user did not give. Write ONLY the draft document, no explanations. Complete but concise (under 600 words). Never invent case numbers or court orders. Do not use markdown formatting (no asterisks, no # headings) — plain text only. Never invent the year — leave it as [Year]. End with the line: 'Filing me madad ke liye WhatsApp karein: 7456022448'."
+          : lang === "hi"
           ? "आप LawAssist हैं — Advocate Atul Kumar (आपराधिक वकील, बुलंदशहर जिला न्यायालय, उत्तर प्रदेश) की वेबसाइट के AI विधिक प्रारूप सहायक। नीचे दिए गए विवरण पर एक औपचारिक भारतीय कानूनी दस्तावेज़ तैयार करें। नियम: पारंपरिक भारतीय न्यायालय प्रारूप — उचित शीर्षक, पक्षकार, क्रमांकित अनुच्छेद, प्रार्थना खंड। नाम, तिथि, केस नंबर आदि जो उपयोगकर्ता ने नहीं दिए हैं, उनके लिए [BRACKETED] प्लेसहोल्डर रखें — साल भी खुद न लिखें, उसे [वर्ष] रखें। केवल प्रारूप दस्तावेज़ लिखें, कोई व्याख्या नहीं। पूर्ण लेकिन संक्षिप्त (600 शब्दों के अंदर)। केस नंबर या आदेश कभी न गढ़ें। केवल देवनागरी लिपि में लिखें — रोमन लिपि का बिल्कुल प्रयोग न करें। मार्कडाउन फॉर्मेटिंग का प्रयोग न करें (कोई **, कोई ### नहीं) — सादा पाठ लिखें। अंत में यह पंक्ति जोड़ें: 'दाखिल करने में सहायता हेतु WhatsApp करें: 7456022448'।"
           : "You are LawAssist — the AI legal drafting assistant on Advocate Atul Kumar's website (criminal lawyer, Bulandshahr District Court, UP). Draft a formal Indian legal document from the description below. Rules: Traditional Indian court format — proper title, parties, numbered paragraphs, prayer clause. Use [BRACKETED] placeholders for names, dates, case numbers and details the user did not give. Write ONLY the draft document, no explanations. Complete but concise (under 600 words). Never invent case numbers or court orders. Do not use markdown formatting (no asterisks, no # headings) — plain text only. Never invent the year — leave it as [Year]. Write in English. End with the line: 'For filing assistance, WhatsApp: 7456022448'.";
       }
@@ -7143,7 +7163,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         addMsg(esc(q), "user");
         laChatSave("user", q);
         laHistPush("user", q);
-        var lang = laLang();
+        var lang = laDetectLang(q) || laLang();
         var thinking = null;
         try {
           thinking = document.createElement("div");
@@ -7154,7 +7174,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         } catch (e) {}
         function done(html, sources, ai, aiFailed) {
           laBusy = false;
-          if (aiFailed) html = L("AI couldn't answer right now — showing the built-in answer instead.", "AI abhi jawab nahi de saka — isliye built-in jawab dikha raha hoon.") + "\n\n" + html;
+          if (aiFailed) html = (lang === "hinglish" ? "AI abhi jawab nahi de saka — isliye built-in jawab dikha raha hoon." : L("AI couldn't answer right now — showing the built-in answer instead.", "AI abhi jawab nahi de saka — isliye built-in jawab dikha raha hoon.")) + "\n\n" + html;
           try { thinking && thinking.parentNode && thinking.parentNode.removeChild(thinking); } catch (e2) {}
           var tag = ai ? "<span class='la-ai-tag'>\u2728 AI</span> " : "";
           var msgDiv = addMsg(tag + laDraftHtml(html), "bot", sources, ai);
@@ -7232,7 +7252,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           } catch (e3) {}
           try { laFollowChips(); } catch (e4) {}
         }
-        var builtin = research(q);
+        var builtin = research(q, lang);
         var laDraftNoun = "(draft|format|template|vakalatnama|affidavit|application|notice|complaint|\u0921\u094d\u0930\u093e\u092b\u094d\u091f|\u092a\u094d\u0930\u093e\u0930\u0942\u092a|\u0936\u093f\u0915\u093e\u092f\u0924|\u0928\u094b\u091f\u093f\u0938|\u0905\u0930\u094d\u091c\u0940)";
         var laDraftVerb = "(banao|bana|banaye|banaiye|prepare|create|make|write|want|need|get|likh|likho|likhna|chahiye|taiyar|dikhao|dikhaye|show|dein|\u092c\u0928\u093e\u0913|\u091a\u093e\u0939\u093f\u090f|\u0924\u0948\u092f\u093e\u0930|\u0932\u093f\u0916\u094b|\u092c\u0928\u093e\u0928\u093e)";
         var isDraftQ = sysOverride ? false : new RegExp(laDraftNoun + "[^.!?]{0,40}" + laDraftVerb + "|" + laDraftVerb + "[^.!?]{0,40}" + laDraftNoun, "i").test(q);
