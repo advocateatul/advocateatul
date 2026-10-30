@@ -2630,7 +2630,7 @@
     },
     {
      "en": "Possession of immovable property gets a much longer window: 12 years (Articles 64-65). Property disputes are slow-burning, so the law gives them more time than a money claim.",
-     "hi": "अचल संपत्ति के कब्ज़े के लिए समय काफ़ी लंबा है — 12 साल। ज़मीन-जायदाद के झगड़े धीरे चलते हैं, इसलिए क़ानून ने यहाँ पैसे के दावे से ज़्यादा समय दिया है।"
+     "hi": "अचल संपत्ति के कब्ज़े के लिए समय काफ़ी लंबा है — 12 साल (अनुच्छेद 64-65)। ज़मीन-जायदाद के झगड़े धीरे चलते हैं, इसलिए क़ानून ने यहाँ पैसे के दावे से ज़्यादा समय दिया है।"
     },
     {
      "en": "An appeal to the High Court from a decree must be filed within 90 days (Article 116). Ninety days sounds generous until you are chasing certified copies, so do not sit on it.",
@@ -2757,7 +2757,7 @@
     },
     {
      "en": "Here is the reassuring part: misjoinder or non-joinder of parties does not defeat a suit by itself (Order I Rule 9). The exception is a necessary party — if they are missing, the court may order them to be added.",
-     "hi": "एक राहत वाली बात — ग़लत संयोजन या किसी पक्ष का न जुड़ना अपने आप वाद को ख़त्म नहीं करता। अपवाद सिर्फ़ आवश्यक पक्षकार का है — वो न हो तो कोर्ट उसे जोड़ने का आदेश दे सकता है।"
+     "hi": "एक राहत वाली बात — ग़लत संयोजन या किसी पक्ष का न जुड़ना (आदेश I नियम 9) अपने आप वाद को ख़त्म नहीं करता। अपवाद सिर्फ़ आवश्यक पक्षकार का है — वो न हो तो कोर्ट उसे जोड़ने का आदेश दे सकता है।"
     },
     {
      "en": "Necessary party versus proper party is a favourite distinction, so get it straight. A necessary party is one without whom no effective decree can be passed; a proper party is one whose presence helps decide the dispute completely, though the decree could still pass without them.",
@@ -2829,7 +2829,7 @@
     },
     {
      "en": "For limitation, keep the three numbers straight: first appeal to the District Court is 30 days and to the High Court 90 days from the decree; second appeal to the High Court is 90 days (Article 116, Limitation Act). Delay can be condoned under Section 5 only on sufficient cause, and Order XLI Rule 3A requires the delay application to accompany the appeal memo.",
-     "hi": "परिसीमा के तीन नंबर सीधे याद रखो — ज़िला कोर्ट में पहली अपील डिक्री से 30 दिन में, हाई कोर्ट में 90 दिन में, और हाई कोर्ट में दूसरी अपील भी 90 दिन में। विलंब सिर्फ़ पर्याप्त कारण पर धारा 5 में माफ़ हो सकता है, और आदेश XLI नियम 3A के तहत विलंब का आवेदन अपील ज्ञापन के साथ ही देना होता है।"
+     "hi": "परिसीमा के तीन नंबर सीधे याद रखो — ज़िला कोर्ट में पहली अपील डिक्री से 30 दिन में, हाई कोर्ट में 90 दिन में, और हाई कोर्ट में दूसरी अपील भी 90 दिन में (अनुच्छेद 116, परिसीमा अधिनियम)। विलंब सिर्फ़ पर्याप्त कारण पर धारा 5 में माफ़ हो सकता है, और आदेश XLI नियम 3A के तहत विलंब का आवेदन अपील ज्ञापन के साथ ही देना होता है।"
     }
    ],
    "sections": "Sec 96, 100, 107 CPC; Order XLI (first appeal), Order XLII (second appeal), Order XLIII (appeals from orders)",
@@ -2847,7 +2847,7 @@
     },
     {
      "en": "Section 51 gives the modes: delivery of property (Rule 35 — possession, including breaking open doors with court permission); attachment and sale of property (Rules 43, 64); arrest and detention of the judgment-debtor; appointment of a receiver; or any other manner the nature of the relief requires.",
-     "hi": "धारा 51 में तरीके गिनाए गए हैं — संपत्ति का परिदान, जिसमें कोर्ट की अनुमति से दरवाज़े तोड़कर कब्ज़ा भी शामिल है; संपत्ति की कुर्की और बिक्री; निर्णय-ऋणी की गिरफ़्तारी और निरोध; रिसीवर की नियुक्ति; या राहत की प्रकृति के हिसाब से कोई और तरीका।"
+     "hi": "धारा 51 में तरीके गिनाए गए हैं — संपत्ति का परिदान (नियम 35), जिसमें कोर्ट की अनुमति से दरवाज़े तोड़कर कब्ज़ा भी शामिल है; संपत्ति की कुर्की और बिक्री (नियम 43, 64); निर्णय-ऋणी की गिरफ़्तारी और निरोध; रिसीवर की नियुक्ति; या राहत की प्रकृति के हिसाब से कोई और तरीका।"
     },
     {
      "en": "Objections have their own tracks: under Order XXI Rule 58, a third party claiming interest in attached property may object. Under Rules 97-103, resistance or obstruction to delivery of possession is decided by the executing court itself, and its order is treated as a decree (so appealable) — meaning a separate suit is barred by Rule 101.",
@@ -2855,7 +2855,7 @@
     },
     {
      "en": "Limitation here is 12 years for execution of a decree (Article 136, Limitation Act, 1963), except a decree for mandatory injunction, which gets 3 years. And notice under Rule 22 is mandatory when execution is sought more than 2 years after the decree, or against legal representatives.",
-     "hi": "यहाँ परिसीमा डिक्री के निष्पादन के लिए 12 साल है, सिवाय अनिवार्य व्यादेश की डिक्री के, जिसके लिए 3 साल हैं। और डिक्री के 2 साल से ज़्यादा बाद या विधिक प्रतिनिधियों के ख़िलाफ़ निष्पादन चाहो तो नियम 22 का नोटिस ज़रूरी है।"
+     "hi": "यहाँ परिसीमा डिक्री के निष्पादन के लिए 12 साल है (अनुच्छेद 136, परिसीमा अधिनियम, 1963), सिवाय अनिवार्य व्यादेश की डिक्री के, जिसके लिए 3 साल हैं। और डिक्री के 2 साल से ज़्यादा बाद या विधिक प्रतिनिधियों के ख़िलाफ़ निष्पादन चाहो तो नियम 22 का नोटिस ज़रूरी है।"
     },
     {
      "en": "For stay of execution, Rule 26 lets the executing court stay execution for a reasonable time so the judgment-debtor can appeal or apply for review. The appellate court can also stay under Order XLI Rule 5, usually on security terms — so there are two doors, not one.",
