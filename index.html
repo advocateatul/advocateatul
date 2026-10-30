@@ -376,6 +376,13 @@
     .hero h1 { font-family: "Playfair Display", Georgia, serif; font-weight: 800; text-transform: uppercase; letter-spacing: -.01em; font-size: clamp(2rem, 5.6vw, 4.9rem); max-width: 640px; padding-right: 60px; }
     .hero-copy { max-width: 560px; margin: 28px 0 0; color: rgba(0,0,0,.66); font-size: clamp(1rem, 1.4vw, 1.15rem); }
     .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 38px; }
+    .hero-ask { margin-top: 22px; max-width: 560px; }
+    .hero-ask-label { display: block; font-weight: 700; margin-bottom: 8px; color: #1e1e1e; }
+    html[data-theme="dark"] .hero-ask-label { color: #F5F5F5; }
+    .hero-ask-row { display: flex; gap: 10px; }
+    .hero-ask-row input { flex: 1; min-width: 0; padding: 12px 16px; border-radius: 999px; border: 1px solid rgba(0,0,0,.2); background: rgba(255,255,255,.96); color: #1e1e1e; font-size: 1rem; }
+    .hero-ask-row .button { flex: 0 0 auto; }
+    @media (max-width: 520px) { .hero-ask-row { flex-wrap: wrap; } .hero-ask-row input { flex: 1 1 100%; } }
     .button {
       min-height: 49px;
       display: inline-flex;
@@ -1695,6 +1702,13 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           <div class="hero-actions">
             <a class="button primary" href="#contact"><span data-i18n="requestConsultation">💬 Request a consultation</span> <span aria-hidden="true">→</span></a>
           </div>
+          <form class="hero-ask" id="heroAskForm">
+            <label class="hero-ask-label" for="heroAskInput" data-i18n="askDoubtLabel">❓ Ask any doubt</label>
+            <div class="hero-ask-row">
+              <input id="heroAskInput" type="text" maxlength="500" placeholder="Any legal question? कोई भी कानूनी सवाल पूछें — civil, criminal, property, kuch bhi…" />
+              <button class="button primary" type="submit"><span data-i18n="askDoubtBtn">Ask ➤</span></button>
+            </div>
+          </form>
         </div>
         <aside class="hero-note">
           <span id="profileSummary">Criminal Lawyer · 2 years’ experience · Bulandshahr District Court</span>
@@ -1702,6 +1716,9 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
       </div>
     </section>
 
+    <script>
+    (function () { var f = document.getElementById("heroAskForm"); if (!f) return; f.addEventListener("submit", function (ev) { ev.preventDefault(); var inp = document.getElementById("heroAskInput"); var q = inp ? inp.value.trim() : ""; if (!q) { if (inp) inp.focus(); return; } if (window.laAskDetailed) window.laAskDetailed(q); else if (window.laAskAbout) window.laAskAbout(q); }); })();
+    </script>
     <section class="practice" id="practice" aria-labelledby="practice-title">
       <div class="shell">
         <div class="practice-heading">
@@ -2345,6 +2362,8 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           heroLineOne: "Clear counsel.",
           heroLineTwo: "Measured action.",
           heroCopy: "Focused criminal-law guidance built on careful preparation, direct communication and respect for every matter entrusted to the practice.",
+          askDoubtLabel: "❓ Ask any doubt",
+          askDoubtBtn: "Ask ➤",
           requestConsultation: "💬 Request a consultation",
           explorePractice: "Explore practice area",
           professionalProfile: "Professional profile",
@@ -2623,6 +2642,8 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           heroLineOne: "स्पष्ट सलाह।",
           heroLineTwo: "संतुलित कार्रवाई।",
           heroCopy: "सावधानीपूर्ण तैयारी, सीधे संवाद और हर सौंपे गए मामले के सम्मान पर आधारित आपराधिक कानून संबंधी केंद्रित मार्गदर्शन।",
+          askDoubtLabel: "❓ कोई भी सवाल पूछें",
+          askDoubtBtn: "पूछें ➤",
           requestConsultation: "💬 परामर्श का अनुरोध करें",
           explorePractice: "कार्य क्षेत्र देखें",
           professionalProfile: "व्यावसायिक परिचय",
@@ -6411,8 +6432,8 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
       }
       function laDetailSystem(lang) {
         return lang === "hi"
-          ? "आप LawAssist हैं — Advocate Atul Kumar की वेबसाइट के AI सहायक (आपराधिक वकील, बुलंदशहर जिला न्यायालय, उत्तर प्रदेश)। केवल भारतीय कानून पर उत्तर दें, हिंदी में। एक विस्तृत शोध उत्तर दें (संक्षिप्त उत्तर नहीं), बोल्ड शीर्षकों के साथ ठीक इसी संरचना में: **संक्षिप्त उत्तर:** एक अनुच्छेद में निष्कर्ष। **लागू कानून:** सही धाराएँ (BNS/BNSS/BSA/NI Act/CPC) और प्रत्येक का प्रावधान। **मुख्य निर्णय:** केवल वास्तविक, प्रसिद्ध निर्णय; कभी फ़र्ज़ी citation न बनाएँ — अनिश्चित हो तो वही लिखें। **प्रक्रिया / अगले कदम:** क्रमवार व्यावहारिक कदम। **सावधानी:** सीमाएँ और किस बात पर वकील की समीक्षा ज़रूरी है। सटीक और व्यावहारिक रहें। केवल देवनागरी लिपि में लिखें — रोमन लिपि का बिल्कुल प्रयोग न करें। अंत में एक पंक्ति जोड़ें: 'विस्तृत सलाह के लिए 7456022448 पर WhatsApp करें।'"
-          : "You are LawAssist — the AI assistant on Advocate Atul Kumar's website (criminal lawyer, Bulandshahr District Court, UP). Answer ONLY about Indian law, in English. Give a DETAILED research answer (not a short reply), structured with bold section labels exactly like this: **Short answer:** one-paragraph conclusion. **Applicable law:** the correct sections (BNS/BNSS/BSA/NI Act/CPC) and what each provides. **Key cases:** only real, well-known cases; never invent a case citation — if unsure, say so. **Procedure / next steps:** practical steps in order. **Caution:** limits and what needs a lawyer's review. Be accurate and practical. End with one line: 'For detailed advice, WhatsApp 7456022448.'";
+          ? "आप LawAssist हैं — Advocate Atul Kumar की वेबसाइट के AI सहायक (आपराधिक वकील, बुलंदशहर जिला न्यायालय, उत्तर प्रदेश)। केवल भारतीय कानून पर उत्तर दें, हिंदी में। एक विस्तृत शोध उत्तर दें (संक्षिप्त उत्तर नहीं), बोल्ड शीर्षकों के साथ ठीक इसी संरचना में: **संक्षिप्त उत्तर:** एक अनुच्छेद में निष्कर्ष। **लागू कानून:** सही धाराएँ (BNS/BNSS/BSA/NI Act/CPC) और प्रत्येक का प्रावधान। **मुख्य निर्णय:** केवल वास्तविक, प्रसिद्ध निर्णय; कभी फ़र्ज़ी citation न बनाएँ — अनिश्चित हो तो वही लिखें। हर धारा संख्या को दोबारा जाँचें; जिस धारा के बारे में पक्का न हों उसे लिखने के बजाय छोड़ दें। **प्रक्रिया / अगले कदम:** क्रमवार व्यावहारिक कदम। **सावधानी:** सीमाएँ और किस बात पर वकील की समीक्षा ज़रूरी है। सटीक और व्यावहारिक रहें। केवल देवनागरी लिपि में लिखें — रोमन लिपि का बिल्कुल प्रयोग न करें। अंत में एक पंक्ति जोड़ें: 'विस्तृत सलाह के लिए 7456022448 पर WhatsApp करें।'"
+          : "You are LawAssist — the AI assistant on Advocate Atul Kumar's website (criminal lawyer, Bulandshahr District Court, UP). Answer ONLY about Indian law, in English. Give a DETAILED research answer (not a short reply), structured with bold section labels exactly like this: **Short answer:** one-paragraph conclusion. **Applicable law:** the correct sections (BNS/BNSS/BSA/NI Act/CPC) and what each provides. **Key cases:** only real, well-known cases; never invent a case citation — if unsure, say so. Double-check every section number you cite; omit any section you are not sure about instead of guessing. **Procedure / next steps:** practical steps in order. **Caution:** limits and what needs a lawyer's review. Be accurate and practical. End with one line: 'For detailed advice, WhatsApp 7456022448.'";
       }
       function laMockSystem(lang) {
         return lang === "hi"
@@ -6656,6 +6677,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
       }
       /* Clears the in-memory chat + scan workspace (used on logout so the next user sees nothing). */
       window.laAskAbout = function (q) { try { openPanel(); switchTab("research"); respond(q); } catch (e) {} };
+      window.laAskDetailed = function (q) { try { laDetailed = true; try { localStorage.setItem("laDetailed", "1"); } catch (e2) {} var db2 = document.getElementById("laDetailBtn"); if (db2) { db2.classList.add("la-detail-on"); db2.setAttribute("aria-pressed", "true"); db2.textContent = "\uD83D\uDD0D\u2713"; } openPanel(); switchTab("research"); respond(q); } catch (e) {} };
       window.laClearWorkspace = function () {
         try {
           LA_HIST.length = 0;
