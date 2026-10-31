@@ -6546,13 +6546,14 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         } catch (e) { clearTimeout(to); fin(null); }
       }
       /* OpenRouter free-model backup (text only) — via the Render proxy,
-         so no key ever lives in this public file. Runs after Gemini/Groq. */
-      function askOpenRouter(q, lang, cb, sys) {
+         so no key ever lives in this public file. Runs right after Gemini,
+         before Groq (Nemotron re-test 2026-10-31). */
+      function askOpenRouter(q, lang, cb, sys, tokens) {
         if (!GEMINI_PROXY) { cb(null); return; }
         var done = false;
         function fin(v) { if (!done) { done = true; cb(v); } }
         var ctrl = (typeof AbortController !== "undefined") ? new AbortController() : null;
-        var to = setTimeout(function () { try { ctrl && ctrl.abort(); } catch (e) {} fin(null); }, 15000);
+        var to = setTimeout(function () { try { ctrl && ctrl.abort(); } catch (e) {} fin(null); }, (tokens && tokens >= 1000) ? 90000 : 15000);
         var prompt = "";
         try {
           prompt = (sys || geminiSystem(lang)) + "\n\n";
@@ -6607,12 +6608,12 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
       function aiAsk(q, lang, sys, tokens, cb) {
         askGemini(q, lang, function (gt) {
           if (gt) { cb(gt); return; }
-          askGroq(q, lang, function (gq) {
-            if (gq) { cb(gq); return; }
-            askGroqProxy(q, lang, function (gp) {
-              if (gp) { cb(gp); return; }
-              askOpenRouter(q, lang, function (or) {
-                if (or) { cb(or); return; }
+          askOpenRouter(q, lang, function (or) {
+            if (or) { cb(or); return; }
+            askGroq(q, lang, function (gq) {
+              if (gq) { cb(gq); return; }
+              askGroqProxy(q, lang, function (gp) {
+                if (gp) { cb(gp); return; }
                 askHf(q, lang, function (hf) {
                   if (hf) { cb(hf); return; }
                   askCf(q, lang, function (cf) {
@@ -6621,7 +6622,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
                   }, sys);
                 }, sys);
               }, sys);
-            }, sys);
+            }, sys, tokens);
           }, sys, tokens);
         }, sys, tokens);
       }
@@ -7296,12 +7297,12 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         function aiChain(sys, tokens, counted) {
           askGemini(qAI, lang, function (aiText) {
             if (aiOk(aiText)) { done(aiText, builtin.sources, true); return; }
-            askGroq(qAI, lang, function (gqText) {
-              if (aiOk(gqText)) { done(gqText, builtin.sources, true); return; }
-              askGroqProxy(qAI, lang, function (gpText) {
-                if (aiOk(gpText)) { done(gpText, builtin.sources, true); return; }
-                askOpenRouter(qAI, lang, function (orText) {
-                  if (aiOk(orText)) { done(orText, builtin.sources, true); return; }
+            askOpenRouter(qAI, lang, function (orText) {
+              if (aiOk(orText)) { done(orText, builtin.sources, true); return; }
+              askGroq(qAI, lang, function (gqText) {
+                if (aiOk(gqText)) { done(gqText, builtin.sources, true); return; }
+                askGroqProxy(qAI, lang, function (gpText) {
+                  if (aiOk(gpText)) { done(gpText, builtin.sources, true); return; }
                   askHf(qAI, lang, function (hfText) {
                     if (aiOk(hfText)) { done(hfText, builtin.sources, true); return; }
                     askCf(qAI, lang, function (cfText) {
@@ -7313,7 +7314,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
                     }, sys);
                   }, sys);
                 }, sys);
-              }, sys);
+              }, sys, tokens);
             }, sys, tokens);
           }, sys, tokens);
         }
