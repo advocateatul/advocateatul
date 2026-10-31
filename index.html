@@ -8363,7 +8363,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
   "use strict";
 
   var FIREBASE_CONFIG = {"apiKey": "AIzaSyCZT1SUpgT2IPuwXdJlz5PmCU3P2txOUK4", "appId": "1:553558535319:web:bbbfd7ad4e24ce2c8ecdd2", "authDomain": "ak-legal-law.firebaseapp.com", "messagingSenderId": "553558535319", "projectId": "ak-legal-law", "storageBucket": "ak-legal-law.firebasestorage.app"};
-  var DAILY_AI_LIMIT = 25; // per-user AI calls per day — protects the free API quota
+  var DAILY_AI_LIMIT = Infinity; // unlimited AI answers per user per day (user order 2026-10-31)
 
   function t(en, hi) {
     try { return document.documentElement.getAttribute("lang") === "hi" ? hi : en; } catch (e) { return en; }
