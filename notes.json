@@ -115,8 +115,8 @@
      "hi": "पुराने राजद्रोह से यही सबसे बड़ा फर्क है, और यही बात सबसे ज़्यादा काम की है — धारा 152 सिर्फ उन कामों पर लगती है जो संप्रभुता या अखंडता को खतरे में डालें। सरकार की सिर्फ आलोचना करना, बिना किसी खतरे के, अपराध नहीं है — केदार नाथ सिंह वाली सोच अब भी कायम है।"
     },
     {
-     "en": "Two more in this chapter to note: assaulting the President or a Governor with intent to overawe them is Sec 154, and collecting arms with the intent of waging war is Sec 149.",
-     "hi": "इस अध्याय में दो और धाराएं याद रखो — राष्ट्रपति या राज्यपाल को डराने के इरादे से उन पर हमला करना धारा 154 है, और युद्ध छेड़ने के इरादे से हथियार इकट्ठा करना धारा 149 है।"
+     "en": "Two more in this chapter to note: assaulting the President or a Governor with intent to overawe them is Sec 151, and collecting arms with the intent of waging war is Sec 149.",
+     "hi": "इस अध्याय में दो और धाराएं याद रखो — राष्ट्रपति या राज्यपाल को डराने के इरादे से उन पर हमला करना धारा 151 है, और युद्ध छेड़ने के इरादे से हथियार इकट्ठा करना धारा 149 है।"
     },
     {
      "en": "A useful exam shortcut for this whole chapter: all these offences are cognizable, non-bailable, and triable by the Court of Session. If a question asks about procedure here, that one line often answers it.",
@@ -156,10 +156,10 @@
   },
   {
    "title": {
-    "en": "Hurt & Grievous Hurt (Sec 115-117)",
-    "hi": "उपहति व गंभीर उपहति (धारा 115-117)"
+    "en": "Hurt & Grievous Hurt (Sec 115-118)",
+    "hi": "उपहति व गंभीर उपहति (धारा 115-118)"
    },
-   "sections": "Sec 115 (hurt), Sec 116 (grievous hurt), Sec 117 (punishment); old Sec 319-326 IPC",
+   "sections": "Sec 115 (hurt), Sec 116 (grievous hurt), Sec 117-118 (punishment); old Sec 319-326 IPC",
    "cases": "State of UP v. Ram Swarup (grievous hurt)",
    "points": [
     {
@@ -167,20 +167,20 @@
      "hi": "धारा 115 वाली उपहति का मतलब सीधा है — शरीर में दर्द, बीमारी या कमज़ोरी पहुंचाना, जैसे थप्पड़ मारना या पीटना। सज़ा 1 साल तक या 10,000 रुपये तक जुर्माना है।"
     },
     {
-     "en": "Grievous hurt under Sec 116 is a closed list of 8 kinds — emasculation, permanent damage to eye or ear, privation of a joint, permanent disfiguration, fracture, an injury dangerous to life, 20 days of severe pain, and the rest. Learn it as a list, because examiners love asking which kind it is.",
-     "hi": "धारा 116 वाली गंभीर उपहति 8 तरह की होती है, ये सूची बंद है — नपुंसकता, आंख या कान को स्थायी नुकसान, जोड़ से वंचित करना, स्थायी बदसूरती, हड्डी टूटना, जान को खतरा वाली चोट, 20 दिन की तेज़ पीड़ा वगैरह। इसे सूची की तरह याद करो, क्योंकि परीक्षा में अक्सर यही पूछा जाता है कि ये किस तरह की चोट है।"
+     "en": "Grievous hurt under Sec 116 is a closed list of 8 kinds — emasculation, permanent damage to eye or ear, privation of a joint, permanent disfiguration, fracture, an injury dangerous to life, 15 days of severe pain, and the rest. Learn it as a list, because examiners love asking which kind it is.",
+     "hi": "धारा 116 वाली गंभीर उपहति 8 तरह की होती है, ये सूची बंद है — नपुंसकता, आंख या कान को स्थायी नुकसान, जोड़ से वंचित करना, स्थायी बदसूरती, हड्डी टूटना, जान को खतरा वाली चोट, 15 दिन की तेज़ पीड़ा वगैरह। इसे सूची की तरह याद करो, क्योंकि परीक्षा में अक्सर यही पूछा जाता है कि ये किस तरह की चोट है।"
     },
     {
-     "en": "The punishment jumps with the weapon: voluntarily causing grievous hurt under Sec 117(2) is up to 7 years plus fine, but with dangerous weapons under Sec 117(3) it is life or up to 10 years plus fine. The weapon changes the whole seriousness.",
-     "hi": "सज़ा हथियार के साथ बढ़ जाती है — स्वेच्छा से गंभीर उपहति, धारा 117(2), में 7 साल तक की सज़ा के साथ जुर्माना है, पर खतरनाक हथियार से, धारा 117(3), में आजीवन या 10 साल तक की सज़ा के साथ जुर्माना हो जाता है। हथियार ही पूरी गंभीरता बदल देता है।"
+     "en": "The punishment jumps with the weapon: voluntarily causing grievous hurt under Sec 117(2) is up to 7 years plus fine, but with dangerous weapons under Sec 118(2) it is life or up to 10 years plus fine. The weapon changes the whole seriousness.",
+     "hi": "सज़ा हथियार के साथ बढ़ जाती है — स्वेच्छा से गंभीर उपहति, धारा 117(2), में 7 साल तक की सज़ा के साथ जुर्माना है, पर खतरनाक हथियार से, धारा 118(2), में आजीवन या 10 साल तक की सज़ा के साथ जुर्माना हो जाता है। हथियार ही पूरी गंभीरता बदल देता है।"
     },
     {
      "en": "Acid attack now has its own dedicated Sec 124, and that is new. Throwing acid gets a minimum of 10 years up to life plus a fine for medical expenses; even the attempt gets 5-7 years. The law finally treats it as its own crime, not just another hurt.",
      "hi": "एसिड हमले के लिए अब अलग धारा 124 बना दी गई है, और ये नई बात है। एसिड फेंकने पर कम से कम 10 साल से लेकर आजीवन तक की सज़ा के साथ इलाज के खर्च के लिए जुर्माना है; सिर्फ कोशिश करने पर भी 5 से 7 साल की सज़ा है। अब कानून इसे मामूली चोट नहीं, अलग अपराध मानता है।"
     },
     {
-     "en": "Here is the distinction tip students keep missing: 20 days of severe bodily pain alone makes hurt 'grievous', even if no bone is broken. So do not wait for a fracture before calling it grievous.",
-     "hi": "ये वो फर्क है जो अक्सर छूट जाता है — सिर्फ 20 दिन की तेज़ शारीरिक पीड़ा ही उपहति को 'गंभीर' बना देती है, भले ही कोई हड्डी न टूटी हो। इसलिए गंभीर कहने के लिए हड्डी टूटने का इंतज़ार मत करो।"
+     "en": "Here is the distinction tip students keep missing: 15 days of severe bodily pain alone makes hurt 'grievous', even if no bone is broken. So do not wait for a fracture before calling it grievous.",
+     "hi": "ये वो फर्क है जो अक्सर छूट जाता है — सिर्फ 15 दिन की तेज़ शारीरिक पीड़ा ही उपहति को 'गंभीर' बना देती है, भले ही कोई हड्डी न टूटी हो। इसलिए गंभीर कहने के लिए हड्डी टूटने का इंतज़ार मत करो।"
     }
    ]
   },
