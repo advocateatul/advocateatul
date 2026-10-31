@@ -547,6 +547,8 @@
     .draft-use strong { color: var(--ink); font-weight: 600; }
     .draft-filedin { margin: 8px 0 0; color: var(--muted); font-size: .85rem; max-width: 780px; }
     .draft-filedin strong { color: var(--ink); font-weight: 600; }
+    .draft-when { margin: 8px 0 0; color: var(--muted); font-size: .85rem; max-width: 780px; }
+    .draft-when strong { color: var(--ink); font-weight: 600; }
     .draft-body { margin-top: 20px; max-width: 860px; }
     .draft-legalref { background: var(--paper-2); border: 1px solid var(--line); border-left: 3px solid #1e1e1e; border-radius: 0 12px 12px 0; padding: 16px 18px; margin: 0 0 18px; }
     .draft-legalref-title { font-size: .72rem; letter-spacing: .12em; text-transform: uppercase; color: var(--ink); font-weight: 700; margin: 0 0 10px; }
@@ -2328,6 +2330,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           guideUsedFor: "Used for",
           guideSections: "Sections",
           guideFiledIn: "Filed in",
+          guideWhen: "When",
           guideNeeds: "What you need",
           guideViewDraft: "View full draft \u2192",
           draftsKicker: "Legal drafts",
@@ -2343,6 +2346,8 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           draftsPrint: "Print",
           draftsWhenToUse: "When to use",
           draftsFiledIn: "Filed in",
+          draftsWhen: "When",
+          draftsPurpose: "Purpose",
           draftsLegalRef: "Legal reference",
           draftsSections: "Applicable sections",
           draftsJurisdiction: "Jurisdiction",
@@ -2609,6 +2614,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           guideUsedFor: "\u0915\u093f\u0938 \u0915\u093e\u092e \u0906\u0924\u093e \u0939\u0948",
           guideSections: "\u0927\u093e\u0930\u093e\u090f\u0902",
           guideFiledIn: "\u0915\u0939\u093e\u0901 \u0926\u093e\u0916\u093f\u0932 \u0915\u0930\u0947\u0902",
+          guideWhen: "\u0915\u092c",
           guideNeeds: "\u0915\u094d\u092f\u093e \u091a\u093e\u0939\u093f\u090f",
           guideViewDraft: "\u092a\u0942\u0930\u094d\u0923 \u092a\u094d\u0930\u093e\u0930\u0942\u092a \u0926\u0947\u0916\u0947\u0902 \u2192",
           draftsKicker: "\u0915\u093e\u0928\u0942\u0928\u0940 \u092a\u094d\u0930\u093e\u0930\u0942\u092a",
@@ -2624,6 +2630,8 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           draftsPrint: "\u092a\u094d\u0930\u093f\u0902\u091f",
           draftsWhenToUse: "\u0915\u092c \u0909\u092a\u092f\u094b\u0917 \u0915\u0930\u0947\u0902",
           draftsFiledIn: "\u0915\u0939\u093e\u0901 \u0926\u093e\u0916\u093f\u0932 \u0915\u0930\u0947\u0902",
+          draftsWhen: "\u0915\u092c",
+          draftsPurpose: "\u0915\u093f\u0938\u0932\u093f\u090f",
           draftsLegalRef: "\u0915\u093e\u0928\u0942\u0928\u0940 \u0938\u0902\u0926\u0930\u094d\u092d",
           draftsSections: "\u0932\u093e\u0917\u0942 \u0927\u093e\u0930\u093e\u090f\u0902",
           draftsJurisdiction: "\u0905\u0927\u093f\u0915\u093e\u0930 \u0915\u094d\u0937\u0947\u0924\u094d\u0930",
@@ -4496,13 +4504,15 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         h3.textContent = d.title[lang] || d.title.en;
         headDiv.appendChild(h3);
 
-        var use = document.createElement("p");
-        use.className = "draft-use";
-        var useLabel = document.createElement("strong");
-        useLabel.textContent = dt("draftsWhenToUse", lang) + ": ";
-        use.appendChild(useLabel);
-        use.appendChild(document.createTextNode(d.use[lang] || d.use.en));
-        headDiv.appendChild(use);
+        if (d.when) {
+          var wh = document.createElement("p");
+          wh.className = "draft-when";
+          var whLabel = document.createElement("strong");
+          whLabel.textContent = dt("draftsWhen", lang) + ": ";
+          wh.appendChild(whLabel);
+          wh.appendChild(document.createTextNode(d.when[lang] || d.when.en));
+          headDiv.appendChild(wh);
+        }
 
         if (d.filedIn) {
           var fi = document.createElement("p");
@@ -4513,6 +4523,14 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           fi.appendChild(document.createTextNode(d.filedIn[lang] || d.filedIn.en));
           headDiv.appendChild(fi);
         }
+
+        var use = document.createElement("p");
+        use.className = "draft-use";
+        var useLabel = document.createElement("strong");
+        useLabel.textContent = dt("draftsPurpose", lang) + ": ";
+        use.appendChild(useLabel);
+        use.appendChild(document.createTextNode(d.use[lang] || d.use.en));
+        headDiv.appendChild(use);
         top.appendChild(headDiv);
 
         var actionsWrap = document.createElement("div");
@@ -4948,9 +4966,10 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           p.appendChild(document.createTextNode(value));
           card.appendChild(p);
         }
+        if (d.when) addRow("guideWhen", d.when[lang] || d.when.en);
+        if (d.filedIn) addRow("guideFiledIn", d.filedIn[lang] || d.filedIn.en);
         addRow("guideUsedFor", d.use[lang] || d.use.en);
         if (d.sections) addRow("guideSections", d.sections[lang] || d.sections.en);
-        if (d.filedIn) addRow("guideFiledIn", d.filedIn[lang] || d.filedIn.en);
 
         if (d.requirements && (d.requirements[lang] || d.requirements.en)) {
           var reqLabel = document.createElement("p");
@@ -6302,9 +6321,43 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         { en: "Maintenance law", hi: "भरण-पोषण कानून" }
       ];
 
+      /* Document guide trio: "X kab / kahan / kisliye use hota hai" -> structured answer in the asked language */
+      function docGuideTrio(query, drafts, lang) {
+        var q = String(query || "");
+        var ql = q.toLowerCase();
+        var intent = /\b(kab|kahan|kahaan|kaha|kisliye|kis\s+liye|kis\s+kaam|kaam\s+aata|kam\s+aata|when|where|purpose|used\s+for|use\s+hota)\b/.test(ql) || /कब|कहाँ|कहां|किसलिए|किस\s+लिये|किस\s+काम/.test(q);
+        if (!intent) return null;
+        var GEN = { application: 1, petition: 1, draft: 1, format: 1, form: 1, suit: 1, आवेदन: 1, याचिका: 1, प्रपत्र: 1, प्रारूप: 1, वाद: 1 };
+        function stripTitle(t) {
+          var s = String(t || "").replace(/\([^)]*\)/g, " ");
+          return tokens(s).filter(function (w) { return !GEN[w]; });
+        }
+        var qw = ql.replace(/[^\p{L}\p{N}\s]/gu, " ").split(/\s+/);
+        function hasAll(words) { if (!words.length) return false; for (var i = 0; i < words.length; i++) if (qw.indexOf(words[i]) === -1) return false; return true; }
+        var bestD = null, bestScore = -1, bestStrong = false;
+        (drafts || []).forEach(function (d) {
+          var enW = stripTitle(d.title && d.title.en), hiW = stripTitle(d.title && d.title.hi);
+          var strong = hasAll(enW) || hasAll(hiW);
+          var sc = Math.max(overlap(q, (d.title && d.title.en) || ""), overlap(q, (d.title && d.title.hi) || ""));
+          if (strong) sc += 10 + Math.max(enW.length, hiW.length);
+          if (sc > bestScore) { bestScore = sc; bestD = d; bestStrong = strong; }
+        });
+        if (!bestD || (!bestStrong && bestScore < 4)) return null;
+        function T(o) { if (!o) return ""; if (lang === "hinglish") { var h = o.hi || o.en || ""; try { if (typeof window.akDevToRoman === "function") return window.akDevToRoman(h); } catch (e) {} return h; } return lang === "hi" ? (o.hi || o.en || "") : (o.en || ""); }
+        var parts = [];
+        parts.push("<strong>" + esc(T(bestD.title)) + "</strong>");
+        if (bestD.when) parts.push(esc(T({ en: "When", hi: "कब" })) + ": " + esc(T(bestD.when)));
+        if (bestD.where) parts.push(esc(T({ en: "Where", hi: "कहाँ" })) + ": " + esc(T(bestD.where)));
+        if (bestD.use) parts.push(esc(T({ en: "Purpose", hi: "किसलिए" })) + ": " + esc(T(bestD.use)));
+        return { html: parts.join("<br>"), sources: [{ t: "draft", d: bestD }] };
+      }
+
       function research(query, langOv) {
         var lang = langOv || laLang(), drafts = getDrafts(), kb = getKB(), judges = getJudgements(), vocab = getVocab();
         function laT(o) { if (!o) return ""; if (lang === "hinglish") { var h = o.hi || o.en || ""; try { if (typeof window.akDevToRoman === "function") return window.akDevToRoman(h); } catch (e) {} return h; } return lang === "hi" ? (o.hi || o.en || "") : (o.en || ""); }
+        // 0. Document guide trio (kab / kahan / kisliye) for a named document
+        var docInfo = docGuideTrio(query, drafts, lang);
+        if (docInfo) return docInfo;
         var best = null, bestScore = 0, i, s, k;
         // 1. Knowledge base (42 entries)
         for (i = 0; i < kb.length; i++) {
