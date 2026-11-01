@@ -269,8 +269,8 @@
      "hi": "सुब्रमण्यम स्वामी (2016) में आपराधिक मानहानि को संवैधानिक ठहराया गया। अदालत ने अनुच्छेद 19(1)(क) वाली अभिव्यक्ति की आज़ादी और अनुच्छेद 21 वाले प्रतिष्ठा के अधिकार के बीच संतुलन बनाया — प्रतिष्ठा को भी एक असली अधिकार माना गया।"
     },
     {
-     "en": "There is a civil route too, not just a criminal one: a suit for damages can be filed, and a criminal complaint is usually filed before a Magistrate, generally as a Sec 175 BNSS complaint. The two remedies run side by side.",
-     "hi": "सिर्फ आपराधिक रास्ता ही नहीं, दीवानी रास्ता भी है — हर्जाने का मुकदमा दायर किया जा सकता है, और आपराधिक शिकायत आमतौर पर मजिस्ट्रेट के सामने, सामान्यतः धारा 175 BNSS की शिकायत के रूप में की जाती है। दोनों उपचार साथ-साथ चलते हैं।"
+     "en": "There is a civil route too, not just a criminal one: a suit for damages can be filed, and a criminal complaint is usually filed before a Magistrate, generally as a Sec 223 BNSS complaint. The two remedies run side by side.",
+     "hi": "सिर्फ आपराधिक रास्ता ही नहीं, दीवानी रास्ता भी है — हर्जाने का मुकदमा दायर किया जा सकता है, और आपराधिक शिकायत आमतौर पर मजिस्ट्रेट के सामने, सामान्यतः धारा 223 BNSS की शिकायत के रूप में की जाती है। दोनों उपचार साथ-साथ चलते हैं।"
     }
    ]
   },
@@ -881,8 +881,8 @@
      "hi": "FIR की अपनी प्रति हमेशा मुफ्त में लेना — धारा 173(2) के तहत सूचनाकर्ता को यह निःशुल्क मिलती है, और यही प्रति इस बात का सबूत है कि शिकायत सच में दर्ज हुई। संवेदनशील मामलों में इसे 24 घंटे के अंदर पुलिस की वेबसाइट पर भी डालना होता है, ताकि एक खुला रिकॉर्ड भी रहे।"
     },
     {
-     "en": "If the station refuses to register, do not keep arguing at the desk — you have two clear doors. One, apply to the SP under Sec 173(4); two, file a complaint before the Magistrate under Sec 175 BNSS.",
-     "hi": "अगर थाना FIR दर्ज करने से मना कर दे तो डेस्क पर बहस में समय बर्बाद मत करना — आपके पास दो साफ रास्ते हैं। एक, धारा 173(4) के तहत SP को आवेदन देना; दूसरा, धारा 175 BNSS के तहत मजिस्ट्रेट के सामने परिवाद दाखिल करना।"
+     "en": "If the station refuses to register, do not keep arguing at the desk — you have two clear doors. One, apply to the SP under Sec 173(4); two, apply to the Magistrate under Sec 175(3) BNSS for a direction to investigate.",
+     "hi": "अगर थाना FIR दर्ज करने से मना कर दे तो डेस्क पर बहस में समय बर्बाद मत करना — आपके पास दो साफ रास्ते हैं। एक, धारा 173(4) के तहत SP को आवेदन देना; दूसरा, धारा 175(3) BNSS के तहत मजिस्ट्रेट से जांच का निर्देश मांगना।"
     }
    ]
   },
@@ -1068,15 +1068,15 @@
   },
   {
    "title": {
-    "en": "Cognizance & Complaint to Magistrate (Sec 175, 210)",
-    "hi": "संज्ञान व मजिस्ट्रेट को परिवाद (धारा 175, 210)"
+    "en": "Cognizance & Complaint to Magistrate (Sec 223, 210)",
+    "hi": "संज्ञान व मजिस्ट्रेट को परिवाद (धारा 223, 210)"
    },
-   "sections": "Sec 175 (complaint), Sec 210 (cognizance); old Sec 200, 190 CrPC",
+   "sections": "Sec 223 (complaint), Sec 210 (cognizance); old Sec 200, 190 CrPC",
    "cases": "Priyanka Srivastava v. State of UP (175 application safeguards)",
    "points": [
     {
-     "en": "A complaint to the Magistrate under Sec 175 starts with the complainant being examined on oath and the statement being recorded. After that the Magistrate has a choice: order a police investigation under Sec 175(3), or take cognizance directly — the complainant does not get to dictate which one.",
-     "hi": "धारा 175 के तहत मजिस्ट्रेट के सामने परिवाद की शुरुआत शिकायतकर्ता की शपथ पर परीक्षा और बयान दर्ज करने से होती है। उसके बाद मजिस्ट्रेट के पास विकल्प है — धारा 175(3) के तहत पुलिस जांच का आदेश देना, या सीधे संज्ञान लेना — शिकायतकर्ता यह तय नहीं कर सकता कि कौन सा रास्ता अपनाया जाए।"
+     "en": "A complaint to the Magistrate under Sec 223 starts with the complainant being examined on oath and the statement being recorded. After that the Magistrate has a choice: order a police investigation under Sec 175(3), or take cognizance directly — the complainant does not get to dictate which one.",
+     "hi": "धारा 223 के तहत मजिस्ट्रेट के सामने परिवाद की शुरुआत शिकायतकर्ता की शपथ पर परीक्षा और बयान दर्ज करने से होती है। उसके बाद मजिस्ट्रेट के पास विकल्प है — धारा 175(3) के तहत पुलिस जांच का आदेश देना, या सीधे संज्ञान लेना — शिकायतकर्ता यह तय नहीं कर सकता कि कौन सा रास्ता अपनाया जाए।"
     },
     {
      "en": "Priyanka Srivastava adds a filter so that Sec 175(3) is not misused: the application must be supported by an affidavit, and an earlier application to the police or SP under Sec 173(4) is expected. In practice, show that you first knocked on the police door before coming to the Magistrate.",
@@ -1087,8 +1087,8 @@
      "hi": "धारा 210 के तहत संज्ञान एक ऐसा शब्द है जिसे छात्र अक्सर गलत समझते हैं — मजिस्ट्रेट संदिग्ध अपराध पर अपना मन लगाता है और अपराध का संज्ञान लेता है, अपराधी का नहीं। फिर तीन विकल्प हैं — प्रक्रिया जारी करना, जांच का आदेश देना, या खारिज करना — और यही चुनाव इस चरण का असली मतलब है।"
     },
     {
-     "en": "At the cognizance stage, the Magistrate looks only at the complaint and the documents — the defence is not heard at this point. And issuing process is a serious matter, as Maksud Saiyed stresses, because from there the accused is actually called into the case.",
-     "hi": "संज्ञान के चरण में मजिस्ट्रेट सिर्फ परिवाद और दस्तावेज़ों को देखता है — इस बिंदु पर बचाव पक्ष को नहीं सुना जाता। और प्रक्रिया जारी करना एक गंभीर बात है, जैसा मकसूद सैयद में कहा गया है, क्योंकि यहीं से अभियुक्त को असल में मामले में बुलाया जाता है।"
+     "en": "At the cognizance stage, the Magistrate looks only at the complaint and the documents — in a police-report case the defence is not heard at this point, but on a private complaint BNSS 223(1) now requires the accused to be given an opportunity of being heard before cognizance is taken. And issuing process is a serious matter, as Maksud Saiyed stresses, because from there the accused is actually called into the case.",
+     "hi": "संज्ञान के चरण में मजिस्ट्रेट सिर्फ परिवाद और दस्तावेज़ों को देखता है — पुलिस रिपोर्ट वाले मामले में इस बिंदु पर बचाव पक्ष को नहीं सुना जाता, पर निजी परिवाद में BNSS धारा 223(1) अब संज्ञान लेने से पहले अभियुक्त को सुनने का अवसर देना अनिवार्य करती है। और प्रक्रिया जारी करना एक गंभीर बात है, जैसा मकसूद सैयद में कहा गया है, क्योंकि यहीं से अभियुक्त को असल में मामले में बुलाया जाता है।"
     },
     {
      "en": "Limitation for cognizance under Sec 514 is worth memorizing as a ladder: 6 months where only a fine is prescribed, 1 year for offences up to 1 year, 3 years for offences of 1 to 3 years — and no limit at all for offences of more than 3 years. The heavier the offence, the longer the clock, or no clock at all.",
@@ -3331,8 +3331,8 @@
      "hi": "प्रक्रिया वाले जोड़े — FIR 154 CrPC → 173 BNSS, गिरफ्तारी 41 CrPC → 35 BNSS, ज़मानत 436/437/438/439 → 480/481/482/483 BNSS, आरोपपत्र 173 CrPC → 193 BNSS। FIR वाला सबसे ज़्यादा पूछा जाता है, इसलिए पहले 154 → 173 पक्का कर लो।"
     },
     {
-     "en": "More procedure pairs: Maintenance 125 CrPC → 144 BNSS, Inherent powers 482 CrPC → 528 BNSS, Remand 167 CrPC → 187 BNSS, Complaint 200 CrPC → 175 BNSS. The 482 → 528 jump surprises people because the number went up a lot — that's a good memory hook.",
-     "hi": "और प्रक्रिया वाले जोड़े — भरण-पोषण 125 CrPC → 144 BNSS, अंतर्निहित शक्ति 482 CrPC → 528 BNSS, रिमांड 167 CrPC → 187 BNSS, परिवाद 200 CrPC → 175 BNSS। 482 → 528 वाला बदलाव लोगों को चौंकाता है क्योंकि नंबर काफी बढ़ गया — यही इसे याद रखने का तरीका है।"
+     "en": "More procedure pairs: Maintenance 125 CrPC → 144 BNSS, Inherent powers 482 CrPC → 528 BNSS, Remand 167 CrPC → 187 BNSS, Complaint 200 CrPC → 223 BNSS. The 482 → 528 jump surprises people because the number went up a lot — that's a good memory hook.",
+     "hi": "और प्रक्रिया वाले जोड़े — भरण-पोषण 125 CrPC → 144 BNSS, अंतर्निहित शक्ति 482 CrPC → 528 BNSS, रिमांड 167 CrPC → 187 BNSS, परिवाद 200 CrPC → 223 BNSS। 482 → 528 वाला बदलाव लोगों को चौंकाता है क्योंकि नंबर काफी बढ़ गया — यही इसे याद रखने का तरीका है।"
     },
     {
      "en": "Evidence pairs: Dying declaration 32(1) IEA → 26(a) BSA, Confession to police 25 IEA → 25 BSA (same number here, easy!), Electronic certificate 65B IEA → 63 BSA, Expert 45 IEA → 39 BSA. The confession one staying at 25 is a free mark — don't overthink it.",
