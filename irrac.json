@@ -1,0 +1,604 @@
+{
+ "source": "Restructured ONLY from the existing verified summaries in judgements.json (same file, same cases). No holding, bench detail or section beyond the library entry was added. Where the summary states a holding without its reasoning, the Reasoning field restates that holding's own stated basis and says nothing further.",
+ "note": "Entries are keyed by exact caseName so the snippet can join them to rendered judgement cards without touching card code.",
+ "entries": [
+  {
+   "caseName": "Lalita Kumari v. Government of Uttar Pradesh",
+   "caseNameHi": "ललिता कुमारी बनाम उत्तर प्रदेश सरकार",
+   "citation": "(2014) 2 SCC 1",
+   "year": 2014,
+   "sections": [
+    "CRPC 154",
+    "BNSS 173"
+   ],
+   "irrac": {
+    "issue": {
+     "en": "When information discloses a cognizable offence, must the police register an FIR at once, or may they first hold a preliminary inquiry?",
+     "hi": "जब सूचना से संज्ञेय अपराध बनता है, तो क्या पुलिस को तुरंत FIR दर्ज करनी होगी, या वह पहले प्रारंभिक जाँच कर सकती है?"
+    },
+    "rule": {
+     "en": "Registration of the FIR is mandatory. The police have no discretion to refuse it and no preliminary inquiry is allowed first, subject only to narrowly defined exceptions.",
+     "hi": "FIR दर्ज करना अनिवार्य है। पुलिस के पास इसे इनकार करने का कोई विवेकाधिकार नहीं है और पहले प्रारंभिक जाँच की अनुमति नहीं है, केवल सीमित श्रेणियों को छोड़कर।"
+    },
+    "reasoning": {
+     "en": "Allowing refusal or a prior inquiry would leave the common practice of police refusing to record complaints untouched, defeating the very purpose of reporting a cognizable offence.",
+     "hi": "इनकार या पूर्व-जाँच की अनुमति देने से पुलिस द्वारा शिकायत दर्ज करने से इनकार की आम प्रथा बनी रहती, जिससे संज्ञेय अपराध की सूचना देने का उद्देश्य ही समाप्त हो जाता।"
+    },
+    "application": {
+     "en": "Where the information discloses a cognizable offence, the FIR must be registered under Section 154 CrPC (now Section 173 BNSS, as recorded in the library entry).",
+     "hi": "जहाँ सूचना से संज्ञेय अपराध बनता है, वहाँ धारा 154 सीआरपीसी (अब धारा 173 BNSS, जैसा कि लाइब्रेरी प्रविष्टि में दर्ज है) के तहत FIR दर्ज की जानी चाहिए।"
+    },
+    "conclusion": {
+     "en": "The police must register the FIR; they cannot refuse it or first hold a preliminary inquiry.",
+     "hi": "पुलिस को FIR दर्ज करनी ही होगी; वह इसे इनकार नहीं कर सकती और न ही पहले प्रारंभिक जाँच कर सकती है।"
+    }
+   }
+  },
+  {
+   "caseName": "D.K. Basu v. State of West Bengal",
+   "caseNameHi": "डी.के. बसु बनाम पश्चिम बंगाल राज्य",
+   "citation": "(1997) 1 SCC 416",
+   "year": 1997,
+   "sections": [
+    "CRPC 41",
+    "BNSS 35",
+    "ART 21",
+    "ART 22"
+   ],
+   "irrac": {
+    "issue": {
+     "en": "What safeguards must the police follow at every arrest, given rising custodial deaths?",
+     "hi": "हिरासत में बढ़ती मौतों को देखते हुए पुलिस को हर गिरफ्तारी में कौन-से सुरक्षा-उपाय अपनाने होंगे?"
+    },
+    "rule": {
+     "en": "Eleven safeguards are mandatory at every arrest, including identifying the arresting officers, informing a relative, and recording the arrest in a diary. The State must also compensate victims of custodial violence.",
+     "hi": "हर गिरफ्तारी में 11 सुरक्षा-उपाय अनिवार्य हैं, जिनमें गिरफ्तार करने वाले अधिकारियों की पहचान, रिश्तेदार को सूचना और गिरफ्तारी का डायरी में रिकॉर्ड शामिल है। हिरासत में हिंसा के पीड़ितों को राज्य मुआवज़ा भी देगा।"
+    },
+    "reasoning": {
+     "en": "Custodial deaths showed that arrest without binding safeguards leaves the arrested person unprotected; safeguards therefore had to be mandatory, not optional practice.",
+     "hi": "हिरासत में मौतों ने दिखाया कि बाध्यकारी सुरक्षा-उपायों के बिना गिरफ्तारी में गिरफ्तार व्यक्ति असुरक्षित रहता है; इसलिए सुरक्षा-उपाय अनिवार्य होने चाहिए थे, वैकल्पिक प्रथा नहीं।"
+    },
+    "application": {
+     "en": "At every arrest the police must follow the eleven safeguards, including the three named ones: identification of officers, information to a relative, and a diary record of the arrest.",
+     "hi": "हर गिरफ्तारी में पुलिस को ग्यारह सुरक्षा-उपायों का पालन करना होगा, जिनमें तीन नामित उपाय शामिल हैं: अधिकारियों की पहचान, रिश्तेदार को सूचना और गिरफ्तारी का डायरी-रिकॉर्ड।"
+    },
+    "conclusion": {
+     "en": "The safeguards are mandatory at every arrest, and victims of custodial violence are entitled to compensation from the State.",
+     "hi": "सुरक्षा-उपाय हर गिरफ्तारी में अनिवार्य हैं, और हिरासत में हिंसा के पीड़ित राज्य से मुआवज़े के हकदार हैं।"
+    }
+   }
+  },
+  {
+   "caseName": "Arnesh Kumar v. State of Bihar",
+   "caseNameHi": "अर्नेश कुमार बनाम बिहार राज्य",
+   "citation": "(2014) 8 SCC 273",
+   "year": 2014,
+   "sections": [
+    "IPC 498A",
+    "BNS 85",
+    "CRPC 41",
+    "BNSS 35"
+   ],
+   "irrac": {
+    "issue": {
+     "en": "Can the police arrest routinely and mechanically, especially in cases carrying up to seven years' imprisonment?",
+     "hi": "क्या पुलिस बिना सोचे-समझे, खासकर सात साल तक की सजा वाले मामलों में, नियमित रूप से गिरफ्तारी कर सकती है?"
+    },
+    "rule": {
+     "en": "No. Officers must follow the Section 41/41A CrPC checklist and record written reasons before arresting, and Magistrates must verify the legality of the arrest before authorising detention.",
+     "hi": "नहीं। अधिकारियों को गिरफ्तारी से पहले धारा 41/41ए सीआरपीसी की चेकलिस्ट का पालन करना होगा और लिखित कारण दर्ज करने होंगे, और मजिस्ट्रेट को हिरासत की अनुमति से पहले गिरफ्तारी की वैधता जाँचना होगी।"
+    },
+    "reasoning": {
+     "en": "Routine, mechanical arrest without a recorded justification treats arrest as automatic, although it deprives a person of liberty; a checklist and written reasons force the officer to apply their mind first.",
+     "hi": "बिना दर्ज औचित्य के नियमित, यांत्रिक गिरफ्तारी गिरफ्तारी को अपने-आप होने वाली प्रक्रिया मान लेती है, जबकि वह व्यक्ति की स्वतंत्रता छीनती है; चेकलिस्ट और लिखित कारण अधिकारी को पहले सोचने पर मजबूर करते हैं।"
+    },
+    "application": {
+     "en": "Before arresting in such a case, the officer completes the checklist and records written reasons, and the Magistrate verifies legality before authorising detention.",
+     "hi": "ऐसे मामले में गिरफ्तारी से पहले अधिकारी चेकलिस्ट पूरी करता है और लिखित कारण दर्ज करता है, और मजिस्ट्रेट हिरासत की अनुमति से पहले वैधता जाँचता है।"
+    },
+    "conclusion": {
+     "en": "Routine arrests without the checklist, written reasons and magisterial verification do not pass this ruling; it is the leading authority cited in almost every bail and wrongful-arrest plea today.",
+     "hi": "चेकलिस्ट, लिखित कारणों और मजिस्ट्रेट की जाँच के बिना नियमित गिरफ्तारियाँ इस फैसले पर खरी नहीं उतरतीं; आज जमानत और गलत गिरफ्तारी की लगभग हर याचिका में यही फैसला उद्धृत होता है।"
+    }
+   }
+  },
+  {
+   "caseName": "Bachan Singh v. State of Punjab",
+   "caseNameHi": "बचन सिंह बनाम पंजाब राज्य",
+   "citation": "(1980) 2 SCC 684",
+   "year": 1980,
+   "sections": [
+    "IPC 302",
+    "BNS 103"
+   ],
+   "irrac": {
+    "issue": {
+     "en": "Is the death penalty constitutionally valid, and if so, in which cases may it be imposed?",
+     "hi": "क्या मृत्युदंड संवैधानिक रूप से वैध है, और यदि हाँ, तो किन मामलों में दिया जा सकता है?"
+    },
+    "rule": {
+     "en": "The death penalty is constitutionally valid, but confined to the 'rarest of rare' cases where life imprisonment is unquestionably inadequate. Sentencing courts must weigh aggravating and mitigating circumstances together, including the offender's chance of reformation.",
+     "hi": "मृत्युदंड संवैधानिक रूप से वैध है, लेकिन केवल 'रेयरेस्ट ऑफ रेयर' (अत्यंत विरल) मामलों तक सीमित है, जहाँ आजीवन कारावास निःसंदेह अपर्याप्त हो। सजा सुनाते समय उग्र और शमन दोनों परिस्थितियों को एक साथ तौला जाए, जिसमें अपराधी के सुधरने की संभावना भी शामिल हो।"
+    },
+    "reasoning": {
+     "en": "Keeping the penalty but narrowing its use means sentencing turns on both the crime and the offender, not on the offence alone; the chance of reformation must count against the case for death.",
+     "hi": "दंड को बनाए रखकर उसका दायरा सीमित करने का अर्थ है कि सजा अपराध और अपराधी दोनों पर निर्भर करेगी, केवल अपराध पर नहीं; सुधरने की संभावना मृत्युदंड के विरुद्ध गिनी जानी चाहिए।"
+    },
+    "application": {
+     "en": "The sentencing court weighs aggravating and mitigating circumstances together, including reformation, and imposes death only where life imprisonment is unquestionably inadequate.",
+     "hi": "सजा सुनाने वाली अदालत उग्र और शमन परिस्थितियों को एक साथ तौलती है, जिसमें सुधरने की संभावना शामिल है, और मृत्युदंड तभी देती है जब आजीवन कारावास निःसंदेह अपर्याप्त हो।"
+    },
+    "conclusion": {
+     "en": "This framework still governs every death-sentence decision in India.",
+     "hi": "भारत में हर मृत्युदंड के निर्णय में आज भी यही सिद्धांत लागू होता है।"
+    }
+   }
+  },
+  {
+   "caseName": "Selvi v. State of Karnataka",
+   "caseNameHi": "सेल्वी बनाम कर्नाटक राज्य",
+   "citation": "(2010) 7 SCC 263",
+   "year": 2010,
+   "sections": [
+    "ART 20",
+    "ART 21"
+   ],
+   "irrac": {
+    "issue": {
+     "en": "Can the State compel an accused to undergo narco-analysis, polygraph or brain-mapping tests?",
+     "hi": "क्या राज्य अभियुक्त को नार्को-एनालिसिस, पॉलीग्राफ या ब्रेन-मैपिंग टेस्ट के लिए मजबूर कर सकता है?"
+    },
+    "rule": {
+     "en": "No. Involuntary narco-analysis, polygraph and brain-mapping tests are banned: they violate the right against self-incrimination under Article 20(3) and the right to privacy. Such tests can only be done with the accused's voluntary consent, and even then the results have limited evidentiary value.",
+     "hi": "नहीं। जबरन नार्को-एनालिसिस, पॉलीग्राफ और ब्रेन-मैपिंग टेस्ट पर रोक है: ये अनुच्छेद 20(3) के तहत आत्म-दोषारोपण से सुरक्षा और निजता के अधिकार का उल्लंघन हैं। ऐसे टेस्ट केवल आरोपी की स्वैच्छिक सहमति से हो सकते हैं, और तब भी परिणामों का साक्ष्य-मूल्य सीमित रहेगा।"
+    },
+    "reasoning": {
+     "en": "Forcing these tests on an unwilling person compels self-incriminating material from the person and invades privacy — exactly what Article 20(3) and the privacy right forbid.",
+     "hi": "अनिच्छुक व्यक्ति पर ये टेस्ट थोपना व्यक्ति से आत्म-दोषारोपी सामग्री जबरन लेना और निजता में हस्तक्षेप है — यही अनुच्छेद 20(3) और निजता का अधिकार मना करता है।"
+    },
+    "application": {
+     "en": "No involuntary test is permitted. A test proceeds only on the accused's voluntary consent, and its result still carries only limited evidentiary value.",
+     "hi": "कोई जबरन टेस्ट अनुमत नहीं है। टेस्ट केवल आरोपी की स्वैच्छिक सहमति से हो सकता है, और तब भी उसके परिणाम का साक्ष्य-मूल्य सीमित ही रहेगा।"
+    },
+    "conclusion": {
+     "en": "Involuntary narco-analysis, polygraph and brain-mapping tests are prohibited.",
+     "hi": "जबरन नार्को-एनालिसिस, पॉलीग्राफ और ब्रेन-मैपिंग टेस्ट निषिद्ध हैं।"
+    }
+   }
+  },
+  {
+   "caseName": "Nandini Satpathy v. P.L. Dani",
+   "caseNameHi": "नंदिनी सत्पथी बनाम पी.एल. दानी",
+   "citation": "AIR 1978 SC 1025",
+   "year": 1978,
+   "sections": [
+    "CRPC 161",
+    "BNSS 180",
+    "ART 20"
+   ],
+   "irrac": {
+    "issue": {
+     "en": "Does the protection against self-incrimination cover police interrogation, or only the courtroom?",
+     "hi": "क्या आत्म-दोषारोपण से सुरक्षा पुलिस पूछताछ पर भी लागू होती है, या केवल अदालत तक सीमित है?"
+    },
+    "rule": {
+     "en": "It covers police interrogation too. An accused cannot be compelled to answer questions that may expose them to criminal liability, and no adverse inference can be drawn from silence alone.",
+     "hi": "यह पुलिस पूछताछ पर भी लागू होती है। आरोपी को ऐसे सवालों के जवाब देने के लिए मजबूर नहीं किया जा सकता जिनसे उस पर आपराधिक दायित्व आ सकता हो, और केवल चुप्पी से कोई प्रतिकूल निष्कर्ष नहीं निकाला जा सकता।"
+    },
+    "reasoning": {
+     "en": "A right that protects a person in court but not in the interrogation room would be empty, because that is where compulsion is most likely; the protection must therefore travel with the person.",
+     "hi": "जो अधिकार अदालत में तो व्यक्ति की रक्षा करे पर पूछताछ कक्ष में नहीं, वह खोखला होगा, क्योंकि दबाव की सबसे अधिक संभावना वहीं होती है; इसलिए सुरक्षा व्यक्ति के साथ चलनी चाहिए।"
+    },
+    "application": {
+     "en": "During police interrogation the accused may refuse questions that could expose them to criminal liability, and silence alone draws no adverse inference.",
+     "hi": "पुलिस पूछताछ के दौरान आरोपी उन सवालों के जवाब देने से इनकार कर सकता है जिनसे उस पर आपराधिक दायित्व आ सकता हो, और केवल चुप्पी से कोई प्रतिकूल निष्कर्ष नहीं निकाला जाएगा।"
+    },
+    "conclusion": {
+     "en": "The right to silence has real force at the interrogation stage, not only at trial.",
+     "hi": "चुप रहने के अधिकार की असली ताकत पूछताछ के चरण में भी है, केवल मुकदमे में नहीं।"
+    }
+   }
+  },
+  {
+   "caseName": "Joginder Kumar v. State of U.P.",
+   "caseNameHi": "जोगिंदर कुमार बनाम उत्तर प्रदेश राज्य",
+   "citation": "(1994) 4 SCC 260",
+   "year": 1994,
+   "sections": [
+    "CRPC 41",
+    "BNSS 35",
+    "ART 21"
+   ],
+   "irrac": {
+    "issue": {
+     "en": "Is arrest automatic whenever an offence is registered?",
+     "hi": "क्या अपराध दर्ज होते ही गिरफ्तारी अपने-आप हो जाती है?"
+    },
+    "rule": {
+     "en": "No. The police must have a reasonable justification and apply their mind, and officers must record reasons for arrest.",
+     "hi": "नहीं। पुलिस के पास तर्कसंगत औचित्य होना चाहिए और उसे सोच-विचार करना होगा, और अधिकारियों को गिरफ्तारी के कारण दर्ज करने होंगे।"
+    },
+    "reasoning": {
+     "en": "Treating registration as an automatic ground for arrest preserves a colonial-era practice of routine arrests used to harass citizens; requiring recorded reasons breaks that automatism.",
+     "hi": "पंजीकरण को गिरफ्तारी का अपने-आप आधार मानना नागरिकों को परेशान करने वाली औपनिवेशिक काल की बिना-सोची-समझी गिरफ्तारियों की प्रथा को बनाए रखता है; दर्ज कारणों की माँग इस स्वचालितता को तोड़ती है।"
+    },
+    "application": {
+     "en": "An offence being registered does not by itself justify arrest; the officer must justify the arrest and record the reasons.",
+     "hi": "अपराध दर्ज होना अपने-आप गिरफ्तारी का औचित्य नहीं है; अधिकारी को गिरफ्तारी का औचित्य देना होगा और कारण दर्ज करने होंगे।"
+    },
+    "conclusion": {
+     "en": "Arrest is not automatic on registration of an offence.",
+     "hi": "अपराध दर्ज होते ही गिरफ्तारी अपने-आप नहीं हो जाती।"
+    }
+   }
+  },
+  {
+   "caseName": "Hussainara Khatoon v. State of Bihar",
+   "caseNameHi": "हुसैनारा खातून बनाम बिहार राज्य",
+   "citation": "(1980) 1 SCC 81",
+   "year": 1980,
+   "sections": [
+    "ART 21",
+    "ART 39A"
+   ],
+   "irrac": {
+    "issue": {
+     "en": "Do undertrial prisoners kept in jail for years without trial have a constitutional remedy?",
+     "hi": "क्या वर्षों तक बिना मुकदमे के जेल में रखे गए विचाराधीन कैदियों के पास संवैधानिक उपाय है?"
+    },
+    "rule": {
+     "en": "Yes. Speedy trial is a fundamental right under Article 21, and free legal aid is a constitutional mandate.",
+     "hi": "हाँ। शीघ्र सुनवाई अनुच्छेद 21 के तहत मौलिक अधिकार है, और मुफ्त कानूनी सहायता संवैधानिक दायित्व है।"
+    },
+    "reasoning": {
+     "en": "Keeping people in jail for years without trial — sometimes longer than any sentence they could receive — denies the liberty Article 21 promises, and a person without legal aid cannot defend that liberty.",
+     "hi": "लोगों को वर्षों तक बिना मुकदमे के जेल में रखना — कभी-कभी किसी भी संभावित सजा से अधिक समय तक — अनुच्छेद 21 द्वारा दिए गए स्वतंत्रता के वादे को नकारता है, और कानूनी सहायता के बिना व्यक्ति उस स्वतंत्रता की रक्षा नहीं कर सकता।"
+    },
+    "application": {
+     "en": "Undertrials who had spent longer in jail than their possible sentences were released, and free legal aid became a constitutional mandate.",
+     "hi": "जो विचाराधीन कैदी अपनी संभावित सजा से अधिक समय जेल में बिता चुके थे, उन्हें रिहा किया गया, और मुफ्त कानूनी सहायता संवैधानिक दायित्व बन गई।"
+    },
+    "conclusion": {
+     "en": "Speedy trial under Article 21 and free legal aid are constitutional requirements.",
+     "hi": "अनुच्छेद 21 के तहत शीघ्र सुनवाई और मुफ्त कानूनी सहायता संवैधानिक आवश्यकताएँ हैं।"
+    }
+   }
+  },
+  {
+   "caseName": "Vishaka v. State of Rajasthan",
+   "caseNameHi": "विशाखा बनाम राजस्थान राज्य",
+   "citation": "(1997) 6 SCC 241",
+   "year": 1997,
+   "sections": [
+    "BNS 75",
+    "ART 14",
+    "ART 15",
+    "ART 21",
+    "ART 32"
+   ],
+   "irrac": {
+    "issue": {
+     "en": "With no law on workplace sexual harassment, how are the fundamental rights of working women to equality and dignity protected?",
+     "hi": "कार्यस्थल पर यौन उत्पीड़न को लेकर कोई कानून न होने पर कामकाजी महिलाओं के समानता और गरिमा के मौलिक अधिकार कैसे सुरक्षित होंगे?"
+    },
+    "rule": {
+     "en": "The Supreme Court itself laid down binding guidelines protecting those rights. The guidelines served as the law of the land for 16 years, until Parliament enacted the POSH Act in 2013.",
+     "hi": "सर्वोच्च न्यायालय ने स्वयं बाध्यकारी दिशा-निर्देश तय किए ताकि कामकाजी महिलाओं के समानता और गरिमा के मौलिक अधिकार सुरक्षित रहें। ये दिशा-निर्देश 16 वर्षों तक देश का कानून रहे, जब तक 2013 में POSH अधिनियम नहीं बना।"
+    },
+    "reasoning": {
+     "en": "Rights to equality and dignity at work would be unenforceable without an interim legal framework while legislation was absent; binding guidelines filled that gap.",
+     "hi": "कानून के अभाव में कार्यस्थल पर समानता और गरिमा के अधिकार बिना किसी अंतरिम कानूनी ढाँचे के लागू नहीं हो सकते थे; बाध्यकारी दिशा-निर्देशों ने वह कमी पूरी की।"
+    },
+    "application": {
+     "en": "Workplaces had to follow the binding guidelines as the governing law on sexual harassment until Parliament legislated in 2013.",
+     "hi": "कार्यस्थलों को 2013 में संसद द्वारा कानून बनाने तक यौन उत्पीड़न पर शासकीय कानून के रूप में बाध्यकारी दिशा-निर्देशों का पालन करना था।"
+    },
+    "conclusion": {
+     "en": "The Vishaka Guidelines governed for 16 years, until the POSH Act, 2013 replaced them.",
+     "hi": "विशाखा दिशा-निर्देश 16 वर्षों तक लागू रहे, जब तक POSH अधिनियम, 2013 ने उनका स्थान नहीं लिया।"
+    }
+   }
+  },
+  {
+   "caseName": "Maneka Gandhi v. Union of India",
+   "caseNameHi": "मेनका गांधी बनाम भारत संघ",
+   "citation": "(1978) 1 SCC 248",
+   "year": 1978,
+   "sections": [
+    "ART 14",
+    "ART 19",
+    "ART 21"
+   ],
+   "irrac": {
+    "issue": {
+     "en": "What must a 'procedure established by law' that deprives a person of life or liberty satisfy under Article 21?",
+     "hi": "अनुच्छेद 21 के तहत जीवन या स्वतंत्रता छीनने वाली 'विधि द्वारा स्थापित प्रक्रिया' को क्या पूरा करना होगा?"
+    },
+    "rule": {
+     "en": "It must be fair, just and reasonable, not arbitrary. Article 21 is a broad right to live with human dignity, not a narrow guarantee of physical survival, and Articles 14, 19 and 21 operate together as the 'golden triangle'.",
+     "hi": "वह उचित, न्यायसंगत और तर्कसंगत होनी चाहिए, मनमानी नहीं। अनुच्छेद 21 केवल जीने का संकीर्ण अधिकार नहीं, बल्कि गरिमा के साथ जीने का व्यापक अधिकार है, और अनुच्छेद 14, 19 और 21 'गोल्डन ट्रायंगल' के रूप में एक साथ काम करते हैं।"
+    },
+    "reasoning": {
+     "en": "A procedure that may be arbitrary is no real safeguard: if any procedure, however unfair, could take away life or liberty, the guarantee would be empty. Fairness, justness and reasonableness are therefore part of the procedure itself.",
+     "hi": "मनमानी हो सकने वाली प्रक्रिया कोई वास्तविक सुरक्षा नहीं है: यदि कोई भी प्रक्रिया, चाहे कितनी भी अनुचित हो, जीवन या स्वतंत्रता छीन सके, तो गारंटी खोखली हो जाएगी। इसलिए उचित, न्यायसंगत और तर्कसंगत होना प्रक्रिया का ही हिस्सा है।"
+    },
+    "application": {
+     "en": "Any law depriving a person of life or liberty is tested for fairness, justness and reasonableness, and read with Articles 14 and 19; most fundamental-rights cases cite this ruling.",
+     "hi": "जीवन या स्वतंत्रता छीनने वाले किसी भी कानून की उचितता, न्यायसंगतता और तर्कसंगतता की जाँच होती है, और उसे अनुच्छेद 14 और 19 के साथ पढ़ा जाता है; अधिकांश मौलिक अधिकार के मामलों में यही फैसला उद्धृत होता है।"
+    },
+    "conclusion": {
+     "en": "Article 21 protects life with human dignity, through a procedure that is fair, just and reasonable.",
+     "hi": "अनुच्छेद 21 गरिमापूर्ण जीवन की रक्षा करता है, एक ऐसी प्रक्रिया के माध्यम से जो उचित, न्यायसंगत और तर्कसंगत हो।"
+    }
+   }
+  },
+  {
+   "caseName": "Kesavananda Bharati v. State of Kerala",
+   "caseNameHi": "केसवानंद भारती बनाम केरल राज्य",
+   "citation": "(1973) 4 SCC 225",
+   "year": 1973,
+   "sections": [
+    "ART 13",
+    "ART 368"
+   ],
+   "irrac": {
+    "issue": {
+     "en": "Can Parliament, by amendment, destroy the core identity of the Constitution?",
+     "hi": "क्या संसद संशोधन द्वारा संविधान की मूल पहचान को नष्ट कर सकती है?"
+    },
+    "rule": {
+     "en": "No. Parliament may amend the Constitution but cannot destroy its basic structure — its core identity, such as democracy, the rule of law, federalism and judicial review.",
+     "hi": "नहीं। संसद संविधान में संशोधन कर सकती है, लेकिन उसकी मूल संरचना (बेसिक स्ट्रक्चर) — जैसे लोकतंत्र, विधि का शासन, संघीयता और न्यायिक पुनरावलोकन — को नष्ट नहीं कर सकती।"
+    },
+    "reasoning": {
+     "en": "An amending power that could erase the Constitution's identity would let a temporary majority rewrite the Constitution itself; amendment must therefore stop at the basic structure.",
+     "hi": "संविधान की पहचान मिटा सकने वाली संशोधन-शक्ति अस्थायी बहुमत को संविधान को ही फिर से लिखने देगी; इसलिए संशोधन मूल संरचना पर रुकना चाहिए।"
+    },
+    "application": {
+     "en": "By a narrow 7:6 majority of a 13-judge bench, the Court held that amendments destroying the basic structure do not survive.",
+     "hi": "13 न्यायाधीशों की पीठ ने 7:6 के संकीर्ण बहुमत से कहा कि मूल संरचना को नष्ट करने वाले संशोधन टिक नहीं सकते।"
+    },
+    "conclusion": {
+     "en": "The basic structure limits Parliament's amending power.",
+     "hi": "मूल संरचना संसद की संशोधन-शक्ति को सीमित करती है।"
+    }
+   }
+  },
+  {
+   "caseName": "Justice K.S. Puttaswamy (Retd.) v. Union of India",
+   "caseNameHi": "न्यायमूर्ति के.एस. पुट्टस्वामी (सेवानिवृत्त) बनाम भारत संघ",
+   "citation": "2017 (10) SCC 1",
+   "year": 2017,
+   "sections": [
+    "ART 14",
+    "ART 21",
+    "SEC 377"
+   ],
+   "irrac": {
+    "issue": {
+     "en": "Is the right to privacy a fundamental right?",
+     "hi": "क्या निजता का अधिकार मौलिक अधिकार है?"
+    },
+    "rule": {
+     "en": "Yes. A nine-judge bench unanimously declared privacy a fundamental right under Articles 14, 19 and 21, overruling M.P. Sharma and Kharak Singh.",
+     "hi": "हाँ। नौ न्यायाधीशों की पीठ ने सर्वसम्मति से निजता के अधिकार को अनुच्छेद 14, 19 और 21 के तहत मौलिक अधिकार घोषित किया और एम.पी. शर्मा तथा खड़क सिंह के फैसलों को पलट दिया।"
+    },
+    "reasoning": {
+     "en": "Personal choices and dignity, which the Constitution protects, cannot be real if privacy itself is unprotected; privacy therefore belongs among fundamental rights.",
+     "hi": "व्यक्तिगत स्वतंत्रता और गरिमा, जिनकी संविधान रक्षा करता है, तब तक वास्तविक नहीं हो सकतीं जब तक निजता स्वयं असुरक्षित हो; इसलिए निजता मौलिक अधिकारों में आती है।"
+    },
+    "application": {
+     "en": "Privacy was declared a fundamental right, and later rulings on Aadhaar, data protection, Section 377 and the dignity of personal choices were built on this foundation.",
+     "hi": "निजता को मौलिक अधिकार घोषित किया गया, और आधार, डेटा संरक्षण, धारा 377 तथा व्यक्तिगत स्वतंत्रता की गरिमा पर बाद के फैसले इसी नींव पर बने।"
+    },
+    "conclusion": {
+     "en": "Privacy is a fundamental right under Articles 14, 19 and 21.",
+     "hi": "निजता अनुच्छेद 14, 19 और 21 के तहत मौलिक अधिकार है।"
+    }
+   }
+  },
+  {
+   "caseName": "Minerva Mills Ltd. v. Union of India",
+   "caseNameHi": "मिनर्वा मिल्स लिमिटेड बनाम भारत संघ",
+   "citation": "(1980) 3 SCC 625",
+   "year": 1980,
+   "sections": [
+    "ART 368"
+   ],
+   "irrac": {
+    "issue": {
+     "en": "Can Parliament grant itself unlimited amending power, as parts of the 42nd Amendment attempted?",
+     "hi": "क्या संसद स्वयं को असीमित संशोधन-शक्ति दे सकती है, जैसा कि 42वें संशोधन के कुछ हिस्सों में प्रयास किया गया?"
+    },
+    "rule": {
+     "en": "No. Parliament cannot grant itself unlimited amending power, and the harmony between fundamental rights and directive principles is itself part of the Constitution's basic structure.",
+     "hi": "नहीं। संसद स्वयं को असीमित संशोधन-शक्ति नहीं दे सकती, और मौलिक अधिकारों तथा नीति निर्देशक तत्वों के बीच संतुलन भी संविधान की मूल संरचना का हिस्सा है।"
+    },
+    "reasoning": {
+     "en": "Unlimited amending power would destroy the basic-structure limit itself: a power that can remove all limits is not amendment but replacement of the Constitution.",
+     "hi": "असीमित संशोधन-शक्ति मूल-संरचना की सीमा को ही नष्ट कर देगी: जो शक्ति सभी सीमाएँ हटा सके, वह संशोधन नहीं, संविधान का प्रतिस्थापन है।"
+    },
+    "application": {
+     "en": "Parts of the 42nd Amendment passed during the Emergency were struck down, strengthening the basic structure doctrine.",
+     "hi": "आपातकाल के दौरान पारित 42वें संशोधन के कुछ हिस्सों को रद्द कर दिया गया, जिससे बेसिक स्ट्रक्चर सिद्धांत मजबूत हुआ।"
+    },
+    "conclusion": {
+     "en": "Parliament's amending power remains limited by the basic structure.",
+     "hi": "संसद की संशोधन-शक्ति मूल संरचना से सीमित रहती है।"
+    }
+   }
+  },
+  {
+   "caseName": "Navtej Singh Johar v. Union of India",
+   "caseNameHi": "नवतेज सिंह जौहर बनाम भारत संघ",
+   "citation": "2018 (10) SCC 1",
+   "year": 2018,
+   "sections": [
+    "IPC 377",
+    "ART 14",
+    "ART 15",
+    "ART 19",
+    "ART 21"
+   ],
+   "irrac": {
+    "issue": {
+     "en": "Does Section 377 IPC criminalise consensual sexual acts between adults of the same sex?",
+     "hi": "क्या आईपीसी की धारा 377 वयस्कों के बीच आपसी सहमति से समलैंगिक संबंधों को अपराध बनाती है?"
+    },
+    "rule": {
+     "en": "Not anymore. The Court unanimously read down Section 377 so that consensual sexual acts between adults of the same sex are no longer criminal, holding that dignity, privacy and equal citizenship extend to the LGBTQ+ community, and overruling the earlier Suresh Koushal decision.",
+     "hi": "अब नहीं। न्यायालय ने सर्वसम्मति से आईपीसी की धारा 377 को सीमित किया, ताकि वयस्कों के बीच आपसी सहमति से समलैंगिक संबंध अब अपराध न रहें। कोर्ट ने कहा कि गरिमा, निजता और समान नागरिकता LGBTQ+ समुदाय के लिए भी उतनी ही सुरक्षित है, और सुरेश कौशल के पहले के फैसले को पलट दिया।"
+    },
+    "reasoning": {
+     "en": "Criminalising consensual adult acts denies the dignity, privacy and equal citizenship that the Constitution promises to every person, including LGBTQ+ persons.",
+     "hi": "वयस्कों के आपसी सहमति वाले कृत्यों को अपराध बनाना गरिमा, निजता और समान नागरिकता से इनकार है, जो संविधान हर व्यक्ति को देता है, LGBTQ+ व्यक्तियों सहित।"
+    },
+    "application": {
+     "en": "Consensual sexual acts between adults of the same sex were taken out of Section 377's criminal reach.",
+     "hi": "वयस्कों के बीच आपसी सहमति से समलैंगिक संबंधों को धारा 377 की आपराधिक पहुँच से बाहर कर दिया गया।"
+    },
+    "conclusion": {
+     "en": "Section 377 stands read down; consensual same-sex acts between adults are no longer criminal.",
+     "hi": "धारा 377 सीमित रूप में लागू है; वयस्कों के बीच आपसी सहमति से समलैंगिक संबंध अब अपराध नहीं हैं।"
+    }
+   }
+  },
+  {
+   "caseName": "Shayara Bano v. Union of India",
+   "caseNameHi": "शायरा बानो बनाम भारत संघ",
+   "citation": "(2017) 9 SCC 1",
+   "year": 2017,
+   "sections": [
+    "ART 14",
+    "ART 25"
+   ],
+   "irrac": {
+    "issue": {
+     "en": "Is instant triple talaq (talaq-e-biddat) constitutionally valid?",
+     "hi": "क्या तीन तलाक (तलाक-ए-बिद्दत) संवैधानिक रूप से वैध है?"
+    },
+    "rule": {
+     "en": "No. A five-judge bench struck it down by a 3:2 majority, holding it manifestly arbitrary and against equality, and that personal laws must pass the test of fundamental rights and that the practice was not an essential religious practice protected by the Constitution.",
+     "hi": "नहीं। पाँच न्यायाधीशों की पीठ ने 3:2 बहुमत से तीन तलाक (तलाक-ए-बिद्दत) को असंवैधानिक घोषित किया और इसे समानता के अधिकार के विरुद्ध मनमानी प्रथा बताया। इस फैसले ने तय किया कि निजी कानून भी मौलिक अधिकारों की कसौटी पर खरे उतरने होंगे और यह प्रथा अनिवार्य धार्मिक क्रिया नहीं है।"
+    },
+    "reasoning": {
+     "en": "A practice that is manifestly arbitrary fails the equality guarantee; being part of personal law does not place it beyond fundamental-rights review, and a practice that is not essential to religion cannot claim that protection.",
+     "hi": "जो प्रथा स्पष्ट रूप से मनमानी है, वह समानता की गारंटी पर खरी नहीं उतरती; निजी कानून का हिस्सा होना उसे मौलिक अधिकारों की समीक्षा से बाहर नहीं करता, और जो प्रथा धर्म के लिए अनिवार्य नहीं है, वह उस सुरक्षा का दावा नहीं कर सकती।"
+    },
+    "application": {
+     "en": "Instant triple talaq was struck down; personal laws were held subject to fundamental-rights scrutiny.",
+     "hi": "तीन तलाक को असंवैधानिक घोषित किया गया; निजी कानूनों को मौलिक अधिकारों की जाँच के अधीन माना गया।"
+    },
+    "conclusion": {
+     "en": "Talaq-e-biddat is unconstitutional.",
+     "hi": "तलाक-ए-बिद्दत असंवैधानिक है।"
+    }
+   }
+  },
+  {
+   "caseName": "S.R. Bommai v. Union of India",
+   "caseNameHi": "एस.आर. बोम्मई बनाम भारत संघ",
+   "citation": "(1994) 3 SCC 1",
+   "year": 1994,
+   "sections": [
+    "ART 356"
+   ],
+   "irrac": {
+    "issue": {
+     "en": "Can President's Rule under Article 356 be used to dismiss a state government for political reasons, free of judicial review?",
+     "hi": "क्या अनुच्छेद 356 के तहत राष्ट्रपति शासन का उपयोग राजनीतिक कारणों से राज्य सरकार बर्खास्त करने के लिए, न्यायिक पुनरावलोकन से मुक्त होकर, किया जा सकता है?"
+    },
+    "rule": {
+     "en": "No. A nine-judge bench held that such a proclamation is subject to judicial review and cannot be used to dismiss a state government for political reasons, and declared secularism to be a part of the Constitution's basic structure.",
+     "hi": "नहीं। नौ न्यायाधीशों की पीठ ने कहा कि ऐसी घोषणा न्यायिक पुनरावलोकन के अधीन है और राजनीतिक कारणों से राज्य सरकार बर्खास्त नहीं की जा सकती। साथ ही धर्मनिरपेक्षता को संविधान की मूल संरचना का हिस्सा घोषित किया।"
+    },
+    "reasoning": {
+     "en": "Without judicial review, Article 356 could be used politically against the federal structure itself; review is therefore the check that keeps the power within constitutional bounds.",
+     "hi": "न्यायिक पुनरावलोकन के बिना अनुच्छेद 356 का उपयोग संघीय ढाँचे के विरुद्ध राजनीतिक रूप से हो सकता है; इसलिए पुनरावलोकन ही वह जाँच है जो इस शक्ति को संवैधानिक दायरे में रखती है।"
+    },
+    "application": {
+     "en": "Proclamations under Article 356 are reviewable by courts, and a dismissal for political reasons does not survive that review.",
+     "hi": "अनुच्छेद 356 के तहत घोषणाओं की अदालतें समीक्षा कर सकती हैं, और राजनीतिक कारणों से की गई बर्खास्तगी उस समीक्षा में टिक नहीं सकती।"
+    },
+    "conclusion": {
+     "en": "President's Rule is subject to judicial review; secularism is part of the basic structure.",
+     "hi": "राष्ट्रपति शासन न्यायिक पुनरावलोकन के अधीन है; धर्मनिरपेक्षता मूल संरचना का हिस्सा है।"
+    }
+   }
+  },
+  {
+   "caseName": "Machhi Singh v. State of Punjab",
+   "caseNameHi": "मछ्छी सिंह बनाम पंजाब राज्य",
+   "citation": "(1983) 3 SCC 470",
+   "year": 1983,
+   "sections": [
+    "IPC 302",
+    "BNS 103"
+   ],
+   "irrac": {
+    "issue": {
+     "en": "How is the 'rarest of rare' death-penalty test from Bachan Singh to be applied in practice?",
+     "hi": "बचन सिंह के 'रेयरेस्ट ऑफ रेयर' मृत्युदंड परीक्षण को व्यवहार में कैसे लागू किया जाए?"
+    },
+    "rule": {
+     "en": "Through five concrete categories: manner of commission, motive, socially abhorrent nature, magnitude of crime, and personality of victim. Only a case satisfying these tests attracts the death penalty.",
+     "hi": "पाँच ठोस श्रेणियों के माध्यम से: अपराध का तरीका, मकसद, सामाजिक घृणास्पदता, अपराध की गंभीरता और पीड़ित का व्यक्तित्व। केवल इन कसौटियों पर खरा उतरने वाला मामला ही मृत्युदंड की ओर जाता है।"
+    },
+    "reasoning": {
+     "en": "An abstract 'rarest of rare' standard needs concrete markers, or sentencing will vary with each judge; the five categories give courts common points to check.",
+     "hi": "अमूर्त 'रेयरेस्ट ऑफ रेयर' मानक को ठोस संकेतकों की आवश्यकता है, अन्यथा सजा हर न्यायाधीश के साथ बदल जाएगी; पाँच श्रेणियाँ अदालतों को जाँच के साझा बिंदु देती हैं।"
+    },
+    "application": {
+     "en": "In every death-penalty case the court checks the five points — manner, motive, abhorrent nature, magnitude and victim's personality.",
+     "hi": "हर मृत्युदंड के मामले में अदालत पाँच बिंदु जाँचती है — तरीका, मकसद, घृणास्पदता, गंभीरता और पीड़ित का व्यक्तित्व।"
+    },
+    "conclusion": {
+     "en": "Death penalty only where the five-category test is satisfied.",
+     "hi": "मृत्युदंड केवल तभी जब पाँच श्रेणियों की कसौटी पूरी हो।"
+    }
+   }
+  },
+  {
+   "caseName": "Kartar Singh v. State of Punjab",
+   "caseNameHi": "करतार सिंह बनाम पंजाब राज्य",
+   "citation": "(1994) 3 SCC 569",
+   "year": 1994,
+   "sections": [
+    "IEA 25",
+    "BSA 23"
+   ],
+   "irrac": {
+    "issue": {
+     "en": "Is TADA constitutionally valid, and what guards against its misuse?",
+     "hi": "क्या TADA संवैधानिक रूप से वैध है, और इसके दुरुपयोग से बचाव क्या है?"
+    },
+    "rule": {
+     "en": "Validity was upheld, but with strict safeguards against misuse: confessions recorded by a police officer under the Act are admissible only with strong corroboration, and the government must review detentions to prevent innocent people being trapped under anti-terror law.",
+     "hi": "TADA की संवैधानिक वैधता बरकरार रखी गई, लेकिन इसके दुरुपयोग पर सख्त रोक लगाई गई: इस कानून के तहत पुलिस अधिकारी के समक्ष दिया गया इकबालिया बयान केवल मजबूत पुष्टि के साथ ही स्वीकार्य होगा, और सरकार को हिरासत की समीक्षा करनी होगी ताकि निर्दोष लोग आतंकवाद-विरोधी कानून में न फंसें।"
+    },
+    "reasoning": {
+     "en": "An anti-terror law with extraordinary powers and no safeguards would trap innocent people; upholding it therefore required corroboration for police-recorded confessions and review of detentions.",
+     "hi": "असाधारण शक्तियों वाला आतंकवाद-विरोधी कानून बिना सुरक्षा-उपायों के निर्दोष लोगों को फँसा लेगा; इसलिए इसे बनाए रखने के लिए पुलिस के समक्ष दिए गए इकबालिया बयानों की पुष्टि और हिरासत की समीक्षा आवश्यक थी।"
+    },
+    "application": {
+     "en": "A police-recorded confession under the Act counts only with strong corroboration, and detentions must be reviewed.",
+     "hi": "इस कानून के तहत पुलिस के समक्ष दिया गया इकबालिया बयान केवल मजबूत पुष्टि के साथ ही माना जाएगा, और हिरासत की समीक्षा होनी चाहिए।"
+    },
+    "conclusion": {
+     "en": "TADA survives only with strict safeguards against misuse.",
+     "hi": "TADA केवल दुरुपयोग के विरुद्ध सख्त सुरक्षा-उपायों के साथ ही बना रहता है।"
+    }
+   }
+  }
+ ],
+ "skipped": [
+  {
+   "caseName": "Gurbaksh Singh Sibbia v. State of Punjab",
+   "reason": "Summary states the holding (no blanket conditions; considerations govern discretion) but does not state what those considerations are, so a Reasoning/Application split would invent content."
+  },
+  {
+   "caseName": "State of Haryana v. Bhajan Lal",
+   "reason": "Summary names only 'seven illustrative categories' for quashing without listing them or stating the reasoning, so an IRRAC split would invent the categories."
+  }
+ ]
+}

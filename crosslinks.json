@@ -1,0 +1,3834 @@
+{
+ "generated_from": [
+  "judgements.json (676 items)",
+  "notes.json (163 topics)",
+  "drafts.json (342 items)"
+ ],
+ "method": "Exact normalized section-token match (family + base number; subsections stripped; ranges expanded up to 60). Old-code tokens are folded to their new-code canonical ONLY via the site's own SECTION_EQ map already in index.html; the folded old tokens are listed in 'equivalents'. Tokens with no identifiable family (judgement 'SEC n' tokens and similar) are excluded, never guessed.",
+ "note_id_format": "<subject>:<index> into notes.json arrays, e.g. bnss:0 = notes.json bnss[0].",
+ "judgment_id_format": "Exact caseName from judgements.json (the site's existing join key, as used by its bench/cites overlays).",
+ "draft_id_format": "Draft id from drafts.json.",
+ "entries": [
+  {
+   "section": "ART:123",
+   "equivalents": [],
+   "note_ids": [],
+   "judgment_ids": [
+    "Krishna Kumar Singh v. State of Bihar"
+   ],
+   "draft_ids": [
+    "exparte-setaside-9r13"
+   ]
+  },
+  {
+   "section": "ART:129",
+   "equivalents": [],
+   "note_ids": [],
+   "judgment_ids": [
+    "Supreme Court Bar Association v. Union of India"
+   ],
+   "draft_ids": [
+    "contempt-petition"
+   ]
+  },
+  {
+   "section": "ART:137",
+   "equivalents": [],
+   "note_ids": [],
+   "judgment_ids": [
+    "B.K. Educational Services Private Limited v. Parag Gupta and Associates"
+   ],
+   "draft_ids": [
+    "curative-petition",
+    "review-petition-sc"
+   ]
+  },
+  {
+   "section": "ART:14",
+   "equivalents": [],
+   "note_ids": [],
+   "judgment_ids": [
+    "A.K. Kraipak v. Union of India",
+    "A.R. Antulay v. R.S. Nayak",
+    "Air India v. Nergesh Meerza",
+    "Ashok Kumar Dixit v. State of U.P.",
+    "Aureliano Fernandes v. State of Goa",
+    "Central Inland Water Transport Corporation Ltd. v. Brojo Nath Ganguly",
+    "Centre for Public Interest Litigation v. Union of India",
+    "Charles Sobhraj v. Superintendent, Central Jail, Tihar",
+    "D.S. Nakara v. Union of India",
+    "Delhi Transport Corporation v. DTC Mazdoor Congress",
+    "Dr. Noorjehan Safia Niaz v. State of Maharashtra",
+    "Dr. Subramanian Swamy v. Director, CBI",
+    "E.P. Royappa v. State of Tamil Nadu",
+    "In Re: Policy Strategy for Grant of Bail",
+    "Indian Hotel and Restaurants Association v. State of Maharashtra",
+    "Indian Young Lawyers Association v. State of Kerala",
+    "Javed v. State of Haryana",
+    "Jeeja Ghosh v. Union of India",
+    "John Vallamattom v. Union of India",
+    "Joseph Shine v. Union of India",
+    "Justice K.S. Puttaswamy (Retd.) v. Union of India",
+    "Kunal Kamra v. Union of India",
+    "LIC of India v. Consumer Education & Research Centre",
+    "Lt. Col. Nitisha v. Union of India",
+    "M.K. Ranjitsinh v. Union of India",
+    "Maneka Gandhi v. Union of India",
+    "Mithu v. State of Punjab",
+    "National Legal Services Authority v. Union of India",
+    "Navtej Singh Johar v. Union of India",
+    "Naz Foundation v. Government of NCT of Delhi",
+    "Prem Shankar Shukla v. Delhi Administration",
+    "S. Sushma v. Commissioner of Police",
+    "Satyawati Sharma v. Union of India",
+    "Shayara Bano v. Union of India",
+    "State of Punjab v. Davinder Singh",
+    "Sukanya Shantha v. Union of India",
+    "Supriyo @ Supriya Chakraborty v. Union of India",
+    "Thalappalam Service Cooperative Bank Ltd. v. State of Kerala",
+    "Vishaka v. State of Rajasthan",
+    "Vishal Chelani v. Debashis Nanda"
+   ],
+   "draft_ids": [
+    "mandamus-writ",
+    "nhrc-complaint"
+   ]
+  },
+  {
+   "section": "ART:141",
+   "equivalents": [],
+   "note_ids": [],
+   "judgment_ids": [
+    "People's Union for Civil Liberties v. State of Maharashtra",
+    "Sk. Md. Anisur Rahaman v. State of West Bengal"
+   ],
+   "draft_ids": [
+    "slp-supreme-court"
+   ]
+  },
+  {
+   "section": "ART:161",
+   "equivalents": [],
+   "note_ids": [],
+   "judgment_ids": [
+    "Shatrughan Chauhan v. Union of India"
+   ],
+   "draft_ids": [
+    "mercy-petition"
+   ]
+  },
+  {
+   "section": "ART:19",
+   "equivalents": [],
+   "note_ids": [],
+   "judgment_ids": [
+    "A.K. Gopalan v. State of Madras",
+    "All India Gaming Federation v. State of Karnataka",
+    "Anuradha Bhasin v. Union of India",
+    "Association for Democratic Reforms v. Union of India",
+    "Bennett Coleman & Co. v. Union of India",
+    "Charles Sobhraj v. Superintendent, Central Jail, Tihar",
+    "Christian Medical College Vellore Association v. Union of India",
+    "E.M. Sankaran Namboodiripad v. T. Narayanan Nambiar",
+    "Imran Pratapgarhi v. State of Gujarat",
+    "Indian Express Newspapers (Bombay) Pvt. Ltd. v. Union of India",
+    "Internet and Mobile Association of India v. Reserve Bank of India",
+    "Javed Ahmad Hajam v. State of Maharashtra",
+    "M.P. Sharma v. Satish Chandra",
+    "M.S.M. Sharma v. Shri Krishna Sinha (Searchlight Case)",
+    "Maneka Gandhi v. Union of India",
+    "Mohd. Hanif Qureshi v. State of Bihar",
+    "National Legal Services Authority v. Union of India",
+    "Navtej Singh Johar v. Union of India",
+    "People's Union for Civil Liberties v. Union of India",
+    "Prem Shankar Shukla v. Delhi Administration",
+    "Resham v. State of Karnataka",
+    "Romesh Thappar v. State of Madras",
+    "Sakal Papers (P) Ltd. v. Union of India",
+    "Secretary, Ministry of Information and Broadcasting v. Cricket Association of Bengal",
+    "Shreya Singhal v. Union of India",
+    "Society for Unaided Private Schools of Rajasthan v. Union of India",
+    "State of Gujarat v. Mirzapur Moti Kureshi Kassab Jamat",
+    "Supriyo @ Supriya Chakraborty v. Union of India",
+    "T.M.A. Pai Foundation v. State of Karnataka",
+    "Tata Press Ltd. v. Mahanagar Telephone Nigam Ltd.",
+    "Thalappalam Service Cooperative Bank Ltd. v. State of Kerala",
+    "X Corp v. Union of India (Sahyog Portal Challenge)"
+   ],
+   "draft_ids": [
+    "rti-second-appeal"
+   ]
+  },
+  {
+   "section": "ART:20",
+   "equivalents": [],
+   "note_ids": [],
+   "judgment_ids": [
+    "Amlesh Kumar v. State of Bihar",
+    "M.P. Sharma v. Satish Chandra",
+    "Nandini Satpathy v. P.L. Dani",
+    "Ritesh Sinha v. State of Uttar Pradesh",
+    "Selvi J. Jayalalithaa v. State of Karnataka",
+    "Selvi v. State of Karnataka",
+    "State of Bombay v. Kathi Kalu Oghad"
+   ],
+   "draft_ids": [
+    "brain-mapping-test",
+    "examination-accused-defence-witness",
+    "narco-test"
+   ]
+  },
+  {
+   "section": "ART:21",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:13"
+   ],
+   "judgment_ids": [
+    "A.K. Gopalan v. State of Madras",
+    "A.R. Antulay v. R.S. Nayak",
+    "Additional District Magistrate, Jabalpur v. Shivkant Shukla",
+    "Akriti Chaudhary v. Union of India and 4 Others",
+    "Amlesh Kumar v. State of Bihar",
+    "Animal Welfare Board of India v. A. Nagaraja",
+    "Aruna Ramachandra Shanbaug v. Union of India",
+    "Ashok Kumar Dixit v. State of U.P.",
+    "Aureliano Fernandes v. State of Goa",
+    "Bandhua Mukti Morcha v. Union of India",
+    "Bhim Singh v. State of Jammu & Kashmir",
+    "Charles Sobhraj v. Superintendent, Central Jail, Tihar",
+    "Common Cause (A Regd. Society) v. Union of India",
+    "D.K. Basu v. State of West Bengal",
+    "D.K. Yadav v. J.M.A. Industries Ltd.",
+    "Directorate of Enforcement v. Subhash Sharma",
+    "Dr. Ashwani Kumar v. Union of India",
+    "Dr. P.V. Varavara Rao v. National Investigation Agency",
+    "Extra Judicial Execution Victim Families Association v. Union of India",
+    "Faheema Shirin R.K. v. State of Kerala",
+    "Faimuddeen and 2 Others v. State of U.P. and 7 Others",
+    "Francis Coralie Mullin v. Administrator, Union Territory of Delhi",
+    "Hussainara Khatoon v. State of Bihar",
+    "In Re: Policy Strategy for Grant of Bail",
+    "Independent Thought v. Union of India",
+    "Indian Medical Association v. V.P. Shantha",
+    "Janhit Manch v. State of Maharashtra",
+    "Javed Siddiqui v. State of U.P.",
+    "Joginder Kumar v. State of U.P.",
+    "John Kofie v. State of U.P.",
+    "Joseph Shine v. Union of India",
+    "Justice K.S. Puttaswamy (Retd.) v. Union of India",
+    "Kalpana Mehta v. Union of India",
+    "Kuldeep Singh v. State of U.P.",
+    "M.C. Mehta v. Kamal Nath",
+    "M.C. Mehta v. State of Tamil Nadu",
+    "M.C. Mehta v. Union of India (Oleum Gas Leak case)",
+    "M.C. Mehta v. Union of India (Taj Trapezium)",
+    "M.H. Hoskot v. State of Maharashtra",
+    "Maneka Gandhi v. Union of India",
+    "Mansi Brar Fernandes v. Shubha Sharma",
+    "Mohini Jain v. State of Karnataka",
+    "Musheer Alam v. State of U.P.",
+    "National Legal Services Authority v. Union of India",
+    "Navtej Singh Johar v. Union of India",
+    "Nilabati Behera v. State of Orissa",
+    "Olga Tellis v. Bombay Municipal Corporation",
+    "Paschim Banga Khet Mazdoor Samity v. State of West Bengal",
+    "Payal Sharma v. Superintendent, Nari Niketan, Agra",
+    "People's Union for Civil Liberties v. Union of India (Right to Food Case)",
+    "People's Union for Civil Liberties v. Union of India (Telephone Tapping Case)",
+    "Pooja v. State of Punjab",
+    "Pramati Educational and Cultural Trust v. Union of India",
+    "Prem Shankar Shukla v. Delhi Administration",
+    "Pt. Parmanand Katara v. Union of India",
+    "R. Rajagopal v. State of Tamil Nadu",
+    "Rahmu alias Rahmuddin v. State of U.P.",
+    "Rudul Sah v. State of Bihar",
+    "S. Sushma v. Commissioner of Police",
+    "Salamat Ansari v. State of Uttar Pradesh",
+    "Sanjay Pandey v. Directorate of Enforcement",
+    "Selvi J. Jayalalithaa v. State of Karnataka",
+    "Selvi v. State of Karnataka",
+    "Shafin Jahan v. Asokan K.M.",
+    "Shaikh Zahid Mukhtar v. State of Maharashtra",
+    "Shakti Vahini v. Union of India",
+    "Shatrughan Chauhan v. Union of India",
+    "Smt. Shikha v. State of Uttar Pradesh",
+    "State of Tamil Nadu v. K. Balu",
+    "Subhash Kumar v. State of Bihar",
+    "Subramanian Swamy v. Union of India, Ministry of Law",
+    "Suchita Srivastava v. Chandigarh Administration",
+    "Sukanya Shantha v. Union of India",
+    "Sunil Batra v. Delhi Administration",
+    "Supriyo @ Supriya Chakraborty v. Union of India",
+    "Tehseen S. Poonawalla v. Union of India",
+    "Unni Krishnan, J.P. v. State of Andhra Pradesh",
+    "Vellore Citizens Welfare Forum v. Union of India",
+    "Vihaan Kumar v. State of Haryana & Anr.",
+    "Vikas v. State of U.P.",
+    "Vishaka v. State of Rajasthan",
+    "Yash Pal v. State of Haryana",
+    "Zahira Habibullah Sheikh v. State of Gujarat"
+   ],
+   "draft_ids": [
+    "brain-mapping-test",
+    "change-investigating-officer",
+    "day-to-day-trial",
+    "dna-paternity-test",
+    "fast-track-transfer",
+    "mandamus-writ",
+    "medical-bail",
+    "speedy-trial",
+    "speedy-trial-application",
+    "stay-of-arrest",
+    "transfer-criminal-case",
+    "victim-identity-protection",
+    "victim-right-heard",
+    "writ-habeas-corpus"
+   ]
+  },
+  {
+   "section": "ART:22",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:14"
+   ],
+   "judgment_ids": [
+    "D.K. Basu v. State of West Bengal",
+    "Directorate of Enforcement v. Subhash Sharma",
+    "Gunupati Keshavram Reddy v. Nafisul Hasan",
+    "Pankaj Bansal v. Union of India",
+    "Prabir Purkayastha v. State (NCT of Delhi)",
+    "Vihaan Kumar v. State of Haryana & Anr."
+   ],
+   "draft_ids": [
+    "writ-habeas-corpus"
+   ]
+  },
+  {
+   "section": "ART:226",
+   "equivalents": [],
+   "note_ids": [],
+   "judgment_ids": [
+    "Additional District Magistrate, Jabalpur v. Shivkant Shukla",
+    "Aruna Ramachandra Shanbaug v. Union of India",
+    "Asokan K.M. v. State of Kerala (Hadiya case)",
+    "Centre for Public Interest Litigation v. Union of India",
+    "Daryao v. State of Uttar Pradesh",
+    "Faimuddeen and 2 Others v. State of U.P. and 7 Others",
+    "Gunupati Keshavram Reddy v. Nafisul Hasan",
+    "Javed Siddiqui v. State of U.P.",
+    "Kanu Sanyal v. District Magistrate, Darjeeling",
+    "M.C. Mehta v. Union of India (Oleum Gas Leak case)",
+    "Mohammad Haroon v. Union of India and 5 Others",
+    "Payal Sharma v. Superintendent, Nari Niketan, Agra",
+    "Pradnya Pranjal Kulkarni v. State of Maharashtra & Anr.",
+    "Prakash Singh v. Union of India",
+    "Radhey Shyam v. Chhabi Nath",
+    "Shafin Jahan v. Asokan K.M.",
+    "Smt. Shikha v. State of Uttar Pradesh",
+    "Surya Dev Rai v. Ram Chander Rai",
+    "Vineet Narain v. Union of India",
+    "Zee Telefilms Ltd. v. Union of India"
+   ],
+   "draft_ids": [
+    "cbi-transfer-investigation",
+    "certiorari-writ",
+    "encroachment-public-land-removal",
+    "hague-child-return",
+    "investigation-monitoring",
+    "mandamus-writ",
+    "pil-format",
+    "quashing-528",
+    "transfer-investigation",
+    "writ-226",
+    "writ-certiorari",
+    "writ-habeas-corpus",
+    "writ-mandamus",
+    "writ-prohibition",
+    "writ-quo-warranto"
+   ]
+  },
+  {
+   "section": "ART:227",
+   "equivalents": [],
+   "note_ids": [],
+   "judgment_ids": [
+    "Radhey Shyam v. Chhabi Nath",
+    "Shalini Shyam Shetty v. Rajendra Shankar Patil",
+    "Surya Dev Rai v. Ram Chander Rai"
+   ],
+   "draft_ids": [
+    "certiorari-writ"
+   ]
+  },
+  {
+   "section": "ART:32",
+   "equivalents": [],
+   "note_ids": [],
+   "judgment_ids": [
+    "Additional District Magistrate, Jabalpur v. Shivkant Shukla",
+    "Bhim Singh v. State of Jammu & Kashmir",
+    "Centre for Public Interest Litigation v. Union of India",
+    "Daryao v. State of Uttar Pradesh",
+    "Gunupati Keshavram Reddy v. Nafisul Hasan",
+    "Kalpana Mehta v. Union of India",
+    "Kanu Sanyal v. District Magistrate, Darjeeling",
+    "M.C. Mehta v. Kamal Nath",
+    "M.C. Mehta v. State of Tamil Nadu",
+    "M.C. Mehta v. Union of India (Oleum Gas Leak case)",
+    "M.C. Mehta v. Union of India (Taj Trapezium)",
+    "Mohammad Haroon v. Union of India and 5 Others",
+    "Prakash Singh v. Union of India",
+    "Rudul Sah v. State of Bihar",
+    "Shafin Jahan v. Asokan K.M.",
+    "Subhash Kumar v. State of Bihar",
+    "Tilokchand Motichand v. H.B. Munshi",
+    "Vineet Narain v. Union of India",
+    "Vishaka v. State of Rajasthan"
+   ],
+   "draft_ids": [
+    "pil-format",
+    "writ-226"
+   ]
+  },
+  {
+   "section": "ART:72",
+   "equivalents": [],
+   "note_ids": [],
+   "judgment_ids": [
+    "Shatrughan Chauhan v. Union of India"
+   ],
+   "draft_ids": [
+    "mercy-petition"
+   ]
+  },
+  {
+   "section": "BNS:1",
+   "equivalents": [],
+   "note_ids": [
+    "bns:0"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "defamation-356"
+   ]
+  },
+  {
+   "section": "BNS:103",
+   "equivalents": [
+    "IPC:302"
+   ],
+   "note_ids": [
+    "bns:14",
+    "bns:4",
+    "majorActs:3"
+   ],
+   "judgment_ids": [
+    "Abu Salem Abdul Qayoom Ansari v. State of Maharashtra",
+    "Amar Goswami v. State of U.P. and Another",
+    "Anindya Sundar Das v. Union of India (In Re: Post-Poll Violence)",
+    "Ankush Maruti Shinde v. State of Maharashtra",
+    "Bachan Singh v. State of Punjab",
+    "Bhutto Ram v. State of H.P.",
+    "Court on Its Own Motion v. Rampal",
+    "Dr. (Mrs.) Nupur Talwar v. State of Uttar Pradesh",
+    "Extra Judicial Execution Victim Families Association v. Union of India",
+    "G. Parshwanath v. State of Karnataka",
+    "K.M. Nanavati v. State of Maharashtra",
+    "K.P. Tamilmaran v. State (by Deputy Superintendent of Police)",
+    "Kehar Singh v. State (Delhi Administration)",
+    "Lochan Shrivas v. State of Chhattisgarh",
+    "Machhi Singh v. State of Punjab",
+    "Manoj Pratap Singh v. State of Rajasthan",
+    "Mithu v. State of Punjab",
+    "Mohammed Ajmal Kasab v. State of Maharashtra",
+    "Mohd. Firoz v. State of Madhya Pradesh",
+    "Mukesh v. State (NCT of Delhi)",
+    "Palvinder Kaur v. State of Punjab",
+    "Pooja Pal v. Union of India",
+    "Sangeet v. State of Haryana",
+    "Santosh Kumar Singh v. State through CBI",
+    "Sharad Birdhichand Sarda v. State of Maharashtra",
+    "Sidhartha Vashisht @ Manu Sharma v. State (NCT of Delhi)",
+    "Sk. Md. Anisur Rahaman v. State of West Bengal",
+    "State of Maharashtra v. Sukhdev Singh",
+    "State of U.P. v. Krishna Master",
+    "Subramania Goundan v. State of Madras",
+    "Surendra Koli v. State of Uttar Pradesh",
+    "Sushil Sharma v. State (NCT of Delhi)",
+    "Swamy Shraddananda v. State of Karnataka",
+    "Tehseen S. Poonawalla v. Union of India",
+    "V. Sriharan @ Murugan v. Union of India",
+    "Vikas Yadav v. State of U.P.",
+    "Vikas v. State of U.P.",
+    "X Juvenile vs State of U.P.",
+    "Yakub Abdul Razak Memon v. State of Maharashtra"
+   ],
+   "draft_ids": []
+  },
+  {
+   "section": "BNS:105",
+   "equivalents": [
+    "IPC:304"
+   ],
+   "note_ids": [
+    "bns:15",
+    "bns:31"
+   ],
+   "judgment_ids": [
+    "Madhur Chand And 2 Others vs State of U.P."
+   ],
+   "draft_ids": []
+  },
+  {
+   "section": "BNS:106",
+   "equivalents": [
+    "IPC:304a"
+   ],
+   "note_ids": [
+    "bns:31"
+   ],
+   "judgment_ids": [
+    "Bhutto Ram v. State of H.P.",
+    "Dr. Balram Prasad v. Dr. Kunal Saha",
+    "Jacob Mathew v. State of Punjab"
+   ],
+   "draft_ids": []
+  },
+  {
+   "section": "BNS:109",
+   "equivalents": [
+    "IPC:307"
+   ],
+   "note_ids": [
+    "bns:25"
+   ],
+   "judgment_ids": [
+    "Firdaus @ Shadab Akhtar v. State of U.P.",
+    "Mansha Ram vs State of U.P.",
+    "Sangeet v. State of Haryana",
+    "State of Maharashtra v. Balram Bama Patil & Ors."
+   ],
+   "draft_ids": []
+  },
+  {
+   "section": "BNS:111",
+   "equivalents": [],
+   "note_ids": [
+    "bns:14",
+    "bns:18",
+    "majorActs:3"
+   ],
+   "judgment_ids": [
+    "Raghvendra Singh v. State of U.P."
+   ],
+   "draft_ids": []
+  },
+  {
+   "section": "BNS:115",
+   "equivalents": [
+    "IPC:323"
+   ],
+   "note_ids": [
+    "bns:5"
+   ],
+   "judgment_ids": [
+    "Hirendra Kushwaha vs State of U.P.",
+    "Juvenile of FIR No. 0253/2024 v. State of U.P.",
+    "Virendra Singh vs State of U.P. And Another",
+    "X-Juvenile v. State of U.P. and 3 Others"
+   ],
+   "draft_ids": [
+    "complaint-hurt-115"
+   ]
+  },
+  {
+   "section": "BNS:117",
+   "equivalents": [
+    "IPC:325"
+   ],
+   "note_ids": [
+    "bns:5"
+   ],
+   "judgment_ids": [
+    "Virendra Singh vs State of U.P. And Another"
+   ],
+   "draft_ids": [
+    "complaint-hurt-115"
+   ]
+  },
+  {
+   "section": "BNS:137",
+   "equivalents": [
+    "IPC:363"
+   ],
+   "note_ids": [
+    "bns:10"
+   ],
+   "judgment_ids": [
+    "Manoj Pratap Singh v. State of Rajasthan",
+    "Mazhar Husain vs State of U.P. And 3 Others",
+    "Mohd. Firoz v. State of Madhya Pradesh",
+    "X-Juvenile v. State of U.P. and 3 Others"
+   ],
+   "draft_ids": []
+  },
+  {
+   "section": "BNS:140",
+   "equivalents": [],
+   "note_ids": [
+    "bns:10"
+   ],
+   "judgment_ids": [
+    "Vikas Yadav v. State of U.P."
+   ],
+   "draft_ids": []
+  },
+  {
+   "section": "BNS:147",
+   "equivalents": [],
+   "note_ids": [
+    "bns:3"
+   ],
+   "judgment_ids": [
+    "State (NCT of Delhi) v. Navjot Sandhu"
+   ],
+   "draft_ids": []
+  },
+  {
+   "section": "BNS:149",
+   "equivalents": [],
+   "note_ids": [
+    "bns:3"
+   ],
+   "judgment_ids": [
+    "State (NCT of Delhi) v. Navjot Sandhu"
+   ],
+   "draft_ids": []
+  },
+  {
+   "section": "BNS:152",
+   "equivalents": [
+    "IPC:124a"
+   ],
+   "note_ids": [
+    "bns:3",
+    "majorActs:3"
+   ],
+   "judgment_ids": [
+    "Foundation for Independent Journalism v. Union of India",
+    "S.G. Vombatkere v. Union of India",
+    "Sajid Chaudhary v. State of U.P.",
+    "Suleman v. State of H.P."
+   ],
+   "draft_ids": []
+  },
+  {
+   "section": "BNS:2",
+   "equivalents": [],
+   "note_ids": [
+    "bns:0",
+    "bns:14"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "complaint-criminal-intimidation-351",
+    "complaint-theft-303",
+    "defamation-356"
+   ]
+  },
+  {
+   "section": "BNS:3",
+   "equivalents": [
+    "IPC:34"
+   ],
+   "note_ids": [
+    "bns:0"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "complaint-criminal-intimidation-351",
+    "defamation-356"
+   ]
+  },
+  {
+   "section": "BNS:303",
+   "equivalents": [
+    "IPC:379"
+   ],
+   "note_ids": [
+    "bns:21",
+    "bns:6"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "complaint-theft-303"
+   ]
+  },
+  {
+   "section": "BNS:305",
+   "equivalents": [],
+   "note_ids": [
+    "bns:6"
+   ],
+   "judgment_ids": [
+    "Sandeep Singh v. State of U.P. and Another"
+   ],
+   "draft_ids": []
+  },
+  {
+   "section": "BNS:316",
+   "equivalents": [
+    "IPC:406"
+   ],
+   "note_ids": [
+    "bns:22"
+   ],
+   "judgment_ids": [
+    "Anil Kumar And Another vs State of U.P.",
+    "Hridaya Ranjan Prasad Verma & Ors. v. State of Bihar & Anr.",
+    "Parveen Jain vs State of U.P.",
+    "Raghvendra Singh v. State of U.P."
+   ],
+   "draft_ids": [
+    "stridhan-recovery"
+   ]
+  },
+  {
+   "section": "BNS:318",
+   "equivalents": [
+    "IPC:420"
+   ],
+   "note_ids": [
+    "bns:13",
+    "bns:7"
+   ],
+   "judgment_ids": [
+    "Anil Kumar And Another vs State of U.P.",
+    "Ashish Garg v. State of U.P.",
+    "Hridaya Ranjan Prasad Verma & Ors. v. State of Bihar & Anr.",
+    "Inder Mohan Goswami & Another v. State of Uttaranchal & Others",
+    "Parveen Jain vs State of U.P.",
+    "Raghvendra Singh v. State of U.P.",
+    "S.C. Garg v. State of U.P.",
+    "Sudhir @ Sudhir Kumar Chaurasia vs State of U.P.",
+    "Uday Prakash and Another v. State of U.P."
+   ],
+   "draft_ids": [
+    "complaint-cheating-318"
+   ]
+  },
+  {
+   "section": "BNS:338",
+   "equivalents": [
+    "IPC:467"
+   ],
+   "note_ids": [
+    "bns:23"
+   ],
+   "judgment_ids": [
+    "Ashish Garg v. State of U.P.",
+    "Inder Mohan Goswami & Another v. State of Uttaranchal & Others",
+    "Raghvendra Singh v. State of U.P.",
+    "Sudhir @ Sudhir Kumar Chaurasia vs State of U.P."
+   ],
+   "draft_ids": []
+  },
+  {
+   "section": "BNS:340",
+   "equivalents": [
+    "IPC:471"
+   ],
+   "note_ids": [
+    "bns:23"
+   ],
+   "judgment_ids": [
+    "Sudhir @ Sudhir Kumar Chaurasia vs State of U.P."
+   ],
+   "draft_ids": []
+  },
+  {
+   "section": "BNS:351",
+   "equivalents": [
+    "IPC:506"
+   ],
+   "note_ids": [
+    "bns:12"
+   ],
+   "judgment_ids": [
+    "Amir Thru. His Father Mohd. Naseer vs State of U.P. Thru. Prin. Secy. Home Lko.",
+    "Anil Kumar And Another vs State of U.P.",
+    "Harkesh Bahadur Singh and 4 Others v. State of U.P.",
+    "Hirendra Kushwaha vs State of U.P.",
+    "Sri Ram Yadav v. State of U.P. and Another",
+    "X-Juvenile v. State of U.P. and 3 Others"
+   ],
+   "draft_ids": [
+    "complaint-criminal-intimidation-351"
+   ]
+  },
+  {
+   "section": "BNS:352",
+   "equivalents": [
+    "IPC:504"
+   ],
+   "note_ids": [
+    "bns:12"
+   ],
+   "judgment_ids": [
+    "Anil Kumar And Another vs State of U.P.",
+    "Harkesh Bahadur Singh and 4 Others v. State of U.P.",
+    "Hirendra Kushwaha vs State of U.P.",
+    "Madhur Chand And 2 Others vs State of U.P.",
+    "Sri Ram Yadav v. State of U.P. and Another",
+    "Virendra Singh vs State of U.P. And Another"
+   ],
+   "draft_ids": []
+  },
+  {
+   "section": "BNS:356",
+   "equivalents": [
+    "IPC:499",
+    "IPC:500"
+   ],
+   "note_ids": [
+    "bns:17",
+    "bns:8"
+   ],
+   "judgment_ids": [
+    "Google India Private Limited v. Visaka Industries",
+    "Harbhajan Singh v. State of Punjab",
+    "K. Srinivas Rao v. D.A. Deepa",
+    "Sewakram Sobhani v. R.K. Karanjia",
+    "State of Tamil Nadu v. Suhas Katti",
+    "Subramanian Swamy v. Union of India, Ministry of Law",
+    "Swami Ramdev v. Facebook Inc."
+   ],
+   "draft_ids": [
+    "defamation-356"
+   ]
+  },
+  {
+   "section": "BNS:4",
+   "equivalents": [],
+   "note_ids": [
+    "bns:1"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "complaint-cheating-318",
+    "defamation-356"
+   ]
+  },
+  {
+   "section": "BNS:61",
+   "equivalents": [
+    "IPC:120b"
+   ],
+   "note_ids": [
+    "bns:11"
+   ],
+   "judgment_ids": [
+    "C. Chenga Reddy v. State of Andhra Pradesh",
+    "Gursewak Singh v. State of Punjab",
+    "Hanumant Govind Nargundkar v. State of Madhya Pradesh",
+    "K.P. Tamilmaran v. State (by Deputy Superintendent of Police)",
+    "Kehar Singh v. State (Delhi Administration)",
+    "Madhur Chand And 2 Others vs State of U.P.",
+    "Sidhartha Vashisht @ Manu Sharma v. State (NCT of Delhi)",
+    "Sk. Md. Anisur Rahaman v. State of West Bengal"
+   ],
+   "draft_ids": [
+    "defamation-356"
+   ]
+  },
+  {
+   "section": "BNS:62",
+   "equivalents": [],
+   "note_ids": [
+    "bns:11"
+   ],
+   "judgment_ids": [
+    "Sandeep Singh v. State of U.P. and Another"
+   ],
+   "draft_ids": []
+  },
+  {
+   "section": "BNS:64",
+   "equivalents": [
+    "IPC:376"
+   ],
+   "note_ids": [
+    "bns:9"
+   ],
+   "judgment_ids": [
+    "Amir Thru. His Father Mohd. Naseer vs State of U.P. Thru. Prin. Secy. Home Lko.",
+    "Anindya Sundar Das v. Union of India (In Re: Post-Poll Violence)",
+    "Ankush Maruti Shinde v. State of Maharashtra",
+    "Bharwada Bhoginbhai Hirjibhai v. State of Gujarat",
+    "Court on Its Own Motion v. State of Haryana",
+    "Delhi Domestic Working Women's Forum v. Union of India",
+    "In Re: Alarming Rise in the Number of Reported Child Rape Incidents",
+    "In Re: Prajwala Letter Dated 18.2.2015 Videos of Sexual Violence and Recommendations",
+    "Independent Thought v. Union of India",
+    "Lochan Shrivas v. State of Chhattisgarh",
+    "Manoj Pratap Singh v. State of Rajasthan",
+    "Mohd. Firoz v. State of Madhya Pradesh",
+    "Mukesh v. State (NCT of Delhi)",
+    "Nipun Saxena v. Union of India",
+    "Samardhan v. State of Maharashtra & Ors.",
+    "State of Punjab v. Gurmit Singh",
+    "State of Rajasthan v. Om Prakash",
+    "Tukaram v. State of Maharashtra",
+    "X v. Principal Secretary, Health and Family Welfare Department, Govt. of NCT of Delhi"
+   ],
+   "draft_ids": []
+  },
+  {
+   "section": "BNS:70",
+   "equivalents": [],
+   "note_ids": [
+    "bns:9"
+   ],
+   "judgment_ids": [
+    "Ankush Maruti Shinde v. State of Maharashtra",
+    "Juvenile of FIR No. 0253/2024 v. State of U.P."
+   ],
+   "draft_ids": []
+  },
+  {
+   "section": "BNS:72",
+   "equivalents": [
+    "IPC:228a"
+   ],
+   "note_ids": [
+    "bns:9"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "victim-identity-protection"
+   ]
+  },
+  {
+   "section": "BNS:74",
+   "equivalents": [
+    "IPC:354"
+   ],
+   "note_ids": [
+    "bns:29",
+    "bns:30"
+   ],
+   "judgment_ids": [
+    "Sri Ram Yadav v. State of U.P. and Another"
+   ],
+   "draft_ids": []
+  },
+  {
+   "section": "BNS:80",
+   "equivalents": [
+    "IPC:304b"
+   ],
+   "note_ids": [
+    "bns:15"
+   ],
+   "judgment_ids": [
+    "Sher Singh v. State of Haryana"
+   ],
+   "draft_ids": []
+  },
+  {
+   "section": "BNS:85",
+   "equivalents": [
+    "IPC:498a"
+   ],
+   "note_ids": [
+    "bns:15"
+   ],
+   "judgment_ids": [
+    "Arnesh Kumar v. State of Bihar",
+    "Hirendra Kushwaha vs State of U.P.",
+    "Sher Singh v. State of Haryana",
+    "Social Action Forum for Manav Adhikar v. Union of India",
+    "Sushil Kumar Sharma v. Union of India"
+   ],
+   "draft_ids": []
+  },
+  {
+   "section": "BNS:87",
+   "equivalents": [
+    "IPC:366"
+   ],
+   "note_ids": [
+    "bns:10"
+   ],
+   "judgment_ids": [
+    "Juvenile of FIR No. 0253/2024 v. State of U.P.",
+    "Smt. Shikha v. State of Uttar Pradesh"
+   ],
+   "draft_ids": []
+  },
+  {
+   "section": "BNSS:144",
+   "equivalents": [
+    "CRPC:125"
+   ],
+   "note_ids": [
+    "bnss:5"
+   ],
+   "judgment_ids": [
+    "Ajay Bhardwaj v. Jyotsna",
+    "Badshah v. Sou. Urmila Badshah Godse",
+    "Badshah v. Urmila Badshah Godse",
+    "Bai Tahira v. Ali Hussain Fida Hussain Chothia",
+    "Bhuwan Mohan Singh v. Meena",
+    "Danial Latifi v. Union of India",
+    "Fuzlunbi v. K. Khader Vali",
+    "Iqbal Bano v. State of U.P.",
+    "Mohd. Abdul Samad v. State of Telangana",
+    "Mohd. Ahmed Khan v. Shah Bano Begum",
+    "Noor Saba Khatoon v. Mohd. Quasim",
+    "Rajnesh v. Neha",
+    "Shabana Bano v. Imran Khan"
+   ],
+   "draft_ids": [
+    "dna-paternity-test",
+    "enhancement-maintenance-127",
+    "interim-maintenance",
+    "maintenance-144",
+    "maintenance-minor-child-144",
+    "maintenance-parents",
+    "parents-maintenance-144",
+    "reduction-maintenance-145"
+   ]
+  },
+  {
+   "section": "BNSS:173",
+   "equivalents": [
+    "CRPC:154"
+   ],
+   "note_ids": [
+    "bnss:0",
+    "bnss:13",
+    "bnss:32",
+    "majorActs:4"
+   ],
+   "judgment_ids": [
+    "Amitbhai Anilchandra Shah v. Central Bureau of Investigation",
+    "Lalita Kumari v. Government of Uttar Pradesh"
+   ],
+   "draft_ids": [
+    "change-investigating-officer",
+    "fir-direction-173",
+    "fir-documents-copy",
+    "sho-written-complaint"
+   ]
+  },
+  {
+   "section": "BNSS:174",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:32"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "sho-written-complaint"
+   ]
+  },
+  {
+   "section": "BNSS:175",
+   "equivalents": [
+    "CRPC:156"
+   ],
+   "note_ids": [
+    "bnss:32"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "change-investigating-officer",
+    "complaint-scst-atrocities",
+    "fir-direction-173",
+    "investigation-monitoring"
+   ]
+  },
+  {
+   "section": "BNSS:176",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:32"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "test-identification"
+   ]
+  },
+  {
+   "section": "BNSS:177",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:32"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "test-identification"
+   ]
+  },
+  {
+   "section": "BNSS:178",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:32"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "test-identification"
+   ]
+  },
+  {
+   "section": "BNSS:179",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:32"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "test-identification"
+   ]
+  },
+  {
+   "section": "BNSS:180",
+   "equivalents": [
+    "CRPC:161"
+   ],
+   "note_ids": [
+    "bnss:32"
+   ],
+   "judgment_ids": [
+    "Nandini Satpathy v. P.L. Dani"
+   ],
+   "draft_ids": [
+    "contradiction-witness-previous-statement",
+    "copy-chargesheet-documents",
+    "cross-examination-investigating-officer",
+    "test-identification"
+   ]
+  },
+  {
+   "section": "BNSS:181",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:32"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "contradiction-witness-previous-statement",
+    "test-identification"
+   ]
+  },
+  {
+   "section": "BNSS:182",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:32"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "test-identification"
+   ]
+  },
+  {
+   "section": "BNSS:183",
+   "equivalents": [
+    "CRPC:164"
+   ],
+   "note_ids": [
+    "bnss:32"
+   ],
+   "judgment_ids": [
+    "Subramania Goundan v. State of Madras"
+   ],
+   "draft_ids": [
+    "dna-profiling-criminal-case",
+    "pocso-discharge",
+    "test-identification"
+   ]
+  },
+  {
+   "section": "BNSS:184",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:32"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "dna-profiling-criminal-case"
+   ]
+  },
+  {
+   "section": "BNSS:185",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:32"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "defreeze-bank-account"
+   ]
+  },
+  {
+   "section": "BNSS:187",
+   "equivalents": [
+    "CRPC:167"
+   ],
+   "note_ids": [
+    "bnss:13",
+    "bnss:32",
+    "bnss:8"
+   ],
+   "judgment_ids": [
+    "Shabir Ahmed Shah v. National Investigation Agency",
+    "Shaurya Sunil Kumar Singh v. Central Bureau of Investigation",
+    "Suraj Kanojia v. State (Govt. of NCT of Delhi)"
+   ],
+   "draft_ids": [
+    "default-bail",
+    "default-bail-187",
+    "regular-bail",
+    "remand-objection-187",
+    "woman-bail"
+   ]
+  },
+  {
+   "section": "BNSS:192",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:25",
+    "bnss:32"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "cross-examination-investigating-officer",
+    "inspection-case-diary"
+   ]
+  },
+  {
+   "section": "BNSS:193",
+   "equivalents": [
+    "CRPC:173"
+   ],
+   "note_ids": [
+    "bnss:13",
+    "bnss:3",
+    "bnss:32",
+    "majorActs:4"
+   ],
+   "judgment_ids": [
+    "Amitbhai Anilchandra Shah v. Central Bureau of Investigation"
+   ],
+   "draft_ids": [
+    "cctv-evidence-preservation",
+    "change-investigating-officer",
+    "dna-profiling-criminal-case",
+    "further-investigation-193",
+    "investigation-monitoring",
+    "protest-petition"
+   ]
+  },
+  {
+   "section": "BNSS:210",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:7"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "complaint-cheating-318",
+    "complaint-criminal-intimidation-351",
+    "complaint-hurt-115",
+    "complaint-magistrate-175",
+    "complaint-theft-303",
+    "fir-direction-173",
+    "protest-petition"
+   ]
+  },
+  {
+   "section": "BNSS:223",
+   "equivalents": [
+    "CRPC:200"
+   ],
+   "note_ids": [
+    "bnss:7"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "complaint-cheating-318",
+    "complaint-criminal-intimidation-351",
+    "complaint-hurt-115",
+    "complaint-magistrate-175",
+    "complaint-theft-303"
+   ]
+  },
+  {
+   "section": "BNSS:249",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:16",
+    "bnss:26"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "discharge-250"
+   ]
+  },
+  {
+   "section": "BNSS:250",
+   "equivalents": [
+    "CRPC:227"
+   ],
+   "note_ids": [
+    "bnss:16",
+    "bnss:26"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "discharge-250",
+    "discharge-ndps",
+    "discharge-pmla",
+    "discharge-uapa",
+    "pocso-discharge",
+    "revision-framing-charge"
+   ]
+  },
+  {
+   "section": "BNSS:251",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:11",
+    "bnss:16",
+    "bnss:26"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "revision-framing-charge",
+    "speedy-trial-application"
+   ]
+  },
+  {
+   "section": "BNSS:256",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:16",
+    "bnss:26"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "defence-witness"
+   ]
+  },
+  {
+   "section": "BNSS:262",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:21"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "discharge-250",
+    "pocso-discharge"
+   ]
+  },
+  {
+   "section": "BNSS:266",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:21"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "defence-witness"
+   ]
+  },
+  {
+   "section": "BNSS:273",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:21",
+    "bnss:4"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "restoration-complaint"
+   ]
+  },
+  {
+   "section": "BNSS:308",
+   "equivalents": [],
+   "note_ids": [],
+   "judgment_ids": [
+    "State of Maharashtra v. Praful Desai"
+   ],
+   "draft_ids": [
+    "exemption-appearance"
+   ]
+  },
+  {
+   "section": "BNSS:341",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:14"
+   ],
+   "judgment_ids": [
+    "M.H. Hoskot v. State of Maharashtra"
+   ],
+   "draft_ids": [
+    "victim-counsel-341"
+   ]
+  },
+  {
+   "section": "BNSS:346",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:4"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "adjournment-hearing",
+    "day-to-day-trial",
+    "speedy-trial",
+    "speedy-trial-application"
+   ]
+  },
+  {
+   "section": "BNSS:348",
+   "equivalents": [
+    "CRPC:311"
+   ],
+   "note_ids": [],
+   "judgment_ids": [
+    "Zahira Habibullah Sheikh v. State of Gujarat"
+   ],
+   "draft_ids": [
+    "brain-mapping-test",
+    "criminal-misc",
+    "expert-opinion-handwriting",
+    "polygraph-test",
+    "recall-witness-311",
+    "summoning-witnesses-criminal",
+    "voice-sample",
+    "witness-further-cross"
+   ]
+  },
+  {
+   "section": "BNSS:35",
+   "equivalents": [
+    "CRPC:41"
+   ],
+   "note_ids": [
+    "bnss:1"
+   ],
+   "judgment_ids": [
+    "Arnesh Kumar v. State of Bihar",
+    "D.K. Basu v. State of West Bengal",
+    "Joginder Kumar v. State of U.P.",
+    "Satender Kumar Antil v. CBI",
+    "Siddharth v. State of Uttar Pradesh"
+   ],
+   "draft_ids": []
+  },
+  {
+   "section": "BNSS:351",
+   "equivalents": [
+    "CRPC:313"
+   ],
+   "note_ids": [],
+   "judgment_ids": [
+    "State of Maharashtra v. Sukhdev Singh"
+   ],
+   "draft_ids": [
+    "defence-witness",
+    "examination-accused-defence-witness",
+    "exemption-appearance"
+   ]
+  },
+  {
+   "section": "BNSS:358",
+   "equivalents": [],
+   "note_ids": [],
+   "judgment_ids": [
+    "Hardeep Singh v. State of Punjab"
+   ],
+   "draft_ids": [
+    "additional-accused-319",
+    "compounding-offence-359"
+   ]
+  },
+  {
+   "section": "BNSS:359",
+   "equivalents": [
+    "CRPC:320"
+   ],
+   "note_ids": [
+    "bnss:27"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "compounding-138",
+    "compounding-147-ni",
+    "compounding-359",
+    "compounding-offence-359"
+   ]
+  },
+  {
+   "section": "BNSS:360",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:28"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "compounding-offence-359",
+    "victim-right-heard",
+    "withdrawal-prosecution"
+   ]
+  },
+  {
+   "section": "BNSS:395",
+   "equivalents": [
+    "CRPC:357"
+   ],
+   "note_ids": [
+    "bnss:9"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "victim-compensation-396"
+   ]
+  },
+  {
+   "section": "BNSS:396",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:9",
+    "majorActs:4"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "victim-compensation-396"
+   ]
+  },
+  {
+   "section": "BNSS:397",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:9"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "victim-compensation-396"
+   ]
+  },
+  {
+   "section": "BNSS:401",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:29"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "probation-good-conduct-401"
+   ]
+  },
+  {
+   "section": "BNSS:402",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:29"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "probation-good-conduct-401"
+   ]
+  },
+  {
+   "section": "BNSS:403",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:29"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "correction-clerical-error-criminal"
+   ]
+  },
+  {
+   "section": "BNSS:413",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:15"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "appeal-acquittal-138"
+   ]
+  },
+  {
+   "section": "BNSS:415",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:15"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "appeal-conviction-138",
+    "criminal-appeal",
+    "section-138-appeal"
+   ]
+  },
+  {
+   "section": "BNSS:416",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:15"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "criminal-appeal"
+   ]
+  },
+  {
+   "section": "BNSS:417",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:15"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "criminal-appeal"
+   ]
+  },
+  {
+   "section": "BNSS:418",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:15"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "criminal-appeal"
+   ]
+  },
+  {
+   "section": "BNSS:419",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:15"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "appeal-acquittal-138",
+    "appeal-against-acquittal-general",
+    "criminal-appeal"
+   ]
+  },
+  {
+   "section": "BNSS:423",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:15"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "criminal-appeal"
+   ]
+  },
+  {
+   "section": "BNSS:430",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:15"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "appeal-conviction-138",
+    "criminal-appeal",
+    "section-138-appeal",
+    "stay-of-proceedings-revision-appeal",
+    "stay-sentence-appeal",
+    "suspension-of-conviction-appeal"
+   ]
+  },
+  {
+   "section": "BNSS:480",
+   "equivalents": [
+    "CRPC:437"
+   ],
+   "note_ids": [
+    "bnss:2"
+   ],
+   "judgment_ids": [
+    "Madhur Chand And 2 Others vs State of U.P.",
+    "Mohd. Ashfaque Ansari alias Ashfaque Ansari v. State of U.P."
+   ],
+   "draft_ids": [
+    "bail-arms-act-25",
+    "bail-cancellation",
+    "juvenile-bail",
+    "medical-bail",
+    "modification-bail-conditions",
+    "passport-release-travel-abroad",
+    "regular-bail",
+    "restoration-of-cancelled-bail",
+    "surrender-application",
+    "victim-right-heard",
+    "woman-bail"
+   ]
+  },
+  {
+   "section": "BNSS:481",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:2"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "surrender-application"
+   ]
+  },
+  {
+   "section": "BNSS:482",
+   "equivalents": [
+    "CRPC:438"
+   ],
+   "note_ids": [
+    "bnss:10",
+    "bnss:2"
+   ],
+   "judgment_ids": [
+    "Abdul Hameed v. State of U.P.",
+    "Anil Kumar And Another vs State of U.P.",
+    "Gurbaksh Singh Sibbia v. State of Punjab",
+    "Gursewak Singh v. State of Punjab",
+    "Kiran v. Rajkumar Jivraj Jain",
+    "Musheer Alam v. State of U.P.",
+    "Parveen Jain vs State of U.P.",
+    "Prathvi Raj Chauhan v. Union of India",
+    "Raghvendra Singh v. State of U.P.",
+    "Ritesh Kumar v. State of Bihar",
+    "Shahzad v. State of U.P.",
+    "Sudhir @ Sudhir Kumar Chaurasia vs State of U.P.",
+    "Sushila Aggarwal v. State (NCT of Delhi)",
+    "Uday Prakash and Another v. State of U.P."
+   ],
+   "draft_ids": [
+    "anticipatory-bail",
+    "anticipatory-bail-economic",
+    "anticipatory-bail-ndps",
+    "scst-anticipatory-bail",
+    "stay-of-arrest",
+    "surrender-application",
+    "transit-bail"
+   ]
+  },
+  {
+   "section": "BNSS:483",
+   "equivalents": [
+    "CRPC:439"
+   ],
+   "note_ids": [
+    "bnss:2"
+   ],
+   "judgment_ids": [
+    "Amarawati and Another v. State of U.P.",
+    "Ashish Garg v. State of U.P.",
+    "Dataram Singh v. State of Uttar Pradesh",
+    "Dr. P.V. Varavara Rao v. National Investigation Agency",
+    "Firdaus @ Shadab Akhtar v. State of U.P.",
+    "John Kofie v. State of U.P.",
+    "K. Chinnaswamy Reddy v. State of Andhra Pradesh",
+    "Kuldeep Singh v. State of U.P.",
+    "Kundan Yadav v. State of U.P.",
+    "Manish Sisodia v. Central Bureau of Investigation",
+    "Mohammed Zubair v. State of Uttar Pradesh",
+    "Nanha S/o Nabhan Khan v. State of Uttar Pradesh",
+    "Rahmu alias Rahmuddin v. State of U.P.",
+    "Ranjan Pradhan v. State of U.P.",
+    "Ravi Tiwari v. State of U.P.",
+    "Rhea Chakraborty v. Union of India",
+    "Sanjay Chandra v. CBI",
+    "Satender Kumar Antil v. CBI",
+    "Udai Pratap alias Dau v. State of U.P.",
+    "Vikas v. State of U.P."
+   ],
+   "draft_ids": [
+    "anticipatory-bail-conditions",
+    "bail-arms-act-25",
+    "bail-cancellation",
+    "bail-up-gangsters-act",
+    "excise-bail",
+    "interim-bail",
+    "medical-bail",
+    "modification-bail-conditions",
+    "nbw-recall",
+    "ndps-bail",
+    "passport-release-travel-abroad",
+    "pmla-bail",
+    "pocso-bail",
+    "regular-bail",
+    "restoration-of-cancelled-bail",
+    "surrender-application",
+    "uapa-bail",
+    "victim-right-heard",
+    "woman-bail"
+   ]
+  },
+  {
+   "section": "BNSS:484",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:2",
+    "bnss:30"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "anticipatory-bail",
+    "bail-bond-surety",
+    "modification-bail-conditions",
+    "surety-bond"
+   ]
+  },
+  {
+   "section": "BNSS:485",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:30"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "bail-bond-format",
+    "bail-bond-surety",
+    "surety-bond"
+   ]
+  },
+  {
+   "section": "BNSS:486",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:30"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "bail-bond-format",
+    "bail-bond-surety",
+    "surety-bond"
+   ]
+  },
+  {
+   "section": "BNSS:487",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:30"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "bail-bond-surety"
+   ]
+  },
+  {
+   "section": "BNSS:488",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:30"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "bail-bond-surety"
+   ]
+  },
+  {
+   "section": "BNSS:489",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:30"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "discharge-of-surety",
+    "refund-bail-bond-surety-amount"
+   ]
+  },
+  {
+   "section": "BNSS:490",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:30"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "refund-bail-bond-surety-amount"
+   ]
+  },
+  {
+   "section": "BNSS:51",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:14"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "fsl-examination",
+    "medical-examination-53",
+    "polygraph-test"
+   ]
+  },
+  {
+   "section": "BNSS:514",
+   "equivalents": [
+    "CRPC:468"
+   ],
+   "note_ids": [],
+   "judgment_ids": [
+    "Sarah Mathew v. Institute of Cardio Vascular Diseases"
+   ],
+   "draft_ids": [
+    "defamation-356"
+   ]
+  },
+  {
+   "section": "BNSS:52",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:14"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "dna-profiling-criminal-case",
+    "fsl-examination",
+    "medical-examination-53"
+   ]
+  },
+  {
+   "section": "BNSS:528",
+   "equivalents": [
+    "CRPC:482"
+   ],
+   "note_ids": [
+    "bnss:6"
+   ],
+   "judgment_ids": [
+    "Harkesh Bahadur Singh and 4 Others v. State of U.P.",
+    "Hirendra Kushwaha vs State of U.P.",
+    "Hridaya Ranjan Prasad Verma & Ors. v. State of Bihar & Anr.",
+    "Imran Pratapgarhi v. State of Gujarat",
+    "Inder Mohan Goswami & Another v. State of Uttaranchal & Others",
+    "Pradnya Pranjal Kulkarni v. State of Maharashtra & Anr.",
+    "R.P. Kapur v. State of Punjab",
+    "S.C. Garg v. State of U.P.",
+    "Sandeep Singh v. State of U.P. and Another",
+    "State of Haryana v. Bhajan Lal"
+   ],
+   "draft_ids": [
+    "cbi-transfer-investigation",
+    "criminal-misc",
+    "early-hearing-criminal",
+    "investigation-monitoring",
+    "parole-application",
+    "police-protection",
+    "quashing-528",
+    "recall-arrest-warrant",
+    "restoration-complaint",
+    "scst-anticipatory-bail",
+    "stay-of-proceedings-revision-appeal",
+    "transfer-investigation"
+   ]
+  },
+  {
+   "section": "BNSS:53",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:14"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "fsl-examination",
+    "medical-examination-53"
+   ]
+  },
+  {
+   "section": "BNSS:530",
+   "equivalents": [],
+   "note_ids": [
+    "majorActs:4"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "video-conferencing-appearance"
+   ]
+  },
+  {
+   "section": "BNSS:58",
+   "equivalents": [],
+   "note_ids": [],
+   "judgment_ids": [
+    "Directorate of Enforcement v. Subhash Sharma"
+   ],
+   "draft_ids": [
+    "writ-habeas-corpus"
+   ]
+  },
+  {
+   "section": "BNSS:84",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:18",
+    "bnss:31"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "cancellation-proclamation",
+    "nbw-recall",
+    "surrender-application"
+   ]
+  },
+  {
+   "section": "BNSS:85",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:18",
+    "bnss:31"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "cancellation-proclamation",
+    "nbw-recall",
+    "release-attached-property"
+   ]
+  },
+  {
+   "section": "BNSS:86",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:18",
+    "bnss:31"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "nbw-recall",
+    "release-attached-property"
+   ]
+  },
+  {
+   "section": "BNSS:87",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:18",
+    "bnss:31"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "cancellation-proclamation",
+    "nbw-recall",
+    "release-attached-property"
+   ]
+  },
+  {
+   "section": "BNSS:88",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:18",
+    "bnss:31"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "nbw-recall"
+   ]
+  },
+  {
+   "section": "BNSS:89",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:18",
+    "bnss:31"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "nbw-recall"
+   ]
+  },
+  {
+   "section": "BNSS:96",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:19"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "release-seized-devices"
+   ]
+  },
+  {
+   "section": "BNSS:97",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:19"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "release-seized-devices"
+   ]
+  },
+  {
+   "section": "BSA:104",
+   "equivalents": [
+    "IEA:101"
+   ],
+   "note_ids": [
+    "bsa:10",
+    "bsa:5"
+   ],
+   "judgment_ids": [
+    "Vijay Madanlal Choudhary v. Union of India"
+   ],
+   "draft_ids": [
+    "exhibiting-documents-evidence"
+   ]
+  },
+  {
+   "section": "BSA:106",
+   "equivalents": [
+    "IEA:103"
+   ],
+   "note_ids": [
+    "bsa:10",
+    "bsa:5"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "exhibiting-documents-evidence"
+   ]
+  },
+  {
+   "section": "BSA:111",
+   "equivalents": [
+    "IEA:108"
+   ],
+   "note_ids": [
+    "bsa:10",
+    "bsa:27",
+    "bsa:5"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "civil-death-declaration"
+   ]
+  },
+  {
+   "section": "BSA:116",
+   "equivalents": [],
+   "note_ids": [
+    "bsa:10"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "dna-paternity-test"
+   ]
+  },
+  {
+   "section": "BSA:117",
+   "equivalents": [
+    "IEA:113a"
+   ],
+   "note_ids": [
+    "bsa:10"
+   ],
+   "judgment_ids": [
+    "Sher Singh v. State of Haryana"
+   ],
+   "draft_ids": []
+  },
+  {
+   "section": "BSA:118",
+   "equivalents": [
+    "IEA:113b"
+   ],
+   "note_ids": [
+    "bsa:10"
+   ],
+   "judgment_ids": [
+    "Sher Singh v. State of Haryana"
+   ],
+   "draft_ids": []
+  },
+  {
+   "section": "BSA:148",
+   "equivalents": [
+    "IEA:145"
+   ],
+   "note_ids": [
+    "bsa:19"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "contradiction-witness-previous-statement",
+    "cross-examination-investigating-officer",
+    "re-examination-witness",
+    "witness-further-cross"
+   ]
+  },
+  {
+   "section": "BSA:149",
+   "equivalents": [],
+   "note_ids": [
+    "bsa:19"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "re-examination-witness",
+    "witness-further-cross"
+   ]
+  },
+  {
+   "section": "BSA:23",
+   "equivalents": [
+    "IEA:25",
+    "IEA:26",
+    "IEA:27"
+   ],
+   "note_ids": [
+    "bsa:13",
+    "bsa:18",
+    "bsa:2"
+   ],
+   "judgment_ids": [
+    "Amlesh Kumar v. State of Bihar",
+    "K. Chinnaswamy Reddy v. State of Andhra Pradesh",
+    "Kartar Singh v. State of Punjab"
+   ],
+   "draft_ids": []
+  },
+  {
+   "section": "BSA:26",
+   "equivalents": [
+    "IEA:32"
+   ],
+   "note_ids": [
+    "bsa:11",
+    "bsa:13",
+    "bsa:15",
+    "bsa:3",
+    "majorActs:5"
+   ],
+   "judgment_ids": [
+    "Khushal Rao v. State of Bombay",
+    "Munnu Raja & Anr. v. State of Madhya Pradesh",
+    "Pakala Narayana Swami v. Emperor"
+   ],
+   "draft_ids": []
+  },
+  {
+   "section": "BSA:39",
+   "equivalents": [
+    "IEA:45"
+   ],
+   "note_ids": [
+    "bsa:14",
+    "bsa:7",
+    "majorActs:5"
+   ],
+   "judgment_ids": [
+    "Jacob Mathew v. State of Punjab"
+   ],
+   "draft_ids": [
+    "expert-opinion-handwriting",
+    "fsl-examination"
+   ]
+  },
+  {
+   "section": "BSA:47",
+   "equivalents": [],
+   "note_ids": [
+    "bsa:14",
+    "bsa:25"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "character-evidence-accused"
+   ]
+  },
+  {
+   "section": "BSA:48",
+   "equivalents": [],
+   "note_ids": [
+    "bsa:25"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "character-evidence-accused"
+   ]
+  },
+  {
+   "section": "BSA:49",
+   "equivalents": [],
+   "note_ids": [
+    "bsa:25"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "character-evidence-accused"
+   ]
+  },
+  {
+   "section": "BSA:50",
+   "equivalents": [],
+   "note_ids": [
+    "bsa:25"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "character-evidence-accused"
+   ]
+  },
+  {
+   "section": "BSA:52",
+   "equivalents": [],
+   "note_ids": [
+    "bsa:21"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "character-evidence-accused"
+   ]
+  },
+  {
+   "section": "BSA:62",
+   "equivalents": [],
+   "note_ids": [
+    "bsa:16",
+    "bsa:4",
+    "majorActs:5"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "exhibiting-documents-evidence"
+   ]
+  },
+  {
+   "section": "BSA:63",
+   "equivalents": [
+    "IEA:65b"
+   ],
+   "note_ids": [
+    "bsa:16",
+    "bsa:17",
+    "bsa:20",
+    "bsa:4",
+    "bsa:9",
+    "majorActs:5"
+   ],
+   "judgment_ids": [
+    "Anvar P.V. v. P.K. Basheer",
+    "Arjun Panditrao Khotkar v. Kailash Kushanrao Gorantyal",
+    "Assistant Commissioner of Income Tax v. Vetrivel Minerals",
+    "Shafhi Mohammad v. State of Himachal Pradesh",
+    "State (NCT of Delhi) v. Navjot Sandhu",
+    "State by Karnataka Lokayukta Police v. M.R. Hiremath"
+   ],
+   "draft_ids": [
+    "cctv-evidence-preservation",
+    "exhibiting-documents-evidence"
+   ]
+  },
+  {
+   "section": "CPA:2",
+   "equivalents": [],
+   "note_ids": [
+    "majorActs:18",
+    "majorActs:9"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "consumer-complaint"
+   ]
+  },
+  {
+   "section": "CPA:34",
+   "equivalents": [],
+   "note_ids": [
+    "majorActs:18",
+    "majorActs:9"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "banking-service-deficiency"
+   ]
+  },
+  {
+   "section": "CPA:35",
+   "equivalents": [],
+   "note_ids": [
+    "majorActs:18",
+    "majorActs:9"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "banking-service-deficiency",
+    "consumer-ecommerce-fraud",
+    "consumer-telecom-complaint"
+   ]
+  },
+  {
+   "section": "CPA:38",
+   "equivalents": [],
+   "note_ids": [
+    "majorActs:18",
+    "majorActs:9"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "consumer-written-statement"
+   ]
+  },
+  {
+   "section": "CPA:51",
+   "equivalents": [],
+   "note_ids": [
+    "majorActs:18",
+    "majorActs:9"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "consumer-appeal-state"
+   ]
+  },
+  {
+   "section": "CPA:69",
+   "equivalents": [],
+   "note_ids": [
+    "majorActs:18",
+    "majorActs:9"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "banking-service-deficiency",
+    "consumer-complaint",
+    "medical-negligence-complaint"
+   ]
+  },
+  {
+   "section": "CPC:11",
+   "equivalents": [],
+   "note_ids": [
+    "cpc:1",
+    "cpc:13"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "instalment-execution",
+    "interrogatories",
+    "rejection-plaint-7r11"
+   ]
+  },
+  {
+   "section": "CPC:114",
+   "equivalents": [],
+   "note_ids": [
+    "cpc:18"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "review-petition"
+   ]
+  },
+  {
+   "section": "CPC:13",
+   "equivalents": [],
+   "note_ids": [
+    "cpc:12",
+    "cpc:24"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "ex-parte-decree-set-aside"
+   ]
+  },
+  {
+   "section": "CPC:14",
+   "equivalents": [],
+   "note_ids": [
+    "cpc:24"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "discovery-inspection-documents",
+    "summoning-witnesses"
+   ]
+  },
+  {
+   "section": "CPC:148",
+   "equivalents": [],
+   "note_ids": [
+    "cpc:9"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "caveat-148a"
+   ]
+  },
+  {
+   "section": "CPC:148a",
+   "equivalents": [],
+   "note_ids": [
+    "cpc:9"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "caveat-148a"
+   ]
+  },
+  {
+   "section": "CPC:15",
+   "equivalents": [],
+   "note_ids": [
+    "cpc:0"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "discovery-inspection-documents",
+    "guardian-ad-litem-appointment",
+    "plaint-order7",
+    "recovery-suit"
+   ]
+  },
+  {
+   "section": "CPC:151",
+   "equivalents": [],
+   "note_ids": [],
+   "judgment_ids": [
+    "K.K. Velusamy v. N. Palanisamy"
+   ],
+   "draft_ids": [
+    "attachment-before-judgement",
+    "correction-decree-152",
+    "discovery-inspection-documents",
+    "impleadment-party",
+    "indigent-person-suit",
+    "instalment-execution",
+    "interrogatories-application",
+    "restoration-appeal-default",
+    "security-for-costs",
+    "setting-aside-abatement",
+    "stay-of-suit",
+    "substitution-legal-heirs",
+    "summoning-witnesses",
+    "withdrawal-suit"
+   ]
+  },
+  {
+   "section": "CPC:16",
+   "equivalents": [],
+   "note_ids": [
+    "cpc:0"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "permanent-injunction-property",
+    "plaint-order7",
+    "rendition-accounts",
+    "striking-out-pleadings"
+   ]
+  },
+  {
+   "section": "CPC:17",
+   "equivalents": [],
+   "note_ids": [
+    "cpc:0",
+    "cpc:17"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "plaint-order7"
+   ]
+  },
+  {
+   "section": "CPC:18",
+   "equivalents": [],
+   "note_ids": [
+    "cpc:0"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "indigent-person-suit",
+    "plaint-order7"
+   ]
+  },
+  {
+   "section": "CPC:19",
+   "equivalents": [],
+   "note_ids": [
+    "cpc:0"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "plaint-order7",
+    "restoration-appeal-default"
+   ]
+  },
+  {
+   "section": "CPC:20",
+   "equivalents": [],
+   "note_ids": [
+    "cpc:0"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "certified-copy",
+    "plaint-order7",
+    "recovery-suit"
+   ]
+  },
+  {
+   "section": "CPC:21",
+   "equivalents": [],
+   "note_ids": [
+    "cpc:0"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "discovery-inspection-documents",
+    "restoration-appeal-default"
+   ]
+  },
+  {
+   "section": "CPC:35",
+   "equivalents": [],
+   "note_ids": [
+    "cpc:23"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "delivery-possession-execution-35",
+    "demarcation-land-survey",
+    "recovery-possession",
+    "recovery-suit"
+   ]
+  },
+  {
+   "section": "CPC:38",
+   "equivalents": [],
+   "note_ids": [
+    "cpc:15"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "attachment-before-judgement",
+    "execution-petition-21"
+   ]
+  },
+  {
+   "section": "CPC:39",
+   "equivalents": [],
+   "note_ids": [
+    "cpc:15"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "execution-petition-21",
+    "recovery-possession"
+   ]
+  },
+  {
+   "section": "CPC:40",
+   "equivalents": [],
+   "note_ids": [
+    "cpc:15"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "execution-petition-21"
+   ]
+  },
+  {
+   "section": "CPC:41",
+   "equivalents": [],
+   "note_ids": [
+    "cpc:15"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "execution-petition-21"
+   ]
+  },
+  {
+   "section": "CPC:42",
+   "equivalents": [],
+   "note_ids": [
+    "cpc:15"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "execution-petition-21"
+   ]
+  },
+  {
+   "section": "CPC:43",
+   "equivalents": [],
+   "note_ids": [
+    "cpc:15"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "execution-petition-21"
+   ]
+  },
+  {
+   "section": "CPC:44",
+   "equivalents": [],
+   "note_ids": [
+    "cpc:15"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "execution-petition-21"
+   ]
+  },
+  {
+   "section": "CPC:45",
+   "equivalents": [],
+   "note_ids": [
+    "cpc:15"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "execution-petition-21"
+   ]
+  },
+  {
+   "section": "CPC:46",
+   "equivalents": [],
+   "note_ids": [
+    "cpc:15"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "execution-petition-21",
+    "garnishee-order"
+   ]
+  },
+  {
+   "section": "CPC:47",
+   "equivalents": [],
+   "note_ids": [
+    "cpc:5"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "execution-petition-21"
+   ]
+  },
+  {
+   "section": "CPC:51",
+   "equivalents": [],
+   "note_ids": [
+    "cpc:15",
+    "cpc:5"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "execution-petition-21"
+   ]
+  },
+  {
+   "section": "CPC:55",
+   "equivalents": [],
+   "note_ids": [
+    "cpc:10"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "execution-petition-21"
+   ]
+  },
+  {
+   "section": "CPC:56",
+   "equivalents": [],
+   "note_ids": [
+    "cpc:10"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "execution-petition-21"
+   ]
+  },
+  {
+   "section": "CPC:57",
+   "equivalents": [],
+   "note_ids": [
+    "cpc:10"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "execution-petition-21"
+   ]
+  },
+  {
+   "section": "CPC:58",
+   "equivalents": [],
+   "note_ids": [
+    "cpc:10"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "execution-petition-21",
+    "objection-execution-58"
+   ]
+  },
+  {
+   "section": "CPC:59",
+   "equivalents": [],
+   "note_ids": [
+    "cpc:10"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "execution-petition-21",
+    "objection-execution-58"
+   ]
+  },
+  {
+   "section": "CPC:89",
+   "equivalents": [],
+   "note_ids": [
+    "cpc:19"
+   ],
+   "judgment_ids": [
+    "Salem Advocate Bar Association v. Union of India"
+   ],
+   "draft_ids": []
+  },
+  {
+   "section": "CPC:9",
+   "equivalents": [],
+   "note_ids": [
+    "cpc:0"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "impleadment-party",
+    "restoration-dismissed-suit-9r9",
+    "setting-aside-abatement"
+   ]
+  },
+  {
+   "section": "CPC:94",
+   "equivalents": [],
+   "note_ids": [
+    "cpc:6"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "temp-injunction"
+   ]
+  },
+  {
+   "section": "CRPC:127",
+   "equivalents": [],
+   "note_ids": [],
+   "judgment_ids": [
+    "Bai Tahira v. Ali Hussain Fida Hussain Chothia"
+   ],
+   "draft_ids": [
+    "enhancement-maintenance-127",
+    "maintenance-minor-child-144",
+    "reduction-maintenance-145"
+   ]
+  },
+  {
+   "section": "CRPC:172",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:25"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "cross-examination-investigating-officer",
+    "inspection-case-diary"
+   ]
+  },
+  {
+   "section": "CRPC:190",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:7"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "complaint-cheating-318",
+    "complaint-criminal-intimidation-351",
+    "complaint-hurt-115",
+    "complaint-magistrate-175",
+    "complaint-theft-303",
+    "fir-direction-173",
+    "protest-petition"
+   ]
+  },
+  {
+   "section": "CRPC:239",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:21"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "discharge-250"
+   ]
+  },
+  {
+   "section": "CRPC:243",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:21"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "defence-witness"
+   ]
+  },
+  {
+   "section": "CRPC:249",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:21"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "restoration-complaint"
+   ]
+  },
+  {
+   "section": "CRPC:273",
+   "equivalents": [],
+   "note_ids": [],
+   "judgment_ids": [
+    "State of Maharashtra v. Praful Desai"
+   ],
+   "draft_ids": [
+    "exemption-appearance"
+   ]
+  },
+  {
+   "section": "CRPC:307",
+   "equivalents": [],
+   "note_ids": [],
+   "judgment_ids": [
+    "K.M. Nanavati v. State of Maharashtra"
+   ],
+   "draft_ids": [
+    "tender-pardon-approver"
+   ]
+  },
+  {
+   "section": "CRPC:319",
+   "equivalents": [],
+   "note_ids": [],
+   "judgment_ids": [
+    "Hardeep Singh v. State of Punjab"
+   ],
+   "draft_ids": [
+    "additional-accused-319"
+   ]
+  },
+  {
+   "section": "CRPC:321",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:28"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "victim-right-heard",
+    "withdrawal-prosecution"
+   ]
+  },
+  {
+   "section": "CRPC:327",
+   "equivalents": [],
+   "note_ids": [],
+   "judgment_ids": [
+    "Sakshi v. Union of India"
+   ],
+   "draft_ids": [
+    "in-camera-trial",
+    "victim-identity-protection"
+   ]
+  },
+  {
+   "section": "CRPC:360",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:29"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "probation-good-conduct-401"
+   ]
+  },
+  {
+   "section": "CRPC:372",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:15"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "appeal-acquittal-138"
+   ]
+  },
+  {
+   "section": "CRPC:374",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:15"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "appeal-conviction-138",
+    "criminal-appeal",
+    "section-138-appeal"
+   ]
+  },
+  {
+   "section": "CRPC:375",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:15"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "criminal-appeal"
+   ]
+  },
+  {
+   "section": "CRPC:376",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:15"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "criminal-appeal"
+   ]
+  },
+  {
+   "section": "CRPC:377",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:15"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "criminal-appeal"
+   ]
+  },
+  {
+   "section": "CRPC:378",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:15"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "appeal-acquittal-138",
+    "appeal-against-acquittal-general",
+    "criminal-appeal"
+   ]
+  },
+  {
+   "section": "CRPC:382",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:15"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "criminal-appeal"
+   ]
+  },
+  {
+   "section": "CRPC:389",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:15"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "appeal-conviction-138",
+    "criminal-appeal",
+    "stay-of-proceedings-revision-appeal",
+    "stay-sentence-appeal",
+    "suspension-of-conviction-appeal"
+   ]
+  },
+  {
+   "section": "CRPC:440",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:2",
+    "bnss:30"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "anticipatory-bail",
+    "modification-bail-conditions"
+   ]
+  },
+  {
+   "section": "CRPC:441",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:30"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "bail-bond-format",
+    "bail-bond-surety",
+    "surety-bond"
+   ]
+  },
+  {
+   "section": "CRPC:442",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:30"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "bail-bond-format",
+    "bail-bond-surety",
+    "surety-bond"
+   ]
+  },
+  {
+   "section": "CRPC:443",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:30"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "bail-bond-surety",
+    "surety-bond"
+   ]
+  },
+  {
+   "section": "CRPC:444",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:30"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "bail-bond-surety",
+    "discharge-of-surety",
+    "refund-bail-bond-surety-amount"
+   ]
+  },
+  {
+   "section": "CRPC:445",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:30"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "bail-bond-surety",
+    "refund-bail-bond-surety-amount"
+   ]
+  },
+  {
+   "section": "CRPC:53",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:1"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "dna-profiling-criminal-case",
+    "medical-examination-53",
+    "polygraph-test"
+   ]
+  },
+  {
+   "section": "CRPC:54",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:1"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "medical-examination-53"
+   ]
+  },
+  {
+   "section": "CRPC:57",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:1"
+   ],
+   "judgment_ids": [
+    "Directorate of Enforcement v. Subhash Sharma"
+   ],
+   "draft_ids": [
+    "writ-habeas-corpus"
+   ]
+  },
+  {
+   "section": "CRPC:82",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:18",
+    "bnss:31"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "cancellation-proclamation",
+    "surrender-application"
+   ]
+  },
+  {
+   "section": "CRPC:83",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:18",
+    "bnss:31"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "cancellation-proclamation",
+    "release-attached-property"
+   ]
+  },
+  {
+   "section": "CRPC:84",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:18",
+    "bnss:31"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "release-attached-property"
+   ]
+  },
+  {
+   "section": "CRPC:85",
+   "equivalents": [],
+   "note_ids": [
+    "bnss:18",
+    "bnss:31"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "cancellation-proclamation",
+    "release-attached-property"
+   ]
+  },
+  {
+   "section": "HMA:13",
+   "equivalents": [],
+   "note_ids": [
+    "majorActs:14"
+   ],
+   "judgment_ids": [
+    "Fuzlunbi v. K. Khader Vali",
+    "Mohd. Abdul Samad v. State of Telangana",
+    "Naveen Kohli v. Neelu Kohli",
+    "Noor Saba Khatoon v. Mohd. Quasim",
+    "Samar Ghosh v. Jaya Ghosh",
+    "Shamim Ara v. State of U.P."
+   ],
+   "draft_ids": [
+    "child-visitation-rights",
+    "contested-divorce-cruelty-desertion",
+    "divorce-contested",
+    "nri-divorce"
+   ]
+  },
+  {
+   "section": "HMA:25",
+   "equivalents": [],
+   "note_ids": [
+    "majorActs:14"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "nri-divorce",
+    "permanent-alimony"
+   ]
+  },
+  {
+   "section": "HMA:26",
+   "equivalents": [],
+   "note_ids": [
+    "majorActs:14"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "child-visitation-rights",
+    "interim-maintenance-pendente-lite"
+   ]
+  },
+  {
+   "section": "HSA:6",
+   "equivalents": [],
+   "note_ids": [
+    "majorActs:12"
+   ],
+   "judgment_ids": [
+    "Danamma @ Suman Surpur v. Amar",
+    "Danamma v. Amar Singh",
+    "Vineeta Sharma v. Rakesh Sharma"
+   ],
+   "draft_ids": [
+    "partition-suit"
+   ]
+  },
+  {
+   "section": "IEA:114",
+   "equivalents": [],
+   "note_ids": [
+    "bsa:5",
+    "bsa:7"
+   ],
+   "judgment_ids": [
+    "Tomaso Bruno v. State of Uttar Pradesh"
+   ],
+   "draft_ids": []
+  },
+  {
+   "section": "IEA:134",
+   "equivalents": [],
+   "note_ids": [
+    "bsa:6"
+   ],
+   "judgment_ids": [
+    "Kuntesh v. State of U.P."
+   ],
+   "draft_ids": []
+  },
+  {
+   "section": "IEA:65",
+   "equivalents": [],
+   "note_ids": [
+    "bsa:17",
+    "bsa:20",
+    "bsa:4",
+    "bsa:9"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "cctv-evidence-preservation"
+   ]
+  },
+  {
+   "section": "IPC:108",
+   "equivalents": [],
+   "note_ids": [
+    "bns:11"
+   ],
+   "judgment_ids": [
+    "Madhur Chand And 2 Others vs State of U.P."
+   ],
+   "draft_ids": []
+  },
+  {
+   "section": "IPC:109",
+   "equivalents": [],
+   "note_ids": [
+    "bns:11"
+   ],
+   "judgment_ids": [
+    "Madhur Chand And 2 Others vs State of U.P."
+   ],
+   "draft_ids": []
+  },
+  {
+   "section": "IPC:121",
+   "equivalents": [],
+   "note_ids": [
+    "bns:3"
+   ],
+   "judgment_ids": [
+    "State (NCT of Delhi) v. Navjot Sandhu"
+   ],
+   "draft_ids": []
+  },
+  {
+   "section": "IPC:123",
+   "equivalents": [],
+   "note_ids": [
+    "bns:3"
+   ],
+   "judgment_ids": [
+    "State (NCT of Delhi) v. Navjot Sandhu"
+   ],
+   "draft_ids": []
+  },
+  {
+   "section": "IPC:319",
+   "equivalents": [],
+   "note_ids": [
+    "bns:5"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "complaint-hurt-115"
+   ]
+  },
+  {
+   "section": "IPC:342",
+   "equivalents": [],
+   "note_ids": [
+    "bns:19"
+   ],
+   "judgment_ids": [
+    "Mazhar Husain vs State of U.P. And 3 Others"
+   ],
+   "draft_ids": []
+  },
+  {
+   "section": "IPC:364",
+   "equivalents": [],
+   "note_ids": [
+    "bns:10"
+   ],
+   "judgment_ids": [
+    "Vikas Yadav v. State of U.P."
+   ],
+   "draft_ids": []
+  },
+  {
+   "section": "IPC:375",
+   "equivalents": [],
+   "note_ids": [
+    "bns:9"
+   ],
+   "judgment_ids": [
+    "Independent Thought v. Union of India",
+    "Sakshi v. Union of India"
+   ],
+   "draft_ids": []
+  },
+  {
+   "section": "IPC:380",
+   "equivalents": [],
+   "note_ids": [
+    "bns:6"
+   ],
+   "judgment_ids": [
+    "Sandeep Singh v. State of U.P. and Another"
+   ],
+   "draft_ids": []
+  },
+  {
+   "section": "IPC:415",
+   "equivalents": [],
+   "note_ids": [
+    "bns:7"
+   ],
+   "judgment_ids": [
+    "Hridaya Ranjan Prasad Verma & Ors. v. State of Bihar & Anr."
+   ],
+   "draft_ids": []
+  },
+  {
+   "section": "IPC:501",
+   "equivalents": [],
+   "note_ids": [
+    "bns:17"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "defamation-356"
+   ]
+  },
+  {
+   "section": "IPC:502",
+   "equivalents": [],
+   "note_ids": [
+    "bns:17"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "defamation-356"
+   ]
+  },
+  {
+   "section": "IPC:511",
+   "equivalents": [],
+   "note_ids": [
+    "bns:11",
+    "majorActs:0"
+   ],
+   "judgment_ids": [
+    "Sandeep Singh v. State of U.P. and Another"
+   ],
+   "draft_ids": []
+  },
+  {
+   "section": "IPC:79",
+   "equivalents": [],
+   "note_ids": [
+    "bns:16",
+    "bns:2"
+   ],
+   "judgment_ids": [
+    "Google India Private Limited v. Visaka Industries"
+   ],
+   "draft_ids": []
+  },
+  {
+   "section": "IT:43",
+   "equivalents": [],
+   "note_ids": [
+    "majorActs:11"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "nda-format"
+   ]
+  },
+  {
+   "section": "IT:67",
+   "equivalents": [],
+   "note_ids": [
+    "majorActs:11"
+   ],
+   "judgment_ids": [
+    "Avnish Bajaj v. State (NCT of Delhi)",
+    "State of Tamil Nadu v. Suhas Katti"
+   ],
+   "draft_ids": []
+  },
+  {
+   "section": "IT:79",
+   "equivalents": [],
+   "note_ids": [
+    "majorActs:11"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "defamation-356"
+   ]
+  },
+  {
+   "section": "MVA:166",
+   "equivalents": [],
+   "note_ids": [],
+   "judgment_ids": [
+    "General Manager, Kerala SRTC v. Susamma Thomas",
+    "Kaushnuma Begum v. New India Assurance Co. Ltd.",
+    "Sarla Verma v. Delhi Transport Corporation"
+   ],
+   "draft_ids": [
+    "mact-claim-166",
+    "mact-interim-award-164"
+   ]
+  },
+  {
+   "section": "NDPS:20",
+   "equivalents": [],
+   "note_ids": [
+    "majorActs:8"
+   ],
+   "judgment_ids": [
+    "Kuldeep Singh v. State of U.P.",
+    "Ranjan Pradhan v. State of U.P."
+   ],
+   "draft_ids": []
+  },
+  {
+   "section": "NDPS:21",
+   "equivalents": [],
+   "note_ids": [
+    "majorActs:8"
+   ],
+   "judgment_ids": [
+    "John Kofie v. State of U.P."
+   ],
+   "draft_ids": [
+    "anticipatory-bail-ndps"
+   ]
+  },
+  {
+   "section": "NDPS:22",
+   "equivalents": [],
+   "note_ids": [
+    "majorActs:8"
+   ],
+   "judgment_ids": [
+    "Sudhir @ Sudhir Kumar Chaurasia vs State of U.P."
+   ],
+   "draft_ids": [
+    "anticipatory-bail-ndps"
+   ]
+  },
+  {
+   "section": "NDPS:27",
+   "equivalents": [],
+   "note_ids": [
+    "majorActs:8"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "anticipatory-bail-ndps"
+   ]
+  },
+  {
+   "section": "NDPS:36a",
+   "equivalents": [],
+   "note_ids": [],
+   "judgment_ids": [
+    "Vimal Rajput vs State of U.P."
+   ],
+   "draft_ids": [
+    "anticipatory-bail-ndps",
+    "discharge-ndps"
+   ]
+  },
+  {
+   "section": "NDPS:37",
+   "equivalents": [],
+   "note_ids": [
+    "majorActs:8"
+   ],
+   "judgment_ids": [
+    "John Kofie v. State of U.P.",
+    "Kuldeep Singh v. State of U.P.",
+    "Ranjan Pradhan v. State of U.P.",
+    "Vimal Rajput vs State of U.P."
+   ],
+   "draft_ids": [
+    "anticipatory-bail-ndps",
+    "ndps-bail"
+   ]
+  },
+  {
+   "section": "NDPS:50",
+   "equivalents": [],
+   "note_ids": [],
+   "judgment_ids": [
+    "John Kofie v. State of U.P.",
+    "Mustkeem vs State of U.P.",
+    "State of Punjab v. Baldev Singh"
+   ],
+   "draft_ids": [
+    "ndps-bail"
+   ]
+  },
+  {
+   "section": "NI:138",
+   "equivalents": [],
+   "note_ids": [],
+   "judgment_ids": [
+    "Dashrath Rupsingh Rathod v. State of Maharashtra",
+    "K. Bhaskaran v. Sankaran Vaidhyan Balan",
+    "S.C. Garg v. State of U.P."
+   ],
+   "draft_ids": [
+    "appeal-acquittal-138",
+    "appeal-conviction-138",
+    "complaint-138",
+    "complaint-138-multiple-cheques",
+    "notice-138",
+    "reply-notice-138",
+    "section-138-appeal"
+   ]
+  },
+  {
+   "section": "NI:139",
+   "equivalents": [],
+   "note_ids": [],
+   "judgment_ids": [
+    "Bir Singh v. Mukesh Kumar",
+    "Kumar Exports v. Sharma Carpets"
+   ],
+   "draft_ids": [
+    "appeal-acquittal-138",
+    "reply-notice-138"
+   ]
+  },
+  {
+   "section": "NI:142",
+   "equivalents": [],
+   "note_ids": [],
+   "judgment_ids": [
+    "Dashrath Rupsingh Rathod v. State of Maharashtra"
+   ],
+   "draft_ids": [
+    "complaint-138",
+    "complaint-138-multiple-cheques",
+    "notice-138"
+   ]
+  },
+  {
+   "section": "PMLA:45",
+   "equivalents": [],
+   "note_ids": [],
+   "judgment_ids": [
+    "Directorate of Enforcement v. Subhash Sharma"
+   ],
+   "draft_ids": [
+    "discharge-pmla",
+    "pmla-bail"
+   ]
+  },
+  {
+   "section": "RTI:18",
+   "equivalents": [],
+   "note_ids": [
+    "majorActs:20"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "cic-complaint"
+   ]
+  },
+  {
+   "section": "RTI:19",
+   "equivalents": [],
+   "note_ids": [
+    "majorActs:20"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "rti-application",
+    "rti-first-appeal",
+    "rti-second-appeal"
+   ]
+  },
+  {
+   "section": "RTI:20",
+   "equivalents": [],
+   "note_ids": [
+    "majorActs:20"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "cic-complaint",
+    "rti-first-appeal",
+    "rti-second-appeal"
+   ]
+  },
+  {
+   "section": "RTI:6",
+   "equivalents": [],
+   "note_ids": [
+    "majorActs:20"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "rti-application",
+    "rti-first-appeal"
+   ]
+  },
+  {
+   "section": "RTI:7",
+   "equivalents": [],
+   "note_ids": [
+    "majorActs:20"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "rti-application",
+    "rti-first-appeal"
+   ]
+  },
+  {
+   "section": "SRA:10",
+   "equivalents": [],
+   "note_ids": [
+    "majorActs:15"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "specific-performance"
+   ]
+  },
+  {
+   "section": "SRA:20",
+   "equivalents": [],
+   "note_ids": [
+    "majorActs:15"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "specific-performance"
+   ]
+  },
+  {
+   "section": "SRA:38",
+   "equivalents": [],
+   "note_ids": [
+    "majorActs:15"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "mandatory-injunction",
+    "stay-demolition-status-quo"
+   ]
+  },
+  {
+   "section": "SRA:39",
+   "equivalents": [],
+   "note_ids": [
+    "majorActs:15"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "paternity-declaration"
+   ]
+  },
+  {
+   "section": "TPA:105",
+   "equivalents": [],
+   "note_ids": [
+    "majorActs:13"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "lease-deed"
+   ]
+  },
+  {
+   "section": "TPA:43",
+   "equivalents": [],
+   "note_ids": [
+    "majorActs:13"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "adverse-possession-declaration"
+   ]
+  },
+  {
+   "section": "TPA:5",
+   "equivalents": [],
+   "note_ids": [
+    "majorActs:13"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "relinquishment-deed"
+   ]
+  },
+  {
+   "section": "TPA:54",
+   "equivalents": [],
+   "note_ids": [
+    "majorActs:13"
+   ],
+   "judgment_ids": [],
+   "draft_ids": [
+    "sale-deed"
+   ]
+  }
+ ]
+}

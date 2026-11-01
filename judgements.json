@@ -640,7 +640,10 @@
         "hi": "न्यायालय ने मकान आवंटित करने वाले प्राधिकरणों और सरकारी निकायों को उपभोक्ता संरक्षण अधिनियम के दायरे में लाया। कहा गया कि मकान खरीददार उपभोक्ता है — इससे देश भर में लाखों फ्लैट-आवंटन विवादों के लिए उपभोक्ता फोरम के द्वार खुल गए।"
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Lucknow%20Development%20Authority%20v.%20M.K.%20Gupta",
-      "sourceName": "Indian Kanoon"
+      "sourceName": "Indian Kanoon",
+      "sections": [
+        "Section 2, Consumer Protection Act, 1986"
+      ]
     },
     {
       "caseName": "Salem Advocate Bar Association v. Union of India",
@@ -1024,12 +1027,16 @@
       },
       "year": 1972,
       "summary": {
-        "en": "Statutory tenancy under rent control legislation is heritable by the tenant's legal representatives.",
-        "hi": "न्यायालय ने कहा कि किराया नियंत्रण कानून के तहत वैधानिक किरायेदारी किरायेदार के विधिक प्रतिनिधियों को उत्तराधिकार में मिलती है। इससे किरायेदार के परिवार को मकान मालिक की मनमानी से सुरक्षा मिली। किराया कानून का यह महत्वपूर्ण फैसला है।"
+        "en": "A statutory tenant under rent control legislation has only a personal right to continue in possession; on the tenant's death, the heirs and legal representatives cannot claim the Act's protection as tenants.",
+        "hi": "किराया नियंत्रण कानून के तहत वैधानिक किरायेदार को केवल कब्ज़े में बने रहने का व्यक्तिगत अधिकार है; किरायेदार की मृत्यु पर उसके वारिस व विधिक प्रतिनिधि किरायेदार के रूप में अधिनियम का संरक्षण नहीं माँग सकते।"
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=J.C.%20Chatterjee%20v.%20Sri%20Kishan%20Tandon",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "जे.सी. चटर्जी बनाम श्री किशन टंडन"
+      "caseNameHi": "जे.सी. चटर्जी बनाम श्री किशन टंडन",
+      "sections": [
+        "Rajasthan Rent Act 13",
+        "Rajasthan Rent Act 3"
+      ]
     },
     {
       "caseName": "Kanu Sanyal v. District Magistrate, Darjeeling",
@@ -1106,7 +1113,11 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Damadilal%20v.%20Parashram",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "दामदीलाल बनाम पराशराम"
+      "caseNameHi": "दामदीलाल बनाम पराशराम",
+      "sections": [
+        "MP Accommodation Control Act 12",
+        "MP Accommodation Control Act 2"
+      ]
     },
     {
       "caseName": "Madhu Limaye v. State of Maharashtra",
@@ -1141,7 +1152,10 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=State+of+UP+Nawab+Hussain",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "उत्तर प्रदेश राज्य बनाम नवाब हुसैन"
+      "caseNameHi": "उत्तर प्रदेश राज्य बनाम नवाब हुसैन",
+      "sections": [
+        "CPC 11"
+      ]
     },
     {
       "caseName": "Bangalore Water Supply and Sewerage Board v. A. Rajappa",
@@ -1292,7 +1306,10 @@
       },
       "pdfUrl": "https://indiankanoon.org/doc/112850760/",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "एस.पी. गुप्ता बनाम भारत संघ"
+      "caseNameHi": "एस.पी. गुप्ता बनाम भारत संघ",
+      "sections": [
+        "ART 32"
+      ]
     },
     {
       "caseName": "Waman Rao v. Union of India",
@@ -1410,7 +1427,10 @@
       },
       "pdfUrl": "https://indiankanoon.org/doc/137737683/",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "लक्ष्मी कांत पांडेय बनाम भारत संघ"
+      "caseNameHi": "लक्ष्मी कांत पांडेय बनाम भारत संघ",
+      "sections": [
+        "ART 32"
+      ]
     },
     {
       "caseName": "Sharad Birdhichand Sarda v. State of Maharashtra",
@@ -1445,7 +1465,11 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Gian%20Devi%20Anand%20v.%20Jeevan%20Kumar",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "ज्ञान देवी आनंद बनाम जीवन कुमार"
+      "caseNameHi": "ज्ञान देवी आनंद बनाम जीवन कुमार",
+      "sections": [
+        "Delhi Rent Control Act 14",
+        "Delhi Rent Control Act 2"
+      ]
     },
     {
       "caseName": "Indian Express Newspapers (Bombay) Pvt. Ltd. v. Union of India",
@@ -1480,7 +1504,10 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=LIC+v.+Escorts+Ltd",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "भारतीय जीवन बीमा निगम बनाम एस्कॉर्ट्स लिमिटेड"
+      "caseNameHi": "भारतीय जीवन बीमा निगम बनाम एस्कॉर्ट्स लिमिटेड",
+      "sections": [
+        "Companies Act 169"
+      ]
     },
     {
       "caseName": "McDowell & Co. Ltd. v. Commercial Tax Officer",
@@ -1551,7 +1578,11 @@
       },
       "pdfUrl": "https://indiankanoon.org/doc/1143189/",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "श्रीमती मैरी रॉय बनाम केरल राज्य"
+      "caseNameHi": "श्रीमती मैरी रॉय बनाम केरल राज्य",
+      "sections": [
+        "Indian Succession Act 29",
+        "ART 32"
+      ]
     },
     {
       "caseName": "Pt. Parmanand Katara v. Union of India",
@@ -1586,7 +1617,11 @@
       },
       "pdfUrl": "https://indiankanoon.org/doc/524900/",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "महाराष्ट्र राज्य बनाम मधुकर नारायण मर्डिकर"
+      "caseNameHi": "महाराष्ट्र राज्य बनाम मधुकर नारायण मर्डिकर",
+      "sections": [
+        "ART 226",
+        "ART 227"
+      ]
     },
     {
       "caseName": "Delhi Transport Corporation v. DTC Mazdoor Congress",
@@ -1720,7 +1755,10 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Chand+Rani+Kamal+Rani",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "चांद रानी (मृत) विधिक प्रतिनिधियों द्वारा बनाम कमल रानी (मृत) विधिक प्रतिनिधियों द्वारा"
+      "caseNameHi": "चांद रानी (मृत) विधिक प्रतिनिधियों द्वारा बनाम कमल रानी (मृत) विधिक प्रतिनिधियों द्वारा",
+      "sections": [
+        "Contract Act 55"
+      ]
     },
     {
       "caseName": "D.K. Yadav v. J.M.A. Industries Ltd.",
@@ -1755,7 +1793,11 @@
       },
       "pdfUrl": "https://indiankanoon.org/doc/1246653/",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "प्रबंध निदेशक, ईसीआईएल बनाम बी. करुणाकर"
+      "caseNameHi": "प्रबंध निदेशक, ईसीआईएल बनाम बी. करुणाकर",
+      "sections": [
+        "ART 311",
+        "ART 14"
+      ]
     },
     {
       "caseName": "Unni Krishnan, J.P. v. State of Andhra Pradesh",
@@ -1790,7 +1832,10 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=V%20Bhagat%20vs%20D%20Bhagat",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "वी. भगत बनाम डी. भगत"
+      "caseNameHi": "वी. भगत बनाम डी. भगत",
+      "sections": [
+        "HMA 13"
+      ]
     },
     {
       "caseName": "R. Rajagopal v. State of Tamil Nadu",
@@ -1825,7 +1870,10 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Renusagar+Power+General+Electric",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "रेणुसागर पावर कंपनी लिमिटेड बनाम जनरल इलेक्ट्रिक कंपनी"
+      "caseNameHi": "रेणुसागर पावर कंपनी लिमिटेड बनाम जनरल इलेक्ट्रिक कंपनी",
+      "sections": [
+        "Foreign Awards Act 7"
+      ]
     },
     {
       "caseName": "B.C. Chaturvedi v. Union of India",
@@ -1841,7 +1889,11 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=B.C.%20Chaturvedi%20v.%20Union%20of%20India",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "बी.सी. चतुर्वेदी बनाम भारत संघ"
+      "caseNameHi": "बी.सी. चतुर्वेदी बनाम भारत संघ",
+      "sections": [
+        "ART 311",
+        "ART 226"
+      ]
     },
     {
       "caseName": "Delhi Domestic Working Women's Forum v. Union of India",
@@ -2033,7 +2085,10 @@
       },
       "pdfUrl": "https://indiankanoon.org/doc/1865791/",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "स्टेट बैंक ऑफ पटियाला बनाम एस.के. शर्मा"
+      "caseNameHi": "स्टेट बैंक ऑफ पटियाला बनाम एस.के. शर्मा",
+      "sections": [
+        "ART 311"
+      ]
     },
     {
       "caseName": "State of Punjab v. Gurmit Singh",
@@ -2069,7 +2124,12 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=T.N.+Godavarman+Thirumulpad+v.+Union+of+India",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "टी.एन. गोदावर्मन तिरुमुलपाद बनाम भारत संघ"
+      "caseNameHi": "टी.एन. गोदावर्मन तिरुमुलपाद बनाम भारत संघ",
+      "sections": [
+        "Forest Conservation Act 2",
+        "ART 21",
+        "ART 32"
+      ]
     },
     {
       "caseName": "Vellore Citizens Welfare Forum v. Union of India",
@@ -2104,7 +2164,11 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Gaurav%20Jain%20v.%20Union%20of%20India",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "गौरव जैन बनाम भारत संघ"
+      "caseNameHi": "गौरव जैन बनाम भारत संघ",
+      "sections": [
+        "ART 21",
+        "ART 32"
+      ]
     },
     {
       "caseName": "People's Union for Civil Liberties v. Union of India (Telephone Tapping Case)",
@@ -2140,7 +2204,10 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Samatha+v.+State+of+Andhra+Pradesh",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "समता बनाम आंध्र प्रदेश राज्य"
+      "caseNameHi": "समता बनाम आंध्र प्रदेश राज्य",
+      "sections": [
+        "ART 244"
+      ]
     },
     {
       "caseName": "Vineet Narain v. Union of India",
@@ -2255,7 +2322,12 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Anthony%20v.%20K.C.%20Ittoop%20%26%20Sons",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "एंथनी बनाम के.सी. इट्टूप एंड संस"
+      "caseNameHi": "एंथनी बनाम के.सी. इट्टूप एंड संस",
+      "sections": [
+        "Kerala Rent Control Act 2",
+        "TPA 105",
+        "TPA 107"
+      ]
     },
     {
       "caseName": "Charan Singh v. Healing Touch Hospital & Ors.",
@@ -2271,7 +2343,10 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Charan%20Singh%20v%20Healing%20Touch%20Hospital",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "चरण सिंह बनाम हीलिंग टच अस्पताल एवं अन्य"
+      "caseNameHi": "चरण सिंह बनाम हीलिंग टच अस्पताल एवं अन्य",
+      "sections": [
+        "Section 14, Consumer Protection Act, 1986"
+      ]
     },
     {
       "caseName": "Narmada Bachao Andolan v. Union of India",
@@ -2287,7 +2362,11 @@
       },
       "pdfUrl": "https://indiankanoon.org/doc/1938608/",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "नर्मदा बचाओ आंदोलन बनाम भारत संघ"
+      "caseNameHi": "नर्मदा बचाओ आंदोलन बनाम भारत संघ",
+      "sections": [
+        "ART 21",
+        "ART 32"
+      ]
     },
     {
       "caseName": "Danial Latifi v. Union of India",
@@ -2323,7 +2402,11 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Hiten%20P.%20Dalal%20v.%20Bratindranath%20Banerjee",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "हितेन पी. दलाल बनाम ब्रतिंद्रनाथ बनर्जी"
+      "caseNameHi": "हितेन पी. दलाल बनाम ब्रतिंद्रनाथ बनर्जी",
+      "sections": [
+        "NI 138",
+        "NI 139"
+      ]
     },
     {
       "caseName": "Payal Sharma v. Superintendent, Nari Niketan, Agra",
@@ -2477,7 +2560,10 @@
       },
       "pdfUrl": "https://indiankanoon.org/doc/1960330/",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "भारत संघ बनाम आज़ादी बचाओ आंदोलन"
+      "caseNameHi": "भारत संघ बनाम आज़ादी बचाओ आंदोलन",
+      "sections": [
+        "Section 90, Income-tax Act, 1961"
+      ]
     },
     {
       "caseName": "Ghaziabad Development Authority v. Balbir Singh",
@@ -2493,7 +2579,10 @@
       },
       "pdfUrl": "https://indiankanoon.org/doc/256578/",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "गाजियाबाद विकास प्राधिकरण बनाम बलबीर सिंह"
+      "caseNameHi": "गाजियाबाद विकास प्राधिकरण बनाम बलबीर सिंह",
+      "sections": [
+        "Section 14, Consumer Protection Act, 1986"
+      ]
     },
     {
       "caseName": "Mardia Chemicals Ltd. v. Union of India",
@@ -2509,7 +2598,11 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Mardia%20Chemicals%20Ltd.%20v.%20Union%20of%20India",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "मार्डिया केमिकल्स लि. बनाम भारत संघ"
+      "caseNameHi": "मार्डिया केमिकल्स लि. बनाम भारत संघ",
+      "sections": [
+        "SARFAESI 17",
+        "ART 14"
+      ]
     },
     {
       "caseName": "National Insurance Co. Ltd. v. Swaran Singh",
@@ -2525,7 +2618,11 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=National%20Insurance%20Co.%20Ltd.%20v.%20Swaran%20Singh",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "नेशनल इंश्योरेंस कंपनी लिमिटेड बनाम स्वर्ण सिंह"
+      "caseNameHi": "नेशनल इंश्योरेंस कंपनी लिमिटेड बनाम स्वर्ण सिंह",
+      "sections": [
+        "MVA 147",
+        "MVA 149"
+      ]
     },
     {
       "caseName": "Sakshi v. Union of India",
@@ -2561,7 +2658,10 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Tata+Consultancy+Services+v.+State+of+Andhra+Pradesh",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "टाटा कंसल्टेंसी सर्विसेज़ बनाम आंध्र प्रदेश राज्य"
+      "caseNameHi": "टाटा कंसल्टेंसी सर्विसेज़ बनाम आंध्र प्रदेश राज्य",
+      "sections": [
+        "ART 366"
+      ]
     },
     {
       "caseName": "Jacob Mathew v. State of Punjab",
@@ -2639,7 +2739,10 @@
       },
       "pdfUrl": "https://indiankanoon.org/doc/6544121/",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "भारत संचार निगम लि. बनाम भारत संघ"
+      "caseNameHi": "भारत संचार निगम लि. बनाम भारत संघ",
+      "sections": [
+        "ART 366"
+      ]
     },
     {
       "caseName": "M.S. Narayana Menon v. State of Kerala",
@@ -2714,7 +2817,11 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Secretary+State+of+Karnataka+v.+Umadevi",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "सचिव, कर्नाटक राज्य बनाम उमादेवी"
+      "caseNameHi": "सचिव, कर्नाटक राज्य बनाम उमादेवी",
+      "sections": [
+        "ART 14",
+        "ART 16"
+      ]
     },
     {
       "caseName": "Zahira Habibullah Sheikh v. State of Gujarat",
@@ -2868,7 +2975,10 @@
       },
       "pdfUrl": "https://indiankanoon.org/doc/438423/",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "समीरा कोहली बनाम डॉ. प्रभा मानचंदा"
+      "caseNameHi": "समीरा कोहली बनाम डॉ. प्रभा मानचंदा",
+      "sections": [
+        "Section 2, Consumer Protection Act, 1986"
+      ]
     },
     {
       "caseName": "Satyawati Sharma v. Union of India",
@@ -2903,7 +3013,10 @@
       },
       "pdfUrl": "https://indiankanoon.org/doc/531612/",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "स्वर्ण सिंह बनाम राज्य"
+      "caseNameHi": "स्वर्ण सिंह बनाम राज्य",
+      "sections": [
+        "SC/ST Act 3"
+      ]
     },
     {
       "caseName": "Transcore v. Union of India",
@@ -2919,7 +3032,10 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Transcore%20v.%20Union%20of%20India",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "ट्रांसकोर बनाम भारत संघ"
+      "caseNameHi": "ट्रांसकोर बनाम भारत संघ",
+      "sections": [
+        "SARFAESI 13"
+      ]
     },
     {
       "caseName": "Kumar Exports v. Sharma Carpets",
@@ -2954,7 +3070,10 @@
       },
       "pdfUrl": "https://indiankanoon.org/doc/1092676/",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "मार्टिन एफ. डिसूज़ा बनाम मोहम्मद इश्फाक"
+      "caseNameHi": "मार्टिन एफ. डिसूज़ा बनाम मोहम्मद इश्फाक",
+      "sections": [
+        "Section 14, Consumer Protection Act, 1986"
+      ]
     },
     {
       "caseName": "Naz Foundation v. Government of NCT of Delhi",
@@ -3186,7 +3305,12 @@
       },
       "pdfUrl": "https://indiankanoon.org/doc/1849142/",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "बचपन बचाओ आंदोलन बनाम भारत संघ"
+      "caseNameHi": "बचपन बचाओ आंदोलन बनाम भारत संघ",
+      "sections": [
+        "ART 21",
+        "ART 24",
+        "ART 32"
+      ]
     },
     {
       "caseName": "Belaire Owners' Association v. DLF Ltd. and HUDA",
@@ -3202,7 +3326,10 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Belaire%20Owners%20Association%20v%20DLF%20Ltd%20HUDA",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "बेलेयर ओनर्स एसोसिएशन बनाम डीएलएफ लिमिटेड और हुडा"
+      "caseNameHi": "बेलेयर ओनर्स एसोसिएशन बनाम डीएलएफ लिमिटेड और हुडा",
+      "sections": [
+        "Competition Act 4"
+      ]
     },
     {
       "caseName": "K.K. Velusamy v. N. Palanisamy",
@@ -3257,7 +3384,10 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Ramrameshwari+Devi+Nirmala+Devi",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "रामरामेश्वरी देवी बनाम निर्मला देवी"
+      "caseNameHi": "रामरामेश्वरी देवी बनाम निर्मला देवी",
+      "sections": [
+        "CPC 35"
+      ]
     },
     {
       "caseName": "Sanjay Chandra v. CBI",
@@ -3293,7 +3423,10 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Saradamani+Kandappan+Rajalakshmi",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "सरदमणि कंडप्पन बनाम एस. राजलक्ष्मी"
+      "caseNameHi": "सरदमणि कंडप्पन बनाम एस. राजलक्ष्मी",
+      "sections": [
+        "Specific Relief Act 16"
+      ]
     },
     {
       "caseName": "Suraj Lamp & Industries Pvt. Ltd. v. State of Haryana",
@@ -3309,7 +3442,10 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Suraj+Lamp+Industries+State+of+Haryana",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "सूरज लैंप एंड इंडस्ट्रीज प्रा. लि. बनाम हरियाणा राज्य"
+      "caseNameHi": "सूरज लैंप एंड इंडस्ट्रीज प्रा. लि. बनाम हरियाणा राज्य",
+      "sections": [
+        "TPA 54"
+      ]
     },
     {
       "caseName": "Bharat Aluminium Co. v. Kaiser Aluminium Technical Services Inc. (BALCO)",
@@ -3325,7 +3461,10 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Bharat+Aluminium+Kaiser+Aluminium",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "भारत एल्युमिनियम कंपनी बनाम कैसर एल्युमिनियम टेक्निकल सर्विसेज़ इंक. (बाल्को)"
+      "caseNameHi": "भारत एल्युमिनियम कंपनी बनाम कैसर एल्युमिनियम टेक्निकल सर्विसेज़ इंक. (बाल्को)",
+      "sections": [
+        "AC 2"
+      ]
     },
     {
       "caseName": "Centre for Public Interest Litigation v. Union of India",
@@ -3381,7 +3520,11 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Medha%20Kotwal%20Lele%20v.%20Union%20of%20India",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "मेधा कोतवाल लेले बनाम भारत संघ"
+      "caseNameHi": "मेधा कोतवाल लेले बनाम भारत संघ",
+      "sections": [
+        "ART 14",
+        "ART 21"
+      ]
     },
     {
       "caseName": "Mohammed Ajmal Kasab v. State of Maharashtra",
@@ -3418,7 +3561,11 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Natural%20Resources%20Allocation%2C%20In%20re%2C%20Special%20Reference%20No.%201%20of%202012",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "प्राकृतिक संसाधन आवंटन, संदर्भ में, विशेष संदर्भ संख्या 1 वर्ष 2012"
+      "caseNameHi": "प्राकृतिक संसाधन आवंटन, संदर्भ में, विशेष संदर्भ संख्या 1 वर्ष 2012",
+      "sections": [
+        "ART 143",
+        "ART 14"
+      ]
     },
     {
       "caseName": "Sahara India Real Estate Corporation Ltd. v. Securities and Exchange Board of India",
@@ -3434,7 +3581,11 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Sahara+India+Real+Estate+v.+SEBI",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "सहारा इंडिया रियल एस्टेट कॉर्पोरेशन लिमिटेड बनाम भारतीय प्रतिभूति और विनिमय बोर्ड"
+      "caseNameHi": "सहारा इंडिया रियल एस्टेट कॉर्पोरेशन लिमिटेड बनाम भारतीय प्रतिभूति और विनिमय बोर्ड",
+      "sections": [
+        "SEBI Act 11",
+        "Companies Act 67"
+      ]
     },
     {
       "caseName": "Society for Unaided Private Schools of Rajasthan v. Union of India",
@@ -3471,7 +3622,10 @@
       },
       "pdfUrl": "https://indiankanoon.org/doc/115852355/",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "वोडाफोन इंटरनेशनल होल्डिंग्स बी.वी. बनाम भारत संघ"
+      "caseNameHi": "वोडाफोन इंटरनेशनल होल्डिंग्स बी.वी. बनाम भारत संघ",
+      "sections": [
+        "Section 9, Income-tax Act, 1961"
+      ]
     },
     {
       "caseName": "Badshah v. Sou. Urmila Badshah Godse",
@@ -3586,7 +3740,10 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Rajesh%20v.%20Rajbir%20Singh",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "राजेश बनाम राजबीर सिंह"
+      "caseNameHi": "राजेश बनाम राजबीर सिंह",
+      "sections": [
+        "MVA 166"
+      ]
     },
     {
       "caseName": "Reshma Kumari v. Madan Mohan",
@@ -3602,7 +3759,10 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Reshma%20Kumari%20v.%20Madan%20Mohan",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "रेशमा कुमारी बनाम मदन मोहन"
+      "caseNameHi": "रेशमा कुमारी बनाम मदन मोहन",
+      "sections": [
+        "MVA 166"
+      ]
     },
     {
       "caseName": "Salil Bali v. Union of India",
@@ -3618,7 +3778,10 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Salil%20Bali%20v.%20Union%20of%20India",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "सलिल बाली बनाम भारत संघ"
+      "caseNameHi": "सलिल बाली बनाम भारत संघ",
+      "sections": [
+        "JJ Act 2"
+      ]
     },
     {
       "caseName": "State of Jharkhand v. Jitendra Kumar Srivastava",
@@ -3654,7 +3817,10 @@
       },
       "pdfUrl": "https://indiankanoon.org/doc/183945465/",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "टी.एस.आर. सुब्रमण्यम बनाम भारत संघ"
+      "caseNameHi": "टी.एस.आर. सुब्रमण्यम बनाम भारत संघ",
+      "sections": [
+        "ART 32"
+      ]
     },
     {
       "caseName": "Yakub Abdul Razak Memon v. State of Maharashtra",
@@ -3710,7 +3876,11 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Enercon+India+Enercon+GmbH",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "एनरकॉन (इंडिया) लिमिटेड बनाम एनरकॉन जीएमबीएच"
+      "caseNameHi": "एनरकॉन (इंडिया) लिमिटेड बनाम एनरकॉन जीएमबीएच",
+      "sections": [
+        "AC 2",
+        "AC 20"
+      ]
     },
     {
       "caseName": "Harshad Govardhan Sondagar v. International Assets Reconstruction Co. Ltd.",
@@ -3726,7 +3896,11 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Harshad%20Govardhan%20Sondagar%20v.%20International%20Assets%20Reconstruction%20Co.%20Ltd.",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "हर्षद गोवर्धन सोनदागर बनाम इंटरनेशनल एसेट्स रिकंस्ट्रक्शन कंपनी लिमिटेड"
+      "caseNameHi": "हर्षद गोवर्धन सोनदागर बनाम इंटरनेशनल एसेट्स रिकंस्ट्रक्शन कंपनी लिमिटेड",
+      "sections": [
+        "SARFAESI 13",
+        "SARFAESI 14"
+      ]
     },
     {
       "caseName": "Jaiminiben Hirenbhai Vyas v. Hirenbhai Rameshchandra Vyas",
@@ -3742,7 +3916,12 @@
       },
       "pdfUrl": "https://indiankanoon.org/doc/80480976/",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "जैमिनीबेन हिरेनभाई व्यास बनाम हिरेनभाई रमेशचंद्र व्यास"
+      "caseNameHi": "जैमिनीबेन हिरेनभाई व्यास बनाम हिरेनभाई रमेशचंद्र व्यास",
+      "sections": [
+        "CRPC 125",
+        "BNSS 144",
+        "HMA 24"
+      ]
     },
     {
       "caseName": "Manohar Lal Sharma v. Principal Secretary",
@@ -3758,7 +3937,10 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Manohar%20Lal%20Sharma%20v.%20Principal%20Secretary",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "मनोहर लाल शर्मा बनाम प्रधान सचिव"
+      "caseNameHi": "मनोहर लाल शर्मा बनाम प्रधान सचिव",
+      "sections": [
+        "ART 14"
+      ]
     },
     {
       "caseName": "National Legal Services Authority v. Union of India",
@@ -3854,7 +4036,10 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Shamsher%20Kataria%20v%20Honda%20Siel%20Cars%20India%20Ltd",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "शमशेर कटारिया बनाम होंडा सीएल कार्स इंडिया लि. एवं अन्य"
+      "caseNameHi": "शमशेर कटारिया बनाम होंडा सीएल कार्स इंडिया लि. एवं अन्य",
+      "sections": [
+        "Competition Act 4"
+      ]
     },
     {
       "caseName": "Shatrughan Chauhan v. Union of India",
@@ -3891,7 +4076,11 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Sunita%20Kachwaha%20vs%20Anil%20Kachwaha",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "सुनीता कछवाहा बनाम अनिल कछवाहा"
+      "caseNameHi": "सुनीता कछवाहा बनाम अनिल कछवाहा",
+      "sections": [
+        "CRPC 125",
+        "BNSS 144"
+      ]
     },
     {
       "caseName": "ABC v. The State (NCT of Delhi)",
@@ -3907,7 +4096,11 @@
       },
       "pdfUrl": "https://indiankanoon.org/doc/162566950/",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "एबीसी बनाम राज्य (राष्ट्रीय राजधानी क्षेत्र दिल्ली)"
+      "caseNameHi": "एबीसी बनाम राज्य (राष्ट्रीय राजधानी क्षेत्र दिल्ली)",
+      "sections": [
+        "Guardians and Wards Act 7",
+        "Guardians and Wards Act 11"
+      ]
     },
     {
       "caseName": "Associate Builders v. Delhi Development Authority",
@@ -3961,7 +4154,10 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Prakash%20vs%20Phulavati",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "प्रकाश बनाम फुलावती"
+      "caseNameHi": "प्रकाश बनाम फुलावती",
+      "sections": [
+        "HSA 6"
+      ]
     },
     {
       "caseName": "Radhey Shyam v. Chhabi Nath",
@@ -4056,7 +4252,11 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Supreme%20Court%20Advocates-on-Record%20Association%20v.%20Union%20of%20India",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "सुप्रीम कोर्ट एडवोकेट्स-ऑन-रिकॉर्ड एसोसिएशन बनाम भारत संघ"
+      "caseNameHi": "सुप्रीम कोर्ट एडवोकेट्स-ऑन-रिकॉर्ड एसोसिएशन बनाम भारत संघ",
+      "sections": [
+        "ART 124",
+        "ART 124A"
+      ]
     },
     {
       "caseName": "Jeeja Ghosh v. Union of India",
@@ -4091,7 +4291,11 @@
       },
       "pdfUrl": "https://indiankanoon.org/doc/106416990/",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "पंजाब राज्य बनाम जगजीत सिंह"
+      "caseNameHi": "पंजाब राज्य बनाम जगजीत सिंह",
+      "sections": [
+        "ART 14",
+        "ART 16"
+      ]
     },
     {
       "caseName": "State of Tamil Nadu v. K. Balu",
@@ -4229,7 +4433,10 @@
       },
       "pdfUrl": "https://indiankanoon.org/doc/124282636/",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "एफएक्स एंटरप्राइज़ सॉल्यूशंस इंडिया प्रा. लि. बनाम हुंडई मोटर इंडिया लि."
+      "caseNameHi": "एफएक्स एंटरप्राइज़ सॉल्यूशंस इंडिया प्रा. लि. बनाम हुंडई मोटर इंडिया लि.",
+      "sections": [
+        "Competition Act 3"
+      ]
     },
     {
       "caseName": "Independent Thought v. Union of India",
@@ -4311,7 +4518,10 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=National%20Insurance%20Co.%20Ltd.%20v.%20Pranay%20Sethi",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "नेशनल इंश्योरेंस कंपनी लिमिटेड बनाम प्रणय सेठी"
+      "caseNameHi": "नेशनल इंश्योरेंस कंपनी लिमिटेड बनाम प्रणय सेठी",
+      "sections": [
+        "MVA 166"
+      ]
     },
     {
       "caseName": "Sunny Paul v. State (NCT of Delhi)",
@@ -4327,7 +4537,11 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Sunny%20Paul%20v.%20State%20of%20NCT%20of%20Delhi",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "सनी पॉल बनाम राज्य (राष्ट्रीय राजधानी क्षेत्र दिल्ली)"
+      "caseNameHi": "सनी पॉल बनाम राज्य (राष्ट्रीय राजधानी क्षेत्र दिल्ली)",
+      "sections": [
+        "Senior Citizens Act 22",
+        "Senior Citizens Act 23"
+      ]
     },
     {
       "caseName": "TRF Ltd. v. Energo Engineering Projects Ltd.",
@@ -4381,7 +4595,11 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Asian+Resurfacing+Road+Agency+Central+Bureau+Investigation",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "एशियन रिसर्फेसिंग ऑफ रोड एजेंसी प्रा. लि. बनाम केंद्रीय अन्वेषण ब्यूरो"
+      "caseNameHi": "एशियन रिसर्फेसिंग ऑफ रोड एजेंसी प्रा. लि. बनाम केंद्रीय अन्वेषण ब्यूरो",
+      "sections": [
+        "CRPC 397",
+        "BNSS 438"
+      ]
     },
     {
       "caseName": "Common Cause (A Regd. Society) v. Union of India",
@@ -4493,7 +4711,10 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Fortune%20Infrastructure%20v%20Trevor%20D%20Lima",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "फॉर्च्यून इन्फ्रास्ट्रक्चर बनाम ट्रेवर डी'लिमा"
+      "caseNameHi": "फॉर्च्यून इन्फ्रास्ट्रक्चर बनाम ट्रेवर डी'लिमा",
+      "sections": [
+        "Section 14, Consumer Protection Act, 1986"
+      ]
     },
     {
       "caseName": "Indian Young Lawyers Association v. State of Kerala",
@@ -4552,7 +4773,10 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Magma%20General%20Insurance%20Co.%20Ltd.%20v.%20Nanu%20Ram",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "मैग्मा जनरल इंश्योरेंस कं. लि. बनाम नानू राम"
+      "caseNameHi": "मैग्मा जनरल इंश्योरेंस कं. लि. बनाम नानू राम",
+      "sections": [
+        "MVA 166"
+      ]
     },
     {
       "caseName": "Nipun Saxena v. Union of India",
@@ -4589,7 +4813,11 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Rajive%20Raturi%20v.%20Union%20of%20India",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "राजीव रतूड़ी बनाम भारत संघ"
+      "caseNameHi": "राजीव रतूड़ी बनाम भारत संघ",
+      "sections": [
+        "ART 21",
+        "ART 32"
+      ]
     },
     {
       "caseName": "Sampurna Behura v. Union of India",
@@ -4605,7 +4833,10 @@
       },
       "pdfUrl": "https://indiankanoon.org/doc/67162757/",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "संपूर्णा बेहरा बनाम भारत संघ"
+      "caseNameHi": "संपूर्णा बेहरा बनाम भारत संघ",
+      "sections": [
+        "JJ Act"
+      ]
     },
     {
       "caseName": "Shafin Jahan v. Asokan K.M.",
@@ -4702,7 +4933,10 @@
       },
       "pdfUrl": "https://indiankanoon.org/doc/6791744/",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "बिक्रम चटर्जी बनाम भारत संघ"
+      "caseNameHi": "बिक्रम चटर्जी बनाम भारत संघ",
+      "sections": [
+        "Section 7, RERA Act, 2016"
+      ]
     },
     {
       "caseName": "Bir Singh v. Mukesh Kumar",
@@ -4777,7 +5011,10 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Kolkata%20West%20International%20City%20Pvt%20Ltd%20v%20Devasis%20Rudra",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "कोलकाता वेस्ट इंटरनेशनल सिटी प्राइवेट लिमिटेड बनाम देवासिस रुद्र"
+      "caseNameHi": "कोलकाता वेस्ट इंटरनेशनल सिटी प्राइवेट लिमिटेड बनाम देवासिस रुद्र",
+      "sections": [
+        "Section 14, Consumer Protection Act, 1986"
+      ]
     },
     {
       "caseName": "M. Siddiq (D) Thr Lrs v. Mahant Suresh Das",
@@ -4793,7 +5030,10 @@
       },
       "pdfUrl": "https://indiankanoon.org/doc/107745042/",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "एम. सिद्दीक (मृत) विधिक प्रतिनिधियों के माध्यम से बनाम महंत सुरेश दास"
+      "caseNameHi": "एम. सिद्दीक (मृत) विधिक प्रतिनिधियों के माध्यम से बनाम महंत सुरेश दास",
+      "sections": [
+        "ART 142"
+      ]
     },
     {
       "caseName": "Perkins Eastman Architects DPC v. HSCC (India) Ltd.",
@@ -4809,7 +5049,10 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Perkins+Eastman+HSCC",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "पर्किन्स ईस्टमैन आर्किटेक्ट्स डीपीसी बनाम एचएससीसी (इंडिया) लिमिटेड"
+      "caseNameHi": "पर्किन्स ईस्टमैन आर्किटेक्ट्स डीपीसी बनाम एचएससीसी (इंडिया) लिमिटेड",
+      "sections": [
+        "AC 12"
+      ]
     },
     {
       "caseName": "Pioneer Urban Land & Infrastructure Ltd. v. Govindan Raghavan",
@@ -4844,7 +5087,10 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Pioneer%20Urban%20Land%20Infrastructure%20Ltd%20v%20Union%20of%20India",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "पायनियर अर्बन लैंड एंड इंफ्रास्ट्रक्चर लिमिटेड बनाम भारत संघ"
+      "caseNameHi": "पायनियर अर्बन लैंड एंड इंफ्रास्ट्रक्चर लिमिटेड बनाम भारत संघ",
+      "sections": [
+        "Section 5(8), IBC"
+      ]
     },
     {
       "caseName": "Ssangyong Engineering & Construction Co. Ltd. v. National Highways Authority of India",
@@ -5136,7 +5382,10 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=United%20India%20Insurance%20Co.%20Ltd.%20v.%20Satinder%20Kaur",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "यूनाइटेड इंडिया इंश्योरेंस कंपनी लिमिटेड बनाम सतिंदर कौर"
+      "caseNameHi": "यूनाइटेड इंडिया इंश्योरेंस कंपनी लिमिटेड बनाम सतिंदर कौर",
+      "sections": [
+        "MVA 166"
+      ]
     },
     {
       "caseName": "Vidya Drolia v. Durga Trading Corporation",
@@ -5152,7 +5401,10 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Vidya+Drolia+Durga+Trading",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "विद्या ड्रोलिया बनाम दुर्गा ट्रेडिंग कॉर्पोरेशन"
+      "caseNameHi": "विद्या ड्रोलिया बनाम दुर्गा ट्रेडिंग कॉर्पोरेशन",
+      "sections": [
+        "AC 8"
+      ]
     },
     {
       "caseName": "Vineeta Sharma v. Rakesh Sharma",
@@ -5187,7 +5439,10 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Wg%20Cdr%20Arifur%20Rahman%20Khan%20v%20DLF%20Southern%20Homes",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "विंग कमांडर आरिफुर रहमान खान बनाम डीएलएफ सदर्न होम्स प्राइवेट लिमिटेड"
+      "caseNameHi": "विंग कमांडर आरिफुर रहमान खान बनाम डीएलएफ सदर्न होम्स प्राइवेट लिमिटेड",
+      "sections": [
+        "Section 14, Consumer Protection Act, 1986"
+      ]
     },
     {
       "caseName": "Anindya Sundar Das v. Union of India (In Re: Post-Poll Violence)",
@@ -5285,7 +5540,10 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Gulza+Kumari+v.+State+of+Punjab",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "गुलज़ा कुमारी बनाम पंजाब राज्य"
+      "caseNameHi": "गुलज़ा कुमारी बनाम पंजाब राज्य",
+      "sections": [
+        "ART 21"
+      ]
     },
     {
       "caseName": "Kirti v. Oriental Insurance Co. Ltd.",
@@ -5301,7 +5559,10 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Kirti%20v.%20Oriental%20Insurance%20Co.%20Ltd.",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "कीर्ति बनाम ओरिएंटल इंश्योरेंस कंपनी लिमिटेड"
+      "caseNameHi": "कीर्ति बनाम ओरिएंटल इंश्योरेंस कंपनी लिमिटेड",
+      "sections": [
+        "MVA 166"
+      ]
     },
     {
       "caseName": "Lt. Col. Nitisha v. Union of India",
@@ -5356,7 +5617,11 @@
       },
       "pdfUrl": "https://indiankanoon.org/doc/184463694/",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "रविंदर कुमार धारीवाल बनाम भारत संघ"
+      "caseNameHi": "रविंदर कुमार धारीवाल बनाम भारत संघ",
+      "sections": [
+        "RPwD Act 20",
+        "ART 14"
+      ]
     },
     {
       "caseName": "S. Sushma v. Commissioner of Police",
@@ -5433,7 +5698,11 @@
       },
       "pdfUrl": "https://indiankanoon.org/doc/157396742/",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "विकास कुमार बनाम संघ लोक सेवा आयोग"
+      "caseNameHi": "विकास कुमार बनाम संघ लोक सेवा आयोग",
+      "sections": [
+        "RPwD Act 2",
+        "ART 14"
+      ]
     },
     {
       "caseName": "All India Gaming Federation v. State of Karnataka",
@@ -5468,7 +5737,10 @@
       },
       "pdfUrl": "https://indiankanoon.org/doc/71246029/",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "एक्सपीरियन डेवलपर्स प्राइवेट लिमिटेड बनाम सुषमा अशोक शिरूर"
+      "caseNameHi": "एक्सपीरियन डेवलपर्स प्राइवेट लिमिटेड बनाम सुषमा अशोक शिरूर",
+      "sections": [
+        "Section 14, Consumer Protection Act, 1986"
+      ]
     },
     {
       "caseName": "Janhit Abhiyan v. Union of India",
@@ -5666,7 +5938,10 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Alphabet%20Inc%20v%20Competition%20Commission%20of%20India",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "अल्फाबेट इंक. बनाम भारतीय प्रतिस्पर्धा आयोग (एंड्रॉइड मामला)"
+      "caseNameHi": "अल्फाबेट इंक. बनाम भारतीय प्रतिस्पर्धा आयोग (एंड्रॉइड मामला)",
+      "sections": [
+        "Competition Act 4"
+      ]
     },
     {
       "caseName": "Anoop Baranwal v. Union of India",
@@ -5720,7 +5995,11 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=NN+Global+Mercantile+Indo+Unique+Flame",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "इन री: मध्यस्थता एवं सुलह अधिनियम, 1996 और भारतीय स्टाम्प अधिनियम, 1899 के तहत मध्यस्थता समझौतों के बीच अंतर्संबंध"
+      "caseNameHi": "इन री: मध्यस्थता एवं सुलह अधिनियम, 1996 और भारतीय स्टाम्प अधिनियम, 1899 के तहत मध्यस्थता समझौतों के बीच अंतर्संबंध",
+      "sections": [
+        "Stamp Act 35",
+        "AC 11"
+      ]
     },
     {
       "caseName": "Javed Ahmad Hajam v. State of Maharashtra",
@@ -5990,7 +6269,11 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Indian%20Medical%20Association%20v.%20Union%20of%20India%20Patanjali",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "इंडियन मेडिकल एसोसिएशन बनाम भारत संघ"
+      "caseNameHi": "इंडियन मेडिकल एसोसिएशन बनाम भारत संघ",
+      "sections": [
+        "Contempt of Courts Act 2",
+        "Drugs and Magic Remedies Act 4"
+      ]
     },
     {
       "caseName": "JCB India Ltd. v. Competition Commission of India",
@@ -6006,7 +6289,10 @@
       },
       "pdfUrl": "https://indiankanoon.org/doc/54051079/",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "जेसीबी इंडिया लिमिटेड बनाम भारतीय प्रतिस्पर्धा आयोग"
+      "caseNameHi": "जेसीबी इंडिया लिमिटेड बनाम भारतीय प्रतिस्पर्धा आयोग",
+      "sections": [
+        "Competition Act 26"
+      ]
     },
     {
       "caseName": "Just Rights for Children Alliance v. S. Harish",
@@ -6043,7 +6329,10 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Kuldeep%20Kumar%20v.%20UT%20Chandigarh",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "कुलदीप कुमार बनाम केंद्र शासित प्रदेश चंडीगढ़"
+      "caseNameHi": "कुलदीप कुमार बनाम केंद्र शासित प्रदेश चंडीगढ़",
+      "sections": [
+        "ART 142"
+      ]
     },
     {
       "caseName": "Kunal Kamra v. Union of India",
@@ -6097,7 +6386,10 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Mineral%20Area%20Development%20Authority%20v.%20Steel%20Authority%20of%20India",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "मिनरल एरिया डेवलपमेंट अथॉरिटी बनाम स्टील अथॉरिटी ऑफ इंडिया"
+      "caseNameHi": "मिनरल एरिया डेवलपमेंट अथॉरिटी बनाम स्टील अथॉरिटी ऑफ इंडिया",
+      "sections": [
+        "ART 246"
+      ]
     },
     {
       "caseName": "Prabir Purkayastha v. State (NCT of Delhi)",
@@ -6214,7 +6506,10 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Competition%20Commission%20of%20India%20v%20Monsanto%20Holdings%20Ericsson",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "भारतीय प्रतिस्पर्धा आयोग बनाम मोंसैंटो होल्डिंग्स प्राइवेट लिमिटेड और एरिक्सन"
+      "caseNameHi": "भारतीय प्रतिस्पर्धा आयोग बनाम मोंसैंटो होल्डिंग्स प्राइवेट लिमिटेड और एरिक्सन",
+      "sections": [
+        "Competition Act 4"
+      ]
     },
     {
       "caseName": "Gayatri Balasamy v. ISG Novasoft Technologies Ltd.",
@@ -6292,7 +6587,11 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Madras%20Bar%20Association%20v.%20Union%20of%20India%20Tribunals%20Reforms%20Act",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "मद्रास बार एसोसिएशन बनाम भारत संघ"
+      "caseNameHi": "मद्रास बार एसोसिएशन बनाम भारत संघ",
+      "sections": [
+        "ART 14",
+        "ART 50"
+      ]
     },
     {
       "caseName": "Mansi Brar Fernandes v. Shubha Sharma",
@@ -6521,7 +6820,10 @@
         "en": "Errors, omissions or even total absence of a charge are curable irregularities unless the accused was in fact misled and a failure of justice resulted.",
         "hi": "न्यायालय ने अभिनिर्धारित किया कि आरोप की त्रुटियाँ, लोप अथवा आरोप का पूर्ण अभाव भी उपचारयोग्य अनियमितताएँ हैं, बशर्ते अभियुक्त वास्तव में भ्रमित न हुआ हो और न्याय की असफलता न हुई हो। ऐसी अनियमितताएँ विचारण को स्वतः दूषित नहीं करतीं।"
       },
-      "year": 1955
+      "year": 1955,
+      "sections": [
+        "CRPC 215"
+      ]
     },
     {
       "caseName": "Khushal Rao v. State of Bombay",
@@ -6557,7 +6859,11 @@
         "en": "A confession must be shown to be both voluntary and true, and an approver's testimony must pass the double test of inherent reliability plus sufficient corroboration.",
         "hi": "अभिनिर्धारित किया गया कि संस्वीकृति का स्वैच्छिक और सत्य दोनों होना सिद्ध किया जाना चाहिए। अनुमोदक की गवाही को दोहरे परीक्षण — अंतर्निहित विश्वसनीयता और पर्याप्त संपुष्टि — से गुज़रना होगा।"
       },
-      "year": 1957
+      "year": 1957,
+      "sections": [
+        "IEA 30",
+        "IEA 133"
+      ]
     },
     {
       "caseName": "Subramania Goundan v. State of Madras",
@@ -6741,7 +7047,11 @@
         "en": "Indian legislatures are not sovereign like the British Parliament, and a judge who entertains a petition against a legislature's contempt order does not himself commit contempt of the House",
         "hi": "अभिनिर्धारित किया गया कि भारतीय विधानमण्डल ब्रिटिश संसद की भाँति संप्रभु नहीं हैं। किसी विधानमण्डल के अवमानना आदेश के विरुद्ध याचिका स्वीकार करने वाला न्यायाधीश स्वयं सदन की अवमानना नहीं करता।"
       },
-      "year": 1964
+      "year": 1964,
+      "sections": [
+        "ART 143",
+        "ART 194"
+      ]
     },
     {
       "caseName": "Masalti v. State of Uttar Pradesh",
@@ -6851,7 +7161,10 @@
         "en": "A sole surviving coparcener together with female members can constitute a Hindu undivided family — the family's fluctuating composition does not destroy its HUF status for tax purposes.",
         "hi": "अभिनिर्धारित किया गया कि महिला सदस्यों सहित एकमात्र जीवित सहदायिक भी हिन्दू अविभक्त परिवार का गठन कर सकता है — परिवार की परिवर्तनीय संरचना कर प्रयोजनों हेतु उसके HUF दर्जे को नष्ट नहीं करती।"
       },
-      "year": 1966
+      "year": 1966,
+      "sections": [
+        "Section 2, Income-tax Act, 1961"
+      ]
     },
     {
       "caseName": "Tilokchand Motichand v. H.B. Munshi",
@@ -6940,7 +7253,11 @@
         "en": "Kerala High Court held a Muslim wife whose husband has taken a second wife is entitled to live separately and claim maintenance, as the Quranic mandate of equal treatment between wives makes the second marriage an injury to the first.",
         "hi": "केरल उच्च न्यायालय ने अभिनिर्धारित किया कि मुस्लिम पत्नी, जिसके पति ने दूसरी पत्नी से विवाह किया है, पृथक रहने और भरण-पोषण का दावा करने की हकदार है, क्योंकि पत्नियों के बीच समान व्यवहार का कुरआनीय आदेश दूसरे विवाह को पहली पत्नी के प्रति क्षति बनाता है।"
       },
-      "year": 1971
+      "year": 1971,
+      "sections": [
+        "CRPC 125",
+        "BNSS 144"
+      ]
     },
     {
       "caseName": "R.M. Malkani v. State of Maharashtra",
@@ -7023,7 +7340,10 @@
         "en": "Relevancy is the test of admissibility in India; evidence obtained through an illegal search or seizure is not shut out unless the Constitution or a statute expressly prohibits it.",
         "hi": "भारत में ग्राह्यता की कसौटी सुसंगतता है; अवैध तलाशी या अभिग्रहण द्वारा प्राप्त साक्ष्य तब तक बाहर नहीं किया जाता जब तक संविधान या कोई विधि इसे स्पष्ट रूप से निषिद्ध न करे।"
       },
-      "year": 1973
+      "year": 1973,
+      "sections": [
+        "IEA 5"
+      ]
     },
     {
       "caseName": "Ahmedabad St. Xavier's College Society v. State of Gujarat",
@@ -7098,7 +7418,11 @@
         "en": "The evidence of a hostile witness is not effaced from the record; the part that supports either side may be relied upon after careful scrutiny.",
         "hi": "न्यायालय ने अभिनिर्धारित किया कि प्रतिकूल साक्षी का साक्ष्य अभिलेख से विलुप्त नहीं हो जाता। सावधानीपूर्वक परीक्षण के पश्चात्, किसी भी पक्ष का समर्थन करने वाले उसके भाग पर विश्वास किया जा सकता है।"
       },
-      "year": 1975
+      "year": 1975,
+      "sections": [
+        "IEA 154",
+        "BSA 157"
+      ]
     },
     {
       "caseName": "Syed Mohd. Salie Labbai v. Mohd. Hanifa",
@@ -7130,7 +7454,11 @@
         "en": "An approver's evidence must be corroborated in material particulars by independent evidence before it can be used to fasten guilt on an accused.",
         "hi": "अभिनिर्धारित किया गया कि अनुमोदक के साक्ष्य का उपयोग अभियुक्त पर दोष आरोपित करने के लिए तभी किया जा सकता है जब उसकी सारभूत विशिष्टियों में स्वतन्त्र साक्ष्य द्वारा पुष्टि हो गई हो।"
       },
-      "year": 1977
+      "year": 1977,
+      "sections": [
+        "IEA 114",
+        "IEA 133"
+      ]
     },
     {
       "caseName": "V. Tulasamma v. V. Sesha Reddi",
@@ -7203,7 +7531,10 @@
         "en": "Foundation of the idea–expression dichotomy in Indian copyright law: there is no copyright in an idea, theme or plot, only in its form, manner and arrangement of expression.",
         "hi": "यह भारतीय कॉपीराइट विधि में विचार–अभिव्यक्ति द्वैतवाद की नींव है: किसी विचार, विषय-वस्तु या कथानक में कोई कॉपीराइट नहीं होता; कॉपीराइट केवल उसकी अभिव्यक्ति के रूप, ढंग और व्यवस्था में निहित होता है।"
       },
-      "year": 1978
+      "year": 1978,
+      "sections": [
+        "Copyright Act 13"
+      ]
     },
     {
       "caseName": "State of Punjab v. Gurdial Singh & Ors.",
@@ -7219,7 +7550,10 @@
         "en": "Acquisition driven by political vendetta was struck down — power exercised for extraneous reasons is a colourable exercise and \"fraud on power\" that vitiates the acquisition itself.",
         "hi": "राजनीतिक प्रतिशोध से प्रेरित भूमि अधिग्रहण को निरस्त किया गया — असंगत कारणों से प्रयोग की गई शक्ति छद्म प्रयोग तथा “शक्ति पर कपट” है, जो स्वयं अधिग्रहण को ही दूषित कर देता है।"
       },
-      "year": 1979
+      "year": 1979,
+      "sections": [
+        "ART 14"
+      ]
     },
     {
       "caseName": "Motilal Padampat Sugar Mills Co. Ltd. v. State of Uttar Pradesh",
@@ -7453,7 +7787,10 @@
         "en": "Landmark liberal approach: substantial justice prevails over technicality; delay is not presumed deliberate and the State deserves no litigant-non-grata status.",
         "hi": "ऐतिहासिक उदार दृष्टिकोण: तात्विक न्याय तकनीकीता पर अभिभावी होता है; विलम्ब जानबूझकर नहीं माना जाता और राज्य वादकारी-विपरीत स्थिति का हकदार नहीं है।"
       },
-      "year": 1987
+      "year": 1987,
+      "sections": [
+        "Limitation Act 5"
+      ]
     },
     {
       "caseName": "Yudhishter v. Ashok Kumar",
@@ -7488,7 +7825,10 @@
         "en": "Declined contempt against a Union Law Minister's speech criticising the Supreme Court, holding the contempt power should not be used to silence criticism of the judiciary",
         "hi": "न्यायालय ने सर्वोच्च न्यायालय की आलोचना करने वाले केंद्रीय विधि मंत्री के भाषण के विरुद्ध अवमानना कार्यवाही स्वीकार करने से इनकार कर दिया। अभिनिर्धारित किया गया कि अवमानना शक्ति का प्रयोग न्यायपालिका की आलोचना को दबाने के लिए नहीं किया जाना चाहिए।"
       },
-      "year": 1988
+      "year": 1988,
+      "sections": [
+        "Contempt of Courts Act 2"
+      ]
     },
     {
       "caseName": "Chimanlal Hargovinddas v. Special Land Acquisition Officer, Poona",
@@ -7544,7 +7884,11 @@
         "en": "State vicariously liable for police beating that killed a 9-year-old; ₹75,000 compensation to the mother, recoverable from the guilty officers.",
         "hi": "न्यायालय ने एक 9-वर्षीय बालक की मृत्यु का कारण बनी पुलिस पिटाई के लिए राज्य को प्रतिनियोजित रूप से दायी ठहराया। माता को ₹75,000 प्रतिकर दिया गया, जो दोषी अधिकारियों से वसूल किया जाएगा।"
       },
-      "year": 1990
+      "year": 1990,
+      "sections": [
+        "ART 21",
+        "ART 32"
+      ]
     },
     {
       "caseName": "St. Stephen's College v. University of Delhi",
@@ -7560,7 +7904,11 @@
         "en": "An aided minority college may run its own admission programme and prefer candidates of its own community, but community preference cannot exceed 50% of seats.",
         "hi": "सहायता प्राप्त अल्पसंख्यक महाविद्यालय अपना प्रवेश कार्यक्रम चला सकता है और अपने समुदाय के अभ्यर्थियों को वरीयता दे सकता है, किन्तु सामुदायिक वरीयता सीटों के 50% से अधिक नहीं हो सकती।"
       },
-      "year": 1991
+      "year": 1991,
+      "sections": [
+        "ART 29",
+        "ART 30"
+      ]
     },
     {
       "caseName": "K. Veeraswami v. Union of India",
@@ -7595,7 +7943,10 @@
         "en": "Curtailed Kasturi Lal: in a welfare State the sovereign/non-sovereign line has largely vanished; State is liable for officers' negligence except in rare core sovereign functions.",
         "hi": "Kasturi Lal को सीमित करते हुए अभिनिर्धारित किया गया कि कल्याणकारी राज्य में संप्रभु/गैर-संप्रभु भेदरेखा काफी हद तक मिट चुकी है। दुर्लभ मूल संप्रभु कार्यों को छोड़कर राज्य अपने अधिकारियों की लापरवाही के लिए दायी है।"
       },
-      "year": 1994
+      "year": 1994,
+      "sections": [
+        "ART 300"
+      ]
     },
     {
       "caseName": "General Manager, Kerala SRTC v. Susamma Thomas",
@@ -7630,7 +7981,11 @@
         "en": "Bichhri case: polluting chemical industries liable under the \"polluter pays\" principle to compensate villagers and remediate the environment damaged by toxic waste.",
         "hi": "बिछड़ी मामले में न्यायालय ने \"प्रदूषक भुगतान करे\" सिद्धांत के अन्तर्गत प्रदूषणकारी रासायनिक उद्योगों को ग्रामीणों को प्रतिकर देने और विषैले अपशिष्ट से क्षतिग्रस्त पर्यावरण के सुधार हेतु दायी ठहराया।"
       },
-      "year": 1996
+      "year": 1996,
+      "sections": [
+        "ART 21",
+        "ART 32"
+      ]
     },
     {
       "caseName": "State of Haryana v. Chandra Mani",
@@ -7646,7 +8001,10 @@
         "en": "Government appeals get pragmatic latitude for bureaucratic red-tape delay; \"sufficient cause\" is judged in a justice-oriented, non-pedantic manner.",
         "hi": "न्यायालय ने अभिनिर्धारित किया कि नौकरशाही लालफ़ीताशाही के कारण हुए विलम्ब के मामले में सरकारी अपीलों को व्यावहारिक छूट मिलनी चाहिए। 'पर्याप्त कारण' का मूल्यांकन न्याय-उन्मुख और अपंडित्यपूर्ण (गैर-तकनीकी) ढंग से किया जाना चाहिए।"
       },
-      "year": 1996
+      "year": 1996,
+      "sections": [
+        "Limitation Act 5"
+      ]
     },
     {
       "caseName": "Naga People's Movement of Human Rights v. Union of India",
@@ -7662,7 +8020,11 @@
         "en": "AFSPA upheld as constitutional subject to safeguards — minimal force, periodic review of disturbed-area declarations, and adherence to the Army's Do's and Don'ts.",
         "hi": "न्यायालय ने सशस्त्र बल (विशेष शक्तियाँ) अधिनियम को सुरक्षोपायों सहित संवैधानिक अभिनिर्धारित किया — न्यूनतम बल का प्रयोग, अशांत-क्षेत्र घोषणाओं की आवधिक समीक्षा, और सेना के 'क्या करें, क्या न करें' निर्देशों का पालन आवश्यक होगा।"
       },
-      "year": 1997
+      "year": 1997,
+      "sections": [
+        "AFSPA 4",
+        "ART 21"
+      ]
     },
     {
       "caseName": "Rajkot Municipal Corporation v. Manjulben Jayantilal Nakum",
@@ -7772,7 +8134,10 @@
         "en": "Early authority that a person cannot be branded a \"goonda\" under the U.P. Control of Goondas Act on the basis of a solitary incident; habitual commission of offences must be shown.",
         "hi": "यह प्रारंभिक प्राधिकार है कि किसी एकांकी घटना के आधार पर किसी व्यक्ति को उ.प्र. गुण्डा नियंत्रण अधिनियम के अंतर्गत 'गुण्डा' नहीं ठहराया जा सकता। अधिनियम लागू करने हेतु अपराधों के अभ्यस्त (आदतन) कृत्य का सिद्ध होना आवश्यक है।"
       },
-      "year": 1999
+      "year": 1999,
+      "sections": [
+        "UP Goondas Act 2"
+      ]
     },
     {
       "caseName": "Badan Singh alias Baddo v. State of U.P. and Others",
@@ -7788,7 +8153,10 @@
         "en": "Laid down safeguards for attachment of property under the Gangsters Act, requiring the District Magistrate to apply mind and the State to justify that the property was acquired through gangster activity.",
         "hi": "गैंगस्टर एवं असामाजिक क्रियाकलाप (निवारण) अधिनियम के अन्तर्गत सम्पत्ति की कुर्की हेतु सुरक्षा-उपाय निर्धारित किए गए। यह अभिनिर्धारित किया गया कि जिलाधिकारी को अपना मन लगाकर विवेक का प्रयोग करना होगा तथा राज्य को यह सिद्ध एवं न्यायोचित ठहराना होगा कि कुर्क की गई सम्पत्ति गैंगस्टर गतिविधियों के माध्यम से अर्जित की गई थी।"
       },
-      "year": 2001
+      "year": 2001,
+      "sections": [
+        "UP Gangsters Act 14"
+      ]
     },
     {
       "caseName": "Daya Singh Lahoria v. Union of India",
@@ -7823,7 +8191,11 @@
         "en": "Ponds and water bodies are community property that cannot be allotted for private construction; material development must not destroy the ecological balance.",
         "hi": "न्यायालय ने अभिनिर्धारित किया कि तालाब और जलाशय सामुदायिक सम्पत्ति हैं, जिन्हें निजी निर्माण हेतु आवंटित नहीं किया जा सकता। भौतिक विकास इस प्रकार नहीं होना चाहिए कि पारिस्थितिक संतुलन नष्ट हो जाए।"
       },
-      "year": 2001
+      "year": 2001,
+      "sections": [
+        "ART 21",
+        "ART 32"
+      ]
     },
     {
       "caseName": "Cadila Health Care Limited v. Cadila Pharmaceuticals Limited",
@@ -7839,7 +8211,10 @@
         "en": "Laid down the factors for judging deceptive similarity of trademarks, mandating stricter scrutiny for medicinal products because confusion between drugs can endanger public health.",
         "hi": "व्यापार चिह्नों की भ्रामक समानता परखने के कारक प्रतिपादित किए गए। औषधीय उत्पादों के लिए कठोर जाँच का आदेश दिया गया, क्योंकि दवाओं के बीच भ्रम जन-स्वास्थ्य को ख़तरे में डाल सकता है।"
       },
-      "year": 2001
+      "year": 2001,
+      "sections": [
+        "Trade Marks Act 29"
+      ]
     },
     {
       "caseName": "M.S. Grewal v. Deep Chand Sood",
@@ -7944,7 +8319,11 @@
         "en": "Clarified T.M.A. Pai: unaided professional colleges may fix their own fees without profiteering or capitation, subject to fee-fixation committees, and admissions must be through a common entrance test with the minority quota filled on inter se merit.",
         "hi": "न्यायालय ने T.M.A. Pai निर्णय को स्पष्ट करते हुए अभिनिर्धारित किया कि असहायता प्राप्त व्यावसायिक महाविद्यालय मुनाफाखोरी या कैपिटेशन शुल्क के बिना अपना शुल्क स्वयं निर्धारित कर सकते हैं, जो शुल्क निर्धारण समितियों के अधीन होगा। प्रवेश साझा प्रवेश परीक्षा के माध्यम से होंगे और अल्पसंख्यक कोटा परस्पर योग्यता के आधार पर भरा जाएगा।"
       },
-      "year": 2003
+      "year": 2003,
+      "sections": [
+        "ART 30",
+        "ART 19"
+      ]
     },
     {
       "caseName": "Javed v. State of Haryana",
@@ -8133,7 +8512,10 @@
         "en": "Small developed plots cannot directly value large tracts of undeveloped land; deductions for development charges and waiting period must be applied when using such exemplars.",
         "hi": "न्यायालय ने अभिनिर्धारित किया कि छोटे विकसित भूखण्डों के आधार पर अविकसित भूमि के बड़े क्षेत्रों का सीधा मूल्यांकन नहीं किया जा सकता। ऐसे दृष्टांतों का प्रयोग करते समय विकास शुल्क और प्रतीक्षा अवधि हेतु कटौतियाँ लागू की जानी चाहिए।"
       },
-      "year": 2005
+      "year": 2005,
+      "sections": [
+        "LA 23"
+      ]
     },
     {
       "caseName": "Indian Hotel and Restaurants Association v. State of Maharashtra",
@@ -8206,7 +8588,10 @@
         "en": "Rejected the pure \"sweat of the brow\" doctrine, requiring skill and judgment with a modicum of creativity; copyright subsists in SCC headnotes and editorial inputs but not in raw judgments.",
         "hi": "शुद्ध 'पसीने की धार' सिद्धान्त को खारिज किया गया, जिसमें अल्प सृजनात्मकता के साथ कौशल और निर्णय की आवश्यकता है; एससीसी शीर्ष टिप्पणियों और सम्पादकीय योगदानों में कॉपीराइट विद्यमान है किन्तु कच्चे निर्णयों में नहीं।"
       },
-      "year": 2007
+      "year": 2007,
+      "sections": [
+        "Copyright Act 13"
+      ]
     },
     {
       "caseName": "Dr. Nikhil D. Datar v. Union of India",
@@ -8222,7 +8607,10 @@
         "en": "Refused permission to abort Niketa Mehta's 25-week foetus with a congenital heart block as the MTP Act then allowed termination beyond 20 weeks only to save the mother's life — the case that ignited the debate leading to the MTP amendments.",
         "hi": "न्यायालय ने Niketa Mehta के जन्मजात हृदय अवरोध से ग्रस्त 25-सप्ताह के भ्रूण का गर्भपात करने की अनुमति देने से इनकार कर दिया, क्योंकि चिकित्सीय गर्भ समापन अधिनियम उस समय 20 सप्ताह से अधिक की अवधि में केवल माता के जीवन की रक्षा हेतु ही समापन की अनुमति देता था। यही मामला वह बहस छेड़ने वाला बना, जिसके परिणामस्वरूप एम.टी.पी. संशोधन हुए।"
       },
-      "year": 2008
+      "year": 2008,
+      "sections": [
+        "MTP Act 3"
+      ]
     },
     {
       "caseName": "Avnish Bajaj v. State (NCT of Delhi)",
@@ -8259,7 +8647,10 @@
         "en": "\"Public purpose\" is a wide, evolving concept — infrastructure and integrated development projects are legitimate public purposes, and courts cannot substitute their own view for the Government's declaration.",
         "hi": "अभिनिर्धारित किया गया कि लोक प्रयोजन एक विस्तृत और विकासशील अवधारणा है — अवसंरचना और एकीकृत विकास परियोजनाएँ वैध लोक प्रयोजन हैं। न्यायालय सरकार की घोषणा के स्थान पर अपना दृष्टिकोण प्रतिस्थापित नहीं कर सकते।"
       },
-      "year": 2008
+      "year": 2008,
+      "sections": [
+        "LA 6"
+      ]
     },
     {
       "caseName": "Bhanwar Singh v. Puran",
@@ -8294,7 +8685,10 @@
         "en": "An INTERPOL Red Corner Notice is not an international arrest warrant; action on it must follow the Extradition Act and domestic law, in which the CBI as National Central Bureau must apply its own mind.",
         "hi": "अभिनिर्धारित किया गया कि INTERPOL रेड कॉर्नर नोटिस कोई अन्तर्राष्ट्रीय गिरफ्तारी वारंट नहीं है। उस पर कार्रवाई प्रत्यर्पण अधिनियम और घरेलू विधि के अनुसार होनी चाहिए, जिसमें केन्द्रीय जाँच ब्यूरो (CBI) को राष्ट्रीय केन्द्रीय ब्यूरो के रूप में स्वयं विवेक का प्रयोग करना चाहिए।"
       },
-      "year": 2009
+      "year": 2009,
+      "sections": [
+        "Extradition Act"
+      ]
     },
     {
       "caseName": "Tika Ram v. State of Uttar Pradesh",
@@ -8310,7 +8704,10 @@
         "en": "Even where the urgency clause is wrongly invoked, the acquisition need not be quashed if, with third-party rights created, enhanced compensation and developed plots can balance the equities.",
         "hi": "अभिनिर्धारित किया गया कि जहाँ अत्यावश्यकता उपबन्ध गलत ढंग से लागू किया गया हो, वहाँ भी अधिग्रहण निरस्त करना आवश्यक नहीं है, बशर्ते तीसरे पक्षों के अधिकार बन गए हों और वर्धित प्रतिकर तथा विकसित भूखण्डों से साम्य संतुलित किया जा सके।"
       },
-      "year": 2009
+      "year": 2009,
+      "sections": [
+        "LA 17"
+      ]
     },
     {
       "caseName": "Amarinder Singh v. Special Committee, Punjab Vidhan Sabha",
@@ -8326,7 +8723,10 @@
         "en": "Expulsion of a member for alleged misconduct committed during a previous term and unconnected with the House's functioning is beyond the power of privilege and was struck down",
         "hi": "किसी सदस्य को पूर्ववर्ती कार्यकाल में किए गए तथा सदन के कार्य-संचालन से असम्बद्ध कथित दुराचार के लिए निष्कासित करना विशेषाधिकार की शक्ति से परे है, अतः ऐसे निष्कासन को निरस्त किया गया।"
       },
-      "year": 2010
+      "year": 2010,
+      "sections": [
+        "ART 194"
+      ]
     },
     {
       "caseName": "Abu Salem Abdul Qayoom Ansari v. State of Maharashtra",
@@ -8363,7 +8763,10 @@
         "en": "Sohrabuddin Sheikh fake-encounter case: investigation transferred to the CBI because State police officers were themselves implicated and a fair probe was impossible.",
         "hi": "सोहराबुद्दीन शेख फर्जी मुठभेड़ मामले में जाँच सीबीआई को सौंपी गई, क्योंकि राज्य पुलिस के अधिकारी स्वयं फँसे हुए थे और निष्पक्ष जाँच असम्भव थी।"
       },
-      "year": 2010
+      "year": 2010,
+      "sections": [
+        "ART 32"
+      ]
     },
     {
       "caseName": "Khanapuram Gandaiah v. Administrative Officer",
@@ -8379,7 +8782,10 @@
         "en": "Held RTI cannot be used to ask why a judge decided a case a particular way, as a judge speaks only through his judgment and the remedy lies in appeal or revision.",
         "hi": "न्यायालय ने अभिनिर्धारित किया कि सूचना के अधिकार (RTI) का प्रयोग यह पूछने हेतु नहीं किया जा सकता कि किसी न्यायाधीश ने किसी मामले का निर्णय किसी विशेष प्रकार से क्यों दिया, क्योंकि न्यायाधीश केवल अपने निर्णय के माध्यम से ही बोलता है। इसके विरुद्ध उपचार अपील या पुनरीक्षण में निहित है।"
       },
-      "year": 2010
+      "year": 2010,
+      "sections": [
+        "RTI 2"
+      ]
     },
     {
       "caseName": "Gajraj and Others v. State of U.P. and Others",
@@ -8395,7 +8801,10 @@
         "en": "Full Bench struck at the misuse of the urgency clause in Noida/Greater Noida land acquisition and, instead of quashing developed acquisitions, directed 64.70% additional compensation plus allotment of 10% developed abadi plots to farmers — upheld by the Supreme Court as a case-specific equitable solution.",
         "hi": "पूर्ण पीठ ने नोएडा/ग्रेटर नोएडा भूमि अधिग्रहण में अत्यावश्यकता उपबन्ध के दुरुपयोग पर प्रहार किया और विकसित अधिग्रहणों को निरस्त करने के बजाय किसानों को 64.70% अतिरिक्त मुआवज़ा तथा 10% विकसित आबादी भूखण्डों के आबंटन का निर्देश दिया। सर्वोच्च न्यायालय ने इसे प्रकरण-विशिष्ट न्यायोचित समाधान के रूप में बरकरार रखा।"
       },
-      "year": 2011
+      "year": 2011,
+      "sections": [
+        "LA 23"
+      ]
     },
     {
       "caseName": "Sehajdhari Sikh Federation v. Union of India",
@@ -8411,7 +8820,10 @@
         "en": "Quashed the Centre's notification that had disenfranchised Sehajdhari Sikhs, restoring their right to vote in elections to the Shiromani Gurdwara Parbandhak Committee (SGPC).",
         "hi": "केन्द्र सरकार की उस अधिसूचना को अभिखण्डित किया गया जिसने सहजधारी सिखों को मताधिकार से वंचित कर दिया था, तथा शिरोमणि गुरुद्वारा प्रबंधक समिति (SGPC) के निर्वाचनों में उनके मतदान के अधिकार को बहाल किया गया।"
       },
-      "year": 2011
+      "year": 2011,
+      "sections": [
+        "Sikh Gurdwaras Act"
+      ]
     },
     {
       "caseName": "Jagpal Singh v. State of Punjab",
@@ -8427,7 +8839,10 @@
         "en": "Encroachments on village common lands (ponds and grazing land) cannot be regularised; States must evict illegal occupants and restore the land to the community.",
         "hi": "ग्राम की सामान्य भूमियों (तालाबों और चारागाह भूमि) पर अतिक्रमण नियमित नहीं किए जा सकते; राज्यों को अवैध अधिभोगियों को बेदखल करना होगा और भूमि समुदाय को पुनःस्थापित करनी होगी।"
       },
-      "year": 2011
+      "year": 2011,
+      "sections": [
+        "ART 32"
+      ]
     },
     {
       "caseName": "Dev Sharan v. State of Uttar Pradesh",
@@ -8521,7 +8936,10 @@
         "en": "Land acquired for a public purpose (tourism) and then transferred to private parties in breach of the Act frustrates the very purpose of acquisition and renders the transfer and acquisition liable to be undone.",
         "hi": "अभिनिर्धारित किया गया कि लोक प्रयोजन (पर्यटन) के लिए अधिग्रहीत भूमि का अधिनियम के उल्लंघन में निजी पक्षों को अन्तरण अधिग्रहण के मूल प्रयोजन को ही विफल कर देता है। ऐसा अन्तरण और अधिग्रहण निरस्त किए जाने योग्य है।"
       },
-      "year": 2011
+      "year": 2011,
+      "sections": [
+        "LA 6"
+      ]
     },
     {
       "caseName": "Greater Noida Industrial Development Authority v. Devendra Kumar",
@@ -8537,7 +8955,10 @@
         "en": "Land notified for \"planned industrial development\" was allotted to builders for housing within weeks — a colourable exercise of power; the acquisition was quashed with costs.",
         "hi": "'योजनाबद्ध औद्योगिक विकास' हेतु अधिसूचित भूमि कुछ सप्ताहों में ही आवास हेतु बिल्डरों को आवंटित कर दी गई — यह शक्ति का छलपूर्ण प्रयोग था। अधिग्रहण को व्यय सहित निरस्त किया गया।"
       },
-      "year": 2011
+      "year": 2011,
+      "sections": [
+        "ART 14"
+      ]
     },
     {
       "caseName": "Raghbir Singh Sehrawat v. State of Haryana",
@@ -8572,7 +8993,10 @@
         "en": "A partition suit is not disposed of by a preliminary decree — it continues till the final decree, so the decree can be amended to give daughters the benefit of the 2005 amendment.",
         "hi": "न्यायालय ने अभिनिर्धारित किया कि बँटवारे का वाद प्रारम्भिक डिक्री द्वारा समाप्त नहीं होता — वह अंतिम डिक्री तक जारी रहता है। अतः, पुत्रियों को 2005 के संशोधन का लाभ देने हेतु डिक्री में संशोधन किया जा सकता है।"
       },
-      "year": 2011
+      "year": 2011,
+      "sections": [
+        "HSA 6"
+      ]
     },
     {
       "caseName": "Central Board of Secondary Education v. Aditya Bandopadhyay",
@@ -8588,7 +9012,11 @@
         "en": "Held evaluated answer books are \"information\" under the RTI Act and an examinee can inspect and take certified copies, as the examining body holds them in no fiduciary capacity.",
         "hi": "अभिनिर्धारित किया गया कि मूल्यांकित उत्तर पुस्तिकाएँ सूचना का अधिकार अधिनियम के अन्तर्गत 'सूचना' हैं और परीक्षार्थी उनका निरीक्षण कर सकता है तथा प्रमाणित प्रतियाँ ले सकता है, क्योंकि परीक्षा निकाय उन्हें किसी प्रत्ययी हैसियत में नहीं रखता।"
       },
-      "year": 2011
+      "year": 2011,
+      "sections": [
+        "RTI 2",
+        "RTI 8"
+      ]
     },
     {
       "caseName": "Abhay Singh Chautala v. CBI",
@@ -8623,7 +9051,10 @@
         "en": "Invocation of the urgency clause for long-gestation power projects was upheld in the peculiar facts, while reiterating that urgency must rest on real, contemporaneous material and not mere assertion.",
         "hi": "लम्बी विकास अवधि वाली विद्युत परियोजनाओं हेतु अत्यावश्यकता उपबन्ध का आह्वान विशेष तथ्यों में बरकरार रखा गया, किन्तु दोहराया गया कि अत्यावश्यकता वास्तविक, समसामयिक सामग्री पर आधारित होनी चाहिए न कि केवल कथन पर।"
       },
-      "year": 2012
+      "year": 2012,
+      "sections": [
+        "LA 17"
+      ]
     },
     {
       "caseName": "Girish Ramchandra Deshpande v. Central Information Commissioner",
@@ -8658,7 +9089,10 @@
         "en": "Held a private citizen can seek sanction to prosecute a public servant, sanction must be decided within three months (extendable by one), and Parliament should consider deemed sanction on default.",
         "hi": "अभिनिर्धारित किया गया कि कोई निजी नागरिक किसी लोक सेवक के अभियोजन हेतु मंजूरी माँग सकता है। मंजूरी पर तीन माह के भीतर निर्णय होना चाहिए, जिसे एक माह तक बढ़ाया जा सकता है; संसद को चूक की स्थिति में मानित (deemed) मंजूरी पर विचार करना चाहिए।"
       },
-      "year": 2012
+      "year": 2012,
+      "sections": [
+        "PC 19"
+      ]
     },
     {
       "caseName": "Kamlesh Vaswani v. Union of India",
@@ -8731,7 +9165,11 @@
         "en": "Niyamgiri case: the Dongria Kondh tribals' religious and forest rights under the Forest Rights Act must be decided by the gram sabhas before bauxite mining could be allowed.",
         "hi": "नियमगिरि मामले में न्यायालय ने अभिनिर्धारित किया कि बॉक्साइट खनन की अनुमति देने से पूर्व, वन अधिकार अधिनियम के अन्तर्गत Dongria Kondh आदिवासियों के धार्मिक और वन अधिकारों का निर्णय ग्राम सभाओं द्वारा किया जाना चाहिए।"
       },
-      "year": 2013
+      "year": 2013,
+      "sections": [
+        "Forest Rights Act 6",
+        "Forest Conservation Act 2"
+      ]
     },
     {
       "caseName": "Novartis AG v. Union of India",
@@ -8787,7 +9225,10 @@
         "en": "Held a paper trail (VVPAT) is an indispensable requirement of free and fair elections and permitted the ECI to introduce EVMs with VVPAT in phased stages with government funding.",
         "hi": "न्यायालय ने अभिनिर्धारित किया कि पेपर ट्रेल (VVPAT) स्वतंत्र और निष्पक्ष निर्वाचनों की अनिवार्य आवश्यकता है। निर्वाचन आयोग को सरकारी वित्तपोषण के साथ चरणबद्ध ढंग से VVPAT युक्त EVM लागू करने की अनुमति प्रदान की गई।"
       },
-      "year": 2013
+      "year": 2013,
+      "sections": [
+        "RP Act 61A"
+      ]
     },
     {
       "caseName": "Court on Its Own Motion v. Rampal",
@@ -8844,7 +9285,10 @@
         "en": "There is no constitutional bar on appointing persons with criminal antecedents as Ministers, but constitutional trust and morality expect the Prime Minister/Chief Minister not to choose them",
         "hi": "न्यायालय ने अभिनिर्धारित किया कि आपराधिक पूर्ववृत्त वाले व्यक्तियों को मंत्री नियुक्त करने पर कोई संवैधानिक रोक नहीं है। तथापि संवैधानिक विश्वास और नैतिकता की अपेक्षा है कि प्रधानमंत्री/मुख्यमंत्री ऐसे व्यक्तियों का चयन न करें।"
       },
-      "year": 2014
+      "year": 2014,
+      "sections": [
+        "ART 75"
+      ]
     },
     {
       "caseName": "V. Sriharan @ Murugan v. Union of India",
@@ -9002,7 +9446,11 @@
         "en": "Acquitted actor Salman Khan in the 2002 hit-and-run case, holding the prosecution failed to prove beyond reasonable doubt that he was driving the vehicle drunk and terming the key eyewitness wholly unreliable.",
         "hi": "वर्ष 2002 के टक्कर मारकर भागने (हिट-एण्ड-रन) मामले में अभिनेता सलमान खान को बरी कर दिया गया, यह अभिनिर्धारित करते हुए कि अभियोजन युक्तियुक्त संदेह से परे यह सिद्ध करने में असफल रहा कि वह नशे की हालत में वाहन चला रहा था, तथा प्रमुख प्रत्यक्षदर्शी साक्षी को पूर्णतः अविश्वसनीय ठहराया गया।"
       },
-      "year": 2015
+      "year": 2015,
+      "sections": [
+        "IPC 304",
+        "BNS 105"
+      ]
     },
     {
       "caseName": "Tomaso Bruno v. State of Uttar Pradesh",
@@ -9057,7 +9505,10 @@
         "en": "The Supreme Court approved the Allahabad High Court's Gajraj formula — instead of quashing developed acquisitions, farmers get 64.7% enhanced compensation and 10% developed abadi land.",
         "hi": "सर्वोच्च न्यायालय ने इलाहाबाद उच्च न्यायालय के Gajraj सूत्र को अनुमोदित किया — विकसित अधिग्रहणों को अभिखण्डित करने के बजाय किसानों को 64.7% वृद्धि सहित प्रतिकर और 10% विकसित आबादी भूमि प्राप्त होगी।"
       },
-      "year": 2015
+      "year": 2015,
+      "sections": [
+        "LA 23"
+      ]
     },
     {
       "caseName": "Kapil Mehra v. Union of India",
@@ -9073,7 +9524,10 @@
         "en": "Refined the comparable-sales method for market value in NOIDA land cases — exemplar sales need plus/minus adjustments for size, location and potentiality, and guesstimation is permissible within limits.",
         "hi": "नोएडा भूमि मामलों में बाज़ार मूल्य हेतु तुलनीय बिक्री पद्धति को परिष्कृत किया गया — दृष्टान्त विक्रयों में आकार, स्थिति और सम्भाव्यता के लिए धनात्मक/ऋणात्मक समायोजन आवश्यक हैं। सीमाओं के भीतर अनुमान लगाना (guesstimation) अनुज्ञेय है।"
       },
-      "year": 2015
+      "year": 2015,
+      "sections": [
+        "LA 23"
+      ]
     },
     {
       "caseName": "Khursheed Ahmad Khan v. State of U.P.",
@@ -9089,7 +9543,10 @@
         "en": "Upheld the dismissal of a Muslim government servant who contracted a second marriage without permission in breach of the conduct rules, holding bigamy is misconduct and no religious right is infringed.",
         "hi": "आचरण नियमों के उल्लंघन में बिना अनुमति दूसरा विवाह करने वाले मुस्लिम सरकारी कर्मचारी की बर्खास्तगी बरकरार रखी गई। अभिनिर्धारित किया गया कि द्विविवाह कदाचार है और इससे किसी धार्मिक अधिकार का हनन नहीं होता।"
       },
-      "year": 2015
+      "year": 2015,
+      "sections": [
+        "ART 25"
+      ]
     },
     {
       "caseName": "Reserve Bank of India v. Jayantilal N. Mistry",
@@ -9105,7 +9562,10 @@
         "en": "Held RBI is not in a fiduciary relationship with banks and must disclose inspection reports and related information under the RTI Act in public interest.",
         "hi": "अभिनिर्धारित किया गया कि भारतीय रिज़र्व बैंक बैंकों के साथ न्यासी संबंध में नहीं है और उसे सूचना का अधिकार अधिनियम के अंतर्गत लोकहित में निरीक्षण रिपोर्टें और संबंधित जानकारी प्रकट करनी होगी।"
       },
-      "year": 2015
+      "year": 2015,
+      "sections": [
+        "RTI 8"
+      ]
     },
     {
       "caseName": "P. Satyanarayana Murthy v. District Inspector of Police",
@@ -9141,7 +9601,10 @@
         "en": "Directed the BCCI to shift all IPL matches scheduled after 30 April 2016 out of drought-hit Maharashtra because lakhs of litres of water were being used to maintain cricket pitches.",
         "hi": "भारतीय क्रिकेट नियंत्रण बोर्ड (BCCI) को निर्देश दिया गया कि 30 अप्रैल 2016 के पश्चात निर्धारित सभी आईपीएल मैच सूखा-प्रभावित महाराष्ट्र से बाहर स्थानांतरित किए जाएँ, क्योंकि क्रिकेट पिचों के रखरखाव में लाखों लीटर पानी का उपयोग हो रहा था।"
       },
-      "year": 2016
+      "year": 2016,
+      "sections": [
+        "ART 226"
+      ]
     },
     {
       "caseName": "Vidya Bal v. State of Maharashtra",
@@ -9157,7 +9620,10 @@
         "en": "Held that women cannot be barred from entering a place of worship where men are allowed entry — the ruling that paved the way for women's entry into the Shani Shingnapur temple.",
         "hi": "अभिनिर्धारित किया गया कि जहाँ पुरुषों को प्रवेश की अनुमति हो, वहाँ महिलाओं को उपासना स्थल में प्रवेश से वंचित नहीं किया जा सकता — यही वह निर्णय है जिसने शनि शिंगणापुर मंदिर में महिलाओं के प्रवेश का मार्ग प्रशस्त किया।"
       },
-      "year": 2016
+      "year": 2016,
+      "sections": [
+        "ART 25"
+      ]
     },
     {
       "caseName": "Dr. Noorjehan Safia Niaz v. State of Maharashtra",
@@ -9213,7 +9679,10 @@
         "en": "Cleared the film 'Udta Punjab' for release with just one cut, holding the CBFC's job is only to certify films and not to censor or dictate content to filmmakers.",
         "hi": "फिल्म 'उड़ता पंजाब' को मात्र एक कट के साथ प्रदर्शन हेतु स्वीकृति दी गई, यह अभिनिर्धारित करते हुए कि केन्द्रीय फिल्म प्रमाणन बोर्ड (CBFC) का कार्य केवल फिल्मों को प्रमाणित करना है, उन्हें सेंसर करना या फिल्म निर्माताओं को विषय-वस्तु का आदेश देना नहीं।"
       },
-      "year": 2016
+      "year": 2016,
+      "sections": [
+        "Cinematograph Act 5B"
+      ]
     },
     {
       "caseName": "Ajay Bhardwaj v. Jyotsna",
@@ -9289,7 +9758,10 @@
         "en": "In the WhatsApp-Facebook privacy case, the Court barred WhatsApp from sharing user data collected up to 25 September 2016 with Facebook and directed the Centre and TRAI to consider bringing internet messaging services under a statutory regulatory framework.",
         "hi": "WhatsApp-Facebook निजता वाद में न्यायालय ने WhatsApp को 25 सितम्बर 2016 तक एकत्रित किया गया उपयोगकर्ता डेटा Facebook के साथ साझा करने से रोक दिया। साथ ही केन्द्र और TRAI को इंटरनेट संदेश सेवाओं को सांविधिक विनियामक ढांचे के अन्तर्गत लाने पर विचार करने का निर्देश दिया गया।"
       },
-      "year": 2016
+      "year": 2016,
+      "sections": [
+        "ART 226"
+      ]
     },
     {
       "caseName": "Nabam Rebia v. Deputy Speaker",
@@ -9305,7 +9777,11 @@
         "en": "The Governor cannot summon or prepone Assembly sessions on his own discretion, and a Speaker facing a removal motion is disabled from deciding disqualification petitions",
         "hi": "राज्यपाल अपने विवेक से विधानसभा सत्र न तो आहूत कर सकता है और न ही अग्रिम तिथि पर ला सकता है, और हटाने के प्रस्ताव का सामना कर रहा अध्यक्ष अयोग्यता याचिकाओं का निर्णय करने से वंचित रहता है।"
       },
-      "year": 2016
+      "year": 2016,
+      "sections": [
+        "ART 163",
+        "ART 179"
+      ]
     },
     {
       "caseName": "Extra Judicial Execution Victim Families Association v. Union of India",
@@ -9419,7 +9895,10 @@
         "en": "Search engines such as Google, Yahoo and Microsoft must auto-block advertisements and content violating the PC-PNDT Act's prohibition on sex-selection advertising and act on complaints through a nodal agency.",
         "hi": "गूगल, याहू और माइक्रोसॉफ्ट जैसे खोज इंजनों को पीसी-पीएनडीटी अधिनियम के लिंग-चयन विज्ञापन पर प्रतिबंध का उल्लंघन करने वाले विज्ञापनों और सामग्री को स्वतः अवरुद्ध करना होगा और नोडल एजेंसी के माध्यम से शिकायतों पर कार्यवाही करनी होगी।"
       },
-      "year": 2017
+      "year": 2017,
+      "sections": [
+        "PC-PNDT Act 22"
+      ]
     },
     {
       "caseName": "Kent RO Systems Ltd. v. Amit Kotak",
@@ -9435,7 +9914,10 @@
         "en": "An intermediary such as eBay cannot be compelled to proactively screen listings for intellectual property infringement; it need only act upon specific notices identifying the infringing content.",
         "hi": "यह अभिनिर्धारित किया गया कि eBay जैसे किसी मध्यस्थ को बौद्धिक सम्पदा उल्लंघन हेतु सूचीबद्ध वस्तुओं (लिस्टिंग) की अग्रसक्रिय रूप से जाँच करने के लिए बाध्य नहीं किया जा सकता; उसे केवल उन विशिष्ट सूचनाओं पर कार्रवाई करनी होती है जिनमें उल्लंघनकारी सामग्री की पहचान की गई हो।"
       },
-      "year": 2017
+      "year": 2017,
+      "sections": [
+        "IT 79"
+      ]
     },
     {
       "caseName": "In re: Hon'ble Mr. Justice C.S. Karnan",
@@ -9451,7 +9933,11 @@
         "en": "The first sitting High Court judge held guilty of contempt of the judiciary for his scandalous allegations against judges and sentenced to six months' imprisonment",
         "hi": "यह पहले पदासीन उच्च न्यायालय न्यायाधीश थे जिन्हें न्यायाधीशों के विरुद्ध निन्दनीय आरोप लगाने हेतु न्यायपालिका की अवमानना का दोषी ठहराया गया तथा छह माह के कारावास का दण्ड दिया गया।"
       },
-      "year": 2017
+      "year": 2017,
+      "sections": [
+        "Contempt of Courts Act 2",
+        "ART 129"
+      ]
     },
     {
       "caseName": "Innoventive Industries Ltd. v. ICICI Bank",
@@ -9507,7 +9993,10 @@
         "en": "Applied the territoriality principle to passing off: a foreign brand must prove goodwill and reputation within India, and trans-border reputation alone is insufficient.",
         "hi": "पासिंग-ऑफ के मामलों में प्रादेशिकता सिद्धान्त लागू करते हुए अभिनिर्धारित किया गया कि विदेशी ब्राण्ड को भारत के भीतर ख्याति और प्रतिष्ठा सिद्ध करनी होगी; केवल सीमा-पार ख्याति पर्याप्त नहीं है।"
       },
-      "year": 2017
+      "year": 2017,
+      "sections": [
+        "Trade Marks Act 27"
+      ]
     },
     {
       "caseName": "Narendra v. State of Uttar Pradesh",
@@ -9523,7 +10012,10 @@
         "en": "The court's duty is to award just and fair compensation on the true market value irrespective of the claim made; all similarly placed landowners under one notification must get parity of compensation.",
         "hi": "न्यायालय का कर्तव्य है कि दावे की परवाह किए बिना वास्तविक बाज़ार मूल्य पर न्यायसंगत और उचित प्रतिकर दिया जाए; एक अधिसूचना के अन्तर्गत सभी समान स्थित भूस्वामियों को प्रतिकर की समानता मिलनी चाहिए।"
       },
-      "year": 2017
+      "year": 2017,
+      "sections": [
+        "LA 23"
+      ]
     },
     {
       "caseName": "Government of NCT of Delhi v. Manav Dharam Trust",
@@ -9616,7 +10108,10 @@
         "en": "The Court cannot add new disqualifications for candidates, but candidates must declare their criminal antecedents and political parties must give them wide publicity",
         "hi": "अभिनिर्धारित किया गया कि न्यायालय अभ्यर्थियों के लिए नई अयोग्यताएँ नहीं जोड़ सकता। तथापि अभ्यर्थियों को अपने आपराधिक पूर्ववृत्त की घोषणा अवश्य करनी चाहिए और राजनीतिक दलों को उन्हें व्यापक प्रचार देना चाहिए।"
       },
-      "year": 2018
+      "year": 2018,
+      "sections": [
+        "RP Act 33A"
+      ]
     },
     {
       "caseName": "Kalpana Mehta v. Union of India",
@@ -9712,7 +10207,10 @@
         "en": "Held candidates must disclose their sources of income along with those of spouse and dependants, non-disclosure is a corrupt practice, and a permanent mechanism should monitor disproportionate increase in legislators' assets.",
         "hi": "अभिनिर्धारित किया गया कि अभ्यर्थियों को अपने पति/पत्नी और आश्रितों के साथ आय के स्रोत प्रकट करने होंगे, अप्रकटीकरण भ्रष्ट आचरण है, और विधायकों की सम्पत्ति में असंगत वृद्धि की निगरानी हेतु स्थायी तंत्र होना चाहिए।"
       },
-      "year": 2018
+      "year": 2018,
+      "sections": [
+        "RP Act 33A"
+      ]
     },
     {
       "caseName": "State by Karnataka Lokayukta Police v. M.R. Hiremath",
@@ -9831,7 +10329,10 @@
         "en": "The commercial wisdom of the Committee of Creditors is non-justiciable; NCLT/NCLAT have no power to reverse a CoC decision approving or rejecting a resolution plan.",
         "hi": "अभिनिर्धारित किया गया कि ऋणदाताओं की समिति (CoC) का वाणिज्यिक विवेक न्यायनिर्णय-योग्य नहीं है। समाधान योजना को अनुमोदित या अस्वीकृत करने के CoC के निर्णय को एनसीएलटी/एनसीएलएटी पलट नहीं सकते।"
       },
-      "year": 2019
+      "year": 2019,
+      "sections": [
+        "Section 30, IBC"
+      ]
     },
     {
       "caseName": "Committee of Creditors of Essar Steel India Limited v. Satish Kumar Gupta",
@@ -9905,7 +10406,11 @@
         "en": "Held the office of the Chief Justice of India is a \"public authority\" under the RTI Act, balancing transparency against judicial independence and privacy.",
         "hi": "यह अभिनिर्धारित किया गया कि भारत के मुख्य न्यायमूर्ति का कार्यालय सूचना का अधिकार अधिनियम के अन्तर्गत एक “लोक प्राधिकारी” है, जिसमें पारदर्शिता तथा न्यायिक स्वतंत्रता और निजता के बीच संतुलन स्थापित किया गया।"
       },
-      "year": 2019
+      "year": 2019,
+      "sections": [
+        "RTI 2",
+        "RTI 8"
+      ]
     },
     {
       "caseName": "Anjali Bhardwaj v. Union of India",
@@ -9921,7 +10426,11 @@
         "en": "Directed the Centre and States to fill vacancies in Central and State Information Commissions transparently and in time, starting the process 1-2 months before a vacancy arises.",
         "hi": "केन्द्र और राज्यों को निर्देश दिया गया कि वे केन्द्रीय और राज्य सूचना आयोगों में रिक्त पदों को पारदर्शी ढंग से और समय पर भरें तथा रिक्ति उत्पन्न होने से 1-2 माह पूर्व प्रक्रिया प्रारम्भ करें।"
       },
-      "year": 2019
+      "year": 2019,
+      "sections": [
+        "RTI 12",
+        "RTI 15"
+      ]
     },
     {
       "caseName": "Udai Pratap alias Dau v. State of U.P.",
@@ -10024,7 +10533,10 @@
         "en": "Declared Chandigarh's Sukhna Lake a legal person/living entity, banned all construction in its catchment area, ordered demolition of illegal structures and fined Punjab and Haryana Rs 100 crore each for the lake's restoration.",
         "hi": "न्यायालय ने चंडीगढ़ की सुखना झील को विधिक व्यक्ति/जीवित इकाई घोषित किया, उसके जलग्रहण क्षेत्र में सभी निर्माणों पर प्रतिबंध लगाया और अवैध संरचनाओं के विध्वंस का आदेश दिया। झील के पुनरुद्धार हेतु पंजाब और हरियाणा प्रत्येक पर ₹100 करोड़ का दण्ड भी लगाया गया।"
       },
-      "year": 2020
+      "year": 2020,
+      "sections": [
+        "ART 21"
+      ]
     },
     {
       "caseName": "Arjun Panditrao Khotkar v. Kailash Kushanrao Gorantyal",
@@ -10060,7 +10572,11 @@
         "en": "Declining to directly order restoration of 4G internet in J&K, the Court constituted a special committee headed by the Union Home Secretary to examine the restriction of mobile internet to 2G speeds.",
         "hi": "न्यायालय ने जम्मू-कश्मीर में 4जी इंटरनेट बहाल करने का सीधा आदेश देने से इनकार करते हुए, मोबाइल इंटरनेट को 2जी गति तक सीमित रखने के प्रतिबंध की जाँच हेतु केंद्रीय गृह सचिव की अध्यक्षता में एक विशेष समिति का गठन किया।"
       },
-      "year": 2020
+      "year": 2020,
+      "sections": [
+        "ART 19",
+        "ART 21"
+      ]
     },
     {
       "caseName": "Rambabu Singh Thakur v. Sunil Arora",
@@ -10076,7 +10592,10 @@
         "en": "In contempt proceedings, directed political parties to publish candidates' criminal antecedents along with reasons for their selection, not mere \"winnability\", within 48 hours",
         "hi": "अवमानना कार्यवाही में न्यायालय ने निर्देश दिया कि राजनीतिक दल अपने उम्मीदवारों के आपराधिक पूर्ववृत्त को उनके चयन के कारणों सहित प्रकाशित करें, केवल 'जीतने की क्षमता' कहना पर्याप्त नहीं, और यह 48 घंटों के भीतर किया जाए।"
       },
-      "year": 2020
+      "year": 2020,
+      "sections": [
+        "RP Act 33A"
+      ]
     },
     {
       "caseName": "Keisham Meghachandra Singh v. Hon'ble Speaker, Manipur Legislative Assembly",
@@ -10092,7 +10611,10 @@
         "en": "A Speaker must decide Tenth Schedule disqualification petitions within three months, and the Court suggested replacing the Speaker with an independent tribunal for such decisions",
         "hi": "यह अभिनिर्धारित किया गया कि अध्यक्ष को दसवीं अनुसूची के अन्तर्गत अयोग्यता याचिकाओं का विनिश्चय तीन माह के भीतर करना होगा, तथा न्यायालय ने ऐसे विनिश्चयों हेतु अध्यक्ष के स्थान पर एक स्वतंत्र अधिकरण स्थापित करने का सुझाव दिया।"
       },
-      "year": 2020
+      "year": 2020,
+      "sections": [
+        "Tenth Schedule 6"
+      ]
     },
     {
       "caseName": "In re: Prashant Bhushan",
@@ -10108,7 +10630,10 @@
         "en": "Two tweets scandalising the Supreme Court and the Chief Justice amounted to criminal contempt; the truth defence was rejected and a nominal fine of Re. 1 was imposed",
         "hi": "सर्वोच्च न्यायालय और मुख्य न्यायाधीश की बदनामी करने वाले दो ट्वीट आपराधिक अवमानना के समान थे; सत्य का प्रतिवाद खारिज कर दिया गया और 1 रुपये का नाममात्र जुर्माना अधिरोपित किया गया।"
       },
-      "year": 2020
+      "year": 2020,
+      "sections": [
+        "Contempt of Courts Act 2"
+      ]
     },
     {
       "caseName": "Priyapreet Kaur v. State of Punjab",
@@ -10124,7 +10649,10 @@
         "en": "Held the life and liberty of a live-in couple must be protected even though the male partner had not attained marriageable age, observing that society cannot dictate how a major individual should live.",
         "hi": "यह अभिनिर्धारित किया गया कि सहजीवन युगल के जीवन और स्वतंत्रता की रक्षा की जानी चाहिए, यद्यपि पुरुष साथी ने विवाह योग्य आयु प्राप्त नहीं की थी, तथा यह टिप्पणी की गई कि समाज यह निर्देश नहीं दे सकता कि कोई वयस्क व्यक्ति अपना जीवन कैसे जिए।"
       },
-      "year": 2021
+      "year": 2021,
+      "sections": [
+        "ART 21"
+      ]
     },
     {
       "caseName": "Ghanashyam Mishra and Sons Private Limited v. Edelweiss Asset Reconstruction Company Limited",
@@ -10140,7 +10668,10 @@
         "en": "\"Clean slate\" doctrine: an approved resolution plan binds all stakeholders including governments, and claims not forming part of the plan stand extinguished.",
         "hi": "'स्वच्छ शुरुआत' (क्लीन स्लेट) सिद्धांत के अनुसार, अनुमोदित समाधान योजना सभी हितधारकों, सरकारों समेत, पर बाध्यकारी होती है। जो दावे योजना का भाग नहीं बनते, वे निर्वापित (समाप्त) हो जाते हैं।"
       },
-      "year": 2021
+      "year": 2021,
+      "sections": [
+        "Section 31, IBC"
+      ]
     },
     {
       "caseName": "Lalit Kumar Jain v. Union of India",
@@ -10156,7 +10687,10 @@
         "en": "The notification extending IBC insolvency proceedings to personal guarantors of corporate debtors was upheld; approval of a resolution plan does not absolve the guarantor.",
         "hi": "न्यायालय ने कॉर्पोरेट देनदारों के व्यक्तिगत प्रतिभुओं तक दिवाला और शोधन अक्षमता संहिता की कार्यवाही विस्तारित करने वाली अधिसूचना को बरकरार रखा। अभिनिर्धारित किया गया कि समाधान योजना के अनुमोदन से प्रतिभू अपने दायित्व से मुक्त नहीं होता।"
       },
-      "year": 2021
+      "year": 2021,
+      "sections": [
+        "Section 2, IBC"
+      ]
     },
     {
       "caseName": "Phoenix Arc Private Limited v. Spade Financial Services Limited",
@@ -10191,7 +10725,10 @@
         "en": "Two Indian parties may validly choose a foreign seat of arbitration, and the resulting award is an enforceable \"foreign award\" under Part II of the Arbitration Act.",
         "hi": "दो भारतीय पक्षकार विधिमान्यतः माध्यस्थम् की विदेशी सीट चुन सकते हैं, और परिणामी अधिनिर्णय माध्यस्थम् अधिनियम के भाग II के अन्तर्गत प्रवर्तनीय 'विदेशी अधिनिर्णय' है।"
       },
-      "year": 2021
+      "year": 2021,
+      "sections": [
+        "AC 44"
+      ]
     },
     {
       "caseName": "Amazon.com NV Investment Holdings LLC v. Future Retail Limited",
@@ -10266,7 +10803,10 @@
         "en": "The State, holding a statutory first charge under the Gujarat VAT Act, is a \"secured creditor\" under the IBC, and a resolution plan ignoring statutory dues is liable to be rejected.",
         "hi": "अभिनिर्धारित किया गया कि गुजरात मूल्य वर्धित कर अधिनियम के अंतर्गत सांविधिक प्रथम प्रभार धारण करने वाला राज्य दिवाला और शोधन अक्षमता संहिता के अंतर्गत 'प्रतिभूत ऋणदाता' है। सांविधिक देयताओं की अनदेखी करने वाली समाधान योजना अस्वीकृत किए जाने योग्य है।"
       },
-      "year": 2022
+      "year": 2022,
+      "sections": [
+        "Section 53, IBC"
+      ]
     },
     {
       "caseName": "Vidarbha Industries Power Limited v. Axis Bank Limited",
@@ -10321,7 +10861,10 @@
         "en": "Even under pre-Act Hindu law a sole surviving daughter inherits her father's self-acquired property by inheritance and not survivorship, and property inherited by a female Hindu dying issueless and intestate reverts to the source.",
         "hi": "न्यायालय ने अभिनिर्धारित किया कि अधिनियम-पूर्व हिन्दू विधि के अन्तर्गत भी एकमात्र उत्तरजीवी पुत्री अपने पिता की स्वार्जित सम्पत्ति का उत्तराधिकार ग्रहण करती है, उत्तरजीविता द्वारा नहीं। निःसंतान और निर्वसीयत मृत्यु को प्राप्त हिन्दू महिला द्वारा उत्तराधिकार में प्राप्त सम्पत्ति मूल स्त्रोत की ओर प्रतिवर्तित हो जाती है।"
       },
-      "year": 2022
+      "year": 2022,
+      "sections": [
+        "HSA 15"
+      ]
     },
     {
       "caseName": "Kundan Yadav v. State of U.P.",
@@ -10357,7 +10900,11 @@
         "en": "Held proceedings under the U.P. Control of Goondas Act cannot rest on stale or solitary incidents and require material showing the person is habitually engaged in the specified offences.",
         "hi": "अभिनिर्धारित किया गया कि उत्तर प्रदेश गुण्डा नियंत्रण अधिनियम के अन्तर्गत कार्यवाहियाँ पुरानी या एकाकी घटनाओं पर आधारित नहीं हो सकतीं। इसके लिए ऐसी सामग्री आवश्यक है जिससे यह दर्शित हो कि व्यक्ति विनिर्दिष्ट अपराधों में आदतन संलिप्त है।"
       },
-      "year": 2023
+      "year": 2023,
+      "sections": [
+        "UP Goondas Act 2",
+        "UP Goondas Act 3"
+      ]
     },
     {
       "caseName": "Pooja v. State of Punjab",
@@ -10392,7 +10939,11 @@
         "en": "Quashed the Haryana State Employment of Local Candidates Act, 2020, which reserved 75% of private-sector jobs for state domiciles, as unconstitutional and violative of Part III of the Constitution.",
         "hi": "न्यायालय ने हरियाणा राज्य स्थानीय अभ्यर्थी नियोजन अधिनियम, 2020 को अभिखण्डित कर दिया, जिसके द्वारा निजी क्षेत्र की नौकरियों में 75 प्रतिशत स्थान राज्य के स्थानीय अभ्यर्थियों हेतु आरक्षित किए गए थे। यह अधिनियम असंवैधानिक और संविधान के भाग III का उल्लंघन करने वाला ठहराया गया।"
       },
-      "year": 2023
+      "year": 2023,
+      "sections": [
+        "ART 14",
+        "ART 16"
+      ]
     },
     {
       "caseName": "X Corp v. Union of India",
@@ -10428,7 +10979,11 @@
         "en": "Constitution Bench (3:2): an arbitration agreement in an unstamped contract is void and unenforceable until duly stamped (later overruled by the seven-judge bench in In Re: Interplay).",
         "hi": "संविधान पीठ ने (3:2 से) अभिनिर्धारित किया कि अ-मुद्रांकित संविदा में माध्यस्थम् करार तब तक शून्य और अप्रवर्तनीय है जब तक वह विधिवत मुद्रांकित न हो। बाद में In Re: Interplay में सात न्यायाधीशों की पीठ ने इसे उलट दिया।"
       },
-      "year": 2023
+      "year": 2023,
+      "sections": [
+        "Stamp Act 35",
+        "AC 11"
+      ]
     },
     {
       "caseName": "Cox and Kings Limited v. SAP India Private Limited",
@@ -10444,7 +10999,10 @@
         "en": "Constitution Bench upheld the \"group of companies\" doctrine: a non-signatory can be bound by an arbitration agreement where the parties' conduct shows a common intention to bind it.",
         "hi": "संविधान पीठ ने 'कम्पनियों के समूह' के सिद्धान्त को बरकरार रखा: पक्षकारों के आचरण से जहाँ सभी को बाँधने की सामान्य इच्छा प्रकट हो, वहाँ गैर-हस्ताक्षरकर्ता भी माध्यस्थम् करार से बँध सकता है।"
       },
-      "year": 2023
+      "year": 2023,
+      "sections": [
+        "AC 8"
+      ]
     },
     {
       "caseName": "Mahesh Damu Khare v. State of Maharashtra & Anr.",
@@ -10862,7 +11420,10 @@
         "en": "Quashed Gangsters Act proceedings, holding the Act cannot be invoked by police in ordinary property and financial disputes without material showing organised criminal activity.",
         "hi": "न्यायालय ने गैंगस्टर अधिनियम के अन्तर्गत कार्यवाहियाँ अभिखण्डित कर दीं और अभिनिर्धारित किया कि पुलिस इस अधिनियम का आश्रय साधारण सम्पत्ति और वित्तीय विवादों में तब तक नहीं ले सकती, जब तक संगठित आपराधिक गतिविधि दर्शाती हुई सामग्री उपस्थित न हो। संगठित अपराध से असंबद्ध मामलों में इस अधिनियम का प्रयोग विधि की दृष्टि में असंगत है।"
       },
-      "year": 2026
+      "year": 2026,
+      "sections": [
+        "UP Gangsters Act 3"
+      ]
     },
     {
       "caseName": "Mohd. Ashfaque Ansari alias Ashfaque Ansari v. State of U.P.",
@@ -10898,7 +11459,11 @@
         "en": "Deciding a batch of 12 petitions, held the U.P. Prohibition of Unlawful Conversion of Religion Act, 2021 neither prohibits interfaith marriages nor live-in relationships between consenting adults, and directed police to protect such couples.",
         "hi": "12 याचिकाओं के एक समूह का निर्णय करते हुए न्यायालय ने अभिनिर्धारित किया कि उत्तर प्रदेश गैरकानूनी धर्मान्तरण निषेध अधिनियम, 2021 न तो अंतरधार्मिक विवाहों को प्रतिबंधित करता है और न ही सहमत वयस्कों के बीच सहजीवन संबंधों को। न्यायालय ने पुलिस को ऐसे जोड़ों की सुरक्षा सुनिश्चित करने का निर्देश भी दिया।"
       },
-      "year": 2026
+      "year": 2026,
+      "sections": [
+        "UP Conversion Act 3",
+        "ART 21"
+      ]
     },
     {
       "caseName": "Akriti Chaudhary v. Union of India and 4 Others",
@@ -10993,7 +11558,10 @@
         "en": "Quashed a Goonda Act externment order, holding an acquitted case cannot be used to manufacture a record of habitual criminality and describing the repeated misuse of the Act as a \"tool of oppression\".",
         "hi": "न्यायालय ने गुण्डा अधिनियम के अन्तर्गत पारित जिलाबाहिर (निष्कासन) आदेश को अभिखण्डित किया और अभिनिर्धारित किया कि किसी बरी हुए मामले का प्रयोग आदतन आपराधिकता का अभिलेख गढ़ने हेतु नहीं किया जा सकता। न्यायालय ने अधिनियम के बार-बार हो रहे दुरुपयोग को 'उत्पीड़न का साधन' करार दिया।"
       },
-      "year": 2026
+      "year": 2026,
+      "sections": [
+        "UP Goondas Act 3"
+      ]
     },
     {
       "caseName": "Rahul v. State of U.P.",
@@ -11009,7 +11577,10 @@
         "en": "Synthesised the law on declaring a person a \"goonda\": one or two isolated acts do not establish habituality, a reasonable nexus with public impact is required, and the Goondas Act is preventive, not punitive.",
         "hi": "न्यायालय ने किसी व्यक्ति को \"गुण्डा\" घोषित करने संबंधी विधि का संश्लेषण करते हुए अभिनिर्धारित किया कि एक या दो पृथक कृत्य अभ्यस्तता स्थापित नहीं करते; लोक प्रभाव से युक्तियुक्त संबंध आवश्यक है। गुण्डा अधिनियम निवारक प्रकृति का है, दण्डात्मक नहीं।"
       },
-      "year": 2026
+      "year": 2026,
+      "sections": [
+        "UP Goondas Act 2"
+      ]
     },
     {
       "caseName": "Parvinder Singh v. Directorate of Enforcement",
@@ -12864,6 +13435,396 @@
         "IPC 120B",
         "BNS 61"
       ]
+    },
+    {
+      "caseName": "Mohit Sen v. State of U.P.",
+      "caseNameHi": "मोहित सेन बनाम उत्तर प्रदेश राज्य",
+      "citation": "2025:AHC:42112",
+      "court": {
+        "en": "Allahabad High Court",
+        "hi": "इलाहाबाद उच्च न्यायालय"
+      },
+      "year": 2025,
+      "pdfUrl": "https://indiankanoon.org/doc/33989167/",
+      "sourceName": "Indian Kanoon",
+      "sections": [
+        "NDPS 8",
+        "NDPS 20",
+        "NDPS 37",
+        "ART 21"
+      ],
+      "summary": {
+        "en": "The Allahabad High Court granted bail to an accused facing trial for alleged ganja trafficking, after finding that the police had mixed the contents of all 51 recovered packets and weighed them together instead of drawing a representative sample from each packet as the 2022 NDPS sampling rules require, and that the inventory was neither prepared before a Magistrate nor certified by one, as the Supreme Court required in Yusuf @ Asif. With no criminal history and over a year already spent in jail, the Court held the twin conditions of Section 37 NDPS Act stood satisfied and released him on bail.",
+        "hi": "इलाहाबाद उच्च न्यायालय ने गांजा तस्करी के आरोपी को जमानत दी, क्योंकि पुलिस ने बरामद 51 पैकेटों की सामग्री को मिलाकर एक साथ तौला था, जबकि 2022 के एनडीपीएस नमूना नियमों के अनुसार हर पैकेट से अलग प्रतिनिधि नमूना लेना था, और इन्वेंट्री न तो मजिस्ट्रेट के सामने तैयार हुई थी, न ही उनसे प्रमाणित हुई थी, जैसा कि यूसुफ उर्फ आसिफ में सर्वोच्च न्यायालय ने कहा था। कोई आपराधिक इतिहास न होने और एक साल से अधिक जेल में रहने के कारण न्यायालय ने एनडीपीएस अधिनियम की धारा 37 की दोनों शर्तें पूरी मानीं और जमानत दे दी।"
+      }
+    },
+    {
+      "caseName": "Rakesh v. State of U.P.",
+      "caseNameHi": "राकेश बनाम उत्तर प्रदेश राज्य",
+      "citation": "2024:AHC:103396",
+      "court": {
+        "en": "Allahabad High Court",
+        "hi": "इलाहाबाद उच्च न्यायालय"
+      },
+      "year": 2024,
+      "pdfUrl": "https://indiankanoon.org/doc/52010075/",
+      "sourceName": "Indian Kanoon",
+      "sections": [
+        "IPC 307",
+        "BNS 109",
+        "IPC 316",
+        "ART 21"
+      ],
+      "summary": {
+        "en": "The Allahabad High Court granted bail to an accused facing trial for attempt to murder and causing the death of a quick unborn child, holding that, on an overall view of the facts and in the absence of any convincing material showing tampering with evidence, the accused had made out a case for enlargement on bail.",
+        "hi": "इलाहाबाद उच्च न्यायालय ने हत्या के प्रयास और शीघ्र अजन्मे शिशु की मृत्यु कारित करने के आरोप में विचाराधीन आरोपी को जमानत दी। न्यायालय ने कहा कि तथ्यों के समग्र अवलोकन और साक्ष्य से छेड़छाड़ का कोई ठोस आधार न होने पर आरोपी जमानत का हकदार है।"
+      }
+    },
+    {
+      "caseName": "Khushbu Kinnar v. State of U.P.",
+      "caseNameHi": "खुशबू किन्नर बनाम उत्तर प्रदेश राज्य",
+      "citation": "2025:AHC-LKO:51686",
+      "court": {
+        "en": "Allahabad High Court",
+        "hi": "इलाहाबाद उच्च न्यायालय"
+      },
+      "year": 2025,
+      "pdfUrl": "https://indiankanoon.org/doc/115807058/",
+      "sourceName": "Indian Kanoon",
+      "sections": [
+        "BNSS 528",
+        "CRPC 482",
+        "BNS 109",
+        "IPC 307",
+        "BNS 115",
+        "IPC 323",
+        "BNS 324",
+        "IPC 427",
+        "BNS 352",
+        "IPC 504",
+        "BNS 351",
+        "IPC 506",
+        "BNS 333",
+        "IPC 452",
+        "BNS 316",
+        "IPC 406"
+      ],
+      "summary": {
+        "en": "The Allahabad High Court (Lucknow Bench) did not quash the proceedings outright: noting that the injuries were simple and the parties had compromised, it directed the trial court to verify the compromise in the parties' presence, stayed the proceedings against the applicant for three months, and left it open to her to seek quashing again after verification.",
+        "hi": "इलाहाबाद उच्च न्यायालय (लखनऊ पीठ) ने कार्यवाही सीधे रद्द नहीं की: चोटें साधारण होने और पक्षों में समझौता होने पर उसने विचारण न्यायालय को पक्षों की उपस्थिति में समझौते का सत्यापन करने का निर्देश दिया, आवेदिका के विरुद्ध कार्यवाही तीन महीने के लिए स्थगित की, और सत्यापन के बाद दोबारा रद्दीकरण मांगने का रास्ता खुला रखा।"
+      }
+    },
+    {
+      "caseName": "Kameshwar Prasad Singh v. State of Bihar",
+      "caseNameHi": "कामेश्वर प्रसाद सिंह बनाम बिहार राज्य",
+      "citation": "AIR 1962 SC 1166",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "year": 1962,
+      "pdfUrl": "https://indiankanoon.org/doc/687159/",
+      "sourceName": "Indian Kanoon",
+      "sections": [
+        "ART 19",
+        "ART 33",
+        "ART 309"
+      ],
+      "summary": {
+        "en": "A five-judge bench held that government servants do not surrender their fundamental rights on entering service: the rule banning all demonstrations was struck down as violating the freedoms of speech and assembly, while the ban on strikes was upheld because there is no fundamental right to strike.",
+        "hi": "पाँच न्यायाधीशों की पीठ ने कहा कि सरकारी सेवा में आने से कर्मचारी अपने मौलिक अधिकार नहीं खो देते: सभी प्रदर्शनों पर रोक लगाने वाला नियम भाषण और सम्मेलन की स्वतंत्रता का उल्लंघन होने के कारण रद्द कर दिया गया, जबकि हड़ताल पर रोक बरकरार रही, क्योंकि हड़ताल का कोई मौलिक अधिकार नहीं है।"
+      }
+    },
+    {
+      "caseName": "Juvenile-X v. State of U.P. and Another",
+      "caseNameHi": "किशोर-एक्स बनाम उत्तर प्रदेश राज्य और एक अन्य",
+      "citation": "2025:AHC:118454",
+      "court": {
+        "en": "Allahabad High Court",
+        "hi": "इलाहाबाद उच्च न्यायालय"
+      },
+      "year": 2025,
+      "pdfUrl": "https://indiankanoon.org/doc/46900685/",
+      "sourceName": "Indian Kanoon",
+      "sections": [
+        "JJ Act 12",
+        "IPC 302",
+        "BNS 103",
+        "IPC 201",
+        "BNS 211",
+        "IPC 396",
+        "IPC 412"
+      ],
+      "summary": {
+        "en": "Allowing a criminal revision, the Allahabad High Court set aside the Juvenile Justice Board's and the children's court's refusal of bail to a 17-year-old accused of murder and related offences, holding that the gravity of the offence is not a ground to refuse bail under Section 12 of the Juvenile Justice Act, which permits refusal only on three stated contingencies, none of which was made out.",
+        "hi": "आपराधिक पुनरीक्षण स्वीकार करते हुए इलाहाबाद उच्च न्यायालय ने हत्या व अन्य अपराधों के आरोपी 17 वर्षीय किशोर की जमानत अस्वीकार करने वाले किशोर न्याय बोर्ड और बाल न्यायालय के आदेश रद्द कर दिए। न्यायालय ने कहा कि किशोर न्याय अधिनियम की धारा 12 के तहत अपराध की गंभीरता जमानत अस्वीकार करने का आधार नहीं है; इनकार केवल तीन निर्धारित परिस्थितियों में ही हो सकता है, जो यहां सिद्ध नहीं हुईं।"
+      }
+    },
+    {
+      "caseName": "Juvenile Delinquent 'S' v. State of U.P.",
+      "caseNameHi": "किशोर अपराधी 'एस' बनाम उत्तर प्रदेश राज्य",
+      "citation": "2025:AHC-LKO:17050",
+      "court": {
+        "en": "Allahabad High Court",
+        "hi": "इलाहाबाद उच्च न्यायालय"
+      },
+      "year": 2025,
+      "pdfUrl": "https://indiankanoon.org/doc/97930766/",
+      "sourceName": "Indian Kanoon",
+      "sections": [
+        "JJ Act 102",
+        "JJ Act 12",
+        "IPC 363",
+        "BNS 137",
+        "IPC 366",
+        "BNS 87",
+        "IPC 376",
+        "BNS 64",
+        "POCSO 3",
+        "POCSO 4"
+      ],
+      "summary": {
+        "en": "The Allahabad High Court (Lucknow Bench) granted bail to a juvenile accused of kidnapping and sexual offences under the POCSO Act, holding that the District Probation Officer's apprehension that he might contact the victim again was not, by itself, a ground under Section 12 of the Juvenile Justice Act to keep him in custody, and that bail to a juvenile is the rule.",
+        "hi": "इलाहाबाद उच्च न्यायालय (लखनऊ पीठ) ने अपहरण और पॉक्सो अधिनियम के यौन अपराधों के आरोपी किशोर को जमानत दी। न्यायालय ने कहा कि जिला परिवीक्षा अधिकारी की यह आशंका कि वह पीड़िता से फिर संपर्क कर सकता है, किशोर न्याय अधिनियम की धारा 12 के तहत हिरासत में रखने का अकेला आधार नहीं है, और किशोर के लिए जमानत ही नियम है।"
+      }
+    },
+    {
+      "caseName": "Sadik Ali v. State of U.P.",
+      "caseNameHi": "सादिक अली बनाम उत्तर प्रदेश राज्य",
+      "citation": "2025:AHC:171584",
+      "court": {
+        "en": "Allahabad High Court",
+        "hi": "इलाहाबाद उच्च न्यायालय"
+      },
+      "year": 2025,
+      "pdfUrl": "https://indiankanoon.org/doc/39686729/",
+      "sourceName": "Indian Kanoon",
+      "sections": [
+        "BNSS 528",
+        "CRPC 482",
+        "IPC 323",
+        "BNS 115",
+        "IPC 307",
+        "BNS 109",
+        "IPC 316",
+        "IPC 325",
+        "IPC 504",
+        "BNS 352"
+      ],
+      "summary": {
+        "en": "The Allahabad High Court quashed the entire criminal proceedings, including the charge-sheet and cognizance order, in a case of hurt, attempt to murder and related offences, after the parties compromised and the compromise was verified by the court below, holding that no useful purpose would be served by continuing a purely personal dispute that the parties no longer wished to pursue.",
+        "hi": "इलाहाबाद उच्च न्यायालय ने चोट, हत्या के प्रयास व अन्य अपराधों के मामले में आरोप-पत्र और संज्ञान आदेश सहित पूरी आपराधिक कार्यवाही रद्द कर दी, क्योंकि पक्षों में समझौता हो गया था और निचली अदालत ने उसका सत्यापन कर दिया था। न्यायालय ने कहा कि विशुद्ध व्यक्तिगत विवाद, जिसे पक्ष आगे नहीं चलाना चाहते, जारी रखने का कोई उपयोगी उद्देश्य नहीं है।"
+      }
+    },
+    {
+      "caseName": "Habib v. State of U.P.",
+      "caseNameHi": "हबीब बनाम उत्तर प्रदेश राज्य",
+      "citation": "2025:AHC:135137",
+      "court": {
+        "en": "Allahabad High Court",
+        "hi": "इलाहाबाद उच्च न्यायालय"
+      },
+      "year": 2025,
+      "pdfUrl": "https://indiankanoon.org/doc/4539945/",
+      "sourceName": "Indian Kanoon",
+      "sections": [
+        "UP Gangsters Act 3",
+        "BNSS 528",
+        "CRPC 482"
+      ],
+      "summary": {
+        "en": "The Allahabad High Court quashed Gangsters Act proceedings against the applicant after his acquittal in the base case shown in the gang chart, following the Supreme Court's ruling in Farhana that once the base case is quashed or ends in acquittal, the Gangsters Act proceeding built on it cannot survive.",
+        "hi": "इलाहाबाद उच्च न्यायालय ने गैंग चार्ट में दिखाए गए मूल मामले में बरी होने के बाद आवेदक के विरुद्ध गैंगस्टर अधिनियम की कार्यवाही रद्द कर दी। न्यायालय ने फरहाना में सर्वोच्च न्यायालय के निर्णय का अनुसरण किया, जिसके अनुसार मूल मामला रद्द होने या बरी होने पर उस पर बनी गैंगस्टर कार्यवाही टिक नहीं सकती।"
+      }
+    },
+    {
+      "caseName": "Dhirendra Kumar v. State of U.P.",
+      "caseNameHi": "धीरेन्द्र कुमार बनाम उत्तर प्रदेश राज्य",
+      "citation": "2025:AHC:151776",
+      "court": {
+        "en": "Allahabad High Court",
+        "hi": "इलाहाबाद उच्च न्यायालय"
+      },
+      "year": 2025,
+      "pdfUrl": "https://indiankanoon.org/doc/151944384/",
+      "sourceName": "Indian Kanoon",
+      "sections": [
+        "UP Gangsters Act 3",
+        "BNSS 528",
+        "CRPC 482"
+      ],
+      "summary": {
+        "en": "The Allahabad High Court quashed Gangsters Act proceedings founded on a single base case in which the applicant had already been acquitted, holding that a Gangsters Act case cannot rest on a base case that has ended in acquittal.",
+        "hi": "इलाहाबाद उच्च न्यायालय ने एकमात्र मूल मामले पर बनी गैंगस्टर अधिनियम की कार्यवाही रद्द कर दी, क्योंकि उस मूल मामले में आवेदक पहले ही बरी हो चुका था। न्यायालय ने कहा कि बरी हो चुके मूल मामले पर गैंगस्टर कार्यवाही टिक नहीं सकती।"
+      }
+    },
+    {
+      "caseName": "Deependra Pal v. State of U.P.",
+      "caseNameHi": "दीपेन्द्र पाल बनाम उत्तर प्रदेश राज्य",
+      "citation": "2025:AHC:105736",
+      "court": {
+        "en": "Allahabad High Court",
+        "hi": "इलाहाबाद उच्च न्यायालय"
+      },
+      "year": 2025,
+      "pdfUrl": "https://indiankanoon.org/doc/99483606/",
+      "sourceName": "Indian Kanoon",
+      "sections": [
+        "BNSS 528",
+        "CRPC 482",
+        "IPC 323",
+        "BNS 115",
+        "IPC 354",
+        "BNS 74",
+        "IPC 452",
+        "BNS 333",
+        "IPC 504",
+        "BNS 352",
+        "IPC 506",
+        "BNS 351",
+        "SC/ST Act 3"
+      ],
+      "summary": {
+        "en": "The Allahabad High Court quashed proceedings for hurt, outraging modesty, house-trespass and offences under the SC/ST Act after the parties compromised and the compromise was verified by the court below, applying the Supreme Court's Gian Singh and Parbatbhai guidelines on quashing on settlement.",
+        "hi": "इलाहाबाद उच्च न्यायालय ने चोट, लज्जा भंग, गृह-अतिचार और एससी/एसटी अधिनियम के अपराधों की कार्यवाही रद्द कर दी, क्योंकि पक्षों में समझौता हो गया था और निचली अदालत ने उसका सत्यापन कर दिया था। न्यायालय ने समझौते पर रद्दीकरण के बारे में ज्ञान सिंह और परबतभाई के सर्वोच्च न्यायालय के दिशा-निर्देश लागू किए।"
+      }
+    },
+    {
+      "caseName": "Sher Ali v. State of U.P.",
+      "caseNameHi": "शेर अली बनाम उत्तर प्रदेश राज्य",
+      "citation": "2025:AHC:168075",
+      "court": {
+        "en": "Allahabad High Court",
+        "hi": "इलाहाबाद उच्च न्यायालय"
+      },
+      "year": 2025,
+      "pdfUrl": "https://indiankanoon.org/doc/191410630/",
+      "sourceName": "Indian Kanoon",
+      "sections": [
+        "UP Gangsters Act 3",
+        "UP Gangsters Act 19",
+        "ART 21"
+      ],
+      "summary": {
+        "en": "The Allahabad High Court granted bail to an accused facing trial under the Gangsters Act, applying the stringent Section 19(4) test together with Article 21, and holding that where a timely trial is not possible and the accused has already suffered significant incarceration, courts would ordinarily enlarge the accused on bail.",
+        "hi": "इलाहाबाद उच्च न्यायालय ने गैंगस्टर अधिनियम के तहत विचाराधीन आरोपी को जमानत दी। न्यायालय ने धारा 19(4) की कड़ी परीक्षा के साथ अनुच्छेद 21 को लागू किया और कहा कि जहां समय पर विचारण संभव न हो और आरोपी पहले ही लंबा कारावास भुगत चुका हो, वहां सामान्यतः जमानत दी जानी चाहिए।"
+      }
+    },
+    {
+      "caseName": "Satyapal v. State of U.P.",
+      "caseNameHi": "सत्यपाल बनाम उत्तर प्रदेश राज्य",
+      "citation": "2025:AHC:39857",
+      "court": {
+        "en": "Allahabad High Court",
+        "hi": "इलाहाबाद उच्च न्यायालय"
+      },
+      "year": 2025,
+      "pdfUrl": "https://indiankanoon.org/doc/6747655/",
+      "sourceName": "Indian Kanoon",
+      "sections": [
+        "UP Gangsters Act 3",
+        "ART 21"
+      ],
+      "summary": {
+        "en": "The Allahabad High Court granted bail to an accused facing trial under Section 3(1) of the Gangsters Act on the basis of a single base case in which he had already been enlarged on bail, holding that he was not shown to be a member of any gang and that the mandate of Article 21 favoured release.",
+        "hi": "इलाहाबाद उच्च न्यायालय ने गैंगस्टर अधिनियम की धारा 3(1) के तहत विचाराधीन आरोपी को जमानत दी, क्योंकि गैंग चार्ट में दिखाए गए एकमात्र मूल मामले में वह पहले ही जमानत पर था, वह किसी गिरोह का सदस्य सिद्ध नहीं हुआ था, और अनुच्छेद 21 का आदेश रिहाई के पक्ष में था।"
+      }
+    },
+    {
+      "caseName": "Rakesh Sharma v. State of U.P.",
+      "caseNameHi": "राकेश शर्मा बनाम उत्तर प्रदेश राज्य",
+      "citation": "2024:AHC:80976",
+      "court": {
+        "en": "Allahabad High Court",
+        "hi": "इलाहाबाद उच्च न्यायालय"
+      },
+      "year": 2024,
+      "pdfUrl": "https://indiankanoon.org/doc/56012511/",
+      "sourceName": "Indian Kanoon",
+      "sections": [
+        "CRPC 438",
+        "BNSS 482",
+        "IPC 307",
+        "BNS 109",
+        "UP Cow Slaughter Act 3"
+      ],
+      "summary": {
+        "en": "The Allahabad High Court allowed an anticipatory bail application in a case involving cow-slaughter, cruelty to animals, attempt to murder and Arms Act offences, holding, in line with the Supreme Court's ruling in Sushila Aggarwal, that the applicant was entitled to anticipatory bail till the conclusion of trial on furnishing bonds and sureties.",
+        "hi": "इलाहाबाद उच्च न्यायालय ने गोवध, पशु क्रूरता, हत्या के प्रयास और शस्त्र अधिनियम के अपराधों के मामले में अग्रिम जमानत याचिका स्वीकार की। सुशीला अग्रवाल में सर्वोच्च न्यायालय के निर्णय के अनुसार न्यायालय ने कहा कि आवेदक बंध-पत्र और प्रतिभूति देने पर विचारण समाप्ति तक अग्रिम जमानत का हकदार है।"
+      }
+    },
+    {
+      "caseName": "Aznan Khan v. State of U.P.",
+      "caseNameHi": "अज़नान खान बनाम उत्तर प्रदेश राज्य",
+      "citation": "2025:AHC:210559",
+      "court": {
+        "en": "Allahabad High Court",
+        "hi": "इलाहाबाद उच्च न्यायालय"
+      },
+      "year": 2025,
+      "pdfUrl": "https://indiankanoon.org/search/?formInput=Aznan+Khan+v.+State+of+U.P.",
+      "sourceName": "Indian Kanoon",
+      "sections": [
+        "SC/ST Act 14-A(2)",
+        "SC/ST Act 3",
+        "IPC 376",
+        "BNS 64"
+      ],
+      "summary": {
+        "en": "The Allahabad High Court allowed the bail appeals of two accused in a gang-rape and SC/ST Act case, holding that the unexplained nine-year delay in lodging the FIR, the counter-case filed against the complainant, and the overall circumstances made out a case for bail, while cautioning that victim-centric rights under the SC/ST Act should not be misused or abused.",
+        "hi": "इलाहाबाद उच्च न्यायालय ने सामूहिक बलात्कार और एससी/एसटी अधिनियम के मामले में दो आरोपियों की जमानत अपीलें स्वीकार कीं। न्यायालय ने कहा कि प्राथमिकी दर्ज करने में नौ साल की अस्पष्टीकृत देरी, शिकायतकर्ता के विरुद्ध दर्ज जवाबी मामला और समग्र परिस्थितियां जमानत का आधार बनाती हैं, साथ ही चेतावनी दी कि एससी/एसटी अधिनियम के तहत पीड़ित-केंद्रित अधिकारों का दुरुपयोग नहीं होना चाहिए।"
+      }
+    },
+    {
+      "caseName": "Dinesh Kumar Srivastava v. State of U.P.",
+      "caseNameHi": "दिनेश कुमार श्रीवास्तव बनाम उत्तर प्रदेश राज्य",
+      "citation": "2025 SCC OnLine All 8063",
+      "court": {
+        "en": "Allahabad High Court",
+        "hi": "इलाहाबाद उच्च न्यायालय"
+      },
+      "year": 2025,
+      "pdfUrl": "https://indiankanoon.org/search/?formInput=Dinesh+Kumar+Srivastava+v.+State+of+U.P.",
+      "sourceName": "Indian Kanoon",
+      "sections": [
+        "BNSS 482",
+        "CRPC 438",
+        "SC/ST Act 18",
+        "SC/ST Act 3",
+        "IPC 376",
+        "BNS 64"
+      ],
+      "summary": {
+        "en": "The Allahabad High Court granted anticipatory bail in a case of rape and SC/ST Act offences, holding that the Section 18 bar on anticipatory bail under the SC/ST Act does not apply where the application is filed under Section 482 BNSS (the successor to Section 438 CrPC), and that, on facts, no prima facie material for the rape charge was made out.",
+        "hi": "इलाहाबाद उच्च न्यायालय ने बलात्कार और एससी/एसटी अधिनियम के अपराधों के मामले में अग्रिम जमानत दी। न्यायालय ने कहा कि एससी/एसटी अधिनियम की धारा 18 के तहत अग्रिम जमानत पर रोक वहां लागू नहीं होती, जहां याचिका बीएनएसएस की धारा 482 (दंड प्रक्रिया संहिता की धारा 438 की उत्तराधिकारी) के तहत दायर हो, और तथ्यों पर बलात्कार के आरोप का प्रथम दृष्टया आधार नहीं बनता था।"
+      }
+    },
+    {
+      "caseName": "Raj Sonkar v. State of U.P.",
+      "caseNameHi": "राज सोनकर बनाम उत्तर प्रदेश राज्य",
+      "citation": "2025:AHC:38351",
+      "court": {
+        "en": "Allahabad High Court",
+        "hi": "इलाहाबाद उच्च न्यायालय"
+      },
+      "year": 2025,
+      "pdfUrl": "https://elegalix.allahabadhighcourt.in/elegalix/WebDownloadOriginalHCJudgmentDocument.do?translatedJudgmentID=40864",
+      "sourceName": "Allahabad High Court",
+      "sections": [
+        "POCSO 3",
+        "POCSO 4",
+        "BNS 65",
+        "IPC 376",
+        "BNS 64",
+        "BNS 351",
+        "IPC 506",
+        "BNS 352",
+        "IPC 504"
+      ],
+      "summary": {
+        "en": "The Allahabad High Court granted bail to an accused facing trial for rape under BNS Section 65(1) and offences under the POCSO Act, noting the delay of about sixteen days in lodging the FIR, the absence of any criminal history, and custody since February 2025, and relying on the Supreme Court's rulings in Satender Kumar Antil and Manish Sisodia that bail is not to be withheld as punishment.",
+        "hi": "इलाहाबाद उच्च न्यायालय ने बीएनएस की धारा 65(1) के तहत बलात्कार और पॉक्सो अधिनियम के अपराधों के आरोपी को जमानत दी। न्यायालय ने प्राथमिकी दर्ज करने में लगभग सोलह दिन की देरी, किसी आपराधिक इतिहास के अभाव और फरवरी 2025 से हिरासत में रहने पर ध्यान दिया, और सतेंद्र कुमार अंतिल तथा मनीष सिसोदिया में सर्वोच्च न्यायालय के इस नियम का सहारा लिया कि जमानत को सजा के रूप में रोका नहीं जाना चाहिए।"
+      }
     }
   ]
 }

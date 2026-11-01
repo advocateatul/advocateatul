@@ -1,0 +1,311 @@
+{
+ "title": {
+  "en": "Criminal Case Journey — Step by Step",
+  "hi": "आपराधिक मामले की यात्रा — चरण दर चरण"
+ },
+ "note": "Every link below was verified against parsed section tokens (notes.json sections strings, judgements.json sections arrays, drafts.json sections prose) or, for exactly one draft, against the draft's own title/use naming the step's subject — that case is flagged in its basis. Steps with no verified link carry no link.",
+ "note_id_format": "<subject>:<index> into notes.json arrays. judgment id = exact caseName. draft id = drafts.json id.",
+ "steps": [
+  {
+   "step": 1,
+   "title": {
+    "en": "FIR — First Information Report",
+    "hi": "FIR — प्रथम सूचना रिपोर्ट"
+   },
+   "sections": [
+    "BNSS:173"
+   ],
+   "about": {
+    "en": "The criminal case usually starts when information about a cognizable offence reaches the police. The FIR is that information, recorded in writing.",
+    "hi": "आपराधिक मामला आमतौर पर तब शुरू होता है जब संज्ञेय अपराध की सूचना पुलिस तक पहुँचती है। FIR वही सूचना है, जो लिखित में दर्ज की जाती है।"
+   },
+   "substeps": [
+    {
+     "en": "Information is given to the police about a cognizable offence.",
+     "hi": "संज्ञेय अपराध की सूचना पुलिस को दी जाती है।"
+    },
+    {
+     "en": "The police register the FIR; a copy is given to the informant.",
+     "hi": "पुलिस FIR दर्ज करती है; सूचना देने वाले को उसकी प्रति दी जाती है।"
+    },
+    {
+     "en": "If the police refuse to register it, a written complaint and then a Magistrate's direction can be sought.",
+     "hi": "यदि पुलिस दर्ज करने से इनकार करे तो लिखित शिकायत और फिर मजिस्ट्रेट से निर्देश माँगा जा सकता है।"
+    }
+   ],
+   "links": [
+    {
+     "type": "note",
+     "id": "bnss:0",
+     "basis": "section BNSS:173"
+    },
+    {
+     "type": "judgment",
+     "id": "Lalita Kumari v. Government of Uttar Pradesh",
+     "basis": "section BNSS:173"
+    },
+    {
+     "type": "draft",
+     "id": "fir-direction-173",
+     "basis": "section BNSS:173 (Sec. 173(1) in draft sections)"
+    },
+    {
+     "type": "draft",
+     "id": "fir-documents-copy",
+     "basis": "section BNSS:173 (Sec. 173(2) in draft sections)"
+    }
+   ]
+  },
+  {
+   "step": 2,
+   "title": {
+    "en": "Investigation",
+    "hi": "जाँच / अन्वेषण"
+   },
+   "sections": [
+    "BNSS:35",
+    "BNSS:175",
+    "BNSS:180",
+    "BNSS:187",
+    "BNSS:192",
+    "BNSS:193"
+   ],
+   "about": {
+    "en": "The police investigate: they visit the scene, record statements, arrest where the law permits, and keep a case diary. Custody beyond 24 hours needs a Magistrate's remand order.",
+    "hi": "पुलिस जाँच करती है: घटनास्थल देखती है, बयान दर्ज करती है, कानून की अनुमति पर गिरफ्तारी करती है और केस डायरी रखती है। 24 घंटे से अधिक हिरासत के लिए मजिस्ट्रेट का रिमांड आदेश चाहिए।"
+   },
+   "substeps": [
+    {
+     "en": "Arrest only with reasonable justification, with reasons recorded; the arrested person has rights, including being produced before a Magistrate.",
+     "hi": "गिरफ्तारी केवल तर्कसंगत कारण से, कारण दर्ज करके; गिरफ्तार व्यक्ति के अधिकार हैं, जिनमें मजिस्ट्रेट के समक्ष पेश किया जाना शामिल है।"
+    },
+    {
+     "en": "Statements of witnesses are recorded and a case diary is maintained.",
+     "hi": "गवाहों के बयान दर्ज किए जाते हैं और केस डायरी रखी जाती है।"
+    },
+    {
+     "en": "If custody is needed beyond 24 hours, the police seek remand; otherwise the accused is released on bail or bond.",
+     "hi": "यदि 24 घंटे से अधिक हिरासत चाहिए तो पुलिस रिमांड माँगती है; अन्यथा अभियुक्त को जमानत या बंधपत्र पर छोड़ा जाता है।"
+    }
+   ],
+   "links": [
+    {
+     "type": "note",
+     "id": "bnss:32",
+     "basis": "section BNSS:173–193 range"
+    },
+    {
+     "type": "note",
+     "id": "bnss:1",
+     "basis": "section BNSS:35 in range 35–47"
+    },
+    {
+     "type": "note",
+     "id": "bnss:8",
+     "basis": "section BNSS:187"
+    },
+    {
+     "type": "judgment",
+     "id": "D.K. Basu v. State of West Bengal",
+     "basis": "section BNSS:35"
+    },
+    {
+     "type": "judgment",
+     "id": "Arnesh Kumar v. State of Bihar",
+     "basis": "section BNSS:35"
+    },
+    {
+     "type": "judgment",
+     "id": "Joginder Kumar v. State of U.P.",
+     "basis": "section BNSS:35"
+    },
+    {
+     "type": "draft",
+     "id": "default-bail-187",
+     "basis": "section BNSS:187"
+    },
+    {
+     "type": "draft",
+     "id": "remand-objection-187",
+     "basis": "section BNSS:187"
+    }
+   ]
+  },
+  {
+   "step": 3,
+   "title": {
+    "en": "Chargesheet — Police Report",
+    "hi": "आरोपपत्र — पुलिस रिपोर्ट"
+   },
+   "sections": [
+    "BNSS:193"
+   ],
+   "about": {
+    "en": "When investigation ends, the police file their report. If it says an offence is made out, the case moves to court; the accused gets copies of the report and documents.",
+    "hi": "जाँच पूरी होने पर पुलिस अपनी रिपोर्ट दाखिल करती है। यदि उसमें अपराध बनता है तो मामला अदालत में जाता है; अभियुक्त को रिपोर्ट और दस्तावेजों की प्रतियाँ मिलती हैं।"
+   },
+   "substeps": [
+    {
+     "en": "The police report is filed before the Magistrate.",
+     "hi": "पुलिस रिपोर्ट मजिस्ट्रेट के समक्ष दाखिल की जाती है।"
+    },
+    {
+     "en": "Copies of the report and relied-upon documents are supplied to the accused.",
+     "hi": "रिपोर्ट और भरोसे वाले दस्तावेजों की प्रतियाँ अभियुक्त को दी जाती हैं।"
+    },
+    {
+     "en": "Further investigation, or a protest against the report, can follow where the law permits.",
+     "hi": "जहाँ कानून अनुमति दे, वहाँ आगे की जाँच या रिपोर्ट के विरुद्ध विरोध-याचिका हो सकती है।"
+    }
+   ],
+   "links": [
+    {
+     "type": "note",
+     "id": "bnss:3",
+     "basis": "section BNSS:193"
+    },
+    {
+     "type": "judgment",
+     "id": "Amitbhai Anilchandra Shah v. Central Bureau of Investigation",
+     "basis": "section BNSS:193; summary names supplementary charge-sheet"
+    },
+    {
+     "type": "draft",
+     "id": "copy-chargesheet-documents",
+     "basis": "topic: draft title and use name chargesheet copies (draft sections are BNSS:230/231, not 193 — flagged, not a section match)"
+    },
+    {
+     "type": "draft",
+     "id": "further-investigation-193",
+     "basis": "section BNSS:193"
+    }
+   ]
+  },
+  {
+   "step": 4,
+   "title": {
+    "en": "Trial",
+    "hi": "विचारण / मुकदमा"
+   },
+   "sections": [
+    "BNSS:234",
+    "BNSS:250",
+    "BNSS:251",
+    "BNSS:258",
+    "BNSS:346",
+    "ART:21"
+   ],
+   "about": {
+    "en": "The court takes cognizance, frames charges where a case is made out, hears prosecution and defence evidence, and delivers judgment. Trial must be speedy — delay itself can violate the right to liberty.",
+    "hi": "अदालत संज्ञान लेती है, जहाँ मामला बनता है वहाँ आरोप तय करती है, अभियोजन और बचाव पक्ष के साक्ष्य सुनती है और निर्णय देती है। विचारण शीघ्र होना चाहिए — देरी स्वयं स्वतंत्रता के अधिकार का उल्लंघन हो सकती है।"
+   },
+   "substeps": [
+    {
+     "en": "Cognizance and framing of charge; discharge if no sufficient ground is made out.",
+     "hi": "संज्ञान और आरोप-निर्धारण; पर्याप्त आधार न हो तो उन्मोचन (डिस्चार्ज)।"
+    },
+    {
+     "en": "Prosecution evidence, defence evidence and arguments, heard day to day as far as possible.",
+     "hi": "अभियोजन साक्ष्य, बचाव साक्ष्य और बहस — यथासंभव दिन-प्रतिदिन सुनवाई।"
+    },
+    {
+     "en": "Judgment of conviction or acquittal, followed by sentencing where convicted.",
+     "hi": "दोषसिद्धि या दोषमुक्ति का निर्णय; दोषसिद्धि पर दंडादेश।"
+    }
+   ],
+   "links": [
+    {
+     "type": "note",
+     "id": "bnss:26",
+     "basis": "section BNSS:248–260 range"
+    },
+    {
+     "type": "note",
+     "id": "bnss:11",
+     "basis": "section BNSS:234–240 and 251"
+    },
+    {
+     "type": "note",
+     "id": "bnss:4",
+     "basis": "section BNSS:346"
+    },
+    {
+     "type": "note",
+     "id": "bnss:13",
+     "basis": "section ART:21"
+    },
+    {
+     "type": "judgment",
+     "id": "Hussainara Khatoon v. State of Bihar",
+     "basis": "section ART:21; summary establishes speedy trial"
+    },
+    {
+     "type": "draft",
+     "id": "discharge-250",
+     "basis": "section BNSS:250"
+    },
+    {
+     "type": "draft",
+     "id": "speedy-trial-application",
+     "basis": "section BNSS:346 and ART:21"
+    }
+   ]
+  },
+  {
+   "step": 5,
+   "title": {
+    "en": "Appeal",
+    "hi": "अपील"
+   },
+   "sections": [
+    "BNSS:415",
+    "BNSS:419",
+    "BNSS:430"
+   ],
+   "about": {
+    "en": "A convicted person can appeal against conviction and sentence, and the State can appeal against acquittal or an inadequate sentence. The sentence can be suspended while the appeal is pending.",
+    "hi": "दोषसिद्ध व्यक्ति दोषसिद्धि और दंड के विरुद्ध अपील कर सकता है, और राज्य दोषमुक्ति या अपर्याप्त दंड के विरुद्ध अपील कर सकता है। अपील लंबित रहने तक दंड निलंबित किया जा सकता है।"
+   },
+   "substeps": [
+    {
+     "en": "Appeal is filed as a written petition with a copy of the judgment.",
+     "hi": "अपील निर्णय की प्रति सहित लिखित याचिका के रूप में दाखिल की जाती है।"
+    },
+    {
+     "en": "Suspension of sentence and bail can be sought while the appeal is pending.",
+     "hi": "अपील लंबित रहने तक दंड का निलंबन और जमानत माँगी जा सकती है।"
+    },
+    {
+     "en": "The appellate court can confirm, modify, reverse or order a retrial as the law permits.",
+     "hi": "अपील न्यायालय कानून की अनुमति से निर्णय की पुष्टि, संशोधन, उलटफेर या पुनः विचारण का आदेश दे सकता है।"
+    }
+   ],
+   "links": [
+    {
+     "type": "note",
+     "id": "bnss:15",
+     "basis": "section BNSS:413–435 range"
+    },
+    {
+     "type": "draft",
+     "id": "criminal-appeal",
+     "basis": "section BNSS:415"
+    },
+    {
+     "type": "draft",
+     "id": "appeal-against-acquittal-general",
+     "basis": "section BNSS:419"
+    },
+    {
+     "type": "draft",
+     "id": "stay-sentence-appeal",
+     "basis": "section BNSS:430"
+    }
+   ],
+   "no_judgment_note": {
+    "en": "No judgment in the library carries BNSS 415, 419 or 430 (or CrPC 374, 378 or 389) as a parsed section token, so this step deliberately has no judgment link.",
+    "hi": "लाइब्रेरी के किसी निर्णय में BNSS 415, 419 या 430 (या CrPC 374, 378 या 389) पार्स किए गए धारा-टोकन के रूप में नहीं है, इसलिए इस चरण में जानबूझकर कोई निर्णय-लिंक नहीं है।"
+   }
+  }
+ ]
+}
