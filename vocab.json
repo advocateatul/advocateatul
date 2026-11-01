@@ -8634,6 +8634,194 @@
      }
     }
    ]
+  },
+  {
+   "id": "ibc-insolvency",
+   "name": {
+    "en": "IBC & Insolvency",
+    "hi": "आईबीसी व दिवाला"
+   },
+   "terms": [
+    {
+     "en": "Corporate Debtor",
+     "example": {
+      "en": "The corporate debtor defaulted on repayment of the term loan.",
+      "hi": "निगमित ऋणी ने सावधि ऋण के पुनर्भुगतान में चूक की।"
+     },
+     "hi": "निगमित ऋणी"
+    },
+    {
+     "en": "Financial Creditor",
+     "example": {
+      "en": "The bank, as financial creditor, filed the insolvency application.",
+      "hi": "बैंक ने वित्तीय लेनदार के रूप में दिवाला आवेदन दायर किया।"
+     },
+     "hi": "वित्तीय लेनदार"
+    },
+    {
+     "en": "Committee of Creditors",
+     "example": {
+      "en": "The committee of creditors approved the resolution plan by vote.",
+      "hi": "लेनदारों की समिति ने मतदान से समाधान योजना अनुमोदित की।"
+     },
+     "hi": "लेनदारों की समिति"
+    },
+    {
+     "en": "Moratorium",
+     "example": {
+      "en": "During the moratorium, no recovery proceedings can continue against the debtor.",
+      "hi": "अधिस्थगन की अवधि में ऋणी के विरुद्ध कोई वसूली कार्यवाही जारी नहीं रह सकती।"
+     },
+     "hi": "अधिस्थगन"
+    },
+    {
+     "en": "Resolution Plan",
+     "example": {
+      "en": "The tribunal approved the resolution plan for revival of the company.",
+      "hi": "अधिकरण ने कंपनी के पुनरुद्धार हेतु समाधान योजना अनुमोदित की।"
+     },
+     "hi": "समाधान योजना"
+    },
+    {
+     "en": "Insolvency Resolution Professional",
+     "example": {
+      "en": "The insolvency resolution professional took charge of the company's management.",
+      "hi": "दिवाला समाधान व्यावसायिक ने कंपनी के प्रबंधन का कार्यभार संभाला।"
+     },
+     "hi": "दिवाला समाधान व्यावसायिक"
+    }
+   ]
+  },
+  {
+   "id": "election-law",
+   "name": {
+    "en": "Election Law",
+    "hi": "निर्वाचन विधि"
+   },
+   "terms": [
+    {
+     "en": "Model Code of Conduct",
+     "example": {
+      "en": "The model code of conduct came into force on announcement of the election dates.",
+      "hi": "चुनाव तिथियों की घोषणा के साथ आदर्श आचार संहिता लागू हो गई।"
+     },
+     "hi": "आदर्श आचार संहिता"
+    },
+    {
+     "en": "Electoral Roll",
+     "example": {
+      "en": "Her name was checked in the electoral roll before polling day.",
+      "hi": "मतदान दिवस से पहले मतदाता सूची में उनका नाम जांचा गया।"
+     },
+     "hi": "मतदाता सूची"
+    },
+    {
+     "en": "Returning Officer",
+     "example": {
+      "en": "The returning officer declared the result after counting of votes.",
+      "hi": "रिटर्निंग अधिकारी ने मतगणना के बाद परिणाम घोषित किया।"
+     },
+     "hi": "रिटर्निंग अधिकारी"
+    },
+    {
+     "en": "Election Petition",
+     "example": {
+      "en": "The defeated candidate filed an election petition challenging the result.",
+      "hi": "पराजित प्रत्याशी ने परिणाम को चुनौती देते हुए निर्वाचन याचिका दायर की।"
+     },
+     "hi": "निर्वाचन याचिका"
+    },
+    {
+     "en": "NOTA (None of the Above)",
+     "example": {
+      "en": "A voter who likes no candidate may press the NOTA button.",
+      "hi": "जो मतदाता किसी प्रत्याशी को पसंद नहीं करता, वह नोटा बटन दबा सकता है।"
+     },
+     "hi": "उपर्युक्त में से कोई नहीं (नोटा)"
+    }
+   ]
+  },
+  {
+   "id": "environment-law",
+   "name": {
+    "en": "Environment Law",
+    "hi": "पर्यावरण विधि"
+   },
+   "terms": [
+    {
+     "en": "Polluter Pays Principle",
+     "example": {
+      "en": "Under the polluter pays principle, the factory bore the cost of cleaning the river.",
+      "hi": "प्रदूषक भुगतान सिद्धांत के अधीन कारखाने ने नदी की सफाई का खर्च वहन किया।"
+     },
+     "hi": "प्रदूषक भुगतान सिद्धांत"
+    },
+    {
+     "en": "Environmental Clearance",
+     "example": {
+      "en": "The project cannot start without prior environmental clearance.",
+      "hi": "परियोजना पूर्व पर्यावरणीय स्वीकृति के बिना शुरू नहीं हो सकती।"
+     },
+     "hi": "पर्यावरणीय स्वीकृति"
+    },
+    {
+     "en": "National Green Tribunal",
+     "example": {
+      "en": "The National Green Tribunal hears cases relating to environmental protection.",
+      "hi": "राष्ट्रीय हरित अधिकरण पर्यावरण संरक्षण से संबंधित मामलों की सुनवाई करता है।"
+     },
+     "hi": "राष्ट्रीय हरित अधिकरण"
+    },
+    {
+     "en": "Environmental Impact Assessment",
+     "example": {
+      "en": "An environmental impact assessment must precede approval of the mining project.",
+      "hi": "खनन परियोजना के अनुमोदन से पूर्व पर्यावरणीय प्रभाव आकलन आवश्यक है।"
+     },
+     "hi": "पर्यावरणीय प्रभाव आकलन"
+    }
+   ]
+  },
+  {
+   "id": "intellectual-property",
+   "name": {
+    "en": "Intellectual Property",
+    "hi": "बौद्धिक संपदा"
+   },
+   "terms": [
+    {
+     "en": "Patent",
+     "example": {
+      "en": "The inventor obtained a patent for the new water-purification device.",
+      "hi": "आविष्कारक ने नए जल-शोधन यंत्र के लिए पेटेंट प्राप्त किया।"
+     },
+     "hi": "पेटेंट"
+    },
+    {
+     "en": "Copyright",
+     "example": {
+      "en": "Copyright protects the author's original literary work from copying.",
+      "hi": "प्रतिलिप्यधिकार लेखक की मौलिक साहित्यिक कृति को नकल से सुरक्षित करता है।"
+     },
+     "hi": "प्रतिलिप्यधिकार"
+    },
+    {
+     "en": "Trademark",
+     "example": {
+      "en": "The company registered its brand name as a trademark.",
+      "hi": "कंपनी ने अपने ब्रांड नाम को व्यापार चिह्न के रूप में पंजीकृत कराया।"
+     },
+     "hi": "व्यापार चिह्न"
+    },
+    {
+     "en": "Geographical Indication",
+     "example": {
+      "en": "A geographical indication links a product's quality to its place of origin.",
+      "hi": "भौगोलिक संकेत किसी उत्पाद की गुणवत्ता को उसके उद्गम स्थान से जोड़ता है।"
+     },
+     "hi": "भौगोलिक संकेत"
+    }
+   ]
   }
  ]
 }

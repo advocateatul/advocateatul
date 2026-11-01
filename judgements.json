@@ -116,7 +116,11 @@
       },
       "pdfUrl": "https://indiankanoon.org/doc/120358/",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "गोलकनाथ बनाम पंजाब राज्य"
+      "caseNameHi": "गोलकनाथ बनाम पंजाब राज्य",
+      "sections": [
+        "ART 13",
+        "ART 368"
+      ]
     },
     {
       "caseName": "Shayara Bano v. Union of India",
@@ -460,7 +464,11 @@
         "hi": "अदालत से बरी होने के बाद भी एक व्यक्ति प्रशासनिक लापरवाही से 14 साल और जेल में रखा गया। सर्वोच्च न्यायालय ने राज्य को अवैध हिरासत का मुआवज़ा देने का आदेश दिया — यह मिसाल बनी कि स्वतंत्रता के गैरकानूनी हनन पर राज्य से आर्थिक प्रतिपूर्ति मिलनी चाहिए।"
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Rudul%20Sah%20v.%20State%20of%20Bihar",
-      "sourceName": "Indian Kanoon"
+      "sourceName": "Indian Kanoon",
+      "sections": [
+        "ART 21",
+        "ART 32"
+      ]
     },
     {
       "caseName": "Sheela Barse v. State of Maharashtra",
@@ -667,7 +675,11 @@
         "hi": "न्यायालय ने आपराधिक मुकदमों में वीडियो कॉन्फ्रेंसिंग से गवाहों के बयान की अनुमति दी — कहा कि आरोपी की 'उपस्थिति' का अर्थ हमेशा भौतिक उपस्थिति नहीं होता। नियमित होने से वर्षों पहले इसने वर्चुअल सुनवाई का द्वार खोला।"
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=State%20of%20Maharashtra%20v.%20Praful%20Desai",
-      "sourceName": "Indian Kanoon"
+      "sourceName": "Indian Kanoon",
+      "sections": [
+        "CRPC 273",
+        "BNSS 308"
+      ]
     },
     {
       "caseName": "Dashrath Rupsingh Rathod v. State of Maharashtra",
@@ -781,7 +793,11 @@
       },
       "pdfUrl": "https://indiankanoon.org/doc/149321/",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "मद्रास राज्य बनाम चंपकम दोरैराजन"
+      "caseNameHi": "मद्रास राज्य बनाम चंपकम दोरैराजन",
+      "sections": [
+        "ART 15",
+        "ART 29"
+      ]
     },
     {
       "caseName": "Hanumant Govind Nargundkar v. State of Madhya Pradesh",
@@ -797,7 +813,10 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Hanumant%20v%20State%20of%20Madhya%20Pradesh",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "हनुमंत गोविंद नरगुंडकर बनाम मध्य प्रदेश राज्य"
+      "caseNameHi": "हनुमंत गोविंद नरगुंडकर बनाम मध्य प्रदेश राज्य",
+      "sections": [
+        "IPC 120B"
+      ]
     },
     {
       "caseName": "Satyabrata Ghose v. Mugneeram Bangur & Co.",
@@ -951,7 +970,11 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Sajjan%20Singh%20v.%20State%20of%20Rajasthan",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "सज्जन सिंह बनाम राजस्थान राज्य"
+      "caseNameHi": "सज्जन सिंह बनाम राजस्थान राज्य",
+      "sections": [
+        "ART 13",
+        "ART 368"
+      ]
     },
     {
       "caseName": "A.K. Kraipak v. Union of India",
@@ -967,7 +990,11 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=A.K.%20Kraipak%20v.%20Union%20of%20India",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "ए.के. क्रैपक बनाम भारत संघ"
+      "caseNameHi": "ए.के. क्रैपक बनाम भारत संघ",
+      "sections": [
+        "ART 14",
+        "ART 16"
+      ]
     },
     {
       "caseName": "Bennett Coleman & Co. v. Union of India",
@@ -1281,7 +1308,12 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Waman%20Rao%20v.%20Union%20of%20India",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "वामन राव बनाम भारत संघ"
+      "caseNameHi": "वामन राव बनाम भारत संघ",
+      "sections": [
+        "ART 31A",
+        "ART 31B",
+        "ART 368"
+      ]
     },
     {
       "caseName": "D.S. Nakara v. Union of India",
@@ -1609,7 +1641,11 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Kihoto%20Hollohan%20v.%20Zachillhu",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "किहोटो होल्लोहन बनाम जचिल्हु"
+      "caseNameHi": "किहोटो होल्लोहन बनाम जचिल्हु",
+      "sections": [
+        "ART 102",
+        "ART 191"
+      ]
     },
     {
       "caseName": "Mohini Jain v. State of Karnataka",
@@ -2303,7 +2339,11 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Payal+Sharma+v.+Superintendent+Nari+Niketan",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "पायल शर्मा बनाम अधीक्षक, नारी निकेतन, आगरा"
+      "caseNameHi": "पायल शर्मा बनाम अधीक्षक, नारी निकेतन, आगरा",
+      "sections": [
+        "ART 21",
+        "ART 226"
+      ]
     },
     {
       "caseName": "People's Union for Civil Liberties v. Union of India (Right to Food Case)",
@@ -3126,7 +3166,11 @@
       },
       "pdfUrl": "https://indiankanoon.org/doc/133438875/",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "अरुणा रामचंद्र शानबाग बनाम भारत संघ"
+      "caseNameHi": "अरुणा रामचंद्र शानबाग बनाम भारत संघ",
+      "sections": [
+        "ART 21",
+        "ART 226"
+      ]
     },
     {
       "caseName": "Bachpan Bachao Andolan v. Union of India",
@@ -3826,7 +3870,12 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Shatrughan%20Chauhan%20v%20Union%20of%20India",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "शत्रुघ्न चौहान बनाम भारत संघ"
+      "caseNameHi": "शत्रुघ्न चौहान बनाम भारत संघ",
+      "sections": [
+        "ART 21",
+        "ART 72",
+        "ART 161"
+      ]
     },
     {
       "caseName": "Sunita Kachwaha v. Anil Kachwaha",
@@ -4058,7 +4107,12 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=State%20of%20Tamil%20Nadu%20v.%20K.%20Balu",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "तमिलनाडु राज्य बनाम के. बालू"
+      "caseNameHi": "तमिलनाडु राज्य बनाम के. बालू",
+      "sections": [
+        "ART 21",
+        "ART 47",
+        "ART 142"
+      ]
     },
     {
       "caseName": "Subramanian Swamy v. Union of India, Ministry of Law",
@@ -4362,7 +4416,10 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Danamma%20vs%20Amar",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "दानम्मा बनाम अमर सिंह"
+      "caseNameHi": "दानम्मा बनाम अमर सिंह",
+      "sections": [
+        "Hindu Succession Act 6"
+      ]
     },
     {
       "caseName": "Dataram Singh v. State of Uttar Pradesh",
@@ -4378,7 +4435,11 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Dataram%20Singh%20v%20State%20of%20Uttar%20Pradesh",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "दाताराम सिंह बनाम उत्तर प्रदेश राज्य"
+      "caseNameHi": "दाताराम सिंह बनाम उत्तर प्रदेश राज्य",
+      "sections": [
+        "CRPC 439",
+        "BNSS 483"
+      ]
     },
     {
       "caseName": "Dr. Ashwani Kumar v. Union of India",
@@ -4974,7 +5035,12 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Rajnesh%20vs%20Neha",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "राजनेश बनाम नेहा"
+      "caseNameHi": "राजनेश बनाम नेहा",
+      "sections": [
+        "CRPC 125",
+        "BNSS 144",
+        "ART 142"
+      ]
     },
     {
       "caseName": "Salamat Ansari v. State of Uttar Pradesh",
@@ -5028,7 +5094,13 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Smt.+Shikha+v.+State+of+Uttar+Pradesh",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "श्रीमती शिखा बनाम उत्तर प्रदेश राज्य"
+      "caseNameHi": "श्रीमती शिखा बनाम उत्तर प्रदेश राज्य",
+      "sections": [
+        "ART 21",
+        "ART 226",
+        "IPC 366",
+        "BNS 87"
+      ]
     },
     {
       "caseName": "Sushila Aggarwal v. State (NCT of Delhi)",
@@ -5245,7 +5317,11 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Lt.%20Col.%20Nitisha%20v.%20Union%20of%20India",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "लेफ्टिनेंट कर्नल नितिशा बनाम भारत संघ"
+      "caseNameHi": "लेफ्टिनेंट कर्नल नितिशा बनाम भारत संघ",
+      "sections": [
+        "ART 14",
+        "ART 15"
+      ]
     },
     {
       "caseName": "Newtech Promoters & Developers Pvt. Ltd. v. State of U.P.",
@@ -5296,7 +5372,12 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=S.+Sushma+v.+Commissioner+of+Police",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "एस. सुषमा बनाम पुलिस आयुक्त"
+      "caseNameHi": "एस. सुषमा बनाम पुलिस आयुक्त",
+      "sections": [
+        "ART 14",
+        "ART 15",
+        "ART 21"
+      ]
     },
     {
       "caseName": "Siddharth v. State of Uttar Pradesh",
@@ -5403,7 +5484,11 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Janhit%20Abhiyan%20v.%20Union%20of%20India",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "जनहित अभियान बनाम भारत संघ"
+      "caseNameHi": "जनहित अभियान बनाम भारत संघ",
+      "sections": [
+        "ART 15",
+        "ART 16"
+      ]
     },
     {
       "caseName": "Kahkashan Kausar @ Sonam v. State of Bihar",
@@ -5459,7 +5544,11 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Resham+v.+State+of+Karnataka+hijab",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "रेशम बनाम कर्नाटक राज्य"
+      "caseNameHi": "रेशम बनाम कर्नाटक राज्य",
+      "sections": [
+        "ART 19",
+        "ART 25"
+      ]
     },
     {
       "caseName": "S.G. Vombatkere v. Union of India",
@@ -5593,7 +5682,10 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Anoop%20Baranwal%20v.%20Union%20of%20India",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "अनूप बरनवाल बनाम भारत संघ"
+      "caseNameHi": "अनूप बरनवाल बनाम भारत संघ",
+      "sections": [
+        "ART 324"
+      ]
     },
     {
       "caseName": "In Re: Article 370 of the Constitution",
@@ -5762,7 +5854,13 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=Supriyo%20v.%20Union%20of%20India",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "सुप्रियो उर्फ सुप्रिया चक्रवर्ती बनाम भारत संघ"
+      "caseNameHi": "सुप्रियो उर्फ सुप्रिया चक्रवर्ती बनाम भारत संघ",
+      "sections": [
+        "ART 14",
+        "ART 15",
+        "ART 19",
+        "ART 21"
+      ]
     },
     {
       "caseName": "Vishal Chelani v. Debashis Nanda",
@@ -6074,7 +6172,13 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=State%20of%20Punjab%20v.%20Davinder%20Singh",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "पंजाब राज्य बनाम दविंदर सिंह"
+      "caseNameHi": "पंजाब राज्य बनाम दविंदर सिंह",
+      "sections": [
+        "ART 14",
+        "ART 15",
+        "ART 16",
+        "ART 341"
+      ]
     },
     {
       "caseName": "Sukanya Shantha v. Union of India",
@@ -6167,7 +6271,12 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=In%20Re%20Assent%20Withholding%20or%20Reservation%20of%20Bills%20Governor%20President",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "इन रे: राज्यपाल और भारत के राष्ट्रपति द्वारा विधेयकों पर अनुमति, अनुमति रोकना या आरक्षण"
+      "caseNameHi": "इन रे: राज्यपाल और भारत के राष्ट्रपति द्वारा विधेयकों पर अनुमति, अनुमति रोकना या आरक्षण",
+      "sections": [
+        "ART 143",
+        "ART 200",
+        "ART 201"
+      ]
     },
     {
       "caseName": "Madras Bar Association v. Union of India",
@@ -8600,7 +8709,13 @@
         "en": "Categorised the factors relevant to granting remission to life convicts and held that remission cannot be claimed as a matter of right.",
         "hi": "न्यायालय ने आजीवन कारावास के दोषियों को दण्डमुक्ति (परिहार) प्रदान करने से संबंधित कारकों को वर्गीकृत किया। साथ ही यह अभिनिर्धारित किया कि दण्डमुक्ति का दावा अधिकार के रूप में नहीं किया जा सकता।"
       },
-      "year": 2013
+      "year": 2013,
+      "sections": [
+        "IPC 302",
+        "BNS 103",
+        "IPC 307",
+        "BNS 109"
+      ]
     },
     {
       "caseName": "Orissa Mining Corporation Ltd. v. Ministry of Environment & Forests",
@@ -9578,7 +9693,10 @@
         "en": "Daughters alive on 9.9.2005 are coparceners entitled to equal shares even though their father died in 2001, and the preliminary decree must be modified to give them their share.",
         "hi": "9.9.2005 को जीवित पुत्रियाँ सहदायिक हैं और समान अंश की हकदार हैं, भले ही उनके पिता की मृत्यु 2001 में हुई हो, और उन्हें उनका अंश देने हेतु प्रारम्भिक डिक्री संशोधित की जानी चाहिए।"
       },
-      "year": 2018
+      "year": 2018,
+      "sections": [
+        "Hindu Succession Act 6"
+      ]
     },
     {
       "caseName": "Lok Prahari v. Union of India",
@@ -9839,7 +9957,15 @@
         "en": "Took serious note of the frequent misuse of the U.P. Prevention of Cow Slaughter Act against innocent persons, observing that any recovered meat is routinely shown as beef without forensic verification.",
         "hi": "न्यायालय ने निर्दोष व्यक्तियों के विरुद्ध उ.प्र. गोवध निवारण अधिनियम के बार-बार दुरुपयोग पर गम्भीर चिंता व्यक्त की और टिप्पणी की कि बरामद मांस को बिना फोरेंसिक सत्यापन के नियमित रूप से गोमांस बताया जाता है।"
       },
-      "year": 2020
+      "year": 2020,
+      "sections": [
+        "UP Cow Slaughter Act 3",
+        "UP Cow Slaughter Act 5",
+        "UP Cow Slaughter Act 8",
+        "CRPC 439",
+        "BNSS 483",
+        "ART 21"
+      ]
     },
     {
       "caseName": "Javed Siddiqui v. State of U.P.",
@@ -9855,7 +9981,12 @@
         "en": "Quashed an NSA detention because the detenu's representation was not placed before the Advisory Board in time, holding that preventive detention laws conferring extraordinary power must be strictly construed and exercised with extreme care.",
         "hi": "न्यायालय ने राष्ट्रीय सुरक्षा अधिनियम (NSA) के अंतर्गत निरोध आदेश को निरस्त कर दिया, क्योंकि निरुद्ध व्यक्ति का अभ्यावेदन समय पर सलाहकार बोर्ड के समक्ष नहीं रखा गया था। अभिनिर्धारित किया गया कि निवारक निरोध जैसी असाधारण शक्ति प्रदान करने वाले कानूनों का सख्त अर्थान्वयन होना चाहिए और उनका प्रयोग अत्यंत सावधानी से किया जाना चाहिए।"
       },
-      "year": 2020
+      "year": 2020,
+      "sections": [
+        "NSA 3",
+        "ART 21",
+        "ART 226"
+      ]
     },
     {
       "caseName": "Rhea Chakraborty v. Union of India",
@@ -12140,6 +12271,599 @@
         "hi": "जनरल वैद्य हत्याकांड। विचारण के दौरान अभियुक्त के स्वीकारोक्ति-युक्त बयान पर — धारा 313 दं.प्र.सं. के बयान सहित — दोषसिद्धि आधारित हो सकती है: हालाँकि ऐसा बयान सख्त अर्थ में साक्ष्य नहीं है, फिर भी उस पर विचार किया जा सकता है। सुखदेव सिंह और हरजिंदर सिंह की दोषसिद्धियाँ बरकरार रखी गईं, जबकि व्यापक साज़िश का आरोप प्रमाण के अभाव में नहीं टिका।"
       },
       "year": 1992
+    },
+    {
+      "caseName": "Vikas v. State of U.P.",
+      "caseNameHi": "विकास बनाम उत्तर प्रदेश राज्य",
+      "citation": "2025:AHC:192276",
+      "court": {
+        "en": "Allahabad High Court",
+        "hi": "इलाहाबाद उच्च न्यायालय"
+      },
+      "year": 2025,
+      "summary": {
+        "en": "The Court allowed a second bail application in a dowry-death case where the accused had spent over two years in custody with no criminal history. It held that prolonged pre-trial detention, without a concluded trial in sight, offends personal liberty under Article 21.",
+        "hi": "दहेज-मृत्यु के मामले में न्यायालय ने दूसरी जमानत याचिका स्वीकार की, क्योंकि अभियुक्त दो वर्ष से अधिक समय से बिना आपराधिक इतिहास के हिरासत में था। न्यायालय ने कहा कि बिना सुनवाई पूरी हुए लंबी हिरासत अनुच्छेद 21 के तहत व्यक्तिगत स्वतंत्रता का उल्लंघन है।"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/130805713/",
+      "sourceName": "Indian Kanoon",
+      "sections": [
+        "IPC 302",
+        "BNS 103",
+        "CRPC 439",
+        "BNSS 483",
+        "ART 21"
+      ]
+    },
+    {
+      "caseName": "Ashish Garg v. State of U.P.",
+      "caseNameHi": "आशीष गर्ग बनाम उत्तर प्रदेश राज्य",
+      "citation": "2025:AHC:169032",
+      "court": {
+        "en": "Allahabad High Court",
+        "hi": "इलाहाबाद उच्च न्यायालय"
+      },
+      "year": 2025,
+      "summary": {
+        "en": "Bail was granted on the ground of parity after a co-accused facing identical allegations had already been released. The Court noted the applicant had been in jail since May 2025 and was entitled to the same treatment as his co-accused.",
+        "hi": "समान आरोपों वाले सह-अभियुक्त को पहले ही जमानत मिल चुकी थी, इसलिए समता के आधार पर याचिकाकर्ता को भी जमानत दी गई। न्यायालय ने ध्यान दिया कि याचिकाकर्ता मई 2025 से हिरासत में था और सह-अभियुक्त जैसा ही व्यवहार पाने का हकदार है।"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/110520928/",
+      "sourceName": "Indian Kanoon",
+      "sections": [
+        "IPC 420",
+        "BNS 318",
+        "IPC 467",
+        "BNS 338",
+        "IT 66D",
+        "CRPC 439",
+        "BNSS 483"
+      ]
+    },
+    {
+      "caseName": "Kuldeep Singh v. State of U.P.",
+      "caseNameHi": "कुलदीप सिंह बनाम उत्तर प्रदेश राज्य",
+      "citation": "2025:AHC:57300",
+      "court": {
+        "en": "Allahabad High Court",
+        "hi": "इलाहाबाद उच्च न्यायालय"
+      },
+      "year": 2025,
+      "summary": {
+        "en": "In a second bail plea under the NDPS Act involving a large alleged recovery of ganja, the Court granted bail noting that a co-accused had already been enlarged on bail. It weighed the rigours of Section 37 against the applicant's long incarceration and the principle of parity.",
+        "hi": "एनडीपीएस अधिनियम के तहत गांजे की बड़ी बरामदगी वाले मामले में दूसरी जमानत याचिका पर न्यायालय ने जमानत दी, क्योंकि सह-अभियुक्त पहले ही जमानत पर था। न्यायालय ने धारा 37 की कठोरता के साथ लंबी हिरासत और समता के सिद्धांत को तौला।"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/23370184/",
+      "sourceName": "Indian Kanoon",
+      "sections": [
+        "NDPS 20",
+        "NDPS 37",
+        "CRPC 439",
+        "BNSS 483",
+        "ART 21"
+      ]
+    },
+    {
+      "caseName": "Ravi Tiwari v. State of U.P.",
+      "caseNameHi": "रवि तिवारी बनाम उत्तर प्रदेश राज्य",
+      "citation": "2025:AHC-LKO:23639",
+      "court": {
+        "en": "Allahabad High Court",
+        "hi": "इलाहाबाद उच्च न्यायालय"
+      },
+      "year": 2025,
+      "summary": {
+        "en": "Bail was granted under the U.P. Gangsters Act after the Court examined whether the gang-chart disclosed a threat to public order or merely to law and order. Finding that the applicant had already secured bail in one of the chart cases, the Court extended the relief.",
+        "hi": "उत्तर प्रदेश गैंगस्टर अधिनियम के तहत जमानत देते हुए न्यायालय ने परखा कि गैंग-चार्ट से लोक व्यवस्था को खतरा है या केवल विधि-व्यवस्था को। एक चार्ट-मामले में पहले से जमानत मिलने के आधार पर न्यायालय ने यह राहत भी दी।"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/175622843/",
+      "sourceName": "Indian Kanoon",
+      "sections": [
+        "UP Gangsters Act 3",
+        "CRPC 439",
+        "BNSS 483"
+      ]
+    },
+    {
+      "caseName": "Raghvendra Singh v. State of U.P.",
+      "caseNameHi": "राघवेंद्र सिंह बनाम उत्तर प्रदेश राज्य",
+      "citation": "2025:AHC:96567",
+      "court": {
+        "en": "Allahabad High Court",
+        "hi": "इलाहाबाद उच्च न्यायालय"
+      },
+      "year": 2025,
+      "summary": {
+        "en": "The Court granted anticipatory bail in a case involving organised-crime and cheating allegations under the new criminal codes. It protected the applicant from arrest while directing cooperation with the investigation and compliance with bail conditions.",
+        "hi": "नए आपराधिक कानूनों के तहत संगठित अपराध और धोखाधड़ी के आरोपों वाले मामले में न्यायालय ने अग्रिम जमानत दी। गिरफ्तारी से संरक्षण देते हुए न्यायालय ने जांच में सहयोग और जमानत शर्तों के पालन का निर्देश दिया।"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/50928424/",
+      "sourceName": "Indian Kanoon",
+      "sections": [
+        "CRPC 438",
+        "BNSS 482",
+        "BNS 111",
+        "BNS 316",
+        "BNS 318",
+        "BNS 338"
+      ]
+    },
+    {
+      "caseName": "Firdaus @ Shadab Akhtar v. State of U.P.",
+      "caseNameHi": "फिरदौस उर्फ शादाब अख्तर बनाम उत्तर प्रदेश राज्य",
+      "citation": "2025:AHC-LKO:20505",
+      "court": {
+        "en": "Allahabad High Court",
+        "hi": "इलाहाबाद उच्च न्यायालय"
+      },
+      "year": 2025,
+      "summary": {
+        "en": "Bail was allowed in an attempt-to-murder case, with the Court holding that criminal history alone cannot be a ground to refuse bail in every case. Relying on the Supreme Court's guidance in Sanjay Chandra, it balanced the gravity of the charge against the applicant's right to liberty.",
+        "hi": "हत्या के प्रयास के मामले में जमानत देते हुए न्यायालय ने कहा कि केवल आपराधिक इतिहास हर मामले में जमानत से इनकार का आधार नहीं हो सकता। संजय चंद्रा मामले में उच्चतम न्यायालय के मार्गदर्शन पर भरोसा करते हुए आरोप की गंभीरता और स्वतंत्रता के अधिकार में संतुलन किया गया।"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/163106416/",
+      "sourceName": "Indian Kanoon",
+      "sections": [
+        "IPC 307",
+        "BNS 109",
+        "CRPC 439",
+        "BNSS 483"
+      ]
+    },
+    {
+      "caseName": "Uday Prakash and Another v. State of U.P.",
+      "caseNameHi": "उदय प्रकाश और एक अन्य बनाम उत्तर प्रदेश राज्य",
+      "citation": "2025:AHC-LKO:40406",
+      "court": {
+        "en": "Allahabad High Court",
+        "hi": "इलाहाबाद उच्च न्यायालय"
+      },
+      "year": 2025,
+      "summary": {
+        "en": "Interim anticipatory bail was granted in a cheating and personation case, shielding the applicants from arrest at the initial stage. The Court kept the protection time-bound, leaving the final decision on the anticipatory bail plea to be taken after hearing both sides.",
+        "hi": "धोखाधड़ी और प्रतिरूपण के मामले में अंतरिम अग्रिम जमानत देकर आवेदकों को शुरुआती चरण में गिरफ्तारी से बचाया गया। न्यायालय ने यह संरक्षण समयबद्ध रखा और अंतिम निर्णय दोनों पक्षों को सुनने के बाद लेने को कहा।"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/129446629/",
+      "sourceName": "Indian Kanoon",
+      "sections": [
+        "CRPC 438",
+        "BNSS 482",
+        "IPC 419",
+        "BNS 319",
+        "IPC 420",
+        "BNS 318"
+      ]
+    },
+    {
+      "caseName": "Ranjan Pradhan v. State of U.P.",
+      "caseNameHi": "रंजन प्रधान बनाम उत्तर प्रदेश राज्य",
+      "citation": "2025:AHC:171167",
+      "court": {
+        "en": "Allahabad High Court",
+        "hi": "इलाहाबाद उच्च न्यायालय"
+      },
+      "year": 2025,
+      "summary": {
+        "en": "Bail was granted in an NDPS case after the Court found that leaves of the cannabis plant fall outside the statutory definition of ganja. Since the recovered material did not qualify as ganja under the Act, the stringent bail rigours of Section 37 were held inapplicable.",
+        "hi": "एनडीपीएस मामले में जमानत देते हुए न्यायालय ने पाया कि भांग के पौधे की पत्तियां गांजे की कानूनी परिभाषा से बाहर हैं। बरामद सामग्री अधिनियम के तहत गांजा न होने के कारण धारा 37 की कठोर जमानत-शर्तें लागू नहीं मानी गईं।"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/157658033/",
+      "sourceName": "Indian Kanoon",
+      "sections": [
+        "NDPS 20",
+        "NDPS 37",
+        "CRPC 439",
+        "BNSS 483"
+      ]
+    },
+    {
+      "caseName": "John Kofie v. State of U.P.",
+      "caseNameHi": "जॉन कोफ़ी बनाम उत्तर प्रदेश राज्य",
+      "citation": "2025:AHC:43136",
+      "court": {
+        "en": "Allahabad High Court",
+        "hi": "इलाहाबाद उच्च न्यायालय"
+      },
+      "year": 2025,
+      "summary": {
+        "en": "Bail was granted in a cocaine-recovery case where the Court found prima facie non-compliance with the mandatory search safeguards of Section 50 of the NDPS Act. The failure to follow the prescribed procedure weakened the prosecution's case at the bail stage.",
+        "hi": "कोकीन बरामदगी के मामले में जमानत दी गई, क्योंकि न्यायालय को एनडीपीएस अधिनियम की धारा 50 की अनिवार्य तलाशी-सुरक्षा का प्रथम दृष्टया उल्लंघन दिखा। निर्धारित प्रक्रिया का पालन न होने से जमानत के चरण में अभियोजन का पक्ष कमजोर हुआ।"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/128121940/",
+      "sourceName": "Indian Kanoon",
+      "sections": [
+        "NDPS 21",
+        "NDPS 37",
+        "NDPS 50",
+        "CRPC 439",
+        "BNSS 483",
+        "ART 21"
+      ]
+    },
+    {
+      "caseName": "Sandeep Singh v. State of U.P. and Another",
+      "caseNameHi": "संदीप सिंह बनाम उत्तर प्रदेश राज्य और एक अन्य",
+      "citation": "2025:AHC:181194",
+      "court": {
+        "en": "Allahabad High Court",
+        "hi": "इलाहाबाद उच्च न्यायालय"
+      },
+      "year": 2025,
+      "summary": {
+        "en": "The entire criminal proceeding was quashed after the parties reached a genuine compromise, which the trial court had duly verified. The Court held that continuing the prosecution would serve no purpose once the dispute stood fully settled between the parties.",
+        "hi": "पक्षों के बीच वास्तविक समझौता होने और विचारण न्यायालय द्वारा उसके सत्यापन के बाद पूरी आपराधिक कार्यवाही रद्द कर दी गई। न्यायालय ने कहा कि विवाद पूरी तरह सुलझ जाने के बाद अभियोजन जारी रखने का कोई औचित्य नहीं रहता।"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/64383731/",
+      "sourceName": "Indian Kanoon",
+      "sections": [
+        "CRPC 482",
+        "BNSS 528",
+        "IPC 457",
+        "IPC 380",
+        "BNS 305",
+        "IPC 511",
+        "BNS 62"
+      ]
+    },
+    {
+      "caseName": "Harkesh Bahadur Singh and 4 Others v. State of U.P.",
+      "caseNameHi": "हरकेश बहादुर सिंह और 4 अन्य बनाम उत्तर प्रदेश राज्य",
+      "citation": "2025:AHC-LKO:42952",
+      "court": {
+        "en": "Allahabad High Court",
+        "hi": "इलाहाबाद उच्च न्यायालय"
+      },
+      "year": 2025,
+      "summary": {
+        "en": "Proceedings under the SC/ST Act and the Penal Code were quashed on the basis of a compromise between the parties. Following the Supreme Court's approach in Ramawatar, the Court held that where the offence is essentially private and not driven by caste animus, quashing on compromise is permissible.",
+        "hi": "पक्षों के समझौते के आधार पर अनुसूचित जाति/जनजाति अधिनियम और दंड संहिता के तहत कार्यवाही रद्द की गई। रामावतार मामले में उच्चतम न्यायालय के दृष्टिकोण के अनुसार, जहां अपराध मूलतः निजी हो और जातिगत द्वेष से प्रेरित न हो, वहां समझौते पर कार्यवाही रद्द की जा सकती है।"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/83421725/",
+      "sourceName": "Indian Kanoon",
+      "sections": [
+        "CRPC 482",
+        "BNSS 528",
+        "IPC 147",
+        "BNS 189",
+        "IPC 504",
+        "BNS 352",
+        "IPC 506",
+        "BNS 351",
+        "SC/ST Act 3(1)",
+        "SC/ST Act 3(2)"
+      ]
+    },
+    {
+      "caseName": "Sri Ram Yadav v. State of U.P. and Another",
+      "caseNameHi": "श्री राम यादव बनाम उत्तर प्रदेश राज्य और एक अन्य",
+      "citation": "2025:AHC:169758",
+      "court": {
+        "en": "Allahabad High Court",
+        "hi": "इलाहाबाद उच्च न्यायालय"
+      },
+      "year": 2025,
+      "summary": {
+        "en": "A bail appeal under Section 14-A(2) of the SC/ST Act was allowed, granting bail to an accused in custody since April 2025. The Court examined the allegations and the period of incarceration before concluding that continued detention was not justified.",
+        "hi": "अनुसूचित जाति/जनजाति अधिनियम की धारा 14-क(2) के तहत जमानत अपील स्वीकार करते हुए अप्रैल 2025 से हिरासत में अभियुक्त को जमानत दी गई। न्यायालय ने आरोपों और हिरासत की अवधि पर विचार करके पाया कि हिरासत जारी रखना उचित नहीं है।"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/26361494/",
+      "sourceName": "Indian Kanoon",
+      "sections": [
+        "SC/ST Act 14-A",
+        "SC/ST Act 3(1)",
+        "SC/ST Act 3(2)",
+        "BNS 74",
+        "BNS 352",
+        "BNS 351"
+      ]
+    },
+    {
+      "caseName": "Amar Goswami v. State of U.P. and Another",
+      "caseNameHi": "अमर गोस्वामी बनाम उत्तर प्रदेश राज्य और एक अन्य",
+      "citation": "2025:AHC:204927",
+      "court": {
+        "en": "Allahabad High Court",
+        "hi": "इलाहाबाद उच्च न्यायालय"
+      },
+      "year": 2025,
+      "summary": {
+        "en": "A bail appeal under Section 14-A(2) of the SC/ST Act was allowed in a murder case carrying caste-atrocity charges. The Court assessed the material on record and granted bail, balancing the seriousness of the allegations against the accused's right to liberty.",
+        "hi": "जातिगत अत्याचार के आरोपों वाले हत्या के मामले में अनुसूचित जाति/जनजाति अधिनियम की धारा 14-क(2) के तहत जमानत अपील स्वीकार की गई। न्यायालय ने रिकॉर्ड की सामग्री का आकलन करके आरोपों की गंभीरता और स्वतंत्रता के अधिकार में संतुलन करते हुए जमानत दी।"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/46809768/",
+      "sourceName": "Indian Kanoon",
+      "sections": [
+        "IPC 302",
+        "BNS 103",
+        "SC/ST Act 3(2)"
+      ]
+    },
+    {
+      "caseName": "X-Juvenile v. State of U.P. and 3 Others",
+      "caseNameHi": "एक्स-किशोर बनाम उत्तर प्रदेश राज्य और 3 अन्य",
+      "citation": "2025:AHC:171344",
+      "court": {
+        "en": "Allahabad High Court",
+        "hi": "इलाहाबाद उच्च न्यायालय"
+      },
+      "year": 2025,
+      "summary": {
+        "en": "A criminal revision by a 17-year-old was allowed, setting aside the orders that had denied him bail. The Court held that the juvenile-justice principle favouring release on bail had not been properly applied, and directed that the child be dealt with under the protective scheme of the JJ Act.",
+        "hi": "17 वर्षीय किशोर की आपराधिक पुनरीक्षण याचिका स्वीकार करते हुए जमानत से इनकार करने वाले आदेश रद्द कर दिए गए। न्यायालय ने कहा कि किशोर न्याय के तहत जमानत के पक्ष में सिद्धांत सही ढंग से लागू नहीं हुआ था, और किशोर के साथ अधिनियम की संरक्षणात्मक व्यवस्था के अनुसार व्यवहार का निर्देश दिया।"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/31804859/",
+      "sourceName": "Indian Kanoon",
+      "sections": [
+        "POCSO 5",
+        "POCSO 6",
+        "JJ Act 12",
+        "BNS 137",
+        "BNS 115",
+        "BNS 351"
+      ]
+    },
+    {
+      "caseName": "Juvenile of FIR No. 0253/2024 v. State of U.P.",
+      "caseNameHi": "एफ़आईआर संख्या 0253/2024 का किशोर बनाम उत्तर प्रदेश राज्य",
+      "citation": "2025:AHC-LKO:58643",
+      "court": {
+        "en": "Allahabad High Court",
+        "hi": "इलाहाबाद उच्च न्यायालय"
+      },
+      "year": 2025,
+      "summary": {
+        "en": "A juvenile's revision under Section 102 of the JJ Act succeeded, granting bail to a 15-year-old in custody since September 2024. The Court noted that a co-accused had already been released on bail and that continued detention of the child was not warranted.",
+        "hi": "किशोर न्याय अधिनियम की धारा 102 के तहत किशोर की पुनरीक्षण याचिका सफल हुई और सितंबर 2024 से हिरासत में 15 वर्षीय किशोर को जमानत मिली। न्यायालय ने ध्यान दिया कि सह-अभियुक्त पहले ही जमानत पर था और बच्चे की हिरासत जारी रखना उचित नहीं था।"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/117168938/",
+      "sourceName": "Indian Kanoon",
+      "sections": [
+        "JJ Act 102",
+        "BNS 115",
+        "BNS 87",
+        "BNS 70"
+      ]
+    },
+    {
+      "caseName": "Amlesh Kumar v. State of Bihar",
+      "caseNameHi": "अमलेश कुमार बनाम बिहार राज्य",
+      "citation": "2025 INSC 810",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "year": 2025,
+      "summary": {
+        "en": "The Supreme Court held that forcing an accused to undergo narco-analysis violates the protections against self-incrimination and the right to personal liberty. An accused may voluntarily seek such a test at the defence stage, but its results alone can never be the sole basis of conviction.",
+        "hi": "उच्चतम न्यायालय ने कहा कि अभियुक्त पर जबरन नार्को-विश्लेषण कराना आत्म-अभियोजन से संरक्षण और व्यक्तिगत स्वतंत्रता के अधिकार का उल्लंघन है। अभियुक्त बचाव के चरण में स्वेच्छा से ऐसा परीक्षण मांग सकता है, पर उसके परिणाम अकेले दोषसिद्धि का एकमात्र आधार कभी नहीं हो सकते।"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/85121834/",
+      "sourceName": "Indian Kanoon",
+      "sections": [
+        "ART 20",
+        "ART 21",
+        "IEA 27"
+      ]
+    },
+    {
+      "caseName": "Sk. Md. Anisur Rahaman v. State of West Bengal",
+      "caseNameHi": "शेख मोहम्मद अनीसुर रहमान बनाम पश्चिम बंगाल राज्य",
+      "citation": "2025 INSC 1360",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "year": 2025,
+      "summary": {
+        "en": "The Court refused to dilute a bail condition confining the accused to Kolkata and rejected the plea to cancel his bail, stressing that concluded verdicts attain finality. It reaffirmed that once a bail order is passed, its conditions cannot be reopened casually at a later stage.",
+        "hi": "न्यायालय ने अभियुक्त को कोलकाता तक सीमित रखने वाली जमानत शर्त में ढील देने से इनकार किया और जमानत रद्द करने की मांग भी खारिज की, यह कहते हुए कि तय फैसलों को अंतिमता प्राप्त होती है। न्यायालय ने दोहराया कि जमानत आदेश पारित होने के बाद उसकी शर्तों को बाद में यूं ही नहीं खोला जा सकता।"
+      },
+      "pdfUrl": "https://indiankanoon.org/search/?formInput=Sk.+Md.+Anisur+Rahaman+v.+State+of+West+Bengal",
+      "sourceName": "Indian Kanoon",
+      "sections": [
+        "IPC 302",
+        "BNS 103",
+        "IPC 120B",
+        "BNS 61",
+        "ART 141"
+      ]
+    },
+    {
+      "caseName": "Musheer Alam v. State of U.P.",
+      "caseNameHi": "मुशीर आलम बनाम उत्तर प्रदेश राज्य",
+      "citation": "2025 LiveLaw (SC) 83",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "year": 2025,
+      "summary": {
+        "en": "The Court deprecated the arrest of an accused after the chargesheet had been filed and cognizance taken, calling such arrest unusual and senseless where the accused had never been arrested during investigation. It directed that the accused appear before the trial court and furnish bail.",
+        "hi": "न्यायालय ने आरोपपत्र दाखिल होने और संज्ञान लिए जाने के बाद अभियुक्त की गिरफ्तारी को असामान्य और निरर्थक बताते हुए उसकी निंदा की, क्योंकि जांच के दौरान अभियुक्त कभी गिरफ्तार नहीं हुआ था। न्यायालय ने निर्देश दिया कि अभियुक्त विचारण न्यायालय में उपस्थित होकर जमानत दे।"
+      },
+      "pdfUrl": "https://indiankanoon.org/search/?formInput=Musheer+Alam+v.+State+of+U.P.",
+      "sourceName": "Indian Kanoon",
+      "sections": [
+        "CRPC 438",
+        "BNSS 482",
+        "PC 13",
+        "ART 21"
+      ]
+    },
+    {
+      "caseName": "Ritesh Kumar v. State of Bihar",
+      "caseNameHi": "रितेश कुमार बनाम बिहार राज्य",
+      "citation": "2025 LiveLaw (SC) 326",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "year": 2025,
+      "summary": {
+        "en": "The Court held that an anticipatory bail order is composite, and a condition making bail automatically lapse upon filing of the chargesheet is improper. The trial court must decide bail afresh on the material before it, rather than treating custody as an automatic consequence.",
+        "hi": "न्यायालय ने कहा कि अग्रिम जमानत का आदेश समग्र होता है, और आरोपपत्र दाखिल होते ही जमानत स्वतः समाप्त होने की शर्त अनुचित है। विचारण न्यायालय को अपने सामने की सामग्री पर जमानत नए सिरे से तय करनी होगी, न कि हिरासत को स्वतः परिणाम मानना होगा।"
+      },
+      "pdfUrl": "https://indiankanoon.org/search/?formInput=Ritesh+Kumar+v.+State+of+Bihar",
+      "sourceName": "Indian Kanoon",
+      "sections": [
+        "CRPC 438",
+        "BNSS 482"
+      ]
+    },
+    {
+      "caseName": "Directorate of Enforcement v. Subhash Sharma",
+      "caseNameHi": "प्रवर्तन निदेशालय बनाम सुभाष शर्मा",
+      "citation": "2025 INSC 141",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "year": 2025,
+      "summary": {
+        "en": "The Enforcement Directorate's appeal failed after the Court found the arrest vitiated because the accused had not been produced before a Magistrate within twenty-four hours. Once an arrest is illegal, bail cannot be refused merely because the twin conditions of the PMLA remain unsatisfied.",
+        "hi": "प्रवर्तन निदेशालय की अपील खारिज हुई, क्योंकि न्यायालय ने पाया कि अभियुक्त को चौबीस घंटे में मजिस्ट्रेट के सामने पेश न किए जाने से गिरफ्तारी दूषित हो गई। गिरफ्तारी अवैध होने पर केवल इसलिए जमानत से इनकार नहीं किया जा सकता कि धन-शोधन निवारण अधिनियम की दोहरी शर्तें पूरी नहीं हुईं।"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/50098986/",
+      "sourceName": "Indian Kanoon",
+      "sections": [
+        "ART 21",
+        "ART 22",
+        "CRPC 57",
+        "BNSS 58",
+        "PMLA 45"
+      ]
+    },
+    {
+      "caseName": "Kiran v. Rajkumar Jivraj Jain",
+      "caseNameHi": "किरण बनाम राजकुमार जीवराज जैन",
+      "citation": "2025 INSC 1067",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "year": 2025,
+      "summary": {
+        "en": "A three-judge Bench held that the bar on anticipatory bail under the SC/ST Act is near-absolute where the complaint discloses a prima facie caste-atrocity offence. The exception survives only where the FIR, taken at face value, discloses no offence under the Act at all.",
+        "hi": "तीन न्यायाधीशों की पीठ ने कहा कि अनुसूचित जाति/जनजाति अधिनियम के तहत अग्रिम जमानत पर रोक लगभग पूर्ण है, जहां शिकायत में प्रथम दृष्टया जातिगत अत्याचार का अपराध बनता हो। अपवाद केवल तब बचता है जब प्राथमिकी को ज्यों का त्यों लेने पर अधिनियम के तहत कोई अपराध ही न बनता हो।"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/23098390/",
+      "sourceName": "Indian Kanoon",
+      "sections": [
+        "SC/ST Act 3(1)",
+        "SC/ST Act 18",
+        "CRPC 438",
+        "BNSS 482"
+      ]
+    },
+    {
+      "caseName": "All India Judges Association v. Union of India",
+      "caseNameHi": "अखिल भारतीय न्यायाधीश संघ बनाम भारत संघ",
+      "citation": "",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "year": 2025,
+      "summary": {
+        "en": "The Court restored three years' practice at the Bar as a mandatory eligibility condition for entry-level civil judges, applying the rule prospectively. Practice is to be counted from provisional enrolment, and the period spent as a law clerk is also to count.",
+        "hi": "न्यायालय ने प्रवेश-स्तर के सिविल न्यायाधीशों के लिए बार में तीन वर्ष की वकालत को अनिवार्य पात्रता शर्त के रूप में बहाल किया, और यह नियम भविष्य की ओर से लागू होगा। वकालत की गणना अस्थायी नामांकन से होगी और लॉ क्लर्क के रूप में बिताई अवधि भी गिनी जाएगी।"
+      },
+      "pdfUrl": "https://indiankanoon.org/search/?formInput=All+India+Judges+Association+v.+Union+of+India",
+      "sourceName": "Indian Kanoon",
+      "sections": [
+        "ART 234"
+      ]
+    },
+    {
+      "caseName": "Gursewak Singh v. State of Punjab",
+      "caseNameHi": "गुरसेवक सिंह बनाम पंजाब राज्य",
+      "citation": "2025 LiveLaw (SC) 873",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "year": 2025,
+      "summary": {
+        "en": "The Court granted anticipatory bail to a patwari facing corruption charges, holding that four years without arrest itself weighed in favour of bail. It described the High Court's order — which questioned the police instead of deciding the bail plea — as cryptic and unusual.",
+        "hi": "न्यायालय ने भ्रष्टाचार के आरोपों का सामना कर रहे पटवारी को अग्रिम जमानत दी, यह कहते हुए कि चार वर्ष तक गिरफ्तारी न होना स्वयं जमानत के पक्ष में जाता है। उच्च न्यायालय के आदेश को — जिसमें जमानत याचिका तय करने के बजाय पुलिस से सवाल किए गए थे — गूढ़ और असामान्य बताया गया।"
+      },
+      "pdfUrl": "https://indiankanoon.org/search/?formInput=Gursewak+Singh+v.+State+of+Punjab",
+      "sourceName": "Indian Kanoon",
+      "sections": [
+        "CRPC 438",
+        "BNSS 482",
+        "IPC 120B",
+        "BNS 61",
+        "PC 7",
+        "PC 7A"
+      ]
+    },
+    {
+      "caseName": "In Re: Policy Strategy for Grant of Bail",
+      "caseNameHi": "इन री: जमानत देने की नीतिगत रणनीति",
+      "citation": "2025 INSC 239",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "year": 2025,
+      "summary": {
+        "en": "States and Union Territories must consider eligible convicts for premature release under the remission power even without an application, wherever a remission policy exists. Conditions imposed must be reasonable and non-oppressive, and cancellation requires a hearing with recorded reasons.",
+        "hi": "राज्यों और केंद्र शासित प्रदेशों को जहां क्षमा-नीति मौजूद हो, वहां पात्र दोषियों पर बिना आवेदन के भी समय-पूर्व रिहाई के लिए विचार करना होगा। लगाई गई शर्तें उचित और गैर-उत्पीड़क होनी चाहिए, और रद्द करने के लिए सुनवाई तथा कारणों का लेखा आवश्यक है।"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/155126286/",
+      "sourceName": "Indian Kanoon",
+      "sections": [
+        "CRPC 432",
+        "BNSS 473",
+        "ART 14",
+        "ART 21"
+      ]
+    },
+    {
+      "caseName": "S.C. Garg v. State of U.P.",
+      "caseNameHi": "एस.सी. गर्ग बनाम उत्तर प्रदेश राज्य",
+      "citation": "2025 INSC 493",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "year": 2025,
+      "summary": {
+        "en": "The Court applied res judicata to criminal proceedings, holding that findings in a cheque-dishonour case barred a later cheating FIR built on the opposite assertion. It also ruled that a company must be arraigned before its officers can be prosecuted for its acts, and quashed the FIR.",
+        "hi": "न्यायालय ने आपराधिक कार्यवाही पर प्राङ्न्याय लागू करते हुए कहा कि चेक-अनादर मामले के निष्कर्ष विपरीत दावे पर बने बाद के धोखाधड़ी के प्राथमिकी को रोकते हैं। यह भी कहा गया कि कंपनी के कृत्यों के लिए उसके अधिकारियों पर अभियोजन से पहले कंपनी को पक्षकार बनाना होगा, और प्राथमिकी रद्द की गई।"
+      },
+      "pdfUrl": "https://indiankanoon.org/search/?formInput=S.C.+Garg+v.+State+of+U.P.",
+      "sourceName": "Indian Kanoon",
+      "sections": [
+        "IPC 420",
+        "BNS 318",
+        "CRPC 482",
+        "BNSS 528",
+        "NI 138"
+      ]
+    },
+    {
+      "caseName": "K.P. Tamilmaran v. State (by Deputy Superintendent of Police)",
+      "caseNameHi": "के.पी. तमिलमारण बनाम राज्य",
+      "citation": "2025 LiveLaw (SC) 493",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "year": 2025,
+      "summary": {
+        "en": "The appeals in the Kannagi–Murugesan honour-killing case were dismissed and the life sentences confirmed, while the appeals of two policemen convicted of fabricating evidence were also rejected. The Court directed compensation of five lakh rupees to the victim's father and stepmother.",
+        "hi": "कन्नगी-मुरुगेसन ऑनर किलिंग मामले की अपीलें खारिज कर आजीवन कारावास की सजाएं बरकरार रखी गईं, और साक्ष्य गढ़ने के दोषी दो पुलिसकर्मियों की अपीलें भी खारिज हुईं। न्यायालय ने पीड़ित के पिता और सौतेली मां को पांच लाख रुपये मुआवजा देने का निर्देश दिया।"
+      },
+      "pdfUrl": "https://indiankanoon.org/search/?formInput=K.P.+Tamilmaran+v.+State",
+      "sourceName": "Indian Kanoon",
+      "sections": [
+        "IPC 302",
+        "BNS 103",
+        "IPC 120B",
+        "BNS 61"
+      ]
     }
   ]
 }
