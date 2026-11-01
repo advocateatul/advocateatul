@@ -11598,6 +11598,548 @@
         "hi": "विदेशी प्रदाता से तकनीकी परीक्षण पर रिवर्स चार्ज सेवा कर न चुका पाने वाली एक ऑटो-पार्ट्स निर्माता ने कारण-बताओ नोटिस से पहले ही ₹9,87,814 का कर ब्याज सहित स्वेच्छा से चुका दिया था। अधिकरण ने कहा कि नोटिस में कर चोरी के इरादे से कपट, मिलीभगत, जानबूझकर गलत बयान या तथ्य छिपाने का कोई आरोप नहीं था, इसलिए मामला वित्त अधिनियम, 1994 की धारा 73(3) के तहत आता है, जिसमें कोई जुर्माना नहीं लग सकता, अतः धारा 78 का जुर्माना हटा दिया गया। धारा 77 का जुर्माना ₹5,000 तक घटा दिया गया क्योंकि विवाद अवधि वित्त अधिनियम, 2011 से पहले की थी, और अपील आंशिक रूप से स्वीकार की गई।"
       },
       "year": 2016
+    },
+    {
+      "caseName": "State (NCT of Delhi) v. Navjot Sandhu",
+      "caseNameHi": "राज्य (राष्ट्रीय राजधानी क्षेत्र, दिल्ली) बनाम नवजोत संधू",
+      "citation": "(2005) 11 SCC 600",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/1769219/",
+      "sections": [
+        "IPC 121",
+        "BNS 147",
+        "IPC 123",
+        "BNS 149",
+        "IEA 65B",
+        "BSA 63"
+      ],
+      "sourceName": "Indian Kanoon",
+      "summary": {
+        "en": "The 13 December 2001 Parliament attack case. The Court upheld Mohd. Afzal's conviction and death sentence for conspiracy and waging war, acquitted S.A.R. Gilani, and restored Navjot Sandhu's conviction only under IPC 123 for concealing the design to attack Parliament. It also gave the then-leading ruling on admissibility of electronic records, later revisited in Anvar P.V.",
+        "hi": "13 दिसंबर 2001 को संसद पर हुए हमले का मामला। न्यायालय ने मोहम्मद अफ़ज़ल की साज़िश और युद्ध छेड़ने की दोषसिद्धि तथा मृत्युदंड को बरकरार रखा, एस. ए. आर. गिलानी को बरी किया, और नवजोत संधू की दोषसिद्धि केवल धारा 123 IPC (हमले की योजना छिपाने) तक सीमित रखी। इलेक्ट्रॉनिक अभिलेखों की ग्राह्यता पर भी इसने तत्कालीन प्रमुख सिद्धांत दिया, जिस पर बाद में अनवर पी. वी. में पुनर्विचार हुआ।"
+      },
+      "year": 2005
+    },
+    {
+      "caseName": "Vikas Yadav v. State of U.P.",
+      "caseNameHi": "विकास यादव बनाम उत्तर प्रदेश राज्य",
+      "citation": "(2016) 9 SCC 541",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/129750439/",
+      "sections": [
+        "IPC 302",
+        "BNS 103",
+        "IPC 364",
+        "BNS 140",
+        "IPC 201",
+        "BNS 238"
+      ],
+      "sourceName": "Indian Kanoon",
+      "summary": {
+        "en": "The Nitish Katara honour-killing case. The Court upheld a fixed term of 25 years' imprisonment without remission for Vikas Yadav (and 20 years for the co-accused), confirming that courts may impose a fixed term beyond 14 years as a middle path between ordinary life imprisonment and death. The sentence for destroying evidence was directed to run concurrently, not consecutively.",
+        "hi": "नितीश कटारा ऑनर-किलिंग मामला। न्यायालय ने विकास यादव के लिए बिना छूट के 25 वर्ष की निश्चित अवधि की सज़ा (और सह-अभियुक्त के लिए 20 वर्ष) को बरकरार रखा, और स्पष्ट किया कि अदालतें साधारण आजीवन कारावास और मृत्युदंड के बीच मध्यम मार्ग के रूप में 14 वर्ष से अधिक की निश्चित अवधि तय कर सकती हैं। साक्ष्य नष्ट करने की सज़ा साथ-साथ चलने का निर्देश दिया गया, अलग-अलग नहीं।"
+      },
+      "year": 2016
+    },
+    {
+      "caseName": "Bharwada Bhoginbhai Hirjibhai v. State of Gujarat",
+      "caseNameHi": "भारवाड़ा भोगिनभाई हिरजीभाई बनाम गुजरात राज्य",
+      "citation": "(1983) 3 SCC 217",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/207774/",
+      "sections": [
+        "IPC 376",
+        "BNS 64"
+      ],
+      "sourceName": "Indian Kanoon",
+      "summary": {
+        "en": "A foundational ruling on rape trials: the testimony of a rape victim stands on par with that of an injured witness, and corroboration is not a precondition for conviction. Refusing to act on the victim's testimony merely for want of corroboration, the Court said, adds insult to injury; minor discrepancies cannot be given undue importance.",
+        "hi": "बलात्कार के मुकदमों पर आधारभूत निर्णय: पीड़िता की गवाही आहत गवाह की गवाही के बराबर मानी जाएगी, और दोषसिद्धि के लिए पुष्टि (कॉरोबोरेशन) अनिवार्य शर्त नहीं है। केवल पुष्टि न मिलने के कारण पीड़िता की गवाही पर कार्रवाई से इनकार करना, न्यायालय के शब्दों में, चोट पर नमक छिड़कने जैसा है; छोटी-मोटी विसंगतियों को अनुचित महत्त्व नहीं दिया जा सकता।"
+      },
+      "year": 1983
+    },
+    {
+      "caseName": "Hardeep Singh v. State of Punjab",
+      "caseNameHi": "हरदीप सिंह बनाम पंजाब राज्य",
+      "citation": "(2014) 3 SCC 92",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/78958066/",
+      "sections": [
+        "CRPC 319",
+        "BNSS 358"
+      ],
+      "sourceName": "Indian Kanoon",
+      "summary": {
+        "en": "The Constitution Bench authority on summoning additional accused during inquiry or trial. A person not named in the FIR, not chargesheeted, or even discharged can be summoned on evidence emerging during trial — including examination-in-chief alone — but only on material stronger than a prima facie case, though short of what would guarantee conviction.",
+        "hi": "जाँच या विचारण के दौरान अतिरिक्त अभियुक्त को बुलाने पर संविधान पीठ का प्रमुख निर्णय। FIR में नाम न होने, आरोप-पत्र में न होने या बरी हो चुके व्यक्ति को भी विचारण के दौरान सामने आए साक्ष्य — केवल मुख्य परीक्षा के आधार पर भी — बुलाया जा सकता है, परन्तु इसके लिए प्रथम दृष्टया मामले से अधिक मज़बूत सामग्री चाहिए, हालाँकि दोषसिद्धि की गारंटी जितनी नहीं।"
+      },
+      "year": 2014
+    },
+    {
+      "caseName": "Lochan Shrivas v. State of Chhattisgarh",
+      "caseNameHi": "लोचन श्रीवास बनाम छत्तीसगढ़ राज्य",
+      "citation": "2021 INSC 882",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "pdfUrl": "https://indiankanoon.org/search/?formInput=Lochan+Shrivas+v+State+of+Chhattisgarh",
+      "sections": [
+        "IPC 302",
+        "BNS 103",
+        "IPC 376",
+        "BNS 64",
+        "POCSO 6"
+      ],
+      "sourceName": "Indian Kanoon",
+      "summary": {
+        "en": "A circumstantial-evidence rape-murder of a three-year-old child. The Court upheld the conviction on a complete chain of circumstances, but commuted the death sentence to life imprisonment: sentencing must weigh the criminal as well as the crime, and the young, rural-background convict had not been shown to be beyond reform, while his counsel had too little time to prepare on sentence.",
+        "hi": "तीन वर्ष की बच्ची के साथ बलात्कार-हत्या का परिस्थितिजन्य साक्ष्य वाला मामला। न्यायालय ने परिस्थितियों की पूरी श्रृंखला के आधार पर दोषसिद्धि बरकरार रखी, परन्तु मृत्युदंड को आजीवन कारावास में बदल दिया: सज़ा तय करते समय अपराध के साथ-साथ अपराधी को भी तौला जाना चाहिए, और युवा, ग्रामीण पृष्ठभूमि वाले दोषी के सुधार से परे होने का प्रमाण नहीं था, साथ ही उसके वकील को सज़ा पर तैयारी के लिए पर्याप्त समय नहीं मिला था।"
+      },
+      "year": 2021
+    },
+    {
+      "caseName": "Manoj Pratap Singh v. State of Rajasthan",
+      "caseNameHi": "मनोज प्रताप सिंह बनाम राजस्थान राज्य",
+      "citation": "(2022) INSC 547",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/179828917/",
+      "sections": [
+        "IPC 302",
+        "BNS 103",
+        "IPC 376",
+        "BNS 64",
+        "IPC 363",
+        "BNS 137",
+        "POCSO 6"
+      ],
+      "sourceName": "Indian Kanoon",
+      "summary": {
+        "en": "The brutal rape and murder of a seven-and-a-half-year-old mentally and physically challenged girl, proved by a complete chain of circumstantial evidence — last seen with the accused, recoveries at his instance, and matching medical and forensic evidence. The Court upheld the death sentence as a rarest-of-rare case, rejecting the residual-doubt argument where the chain pointed only to the accused.",
+        "hi": "साढ़े सात वर्ष की मानसिक व शारीरिक रूप से दिव्यांग बच्ची के साथ क्रूर बलात्कार-हत्या का मामला, जो परिस्थितिजन्य साक्ष्य की पूरी श्रृंखला — अभियुक्त के साथ अंतिम बार देखे जाने, उसकी निशानदेही पर बरामदगी, तथा मेडिकल व फॉरेंसिक साक्ष्य — से साबित हुआ। न्यायालय ने इसे 'दुर्लभतम में दुर्लभ' मानकर मृत्युदंड बरकरार रखा, और अवशिष्ट संदेह की दलील को खारिज किया क्योंकि श्रृंखला केवल अभियुक्त की ओर इशारा करती थी।"
+      },
+      "year": 2022
+    },
+    {
+      "caseName": "Mohd. Firoz v. State of Madhya Pradesh",
+      "caseNameHi": "मोहम्मद फिरोज़ बनाम मध्य प्रदेश राज्य",
+      "citation": "AIR 2022 SC 1967",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/133779136/",
+      "sections": [
+        "IPC 302",
+        "BNS 103",
+        "IPC 376",
+        "BNS 64",
+        "IPC 363",
+        "BNS 137",
+        "POCSO 6"
+      ],
+      "sourceName": "Indian Kanoon",
+      "summary": {
+        "en": "The rape and murder of a four-year-old girl, proved by a complete chain of circumstantial evidence including last-seen evidence and DNA. The Court upheld the conviction but commuted the death sentence to 20 years' imprisonment, stressing restorative justice and the possibility of reform — that sentencing must look at whether the offender can be reformed, not only at the horror of the crime.",
+        "hi": "चार वर्ष की बच्ची के साथ बलात्कार-हत्या का मामला, जो अंतिम बार देखे जाने के साक्ष्य और DNA सहित परिस्थितिजन्य साक्ष्य की पूरी श्रृंखला से साबित हुआ। न्यायालय ने दोषसिद्धि बरकरार रखी, परन्तु मृत्युदंड को 20 वर्ष के कारावास में बदल दिया — सुधारात्मक न्याय पर बल देते हुए कि सज़ा तय करते समय केवल अपराध की भयावहता नहीं, बल्कि अपराधी के सुधरने की संभावना भी देखी जानी चाहिए।"
+      },
+      "year": 2022
+    },
+    {
+      "caseName": "Aureliano Fernandes v. State of Goa",
+      "caseNameHi": "ऑरेलियानो फर्नांडीस बनाम गोवा राज्य",
+      "citation": "2023 SCC OnLine SC 621",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/38950634/",
+      "sections": [
+        "POSH 4",
+        "POSH 11",
+        "ART 14",
+        "ART 21"
+      ],
+      "sourceName": "Indian Kanoon",
+      "summary": {
+        "en": "The leading case on fair inquiry under the PoSH Act. A university committee's rushed, back-to-back hearings that gave the accused professor no real time to prepare his defence violated natural justice, so his dismissal was quashed and the inquiry remanded. Beyond the case, the Court issued nationwide directions: every ministry, department, PSU, university and professional body must verify it has a properly constituted ICC, publish its details online, and train its members.",
+        "hi": "PoSH अधिनियम के तहत निष्पक्ष जाँच पर प्रमुख निर्णय। विश्वविद्यालय समिति की जल्दबाज़ी में, लगातार हुई सुनवाइयों ने अभियुक्त प्रोफ़ेसर को बचाव की तैयारी का वास्तविक अवसर नहीं दिया, जिससे प्राकृतिक न्याय का उल्लंघन हुआ — इसलिए बर्खास्तगी रद्द कर जाँच वापस भेजी गई। इस मामले से आगे, न्यायालय ने देशभर के लिए निर्देश दिए: हर मंत्रालय, विभाग, सार्वजनिक उपक्रम, विश्वविद्यालय और पेशेवर संस्था यह सत्यापित करे कि उसकी आंतरिक समिति विधिवत गठित है, उसका विवरण ऑनलाइन प्रकाशित करे, और सदस्यों को प्रशिक्षण दे।"
+      },
+      "year": 2023
+    },
+    {
+      "caseName": "Ankush Maruti Shinde v. State of Maharashtra",
+      "caseNameHi": "अंकुश मारुती शिंदे बनाम महाराष्ट्र राज्य",
+      "citation": "(2009) 6 SCC 667",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/602401/",
+      "sections": [
+        "IPC 302",
+        "BNS 103",
+        "IPC 376",
+        "BNS 70"
+      ],
+      "sourceName": "Indian Kanoon",
+      "summary": {
+        "en": "A gang-rape and multiple-murder case decided on circumstantial evidence and identification, in which the Court in 2009 upheld the convictions and called the crime rarest of rare, awarding death sentences. Note for readers: the 2009 judgment was later recalled, and on review in 2019 the accused were acquitted — the case remains important for how circumstantial evidence and sentencing were debated.",
+        "hi": "सामूहिक बलात्कार और कई हत्याओं का मामला, जिसमें 2009 में न्यायालय ने परिस्थितिजन्य साक्ष्य और शिनाख्त के आधार पर दोषसिद्धि बरकरार रखी और अपराध को 'दुर्लभतम में दुर्लभ' मानकर मृत्युदंड दिया। पाठकों के लिए नोट: 2009 का यह निर्णय बाद में वापस लिया गया, और 2019 में पुनर्विचार पर अभियुक्त बरी हो गए — फिर भी परिस्थितिजन्य साक्ष्य और सज़ा की बहस के लिए यह मामला महत्त्वपूर्ण है।"
+      },
+      "year": 2009
+    },
+    {
+      "caseName": "State of Punjab v. Baldev Singh",
+      "caseNameHi": "पंजाब राज्य बनाम बलदेव सिंह",
+      "citation": "(1999) 6 SCC 172",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/1259796/",
+      "sections": [
+        "NDPS 50"
+      ],
+      "sourceName": "Indian Kanoon",
+      "summary": {
+        "en": "The Constitution Bench authority on NDPS Act Section 50. Before searching a person, the officer must inform him of his right to be searched before a Gazetted Officer or a Magistrate; Section 50 is mandatory, and a search conducted without informing the person of this right vitiates the recovery and any conviction founded solely on it.",
+        "hi": "NDPS अधिनियम की धारा 50 पर संविधान पीठ का प्रमुख निर्णय। किसी व्यक्ति की तलाशी लेने से पहले अधिकारी को उसे यह अधिकार बताना अनिवार्य है कि वह राजपत्रित अधिकारी या मजिस्ट्रेट के समक्ष तलाशी की माँग कर सकता है; धारा 50 आज्ञापक है, और इस अधिकार की जानकारी दिए बिना की गई तलाशी से हुई बरामदगी तथा केवल उसी पर आधारित दोषसिद्धि दूषित हो जाती है।"
+      },
+      "year": 1999
+    },
+    {
+      "caseName": "M.H. Hoskot v. State of Maharashtra",
+      "caseNameHi": "एम. एच. होस्कोट बनाम महाराष्ट्र राज्य",
+      "citation": "(1978) 3 SCC 544",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/513169/",
+      "sections": [
+        "ART 21",
+        "ART 39A",
+        "CRPC 304",
+        "BNSS 341",
+        "CRPC 363",
+        "BNSS 392"
+      ],
+      "sourceName": "Indian Kanoon",
+      "summary": {
+        "en": "The foundation of free legal aid in India. Fair procedure under Article 21 includes two State duties: giving a prisoner a copy of the judgment in time to appeal, and providing free legal services to a prisoner who cannot secure counsel. Without these, the right of appeal is illusory, and the Court may assign counsel under Article 142 to do complete justice.",
+        "hi": "भारत में निःशुल्क विधिक सहायता की आधारशिला। अनुच्छेद 21 के तहत निष्पक्ष प्रक्रिया में राज्य के दो कर्तव्य शामिल हैं: कैदी को अपील करने के लिए समय पर निर्णय की प्रति देना, और वकील न जुटा पाने वाले कैदी को निःशुल्क विधिक सेवा देना। इनके बिना अपील का अधिकार भ्रम मात्र रह जाता है, और पूर्ण न्याय के लिए न्यायालय अनुच्छेद 142 के तहत वकील नियुक्त कर सकता है।"
+      },
+      "year": 1978
+    },
+    {
+      "caseName": "Prem Shankar Shukla v. Delhi Administration",
+      "caseNameHi": "प्रेम शंकर शुक्ला बनाम दिल्ली प्रशासन",
+      "citation": "(1980) 3 SCC 526",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/853252/",
+      "sections": [
+        "ART 21",
+        "ART 14",
+        "ART 19"
+      ],
+      "sourceName": "Indian Kanoon",
+      "summary": {
+        "en": "Routine handcuffing of undertrials is inhuman and violates Articles 14, 19 and 21. The rule is freedom from handcuffs while being taken between prison and court; irons may be used only in exceptional cases, for reasons recorded, and under judicial supervision — never as a matter of routine or as punishment.",
+        "hi": "विचाराधीन कैदियों को नियमित रूप से हथकड़ी लगाना अमानवीय है और अनुच्छेद 14, 19 व 21 का उल्लंघन है। नियम यह है कि कारागार से न्यायालय ले जाते समय कैदी हथकड़ी से मुक्त रहेगा; बेड़ियाँ केवल अपवादात्मक मामलों में, कारण दर्ज करके और न्यायिक निगरानी में ही लगाई जा सकती हैं — कभी भी रूटीन या दंड के रूप में नहीं।"
+      },
+      "year": 1980
+    },
+    {
+      "caseName": "Charles Sobhraj v. Superintendent, Central Jail, Tihar",
+      "caseNameHi": "चार्ल्स शोभराज बनाम अधीक्षक, केंद्रीय कारागार, तिहाड़",
+      "citation": "(1978) 4 SCC 104",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/1518037/",
+      "sections": [
+        "ART 21",
+        "ART 14",
+        "ART 19"
+      ],
+      "sourceName": "Indian Kanoon",
+      "summary": {
+        "en": "Imprisonment does not spell farewell to fundamental rights: prisoners retain Articles 14, 19 and 21 in restricted form, and the Court's writ runs through prison walls wherever constitutional rights are flouted or legal protections ignored to a prisoner's prejudice. On the facts, however, the petition was dismissed, as no legal injury was proved.",
+        "hi": "कारावास का अर्थ मौलिक अधिकारों से विदाई नहीं है: कैदी अनुच्छेद 14, 19 और 21 को सीमित रूप में बनाए रखते हैं, और जहाँ कैदी के प्रति संवैधानिक अधिकारों का उल्लंघन हो या विधिक संरक्षण की अनदेखी हो, वहाँ न्यायालय की रिट कारागार की दीवारों को भेदकर पहुँचती है। तथ्यों पर, हालाँकि, कोई विधिक क्षति साबित न होने के कारण याचिका खारिज कर दी गई।"
+      },
+      "year": 1978
+    },
+    {
+      "caseName": "State of U.P. v. Krishna Master",
+      "caseNameHi": "उत्तर प्रदेश राज्य बनाम कृष्णा मास्टर",
+      "citation": "(2010) 12 SCC 324",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/572710/",
+      "sections": [
+        "IPC 302",
+        "BNS 103"
+      ],
+      "sourceName": "Indian Kanoon",
+      "summary": {
+        "en": "The authority on appreciating related and interested witnesses, including child witnesses. A related witness is not automatically unreliable: the evidence must be read as a whole, minor discrepancies on trivial matters ignored, and rustic or child witnesses judged by their own standard. Applying this, the Court set aside the High Court's acquittal and restored the trial court's murder convictions.",
+        "hi": "संबंधित व हितबद्ध गवाहों — बाल गवाहों सहित — की गवाही के मूल्यांकन पर प्रमुख निर्णय। संबंधित गवाह स्वतः अविश्वसनीय नहीं होता: गवाही को समग्र रूप से पढ़ा जाना चाहिए, तुच्छ बातों की छोटी विसंगतियों को नज़रअंदाज़ किया जाना चाहिए, और ग्रामीण या बाल गवाहों को उनके अपने मानदंड से परखा जाना चाहिए। इसी आधार पर न्यायालय ने उच्च न्यायालय की बरी करने वाली व्यवस्था को रद्द कर विचारण न्यायालय की हत्या की दोषसिद्धियाँ बहाल कीं।"
+      },
+      "year": 2010
+    },
+    {
+      "caseName": "G. Parshwanath v. State of Karnataka",
+      "caseNameHi": "जी. पार्श्वनाथ बनाम कर्नाटक राज्य",
+      "citation": "(2010) 8 SCC 593",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/1964010/",
+      "sections": [
+        "IPC 302",
+        "BNS 103"
+      ],
+      "sourceName": "Indian Kanoon",
+      "summary": {
+        "en": "A restatement of the circumstantial-evidence test: every circumstance must be fully proved, the chain of circumstances must be complete with no gaps, and the proved facts must be consistent only with the guilt of the accused. On that test, the conviction for murdering his wife and son was upheld.",
+        "hi": "परिस्थितिजन्य साक्ष्य की कसौटी का पुनर्कथन: हर परिस्थिति पूरी तरह साबित होनी चाहिए, परिस्थितियों की श्रृंखला बिना किसी अंतराल के पूर्ण होनी चाहिए, और साबित तथ्य केवल अभियुक्त के दोष के साथ ही संगत होने चाहिए। इसी कसौटी पर अपनी पत्नी व पुत्र की हत्या की दोषसिद्धि बरकरार रखी गई।"
+      },
+      "year": 2010
+    },
+    {
+      "caseName": "C. Chenga Reddy v. State of Andhra Pradesh",
+      "caseNameHi": "सी. चेंगा रेड्डी बनाम आंध्र प्रदेश राज्य",
+      "citation": "(1996) 10 SCC 193",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/1718159/",
+      "sections": [
+        "IPC 120B",
+        "BNS 61"
+      ],
+      "sourceName": "Indian Kanoon",
+      "summary": {
+        "en": "Famous for its classic statement of the circumstantial-evidence rule (para 21): circumstances must be fully proved, conclusive in nature, and form a complete chain consistent only with the accused's guilt. In this corruption and conspiracy case, suspicion and codal violations alone could not prove guilt beyond reasonable doubt, so the accused engineers and contractors were acquitted.",
+        "hi": "परिस्थितिजन्य साक्ष्य के नियम के अपने क्लासिक कथन (पैरा 21) के लिए प्रसिद्ध: परिस्थितियाँ पूरी तरह साबित हों, निर्णायक प्रकृति की हों, और केवल अभियुक्त के दोष के साथ संगत एक पूर्ण श्रृंखला बनाएँ। इस भ्रष्टाचार व साज़िश के मामले में केवल संदेह और नियमों के उल्लंघन से युक्तियुक्त संदेह से परे दोष साबित नहीं हो सका, इसलिए अभियुक्त इंजीनियरों व ठेकेदारों को बरी किया गया।"
+      },
+      "year": 1996
+    },
+    {
+      "caseName": "Ranjitsing Brahmajeetsing Sharma v. State of Maharashtra",
+      "caseNameHi": "रणजीतसिंह ब्रह्मजीतसिंह शर्मा बनाम महाराष्ट्र राज्य",
+      "citation": "(2005) 5 SCC 294",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "pdfUrl": "https://indiankanoon.org/search/?formInput=Ranjitsing+Brahmajeetsing+Sharma+vs+State+Of+Maharashtra",
+      "sections": [
+        "MCOCA 21",
+        "MCOCA 3"
+      ],
+      "sourceName": "Indian Kanoon",
+      "summary": {
+        "en": "The leading MCOCA bail ruling. Under Section 21(4), the bail court need not record a positive finding that the accused did not commit the offence; it decides on broad probabilities, probing deeper than in ordinary bail but without weighing evidence as at trial. Mere association with an organised-crime syndicate, without a direct nexus to its offences, does not attract Sections 3(2) and 24.",
+        "hi": "MCOCA के तहत ज़मानत पर प्रमुख निर्णय। धारा 21(4) के तहत ज़मानत अदालत को यह सकारात्मक निष्कर्ष दर्ज करना ज़रूरी नहीं कि अभियुक्त ने अपराध नहीं किया; वह मोटी संभावनाओं पर निर्णय लेती है — साधारण ज़मानत से गहराई से, परन्तु विचारण की तरह साक्ष्य तौले बिना। संगठित अपराध सिंडिकेट से केवल जुड़ाव, उसके अपराधों से सीधे संबंध के बिना, धारा 3(2) व 24 को आकर्षित नहीं करता।"
+      },
+      "year": 2005
+    },
+    {
+      "caseName": "Amitbhai Anilchandra Shah v. Central Bureau of Investigation",
+      "caseNameHi": "अमितभाई अनिलचंद्र शाह बनाम केंद्रीय अन्वेषण ब्यूरो",
+      "citation": "(2013) 6 SCC 348",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/161365352/",
+      "sections": [
+        "CRPC 154",
+        "BNSS 173",
+        "CRPC 173",
+        "BNSS 193"
+      ],
+      "sourceName": "Indian Kanoon",
+      "summary": {
+        "en": "A second FIR covering the same conspiracy and transaction as an earlier FIR is impermissible. Where the Tulsiram Prajapati killing formed part of the same conspiracy as the Sohrabuddin case, further material had to come as a supplementary charge-sheet under Section 173(8) CrPC; a fresh FIR violates Articles 14, 20 and 21.",
+        "hi": "पहली FIR वाली साज़िश और लेन-देन पर दूसरी FIR दर्ज करना अनुमत नहीं है। तुलसीराम प्रजापति की हत्या सोहराबुद्दीन मामले की ही साज़िश का हिस्सा थी, इसलिए आगे की सामग्री धारा 173(8) दं.प्र.सं. के तहत पूरक आरोप-पत्र के रूप में आनी चाहिए थी; नई FIR अनुच्छेद 14, 20 और 21 का उल्लंघन करती है।"
+      },
+      "year": 2013
+    },
+    {
+      "caseName": "Kehar Singh v. State (Delhi Administration)",
+      "caseNameHi": "केहर सिंह बनाम राज्य (दिल्ली प्रशासन)",
+      "citation": "(1988) 3 SCC 609",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/667073/",
+      "sections": [
+        "IPC 120B",
+        "BNS 61",
+        "IPC 302",
+        "BNS 103"
+      ],
+      "sourceName": "Indian Kanoon",
+      "summary": {
+        "en": "The assassination of Prime Minister Indira Gandhi. The death sentences of Kehar Singh and Satwant Singh were confirmed, while Balbir Singh was acquitted. A conspiracy hatched in secrecy may be proved by circumstantial evidence; an express agreement, an actual meeting, or the exact words of communication need not be proved — a physical manifestation of agreement suffices.",
+        "hi": "प्रधानमंत्री इंदिरा गांधी की हत्या का मामला। केहर सिंह और सतवंत सिंह के मृत्युदंड की पुष्टि हुई, जबकि बलबीर सिंह बरी हुए। गुप्त रूप से रची गई साज़िश परिस्थितिजन्य साक्ष्य से साबित हो सकती है; स्पष्ट समझौता, वास्तविक मुलाक़ात या संवाद के सटीक शब्द साबित करना ज़रूरी नहीं — समझौते का कोई भौतिक प्रकटीकरण ही पर्याप्त है।"
+      },
+      "year": 1988
+    },
+    {
+      "caseName": "Sushil Sharma v. State (NCT of Delhi)",
+      "caseNameHi": "सुशील शर्मा बनाम राज्य (राष्ट्रीय राजधानी क्षेत्र, दिल्ली)",
+      "citation": "(2014) 4 SCC 317",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/119404246/",
+      "sections": [
+        "IPC 302",
+        "BNS 103",
+        "IPC 201",
+        "BNS 238"
+      ],
+      "sourceName": "Indian Kanoon",
+      "summary": {
+        "en": "The 'Tandoor murder' case. The conviction was upheld on a chain of circumstantial and forensic evidence — ballistics, DNA identification of the charred body, a false alibi, and abscondence — but the death sentence was commuted to life imprisonment: a brutal domestic murder is not automatically a rarest-of-rare case.",
+        "hi": "'तंदूर हत्याकांड' का मामला। परिस्थितिजन्य व फॉरेंसिक साक्ष्य की श्रृंखला — बैलिस्टिक, जले हुए शव की DNA से पहचान, झूठा बहाना और फरारी — के आधार पर दोषसिद्धि बरकरार रखी गई, परन्तु मृत्युदंड को आजीवन कारावास में बदल दिया गया: क्रूर घरेलू हत्या स्वतः 'दुर्लभतम में दुर्लभ' नहीं हो जाती।"
+      },
+      "year": 2013
+    },
+    {
+      "caseName": "Swamy Shraddananda v. State of Karnataka",
+      "caseNameHi": "स्वामी श्रद्धानंद बनाम कर्नाटक राज्य",
+      "citation": "(2008) 13 SCC 767",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/989335/",
+      "sections": [
+        "IPC 302",
+        "BNS 103"
+      ],
+      "sourceName": "Indian Kanoon",
+      "summary": {
+        "en": "Where a case falls just short of rarest of rare, the Court may substitute death with life imprisonment directed to run for the convict's whole natural life without remission. This created the middle sentencing option between an ordinary 14-year life term and death, later endorsed by the Constitution Bench in Sriharan.",
+        "hi": "जहाँ मामला 'दुर्लभतम में दुर्लभ' की कसौटी से थोड़ा कम पड़ता हो, वहाँ न्यायालय मृत्युदंड के स्थान पर दोषी के संपूर्ण प्राकृतिक जीवन तक बिना छूट के आजीवन कारावास दे सकता है। इसने साधारण 14-वर्षीय आजीवन कारावास और मृत्युदंड के बीच का मध्यम सज़ा-विकल्प बनाया, जिसे बाद में श्रीहरन में संविधान पीठ ने समर्थन दिया।"
+      },
+      "year": 2008
+    },
+    {
+      "caseName": "Sher Singh v. State of Haryana",
+      "caseNameHi": "शेर सिंह बनाम हरियाणा राज्य",
+      "citation": "(2015) 3 SCC 724",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/83504176/",
+      "sections": [
+        "IPC 304B",
+        "BNS 80",
+        "IPC 498A",
+        "BNS 85",
+        "IEA 113B",
+        "BSA 117"
+      ],
+      "sourceName": "Indian Kanoon",
+      "summary": {
+        "en": "The authority on Section 304B IPC dowry death. 'Shown' means proved on a preponderance of probabilities, and the 'deemed' guilt in the section is read down to a strong rebuttable presumption: the prosecution must first prove cruelty soon before death with a live link to a dowry demand, and only then does the accused have to rebut it.",
+        "hi": "धारा 304B IPC के दहेज-मृत्यु मामलों पर प्रमुख निर्णय। 'दर्शित' का अर्थ संभावनाओं की प्रबलता पर साबित होना है, और धारा में वर्णित 'माना गया' दोष एक मज़बूत खंडनीय उपधारणा के रूप में पढ़ा जाएगा: अभियोजन को पहले मृत्यु से ठीक पहले की क्रूरता को दहेज की माँग से जीवंत संबंध सहित साबित करना होगा, तभी अभियुक्त पर उसका खंडन करने का भार आएगा।"
+      },
+      "year": 2015
+    },
+    {
+      "caseName": "Krishna Kumar Singh v. State of Bihar",
+      "caseNameHi": "कृष्ण कुमार सिंह बनाम बिहार राज्य",
+      "citation": "(2017) 3 SCC 1",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/107225908/",
+      "sections": [
+        "ART 213",
+        "ART 123"
+      ],
+      "sourceName": "Indian Kanoon",
+      "summary": {
+        "en": "A seven-judge bench on ordinances. Repeated re-promulgation of an ordinance without placing it before the legislature is a fraud on the Constitution: laying it before the legislature under Article 213(2) is mandatory, the ordinance-making power is subject to judicial review, and rights created under ordinances that lapse without ever becoming law do not endure.",
+        "hi": "अध्यादेशों पर सात न्यायाधीशों की पीठ का निर्णय। विधायिका के समक्ष रखे बिना अध्यादेश को बार-बार पुनः प्रख्यापित करना संविधान के साथ छल है: अनुच्छेद 213(2) के तहत विधायिका के समक्ष रखना अनिवार्य है, अध्यादेश बनाने की शक्ति न्यायिक पुनरावलोकन के अधीन है, और बिना कानून बने ही समाप्त हो जाने वाले अध्यादेशों से बने अधिकार टिकते नहीं हैं।"
+      },
+      "year": 2017
+    },
+    {
+      "caseName": "Rameshwar Prasad v. Union of India",
+      "caseNameHi": "रामेश्वर प्रसाद बनाम भारत संघ",
+      "citation": "(2006) 2 SCC 1",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/505656/",
+      "sections": [
+        "ART 356",
+        "ART 174"
+      ],
+      "sourceName": "Indian Kanoon",
+      "summary": {
+        "en": "The dissolution of the Bihar Legislative Assembly in May 2005, before its first meeting, was unconstitutional: the Governor's report of horse-trading was conjectural and mala fide, majority support must be tested on the floor of the House, and Article 356 action is judicially reviewable. The Assembly was not restored, since fresh elections had already been held.",
+        "hi": "मई 2005 में पहली बैठक से पहले ही बिहार विधानसभा को भंग करना असंवैधानिक था: राज्यपाल की खरीद-फरोख्त वाली रिपोर्ट अनुमान पर आधारित और दुर्भावनापूर्ण थी, बहुमत की परीक्षा सदन के पटल पर ही होनी चाहिए, और अनुच्छेद 356 की कार्रवाई न्यायिक पुनरावलोकन के अधीन है। नए चुनाव हो चुके थे, इसलिए विधानसभा बहाल नहीं की गई।"
+      },
+      "year": 2006
+    },
+    {
+      "caseName": "State of Maharashtra v. Sukhdev Singh",
+      "caseNameHi": "महाराष्ट्र राज्य बनाम सुखदेव सिंह",
+      "citation": "(1992) 3 SCC 700",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/110794538/",
+      "sections": [
+        "CRPC 313",
+        "BNSS 351",
+        "IPC 302",
+        "BNS 103"
+      ],
+      "sourceName": "Indian Kanoon",
+      "summary": {
+        "en": "The General Vaidya murder case. A conviction may be founded on an accused's admission made during trial, including in his Section 313 CrPC statement: though such a statement is not evidence in the strict sense, it can be taken into consideration. The convictions of Sukhdev Singh and Harjinder Singh were upheld, while the wider conspiracy charge failed for want of proof.",
+        "hi": "जनरल वैद्य हत्याकांड। विचारण के दौरान अभियुक्त के स्वीकारोक्ति-युक्त बयान पर — धारा 313 दं.प्र.सं. के बयान सहित — दोषसिद्धि आधारित हो सकती है: हालाँकि ऐसा बयान सख्त अर्थ में साक्ष्य नहीं है, फिर भी उस पर विचार किया जा सकता है। सुखदेव सिंह और हरजिंदर सिंह की दोषसिद्धियाँ बरकरार रखी गईं, जबकि व्यापक साज़िश का आरोप प्रमाण के अभाव में नहीं टिका।"
+      },
+      "year": 1992
     }
   ]
 }
