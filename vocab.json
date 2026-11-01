@@ -518,6 +518,22 @@
       "en": "The court's holding settled the issue.",
       "hi": "न्यायालय के अभिनिर्धारण ने विषय तय किया।"
      }
+    },
+    {
+     "en": "Fair Trial",
+     "example": {
+      "en": "Every accused is entitled to a fair trial before an impartial court.",
+      "hi": "प्रत्येक अभियुक्त निष्पक्ष न्यायालय के समक्ष निष्पक्ष विचारण का हकदार है।"
+     },
+     "hi": "निष्पक्ष विचारण"
+    },
+    {
+     "en": "Restorative Justice",
+     "example": {
+      "en": "Restorative justice focuses on repairing the harm caused to the victim and the community.",
+      "hi": "पुनर्स्थापनात्मक न्याय पीड़ित और समुदाय को हुई क्षति की पूर्ति पर बल देता है।"
+     },
+     "hi": "पुनर्स्थापनात्मक न्याय"
     }
    ]
   },
@@ -1584,6 +1600,118 @@
       "en": "Word or gesture insulting modesty is Section 79 BNS.",
       "hi": "लज्जा भंग करने वाला शब्द या अंगविक्षेप BNS धारा 79 है।"
      }
+    },
+    {
+     "en": "Alibi",
+     "example": {
+      "en": "The accused took the plea of alibi and proved he was in another city at the time of the offence.",
+      "hi": "अभियुक्त ने अन्यत्र उपस्थिति का प्रतिवाद लिया और सिद्ध किया कि अपराध के समय वह दूसरे नगर में था।"
+     },
+     "hi": "अन्यत्र उपस्थिति"
+    },
+    {
+     "en": "Benefit of Doubt",
+     "example": {
+      "en": "When the evidence leaves a reasonable doubt, the benefit of doubt goes to the accused.",
+      "hi": "जब साक्ष्य से युक्तियुक्त संदेह रह जाए, तो संदेह का लाभ अभियुक्त को मिलता है।"
+     },
+     "hi": "संदेह का लाभ"
+    },
+    {
+     "en": "Right of Private Defence",
+     "example": {
+      "en": "The right of private defence under Sections 34 to 44 of the BNS protects the body and property against unlawful attack.",
+      "hi": "बीएनएस की धारा 34 से 44 के अंतर्गत निजी प्रतिरक्षा का अधिकार शरीर और संपत्ति को विधिविरुद्ध आक्रमण से सुरक्षित करता है।"
+     },
+     "hi": "निजी प्रतिरक्षा का अधिकार"
+    },
+    {
+     "en": "Mistake of Fact",
+     "example": {
+      "en": "An act done by mistake of fact in good faith is no offence under Section 14 of the BNS.",
+      "hi": "सद्भावपूर्वक तथ्यगत भूल से किया गया कार्य बीएनएस की धारा 14 के अंतर्गत अपराध नहीं है।"
+     },
+     "hi": "तथ्यगत भूल"
+    },
+    {
+     "en": "Unsoundness of Mind",
+     "example": {
+      "en": "An act by a person who, by reason of unsoundness of mind, cannot know the nature of the act is no offence under Section 22 of the BNS.",
+      "hi": "चित्त विकृति के कारण जो व्यक्ति कार्य की प्रकृति नहीं जान सकता, उसका कार्य बीएनएस की धारा 22 के अंतर्गत अपराध नहीं है।"
+     },
+     "hi": "चित्त विकृति"
+    },
+    {
+     "en": "Community Service",
+     "example": {
+      "en": "Community service is a form of punishment under Section 4 of the BNS for petty offences.",
+      "hi": "सामुदायिक सेवा छोटे अपराधों के लिए बीएनएस की धारा 4 के अंतर्गत दंड का एक रूप है।"
+     },
+     "hi": "सामुदायिक सेवा"
+    },
+    {
+     "en": "Organised Crime",
+     "example": {
+      "en": "Organised crime committed by a syndicate is punishable under Section 111 of the BNS.",
+      "hi": "किसी सिंडिकेट द्वारा किया गया संगठित अपराध बीएनएस की धारा 111 के अंतर्गत दंडनीय है।"
+     },
+     "hi": "संगठित अपराध"
+    },
+    {
+     "en": "Petty Organised Crime",
+     "example": {
+      "en": "Petty organised crime by a gang, such as snatching or cheating, is punishable under Section 112 of the BNS.",
+      "hi": "गिरोह द्वारा छीनाझपटी या छल जैसे लघु संगठित अपराध बीएनएस की धारा 112 के अंतर्गत दंडनीय हैं।"
+     },
+     "hi": "लघु संगठित अपराध"
+    },
+    {
+     "en": "Snatching",
+     "example": {
+      "en": "Snatching is a separate offence under Section 304 of the BNS, punishable with imprisonment up to three years.",
+      "hi": "छीनाझपटी बीएनएस की धारा 304 के अंतर्गत पृथक अपराध है, जिसके लिए तीन वर्ष तक का कारावास हो सकता है।"
+     },
+     "hi": "छीनाझपटी"
+    },
+    {
+     "en": "Last Seen Theory",
+     "example": {
+      "en": "Under the last seen theory, the accused must explain when the deceased was last seen alive with him.",
+      "hi": "अंतिम दर्शन सिद्धांत के अंतर्गत अभियुक्त को यह स्पष्ट करना होता है कि मृतक उसके साथ अंतिम बार जीवित कब देखा गया था।"
+     },
+     "hi": "अंतिम दर्शन सिद्धांत"
+    },
+    {
+     "en": "Custodial Interrogation",
+     "example": {
+      "en": "The court allowed custodial interrogation of the accused for two days.",
+      "hi": "न्यायालय ने अभियुक्त की अभिरक्षा में दो दिन की पूछताछ की अनुमति दी।"
+     },
+     "hi": "अभिरक्षा में पूछताछ"
+    },
+    {
+     "en": "Commutation of Sentence",
+     "example": {
+      "en": "The death sentence was reduced to life imprisonment by commutation of sentence.",
+      "hi": "दंडादेश के लघुकरण से मृत्युदंड को आजीवन कारावास में बदल दिया गया।"
+     },
+     "hi": "दंडादेश का लघुकरण"
+    },
+    {
+     "en": "Reprieve",
+     "example": {
+      "en": "A reprieve temporarily stays the execution of a sentence.",
+      "hi": "दंड विराम किसी दंडादेश के निष्पादन को अस्थायी रूप से रोक देता है।"
+     },
+     "hi": "दंड विराम"
+    },
+    {
+     "en": "Respite",
+     "example": {
+      "en": "Respite postpones a punishment to a later date for a special reason.",
+      "hi": "दंड विलंबन किसी विशेष कारण से दंड को बाद की तिथि तक टाल देता है।"
+     },
+     "hi": "दंड विलंबन"
     }
    ]
   },
@@ -3116,6 +3244,14 @@
       "en": "Curative jurisdiction corrects gross miscarriage.",
       "hi": "उपचारात्मक अधिकारिता घोर अन्याय सुधारती है।"
      }
+    },
+    {
+     "en": "Speedy Trial",
+     "example": {
+      "en": "Speedy trial is a part of the right to life and personal liberty.",
+      "hi": "शीघ्र विचारण जीवन और वैयक्तिक स्वतंत्रता के अधिकार का अंग है।"
+     },
+     "hi": "शीघ्र विचारण"
     }
    ]
   },
@@ -3509,6 +3645,30 @@
       "en": "Admissions are covered by Section 22 BSA.",
       "hi": "स्वीकृतियां BSA धारा 22 में कवर हैं।"
      }
+    },
+    {
+     "en": "DNA Evidence",
+     "example": {
+      "en": "DNA evidence linked the accused to the scene of the crime.",
+      "hi": "डीएनए साक्ष्य ने अभियुक्त को अपराध स्थल से जोड़ा।"
+     },
+     "hi": "डीएनए साक्ष्य"
+    },
+    {
+     "en": "Fingerprint Evidence",
+     "example": {
+      "en": "Fingerprint evidence found on the door matched the accused.",
+      "hi": "दरवाजे पर मिला अंगुलि-चिह्न साक्ष्य अभियुक्त से मेल खा गया।"
+     },
+     "hi": "अंगुलि-चिह्न साक्ष्य"
+    },
+    {
+     "en": "Witness Protection",
+     "example": {
+      "en": "The court directed witness protection after the witness received threats.",
+      "hi": "साक्षी को धमकियां मिलने के बाद न्यायालय ने साक्षी संरक्षण का निर्देश दिया।"
+     },
+     "hi": "साक्षी संरक्षण"
     }
    ]
   },
