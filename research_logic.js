@@ -117,7 +117,13 @@
     { id: "kidnapping", en: "Kidnapping", hi: "अपहरण", sections: ["BNS:137", "IPC:363", "IPC:366"] },
     { id: "dowry-death", en: "Dowry Death", hi: "दहेज मृत्यु", sections: ["BNS:80", "BNS:85", "IPC:304b", "IPC:498a"] },
     { id: "criminal-appeal", en: "Criminal Appeal", hi: "आपराधिक अपील", sections: ["BNSS:413", "BNSS:415", "BNSS:419", "CRPC:372", "CRPC:374", "CRPC:378"] },
-    { id: "discharge", en: "Discharge", hi: "उन्मोचन", sections: ["BNSS:250", "BNSS:262", "BNSS:263", "CRPC:227", "CRPC:239"] }
+    { id: "discharge", en: "Discharge", hi: "उन्मोचन", sections: ["BNSS:250", "BNSS:262", "BNSS:263", "CRPC:227", "CRPC:239"] },
+    { id: "defamation", en: "Defamation", hi: "मानहानि", sections: ["BNS:356", "IPC:499", "IPC:500"] },
+    { id: "abetment-conspiracy", en: "Abetment & Conspiracy", hi: "दुष्प्रेरण और षड्यंत्र", sections: ["BNS:61", "IPC:120b"] },
+    { id: "attempt", en: "Attempt", hi: "प्रयास", sections: ["BNS:62", "IPC:511"] },
+    { id: "acid-grievous-hurt", en: "Acid Attack & Grievous Hurt", hi: "तेज़ाब हमला और गंभीर चोट", sections: ["BNS:124", "BNS:117", "IPC:326"] },
+    { id: "criminal-intimidation", en: "Criminal Intimidation", hi: "आपराधिक धमकी", sections: ["BNS:351", "IPC:506"] },
+    { id: "theft", en: "Theft & Snatching", hi: "चोरी और छीना-झपटी", sections: ["BNS:303", "BNS:304", "IPC:380"] }
   ];
   function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
   function lang() { return document.documentElement.lang === "hi" ? "hi" : "en"; }

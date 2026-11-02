@@ -13310,7 +13310,7 @@
     {
       "caseName": "All India Judges Association v. Union of India",
       "caseNameHi": "अखिल भारतीय न्यायाधीश संघ बनाम भारत संघ",
-      "citation": "",
+      "citation": "2025 INSC 735",
       "court": {
         "en": "Supreme Court of India",
         "hi": "भारत का सर्वोच्च न्यायालय"
@@ -13320,7 +13320,7 @@
         "en": "The Court restored three years' practice at the Bar as a mandatory eligibility condition for entry-level civil judges, applying the rule prospectively. Practice is to be counted from provisional enrolment, and the period spent as a law clerk is also to count.",
         "hi": "न्यायालय ने प्रवेश-स्तर के सिविल न्यायाधीशों के लिए बार में तीन वर्ष की वकालत को अनिवार्य पात्रता शर्त के रूप में बहाल किया, और यह नियम भविष्य की ओर से लागू होगा। वकालत की गणना अस्थायी नामांकन से होगी और लॉ क्लर्क के रूप में बिताई अवधि भी गिनी जाएगी।"
       },
-      "pdfUrl": "https://indiankanoon.org/search/?formInput=All+India+Judges+Association+v.+Union+of+India",
+      "pdfUrl": "https://indiankanoon.org/doc/17802623/",
       "sourceName": "Indian Kanoon",
       "sections": [
         "ART 234"
@@ -14627,6 +14627,363 @@
         "hi": "एक पितृहत्या मामले में जहां अभियोजन के गवाह पक्षद्रोही (होस्टाइल) हो गए थे, न्यायालय ने एक व्यापक भ्रांति को दूर किया: केवल इसलिए कि किसी गवाह को पक्षद्रोही घोषित कर दिया गया है, उसका संपूर्ण साक्ष्य रिकॉर्ड से मिट नहीं जाता। न्यायालय को प्रत्येक मामले में यह विचार करना चाहिए कि जिरह और विरोधाभास के बावजूद क्या गवाह की गवाही के किसी भाग पर अब भी विश्वास किया जा सकता है, और वह विश्वसनीय भाग पर भरोसा कर सकता है। यह निर्णय पक्षद्रोही गवाहों तथा साक्ष्य अधिनियम की धारा 154 और 155 पर मानक प्राधिकार बना हुआ है।"
       },
       "year": 2000
+    },
+    {
+      "caseName": "Kharak Singh v. State of Uttar Pradesh",
+      "citation": "AIR 1963 SC 1295",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "year": 1962,
+      "summary": {
+        "en": "Police surveillance of a man once accused but never convicted of dacoity was challenged in this early privacy case. The Court struck down the rule permitting police to enter his home at night, holding that such domiciliary visits violated personal liberty under Article 21, while other forms of secret watch were allowed to continue. Two judges went further and would have struck down the whole surveillance regime. The case is remembered as the starting point of India's privacy debate, later completed by the Puttaswamy ruling in 2017.",
+        "hi": "डकैती के आरोप में कभी अभियुक्त रहे, पर कभी दोषी न ठहराए गए व्यक्ति की पुलिस निगरानी को इस शुरुआती निजता के मामले में चुनौती दी गई। न्यायालय ने रात में घर में प्रवेश की अनुमति देने वाले नियम को रद्द कर दिया और कहा कि ऐसे गृह-प्रवेश अनुच्छेद 21 के तहत व्यक्तिगत स्वतंत्रता का उल्लंघन हैं, जबकि गुप्त निगरानी के अन्य रूप जारी रह सकते हैं। दो न्यायाधीशों ने इससे आगे जाकर पूरी निगरानी व्यवस्था को ही रद्द करने की बात कही। यह मामला भारत की निजता-बहस का शुरुआती बिंदु माना जाता है, जिसे 2017 में पुट्टस्वामी फैसले ने पूरा किया।"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/619152/",
+      "sourceName": "Indian Kanoon",
+      "caseNameHi": "खड़क सिंह बनाम उत्तर प्रदेश राज्य",
+      "sections": [
+        "ART 19",
+        "ART 21",
+        "ART 32"
+      ]
+    },
+    {
+      "caseName": "Shankari Prasad v. Union of India",
+      "citation": "AIR 1951 SC 458",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "year": 1951,
+      "summary": {
+        "en": "The first case to test Parliament's power to amend the Constitution. Landowners challenged the First Amendment of 1951, which protected zamindari-abolition laws from fundamental-rights challenges. The Court upheld the amendment, holding that a constitutional amendment is not 'law' under Article 13 and therefore cannot be struck down for violating fundamental rights. This view stood until Golaknath and was finally replaced by the basic-structure doctrine in Kesavananda Bharati.",
+        "hi": "संविधान में संशोधन करने की संसद की शक्ति की परीक्षा करने वाला यह पहला मामला था। ज़मींदारों ने 1951 के प्रथम संशोधन को चुनौती दी, जिसने ज़मींदारी उन्मूलन कानूनों को मौलिक अधिकारों की चुनौती से बचाया था। न्यायालय ने संशोधन को वैध ठहराया और कहा कि संवैधानिक संशोधन अनुच्छेद 13 के तहत 'विधि' नहीं है, इसलिए मौलिक अधिकारों के उल्लंघन के आधार पर उसे रद्द नहीं किया जा सकता। यह मत गोलकनाथ तक चला और अंत में केशवानंद भारती के मूल-संरचना सिद्धांत ने इसे बदल दिया।"
+      },
+      "pdfUrl": "https://indiankanoon.org/search/?formInput=Shankari%20Prasad%20v.%20Union%20of%20India",
+      "sourceName": "Indian Kanoon",
+      "caseNameHi": "शंकर प्रसाद बनाम भारत संघ",
+      "sections": [
+        "ART 13",
+        "ART 31A",
+        "ART 31B",
+        "ART 368"
+      ]
+    },
+    {
+      "caseName": "State of Uttar Pradesh v. Deoman Upadhyaya",
+      "citation": "AIR 1960 SC 1125",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "year": 1960,
+      "summary": {
+        "en": "A murder conviction built on circumstantial evidence turned on whether a statement leading to the discovery of the murder weapon could be used in court. The High Court had struck down Section 27 of the Evidence Act as discriminatory, but the Supreme Court upheld it, reasoning that a statement by a person in custody that leads to a genuine discovery carries its own guarantee of truth. The decision remains the foundation of discovery-evidence law in India, now carried forward into the new evidence statute.",
+        "hi": "परिस्थितिजन्य साक्ष्य पर टिकी एक हत्या की दोषसिद्धि इस बात पर निर्भर थी कि क्या हत्या के हथियार की बरामदगी की ओर ले जाने वाला बयान अदालत में इस्तेमाल हो सकता है। उच्च न्यायालय ने साक्ष्य अधिनियम की धारा 27 को भेदभावपूर्ण मानकर रद्द कर दिया था, पर सर्वोच्च न्यायालय ने उसे वैध ठहराया और कहा कि हिरासत में व्यक्ति का वह बयान जो वास्तविक बरामदगी की ओर ले जाए, अपने आप में सत्य की गारंटी रखता है। यह फैसला भारत में बरामदगी-साक्ष्य विधि की नींव बना हुआ है, जो अब नए साक्ष्य कानून में भी जारी है।"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/481284/",
+      "sourceName": "Indian Kanoon",
+      "caseNameHi": "उत्तर प्रदेश राज्य बनाम देवमन उपाध्याय",
+      "sections": [
+        "ART 14",
+        "IEA 27",
+        "CRPC 162"
+      ]
+    },
+    {
+      "caseName": "R.C. Cooper v. Union of India",
+      "citation": "(1970) 1 SCC 248",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "year": 1970,
+      "summary": {
+        "en": "Fourteen major banks were nationalised in 1969, and a shareholder challenged the takeover. An eleven-judge bench struck down key parts of the nationalisation law, holding that compensation for acquired property had to be just and that the law also violated equality and freedom of trade. The ruling forced Parliament to re-enact nationalisation on a sounder footing and reshaped how courts test whether a law truly respects fundamental rights.",
+        "hi": "1969 में चौदह बड़े बैंकों का राष्ट्रीयकरण हुआ और एक शेयरधारक ने इस अधिग्रहण को चुनौती दी। ग्यारह न्यायाधीशों की पीठ ने राष्ट्रीयकरण कानून के प्रमुख हिस्सों को रद्द कर दिया और कहा कि अधिग्रहीत संपत्ति का मुआवज़ा न्यायपूर्ण होना चाहिए तथा यह कानून समानता और व्यापार की स्वतंत्रता का भी उल्लंघन करता है। इस फैसले के बाद संसद को राष्ट्रीयकरण को मज़बूत आधार पर दोबारा लाना पड़ा और अदालतों के मौलिक अधिकारों की जांच का तरीका ही बदल गया।"
+      },
+      "pdfUrl": "https://indiankanoon.org/search/?formInput=R.C.%20Cooper%20v.%20Union%20of%20India",
+      "sourceName": "Indian Kanoon",
+      "caseNameHi": "आर. सी. कूपर बनाम भारत संघ",
+      "sections": [
+        "ART 14",
+        "ART 19",
+        "ART 31"
+      ]
+    },
+    {
+      "caseName": "Khatri v. State of Bihar",
+      "citation": "(1981) 1 SCC 627",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "year": 1980,
+      "summary": {
+        "en": "When reports emerged that undertrial prisoners in Bhagalpur had been blinded in police custody, the Court took up their cause and insisted that the State provide free legal aid to accused persons who cannot afford a lawyer. The judges expressed strong displeasure at Bihar's disregard of earlier directions and kept the proceedings under close watch, turning a story of custodial horror into a landmark on legal aid and prisoners' rights under Articles 21 and 22.",
+        "hi": "जब यह खबर आई कि भागलपुर में विचाराधीन कैदियों को पुलिस हिरासत में अंधा कर दिया गया है, तो न्यायालय ने उनका मामला उठाया और कहा कि राज्य को उन अभियुक्तों को मुफ्त कानूनी सहायता देनी होगी जो वकील का खर्च नहीं उठा सकते। न्यायाधीशों ने पहले के निर्देशों की बिहार द्वारा अनदेखी पर कड़ी नाराज़गी जताई और कार्यवाही पर कड़ी निगरानी रखी, जिससे हिरासत की भयावहता की यह कहानी अनुच्छेद 21 और 22 के तहत कानूनी सहायता और कैदियों के अधिकारों का ऐतिहासिक फैसला बन गई।"
+      },
+      "pdfUrl": "https://indiankanoon.org/search/?formInput=Khatri%20v.%20State%20of%20Bihar",
+      "sourceName": "Indian Kanoon",
+      "caseNameHi": "खत्री बनाम बिहार राज्य",
+      "sections": [
+        "ART 21",
+        "ART 22",
+        "ART 32"
+      ]
+    },
+    {
+      "caseName": "Bodhisattwa Gautam v. Subhra Chakraborty",
+      "citation": "(1996) 1 SCC 490",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "year": 1995,
+      "summary": {
+        "en": "A student complained that her lecturer had obtained her consent to physical relations on a false promise of marriage and had twice forced her to undergo abortion. The Court held that rape violates the victim's right to live with dignity under Article 21, and that a court trying such an offence can order interim compensation even before conviction, since the power to award compensation at the end of trial must include the power to help the victim during it. The ruling made victim compensation a living part of criminal justice, not an afterthought.",
+        "hi": "एक छात्रा ने शिकायत की कि उसके अध्यापक ने विवाह के झूठे वादे पर उससे शारीरिक संबंध की सहमति ली और दो बार ज़बरदस्ती उसका गर्भपात कराया। न्यायालय ने कहा कि बलात्कार अनुच्छेद 21 के तहत पीड़िता के गरिमा के साथ जीने के अधिकार का उल्लंघन है, और ऐसे अपराध की सुनवाई करने वाली अदालत दोषसिद्धि से पहले भी अंतरिम मुआवज़ा दे सकती है, क्योंकि मुकदमे के अंत में मुआवज़ा देने की शक्ति में मुकदमे के दौरान पीड़िता की मदद की शक्ति भी शामिल है। इस फैसले ने पीड़ित-मुआवज़े को आपराधिक न्याय का जीवंत हिस्सा बना दिया, न कि बाद की औपचारिकता।"
+      },
+      "pdfUrl": "https://indiankanoon.org/search/?formInput=Bodhisattwa%20Gautam%20v.%20Subhra%20Chakraborty",
+      "sourceName": "Indian Kanoon",
+      "caseNameHi": "बोधिसत्व गौतम बनाम सुभ्रा चक्रवर्ती",
+      "sections": [
+        "ART 21",
+        "IPC 376",
+        "BNS 64",
+        "CRPC 357"
+      ]
+    },
+    {
+      "caseName": "Suresh Kumar Koushal v. Naz Foundation",
+      "citation": "(2014) 1 SCC 1",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "year": 2013,
+      "summary": {
+        "en": "Two judges reversed the Delhi High Court's 2009 decision and upheld Section 377, which criminalised consensual same-sex relations between adults. The Court reasoned that only a small number of prosecutions had been brought and that it was for Parliament, not the courts, to change the law. The decision stood for less than five years before a five-judge bench in Navtej Singh Johar overruled it and decriminalised consensual adult same-sex relations.",
+        "hi": "दो न्यायाधीशों ने दिल्ली उच्च न्यायालय के 2009 के फैसले को पलट दिया और धारा 377 को वैध ठहराया, जो वयस्कों के बीच सहमति से समलैंगिक संबंधों को अपराध मानती थी। न्यायालय का तर्क था कि बहुत कम मुकदमे चले हैं और कानून बदलना संसद का काम है, अदालतों का नहीं। यह फैसला पांच साल से भी कम समय टिका, फिर नवतेज सिंह जौहर में पांच न्यायाधीशों की पीठ ने इसे पलट दिया और वयस्कों के बीच सहमति से समलैंगिक संबंधों को अपराधमुक्त कर दिया।"
+      },
+      "pdfUrl": "https://indiankanoon.org/search/?formInput=Suresh%20Kumar%20Koushal%20v.%20Naz%20Foundation",
+      "sourceName": "Indian Kanoon",
+      "caseNameHi": "सुरेश कुमार कौशल बनाम नाज़ फाउंडेशन",
+      "sections": [
+        "IPC 377",
+        "ART 14",
+        "ART 15",
+        "ART 21"
+      ]
+    },
+    {
+      "caseName": "Aparna Bhat v. State of Madhya Pradesh",
+      "citation": "2021 SCC OnLine SC 230",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "year": 2021,
+      "summary": {
+        "en": "A High Court granted pre-arrest bail to a man accused of sexually harassing his neighbour on the condition that he visit the complainant's home with sweets and a rakhi and ask her to tie it on his wrist. The Supreme Court set aside that condition, holding that bail conditions must never force contact between accused and survivor, trivialise sexual assault, or rest on gender stereotypes. It laid down binding directions: bail orders must protect the complainant, inform her promptly when bail is granted, and stay strictly within the law.",
+        "hi": "एक उच्च न्यायालय ने पड़ोसी महिला के यौन उत्पीड़न के आरोपी व्यक्ति को इस शर्त पर अग्रिम ज़मानत दी कि वह मिठाई और राखी लेकर शिकायतकर्ता के घर जाएगा और उससे राखी बंधवाएगा। सर्वोच्च न्यायालय ने यह शर्त रद्द कर दी और कहा कि ज़मानत की शर्तें कभी भी अभियुक्त और पीड़िता के बीच संपर्क थोप नहीं सकतीं, यौन हमले को हल्का नहीं बना सकतीं और लैंगिक रूढ़ियों पर टिकी नहीं हो सकतीं। न्यायालय ने बाध्यकारी निर्देश दिए: ज़मानत आदेश शिकायतकर्ता की सुरक्षा करें, ज़मानत मिलने पर उसे तुरंत सूचित किया जाए और आदेश सख्ती से कानून के दायरे में रहें।"
+      },
+      "pdfUrl": "https://indiankanoon.org/search/?formInput=Aparna%20Bhat%20v.%20State%20of%20Madhya%20Pradesh",
+      "sourceName": "Indian Kanoon",
+      "caseNameHi": "अपर्णा भट्ट बनाम मध्य प्रदेश राज्य",
+      "sections": [
+        "CRPC 438",
+        "BNSS 482",
+        "IPC 354",
+        "BNS 74",
+        "IPC 354A",
+        "BNS 75"
+      ]
+    },
+    {
+      "caseName": "V. Senthil Balaji v. The Deputy Director, Directorate of Enforcement",
+      "citation": "2024 INSC 739",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "year": 2024,
+      "summary": {
+        "en": "A former minister spent over fifteen months in custody in a money-laundering case while the trial had barely begun. The Court granted bail, holding that even the strict bail bar in the PMLA cannot justify endless pre-trial imprisonment when trial is unlikely to finish soon, because the right to a speedy trial under Article 21 must be read into every special statute. The ruling is now a leading authority for bail in PMLA, UAPA and NDPS cases where custody drags on without trial.",
+        "hi": "एक पूर्व मंत्री धन-शोधन के मामले में पंद्रह महीने से अधिक हिरासत में रहे, जबकि मुकदमा मुश्किल से शुरू हुआ था। न्यायालय ने ज़मानत दी और कहा कि धन-शोधन कानून की सख्त ज़मानत-रोक भी अंतहीन विचाराधीन हिरासत का औचित्य नहीं बन सकती, जब मुकदमा जल्द खत्म होने की संभावना न हो, क्योंकि अनुच्छेद 21 के तहत शीघ्र सुनवाई का अधिकार हर विशेष कानून में पढ़ा जाना चाहिए। यह फैसला अब धन-शोधन, गैरकानूनी गतिविधि और मादक-द्रव्य मामलों में लंबी हिरासत वाली ज़मानत का प्रमुख आधार है।"
+      },
+      "pdfUrl": "https://indiankanoon.org/search/?formInput=Senthil%20Balaji%20v.%20Directorate%20of%20Enforcement",
+      "sourceName": "Indian Kanoon",
+      "caseNameHi": "वी. सेंथिल बालाजी बनाम उप निदेशक, प्रवर्तन निदेशालय",
+      "sections": [
+        "PMLA 45",
+        "PMLA 3",
+        "ART 21",
+        "CRPC 439",
+        "BNSS 483"
+      ]
+    },
+    {
+      "caseName": "Baljinder Singh @ Aman v. State of Punjab",
+      "citation": "2025 INSC 796",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "year": 2025,
+      "summary": {
+        "en": "A High Court granted bail in a murder case with what the Supreme Court called very cryptic reasoning, overturning a trial court's refusal that had noted the accused's criminal record and the gravity of the charge. The Court cancelled the bail, restored the trial court's order, and directed the accused to surrender. The judgment warns that bail in grave offences needs real, recorded reasons — a short or empty order will not survive appeal.",
+        "hi": "एक उच्च न्यायालय ने हत्या के मामले में ज़मानत ऐसे आदेश से दी जिसे सर्वोच्च न्यायालय ने बहुत ही गूढ़ तर्क वाला बताया, जबकि विचारण अदालत ने अभियुक्त के आपराधिक रिकॉर्ड और आरोप की गंभीरता को देखते हुए ज़मानत से इनकार किया था। न्यायालय ने ज़मानत रद्द कर दी, विचारण अदालत का आदेश बहाल किया और अभियुक्तों को आत्मसमर्पण का निर्देश दिया। यह फैसला चेतावनी देता है कि गंभीर अपराधों में ज़मानत के लिए वास्तविक, दर्ज कारण चाहिए — छोटा या खाली आदेश अपील में नहीं टिकेगा।"
+      },
+      "pdfUrl": "https://indiankanoon.org/search/?formInput=Baljinder%20Singh%20v.%20State%20of%20Punjab",
+      "sourceName": "Indian Kanoon",
+      "caseNameHi": "बलजिंदर सिंह उर्फ अमन बनाम पंजाब राज्य",
+      "sections": [
+        "CRPC 439",
+        "BNSS 483",
+        "IPC 302",
+        "BNS 103"
+      ]
+    },
+    {
+      "caseName": "Aasif @ Pasha v. State of Uttar Pradesh",
+      "citation": "2025 INSC 944",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "year": 2025,
+      "summary": {
+        "en": "A man sentenced to a fixed term of four years for offences including sexual assault of a child could not get his sentence suspended by the High Court, which had simply repeated the prosecution case. The Supreme Court set aside that refusal and sent the matter back, holding that for fixed-term sentences, appellate courts must lean towards suspension unless compelling reasons exist, because otherwise the appeal itself may become meaningless if the whole sentence is served first. The case is a practical guide for every suspension-of-sentence plea after conviction.",
+        "hi": "बच्चे के यौन उत्पीड़न सहित अपराधों में चार साल की निश्चित सज़ा पाए व्यक्ति की सज़ा उच्च न्यायालय ने निलंबित नहीं की, जिसने केवल अभियोजन का पक्ष दोहराया था। सर्वोच्च न्यायालय ने वह इनकार रद्द कर मामला वापस भेजा और कहा कि निश्चित अवधि की सज़ाओं में अपीलीय अदालतों को निलंबन की ओर झुकना चाहिए, जब तक कि कोई बाध्यकारी कारण न हो, क्योंकि वरना पूरी सज़ा पहले कट जाए तो अपील ही निरर्थक हो जाएगी। दोषसिद्धि के बाद सज़ा-निलंबन की हर अर्ज़ी के लिए यह मामला व्यावहारिक मार्गदर्शक है।"
+      },
+      "pdfUrl": "https://indiankanoon.org/search/?formInput=Aasif%20v.%20State%20of%20U.P.",
+      "sourceName": "Indian Kanoon",
+      "caseNameHi": "आसिफ उर्फ पाशा बनाम उत्तर प्रदेश राज्य",
+      "sections": [
+        "CRPC 389",
+        "IPC 354",
+        "BNS 74",
+        "POCSO 7",
+        "POCSO 8"
+      ]
+    },
+    {
+      "caseName": "State of Uttar Pradesh v. Mohd. Arshad Khan",
+      "citation": "2025 LiveLaw (SC) 1243",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "year": 2025,
+      "summary": {
+        "en": "The Allahabad High Court refused to quash an FIR in a forgery and arms-licence case but still gave the accused protection from arrest until cognizance and ordered the investigation finished in ninety days. The Supreme Court struck down both directions, holding that protection from arrest after refusing to quash is anticipatory bail in disguise, granted without applying the statutory tests. The ruling draws a firm line for every quashing petition: courts cannot refuse relief and hand it back through the back door.",
+        "hi": "इलाहाबाद उच्च न्यायालय ने जालसाज़ी और शस्त्र-लाइसेंस के मामले में प्राथमिकी रद्द करने से इनकार कर दिया, फिर भी अभियुक्तों को संज्ञान तक गिरफ्तारी से सुरक्षा दे दी और जांच नब्बे दिन में पूरी करने का आदेश दे दिया। सर्वोच्च न्यायालय ने दोनों निर्देश रद्द कर दिए और कहा कि रद्द करने से इनकार के बाद गिरफ्तारी से सुरक्षा छिपी हुई अग्रिम ज़मानत है, जो वैधानिक परीक्षणों के बिना दी गई थी। यह फैसला हर रद्द करने की याचिका के लिए स्पष्ट सीमा खींचता है: अदालतें राहत से इनकार करके उसे पिछले दरवाज़े से वापस नहीं दे सकतीं।"
+      },
+      "pdfUrl": "https://indiankanoon.org/search/?formInput=State%20of%20U.P.%20v.%20Mohd.%20Arshad%20Khan",
+      "sourceName": "Indian Kanoon",
+      "caseNameHi": "उत्तर प्रदेश राज्य बनाम मोहम्मद अरशद खान",
+      "sections": [
+        "ART 226",
+        "CRPC 482",
+        "BNSS 528",
+        "CRPC 438",
+        "BNSS 482",
+        "IPC 420",
+        "BNS 318"
+      ]
+    },
+    {
+      "caseName": "Manjeet Singh v. State of Uttar Pradesh",
+      "citation": "",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "year": 2025,
+      "summary": {
+        "en": "The Allahabad High Court refused to entertain anticipatory-bail pleas because the applicant had not first approached the Sessions Court. The Supreme Court set aside that refusal, holding that the High Court and the Sessions Court hold concurrent power over anticipatory bail, so approaching the Sessions Court first is not a rule of law. The High Court was directed to consider the pleas afresh and decide whether the facts warranted its jurisdiction at the first instance.",
+        "hi": "इलाहाबाद उच्च न्यायालय ने अग्रिम-ज़मानत की अर्ज़ियां इसलिए सुनने से इनकार कर दिया क्योंकि आवेदक ने पहले सत्र न्यायालय का दरवाज़ा नहीं खटखटाया था। सर्वोच्च न्यायालय ने वह इनकार रद्द कर दिया और कहा कि अग्रिम ज़मानत पर उच्च न्यायालय और सत्र न्यायालय दोनों की समवर्ती शक्ति है, इसलिए पहले सत्र न्यायालय जाना कानून का नियम नहीं है। उच्च न्यायालय को अर्ज़ियों पर नए सिरे से विचार करने और यह तय करने का निर्देश दिया गया कि क्या तथ्य पहली बार में ही उसके क्षेत्राधिकार को उचित ठहराते हैं।"
+      },
+      "pdfUrl": "https://indiankanoon.org/search/?formInput=Manjeet%20Singh%20v.%20State%20of%20Uttar%20Pradesh",
+      "sourceName": "Indian Kanoon",
+      "caseNameHi": "मंजीत सिंह बनाम उत्तर प्रदेश राज्य",
+      "sections": [
+        "CRPC 438",
+        "BNSS 482",
+        "ART 21"
+      ]
+    },
+    {
+      "caseName": "Ankit Bharti v. State of Uttar Pradesh",
+      "citation": "2020 SCC OnLine All 1949",
+      "court": {
+        "en": "Allahabad High Court",
+        "hi": "इलाहाबाद उच्च न्यायालय"
+      },
+      "year": 2020,
+      "summary": {
+        "en": "A five-judge bench of the Allahabad High Court settled when an accused may approach the High Court directly for anticipatory bail without first going to the Sessions Court. The bench held that the law gives both courts concurrent power, so no rule forces the Sessions Court to be approached first — but strong, special circumstances must be shown and proved, not merely asserted. The decision still governs direct anticipatory-bail practice in Uttar Pradesh and is cited across India.",
+        "hi": "इलाहाबाद उच्च न्यायालय की पांच न्यायाधीशों की पीठ ने तय किया कि अभियुक्त कब सत्र न्यायालय जाए बिना सीधे उच्च न्यायालय में अग्रिम ज़मानत मांग सकता है। पीठ ने कहा कि कानून दोनों अदालतों को समवर्ती शक्ति देता है, इसलिए पहले सत्र न्यायालय जाना अनिवार्य नहीं है — पर मज़बूत, विशेष परिस्थितियां दिखानी और साबित करनी होंगी, केवल कहना काफी नहीं है। यह फैसला उत्तर प्रदेश में सीधी अग्रिम-ज़मानत प्रथा को अब भी संचालित करता है और पूरे भारत में उद्धृत होता है।"
+      },
+      "pdfUrl": "https://indiankanoon.org/search/?formInput=Ankit%20Bharti%20v.%20State%20of%20U.P.",
+      "sourceName": "Indian Kanoon",
+      "caseNameHi": "अंकित भारती बनाम उत्तर प्रदेश राज्य",
+      "sections": [
+        "CRPC 438",
+        "BNSS 482",
+        "ART 21"
+      ]
+    },
+    {
+      "caseName": "Prashant Shukla v. State of Uttar Pradesh",
+      "citation": "2025:AHC-LKO:25462",
+      "court": {
+        "en": "Allahabad High Court",
+        "hi": "इलाहाबाद उच्च न्यायालय"
+      },
+      "year": 2025,
+      "summary": {
+        "en": "A 21-year-old engineering student sought anticipatory bail in a dowry-death case after his earlier petition to quash the FIR had been withdrawn. The Allahabad High Court held that giving up a quashing petition does not bar an anticipatory-bail plea, because the two remedies rest on different grounds and each must be judged on its own merits. Noting that the post-mortem pointed to hanging and that no specific act was attributed to the young applicant, the Court granted him anticipatory bail.",
+        "hi": "21 वर्षीय इंजीनियरिंग छात्र ने दहेज-मृत्यु के मामले में अग्रिम ज़मानत मांगी, जबकि प्राथमिकी रद्द करने की उसकी पहले की याचिका वापस ले ली गई थी। इलाहाबाद उच्च न्यायालय ने कहा कि रद्द करने की याचिका छोड़ देना अग्रिम-ज़मानत की अर्ज़ी पर रोक नहीं लगाता, क्योंकि दोनों उपचार अलग-अलग आधारों पर टिके हैं और हर एक को अपने गुणों पर परखा जाना चाहिए। पोस्टमार्टम में फांसी का संकेत और युवा आवेदक पर कोई विशिष्ट कृत्य न होने को देखते हुए न्यायालय ने उसे अग्रिम ज़मानत दे दी।"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/157745632/",
+      "sourceName": "Indian Kanoon",
+      "caseNameHi": "प्रशांत शुक्ला बनाम उत्तर प्रदेश राज्य",
+      "sections": [
+        "BNSS 482",
+        "CRPC 438",
+        "BNS 80",
+        "BNS 85",
+        "Dowry Prohibition Act 3",
+        "Dowry Prohibition Act 4"
+      ]
+    },
+    {
+      "caseName": "Randhir v. State of Uttar Pradesh",
+      "citation": "",
+      "court": {
+        "en": "Allahabad High Court",
+        "hi": "इलाहाबाद उच्च न्यायालय"
+      },
+      "year": 2025,
+      "summary": {
+        "en": "A truck cleaner's second bail plea in a case involving over 151 kilograms of ganja was rejected by the Allahabad High Court. The Court held that where contraband exceeds commercial quantity, the twin conditions of Section 37 of the NDPS Act apply strictly, and the mere absence of the forensic report from the charge-sheet papers does not by itself earn bail when the report exists in the case diary. The ruling is a clear statement that procedural slips do not defeat the strict bail bar in commercial-quantity drug cases.",
+        "hi": "151 किलोग्राम से अधिक गांजे के मामले में एक ट्रक क्लीनर की दूसरी ज़मानत अर्ज़ी इलाहाबाद उच्च न्यायालय ने खारिज कर दी। न्यायालय ने कहा कि जहां मादक पदार्थ वाणिज्यिक मात्रा से अधिक हो, वहां एनडीपीएस अधिनियम की धारा 37 की दोहरी शर्तें सख्ती से लागू होती हैं, और आरोप-पत्र के कागज़ों में फोरेंसिक रिपोर्ट का न होना अपने आप ज़मानत नहीं दिलाता, जब वह रिपोर्ट केस डायरी में मौजूद हो। यह फैसला स्पष्ट करता है कि प्रक्रियात्मक चूक वाणिज्यिक मात्रा वाले मादक-द्रव्य मामलों में सख्त ज़मानत-रोक को खत्म नहीं करती।"
+      },
+      "pdfUrl": "https://indiankanoon.org/search/?formInput=Randhir%20v.%20State%20of%20U.P.",
+      "sourceName": "Indian Kanoon",
+      "caseNameHi": "रणधीर बनाम उत्तर प्रदेश राज्य",
+      "sections": [
+        "NDPS 20",
+        "NDPS 37",
+        "NDPS 50",
+        "NDPS 52A",
+        "CRPC 439",
+        "BNSS 483"
+      ]
     }
   ]
 }

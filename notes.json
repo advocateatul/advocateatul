@@ -1193,6 +1193,74 @@
      "hi": "ये क्यों अहम है — ये धाराएं पद के दुरुपयोग के खिलाफ नागरिक का आपराधिक-कानून वाला जवाब हैं, जो विभागीय कार्रवाई और भ्रष्टाचार निवारण अधिनियम के साथ-साथ चलती हैं, जो रिश्वत की बात करता है। और एक काम की ढाल भी याद रखो — सरकारी हैसियत में किए गए कामों के लिए लोक सेवक पर मुकदमा चलाने के लिए अक्सर पहले मंज़ूरी चाहिए होती है, इसलिए मंज़ूरी का सवाल शिकायत दायर करने से पहले जांचना होगा, बाद में नहीं।"
     }
    ]
+  },
+  {
+   "title": {
+    "en": "Snatching (Sec 304 BNS)",
+    "hi": "छिनैती (धारा 304 BNS)"
+   },
+   "sections": "Sec 304 BNS (new offence; no direct general offence of this name in the old IPC)",
+   "cases": "",
+   "points": [
+    {
+     "en": "Snatching is a new, separate offence in BNS, and that is the first thing to notice. Earlier, a chain pulled off a neck or a phone grabbed from a hand was simply charged as theft. Now the law gives that sudden grab its own name, because the way it happens — suddenly, quickly or forcibly — is what frightens people, even when the thing taken is small.",
+     "hi": "छिनैती BNS में एक नया, अलग अपराध है, और सबसे पहले यही बात ध्यान रखनी है। पहले गले से खींची गई चेन या हाथ से छीना गया फ़ोन सिर्फ़ चोरी के रूप में दर्ज होता था। अब कानून ने उस अचानक छीनने को अपना अलग नाम दिया है, क्योंकि उसके होने का तरीक़ा — अचानक, तेज़ी से या बलपूर्वक — ही लोगों को डराता है, चाहे छीनी गई चीज़ छोटी ही क्यों न हो।"
+    },
+    {
+     "en": "The definition is simple once you break it down. Theft becomes snatching when, in order to commit theft, the offender suddenly or quickly or forcibly seizes, secures, grabs or takes away movable property from a person or from that person's possession. All three words matter: sudden, quick, forcible — any one of them can make it snatching.",
+     "hi": "परिभाषा टुकड़ों में तोड़ने पर सरल है। चोरी तब छिनैती बन जाती है, जब चोरी करने के लिए अपराधी अचानक या तेज़ी से या बलपूर्वक किसी व्यक्ति से या उसके कब्ज़े से चल संपत्ति को पकड़ता है, सुरक्षित करता है, छीनता है या ले जाता है। तीनों शब्द मायने रखते हैं: अचानक, तेज़ी से, बलपूर्वक — इनमें से कोई एक भी इसे छिनैती बना सकता है।"
+    },
+    {
+     "en": "Think of the classic examples and the line becomes clear. A man on a motorcycle pulls a woman's chain and speeds away — snatching. A boy runs past, grabs a phone from a hand, and disappears into a lane — snatching. But quietly picking a wallet from a bag lying on a bench, with nobody noticing, is theft, not snatching, because nothing was seized from a person suddenly or forcibly.",
+     "hi": "जाने-पहचाने उदाहरणों से रेखा साफ़ हो जाती है। मोटरसाइकिल पर आया व्यक्ति महिला की चेन खींचकर भाग जाए — छिनैती है। कोई लड़का दौड़ते हुए हाथ से फ़ोन छीनकर गली में ग़ायब हो जाए — छिनैती है। लेकिन बेंच पर रखे बैग से चुपचाप बटुआ उठा लेना, जिसे किसी ने देखा ही न हो, चोरी है, छिनैती नहीं, क्योंकि किसी व्यक्ति से अचानक या बलपूर्वक कुछ छीना ही नहीं गया।"
+    },
+    {
+     "en": "The common confusion is with robbery, and students mix these two up the most. Robbery is wider: it is theft or extortion where the offender causes or attempts to cause death, hurt, wrongful restraint, or fear of these, to someone. Snatching does not need that extra fear or hurt — the sudden grab itself is enough. So every snatching is a kind of theft, but not every snatching is robbery, and not every robbery is snatching.",
+     "hi": "सबसे आम भ्रम लूट से होता है, और छात्र इन्हीं दोनों को सबसे ज़्यादा गड़बड़ाते हैं। लूट व्यापक है: वह चोरी या उद्यापन है, जिसमें अपराधी किसी को मृत्यु, उपहति, सदोष अवरोध, या इनके भय का कारण बनता है या बनाने का प्रयास करता है। छिनैती में यह अतिरिक्त भय या उपहति ज़रूरी नहीं है — अचानक छीनना ही काफ़ी है। इसलिए हर छिनैती एक तरह की चोरी है, लेकिन हर छिनैती लूट नहीं है, और हर लूट छिनैती नहीं है।"
+    },
+    {
+     "en": "Why does the separate offence matter in practice? Because the sudden grab causes a different harm from a quiet theft: the victim is startled, may fall, may be dragged, and may chase the offender into traffic. The law is recognising that shock and risk, not just the value of the chain or phone. That is also why the victim's first account — how suddenly it happened, from which side, on what vehicle — matters so much in these cases.",
+     "hi": "व्यवहार में अलग अपराध का क्या मतलब है? क्योंकि अचानक छीनना चुपचाप की गई चोरी से अलग हानि पहुँचाता है: पीड़ित चौंक जाता है, गिर सकता है, घसीटा जा सकता है, और अपराधी के पीछे भागते हुए यातायात में आ सकता है। कानून चेन या फ़ोन की क़ीमत के साथ-साथ उस सदमे और जोखिम को भी पहचान रहा है। इसीलिए इन मामलों में पीड़ित का पहला विवरण — कितनी अचानक हुआ, किस तरफ़ से, किस वाहन पर — इतना मायने रखता है।"
+    },
+    {
+     "en": "For the exam and for the police station, remember two things together. One, snatching needs a theft first — if there was no intention to take dishonestly, there is no snatching either. Two, the punishment for snatching may extend to three years' imprisonment with fine. Write the section number carefully: it is Sec 304 BNS, and it sits right after theft (Sec 303) in the chapter on offences against property.",
+     "hi": "परीक्षा और थाने, दोनों के लिए दो बातें एक साथ याद रखें। एक, छिनैती के लिए पहले चोरी होना ज़रूरी है — अगर बेईमानी से लेने का इरादा ही नहीं था, तो छिनैती भी नहीं है। दो, छिनैती की सज़ा तीन वर्ष तक के कारावास और जुर्माने तक हो सकती है। धारा का नंबर ध्यान से लिखें: यह धारा 304 BNS है, और संपत्ति के विरुद्ध अपराधों के अध्याय में चोरी (धारा 303) के ठीक बाद आती है।"
+    }
+   ]
+  },
+  {
+   "title": {
+    "en": "Extortion (Sec 308 BNS)",
+    "hi": "उद्यापन (धारा 308 BNS)"
+   },
+   "sections": "Sec 308 BNS (corresponds to Sec 383-389 IPC, consolidated into one section)",
+   "cases": "",
+   "points": [
+    {
+     "en": "Extortion is the offence where the victim hands over the property himself — and that is what makes it different from theft. In theft, the offender takes. In extortion, the offender frightens, and the frightened person delivers. If you remember only one line, remember this: theft takes, extortion makes the victim give.",
+     "hi": "उद्यापन वह अपराध है, जिसमें पीड़ित संपत्ति ख़ुद सौंप देता है — और यही बात इसे चोरी से अलग करती है। चोरी में अपराधी लेता है। उद्यापन में अपराधी डराता है, और डरा हुआ व्यक्ति सौंप देता है। अगर एक ही पंक्ति याद रखनी हो तो यही याद रखें: चोरी में छीना जाता है, उद्यापन में डराकर दिलवाया जाता है।"
+    },
+    {
+     "en": "The section has two ingredients, and both must be present. First, the offender intentionally puts a person in fear of injury to that person or to someone else. Second, by that fear, the offender dishonestly induces the frightened person to deliver property, a valuable security, or a signed or sealed thing that can be converted into a valuable security. Fear alone, without delivery, is not extortion; delivery without fear is not extortion either.",
+     "hi": "इस धारा के दो तत्व हैं, और दोनों का होना ज़रूरी है। पहला, अपराधी जानबूझकर किसी व्यक्ति को उस व्यक्ति या किसी और को क्षति पहुँचाने के भय में डालता है। दूसरा, उस भय से अपराधी डरे हुए व्यक्ति को बेईमानी से संपत्ति, मूल्यवान प्रतिभूति, या हस्ताक्षरित या मुहरबंद चीज़, जिसे मूल्यवान प्रतिभूति में बदला जा सके, सौंपने के लिए प्रेरित करता है। बिना सौंपे सिर्फ़ भय उद्यापन नहीं है; बिना भय के सौंपना भी उद्यापन नहीं है।"
+    },
+    {
+     "en": "Take the everyday examples and test them against the two ingredients. A man threatens to beat up a shopkeeper's son unless the shopkeeper pays money every month — extortion, because fear produced delivery. A caller says a family member is in his custody and will be harmed unless money is sent — extortion, even if the family member was never in custody at all, because the fear was real to the victim.",
+     "hi": "रोज़ के उदाहरणों को दोनों तत्वों पर कसकर देखें। कोई व्यक्ति दुकानदार के बेटे को पीटने की धमकी देकर हर महीने पैसा माँगे — उद्यापन है, क्योंकि भय से सौंपना हुआ। कोई कॉलर कहे कि परिवार का सदस्य उसके कब्ज़े में है और पैसा न भेजा तो उसे हानि पहुँचाई जाएगी — उद्यापन है, भले ही वह सदस्य सच में कभी कब्ज़े में रहा ही न हो, क्योंकि पीड़ित के लिए भय वास्तविक था।"
+    },
+    {
+     "en": "Students confuse extortion with cheating, so fix the difference now. In cheating, the victim is deceived — the victim believes something false and delivers property because of that false belief. In extortion, the victim is frightened — the victim may know exactly what is happening and still delivers, because of fear of injury. Deception points to cheating; fear points to extortion. A case can have both, but the two offences ask different questions.",
+     "hi": "छात्र उद्यापन को छल से गड़बड़ाते हैं, इसलिए अंतर अभी पक्का कर लें। छल में पीड़ित को धोखा दिया जाता है — पीड़ित किसी झूठी बात पर विश्वास करके संपत्ति सौंपता है। उद्यापन में पीड़ित को डराया जाता है — पीड़ित को ठीक-ठीक पता हो सकता है कि क्या हो रहा है, फिर भी क्षति के भय से सौंप देता है। धोखा छल की ओर इशारा करता है; भय उद्यापन की ओर। किसी मामले में दोनों हो सकते हैं, लेकिन दोनों अपराध अलग सवाल पूछते हैं।"
+    },
+    {
+     "en": "The section also covers the uglier forms, and this is where punishment rises. Extortion by putting a person in fear of an accusation of a grave offence — for example, threatening to falsely accuse someone of a crime punishable with death, life imprisonment, or ten years or more — is punished more severely, with imprisonment extending to ten years. The law is saying, plainly, that threatening someone's freedom is worse than threatening a slap.",
+     "hi": "यह धारा बुरे रूपों को भी समेटती है, और यहीं सज़ा बढ़ जाती है। किसी गंभीर अपराध के आरोप के भय में डालकर उद्यापन — जैसे किसी को झूठा आरोप लगाकर मृत्यु, आजीवन कारावास, या दस वर्ष या अधिक की सज़ा वाले अपराध में फँसाने की धमकी — अधिक कठोर सज़ा से दंडित होता है, जिसमें कारावास दस वर्ष तक हो सकता है। कानून साफ़ कह रहा है कि किसी की स्वतंत्रता को धमकाना, थप्पड़ की धमकी से बुरा है।"
+    },
+    {
+     "en": "For practice, the victim's statement is the backbone of an extortion case, because fear lives in words and messages. Preserve the threat exactly as it came — the message, the call recording, the letter — and note who else heard it. And remember the line with robbery: extortion becomes robbery when the offender, at the time of the offence, causes or attempts to cause death, hurt, wrongful restraint, or fear of these, in the victim's presence. Threats from a distance are extortion; threats face to face with immediate force are a different, graver story.",
+     "hi": "व्यवहार में पीड़ित का बयान उद्यापन के मामले की रीढ़ होता है, क्योंकि भय शब्दों और संदेशों में रहता है। धमकी को जैसी आई है, वैसी ही सुरक्षित रखें — संदेश, कॉल रिकॉर्डिंग, पत्र — और यह भी नोट करें कि उसे और किसने सुना। और लूट से रेखा याद रखें: उद्यापन तब लूट बन जाता है, जब अपराधी अपराध के समय पीड़ित की उपस्थिति में मृत्यु, उपहति, सदोष अवरोध, या इनके भय का कारण बनता है या बनाने का प्रयास करता है। दूरी से दी गई धमकियाँ उद्यापन हैं; आमने-सामने तत्काल बल के साथ दी गई धमकियाँ अलग, अधिक गंभीर कहानी हैं।"
+    }
+   ]
   }
  ],
  "bnss": [
@@ -2241,6 +2309,74 @@
      "hi": "चरण क्यों अहम हैं — हर चरण की विफलता का अपना उपचार है। इनकार की गई FIR अधीक्षक के पास और फिर मजिस्ट्रेट के पास जाती है; अनुचित जांच को पुलिस रिपोर्ट पर मजिस्ट्रेट के सामने चुनौती दी जा सकती है; गैरकानूनी रिमांड को तुरंत चुनौती दी जा सकती है। कौन सा चरण विफल हुआ, ये जानना ही बताता है कि किस दरवाज़े पर दस्तक देनी है — और यही आपराधिक प्रैक्टिस का आधा हिस्सा है।"
     }
    ]
+  },
+  {
+   "title": {
+    "en": "Default Bail (Sec 187 BNSS)",
+    "hi": "डिफ़ॉल्ट ज़मानत (धारा 187 BNSS)"
+   },
+   "sections": "Sec 187 BNSS (corresponds to Sec 167 CrPC; the default-bail rule is in Sec 187)",
+   "cases": "",
+   "points": [
+    {
+     "en": "Default bail is the simplest idea in bail law, and the easiest to miss. If the police do not finish the investigation and file the chargesheet within the time the law allows, the accused in custody becomes entitled to bail — not because the case is weak, but because the State has run out of time to keep a person locked up without a chargesheet. It is also called statutory bail, because the right comes from the statute itself.",
+     "hi": "डिफ़ॉल्ट ज़मानत ज़मानत कानून का सबसे सरल विचार है, और सबसे आसानी से छूट जाने वाला भी। अगर पुलिस कानून में दी गई अवधि में जाँच पूरी करके आरोप-पत्र दाखिल नहीं करती, तो हिरासत में बंद अभियुक्त ज़मानत का हक़दार हो जाता है — इसलिए नहीं कि मामला कमज़ोर है, बल्कि इसलिए कि आरोप-पत्र के बिना किसी व्यक्ति को बंद रखते रहने का राज्य का समय ख़त्म हो गया है। इसे वैधानिक ज़मानत भी कहते हैं, क्योंकि यह अधिकार ख़ुद कानून से मिलता है।"
+    },
+    {
+     "en": "The time limits are two, and students must not mix them up. It is ninety days where the investigation relates to an offence punishable with death, imprisonment for life, or imprisonment for a term of ten years or more. It is sixty days for any other offence. The clock is about the punishment the offence carries, not about how serious the case feels to the police or the public.",
+     "hi": "समय-सीमाएँ दो हैं, और छात्रों को इन्हें गड़बड़ाना नहीं चाहिए। नब्बे दिन वहाँ, जहाँ जाँच ऐसे अपराध से जुड़ी हो, जिसकी सज़ा मृत्यु, आजीवन कारावास, या दस वर्ष या अधिक का कारावास हो। साठ दिन किसी और अपराध के लिए। यह घड़ी अपराध की सज़ा पर चलती है, न कि इस पर कि मामला पुलिस या जनता को कितना गंभीर लगता है।"
+    },
+    {
+     "en": "The right is strong, but it is not automatic, and this is the trap. The accused must apply for bail after the period ends and before the chargesheet is filed, and must be ready to furnish bail. If the chargesheet is filed first, before the application is made, the right is lost, and bail must then be sought on the merits. Families who wait for the court to act on its own often lose the very right they had.",
+     "hi": "यह अधिकार मज़बूत है, लेकिन अपने आप नहीं मिलता, और यही जाल है। अभियुक्त को अवधि ख़त्म होने के बाद और आरोप-पत्र दाखिल होने से पहले ज़मानत के लिए आवेदन करना होता है, और ज़मानत देने के लिए तैयार रहना होता है। अगर आवेदन से पहले आरोप-पत्र दाखिल हो जाए, तो यह अधिकार ख़त्म हो जाता है, और फिर ज़मानत गुण-दोष के आधार पर ही माँगनी पड़ती है। जो परिवार न्यायालय के ख़ुद कार्रवाई करने का इंतज़ार करते हैं, वे अक्सर वही अधिकार खो देते हैं जो उनके पास था।"
+    },
+    {
+     "en": "The counting of days is where lawyers earn their fee. The period runs from the date the Magistrate first authorises detention, and the day of first remand counts in the calculation. An incomplete chargesheet — a paper filed only to stop the clock, without completing the investigation — does not defeat the right. If you are counting, count from the first remand order, and check the chargesheet itself, not just its filing date.",
+     "hi": "दिनों की गिनती वह जगह है, जहाँ वकील की मेहनत काम आती है। अवधि उस तारीख से चलती है, जिस दिन मजिस्ट्रेट ने पहली बार अभिरक्षा अधिकृत की थी, और पहली रिमांड का दिन गिनती में शामिल होता है। अधूरा आरोप-पत्र — सिर्फ़ घड़ी रोकने के लिए दाखिल किया गया काग़ज़, बिना जाँच पूरी किए — इस अधिकार को ख़त्म नहीं करता। अगर आप गिन रहे हैं, तो पहले रिमांड आदेश से गिनें, और सिर्फ़ दाखिल करने की तारीख नहीं, आरोप-पत्र को ख़ुद भी देखें।"
+    },
+    {
+     "en": "Special laws can change the clock, so never quote sixty or ninety days blindly. Some special enactments prescribe longer investigation periods — for example, certain narcotics offences allow a longer period, extendable by the court. Always ask: is this a general BNSS case, or does a special law set its own period? The answer changes the date on which default bail accrues.",
+     "hi": "विशेष कानून घड़ी बदल सकते हैं, इसलिए साठ या नब्बे दिन आँख बंद करके कभी न बोलें। कुछ विशेष अधिनियम लंबी जाँच अवधि तय करते हैं — जैसे कुछ मादक-पदार्थ अपराधों में लंबी अवधि, जिसे न्यायालय बढ़ा सकता है। हमेशा पूछें: क्या यह सामान्य BNSS मामला है, या कोई विशेष कानून अपनी अलग अवधि तय करता है? जवाब से ही वह तारीख बदलती है, जिस दिन डिफ़ॉल्ट ज़मानत का अधिकार बनता है।"
+    },
+    {
+     "en": "Finally, do not confuse default bail with acquittal, and do not let a client confuse them either. Default bail releases the accused from custody; it does not end the case, does not erase the chargesheet if one is later filed, and does not mean the accused is innocent. The trial goes on, and bail conditions still apply. The right is about liberty during investigation — a powerful right, but a narrow one, and that narrowness is exactly why it works.",
+     "hi": "अंत में, डिफ़ॉल्ट ज़मानत को दोषमुक्ति से गड़बड़ाएँ नहीं, और मुवक्किल को भी गड़बड़ाने न दें। डिफ़ॉल्ट ज़मानत अभियुक्त को हिरासत से छोड़ती है; यह मामला ख़त्म नहीं करती, बाद में दाखिल होने वाले आरोप-पत्र को मिटाती नहीं, और इसका मतलब यह नहीं कि अभियुक्त निर्दोष है। मुकदमा चलता रहता है, और ज़मानत की शर्तें लागू रहती हैं। यह अधिकार जाँच के दौरान स्वतंत्रता के बारे में है — एक शक्तिशाली अधिकार, लेकिन संकीर्ण, और यही संकीर्णता इसीलिए इसे काम करती है।"
+    }
+   ]
+  },
+  {
+   "title": {
+    "en": "Security for Keeping the Peace and Good Behaviour (Sec 125-143 BNSS)",
+    "hi": "शांति बनाए रखने व सदाचार की प्रतिभूति (धारा 125-143 BNSS)"
+   },
+   "sections": "Sec 125-143 BNSS (correspond to the CrPC security provisions, e.g. Sec 106-111 CrPC for Sec 125-130 BNSS)",
+   "cases": "",
+   "points": [
+    {
+     "en": "This chapter is preventive justice, and that phrase is the key to the whole topic. Normal criminal law punishes after an offence. These sections act before an offence, where there is a real apprehension that a person will disturb the peace or behave badly. The State does not wait for the breach and then punish it; it asks the person to give a bond for good behaviour first.",
+     "hi": "यह अध्याय निवारक न्याय है, और यही वाक्यांश पूरे विषय की कुंजी है। सामान्य आपराधिक कानून अपराध के बाद दंड देता है। ये धाराएँ अपराध से पहले काम करती हैं, जहाँ सच में आशंका हो कि कोई व्यक्ति शांति भंग करेगा या बुरा व्यवहार करेगा। राज्य भंग होने का इंतज़ार करके फिर दंड नहीं देता; वह पहले ही व्यक्ति से सदाचार की प्रतिभूति माँगता है।"
+    },
+    {
+     "en": "There are two families inside the chapter, and keeping them apart saves confusion. Security for keeping the peace is taken under Sec 125 on conviction — when a court convicting a person thinks security is necessary — and under Sec 126 in other cases, where an Executive Magistrate acts on information that a person is likely to breach the peace. Security for good behaviour is different: it targets particular kinds of persons, not a single expected breach.",
+     "hi": "इस अध्याय के अंदर दो परिवार हैं, और इन्हें अलग रखना भ्रम से बचाता है। शांति बनाए रखने की प्रतिभूति धारा 125 के तहत दोषसिद्धि पर ली जाती है — जब दोषसिद्ध करने वाला न्यायालय प्रतिभूति ज़रूरी समझे — और धारा 126 के तहत अन्य मामलों में, जहाँ कार्यपालक मजिस्ट्रेट इस सूचना पर कार्रवाई करता है कि कोई व्यक्ति शांति भंग कर सकता है। सदाचार की प्रतिभूति अलग है: यह किसी एक अपेक्षित भंग को नहीं, बल्कि ख़ास तरह के व्यक्तियों को निशाना बनाती है।"
+    },
+    {
+     "en": "The good-behaviour categories are worth learning one by one. Sec 127 covers persons disseminating matters that amount to offences against public order or that intimidate or defame a judge. Sec 128 covers suspected persons who take precautions to conceal their presence, with reason to believe they intend a cognizable offence. Sec 129 covers habitual offenders — persons repeatedly involved in serious crime. Each category has its own trigger, and the Magistrate cannot jump from one to another casually.",
+     "hi": "सदाचार की श्रेणियाँ एक-एक करके सीखने लायक़ हैं। धारा 127 उन व्यक्तियों को समेटती है, जो लोक व्यवस्था के विरुद्ध अपराधों वाली बातें फैलाते हैं, या किसी न्यायाधीश को डराते या बदनाम करते हैं। धारा 128 संदिग्ध व्यक्तियों को समेटती है, जो अपनी उपस्थिति छिपाने की सावधानियाँ बरतते हैं, और यह मानने का कारण हो कि वे संज्ञेय अपराध करना चाहते हैं। धारा 129 आदी अपराधियों को समेटती है — जो गंभीर अपराध में बार-बार शामिल रहे हों। हर श्रेणी का अपना कारण है, और मजिस्ट्रेट एक से दूसरी पर यूँ ही नहीं कूद सकता।"
+    },
+    {
+     "en": "The procedure is also a protection, not just a formality. The Magistrate makes an order in writing, stating the substance of the information, the amount of the bond, its term, and the number and fitness of sureties, and the person gets a chance to show cause why security should not be taken. This is not punishment without a hearing. A bond taken without following this procedure is vulnerable, and that is often the strongest argument in such cases.",
+     "hi": "प्रक्रिया भी सिर्फ़ औपचारिकता नहीं, बल्कि एक सुरक्षा है। मजिस्ट्रेट लिखित आदेश करता है, जिसमें सूचना का सार, प्रतिभूति की राशि, उसकी अवधि, और ज़मानतदारों की संख्या व उपयुक्तता होती है, और व्यक्ति को यह कारण बताने का मौक़ा मिलता है कि प्रतिभूति क्यों न ली जाए। यह बिना सुनवाई की सज़ा नहीं है। प्रक्रिया का पालन किए बिना ली गई प्रतिभूति कमज़ोर होती है, और ऐसे मामलों में अक्सर यही सबसे मज़बूत तर्क होता है।"
+    },
+    {
+     "en": "The periods matter, so learn them with the sections. Security for keeping the peace in other cases (Sec 126) is generally for up to one year. Security on conviction (Sec 125) may extend to three years. Good-behaviour bonds under Sec 127 and 128 are generally up to one year, while for habitual offenders under Sec 129 the period may extend to three years. If a question asks only for the period, the section number in the question tells you the answer.",
+     "hi": "अवधियाँ मायने रखती हैं, इसलिए इन्हें धाराओं के साथ सीखें। अन्य मामलों में शांति बनाए रखने की प्रतिभूति (धारा 126) आमतौर पर एक वर्ष तक की होती है। दोषसिद्धि पर प्रतिभूति (धारा 125) तीन वर्ष तक हो सकती है। धारा 127 और 128 के तहत सदाचार की प्रतिभूति आमतौर पर एक वर्ष तक की होती है, जबकि धारा 129 के तहत आदी अपराधियों के लिए अवधि तीन वर्ष तक हो सकती है। अगर प्रश्न सिर्फ़ अवधि पूछे, तो प्रश्न में दी गई धारा ही उत्तर बता देती है।"
+    },
+    {
+     "en": "The confusion to avoid is treating a security proceeding as a trial. It is not a trial, and the bond is not a sentence for a crime already committed. The person is not being punished for the past; the person is being bound for the future. If the bond is broken, the amount may be forfeited and further action may follow — but that consequence comes from breaking the bond, not from the original apprehension alone. Prevention, not punishment, is the whole point.",
+     "hi": "जिस भ्रम से बचना है, वह प्रतिभूति कार्यवाही को मुकदमा समझना है। यह मुकदमा नहीं है, और प्रतिभूति पहले से किए गए अपराध की सज़ा नहीं है। व्यक्ति को अतीत के लिए दंडित नहीं किया जा रहा; व्यक्ति को भविष्य के लिए बाँधा जा रहा है। अगर प्रतिभूति टूट जाए, तो राशि ज़ब्त हो सकती है और आगे कार्रवाई हो सकती है — लेकिन वह परिणाम प्रतिभूति टूटने से आता है, सिर्फ़ मूल आशंका से नहीं। निवारण ही पूरी बात है, दंड नहीं।"
+    }
+   ]
   }
  ],
  "bsa": [
@@ -3121,6 +3257,74 @@
     {
      "en": "And the presumption is rebuttable, not final. If the person returns, or credible evidence shows he is alive — a letter, a sighting proved in court, a record of his living elsewhere — the presumption falls, and everything built on it must be revisited. The law presumes death to let life go on for those left behind, not to erase a living person.",
      "hi": "और ये उपधारणा खंडनीय है, अंतिम नहीं। अगर व्यक्ति लौट आए, या विश्वसनीय साक्ष्य दिखाए कि वो ज़िंदा है — कोई पत्र, अदालत में साबित कोई देखा जाना, उसके कहीं और रहने का रिकॉर्ड — तो उपधारणा गिर जाती है, और उस पर बनी हर चीज़ को दोबारा देखना होगा। कानून मृत्यु की उपधारणा इसलिए करता है ताकि पीछे रह गए लोगों का जीवन चल सके, किसी ज़िंदा व्यक्ति को मिटाने के लिए नहीं।"
+    }
+   ]
+  },
+  {
+   "title": {
+    "en": "Leading Questions (Sec 146 BSA)",
+    "hi": "सूचक प्रश्न (धारा 146 BSA)"
+   },
+   "sections": "Sec 146 BSA (corresponds to Sec 141-143 Indian Evidence Act, consolidated)",
+   "cases": "",
+   "points": [
+    {
+     "en": "A leading question is a question that suggests its own answer. 'You were at the shop that night, weren't you?' is a leading question, because it hands the witness the answer — yes — and asks only for agreement. 'Where were you that night?' is not, because the witness must supply the answer from memory. The difference is small in words and huge in effect, because a witness who only agrees is not really testifying.",
+     "hi": "सूचक प्रश्न वह है, जो अपना उत्तर ख़ुद सुझाता है। 'आप उस रात दुकान पर थे, है न?' सूचक प्रश्न है, क्योंकि यह गवाह को उत्तर — हाँ — थमा देता है, और सिर्फ़ सहमति माँगता है। 'उस रात आप कहाँ थे?' सूचक नहीं है, क्योंकि गवाह को उत्तर अपनी याद से देना होता है। शब्दों में अंतर छोटा है, असर में बहुत बड़ा है, क्योंकि जो गवाह सिर्फ़ सहमति देता है, वह असल में गवाही नहीं दे रहा।"
+    },
+    {
+     "en": "The rule in Sec 146 has four parts, and they are best learned in order. One, any question suggesting the answer which the person putting it wishes or expects to receive is a leading question. Two, leading questions must not, if objected to by the adverse party, be asked in examination-in-chief or in re-examination, except with the permission of the court. Three, the court shall permit leading questions on matters that are introductory or undisputed, or already sufficiently proved. Four, leading questions may be asked in cross-examination.",
+     "hi": "धारा 146 का नियम चार हिस्सों में है, और इन्हें क्रम से सीखना सबसे अच्छा है। एक, कोई भी प्रश्न जो वह उत्तर सुझाता है, जिसे पूछने वाला चाहता है या पाने की उम्मीद करता है, सूचक प्रश्न कहलाता है। दो, मुख्य परीक्षा या पुनः परीक्षा में सूचक प्रश्न नहीं पूछे जाने चाहिए, अगर विरोधी पक्ष आपत्ति करे, सिवाय न्यायालय की अनुमति के। तीन, न्यायालय प्रारंभिक या निर्विवाद बातों, या पहले से पर्याप्त रूप से साबित बातों पर सूचक प्रश्नों की अनुमति देगा। चार, प्रतिपरीक्षा में सूचक प्रश्न पूछे जा सकते हैं।"
+    },
+    {
+     "en": "Why the difference between stages? Because the purpose of each stage is different. Examination-in-chief exists to let the witness tell their own story in their own words. If the lawyer supplies the story through leading questions, the court never hears the witness — it hears the lawyer. Cross-examination exists for the opposite purpose: to test and challenge, and testing works best when the cross-examiner can put a proposition directly and demand agreement or denial.",
+     "hi": "चरणों में अंतर क्यों है? क्योंकि हर चरण का उद्देश्य अलग है। मुख्य परीक्षा इसलिए होती है, ताकि गवाह अपनी कहानी अपने शब्दों में बता सके। अगर वकील सूचक प्रश्नों से कहानी ख़ुद ही थमा दे, तो न्यायालय गवाह को कभी सुनता ही नहीं — वह वकील को सुनता है। प्रतिपरीक्षा विपरीत उद्देश्य से होती है: परखना और चुनौती देना, और परख सबसे अच्छी तब होती है, जब प्रतिपरीक्षक सीधे कोई बात रखकर सहमति या इनकार माँग सके।"
+    },
+    {
+     "en": "The exceptions in examination-in-chief are practical, and examiners love asking about them. Introductory matters — 'You are the manager of this bank, correct?' — may be led, because nobody disputes them and leading saves time. Undisputed matters and matters already sufficiently proved are treated the same way. The court, not the lawyer, decides whether a matter falls in these exceptions, and the objection of the adverse party is what triggers the bar in the first place.",
+     "hi": "मुख्य परीक्षा में अपवाद व्यावहारिक हैं, और परीक्षक इनके बारे में पूछना पसंद करते हैं। प्रारंभिक बातें — 'आप इस बैंक के प्रबंधक हैं, सही है?' — सूचक रूप में पूछी जा सकती हैं, क्योंकि इन पर कोई विवाद नहीं है और सूचक प्रश्न से समय बचता है। निर्विवाद बातों और पहले से पर्याप्त रूप से साबित बातों से भी ऐसा ही व्यवहार होता है। कोई बात इन अपवादों में आती है या नहीं, यह वकील नहीं, न्यायालय तय करता है, और विरोधी पक्ष की आपत्ति ही सबसे पहले रोक लगाती है।"
+    },
+    {
+     "en": "A common confusion is thinking that an objection automatically kills the question. It does not. The objection invites the court to decide: is this question truly leading, and if so, does an exception apply or should permission be given? A question can suggest an answer softly — by tone, by framing, by a string of facts — and still be leading in substance. Judges look at what the question does, not only at whether it ends with 'isn't it?' or 'correct?'.",
+     "hi": "एक आम भ्रम यह है कि आपत्ति अपने आप प्रश्न को ख़त्म कर देती है। ऐसा नहीं है। आपत्ति न्यायालय को निर्णय के लिए बुलाती है: क्या यह प्रश्न सच में सूचक है, और अगर है, तो क्या कोई अपवाद लागू होता है या अनुमति देनी चाहिए? कोई प्रश्न धीरे से भी उत्तर सुझा सकता है — लहज़े से, बनावट से, तथ्यों की शृंखला से — और फिर भी सार में सूचक हो सकता है। न्यायाधीश सिर्फ़ यह नहीं देखते कि प्रश्न 'है न?' या 'सही है?' पर ख़त्म होता है या नहीं, बल्कि यह देखते हैं कि प्रश्न करता क्या है।"
+    },
+    {
+     "en": "For courtroom practice, the habit to build is simple: in chief, ask open questions — who, what, where, when, how — and save the yes-or-no questions for cross. If you must lead in chief, ask the court's permission first and state the reason, usually that the matter is introductory or undisputed. A lawyer who leads freely in chief does not look confident; the lawyer looks like someone whose witness cannot speak without help, and courts notice that.",
+     "hi": "न्यायालयीन अभ्यास के लिए बनाने वाली आदत सरल है: मुख्य परीक्षा में खुले प्रश्न पूछें — कौन, क्या, कहाँ, कब, कैसे — और हाँ-या-ना वाले प्रश्न प्रतिपरीक्षा के लिए बचाकर रखें। अगर मुख्य परीक्षा में सूचक प्रश्न पूछना ही पड़े, तो पहले न्यायालय की अनुमति माँगें और कारण बताएँ, आमतौर पर यही कि बात प्रारंभिक या निर्विवाद है। जो वकील मुख्य परीक्षा में खुलकर सूचक प्रश्न पूछता है, वह आत्मविश्वासी नहीं दिखता; वह ऐसा दिखता है, जिसका गवाह बिना मदद के बोल ही नहीं सकता, और न्यायालय इसे नोट करता है।"
+    }
+   ]
+  },
+  {
+   "title": {
+    "en": "Presumption as to Abetment of Suicide by a Married Woman (Sec 117 BSA)",
+    "hi": "विवाहित महिला द्वारा आत्महत्या के दुष्प्रेरण की उपधारणा (धारा 117 BSA)"
+   },
+   "sections": "Sec 117 BSA (corresponds to Sec 113A Indian Evidence Act)",
+   "cases": "",
+   "points": [
+    {
+     "en": "This presumption answers a painful question: when a married woman dies by suicide, and her husband or his relatives are accused of abetting it, what should the court assume? Sec 117 says the court may presume, having regard to all the other circumstances of the case, that the suicide was abetted by the husband or his relative. The word 'may' is doing heavy work here — this is a discretionary presumption, not an automatic conclusion.",
+     "hi": "यह उपधारणा एक पीड़ादायक प्रश्न का उत्तर देती है: जब कोई विवाहित महिला आत्महत्या से मर जाती है, और उसके पति या उसके रिश्तेदारों पर दुष्प्रेरण का आरोप लगता है, तो न्यायालय को क्या मानना चाहिए? धारा 117 कहती है कि न्यायालय, मामले की अन्य सभी परिस्थितियों को ध्यान में रखते हुए, यह उपधारणा कर सकता है कि आत्महत्या पति या उसके रिश्तेदार द्वारा दुष्प्रेरित की गई थी। यहाँ 'सकता है' शब्द भारी काम कर रहा है — यह विवेकाधीन उपधारणा है, अपने आप निकलने वाला निष्कर्ष नहीं।"
+    },
+    {
+     "en": "Two conditions must both be shown before the presumption can even be considered. First, the woman committed suicide within seven years from the date of her marriage. Second, her husband or a relative of her husband had subjected her to cruelty. If either condition fails — the marriage was older than seven years, or no cruelty is shown — the presumption under this section does not arise at all, though the case itself may still proceed on other evidence.",
+     "hi": "उपधारणा पर विचार करने से पहले दो शर्तों का पूरा होना ज़रूरी है। पहली, महिला ने विवाह की तारीख से सात वर्ष के भीतर आत्महत्या की हो। दूसरी, उसके पति या पति के किसी रिश्तेदार ने उसके प्रति क्रूरता की हो। अगर इनमें से कोई एक शर्त भी पूरी न हो — विवाह सात वर्ष से पुराना हो, या कोई क्रूरता साबित न हो — तो इस धारा के तहत उपधारणा बनती ही नहीं, हालाँकि मामला अन्य साक्ष्य पर अब भी चल सकता है।"
+    },
+    {
+     "en": "'Cruelty' here is not used loosely, and students should not treat every unhappy marriage as cruelty. The cruelty must be of the kind the law recognises in this context — conduct that drives a woman towards suicide, including harassment connected with unlawful demands. A marriage that was merely unhappy, without cruelty of this kind, does not trigger the presumption, however sad the death itself is.",
+     "hi": "'क्रूरता' यहाँ ढीले अर्थ में इस्तेमाल नहीं हुई है, और छात्रों को हर दुखी विवाह को क्रूरता नहीं समझना चाहिए। क्रूरता इस संदर्भ में कानून द्वारा मान्यता प्राप्त तरह की होनी चाहिए — ऐसा आचरण, जो महिला को आत्महत्या की ओर धकेले, जिसमें ग़ैर-क़ानूनी माँगों से जुड़ा उत्पीड़न भी शामिल है। सिर्फ़ दुखी विवाह, इस तरह की क्रूरता के बिना, उपधारणा को जन्म नहीं देता, चाहे मृत्यु ख़ुद कितनी ही दुखद क्यों न हो।"
+    },
+    {
+     "en": "The difference between 'may presume' and 'shall presume' is the most examined point in this topic, so fix it now. 'May presume' means the court has a choice: it may draw the presumption, or it may require further proof, depending on all the circumstances. 'Shall presume' would have meant the court must presume unless the other side disproves it. Sec 117 deliberately uses 'may', because suicide has many possible causes, and the law refuses to turn a tragedy into an automatic conviction.",
+     "hi": "'उपधारणा कर सकता है' और 'उपधारणा करेगा' का अंतर इस विषय का सबसे ज़्यादा पूछा जाने वाला बिंदु है, इसलिए इसे अभी पक्का कर लें। 'कर सकता है' का मतलब है कि न्यायालय के पास विकल्प है: वह उपधारणा कर सकता है, या सभी परिस्थितियों के आधार पर और प्रमाण माँग सकता है। 'करेगा' का मतलब होता कि न्यायालय को उपधारणा करनी ही होगी, जब तक दूसरा पक्ष उसे ग़लत साबित न कर दे। धारा 117 जानबूझकर 'सकता है' इस्तेमाल करती है, क्योंकि आत्महत्या के कई संभावित कारण हो सकते हैं, और कानून किसी त्रासदी को अपने आप दोषसिद्धि में बदलने से इनकार करता है।"
+    },
+    {
+     "en": "Do not confuse this presumption with the presumption in dowry-death cases, which is a different provision with a different strength. The two often appear in the same case — a death within seven years of marriage, with allegations of cruelty and dowry demands — but they answer different questions. One concerns abetment of suicide; the other concerns a death caused by burns or bodily injury under suspicious circumstances. Keep the sections and the questions separate, even when the facts overlap.",
+     "hi": "इस उपधारणा को दहेज़-मृत्यु वाले मामलों की उपधारणा से गड़बड़ाएँ नहीं, जो अलग प्रावधान है और जिसकी शक्ति भी अलग है। दोनों अक्सर एक ही मामले में दिखती हैं — विवाह के सात वर्ष के भीतर मृत्यु, क्रूरता और दहेज़ माँगों के आरोप — लेकिन वे अलग सवालों का जवाब देती हैं। एक आत्महत्या के दुष्प्रेरण से जुड़ी है; दूसरी संदिग्ध परिस्थितियों में जलने या शारीरिक चोट से हुई मृत्यु से। तथ्य चाहे जितने भी मिलते हों, धाराएँ और सवाल अलग रखें।"
+    },
+    {
+     "en": "For practice, the lesson is about evidence, not emotion. The prosecution must first prove the two foundations — suicide within seven years of marriage, and cruelty by the husband or his relative. Only then can it invite the court to draw the presumption. And the defence is entitled to show the other circumstances — the woman's own state of mind, other pressures, the absence of any abetment — because the section itself says the court shall have regard to all the other circumstances of the case. The presumption shifts the argument; it does not end it.",
+     "hi": "व्यवहार के लिए सबक साक्ष्य के बारे में है, भावना के बारे में नहीं। अभियोजन को पहले दो आधार साबित करने होते हैं — विवाह के सात वर्ष के भीतर आत्महत्या, और पति या उसके रिश्तेदार द्वारा क्रूरता। तभी वह न्यायालय से उपधारणा करने का अनुरोध कर सकता है। और बचाव पक्ष को अन्य परिस्थितियाँ दिखाने का हक़ है — महिला की अपनी मानसिक स्थिति, अन्य दबाव, किसी दुष्प्रेरण का अभाव — क्योंकि धारा ख़ुद कहती है कि न्यायालय मामले की अन्य सभी परिस्थितियों को ध्यान में रखेगा। उपधारणा बहस को आगे बढ़ाती है; उसे ख़त्म नहीं करती।"
     }
    ]
   }
@@ -4055,6 +4259,74 @@
     "en": "Attachment Before Judgment (Order XXXVIII CPC)",
     "hi": "निर्णय से पूर्व कुर्की (आदेश 38 सीपीसी)"
    }
+  },
+  {
+   "title": {
+    "en": "Suits by or Against the Government (Sec 79-82 CPC)",
+    "hi": "सरकार के विरुद्ध या सरकार द्वारा वाद (धारा 79-82 CPC)"
+   },
+   "sections": "Sec 79-82 CPC, Order XXVII CPC",
+   "cases": "",
+   "points": [
+    {
+     "en": "The first problem in suing the government is embarrassingly simple: whom do you name? A government is not a person you can point to. Sec 79 answers it. In a suit by or against the Central Government, the authority to be named is the Union of India. In a suit by or against a State Government, it is the State itself, named as that State. Get the name wrong and the suit starts with a defect that could have been avoided in one line.",
+     "hi": "सरकार पर मुकदमा करने में पहली समस्या शर्मनाक रूप से सरल है: नाम किसका लिखें? सरकार कोई ऐसा व्यक्ति नहीं है, जिसकी ओर उँगली उठाई जा सके। धारा 79 इसका उत्तर देती है। केंद्रीय सरकार के विरुद्ध या उसकी ओर से वाद में नामित प्राधिकारी भारत संघ है। राज्य सरकार के विरुद्ध या उसकी ओर से वाद में वही राज्य ही नामित होता है। नाम ग़लत लिखा तो मुकदमा एक ऐसी ख़ामी से शुरू होता है, जो एक पंक्ति में टाली जा सकती थी।"
+    },
+    {
+     "en": "The second problem is notice, and this is where most suits against the government stumble. Under Sec 80, no suit shall be instituted against the government, or against a public officer for an act purporting to be done in official capacity, until two months have expired after notice in writing has been delivered to, or left at, the proper office. The notice must state the cause of action, the plaintiff's name, description and residence, and the relief claimed — and the plaint must contain a statement that such notice was given.",
+     "hi": "दूसरी समस्या नोटिस की है, और यहीं सरकार के विरुद्ध ज़्यादातर वाद लड़खड़ाते हैं। धारा 80 के तहत सरकार के विरुद्ध, या किसी लोक सेवक के विरुद्ध उसके आधिकारिक पद पर किए गए समझे जाने वाले काम के लिए, तब तक कोई वाद दाखिल नहीं किया जा सकता, जब तक उचित कार्यालय में लिखित नोटिस दिए या छोड़े जाने के बाद दो महीने न बीत जाएँ। नोटिस में वाद-कारण, वादी का नाम, विवरण व निवास, और माँगी गई राहत लिखी होनी चाहिए — और वाद-पत्र में यह कथन होना चाहिए कि ऐसा नोटिस दिया गया था।"
+    },
+    {
+     "en": "Why two months? The reason is practical, not ceremonial. The government is a huge machine, and the notice period gives it time to examine the claim, settle it if it is just, and avoid litigation altogether. Students should understand the purpose, not just memorise the period: the notice is a chance for settlement before a suit, and a government that settles on notice has saved both sides years of litigation.",
+     "hi": "दो महीने क्यों? कारण व्यावहारिक है, औपचारिक नहीं। सरकार एक विशाल तंत्र है, और नोटिस की अवधि उसे दावा जाँचने, अगर वह न्यायोचित हो तो उसे निपटाने, और मुकदमेबाज़ी से पूरी तरह बचने का समय देती है। छात्रों को सिर्फ़ अवधि रटनी नहीं, उद्देश्य समझना चाहिए: नोटिस वाद से पहले समझौते का मौक़ा है, और नोटिस पर समझौता करने वाली सरकार दोनों पक्षों के वर्षों के मुकदमे बचा लेती है।"
+    },
+    {
+     "en": "There is an exception students often forget, so note it carefully. Where urgent or immediate relief is sought, a suit may be instituted without serving the full notice, but only with the leave of the court, and the court will not grant interim relief in such a suit except after giving the government a reasonable opportunity of showing cause. Urgency is not a shortcut around notice; it is a guarded door, and the court holds the key.",
+     "hi": "एक अपवाद है, जिसे छात्र अक्सर भूल जाते हैं, इसलिए इसे ध्यान से नोट करें। जहाँ तत्काल राहत माँगी जा रही हो, वहाँ पूरा नोटिस दिए बिना भी वाद दाखिल किया जा सकता है, लेकिन सिर्फ़ न्यायालय की अनुमति से, और ऐसे वाद में न्यायालय सरकार को कारण बताने का उचित अवसर दिए बिना अंतरिम राहत नहीं देगा। तत्कालता नोटिस से बचने का छोटा रास्ता नहीं है; यह एक सुरक्षित दरवाज़ा है, और उसकी चाबी न्यायालय के पास है।"
+    },
+    {
+     "en": "Two further protections complete the picture. Under Sec 81, a public officer sued for an act in official capacity is exempt from arrest and personal appearance, except in execution of a decree — the officer defends through pleaders and papers, not by standing in the box. Under Sec 82, execution of a decree against the government follows a special route, with time given for the government to satisfy the decree. The theme is consistent: the government is treated as a litigant, but not as an ordinary one.",
+     "hi": "दो और सुरक्षाएँ तस्वीर पूरी करती हैं। धारा 81 के तहत आधिकारिक पद पर किए गए काम के लिए मुकदमा झेल रहा लोक सेवक गिरफ़्तारी और व्यक्तिगत उपस्थिति से छूट पाता है, सिवाय डिक्री के निष्पादन के — वह अधिकारी गवाह के कठघरे में खड़े होकर नहीं, बल्कि वकीलों और काग़ज़ों से बचाव करता है। धारा 82 के तहत सरकार के विरुद्ध डिक्री का निष्पादन विशेष रास्ते से होता है, जिसमें सरकार को डिक्री पूरी करने का समय दिया जाता है। विषय एक ही है: सरकार को वादकारी माना जाता है, लेकिन सामान्य वादकारी जैसा नहीं।"
+    },
+    {
+     "en": "The confusion to avoid is thinking these sections create or deny rights. They do not. Sec 79-82 and Order XXVII lay down procedure and machinery — who to name, what notice to give, how execution proceeds. The substantive rights themselves come from the Constitution and other laws. A suit against the government can still fail on merits, and a government can still lose one. Procedure only decides how the fight is conducted, not who wins it.",
+     "hi": "जिस भ्रम से बचना है, वह यह मानना है कि ये धाराएँ अधिकार बनाती या छीनती हैं। ऐसा नहीं है। धारा 79-82 और आदेश XXVII प्रक्रिया और तंत्र तय करते हैं — किसका नाम लिखना है, कौन-सा नोटिस देना है, निष्पादन कैसे होगा। मूल अधिकार ख़ुद संविधान और अन्य कानूनों से आते हैं। सरकार के विरुद्ध वाद गुण-दोष पर अब भी हार सकता है, और सरकार अब भी हार सकती है। प्रक्रिया सिर्फ़ यह तय करती है कि लड़ाई कैसे लड़ी जाएगी, न कि कौन जीतेगा।"
+    }
+   ]
+  },
+  {
+   "title": {
+    "en": "Interpleader Suits (Sec 88, Order XXXV CPC)",
+    "hi": "अंतराभिवादी वाद (धारा 88, आदेश XXXV CPC)"
+   },
+   "sections": "Sec 88 CPC, Order XXXV CPC",
+   "cases": "",
+   "points": [
+    {
+     "en": "An interpleader suit is the odd one out among suits, and that oddness is its point. In an ordinary suit, the plaintiff fights the defendant for something. In an interpleader suit, the plaintiff holds money or property that two or more persons claim adversely to one another, and the plaintiff claims no interest in it except for charges or costs. The real fight is between the defendants; the plaintiff only wants the court to decide who the rightful claimant is.",
+     "hi": "अंतराभिवादी वाद वादों में सबसे अलग है, और यही अलगपन इसकी बात है। सामान्य वाद में वादी किसी चीज़ के लिए प्रतिवादी से लड़ता है। अंतराभिवादी वाद में वादी के पास धन या संपत्ति होती है, जिस पर दो या अधिक व्यक्ति एक-दूसरे के विरुद्ध दावा करते हैं, और वादी का उसमें ख़र्च या लागत के अलावा कोई हित नहीं होता। असली लड़ाई प्रतिवादियों के बीच होती है; वादी सिर्फ़ यह चाहता है कि न्यायालय तय करे कि सही दावेदार कौन है।"
+    },
+    {
+     "en": "The classic example makes it instantly clear. A tenant holds rent, but two persons both claim to be the landlord. A bank holds a deposit, but two families both claim it after the account holder's death. An agent holds sale money, but the principal and a third person both claim it. In each case, the holder cannot safely pay either claimant — paying one invites a suit from the other. The interpleader suit solves that trap in one proceeding.",
+     "hi": "जाना-पहचाना उदाहरण इसे तुरंत साफ़ कर देता है। किरायेदार के पास किराया है, लेकिन दो व्यक्ति दोनों ख़ुद को मकान-मालिक बताते हैं। बैंक के पास जमा राशि है, लेकिन खाताधारक की मृत्यु के बाद दो परिवार दोनों उस पर दावा करते हैं। एजेंट के पास बिक्री का पैसा है, लेकिन मालिक और तीसरा व्यक्ति दोनों उस पर दावा करते हैं। हर मामले में धारक किसी एक दावेदार को सुरक्षित रूप से भुगतान नहीं कर सकता — एक को भुगतान करने पर दूसरे का मुकदमा झेलना पड़ेगा। अंतराभिवादी वाद इस जाल को एक ही कार्यवाही में सुलझा देता है।"
+    },
+    {
+     "en": "Three conditions must be satisfied, and examiners test them directly. First, two or more persons must claim adversely to one another the same debt, sum of money or property, movable or immovable. Second, the plaintiff must claim no interest in the subject matter other than for charges or costs. Third, the plaintiff must be ready to pay or deliver the subject matter to the rightful claimant. If the plaintiff secretly wants the property for himself, the suit is not an interpleader suit at all.",
+     "hi": "तीन शर्तें पूरी होनी चाहिए, और परीक्षक इन्हीं को सीधे पूछते हैं। पहली, दो या अधिक व्यक्ति एक ही ऋण, धनराशि या संपत्ति, चल या अचल, पर एक-दूसरे के विरुद्ध दावा करें। दूसरी, वादी का विवाद की वस्तु में ख़र्च या लागत के अलावा कोई हित न हो। तीसरी, वादी विवाद की वस्तु सही दावेदार को देने या सौंपने के लिए तैयार हो। अगर वादी चुपचाप संपत्ति ख़ुद के लिए चाहता है, तो वह वाद अंतराभिवादी वाद ही नहीं है।"
+    },
+    {
+     "en": "The procedure follows the logic of the suit. The plaintiff files the plaint, states that the plaintiff claims no interest except charges or costs, and deposits or delivers the subject matter as the court directs. The court then calls upon the defendants to interplead — that is, to fight out among themselves who is entitled — and decides the rival claims. The plaintiff, having done their part, steps out of the contest, though costs may still be addressed.",
+     "hi": "प्रक्रिया वाद के तर्क से ही चलती है। वादी वाद-पत्र दाखिल करता है, बताता है कि ख़र्च या लागत के अलावा उसका कोई हित नहीं है, और विवाद की वस्तु न्यायालय के निर्देशानुसार जमा करता है या सौंपता है। फिर न्यायालय प्रतिवादियों को अंतराभिवादन के लिए बुलाता है — यानी आपस में यह लड़ने के लिए कि कौन हक़दार है — और विरोधी दावों पर निर्णय करता है। वादी अपना काम करके मुक़ाबले से बाहर हो जाता है, हालाँकि लागत का प्रश्न अब भी सुलझाया जा सकता है।"
+    },
+    {
+     "en": "There are limits, and they are worth learning because they show the policy behind the suit. An interpleader suit cannot be used where the claims are not truly adverse to one another, or where the plaintiff is not truly neutral. The standard illustrations students meet — a tenant cannot use it against the landlord over title during the tenancy, and an agent cannot use it against the principal in the usual way — exist for the same reason: the plaintiff must be a genuine stakeholder, not a party using neutrality as a shield in their own fight.",
+     "hi": "कुछ सीमाएँ हैं, और वे सीखने लायक़ हैं, क्योंकि वे वाद के पीछे की नीति दिखाती हैं। अंतराभिवादी वाद वहाँ इस्तेमाल नहीं हो सकता, जहाँ दावे सच में एक-दूसरे के विरुद्ध न हों, या जहाँ वादी सच में तटस्थ न हो। छात्रों को मिलने वाले मानक उदाहरण — किरायेदार किरायेदारी के दौरान मालिकाना हक़ को लेकर मकान-मालिक के विरुद्ध इसका इस्तेमाल नहीं कर सकता, और एजेंट सामान्य रूप से मालिक के विरुद्ध इसका इस्तेमाल नहीं कर सकता — एक ही कारण से हैं: वादी को सच्चा हितधारक होना चाहिए, न कि अपनी ही लड़ाई में तटस्थता को ढाल बनाता पक्ष।"
+    },
+    {
+     "en": "Why does this suit matter outside exams? Because it prevents multiplicity of suits and double liability — the two headaches every holder of disputed money fears. Without it, the holder would face one suit from each claimant, and might pay twice for the same debt. With it, one court, one proceeding, and one decision settle who gets what. It is a small, quiet provision, but for banks, tenants, agents and trustees, it is the difference between safety and endless litigation.",
+     "hi": "परीक्षा के बाहर यह वाद क्यों मायने रखता है? क्योंकि यह मुकदमों की बहुलता और दोहरी देनदारी को रोकता है — विवादित धन रखने वाले हर व्यक्ति के दो सिरदर्द। इसके बिना धारक को हर दावेदार से अलग मुकदमा झेलना पड़ता, और एक ही ऋण के लिए दो बार भुगतान करना पड़ सकता था। इसके साथ एक न्यायालय, एक कार्यवाही, और एक निर्णय तय कर देता है कि किसे क्या मिलेगा। यह एक छोटा, शांत प्रावधान है, लेकिन बैंकों, किरायेदारों, एजेंटों और न्यासियों के लिए यही सुरक्षा और अंतहीन मुकदमेबाज़ी के बीच का अंतर है।"
+    }
+   ]
   }
  ],
  "majorActs": [
@@ -5171,6 +5443,74 @@
     "en": "Trade Marks Act, 1999 & Copyright Act, 1957 — Protecting Brands & Creations",
     "hi": "व्यापार चिह्न अधिनियम, 1999 व प्रतिलिप्यधिकार अधिनियम, 1957 — ब्रांड व रचनाओं की सुरक्षा"
    }
+  },
+  {
+   "title": {
+    "en": "Prevention of Money-Laundering Act, 2002 — Key Provisions",
+    "hi": "धन शोधन निवारण अधिनियम, 2002 — मुख्य प्रावधान"
+   },
+   "sections": "Prevention of Money-Laundering Act, 2002 (no section numbers cited here)",
+   "cases": "",
+   "points": [
+    {
+     "en": "Money laundering is, in plain words, the business of making dirty money look clean. A crime produces money — from fraud, corruption, drug trafficking, or another serious offence — and the launderer then moves, hides or invests that money so it appears to come from a lawful source. The Prevention of Money-Laundering Act, 2002, exists to attack that second stage, not only the first crime, because crime that cannot enjoy its profits is crime with less reason to happen.",
+     "hi": "धन शोधन, सीधे शब्दों में, गंदे पैसे को साफ़ दिखाने का काम है। किसी अपराध से पैसा बनता है — ठगी, भ्रष्टाचार, मादक-पदार्थ तस्करी, या किसी और गंभीर अपराध से — और फिर शोधन करने वाला उस पैसे को घुमाता है, छिपाता है या निवेश करता है, ताकि वह वैध स्रोत से आया लगे। धन शोधन निवारण अधिनियम, 2002, सिर्फ़ पहले अपराध पर नहीं, बल्कि इसी दूसरे चरण पर हमला करने के लिए है, क्योंकि जो अपराध अपने लाभ का आनंद ही न ले सके, उसके होने का कारण कम हो जाता है।"
+    },
+    {
+     "en": "The Act works through a chain, and each link has a name worth learning. First there is a predicate offence — the original crime listed in the Act's Schedule that generates the money. Then there is the laundering itself — projecting the proceeds of that crime as untainted property. Then there is attachment of property, adjudication by an authority, and finally confiscation. Students who learn only the word 'attachment' miss the chain; the chain is the topic.",
+     "hi": "यह अधिनियम एक शृंखला से काम करता है, और हर कड़ी का नाम सीखने लायक़ है। पहले पूर्ववर्ती अपराध होता है — अधिनियम की अनुसूची में सूचीबद्ध मूल अपराध, जिससे पैसा बनता है। फिर ख़ुद शोधन होता है — उस अपराध से प्राप्त धन को बेदाग़ संपत्ति के रूप में प्रस्तुत करना। फिर संपत्ति की कुर्की, प्राधिकारी द्वारा न्यायनिर्णयन, और अंत में ज़ब्ती होती है। जो छात्र सिर्फ़ 'कुर्की' शब्द सीखते हैं, वे शृंखला से चूक जाते हैं; शृंखला ही विषय है।"
+    },
+    {
+     "en": "A confusion that causes real harm in practice is thinking that only the person who committed the original crime can be proceeded against. The Act is wider: anyone who knowingly assists, or is a party to, or is actually involved in the laundering process can be proceeded against, even if that person never committed the predicate offence. A chartered accountant who knowingly routes the money, or a front owner who lends a clean name, is not a bystander in this law.",
+     "hi": "एक भ्रम, जो व्यवहार में सच में नुकसान पहुँचाता है, यह मानना है कि सिर्फ़ मूल अपराध करने वाले के विरुद्ध ही कार्रवाई हो सकती है। यह अधिनियम व्यापक है: जो कोई जानबूझकर सहायता करता है, या पक्षकार बनता है, या शोधन प्रक्रिया में सच में शामिल होता है, उसके विरुद्ध कार्रवाई हो सकती है, भले ही उस व्यक्ति ने पूर्ववर्ती अपराध कभी किया ही न हो। जो लेखाकार जानबूझकर पैसा घुमाता है, या जो मुखौटा मालिक साफ़ नाम उधार देता है, वह इस कानून में दर्शक नहीं है।"
+    },
+    {
+     "en": "Investigation under the Act is also different from an ordinary police investigation, and families feel the difference at once. The investigating agency can summon persons, record statements, search and seize, and provisionally attach property pending adjudication — before any trial. That provisional attachment is what shocks families: property can be frozen first, and the question of whether it is truly tainted is decided later, through adjudication and then trial.",
+     "hi": "इस अधिनियम के तहत जाँच भी सामान्य पुलिस जाँच से अलग है, और परिवार इस अंतर को तुरंत महसूस करते हैं। जाँच एजेंसी व्यक्तियों को बुला सकती है, बयान दर्ज कर सकती है, तलाशी व ज़ब्ती कर सकती है, और न्यायनिर्णयन लंबित रहते हुए संपत्ति को अस्थायी रूप से कुर्क कर सकती है — किसी भी मुकदमे से पहले। यही अस्थायी कुर्की परिवारों को चौंकाती है: संपत्ति पहले रोकी जा सकती है, और वह सच में दूषित है या नहीं, यह सवाल बाद में न्यायनिर्णयन और फिर मुकदमे से तय होता है।"
+    },
+    {
+     "en": "Bail under this Act is famously strict, and the reason is stated in the Act itself: the court must be satisfied that there are reasonable grounds for believing the accused is not guilty of the offence, and that the accused is not likely to commit any offence while on bail. This twin-condition approach is what makes bail in laundering cases harder than in ordinary cases. A lawyer who prepares a bail application here as if it were an ordinary bail application has misunderstood the forum.",
+     "hi": "इस अधिनियम के तहत ज़मानत मशहूर रूप से सख़्त है, और इसका कारण अधिनियम में ही लिखा है: न्यायालय को संतुष्ट होना चाहिए कि अभियुक्त के अपराध का दोषी न होने का विश्वास करने के उचित आधार हैं, और अभियुक्त के ज़मानत पर रहते हुए कोई अपराध करने की संभावना नहीं है। यह दोहरी शर्त ही शोधन मामलों में ज़मानत को सामान्य मामलों से कठिन बनाती है। जो वकील यहाँ ज़मानत अर्ज़ी ऐसे तैयार करता है, जैसे वह सामान्य ज़मानत अर्ज़ी हो, उसने मंच को समझा ही नहीं है।"
+    },
+    {
+     "en": "For the citizen, the practical lesson is about records, not fear. Keep the paper trail of every large transaction — where the money came from, through which account it moved, and what it bought — because in a laundering inquiry the question is always about the trail, not about intentions alone. And never lend your bank account, firm or name to move someone else's money for a commission. The commission is small, the explanation is hard, and the Act does not accept 'I was only helping' as an answer.",
+     "hi": "नागरिक के लिए व्यावहारिक सबक रिकॉर्ड के बारे में है, डर के बारे में नहीं। हर बड़े लेन-देन का काग़ज़ी सिलसिला रखें — पैसा कहाँ से आया, किस खाते से गुज़रा, और उससे क्या ख़रीदा गया — क्योंकि शोधन जाँच में सवाल हमेशा सिलसिले के बारे में होता है, सिर्फ़ इरादों के बारे में नहीं। और किसी और का पैसा कमीशन पर घुमाने के लिए अपना बैंक खाता, फ़र्म या नाम कभी उधार न दें। कमीशन छोटा होता है, सफ़ाई कठिन होती है, और यह अधिनियम 'मैं तो सिर्फ़ मदद कर रहा था' को जवाब नहीं मानता।"
+    }
+   ]
+  },
+  {
+   "title": {
+    "en": "Maintenance and Welfare of Parents and Senior Citizens Act, 2007 — Key Provisions",
+    "hi": "माता-पिता और वरिष्ठ नागरिकों का भरण-पोषण व कल्याण अधिनियम, 2007 — मुख्य प्रावधान"
+   },
+   "sections": "Maintenance and Welfare of Parents and Senior Citizens Act, 2007 (no section numbers cited here)",
+   "cases": "",
+   "points": [
+    {
+     "en": "This Act starts from a simple, uncomfortable fact: many elderly parents are neglected by the very children they raised. The Act makes maintenance of parents and senior citizens a legal obligation, not merely a moral one. A parent or senior citizen who cannot maintain himself or herself can claim maintenance from children or relatives who have sufficient means — and the claim goes to a special forum, not through years of ordinary civil litigation.",
+     "hi": "यह अधिनियम एक सरल, असहज तथ्य से शुरू होता है: कई बुज़ुर्ग माता-पिता उन्हीं बच्चों द्वारा उपेक्षित होते हैं, जिन्हें उन्होंने पाला था। यह अधिनियम माता-पिता और वरिष्ठ नागरिकों के भरण-पोषण को सिर्फ़ नैतिक नहीं, बल्कि क़ानूनी दायित्व बनाता है। जो माता-पिता या वरिष्ठ नागरिक अपना भरण-पोषण ख़ुद नहीं कर सकते, वे पर्याप्त साधन रखने वाले बच्चों या रिश्तेदारों से भरण-पोषण का दावा कर सकते हैं — और यह दावा वर्षों की सामान्य दीवानी मुकदमेबाज़ी से नहीं, बल्कि विशेष मंच से जाता है।"
+    },
+    {
+     "en": "The forum is the Maintenance Tribunal, and its informality is deliberate. The Tribunal is meant to be quick, summary and accessible: an elderly applicant need not hire an expensive lawyer or master court procedure to be heard. The Tribunal can order monthly maintenance, and the amount depends on the needs of the applicant and the means of the children or relatives. The point is dignity in old age, not punishment of children.",
+     "hi": "मंच भरण-पोषण अधिकरण है, और उसकी अनौपचारिकता जानबूझकर रखी गई है। अधिकरण तेज़, संक्षिप्त और सुलभ होना चाहिए: बुज़ुर्ग आवेदक को सुने जाने के लिए महँगा वकील करने या न्यायालयीन प्रक्रिया में महारत हासिल करने की ज़रूरत नहीं है। अधिकरण मासिक भरण-पोषण का आदेश दे सकता है, और राशि आवेदक की ज़रूरतों और बच्चों या रिश्तेदारों के साधनों पर निर्भर करती है। बात बुढ़ापे में गरिमा की है, बच्चों को दंड देने की नहीं।"
+    },
+    {
+     "en": "The Act also protects property, and this is the part families discover too late. Where a senior citizen has transferred property to a child or relative on the condition of care and maintenance, and that condition is then broken, the transfer can be declared void by the Tribunal. The classic case is a parent who gifts a house to a son on the understanding of lifelong care, and is then thrown out of that very house. The Act gives that parent a remedy that ordinary property law would not give so simply.",
+     "hi": "यह अधिनियम संपत्ति की भी सुरक्षा करता है, और यही वह हिस्सा है, जिसे परिवार बहुत देर से जान पाते हैं। जहाँ किसी वरिष्ठ नागरिक ने देखभाल और भरण-पोषण की शर्त पर किसी बच्चे या रिश्तेदार को संपत्ति हस्तांतरित की हो, और फिर वह शर्त टूट जाए, तो अधिकरण उस हस्तांतरण को शून्य घोषित कर सकता है। जाना-पहचाना मामला वह है, जहाँ माता-पिता आजीवन देखभाल की समझ पर बेटे को मकान उपहार में देते हैं, और फिर उसी मकान से निकाल दिए जाते हैं। यह अधिनियम उन माता-पिता को ऐसा उपचार देता है, जो सामान्य संपत्ति कानून इतनी सरलता से नहीं देता।"
+    },
+    {
+     "en": "Abandonment is treated as an offence under the Act, and this surprises many readers. A person responsible for the care of a senior citizen who abandons that person can be punished. The message is plain: the law will not treat abandonment of an elderly parent as a private family matter with no consequences. That said, the Act's first aim is care and maintenance, not imprisonment — prosecution is the backstop, not the main road.",
+     "hi": "परित्याग को इस अधिनियम के तहत अपराध माना गया है, और यह बात कई पाठकों को चौंकाती है। वरिष्ठ नागरिक की देखभाल के लिए ज़िम्मेदार व्यक्ति, जो उस व्यक्ति को छोड़ देता है, दंडित हो सकता है। संदेश साफ़ है: कानून बुज़ुर्ग माता-पिता के परित्याग को बिना परिणाम वाला निजी पारिवारिक मामला नहीं मानेगा। फिर भी, अधिनियम का पहला उद्देश्य देखभाल और भरण-पोषण है, कारावास नहीं — अभियोजन सहारा है, मुख्य रास्ता नहीं।"
+    },
+    {
+     "en": "The Act also places duties on the State, and these matter for the citizen who does not know where to go. State governments are to establish old-age homes, ensure medical care for senior citizens, and publicise the Act's protections. In practice, an elderly person in distress should approach the Maintenance Tribunal of their district, with identity proof and whatever papers show the relationship and the neglect. A lawyer or legal-aid office can help draft the application, but the application itself is meant to be simple.",
+     "hi": "यह अधिनियम राज्य पर भी कर्तव्य डालता है, और ये उन नागरिकों के लिए मायने रखते हैं, जिन्हें नहीं पता कि कहाँ जाएँ। राज्य सरकारों को वृद्धाश्रम स्थापित करने, वरिष्ठ नागरिकों के लिए चिकित्सा देखभाल सुनिश्चित करने, और अधिनियम की सुरक्षाओं का प्रचार करने का काम दिया गया है। व्यवहार में संकट में पड़े बुज़ुर्ग व्यक्ति को अपने ज़िले के भरण-पोषण अधिकरण में पहचान प्रमाण और संबंध व उपेक्षा दिखाने वाले जो भी काग़ज़ हों, उनके साथ जाना चाहिए। वकील या विधिक सहायता कार्यालय आवेदन का मसौदा बनाने में मदद कर सकते हैं, लेकिन आवेदन ख़ुद सरल होना चाहिए।"
+    },
+    {
+     "en": "The confusion to avoid is treating this Act as a substitute for family duty, or as a weapon in property disputes. It is neither. It is a safety net for the elderly person who has no other support, and it works best when used early — when neglect begins, not years after the parent has been left with nothing. A child who maintains parents willingly needs no Tribunal; a parent who must approach one has already waited too long, and the Act exists precisely for that parent.",
+     "hi": "जिस भ्रम से बचना है, वह इस अधिनियम को पारिवारिक कर्तव्य का विकल्प, या संपत्ति विवादों में हथियार समझना है। यह न तो है। यह उस बुज़ुर्ग व्यक्ति के लिए सुरक्षा जाल है, जिसके पास कोई और सहारा नहीं है, और यह सबसे अच्छा तब काम करता है, जब इसका इस्तेमाल जल्दी किया जाए — उपेक्षा शुरू होते ही, न कि माता-पिता के पास कुछ न बचने के वर्षों बाद। जो बच्चा स्वेच्छा से माता-पिता का भरण-पोषण करता है, उसे किसी अधिकरण की ज़रूरत नहीं है; जिस माता-पिता को अधिकरण जाना पड़े, वे पहले ही बहुत देर कर चुके हैं, और यह अधिनियम ठीक उन्हीं माता-पिता के लिए है।"
+    }
+   ]
   }
  ]
 }
