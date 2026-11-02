@@ -2283,7 +2283,6 @@
       "sourceName": "Indian Kanoon",
       "caseNameHi": "के. भास्करन बनाम शंकरन वैद्यन बालन",
       "sections": [
-        "CRPC 138",
         "CRPC 178",
         "NI 138",
         "NI 141"
@@ -4501,7 +4500,8 @@
         "IPC 376",
         "IPC 376D",
         "BNS 103",
-        "BNS 64"
+        "BNS 64",
+        "BNS 70"
       ]
     },
     {
@@ -5764,7 +5764,7 @@
       ]
     },
     {
-      "caseName": "Mohammed Zubair v. State of Uttar Pradesh",
+      "caseName": "Mohammed Zubair v. State of NCT of Delhi",
       "citation": "2022 SCC OnLine SC 897",
       "court": {
         "en": "Supreme Court of India",
@@ -5775,9 +5775,9 @@
         "en": "Granted bail to the fact-checker, clubbed and transferred the UP FIRs against him to Delhi Police and disbanded the UP SIT, holding the criminal process cannot be used to keep a person endlessly incarcerated.",
         "hi": "न्यायालय ने तथ्य-जाँचकर्ता को जमानत देते हुए उसके विरुद्ध उत्तर प्रदेश की FIR को समेकित कर दिल्ली पुलिस को स्थानांतरित किया और उत्तर प्रदेश एसआईटी को भंग कर दिया। आपराधिक प्रक्रिया का उपयोग किसी व्यक्ति को अनिश्चित काल तक कारावास में रखने हेतु नहीं किया जा सकता। यह निर्णय प्रक्रिया के दुरुपयोग पर अंकुश लगाता है।"
       },
-      "pdfUrl": "https://indiankanoon.org/search/?formInput=Mohammed%20Zubair%20v.%20State%20of%20Uttar%20Pradesh",
+      "pdfUrl": "https://indiankanoon.org/doc/193916847/",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "मोहम्मद ज़ुबैर बनाम उत्तर प्रदेश राज्य",
+      "caseNameHi": "मोहम्मद ज़ुबैर बनाम दिल्ली राष्ट्रीय राजधानी क्षेत्र राज्य",
       "sections": [
         "CRPC 439",
         "BNSS 483"
@@ -6994,7 +6994,8 @@
       },
       "year": 1962,
       "sections": [
-        "CRPC 439",
+        "CRPC 397",
+        "CRPC 401",
         "IEA 27"
       ]
     },
@@ -9703,7 +9704,8 @@
       "sections": [
         "IPC 376",
         "IPC 376D",
-        "BNS 64"
+        "BNS 64",
+        "BNS 70"
       ]
     },
     {
@@ -13532,9 +13534,11 @@
         "IPC 302",
         "BNS 103",
         "IPC 201",
-        "BNS 211",
+        "BNS 238",
         "IPC 396",
-        "IPC 412"
+        "IPC 412",
+        "BNS 310",
+        "BNS 317"
       ],
       "summary": {
         "en": "Allowing a criminal revision, the Allahabad High Court set aside the Juvenile Justice Board's and the children's court's refusal of bail to a 17-year-old accused of murder and related offences, holding that the gravity of the offence is not a ground to refuse bail under Section 12 of the Juvenile Justice Act, which permits refusal only on three stated contingencies, none of which was made out.",
@@ -15088,7 +15092,7 @@
       "caseNameHi": "मोती राम बनाम मध्य प्रदेश राज्य",
       "sections": [
         "CRPC 436",
-        "BNSS 480",
+        "BNSS 478",
         "ART 21"
       ]
     },
@@ -15346,6 +15350,339 @@
         "BNSS 531",
         "ART 20",
         "BNSS 35"
+      ]
+    },
+    {
+      "caseName": "Gian Kaur v. State of Punjab",
+      "citation": "(1996) 2 SCC 648",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "year": 1996,
+      "summary": {
+        "en": "A five-judge Constitution Bench held that the right to life under Article 21 does not include a right to die. Gian Kaur and her husband, convicted under Section 306 IPC for abetting the suicide of their daughter-in-law, had argued that Section 306 was unconstitutional in light of P. Rathinam. The Court overruled P. Rathinam and upheld Sections 306 and 309 IPC as constitutionally valid.",
+        "hi": "पाँच न्यायाधीशों की संविधान पीठ ने कहा कि अनुच्छेद 21 के तहत जीवन के अधिकार में मरने का अधिकार शामिल नहीं है। अपनी पुत्रवधू की आत्महत्या के लिए दुष्प्रेरण के आरोप में धारा 306 के तहत दोषी ठहराई गई ज्ञान कौर और उनके पति ने पी. रथिनम के आधार पर धारा 306 को असंवैधानिक बताया था। न्यायालय ने पी. रथिनम को पलट दिया और धारा 306 व 309 को संवैधानिक रूप से वैध ठहराया।"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/217501/",
+      "sourceName": "Indian Kanoon",
+      "caseNameHi": "ज्ञान कौर बनाम पंजाब राज्य",
+      "sections": [
+        "IPC 306",
+        "IPC 309",
+        "ART 21"
+      ]
+    },
+    {
+      "caseName": "P. Rathinam v. Union of India",
+      "citation": "(1994) 3 SCC 394",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "year": 1994,
+      "summary": {
+        "en": "A two-judge bench held Section 309 IPC, which punished attempted suicide, unconstitutional as violating Article 21, reasoning that the right to live includes the right not to live a forced life. This was the first Supreme Court decision striking down Section 309, but it was overruled two years later by the five-judge bench in Gian Kaur v. State of Punjab, which restored the provision's validity.",
+        "hi": "दो न्यायाधीशों की पीठ ने आत्महत्या के प्रयास को दंडित करने वाली धारा 309 को अनुच्छेद 21 का उल्लंघन मानकर असंवैधानिक ठहराया, यह तर्क देते हुए कि जीने के अधिकार में जबरन जीवन न जीने का अधिकार भी शामिल है। धारा 309 को रद्द करने वाला यह सर्वोच्च न्यायालय का पहला निर्णय था, लेकिन दो वर्ष बाद ज्ञान कौर बनाम पंजाब राज्य में पाँच न्यायाधीशों की पीठ ने इसे पलट दिया और प्रावधान की वैधता बहाल कर दी।"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/542988/",
+      "sourceName": "Indian Kanoon",
+      "caseNameHi": "पी. रथिनम बनाम भारत संघ",
+      "sections": [
+        "IPC 309",
+        "ART 21",
+        "ART 14"
+      ]
+    },
+    {
+      "caseName": "Aruna Ramchandra Shanbaug v. Union of India",
+      "citation": "(2011) 4 SCC 454",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "year": 2011,
+      "summary": {
+        "en": "Aruna Shanbaug, a nurse left in a persistent vegetative state after a brutal assault in 1973, was the subject of a plea to stop her feeding. The Court treated the KEM Hospital staff, who had cared for her for decades, as her real next friend and refused withdrawal of feeding in her own case. But it laid down the law for the first time in India: passive euthanasia — withholding or withdrawing life support — is permitted in certain situations under strict safeguards, with approval of the concerned High Court under Article 226, while active euthanasia remains unlawful.",
+        "hi": "1973 में हुए क्रूर हमले के बाद स्थायी वनस्पति अवस्था में पहुँची नर्स अरुणा शानबाग को भोजन देना बंद करने की याचिका पर न्यायालय ने दशकों से उनकी देखभाल कर रहे केईएम अस्पताल के कर्मचारियों को ही उनका वास्तविक नेक्स्ट फ्रेंड माना और उनके मामले में भोजन बंद करने से इनकार कर दिया। लेकिन न्यायालय ने भारत में पहली बार कानून तय किया: कड़े सुरक्षा उपायों के साथ और संबंधित उच्च न्यायालय की अनुच्छेद 226 के तहत स्वीकृति से, कुछ स्थितियों में निष्क्रिय इच्छामृत्यु — जीवन रक्षक उपचार रोकना या हटाना — की अनुमति है, जबकि सक्रिय इच्छामृत्यु अब भी गैरकानूनी है।"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/235821/",
+      "sourceName": "Indian Kanoon",
+      "caseNameHi": "अरुणा रामचंद्र शानबाग बनाम भारत संघ",
+      "sections": [
+        "ART 21",
+        "ART 32",
+        "ART 226"
+      ]
+    },
+    {
+      "caseName": "Zakia Ahsan Jafri v. State of Gujarat",
+      "citation": "2022 LiveLaw (SC) 558",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "year": 2022,
+      "summary": {
+        "en": "Zakia Jafri, whose husband was killed in the Gulberg Society attack during the 2002 Gujarat violence, challenged the acceptance of the SIT's closure report, alleging a larger criminal conspiracy by high state functionaries. The Supreme Court dismissed the appeal, holding that the SIT's final report should be accepted as it was, that there was no material for further investigation, and that mere failure or inaction of the state administration cannot by itself prove a pre-planned conspiracy or state-sponsored violence.",
+        "hi": "2002 के गुजरात हिंसा के दौरान गुलबर्ग सोसायटी हमले में अपने पति को खोने वाली ज़किया जाफरी ने एसआईटी की क्लोजर रिपोर्ट को स्वीकार किए जाने को चुनौती दी थी, जिसमें उन्होंने उच्च राज्य पदाधिकारियों पर बड़ी आपराधिक साजिश का आरोप लगाया था। सर्वोच्च न्यायालय ने अपील खारिज कर दी और कहा कि एसआईटी की अंतिम रिपोर्ट को ज्यों का त्यों स्वीकार किया जाना चाहिए, आगे की जाँच के लिए कोई सामग्री नहीं है, और राज्य प्रशासन की महज़ विफलता या निष्क्रियता से पहले से तय साजिश या राज्य प्रायोजित हिंसा साबित नहीं होती।"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/199048478/",
+      "sourceName": "Indian Kanoon",
+      "caseNameHi": "ज़किया अहसन जाफरी बनाम गुजरात राज्य",
+      "sections": [
+        "IPC 302",
+        "IPC 120B",
+        "CRPC 173"
+      ]
+    },
+    {
+      "caseName": "Navneet Kaur v. State of NCT of Delhi",
+      "citation": "",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "year": 2014,
+      "summary": {
+        "en": "In a curative petition filed by the wife of Devender Pal Singh Bhullar, the Supreme Court commuted his death sentence to life imprisonment. Following Shatrughan Chauhan, it held that the 2013 Bhullar ratio was per incuriam: unexplained delay of eight years in deciding the mercy petition, and acute mental illness, are supervening grounds for commutation, and TADA cases cannot be excluded from this relief as a class.",
+        "hi": "देवेंद्र पाल सिंह भुल्लर की पत्नी द्वारा दायर क्यूरेटिव याचिका में सर्वोच्च न्यायालय ने उनकी मृत्युदंड की सजा को आजीवन कारावास में बदल दिया। शत्रुघ्न चौहान के निर्णय का अनुसरण करते हुए न्यायालय ने कहा कि 2013 का भुल्लर अनुपात पर इनक्यूरियम था: दया याचिका के निपटारे में आठ वर्ष की अस्पष्टीकृत देरी और गंभीर मानसिक बीमारी, सजा में कमी के लिए बाद में उत्पन्न होने वाले आधार हैं, और टाडा के मामलों को इस राहत से एक वर्ग के रूप में बाहर नहीं रखा जा सकता।"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/42467843/",
+      "sourceName": "Indian Kanoon",
+      "caseNameHi": "नवनीत कौर बनाम राष्ट्रीय राजधानी क्षेत्र दिल्ली राज्य",
+      "sections": [
+        "ART 21",
+        "ART 72"
+      ]
+    },
+    {
+      "caseName": "State of Jharkhand v. Shailendra Kumar Rai",
+      "citation": "(2022) 14 SCC 299",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "year": 2022,
+      "summary": {
+        "en": "The Supreme Court restored the conviction in a rape-and-murder case in which the trial court had convicted the accused and the High Court had acquitted him. It held that the victim's statement, recorded by a police officer and relating to the cause of her death, was admissible as a dying declaration and was not inadmissible merely because a police officer recorded it. In parting remarks it prohibited the two-finger test in rape cases: the test has no scientific basis, neither proves nor disproves rape, re-victimises the survivor, and whether a woman is habituated to sexual intercourse is irrelevant to rape.",
+        "hi": "सर्वोच्च न्यायालय ने बलात्कार और हत्या के एक मामले में दोषसिद्धि बहाल की, जिसमें ट्रायल कोर्ट ने आरोपी को दोषी ठहराया था और उच्च न्यायालय ने उसे बरी कर दिया था। न्यायालय ने कहा कि पीड़िता का बयान, जो पुलिस अधिकारी द्वारा दर्ज किया गया था और उसकी मृत्यु के कारण से संबंधित था, मृत्युकालिक कथन के रूप में स्वीकार्य है और केवल इसलिए अस्वीकार्य नहीं हो जाता क्योंकि उसे पुलिस अधिकारी ने दर्ज किया है। समापन टिप्पणियों में न्यायालय ने बलात्कार के मामलों में टू-फिंगर टेस्ट पर रोक लगा दी: इस टेस्ट का कोई वैज्ञानिक आधार नहीं है, इससे बलात्कार साबित या खारिज नहीं होता, यह पीड़िता को दोबारा पीड़ित करता है, और कोई महिला यौन संबंध की अभ्यस्त है या नहीं, यह बलात्कार के लिए अप्रासंगिक है।"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/196199017/",
+      "sourceName": "Indian Kanoon",
+      "caseNameHi": "झारखंड राज्य बनाम शैलेंद्र कुमार राय",
+      "sections": [
+        "IPC 376",
+        "IPC 302",
+        "ART 21"
+      ]
+    },
+    {
+      "caseName": "Vernon v. State of Maharashtra",
+      "citation": "2023 INSC 655",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "year": 2023,
+      "summary": {
+        "en": "Vernon Gonsalves and Arun Ferreira, accused in the Bhima Koregaon / Elgar Parishad case under the UAPA and the IPC and in custody since August 2018, had been denied bail by the Bombay High Court in 2019. The Supreme Court granted them bail, holding that the seriousness of the allegations alone cannot justify continued detention, that the material placed before it did not justify keeping them in custody, and that almost five years had elapsed with charges yet to be framed. Bail was granted with strict conditions, including not leaving Maharashtra without the trial court's permission and surrendering their passports.",
+        "hi": "यूएपीए और भादसं के तहत भीमा कोरेगाँव / एल्गार परिषद मामले में आरोपी वर्नोन गोंसाल्वेस और अरुण फरेरा अगस्त 2018 से हिरासत में थे और 2019 में बंबई उच्च न्यायालय ने उनकी जमानत खारिज कर दी थी। सर्वोच्च न्यायालय ने उन्हें जमानत दी और कहा कि आरोपों की गंभीरता अकेले निरंतर हिरासत का औचित्य नहीं बन सकती, पेश की गई सामग्री उन्हें हिरासत में रखने का औचित्य नहीं देती, और लगभग पाँच वर्ष बीत चुके थे जबकि आरोप अभी तय नहीं हुए थे। जमानत कड़ी शर्तों के साथ दी गई, जिनमें ट्रायल कोर्ट की अनुमति के बिना महाराष्ट्र न छोड़ना और पासपोर्ट जमा करना शामिल था।"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/97883907/",
+      "sourceName": "Indian Kanoon",
+      "caseNameHi": "वर्नोन बनाम महाराष्ट्र राज्य",
+      "sections": [
+        "UAPA 43D(5)",
+        "IPC 121",
+        "ART 21"
+      ]
+    },
+    {
+      "caseName": "A.K. Roy v. Union of India",
+      "citation": "(1982) 1 SCC 271",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "year": 1981,
+      "summary": {
+        "en": "A Constitution Bench largely upheld the National Security Ordinance, 1980, and the National Security Act, 1980, against a challenge by detained MPs including A.K. Roy. It held that the President's power to issue an ordinance under Article 123 is a legislative power, not merely executive, so an ordinance is law for the purposes of Articles 13 and 21; that broad expressions in Section 3 of the Act, such as security of India and security of the State, cannot be struck down for vagueness alone; and that the Court cannot issue a mandamus compelling the government to bring Section 3 of the Forty-fourth Amendment into force.",
+        "hi": "संविधान पीठ ने ए. के. रॉय सहित हिरासत में लिए गए सांसदों की चुनौती के खिलाफ राष्ट्रीय सुरक्षा अध्यादेश, 1980 और राष्ट्रीय सुरक्षा अधिनियम, 1980 को बड़े पैमाने पर वैध ठहराया। न्यायालय ने कहा कि अनुच्छेद 123 के तहत राष्ट्रपति की अध्यादेश जारी करने की शक्ति विधायी शक्ति है, न कि केवल कार्यपालिका की, इसलिए अध्यादेश अनुच्छेद 13 और 21 के प्रयोजनों के लिए कानून है; अधिनियम की धारा 3 में भारत की सुरक्षा और राज्य की सुरक्षा जैसे व्यापक शब्द केवल अस्पष्टता के आधार पर रद्द नहीं किए जा सकते; और न्यायालय सरकार को चौवालीसवें संशोधन की धारा 3 लागू करने के लिए बाध्य करने वाला परमादेश जारी नहीं कर सकता।"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/875590/",
+      "sourceName": "Indian Kanoon",
+      "caseNameHi": "ए. के. रॉय बनाम भारत संघ",
+      "sections": [
+        "ART 21",
+        "ART 22",
+        "ART 123"
+      ]
+    },
+    {
+      "caseName": "Pawan Khera v. State of U.P.",
+      "citation": "2023:AHC-LKO:54643",
+      "court": {
+        "en": "Allahabad High Court",
+        "hi": "इलाहाबाद उच्च न्यायालय"
+      },
+      "year": 2023,
+      "summary": {
+        "en": "After the Supreme Court clubbed three FIRs over a 2023 press-conference remark and transferred them to Hazratganj police station, Lucknow, Pawan Khera filed a Section 482 application before the Allahabad High Court (Lucknow Bench) to quash the charge sheet and the summoning order. The High Court dismissed the application: on a police report, a Magistrate issuing process need not record detailed reasons; there can be no mini-trial or evaluation of evidence under Section 482; and all contentions were left to be raised before the trial court, as the Supreme Court's order of 20 March 2023 had directed.",
+        "hi": "2023 की प्रेस कॉन्फ्रेंस टिप्पणी पर दर्ज तीन एफआईआर को सर्वोच्च न्यायालय द्वारा एक साथ जोड़कर लखनऊ के हजरतगंज थाने में स्थानांतरित करने के बाद, पवन खेड़ा ने इलाहाबाद उच्च न्यायालय (लखनऊ पीठ) में धारा 482 के तहत आरोप पत्र और समन आदेश को रद्द करने की अर्जी दी। उच्च न्यायालय ने अर्जी खारिज कर दी: पुलिस रिपोर्ट पर प्रक्रिया जारी करते समय मजिस्ट्रेट को विस्तृत कारण दर्ज करने की आवश्यकता नहीं है; धारा 482 के तहत कोई मिनी-ट्रायल या साक्ष्य का मूल्यांकन नहीं हो सकता; और सभी दलीलें ट्रायल कोर्ट के समक्ष उठाई जानी चाहिए, जैसा कि सर्वोच्च न्यायालय के 20 मार्च 2023 के आदेश में निर्देश दिया गया था।"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/116605837/",
+      "sourceName": "Indian Kanoon",
+      "caseNameHi": "पवन खेड़ा बनाम उत्तर प्रदेश राज्य",
+      "sections": [
+        "IPC 153A",
+        "IPC 500",
+        "CRPC 482"
+      ]
+    },
+    {
+      "caseName": "Ram Chandra Ram v. State of U.P. and 3 Others",
+      "citation": "2025:AHC:144846",
+      "court": {
+        "en": "Allahabad High Court",
+        "hi": "इलाहाबाद उच्च न्यायालय"
+      },
+      "year": 2025,
+      "summary": {
+        "en": "The accused in a POCSO and rape trial under Sections 376, 452, 342 and 506 IPC and Sections 5/6 of the POCSO Act sought a DNA test of the prosecutrix and her child after five prosecution witnesses had already been examined. The trial court rejected the plea, and the Allahabad High Court dismissed the Section 482 application against that order. A DNA test of a rape survivor and her child cannot be ordered routinely: it requires compelling and unavoidable circumstances amounting to a cast-iron case, paternity is not an ingredient of rape, and such a test carries serious social consequences for the survivor and the child and touches their privacy and dignity.",
+        "hi": "धारा 376, 452, 342 और 506 भादसं तथा पॉक्सो अधिनियम की धारा 5/6 के तहत पॉक्सो और बलात्कार के मुकदमे में आरोपी ने पाँच अभियोजन साक्षियों की गवाही के बाद पीड़िता और उसके बच्चे का डीएनए टेस्ट माँगा। ट्रायल कोर्ट ने याचिका खारिज कर दी और इलाहाबाद उच्च न्यायालय ने उस आदेश के खिलाफ धारा 482 की अर्जी भी खारिज कर दी। बलात्कार पीड़िता और उसके बच्चे का डीएनए टेस्ट रूटीन में आदेशित नहीं किया जा सकता: इसके लिए बाध्यकारी और अपरिहार्य परिस्थितियाँ चाहिए जो एक पक्का मामला बनाती हों, पितृत्व बलात्कार का तत्व नहीं है, और इस तरह के टेस्ट के पीड़िता और बच्चे के लिए गंभीर सामाजिक परिणाम होते हैं तथा यह उनकी निजता और गरिमा को छूता है।"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/55321486/",
+      "sourceName": "Indian Kanoon",
+      "caseNameHi": "राम चंद्र राम बनाम उत्तर प्रदेश राज्य और 3 अन्य",
+      "sections": [
+        "IPC 376",
+        "POCSO 6",
+        "CRPC 482"
+      ]
+    },
+    {
+      "caseName": "Sumit and Another v. State of U.P. and 2 Others",
+      "citation": "2024:AHC:4023-DB",
+      "court": {
+        "en": "Allahabad High Court",
+        "hi": "इलाहाबाद उच्च न्यायालय"
+      },
+      "year": 2024,
+      "summary": {
+        "en": "After non-bailable warrants and a proclamation under Section 82 CrPC, the police lodged an FIR under Section 174A IPC against the petitioners for failing to appear. The Allahabad High Court quashed the FIR, holding that Section 174A falls within the bar in Section 195(1)(a)(i) CrPC: proceedings under Section 174A can be initiated only on the written complaint of the court which initiated the Section 82 proceedings, and a police report or FIR cannot substitute for that complaint. The concerned court remained free to file such a written complaint if there was no legal impediment.",
+        "hi": "गैर-जमानती वारंट और धारा 82 दंप्रसं के तहत उद्घोषणा के बाद, पुलिस ने पेश न होने के लिए याचिकाकर्ताओं के खिलाफ धारा 174ए भादसं के तहत एफआईआर दर्ज की। इलाहाबाद उच्च न्यायालय ने एफआईआर रद्द कर दी और कहा कि धारा 174ए, धारा 195(1)(a)(i) दंप्रसं की रोक के दायरे में आती है: धारा 174ए के तहत कार्यवाही केवल उस न्यायालय की लिखित शिकायत पर ही शुरू की जा सकती है जिसने धारा 82 की कार्यवाही शुरू की थी, और पुलिस रिपोर्ट या एफआईआर उस शिकायत का विकल्प नहीं हो सकती। संबंधित न्यायालय यदि कोई कानूनी बाधा न हो तो ऐसी लिखित शिकायत दर्ज करने के लिए स्वतंत्र रहा।"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/23637814/",
+      "sourceName": "Indian Kanoon",
+      "caseNameHi": "सुमित और एक अन्य बनाम उत्तर प्रदेश राज्य और 2 अन्य",
+      "sections": [
+        "IPC 174A",
+        "SEC 195",
+        "ART 21"
+      ]
+    },
+    {
+      "caseName": "Dhirendra and 2 Others v. State of U.P. and Another",
+      "citation": "",
+      "court": {
+        "en": "Allahabad High Court",
+        "hi": "इलाहाबाद उच्च न्यायालय"
+      },
+      "year": 2024,
+      "summary": {
+        "en": "In a complaint case over an allegedly stolen goat, the applicants were summoned under Sections 379, 504 and 506 IPC. The Allahabad High Court partly allowed their Section 482 application: the summoning under Section 504 was set aside because neither the complaint nor the witness statements specified the abusive words used, and mere rude or discourteous abuse, without showing words likely in the ordinary course to provoke a breach of the peace, is not an intentional insult under Section 504. The summoning under Sections 379 and 506 was upheld and the trial was directed to proceed on those charges.",
+        "hi": "कथित रूप से चुराई गई बकरी को लेकर शिकायत के मामले में आवेदकों को धारा 379, 504 और 506 भादसं के तहत समन किया गया था। इलाहाबाद उच्च न्यायालय ने उनकी धारा 482 की अर्जी आंशिक रूप से स्वीकार की: धारा 504 के तहत समन रद्द कर दिया गया क्योंकि न तो शिकायत में और न ही साक्षियों के बयानों में इस्तेमाल किए गए अपमानजनक शब्द बताए गए थे, और सामान्य क्रम में शांति भंग करने की संभावना वाले शब्द दिखाए बिना महज़ अशिष्ट या असभ्य गाली धारा 504 के तहत जानबूझकर किया गया अपमान नहीं है। धारा 379 और 506 के तहत समन बरकरार रखा गया और उन्हीं आरोपों पर मुकदमा आगे बढ़ाने का निर्देश दिया गया।"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/127979580/",
+      "sourceName": "Indian Kanoon",
+      "caseNameHi": "धीरेन्द्र और 2 अन्य बनाम उत्तर प्रदेश राज्य और एक अन्य",
+      "sections": [
+        "IPC 504",
+        "IPC 379",
+        "IPC 506",
+        "CRPC 482"
+      ]
+    },
+    {
+      "caseName": "Diwakar Singh v. State of U.P.",
+      "citation": "2024:AHC:4001",
+      "court": {
+        "en": "Allahabad High Court",
+        "hi": "इलाहाबाद उच्च न्यायालय"
+      },
+      "year": 2024,
+      "summary": {
+        "en": "An accused facing trial sought, at the defence-evidence stage, to summon retired senior police officers as defence witnesses under Section 243 CrPC, after the Magistrate had rejected the prayer. The Allahabad High Court dismissed the Article 227 petition, explaining the two tracks in Section 243(2): a fresh defence witness is ordinarily summoned unless the application is vexatious or meant to delay or defeat justice, but a witness already examined or cross-examined, or whom the defence had the opportunity to cross-examine, cannot be compelled unless the Magistrate is satisfied it is necessary for the ends of justice — which the defence had not shown.",
+        "hi": "मुकदमे में बचाव पक्ष के साक्ष्य के चरण में एक आरोपी ने धारा 243 दंप्रसं के तहत सेवानिवृत्त वरिष्ठ पुलिस अधिकारियों को बचाव साक्षी के रूप में बुलाने की माँग की, जबकि मजिस्ट्रेट ने यह प्रार्थना खारिज कर दी थी। इलाहाबाद उच्च न्यायालय ने अनुच्छेद 227 की याचिका खारिज कर दी और धारा 243(2) के दो रास्ते समझाए: नया बचाव साक्षी सामान्यतः बुलाया जाता है, जब तक कि अर्जी तंग करने वाली या विलंब करने वाली या न्याय को विफल करने वाली न हो, लेकिन जिस साक्षी की पहले ही परीक्षा या जिरह हो चुकी हो, या जिसे जिरह का अवसर मिल चुका हो, उसे तब तक बाध्य नहीं किया जा सकता जब तक मजिस्ट्रेट यह संतुष्ट न हो कि यह न्याय के हित में आवश्यक है — जो बचाव पक्ष दिखा नहीं पाया था।"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/198809978/",
+      "sourceName": "Indian Kanoon",
+      "caseNameHi": "दिवाकर सिंह बनाम उत्तर प्रदेश राज्य",
+      "sections": [
+        "SEC 243",
+        "ART 227"
+      ]
+    },
+    {
+      "caseName": "Dr. Ashok Kumar Rai v. State of U.P. and Another",
+      "citation": "2025:AHC:121211",
+      "court": {
+        "en": "Allahabad High Court",
+        "hi": "इलाहाबाद उच्च न्यायालय"
+      },
+      "year": 2025,
+      "summary": {
+        "en": "A doctor sought quashing of a criminal medical-negligence case under Sections 304A, 315, 323 and 506 IPC over a foetal death allegedly caused by a delayed caesarean section. The Allahabad High Court dismissed the Section 482 plea: consent for surgery was given around midday but the operation was performed only around 5:30 p.m., an unexplained delay of four to five hours; the post-mortem recorded prolonged labour as the cause of death; hospital records contradicted each other; and the Medical Board opinion clearing the doctor could not be relied on because all relevant documents had not been placed before it. A prima facie case had to be tested at trial, with all defences left open.",
+        "hi": "एक डॉक्टर ने विलंबित सीजेरियन सेक्शन के कारण कथित तौर पर हुई भ्रूण मृत्यु पर धारा 304ए, 315, 323 और 506 भादसं के तहत आपराधिक चिकित्सीय लापरवाही के मामले को रद्द करने की माँग की। इलाहाबाद उच्च न्यायालय ने धारा 482 की याचिका खारिज कर दी: सर्जरी की सहमति दोपहर के आसपास दी गई थी लेकिन ऑपरेशन शाम लगभग 5:30 बजे ही किया गया, चार से पाँच घंटे की अस्पष्टीकृत देरी थी; पोस्टमार्टम में मृत्यु का कारण लंबे समय तक प्रसव पीड़ा दर्ज था; अस्पताल के रिकॉर्ड एक-दूसरे से विरोधाभासी थे; और डॉक्टर को क्लीन चिट देने वाली मेडिकल बोर्ड की राय पर भरोसा नहीं किया जा सकता क्योंकि सभी प्रासंगिक दस्तावेज उसके समक्ष नहीं रखे गए थे। प्रथम दृष्टया मामला ट्रायल में परखा जाना चाहिए, सभी बचाव खुले रखते हुए।"
+      },
+      "pdfUrl": "https://indiankanoon.org/search/?formInput=Dr.%20Ashok%20Kumar%20Rai%20v.%20State%20of%20U.P.",
+      "sourceName": "Indian Kanoon",
+      "caseNameHi": "डॉ. अशोक कुमार राय बनाम उत्तर प्रदेश राज्य और एक अन्य",
+      "sections": [
+        "IPC 304A",
+        "IPC 315",
+        "CRPC 482"
+      ]
+    },
+    {
+      "caseName": "Sunil Dubey v. Minakshi",
+      "citation": "2025:AHC:147955",
+      "court": {
+        "en": "Allahabad High Court",
+        "hi": "इलाहाबाद उच्च न्यायालय"
+      },
+      "year": 2025,
+      "summary": {
+        "en": "In a mutual-consent divorce petition under Section 13B of the Hindu Marriage Act, 1955, the Family Court insisted on production of a marriage registration certificate. The Allahabad High Court allowed the Article 227 petition and set aside that order: registration under Section 8 of the Act is only evidence to facilitate proof of marriage, and under Section 8(5) non-registration does not invalidate a marriage; the Rule 3(a) certificate requirement applies only where the marriage was in fact registered. Here the 2010 marriage was never registered, so no certificate could be insisted on, and the Family Court was directed to dispose of the divorce petition expeditiously.",
+        "hi": "हिंदू विवाह अधिनियम, 1955 की धारा 13बी के तहत आपसी सहमति से तलाक की याचिका में फैमिली कोर्ट ने विवाह पंजीकरण प्रमाण पत्र पेश करने पर जोर दिया। इलाहाबाद उच्च न्यायालय ने अनुच्छेद 227 की याचिका स्वीकार की और वह आदेश रद्द कर दिया: अधिनियम की धारा 8 के तहत पंजीकरण केवल विवाह के सबूत को सुगम बनाने वाला साक्ष्य है, और धारा 8(5) के तहत पंजीकरण न होने से विवाह अमान्य नहीं होता; नियम 3(ए) की प्रमाण पत्र की आवश्यकता केवल तभी लागू होती है जब विवाह वास्तव में पंजीकृत हुआ हो। यहाँ 2010 का विवाह कभी पंजीकृत ही नहीं हुआ था, इसलिए प्रमाण पत्र की माँग नहीं की जा सकती थी, और फैमिली कोर्ट को तलाक याचिका का शीघ्र निपटारा करने का निर्देश दिया गया।"
+      },
+      "pdfUrl": "https://indiankanoon.org/search/?formInput=Sunil%20Dubey%20v.%20Minakshi",
+      "sourceName": "Indian Kanoon",
+      "caseNameHi": "सुनील दुबे बनाम मीनाक्षी",
+      "sections": [
+        "HMA 13",
+        "HMA 8"
+      ]
+    },
+    {
+      "caseName": "Raj Narain v. Indira Nehru Gandhi",
+      "citation": "",
+      "court": {
+        "en": "Allahabad High Court",
+        "hi": "इलाहाबाद उच्च न्यायालय"
+      },
+      "year": 1975,
+      "summary": {
+        "en": "Raj Narain's election petition challenged Prime Minister Indira Gandhi's 1971 Rae Bareli Lok Sabha victory. On 12 June 1975, Justice Jagmohanlal Sinha of the Allahabad High Court held her guilty of a corrupt practice under Section 123(7) of the Representation of the People Act, 1951, for obtaining the assistance of a gazetted officer for her election campaign, declared her election void, and disqualified her from elected office for six years. The verdict was followed within days by the proclamation of the national Emergency. The later Supreme Court appeal in this dispute is a separate case already listed in the collection.",
+        "hi": "राज नारायण की चुनाव याचिका ने प्रधानमंत्री इंदिरा गांधी की 1971 की रायबरेली लोकसभा जीत को चुनौती दी थी। 12 जून 1975 को इलाहाबाद उच्च न्यायालय के न्यायमूर्ति जगमोहनलाल सिन्हा ने उन्हें लोक प्रतिनिधित्व अधिनियम, 1951 की धारा 123(7) के तहत भ्रष्ट आचरण का दोषी ठहराया, क्योंकि उन्होंने अपने चुनाव प्रचार के लिए एक राजपत्रित अधिकारी की सहायता ली थी, उनका चुनाव शून्य घोषित किया और उन्हें छह वर्ष के लिए निर्वाचित पद से अयोग्य कर दिया। इस फैसले के कुछ ही दिनों बाद राष्ट्रीय आपातकाल की घोषणा हुई। इस विवाद में बाद की सर्वोच्च न्यायालय की अपील एक अलग मामला है जो संग्रह में पहले से सूचीबद्ध है।"
+      },
+      "pdfUrl": "https://indiankanoon.org/search/?formInput=Raj%20Narain%20v.%20Indira%20Nehru%20Gandhi",
+      "sourceName": "Indian Kanoon",
+      "caseNameHi": "राज नारायण बनाम इंदिरा नेहरू गांधी",
+      "sections": [
+        "RPA 123",
+        "ART 329"
       ]
     }
   ]

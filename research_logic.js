@@ -6,6 +6,7 @@
      drafts.json sections prose + titles). Both old and new codes are listed
      explicitly where both occur (e.g. BNSS:483 and CRPC:439); nothing is
      inferred through an equivalence table at runtime.
+   - Exception: IPC:405 (cheating topic) is retained as the old-code definition counterpart of the BNS:316 proposition, not as a parsed token.
    - An item joins the report iff one of its own parsed section tokens is in
      the topic's list. Judgement tokens come straight from the sections array;
      note/draft tokens are parsed from their own sections strings (ranges
@@ -131,7 +132,15 @@
     { id: "criminal-trespass", en: "Criminal Trespass", hi: "आपराधिक अतिचार", sections: ["BNS:329", "BNS:330"] },
     { id: "stalking-voyeurism", en: "Stalking & Voyeurism", hi: "पीछा करना और ताक-झाँक", sections: ["BNS:77", "BNS:78"] },
     { id: "robbery", en: "Robbery", hi: "लूट", sections: ["BNS:309", "IPC:390"] },
-    { id: "unlawful-assembly-rioting", en: "Unlawful Assembly & Rioting", hi: "विधिविरुद्ध जमाव और बलवा", sections: ["BNS:189", "BNS:190", "IPC:147", "IPC:149"] }
+    { id: "unlawful-assembly-rioting", en: "Unlawful Assembly & Rioting", hi: "विधिविरुद्ध जमाव और बलवा", sections: ["BNS:189", "BNS:190", "IPC:147", "IPC:149"] },
+    { id: "fundamental-rights", en: "Fundamental Rights: Equality, Freedom & Life", hi: "मौलिक अधिकार: समानता, स्वतंत्रता और जीवन", sections: ["ART:14", "ART:19", "ART:21"] },
+    { id: "writs-remedies", en: "Writs & Constitutional Remedies", hi: "रिट और संवैधानिक उपचार", sections: ["ART:32", "ART:226"] },
+    { id: "motor-accident-claims", en: "Motor Accident Claims", hi: "मोटर दुर्घटना दावे", sections: ["MVA:166", "MVA:147", "MVA:149"] },
+    { id: "forgery", en: "Forgery", hi: "जालसाजी", sections: ["BNS:336", "IPC:468", "IPC:471"] },
+    { id: "wrongful-restraint-confinement", en: "Wrongful Restraint & Confinement", hi: "गलत अवरोध और परिरोध", sections: ["BNS:126", "IPC:342"] },
+    { id: "victim-compensation", en: "Victim Compensation & Witness Protection", hi: "पीड़ित मुआवज़ा और गवाह संरक्षण", sections: ["BNSS:396", "BNSS:398"] },
+    { id: "probation", en: "Probation", hi: "परिवीक्षा", sections: ["BNSS:401", "BNSS:402"] },
+    { id: "hindu-marriage-divorce", en: "Hindu Marriage & Divorce", hi: "हिंदू विवाह और तलाक", sections: ["HMA:13", "HMA:24"] },
   ];
   function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
   function lang() { return document.documentElement.lang === "hi" ? "hi" : "en"; }
