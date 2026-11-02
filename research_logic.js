@@ -123,7 +123,15 @@
     { id: "attempt", en: "Attempt", hi: "प्रयास", sections: ["BNS:62", "IPC:511"] },
     { id: "acid-grievous-hurt", en: "Acid Attack & Grievous Hurt", hi: "तेज़ाब हमला और गंभीर चोट", sections: ["BNS:124", "BNS:117", "IPC:326"] },
     { id: "criminal-intimidation", en: "Criminal Intimidation", hi: "आपराधिक धमकी", sections: ["BNS:351", "IPC:506"] },
-    { id: "theft", en: "Theft & Snatching", hi: "चोरी और छीना-झपटी", sections: ["BNS:303", "BNS:304", "IPC:380"] }
+    { id: "theft", en: "Theft & Snatching", hi: "चोरी और छीना-झपटी", sections: ["BNS:303", "BNS:304", "IPC:380"] },
+    { id: "electronic-evidence", en: "Electronic Evidence", hi: "इलेक्ट्रॉनिक साक्ष्य", sections: ["BSA:62", "BSA:63", "IEA:65a", "IEA:65b"] },
+    { id: "offences-against-state", en: "Offences Against the State", hi: "राज्य के विरुद्ध अपराध", sections: ["BNS:152", "IPC:124a"] },
+    { id: "witness-examination", en: "Witness Examination", hi: "गवाहों की परीक्षा", sections: ["BSA:146", "BSA:149", "BSA:157", "BSA:142", "BSA:162"] },
+    { id: "compounding", en: "Compounding of Offences", hi: "अपराधों का शमन", sections: ["BNSS:359", "CRPC:320"] },
+    { id: "criminal-trespass", en: "Criminal Trespass", hi: "आपराधिक अतिचार", sections: ["BNS:329", "BNS:330"] },
+    { id: "stalking-voyeurism", en: "Stalking & Voyeurism", hi: "पीछा करना और ताक-झाँक", sections: ["BNS:77", "BNS:78"] },
+    { id: "robbery", en: "Robbery", hi: "लूट", sections: ["BNS:309", "IPC:390"] },
+    { id: "unlawful-assembly-rioting", en: "Unlawful Assembly & Rioting", hi: "विधिविरुद्ध जमाव और बलवा", sections: ["BNS:189", "BNS:190", "IPC:147", "IPC:149"] }
   ];
   function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
   function lang() { return document.documentElement.lang === "hi" ? "hi" : "en"; }
