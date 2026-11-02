@@ -70,7 +70,7 @@
     var st = document.createElement("style");
     st.id = "ll-related-style";
     st.textContent =
-      ".ll-related{font-family:\"Caveat\",\"Kalam\",\"Patrick Hand\",\"Segoe Print\",cursive;font-size:.82rem;line-height:1.7;color:#1d4ed8;padding:2px 4px 12px;}" +
+      ".ll-related{font-family:\"Caveat\",\"Kalam\",\"Patrick Hand\",\"Segoe Print\",cursive;font-size:.95rem;line-height:1.7;color:#1d4ed8;padding:2px 4px 12px;}" +
       "html[data-theme=\"dark\"] .ll-related{color:#8ab6ff;}";
     (document.head || document.documentElement).appendChild(st);
   }
@@ -143,7 +143,7 @@
     div.setAttribute("data-ll-note", noteId);
     /* Font/size/padding inline (buttons inherit the font); color lives ONLY
        in the injected stylesheet so the dark-mode override can win. */
-    div.style.cssText = "font-family:\"Caveat\",\"Kalam\",\"Patrick Hand\",\"Segoe Print\",cursive;font-size:.82rem;line-height:1.7;padding:2px 4px 12px;";
+    div.style.cssText = "font-family:\"Caveat\",\"Kalam\",\"Patrick Hand\",\"Segoe Print\",cursive;font-size:.95rem;line-height:1.7;padding:2px 4px 12px;";
     var label = document.createElement("span");
     label.setAttribute("data-ll-role", "label");
     label.textContent = (l === "hi" ? "🔗 संबंधित: " : "🔗 Related: ");

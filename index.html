@@ -186,7 +186,8 @@
 
     * { box-sizing: border-box; }
     section[id] { scroll-margin-top: 70px; }
-    html { scroll-behavior: smooth; }
+    /* Back-navigation must stay instant: smooth here made browser-back restore + JS scrolls fight, so the page glided up/down (2026-11-02). Deliberate nav taps still slide via JS behavior:"smooth". */
+    html { scroll-behavior: auto; }
     body {
       margin: 0;
       min-width: 0;
@@ -1387,13 +1388,13 @@ html[data-theme="dark"] .la-doc-row{background:rgba(255,255,255,.06)}
 
     .notes-content {
       font-family: "Caveat", "Kalam", "Patrick Hand", "Segoe Print", "Bradley Hand", cursive;
-      font-size: 1.02rem; line-height: 32px; color: #1d4ed8;
+      font-size: 1.12rem; line-height: 34px; color: #1d4ed8;
       padding-left: 28px;
     }
     html[data-theme="dark"] .notes-content { color: #8ab6ff; }
     .notes-content h3 {
       font-family: "Caveat", "Kalam", "Patrick Hand", "Segoe Print", cursive;
-      font-size: 1.34rem; font-weight: 700; color: #1e1e1e; margin: 26px 0 10px;
+      font-size: 1.42rem; font-weight: 700; color: #1e1e1e; margin: 26px 0 10px;
       padding: 2px 10px 4px; display: inline-block; border-radius: 3px;
       background: transparent;
       border-bottom: none;
@@ -1413,7 +1414,7 @@ html[data-theme="dark"] .la-doc-row{background:rgba(255,255,255,.06)}
     .notes-content h3:nth-of-type(6n+6), html[data-theme="dark"] .notes-content h3:nth-of-type(6n+6) { background: #e9d5ff; color: #1e1e1e !important; }
     .notes-content h4 {
       font-family: "Caveat", "Kalam", "Patrick Hand", "Segoe Print", "Bradley Hand", cursive;
-      font-size: 1.08rem; color: #1e3a8a; margin: 20px 0 8px;
+      font-size: 1.15rem; color: #1e3a8a; margin: 20px 0 8px;
     }
     html[data-theme="dark"] .notes-content h4 { color: #93c5fd; }
     .notes-content ul { margin: 8px 0 16px 4px; padding: 0; list-style: none; }
@@ -1432,17 +1433,17 @@ html[data-theme="dark"] .la-doc-row{background:rgba(255,255,255,.06)}
     }
     html[data-theme="dark"] .notes-content .note-section-num { background: #3b82f6; }
     .notes-note { margin-top: 24px; font-size: .85rem; color: var(--ink); opacity: .7; }
-    .notes-index-count { font-family: var(--sans); font-size: .85rem; color: var(--muted); margin: 0 0 14px; }
+    .notes-index-count { font-family: var(--sans); font-size: .95rem; color: var(--muted); margin: 0 0 14px; }
     .notes-index-item { display: block; width: 100%; text-align: left; font: inherit; color: inherit; background: transparent; border: none; border-bottom: 1px solid var(--line); padding: 12px 4px; cursor: pointer; }
     .notes-index-item:hover { background: rgba(0,0,0,.04); }
     html[data-theme="dark"] .notes-index-item:hover { background: rgba(255,255,255,.06); }
-    .notes-index-title { display: block; font-size: 1.15rem; font-weight: 700; }
-    .notes-index-secs { display: block; font-family: var(--sans); font-size: .78rem; color: var(--muted); margin-top: 2px; }
-    .notes-back-btn { font: 700 .85rem var(--sans); padding: 10px 22px; border: 1px solid rgba(0,0,0,.25); border-radius: 999px; background: transparent; color: var(--ink); cursor: pointer; margin-bottom: 8px; }
+    .notes-index-title { display: block; font-size: 1.22rem; font-weight: 700; }
+    .notes-index-secs { display: block; font-family: var(--sans); font-size: .92rem; color: var(--muted); margin-top: 2px; }
+    .notes-back-btn { font: 700 .95rem var(--sans); padding: 10px 22px; border: 1px solid rgba(0,0,0,.25); border-radius: 999px; background: transparent; color: var(--ink); cursor: pointer; margin-bottom: 8px; }
     .notes-back-btn:hover { border-color: #1e1e1e; }
     html[data-theme="dark"] .notes-back-btn { border-color: rgba(255,255,255,.3); }
     html[data-theme="dark"] .notes-back-btn:hover { border-color: #f9fcff; }
-    .notes-full-btn { font: 700 .85rem var(--sans); padding: 10px 22px; border: 1px solid rgba(0,0,0,.25); border-radius: 999px; background: transparent; color: var(--ink); cursor: pointer; margin-bottom: 8px; margin-left: 8px; }
+    .notes-full-btn { font: 700 .95rem var(--sans); padding: 10px 22px; border: 1px solid rgba(0,0,0,.25); border-radius: 999px; background: transparent; color: var(--ink); cursor: pointer; margin-bottom: 8px; margin-left: 8px; }
     .notes-full-btn:hover { border-color: #1e1e1e; }
     html[data-theme="dark"] .notes-full-btn { border-color: rgba(255,255,255,.3); }
     html[data-theme="dark"] .notes-full-btn:hover { border-color: #f9fcff; }
@@ -1451,24 +1452,31 @@ html[data-theme="dark"] .la-doc-row{background:rgba(255,255,255,.06)}
     html[data-theme="dark"] #notesReader { background: #000418; color: #F5F5F5; }
     #notesReader .nr-top { display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; }
     #notesReader .nr-close { font-size: 1.2rem; line-height: 1; background: transparent; border: 1px solid rgba(0,0,0,.25); border-radius: 50%; width: 38px; height: 38px; cursor: pointer; color: inherit; }
-    #notesReader .nr-count { font: 700 .85rem var(--sans); color: var(--muted); }
+    #notesReader .nr-count { font: 700 .95rem var(--sans); color: var(--muted); }
     #notesReader .nr-scroll { flex: 1; overflow-y: auto; padding: 8px 22px 30px; }
-    #notesReader .nr-body { max-width: 720px; margin: 0 auto; font-family: Georgia, serif; font-size: 1.12rem; line-height: 1.9; }
-    #notesReader .nr-body h2 { font-size: 1.4rem; line-height: 1.4; margin: 6px 0 16px; }
+    #notesReader .nr-body { max-width: 720px; margin: 0 auto; font-family: Georgia, serif; font-size: 1.18rem; line-height: 1.9; }
+    #notesReader .nr-body h2 { font-size: 1.5rem; line-height: 1.4; margin: 6px 0 16px; }
     #notesReader .nr-body li { margin-bottom: 12px; }
-    #notesReader .nr-sub { color: var(--muted); font-size: .85rem; margin-bottom: 4px; font-family: var(--sans); }
+    #notesReader .nr-sub { color: var(--muted); font-size: .95rem; margin-bottom: 4px; font-family: var(--sans); }
     #notesReader .nr-nav { display: flex; gap: 12px; padding: 14px 16px 18px; }
-    #notesReader .nr-nav button { flex: 1; font: 700 .9rem var(--sans); padding: 12px; border-radius: 999px; border: 1px solid rgba(0,0,0,.25); background: transparent; color: inherit; cursor: pointer; }
+    #notesReader .nr-nav button { flex: 1; font: 700 1.0rem var(--sans); padding: 12px; border-radius: 999px; border: 1px solid rgba(0,0,0,.25); background: transparent; color: inherit; cursor: pointer; }
     #notesReader .nr-nav button:disabled { opacity: .35; cursor: default; }
     html[data-theme="dark"] #notesReader .nr-close, html[data-theme="dark"] #notesReader .nr-nav button { border-color: rgba(255,255,255,.3); }
-    #notesReader .nr-hint { text-align: center; font: .8rem var(--sans); color: var(--muted); padding: 0 16px 6px; }
-    .notes-print-btn { font: 700 .85rem var(--sans); padding: 10px 22px; border: 1px solid rgba(0,0,0,.25); border-radius: 999px; background: transparent; color: var(--ink); cursor: pointer; margin-bottom: 8px; margin-left: 8px; }
+    #notesReader .nr-hint { text-align: center; font: .9rem var(--sans); color: var(--muted); padding: 0 16px 6px; }
+    /* Reader full page: every font in handwriting (2026-11-02) — title, subject, counter, buttons, hint. */
+    #notesReader, #notesReader .nr-body, #notesReader .nr-body h2, #notesReader .nr-sub, #notesReader .nr-count, #notesReader .nr-nav button, #notesReader .nr-hint, #notesReader .nr-close { font-family: "Caveat", "Kalam", "Patrick Hand", "Segoe Print", "Bradley Hand", cursive; }
+    /* Section collapse (2026-11-02): heading + toggle stay visible, body hides until opened; print shows everything. */
+    .ak-toggle { display: block; margin: 4px 0 16px; font: 700 .9rem var(--sans); padding: 10px 22px; border: 1px solid rgba(0,0,0,.25); border-radius: 999px; background: transparent; color: var(--ink); cursor: pointer; }
+    html[data-theme="dark"] .ak-toggle { border-color: rgba(255,255,255,.3); }
+    section.ak-collapsible.ak-collapsed .ak-sec-body { display: none !important; }
+    @media print { section.ak-collapsible .ak-sec-body { display: block !important; } .ak-toggle { display: none !important; } }
+    .notes-print-btn { font: 700 .95rem var(--sans); padding: 10px 22px; border: 1px solid rgba(0,0,0,.25); border-radius: 999px; background: transparent; color: var(--ink); cursor: pointer; margin-bottom: 8px; margin-left: 8px; }
     .notes-print-btn:hover { border-color: #1e1e1e; }
-    .notes-speak-btn { font: 700 .85rem var(--sans); padding: 10px 22px; border: 1px solid rgba(0,0,0,.25); border-radius: 999px; background: transparent; color: var(--ink); cursor: pointer; margin-bottom: 8px; margin-left: 8px; }
+    .notes-speak-btn { font: 700 .95rem var(--sans); padding: 10px 22px; border: 1px solid rgba(0,0,0,.25); border-radius: 999px; background: transparent; color: var(--ink); cursor: pointer; margin-bottom: 8px; margin-left: 8px; }
     .notes-speak-btn:hover { border-color: #1e1e1e; }
     html[data-theme="dark"] .notes-speak-btn { border-color: rgba(255,255,255,.3); }
     html[data-theme="dark"] .notes-speak-btn:hover { border-color: #f9fcff; }
-    .notes-quiz-btn { font: 700 .85rem var(--sans); padding: 10px 22px; border: 1px solid rgba(0,0,0,.25); border-radius: 999px; background: transparent; color: var(--ink); cursor: pointer; margin-bottom: 8px; margin-left: 8px; }
+    .notes-quiz-btn { font: 700 .95rem var(--sans); padding: 10px 22px; border: 1px solid rgba(0,0,0,.25); border-radius: 999px; background: transparent; color: var(--ink); cursor: pointer; margin-bottom: 8px; margin-left: 8px; }
     html[data-theme="dark"] .notes-quiz-btn { border-color: rgba(255,255,255,.3); }
     .notes-quiz-opt { display: block; width: 100%; text-align: left; margin: 6px 0; padding: 10px 14px; border: 1px solid rgba(0,0,0,.25); border-radius: 12px; background: transparent; color: var(--ink); cursor: pointer; font: .9rem var(--sans); }
     .notes-quiz-opt:disabled { cursor: default; opacity: .85; }
@@ -1537,7 +1545,7 @@ html[data-theme="dark"] .la-doc-row{background:rgba(255,255,255,.06)}
     .topic-dl:hover { background: #1a3a5c; color: #F5F5F5; }
     html[data-theme="dark"] .topic-dl { border-color: rgba(255,255,255,.45); color: #F5F5F5; }
     html[data-theme="dark"] .topic-dl:hover { background: #F5F5F5; color: #1e1e1e; }
-    .notes-result-badge { display: inline-block; font: 700 .68rem var(--sans); letter-spacing: .08em; text-transform: uppercase; border: 1px solid rgba(180,83,9,.5); color: #b45309; border-radius: 999px; padding: 3px 10px; margin: 14px 8px 2px 0; vertical-align: middle; }
+    .notes-result-badge { display: inline-block; font: 700 .78rem var(--sans); letter-spacing: .08em; text-transform: uppercase; border: 1px solid rgba(180,83,9,.5); color: #b45309; border-radius: 999px; padding: 3px 10px; margin: 14px 8px 2px 0; vertical-align: middle; }
     html[data-theme="dark"] .notes-result-badge { border-color: rgba(251,191,36,.5); color: #fbbf24; }
     .notes-empty { font-size: .92rem; opacity: .72; padding: 20px 4px; }
     .notes-tabs-divider { width: 1px; align-self: stretch; background: rgba(0,0,0,.16); margin: 8px 4px; }
@@ -4732,6 +4740,7 @@ function cfBiharFee(v) {
       var notesLang = "en";
       var notesQuery = "";
       var notesOpen = null;
+      var notesReturn = null;
       var notesSubjectLabels = { bns: "BNS", bnss: "BNSS", bsa: "BSA", cpc: "CPC", majorActs: "Major Acts" };
       function topicDlBtn(subj, ti, label) {
         return ' <button type="button" class="topic-dl" data-subj="' + escapeHtml(subj) + '" data-ti="' + ti + '" aria-label="' + escapeHtml(label) + '" title="' + escapeHtml(label) + '">\u2B07</button>';
@@ -4940,8 +4949,22 @@ function cfBiharFee(v) {
         var last = notesReader;
         notesReader = null;
         notesOpen = { subj: last.subj, ti: last.ti };
+        notesReturn = { subj: last.subj, ti: last.ti };
         renderNotes();
-        try { document.getElementById("notes").scrollIntoView({ behavior: "smooth" }); } catch (e) {}
+        try { notesRestorePos(); } catch (e) {}
+      }
+      function notesRestorePos() {
+        var target = null;
+        try {
+          if (notesReturn && notesReturn.subj !== undefined && notesReturn.ti !== undefined) {
+            var items = document.querySelectorAll(".notes-index-item");
+            for (var i = 0; i < items.length; i++) {
+              if (items[i].getAttribute("data-subj") === notesReturn.subj && parseInt(items[i].getAttribute("data-ti"), 10) === notesReturn.ti) { target = items[i]; break; }
+            }
+          }
+        } catch (e) {}
+        if (target && target.scrollIntoView) target.scrollIntoView();
+        else { var sec = document.getElementById("notes"); if (sec && sec.scrollIntoView) sec.scrollIntoView(); }
       }
       function notesReaderOpen(subj, ti) {
         notesReader = { subj: subj, ti: ti };
@@ -10431,7 +10454,7 @@ function cfBiharFee(v) {
             var qback = (t && t.closest) ? t.closest(".notes-quiz-back") : null;
             if (qback) { notesQuiz = null; renderNotes(); return; }
             var back = (t && t.closest) ? t.closest(".notes-back-btn") : null;
-            if (back) { notesOpen = null; notesQuiz = null; renderNotes(); document.getElementById("notes").scrollIntoView({ behavior: "smooth" }); return; }
+            if (back) { notesOpen = null; notesQuiz = null; renderNotes(); notesRestorePos(); return; }
             var fl = (t && t.closest) ? t.closest(".notes-full-btn") : null;
             if (fl) { if (notesOpen) notesReaderOpen(notesOpen.subj, notesOpen.ti); return; }
             var prt = (t && t.closest) ? t.closest(".notes-print-btn") : null;
@@ -10451,9 +10474,10 @@ function cfBiharFee(v) {
             }
             var item = (t && t.closest) ? t.closest(".notes-index-item") : null;
             if (item) {
-              notesOpen = { subj: item.getAttribute("data-subj"), ti: parseInt(item.getAttribute("data-ti"), 10) };
+              notesReturn = { subj: item.getAttribute("data-subj"), ti: parseInt(item.getAttribute("data-ti"), 10) };
+              notesOpen = { subj: notesReturn.subj, ti: notesReturn.ti };
               renderNotes();
-              document.getElementById("notes").scrollIntoView({ behavior: "smooth" });
+              document.getElementById("notes").scrollIntoView();
             }
           });
         }
@@ -16014,5 +16038,94 @@ function cfBiharFee(v) {
 </script>
 <!-- ================= END C1 IRRAC VIEW ================= -->
     <script src="crosslink_snippet.js"></script>
+<script>
+/* Section collapse (2026-11-02): every main section heading gets a Show/Hide content button underneath; content stays identical, only hidden until opened. Menu/search jumps auto-expand their section. Contact footer stays always open. */
+(function () {
+  if (window.__akCollapseDone) return;
+  window.__akCollapseDone = true;
+  var TARGETS = ['practice', 'updates', 'library', 'linkDirectory', 'knowledge', 'citizen-rights', 'documents', 'drafts', 'draft-guide', 'general-docs', 'legal-analysis', 'exam-prep', 'notes', 'vocabulary', 'll-journey', 'll-research'];
+  var SHOW = '▼ Show content · सामग्री दिखाएँ';
+  var HIDE = '▲ Hide content · सामग्री छिपाएँ';
+  var saved = {};
+  try { saved = JSON.parse(window.localStorage.getItem('akl-sec') || '{}') || {}; } catch (e) { saved = {}; }
+  function save() { try { window.localStorage.setItem('akl-sec', JSON.stringify(saved)); } catch (e) {} }
+  function setOpen(sec, open) {
+    sec.classList.toggle('ak-collapsed', !open);
+    var btn = sec.querySelector('.ak-toggle');
+    if (btn) {
+      btn.textContent = open ? HIDE : SHOW;
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+    saved[sec.id] = !!open;
+    save();
+  }
+  function expandSec(sec) { if (sec && sec.classList.contains('ak-collapsible')) setOpen(sec, true); }
+  function setup(sec) {
+    var h2 = null;
+    var labelled = sec.getAttribute('aria-labelledby');
+    if (labelled) h2 = document.getElementById(labelled);
+    if (!h2) h2 = sec.querySelector('h2');
+    if (!h2) return false;
+    var head = h2;
+    var guard = 0;
+    while (head.parentNode && head.parentNode !== sec && !(head.parentNode.classList && head.parentNode.classList.contains('shell')) && guard < 8) {
+      head = head.parentNode;
+      guard++;
+    }
+    var parent = head.parentNode;
+    if (!parent || head === sec) return false;
+    if (parent !== sec && !(parent.classList && parent.classList.contains('shell'))) return false;
+    var body = document.createElement('div');
+    body.className = 'ak-sec-body';
+    body.id = 'ak-body-' + sec.id;
+    var nxt = head.nextSibling;
+    while (nxt) { var cur = nxt; nxt = nxt.nextSibling; body.appendChild(cur); }
+    parent.insertBefore(body, head.nextSibling);
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'ak-toggle';
+    btn.setAttribute('aria-controls', body.id);
+    btn.addEventListener('click', function () { setOpen(sec, sec.classList.contains('ak-collapsed')); });
+    parent.insertBefore(btn, body);
+    sec.classList.add('ak-collapsible');
+    return true;
+  }
+  TARGETS.forEach(function (id) {
+    var sec = document.getElementById(id);
+    if (!sec || sec.classList.contains('la-pane')) return;
+    if (!setup(sec)) return;
+    var open = saved[id] === true;
+    if (window.location.hash === '#' + id) open = true;
+    setOpen(sec, open);
+  });
+  function expandFromHash() {
+    try {
+      var h = window.location.hash;
+      if (!h || h.length < 2) return;
+      var el = document.getElementById(h.slice(1));
+      if (!el) return;
+      if (el.tagName === 'SECTION' && el.classList.contains('ak-collapsible')) { expandSec(el); return; }
+      var sec = el.closest ? el.closest('section.ak-collapsible') : null;
+      if (sec) expandSec(sec);
+    } catch (e) {}
+  }
+  window.addEventListener('hashchange', expandFromHash);
+  expandFromHash();
+  try {
+    var orig = Element.prototype.scrollIntoView;
+    Element.prototype.scrollIntoView = function () {
+      try {
+        var t = this;
+        var sec = null;
+        if (t && t.closest) sec = t.closest('section.ak-collapsible.ak-collapsed');
+        if (!sec && t && t.tagName === 'SECTION' && t.classList.contains('ak-collapsible') && t.classList.contains('ak-collapsed')) sec = t;
+        if (sec) expandSec(sec);
+      } catch (e) {}
+      return orig.apply(this, arguments);
+    };
+  } catch (e) {}
+})();
+</script>
+
 </body>
 </html>
