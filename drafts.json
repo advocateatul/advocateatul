@@ -18385,6 +18385,534 @@
         "en": "Judicial Magistrate / Court of Sessions / Special Court where the case is pending or investigation is supervised",
         "hi": "न्यायिक मजिस्ट्रेट / सत्र न्यायालय / विशेष न्यायालय — जहाँ मामला लंबित हो या जाँच की निगरानी हो रही हो"
       }
+    },
+    {
+      "id": "complaint-criminal-breach-trust-316",
+      "category": {
+        "en": "Criminal",
+        "hi": "आपराधिक"
+      },
+      "title": {
+        "en": "Criminal Complaint for Criminal Breach of Trust (Sec. 316 BNS) — Breach of Trust Complaint / Gaban Complaint / Misappropriation Complaint",
+        "hi": "आपराधिक न्यासभंग की शिकायत (धारा 316 BNS) — न्यासभंग / गबन शिकायत"
+      },
+      "use": {
+        "en": "File this private complaint before the Magistrate when someone to whom you entrusted money or property — such as an employee, agent, partner or caretaker — has dishonestly misappropriated it or used it for their own purpose. Also called a breach of trust complaint, gaban complaint or misappropriation complaint.",
+        "hi": "जब किसी व्यक्ति — जैसे कर्मचारी, एजेंट, साझेदार या देखभालकर्ता — को सौंपी गई धनराशि या संपत्ति का उसने बेईमानी से गबन कर लिया हो या अपने काम में लगा लिया हो, तब मजिस्ट्रेट के समक्ष यह निजी शिकायत दाखिल करें। इसे न्यासभंग शिकायत, गबन शिकायत या दुरुपयोग शिकायत भी कहते हैं।"
+      },
+      "template": "IN THE COURT OF THE JUDICIAL MAGISTRATE FIRST CLASS, [DISTRICT NAME], [STATE]\n\nComplaint Case No. [____] of [YEAR]\n\n[COMPLAINANT NAME], S/o / D/o [FATHER'S NAME], R/o [FULL ADDRESS] ... Complainant\n\nVERSUS\n\n[ACCUSED NAME], S/o / D/o [FATHER'S NAME], R/o [FULL ADDRESS] ... Accused\n\nCOMPLAINT UNDER SECTION 210 READ WITH SECTION 223 OF THE BHARATIYA NAGARIK SURAKSHA SANHITA, 2023 (SECTIONS 190 AND 200 OF THE CODE OF CRIMINAL PROCEDURE, 1973)\n\nOffence: Criminal breach of trust punishable under Section 316 of the Bharatiya Nyaya Sanhita, 2023 (Section 406 of the Indian Penal Code, 1860)\n\nMay it please the Court:\n\n1. That the complainant is [PROFESSION / BUSINESS], residing at the above address, and the accused was [EMPLOYED BY / AGENT OF / PARTNER WITH] the complainant during the period [FROM DATE] to [TO DATE].\n\n2. That in the course of that relationship the complainant entrusted to the accused [MONEY / PROPERTY — FULL DESCRIPTION AND VALUE, e.g. Rs. [AMOUNT] in cash / [ITEMS]], for the specific purpose of [PURPOSE, e.g. depositing it in the bank / delivering it to the customer / keeping it in safe custody].\n\n3. That the accused, in violation of the trust so reposed, dishonestly misappropriated the said [MONEY / PROPERTY] and converted it to his own use, and despite repeated demands made on [DATES] and a written demand notice dated [DATE], has failed and refused to return or account for it.\n\n4. That the accused has thereby committed the offence of criminal breach of trust punishable under Section 316 BNS. The entrustment, the dishonest intention and the misappropriation all took place within the local jurisdiction of this Court, at [PLACE].\n\n5. That the complainant reported the matter to Police Station [NAME] on [DATE], but no FIR was registered, hence this complaint is being filed.\n\nPRAYER:\nIt is therefore most respectfully prayed that this Hon'ble Court may graciously be pleased to:\n(a) take cognizance of the offence under Section 210 BNSS and examine the complainant under Section 223 BNSS;\n(b) summon the accused and try him in accordance with law; and\n(c) pass such other orders as this Hon'ble Court may deem fit and proper in the facts of the case.\n\nPlace: [PLACE]\nDate: [DATE]\n\n[COMPLAINANT NAME]\nComplainant\nThrough Counsel: [ADVOCATE NAME, ENROLMENT NO.]\n\nVERIFICATION:\nI, [COMPLAINANT NAME], the complainant above named, do hereby verify that the contents of paras 1 to 5 of this complaint are true to my personal knowledge and belief, and nothing material has been concealed.\n\nVerified at [PLACE] on [DATE].\n\n[COMPLAINANT NAME]\n\nLIST OF WITNESSES:\n1. [WITNESS NAME, ADDRESS]\n2. [WITNESS NAME, ADDRESS]\n\nLIST OF DOCUMENTS:\n1. Proof of entrustment — [RECEIPT / AGREEMENT / BANK ENTRY]\n2. Demand notice dated [DATE] with postal receipt\n3. Copy of complaint given to the police and its receipt",
+      "templateHi": "[जिला का नाम], [राज्य] के प्रथम श्रेणी न्यायिक मजिस्ट्रेट के न्यायालय में\n\nशिकायत प्रकरण संख्या [____] सन् [वर्ष]\n\n[शिकायतकर्ता का नाम], पुत्र / पुत्री [पिता का नाम], निवासी [पूरा पता] ... शिकायतकर्ता\n\nबनाम\n\n[अभियुक्त का नाम], पुत्र / पुत्री [पिता का नाम], निवासी [पूरा पता] ... अभियुक्त\n\nभारतीय नागरिक सुरक्षा संहिता, 2023 की धारा 210 के साथ धारा 223 (दंड प्रक्रिया संहिता, 1973 की धारा 190 एवं 200) के अंतर्गत शिकायत\n\nअपराध: भारतीय न्याय संहिता, 2023 की धारा 316 (भारतीय दंड संहिता, 1860 की धारा 406) के अंतर्गत दंडनीय आपराधिक न्यासभंग\n\nमाननीय न्यायालय की सेवा में सादर निवेदन है:\n\n1. कि शिकायतकर्ता [व्यवसाय / पेशा] है, जो उपर्युक्त पते पर रहता है, और अभियुक्त [दिनांक] से [दिनांक] तक शिकायतकर्ता के यहाँ [कर्मचारी / एजेंट / साझेदार] था।\n\n2. कि इस संबंध के दौरान शिकायतकर्ता ने अभियुक्त को [धनराशि / संपत्ति — पूर्ण विवरण एवं मूल्य, जैसे रु. [राशि] नकद / [वस्तुएँ]], [उद्देश्य, जैसे बैंक में जमा करने / ग्राहक तक पहुँचाने / सुरक्षित अभिरक्षा में रखने] के विशिष्ट उद्देश्य से सौंपी थी।\n\n3. कि अभियुक्त ने उस विश्वास का उल्लंघन करते हुए उक्त [धनराशि / संपत्ति] का बेईमानी से गबन कर लिया और उसे अपने उपयोग में ले लिया, तथा [तिथियों] को की गई बार-बार की माँगों और [तिथि] की लिखित माँग-नोटिस के बावजूद उसे वापस करने या उसका हिसाब देने से इनकार कर दिया है।\n\n4. कि इस प्रकार अभियुक्त ने धारा 316 BNS के अंतर्गत दंडनीय आपराधिक न्यासभंग का अपराध किया है। न्यास, बेईमानी की नीयत और गबन — सभी इस न्यायालय के स्थानीय क्षेत्राधिकार में, [स्थान] पर हुए।\n\n5. कि शिकायतकर्ता ने [तिथि] को थाना [नाम] में मामले की सूचना दी, परंतु कोई FIR दर्ज नहीं हुई, अतः यह शिकायत दाखिल की जा रही है।\n\nप्रार्थना:\nअतः अत्यंत सादर प्रार्थना है कि यह माननीय न्यायालय कृपापूर्वक:\n(क) धारा 210 BNSS के अंतर्गत अपराध का संज्ञान ले और धारा 223 BNSS के अंतर्गत शिकायतकर्ता का परीक्षण करे;\n(ख) अभियुक्त को समन करे और विधि अनुसार उसका विचारण करे; और\n(ग) मामले के तथ्यों में अन्य ऐसे आदेश पारित करे जो उचित प्रतीत हों।\n\nस्थान: [स्थान]\nदिनांक: [दिनांक]\n\n[शिकायतकर्ता का नाम]\nशिकायतकर्ता\nद्वारा अधिवक्ता: [अधिवक्ता का नाम, नामांकन संख्या]\n\nसत्यापन:\nमैं, [शिकायतकर्ता का नाम], उपर्युक्त शिकायतकर्ता, सत्यापित करता हूँ कि इस शिकायत के अनुच्छेद 1 से 5 की बातें मेरी व्यक्तिगत जानकारी एवं विश्वास के अनुसार सत्य हैं और कोई महत्वपूर्ण तथ्य छिपाया नहीं गया है।\n\n[स्थान] में [दिनांक] को सत्यापित।\n\n[शिकायतकर्ता का नाम]\n\nसाक्षियों की सूची:\n1. [साक्षी का नाम, पता]\n2. [साक्षी का नाम, पता]\n\nदस्तावेजों की सूची:\n1. न्यास का प्रमाण — [रसीद / अनुबंध / बैंक प्रविष्टि]\n2. [तिथि] की माँग-नोटिस व डाक रसीद\n3. पुलिस को दी गई शिकायत की प्रति व उसकी प्राप्ति",
+      "filedIn": {
+        "en": "Court of Judicial Magistrate First Class having local jurisdiction",
+        "hi": "स्थानीय क्षेत्राधिकार वाले प्रथम श्रेणी न्यायिक मजिस्ट्रेट का न्यायालय"
+      },
+      "sections": {
+        "en": "Sec. 316 BNS (Sec. 406 IPC) — criminal breach of trust; punishment under Sec. 316(2) BNS up to five years, or fine, or both; Sec. 316(5) BNS — breach of trust by a clerk, servant, public servant or agent carries up to seven years. Procedure: Sec. 210 BNSS (Sec. 190 CrPC) — cognizance; Sec. 223 BNSS (Sec. 200 CrPC) — examination of complainant. Note: entrustment plus dishonest misappropriation must both be shown; a purely civil dispute over accounts is not breach of trust.",
+        "hi": "धारा 316 BNS (धारा 406 IPC) — आपराधिक न्यासभंग; धारा 316(2) BNS के अंतर्गत दंड पाँच वर्ष तक, या जुर्माना, या दोनों; धारा 316(5) BNS — लिपिक, सेवक, लोक सेवक या एजेंट द्वारा न्यासभंग पर सात वर्ष तक। प्रक्रिया: धारा 210 BNSS (धारा 190 CrPC) — संज्ञान; धारा 223 BNSS (धारा 200 CrPC) — शिकायतकर्ता का परीक्षण। ध्यान दें: न्यास और बेईमानी से गबन दोनों दिखाने होंगे; हिसाब-किताब का शुद्ध सिविल विवाद न्यासभंग नहीं है।"
+      },
+      "jurisdiction": {
+        "en": "The Magistrate within whose local jurisdiction the entrustment or the misappropriation took place.",
+        "hi": "वह मजिस्ट्रेट, जिसके स्थानीय क्षेत्राधिकार में न्यास अथवा गबन हुआ हो।"
+      },
+      "requirements": {
+        "en": [
+          "Proof of entrustment (receipt, agreement, appointment letter, bank entry)",
+          "Demand notice and its postal receipt",
+          "Complaint given to police and its receipt, if any",
+          "ID proof of complainant",
+          "List of witnesses with addresses"
+        ],
+        "hi": [
+          "न्यास का प्रमाण (रसीद, अनुबंध, नियुक्ति पत्र, बैंक प्रविष्टि)",
+          "माँग-नोटिस व उसकी डाक रसीद",
+          "पुलिस को दी गई शिकायत एवं उसकी प्राप्ति, यदि कोई हो",
+          "शिकायतकर्ता का पहचान प्रमाण",
+          "पते सहित साक्षियों की सूची"
+        ]
+      },
+      "when": {
+        "en": "File this private complaint before the Magistrate when someone to whom you entrusted money or property — such as an employee, agent, partner or caretaker — has dishonestly misappropriated it or used it for their own purpose. Also called a breach of trust complaint, gaban complaint or misappropriation complaint.",
+        "hi": "जब किसी व्यक्ति — जैसे कर्मचारी, एजेंट, साझेदार या देखभालकर्ता — को सौंपी गई धनराशि या संपत्ति का उसने बेईमानी से गबन कर लिया हो या अपने काम में लगा लिया हो, तब मजिस्ट्रेट के समक्ष यह निजी शिकायत दाखिल करें। इसे न्यासभंग शिकायत, गबन शिकायत या दुरुपयोग शिकायत भी कहते हैं।"
+      },
+      "where": {
+        "en": "Court of Judicial Magistrate First Class having local jurisdiction",
+        "hi": "स्थानीय क्षेत्राधिकार वाले प्रथम श्रेणी न्यायिक मजिस्ट्रेट का न्यायालय"
+      }
+    },
+    {
+      "id": "complaint-criminal-trespass-329",
+      "category": {
+        "en": "Criminal",
+        "hi": "आपराधिक"
+      },
+      "title": {
+        "en": "Criminal Complaint for Criminal Trespass / House Trespass (Sec. 329 BNS) — Trespass Complaint / Ghuspaith Complaint",
+        "hi": "आपराधिक अतिचार / गृह-अतिचार की शिकायत (धारा 329 BNS) — अतिचार / घुसपैठ शिकायत"
+      },
+      "use": {
+        "en": "File this private complaint before the Magistrate when someone has entered or remained in your house, land or building without permission, with intent to commit an offence or to intimidate, insult or annoy you. Also called a trespass complaint or ghuspaith complaint.",
+        "hi": "जब किसी ने आपके घर, भूमि या भवन में बिना अनुमति प्रवेश किया हो या वहाँ ठहरा हो, और उसका उद्देश्य अपराध करना अथवा आपको डराना, अपमानित करना या परेशान करना रहा हो, तब मजिस्ट्रेट के समक्ष यह निजी शिकायत दाखिल करें। इसे अतिचार शिकायत या घुसपैठ शिकायत भी कहते हैं।"
+      },
+      "template": "IN THE COURT OF THE JUDICIAL MAGISTRATE FIRST CLASS, [DISTRICT NAME], [STATE]\n\nComplaint Case No. [____] of [YEAR]\n\n[COMPLAINANT NAME], S/o / D/o [FATHER'S NAME], R/o [FULL ADDRESS] ... Complainant\n\nVERSUS\n\n[ACCUSED NAME], S/o / D/o [FATHER'S NAME], R/o [FULL ADDRESS] ... Accused\n\nCOMPLAINT UNDER SECTION 210 READ WITH SECTION 223 OF THE BHARATIYA NAGARIK SURAKSHA SANHITA, 2023 (SECTIONS 190 AND 200 OF THE CODE OF CRIMINAL PROCEDURE, 1973)\n\nOffence: Criminal trespass punishable under Section 329 of the Bharatiya Nyaya Sanhita, 2023 (Sections 441 and 447 of the Indian Penal Code, 1860)\n\nMay it please the Court:\n\n1. That the complainant is the lawful owner / occupant of the property situated at [FULL ADDRESS OF PROPERTY], and has been in peaceful possession thereof.\n\n2. That on [DATE] at about [TIME], the accused, without any right, permission or authority, entered into / remained in the said property, and [DESCRIBE ACTS — e.g. broke open the lock / climbed over the boundary wall / refused to leave despite being asked to do so].\n\n3. That the accused entered with the intent to [COMMIT AN OFFENCE / INTIMIDATE / INSULT / ANNOY — GIVE DETAILS, e.g. threaten the complainant and occupy a room of the house], and while inside, [DESCRIBE WHAT THE ACCUSED DID — e.g. abused the complainant, damaged household articles worth Rs. [AMOUNT]].\n\n4. That the complainant immediately objected and reported the matter to Police Station [NAME] on [DATE], but no FIR was registered, hence this complaint is being filed.\n\nPRAYER:\nIt is therefore most respectfully prayed that this Hon'ble Court may graciously be pleased to:\n(a) take cognizance of the offence under Section 210 BNSS and examine the complainant under Section 223 BNSS;\n(b) summon the accused and try him in accordance with law; and\n(c) pass such other orders as this Hon'ble Court may deem fit and proper.\n\nPlace: [PLACE]\nDate: [DATE]\n\n[COMPLAINANT NAME]\nComplainant\nThrough Counsel: [ADVOCATE NAME, ENROLMENT NO.]\n\nVERIFICATION:\nI, [COMPLAINANT NAME], the complainant above named, do hereby verify that the contents of paras 1 to 4 of this complaint are true to my personal knowledge and belief.\n\nVerified at [PLACE] on [DATE].\n\n[COMPLAINANT NAME]\n\nLIST OF WITNESSES:\n1. [WITNESS NAME, ADDRESS]\n2. [WITNESS NAME, ADDRESS]\n\nLIST OF DOCUMENTS:\n1. Ownership / possession proof of the property\n2. Photographs / CCTV footage of the trespass, if available\n3. Copy of complaint given to the police and its receipt",
+      "templateHi": "[जिला का नाम], [राज्य] के प्रथम श्रेणी न्यायिक मजिस्ट्रेट के न्यायालय में\n\nशिकायत प्रकरण संख्या [____] सन् [वर्ष]\n\n[शिकायतकर्ता का नाम], पुत्र / पुत्री [पिता का नाम], निवासी [पूरा पता] ... शिकायतकर्ता\n\nबनाम\n\n[अभियुक्त का नाम], पुत्र / पुत्री [पिता का नाम], निवासी [पूरा पता] ... अभियुक्त\n\nभारतीय नागरिक सुरक्षा संहिता, 2023 की धारा 210 के साथ धारा 223 (दंड प्रक्रिया संहिता, 1973 की धारा 190 एवं 200) के अंतर्गत शिकायत\n\nअपराध: भारतीय न्याय संहिता, 2023 की धारा 329 (भारतीय दंड संहिता, 1860 की धारा 441 एवं 447) के अंतर्गत दंडनीय आपराधिक अतिचार\n\nमाननीय न्यायालय की सेवा में सादर निवेदन है:\n\n1. कि शिकायतकर्ता [संपत्ति का पूरा पता] स्थित संपत्ति का विधिक स्वामी / अधिभोगी है और उसके शांतिपूर्ण कब्जे में है।\n\n2. कि [तिथि] को लगभग [समय] बजे, अभियुक्त ने बिना किसी अधिकार, अनुमति या प्राधिकार के उक्त संपत्ति में प्रवेश किया / वहाँ ठहरा रहा, और [कृत्य का वर्णन — जैसे ताला तोड़ा / चाहरदीवारी लाँघी / कहने के बावजूद जाने से इनकार किया]।\n\n3. कि अभियुक्त ने [अपराध करने / डराने / अपमानित करने / परेशान करने — विवरण दें, जैसे शिकायतकर्ता को धमकाना और घर का कमरा कब्जाना] की नीयत से प्रवेश किया, और अंदर [अभियुक्त ने क्या किया — जैसे शिकायतकर्ता को गालियाँ दीं, रु. [राशि] मूल्य की घरेलू वस्तुएँ क्षतिग्रस्त कीं]।\n\n4. कि शिकायतकर्ता ने तुरंत आपत्ति की और [तिथि] को थाना [नाम] में सूचना दी, परंतु कोई FIR दर्ज नहीं हुई, अतः यह शिकायत दाखिल की जा रही है।\n\nप्रार्थना:\nअतः अत्यंत सादर प्रार्थना है कि यह माननीय न्यायालय कृपापूर्वक:\n(क) धारा 210 BNSS के अंतर्गत अपराध का संज्ञान ले और धारा 223 BNSS के अंतर्गत शिकायतकर्ता का परीक्षण करे;\n(ख) अभियुक्त को समन करे और विधि अनुसार उसका विचारण करे; और\n(ग) अन्य ऐसे आदेश पारित करे जो उचित प्रतीत हों।\n\nस्थान: [स्थान]\nदिनांक: [दिनांक]\n\n[शिकायतकर्ता का नाम]\nशिकायतकर्ता\nद्वारा अधिवक्ता: [अधिवक्ता का नाम, नामांकन संख्या]\n\nसत्यापन:\nमैं, [शिकायतकर्ता का नाम], उपर्युक्त शिकायतकर्ता, सत्यापित करता हूँ कि इस शिकायत के अनुच्छेद 1 से 4 की बातें मेरी व्यक्तिगत जानकारी एवं विश्वास के अनुसार सत्य हैं।\n\n[स्थान] में [दिनांक] को सत्यापित।\n\n[शिकायतकर्ता का नाम]\n\nसाक्षियों की सूची:\n1. [साक्षी का नाम, पता]\n2. [साक्षी का नाम, पता]\n\nदस्तावेजों की सूची:\n1. संपत्ति का स्वामित्व / कब्जा प्रमाण\n2. अतिचार के फोटोग्राफ / सीसीटीवी फुटेज, यदि उपलब्ध हों\n3. पुलिस को दी गई शिकायत की प्रति व उसकी प्राप्ति",
+      "filedIn": {
+        "en": "Court of Judicial Magistrate First Class having local jurisdiction",
+        "hi": "स्थानीय क्षेत्राधिकार वाले प्रथम श्रेणी न्यायिक मजिस्ट्रेट का न्यायालय"
+      },
+      "sections": {
+        "en": "Sec. 329 BNS (Secs. 441 and 447 IPC) — criminal trespass; punishment under Sec. 329(3) BNS up to three months, or fine up to Rs. 5,000, or both. Sec. 329(4) BNS — house-trespass carries up to one year, or fine up to Rs. 5,000, or both. Procedure: Sec. 210 BNSS (Sec. 190 CrPC) — cognizance; Sec. 223 BNSS (Sec. 200 CrPC) — examination of complainant. Note: entry must be without permission and with the intent mentioned in Sec. 329(1) BNS; a bona fide civil possession dispute alone is not trespass.",
+        "hi": "धारा 329 BNS (धारा 441 एवं 447 IPC) — आपराधिक अतिचार; धारा 329(3) BNS के अंतर्गत दंड तीन मास तक, या रु. 5,000 तक जुर्माना, या दोनों। धारा 329(4) BNS — गृह-अतिचार पर एक वर्ष तक, या रु. 5,000 तक जुर्माना, या दोनों। प्रक्रिया: धारा 210 BNSS (धारा 190 CrPC) — संज्ञान; धारा 223 BNSS (धारा 200 CrPC) — शिकायतकर्ता का परीक्षण। ध्यान दें: प्रवेश बिना अनुमति के और धारा 329(1) BNS में उल्लिखित नीयत से होना चाहिए; शुद्ध सिविल कब्जा विवाद अकेले अतिचार नहीं है।"
+      },
+      "jurisdiction": {
+        "en": "The Magistrate within whose local jurisdiction the property is situated.",
+        "hi": "वह मजिस्ट्रेट, जिसके स्थानीय क्षेत्राधिकार में संपत्ति स्थित हो।"
+      },
+      "requirements": {
+        "en": [
+          "Ownership / possession proof of the property",
+          "Photographs or CCTV footage of the trespass, if available",
+          "Complaint given to police and its receipt, if any",
+          "ID proof of complainant",
+          "List of witnesses with addresses"
+        ],
+        "hi": [
+          "संपत्ति का स्वामित्व / कब्जा प्रमाण",
+          "अतिचार के फोटोग्राफ या सीसीटीवी फुटेज, यदि उपलब्ध हों",
+          "पुलिस को दी गई शिकायत एवं उसकी प्राप्ति, यदि कोई हो",
+          "शिकायतकर्ता का पहचान प्रमाण",
+          "पते सहित साक्षियों की सूची"
+        ]
+      },
+      "when": {
+        "en": "File this private complaint before the Magistrate when someone has entered or remained in your house, land or building without permission, with intent to commit an offence or to intimidate, insult or annoy you. Also called a trespass complaint or ghuspaith complaint.",
+        "hi": "जब किसी ने आपके घर, भूमि या भवन में बिना अनुमति प्रवेश किया हो या वहाँ ठहरा हो, और उसका उद्देश्य अपराध करना अथवा आपको डराना, अपमानित करना या परेशान करना रहा हो, तब मजिस्ट्रेट के समक्ष यह निजी शिकायत दाखिल करें। इसे अतिचार शिकायत या घुसपैठ शिकायत भी कहते हैं।"
+      },
+      "where": {
+        "en": "Court of Judicial Magistrate First Class having local jurisdiction",
+        "hi": "स्थानीय क्षेत्राधिकार वाले प्रथम श्रेणी न्यायिक मजिस्ट्रेट का न्यायालय"
+      }
+    },
+    {
+      "id": "complaint-stalking-78",
+      "category": {
+        "en": "Criminal",
+        "hi": "आपराधिक"
+      },
+      "title": {
+        "en": "Criminal Complaint for Stalking (Sec. 78 BNS) — Stalking Complaint / Peecha Karna Complaint",
+        "hi": "पीछा करने (स्टॉकिंग) की आपराधिक शिकायत (धारा 78 BNS) — स्टॉकिंग / पीछा करना शिकायत"
+      },
+      "use": {
+        "en": "File this private complaint before the Magistrate when a man repeatedly follows you, contacts you or monitors your online activity despite your clear disinterest or objection. Also called a stalking complaint or peecha karna complaint. A woman complainant may also approach the police directly, and the complaint can be filed through a relative.",
+        "hi": "जब कोई पुरुष आपकी स्पष्ट अरुचि या आपत्ति के बावजूद बार-बार आपका पीछा करे, आपसे संपर्क करे या आपकी ऑनलाइन गतिविधि पर नज़र रखे, तब मजिस्ट्रेट के समक्ष यह निजी शिकायत दाखिल करें। इसे स्टॉकिंग शिकायत या पीछा करना शिकायत भी कहते हैं। महिला शिकायतकर्ता सीधे पुलिस से भी संपर्क कर सकती है, और शिकायत किसी रिश्तेदार के माध्यम से भी दाखिल हो सकती है।"
+      },
+      "template": "IN THE COURT OF THE JUDICIAL MAGISTRATE FIRST CLASS, [DISTRICT NAME], [STATE]\n\nComplaint Case No. [____] of [YEAR]\n\n[COMPLAINANT NAME], D/o [FATHER'S NAME], R/o [FULL ADDRESS] ... Complainant\n\nVERSUS\n\n[ACCUSED NAME], S/o [FATHER'S NAME], R/o [FULL ADDRESS] ... Accused\n\nCOMPLAINT UNDER SECTION 210 READ WITH SECTION 223 OF THE BHARATIYA NAGARIK SURAKSHA SANHITA, 2023 (SECTIONS 190 AND 200 OF THE CODE OF CRIMINAL PROCEDURE, 1973)\n\nOffence: Stalking punishable under Section 78 of the Bharatiya Nyaya Sanhita, 2023 (Section 354D of the Indian Penal Code, 1860)\n\nMay it please the Court:\n\n1. That the complainant is [AGE] years old, residing at the above address, and the accused is known to her as [HOW KNOWN — e.g. a neighbour / former colleague / stranger].\n\n2. That despite the complainant's clear disinterest and objection conveyed on [DATES / MANNER], the accused has repeatedly [FOLLOWED THE COMPLAINANT — DATES AND PLACES, e.g. on her way to college / workplace] and [CONTACTED HER — e.g. repeated calls and messages on phone number [NUMBER] / monitoring her social media profile [DETAILS]].\n\n3. That the accused's conduct has caused the complainant fear, mental distress and apprehension for her safety, and has forced her to [CHANGE HER ROUTE / AVOID GOING OUT ALONE — DETAILS].\n\n4. That the complainant reported the matter to Police Station [NAME] on [DATE], but no FIR was registered, hence this complaint is being filed.\n\nPRAYER:\nIt is therefore most respectfully prayed that this Hon'ble Court may graciously be pleased to:\n(a) take cognizance of the offence under Section 210 BNSS and examine the complainant under Section 223 BNSS;\n(b) summon the accused and try him in accordance with law; and\n(c) pass such other orders, including directions for the safety of the complainant, as this Hon'ble Court may deem fit.\n\nPlace: [PLACE]\nDate: [DATE]\n\n[COMPLAINANT NAME]\nComplainant\nThrough Counsel: [ADVOCATE NAME, ENROLMENT NO.]\n\nVERIFICATION:\nI, [COMPLAINANT NAME], the complainant above named, do hereby verify that the contents of paras 1 to 4 of this complaint are true to my personal knowledge and belief.\n\nVerified at [PLACE] on [DATE].\n\n[COMPLAINANT NAME]\n\nLIST OF WITNESSES:\n1. [WITNESS NAME, ADDRESS]\n2. [WITNESS NAME, ADDRESS]\n\nLIST OF DOCUMENTS:\n1. Screenshots / call logs of unwanted contact\n2. Copy of complaint given to the police and its receipt\n3. ID proof of complainant",
+      "templateHi": "[जिला का नाम], [राज्य] के प्रथम श्रेणी न्यायिक मजिस्ट्रेट के न्यायालय में\n\nशिकायत प्रकरण संख्या [____] सन् [वर्ष]\n\n[शिकायतकर्ता का नाम], पुत्री [पिता का नाम], निवासी [पूरा पता] ... शिकायतकर्ता\n\nबनाम\n\n[अभियुक्त का नाम], पुत्र [पिता का नाम], निवासी [पूरा पता] ... अभियुक्त\n\nभारतीय नागरिक सुरक्षा संहिता, 2023 की धारा 210 के साथ धारा 223 (दंड प्रक्रिया संहिता, 1973 की धारा 190 एवं 200) के अंतर्गत शिकायत\n\nअपराध: भारतीय न्याय संहिता, 2023 की धारा 78 (भारतीय दंड संहिता, 1860 की धारा 354D) के अंतर्गत दंडनीय पीछा करना (स्टॉकिंग)\n\nमाननीय न्यायालय की सेवा में सादर निवेदन है:\n\n1. कि शिकायतकर्ता [आयु] वर्ष की है, जो उपर्युक्त पते पर रहती है, और अभियुक्त उसे [कैसे जानती है — जैसे पड़ोसी / पूर्व सहकर्मी / अजनबी] के रूप में ज्ञात है।\n\n2. कि शिकायतकर्ता की स्पष्ट अरुचि और [तिथियों / तरीके] से व्यक्त आपत्ति के बावजूद अभियुक्त ने बार-बार [शिकायतकर्ता का पीछा किया — तिथियाँ व स्थान, जैसे कॉलेज / कार्यस्थल जाते समय] और [उससे संपर्क किया — जैसे फोन नंबर [नंबर] पर बार-बार कॉल व संदेश / उसके सोशल मीडिया प्रोफाइल पर नज़र रखी — विवरण]।\n\n3. कि अभियुक्त के आचरण से शिकायतकर्ता को भय, मानसिक कष्ट और अपनी सुरक्षा की चिंता हुई है, और उसे [रास्ता बदलना पड़ा / अकेले बाहर जाने से बचना पड़ा — विवरण]।\n\n4. कि शिकायतकर्ता ने [तिथि] को थाना [नाम] में सूचना दी, परंतु कोई FIR दर्ज नहीं हुई, अतः यह शिकायत दाखिल की जा रही है।\n\nप्रार्थना:\nअतः अत्यंत सादर प्रार्थना है कि यह माननीय न्यायालय कृपापूर्वक:\n(क) धारा 210 BNSS के अंतर्गत अपराध का संज्ञान ले और धारा 223 BNSS के अंतर्गत शिकायतकर्ता का परीक्षण करे;\n(ख) अभियुक्त को समन करे और विधि अनुसार उसका विचारण करे; और\n(ग) शिकायतकर्ता की सुरक्षा हेतु निर्देश सहित अन्य ऐसे आदेश पारित करे जो उचित प्रतीत हों।\n\nस्थान: [स्थान]\nदिनांक: [दिनांक]\n\n[शिकायतकर्ता का नाम]\nशिकायतकर्ता\nद्वारा अधिवक्ता: [अधिवक्ता का नाम, नामांकन संख्या]\n\nसत्यापन:\nमैं, [शिकायतकर्ता का नाम], उपर्युक्त शिकायतकर्ता, सत्यापित करती हूँ कि इस शिकायत के अनुच्छेद 1 से 4 की बातें मेरी व्यक्तिगत जानकारी एवं विश्वास के अनुसार सत्य हैं।\n\n[स्थान] में [दिनांक] को सत्यापित।\n\n[शिकायतकर्ता का नाम]\n\nसाक्षियों की सूची:\n1. [साक्षी का नाम, पता]\n2. [साक्षी का नाम, पता]\n\nदस्तावेजों की सूची:\n1. अवांछित संपर्क के स्क्रीनशॉट / कॉल लॉग\n2. पुलिस को दी गई शिकायत की प्रति व उसकी प्राप्ति\n3. शिकायतकर्ता का पहचान प्रमाण",
+      "filedIn": {
+        "en": "Court of Judicial Magistrate First Class having local jurisdiction",
+        "hi": "स्थानीय क्षेत्राधिकार वाले प्रथम श्रेणी न्यायिक मजिस्ट्रेट का न्यायालय"
+      },
+      "sections": {
+        "en": "Sec. 78 BNS (Sec. 354D IPC) — stalking of a woman; first conviction: imprisonment up to three years and fine; second or subsequent conviction: up to five years and fine. Procedure: Sec. 210 BNSS (Sec. 190 CrPC) — cognizance; Sec. 223 BNSS (Sec. 200 CrPC) — examination of complainant. Note: a single incident is not stalking — repetition despite clear disinterest must be shown, with dates and records.",
+        "hi": "धारा 78 BNS (धारा 354D IPC) — महिला का पीछा करना (स्टॉकिंग); प्रथम दोषसिद्धि पर तीन वर्ष तक कारावास व जुर्माना; द्वितीय या पश्चात्वर्ती दोषसिद्धि पर पाँच वर्ष तक व जुर्माना। प्रक्रिया: धारा 210 BNSS (धारा 190 CrPC) — संज्ञान; धारा 223 BNSS (धारा 200 CrPC) — शिकायतकर्ता का परीक्षण। ध्यान दें: एकल घटना स्टॉकिंग नहीं है — स्पष्ट अरुचि के बावजूद दोहराव तिथियों व रिकॉर्ड सहित दिखाना होगा।"
+      },
+      "jurisdiction": {
+        "en": "The Magistrate within whose local jurisdiction any act of following or contacting took place.",
+        "hi": "वह मजिस्ट्रेट, जिसके स्थानीय क्षेत्राधिकार में पीछा करने या संपर्क करने का कोई कृत्य हुआ हो।"
+      },
+      "requirements": {
+        "en": [
+          "Screenshots / call logs / message records of unwanted contact",
+          "Complaint given to police and its receipt, if any",
+          "ID proof of complainant",
+          "List of witnesses with addresses"
+        ],
+        "hi": [
+          "अवांछित संपर्क के स्क्रीनशॉट / कॉल लॉग / संदेश रिकॉर्ड",
+          "पुलिस को दी गई शिकायत एवं उसकी प्राप्ति, यदि कोई हो",
+          "शिकायतकर्ता का पहचान प्रमाण",
+          "पते सहित साक्षियों की सूची"
+        ]
+      },
+      "when": {
+        "en": "File this private complaint before the Magistrate when a man repeatedly follows you, contacts you or monitors your online activity despite your clear disinterest or objection. Also called a stalking complaint or peecha karna complaint. A woman complainant may also approach the police directly, and the complaint can be filed through a relative.",
+        "hi": "जब कोई पुरुष आपकी स्पष्ट अरुचि या आपत्ति के बावजूद बार-बार आपका पीछा करे, आपसे संपर्क करे या आपकी ऑनलाइन गतिविधि पर नज़र रखे, तब मजिस्ट्रेट के समक्ष यह निजी शिकायत दाखिल करें। इसे स्टॉकिंग शिकायत या पीछा करना शिकायत भी कहते हैं। महिला शिकायतकर्ता सीधे पुलिस से भी संपर्क कर सकती है, और शिकायत किसी रिश्तेदार के माध्यम से भी दाखिल हो सकती है।"
+      },
+      "where": {
+        "en": "Court of Judicial Magistrate First Class having local jurisdiction",
+        "hi": "स्थानीय क्षेत्राधिकार वाले प्रथम श्रेणी न्यायिक मजिस्ट्रेट का न्यायालय"
+      }
+    },
+    {
+      "id": "application-statement-164-bnss",
+      "category": {
+        "en": "Criminal",
+        "hi": "आपराधिक"
+      },
+      "title": {
+        "en": "Application for Recording of Statement / Confession U/s 164 BNSS — 164 Statement Application / Bayan Darj Application",
+        "hi": "धारा 164 BNSS के अंतर्गत बयान / संस्वीकृति दर्ज कराने हेतु आवेदन — 164 बयान आवेदन"
+      },
+      "use": {
+        "en": "Ask the Magistrate to record the statement of a witness or the confession of an accused under Section 164 BNSS during investigation, so that it carries evidentiary value at trial. Also called a 164 statement application or bayan darj application.",
+        "hi": "विवेचना के दौरान किसी साक्षी का बयान या अभियुक्त की संस्वीकृति धारा 164 BNSS के अंतर्गत मजिस्ट्रेट से दर्ज कराने हेतु आवेदन करें, ताकि विचारण में उसका साक्ष्यात्मक मूल्य रहे। इसे 164 बयान आवेदन या बयान दर्ज आवेदन भी कहते हैं।"
+      },
+      "template": "IN THE COURT OF THE JUDICIAL MAGISTRATE FIRST CLASS, [DISTRICT], [STATE]\n\nCriminal Misc. Application No. [____] of [YEAR]\n(In FIR No. [____] dated [DATE], P.S. [NAME], U/s [SECTIONS])\n\nIN THE MATTER OF:\n[APPLICANT — INVESTIGATING OFFICER / COMPLAINANT / VICTIM], [DETAILS] ... Applicant\n\nAPPLICATION UNDER SECTION 164 OF THE BHARATIYA NAGARIK SURAKSHA SANHITA, 2023 (SECTION 164 OF THE CODE OF CRIMINAL PROCEDURE, 1973) FOR RECORDING THE STATEMENT OF [WITNESS NAME] / CONFESSION OF THE ACCUSED\n\nMay it please the Court:\n\n1. That the above-noted case is under investigation at Police Station [NAME], and [WITNESS NAME] is a material witness whose statement is essential for a just and fair investigation, / the accused [NAME] has expressed willingness to make a voluntary confession.\n\n2. That the statement of the said witness is required to be recorded before a Magistrate at this stage because [REASON — e.g. the witness is likely to be won over / is leaving the station / is a victim whose version must be preserved in a free atmosphere].\n\n3. That the applicant undertakes to produce the witness / accused before this Hon'ble Court on the date fixed, and prays that the statement be recorded in accordance with Section 164 BNSS, after giving the witness / accused the caution and time for reflection prescribed by law, and that a copy thereof be supplied to the investigating officer.\n\nPRAYER:\nIt is therefore most respectfully prayed that this Hon'ble Court may graciously be pleased to fix a date and record the statement / confession of [NAME] under Section 164 BNSS, and pass such other orders as may be deemed fit.\n\nPlace: [PLACE]\nDate: [DATE]\n\n[APPLICANT NAME]\nApplicant\nThrough Counsel: [ADVOCATE NAME, ENROLMENT NO.]",
+      "templateHi": "[जिला], [राज्य] के प्रथम श्रेणी न्यायिक मजिस्ट्रेट के न्यायालय में\n\nआपराधिक प्रकीर्ण आवेदन सं. [____] वर्ष [YEAR]\n([DATE] की प्राथमिकी सं. [____], थाना [NAME], धारा [SECTIONS] में)\n\nमामले में:\n[आवेदक — विवेचक / शिकायतकर्ता / पीड़ित], [विवरण] ... आवेदक\n\n[साक्षी का नाम] का बयान / अभियुक्त की संस्वीकृति दर्ज कराने हेतु भारतीय नागरिक सुरक्षा संहिता, 2023 की धारा 164 (दंड प्रक्रिया संहिता, 1973 की धारा 164) के अंतर्गत आवेदन\n\nमाननीय न्यायालय की सेवा में सादर निवेदन है:\n\n1. कि उपर्युक्त मामला थाना [नाम] में विवेचनाधीन है, और [साक्षी का नाम] एक महत्वपूर्ण साक्षी है जिसका बयान निष्पक्ष विवेचना हेतु आवश्यक है, / अभियुक्त [नाम] ने स्वेच्छा से संस्वीकृति देने की इच्छा व्यक्त की है।\n\n2. कि उक्त साक्षी का बयान इस स्तर पर मजिस्ट्रेट के समक्ष दर्ज कराना आवश्यक है क्योंकि [कारण — जैसे साक्षी के प्रभावित होने की आशंका है / वह स्थान छोड़ रहा है / वह पीड़ित है जिसका कथन मुक्त वातावरण में सुरक्षित करना है]।\n\n3. कि आवेदक नियत तिथि पर साक्षी / अभियुक्त को इस माननीय न्यायालय के समक्ष प्रस्तुत करने का वचन देता है, और प्रार्थना करता है कि धारा 164 BNSS के अनुसार, विधि द्वारा विहित चेतावनी व विचार हेतु समय देकर बयान दर्ज किया जाए, और उसकी प्रति विवेचक को दी जाए।\n\nप्रार्थना:\nअतः अत्यंत सादर प्रार्थना है कि यह माननीय न्यायालय कृपापूर्वक तिथि नियत कर [नाम] का बयान / संस्वीकृति धारा 164 BNSS के अंतर्गत दर्ज करे, और अन्य ऐसे आदेश पारित करे जो उचित प्रतीत हों।\n\nस्थान: [स्थान]\nदिनांक: [दिनांक]\n\n[आवेदक का नाम]\nआवेदक\nद्वारा अधिवक्ता: [अधिवक्ता का नाम, नामांकन संख्या]",
+      "filedIn": {
+        "en": "Judicial Magistrate First Class / CJM where the investigation is pending",
+        "hi": "न्यायिक मजिस्ट्रेट/CJM जहां विवेचना लंबित है"
+      },
+      "sections": {
+        "en": "Sec. 164 BNSS (Sec. 164 CrPC) — recording of confessions and statements by a Magistrate during investigation. A confession must be voluntary: the Magistrate must explain that the accused is not bound to confess, that it may be used against him, and must give time for reflection; a statement recorded under Sec. 164 BNSS is not substantive evidence by itself but can be used to corroborate or contradict the witness at trial. In sexual offence cases, Sec. 164(5A) BNSS requires the statement of the victim to be recorded by a woman Magistrate as far as practicable.",
+        "hi": "धारा 164 BNSS (धारा 164 CrPC) — विवेचना के दौरान मजिस्ट्रेट द्वारा संस्वीकृति व बयान दर्ज करना। संस्वीकृति स्वैच्छिक होनी चाहिए: मजिस्ट्रेट को स्पष्ट करना होगा कि अभियुक्त संस्वीकृति देने को बाध्य नहीं है, कि इसका उसके विरुद्ध उपयोग हो सकता है, और विचार हेतु समय देना होगा; धारा 164 BNSS के अंतर्गत दर्ज बयान स्वयं सारभूत साक्ष्य नहीं है, परंतु विचारण में साक्षी की पुष्टि या खंडन हेतु उपयोग हो सकता है। यौन अपराधों में धारा 164(5A) BNSS के अनुसार पीड़ित का बयान यथासंभव महिला मजिस्ट्रेट द्वारा दर्ज किया जाएगा।"
+      },
+      "jurisdiction": {
+        "en": "Any Judicial Magistrate, whether or not he has jurisdiction in the case, may record a statement or confession under Sec. 164 BNSS.",
+        "hi": "धारा 164 BNSS के अंतर्गत कोई भी न्यायिक मजिस्ट्रेट — चाहे उसे मामले में क्षेत्राधिकार हो या न हो — बयान या संस्वीकृति दर्ज कर सकता है।"
+      },
+      "requirements": {
+        "en": [
+          "FIR copy",
+          "Case diary extract showing need for the statement",
+          "Details of the witness / accused to be produced",
+          "Vakalatnama / authorisation"
+        ],
+        "hi": [
+          "FIR की प्रति",
+          "बयान की आवश्यकता दर्शाने वाला केस डायरी अंश",
+          "प्रस्तुत किए जाने वाले साक्षी / अभियुक्त का विवरण",
+          "वकालतनामा/प्राधिकार"
+        ]
+      },
+      "when": {
+        "en": "Ask the Magistrate to record the statement of a witness or the confession of an accused under Section 164 BNSS during investigation, so that it carries evidentiary value at trial. Also called a 164 statement application or bayan darj application.",
+        "hi": "विवेचना के दौरान किसी साक्षी का बयान या अभियुक्त की संस्वीकृति धारा 164 BNSS के अंतर्गत मजिस्ट्रेट से दर्ज कराने हेतु आवेदन करें, ताकि विचारण में उसका साक्ष्यात्मक मूल्य रहे। इसे 164 बयान आवेदन या बयान दर्ज आवेदन भी कहते हैं।"
+      },
+      "where": {
+        "en": "Judicial Magistrate First Class / CJM where the investigation is pending",
+        "hi": "न्यायिक मजिस्ट्रेट/CJM जहां विवेचना लंबित है"
+      }
+    },
+    {
+      "id": "application-second-postmortem",
+      "category": {
+        "en": "Criminal",
+        "hi": "आपराधिक"
+      },
+      "title": {
+        "en": "Application for Second Post-Mortem / Re-Examination of Dead Body (Sec. 194 BNSS) — Dobara Postmortem Application",
+        "hi": "द्वितीय पोस्टमार्टम / शव की पुनः परीक्षा हेतु आवेदन (धारा 194 BNSS) — दोबारा पोस्टमार्टम आवेदन"
+      },
+      "use": {
+        "en": "Ask the Magistrate to order a second post-mortem examination or re-examination of the dead body when the first report is disputed, incomplete or suspected to be incorrect. Also called a dobara postmortem application or re-postmortem application.",
+        "hi": "जब प्रथम पोस्टमार्टम रिपोर्ट विवादित, अपूर्ण या गलत होने की आशंका हो, तब शव की द्वितीय पोस्टमार्टम परीक्षा या पुनः परीक्षा का मजिस्ट्रेट से आदेश मांगें। इसे दोबारा पोस्टमार्टम आवेदन या पुनः पोस्टमार्टम आवेदन भी कहते हैं।"
+      },
+      "template": "IN THE COURT OF THE [CHIEF JUDICIAL MAGISTRATE / JUDICIAL MAGISTRATE FIRST CLASS], [DISTRICT], [STATE]\n\nCriminal Misc. Application No. [____] of [YEAR]\n(In FIR No. [____] dated [DATE], P.S. [NAME], U/s [SECTIONS] / Inquest No. [____])\n\nIN THE MATTER OF:\n[APPLICANT NAME], [RELATION TO DECEASED — e.g. father / husband / brother of the deceased], R/o [FULL ADDRESS] ... Applicant\n\nAPPLICATION UNDER SECTION 194 OF THE BHARATIYA NAGARIK SURAKSHA SANHITA, 2023 (SECTION 174 OF THE CODE OF CRIMINAL PROCEDURE, 1973) FOR A SECOND POST-MORTEM EXAMINATION / RE-EXAMINATION OF THE DEAD BODY\n\nMay it please the Court:\n\n1. That the deceased [NAME], aged about [AGE] years, died on [DATE] at [PLACE] under [CIRCUMSTANCES — e.g. suspicious circumstances / in an alleged accident], and the body was subjected to post-mortem examination at [HOSPITAL] on [DATE], vide Post-Mortem Report No. [____].\n\n2. That the applicant, being a near relative of the deceased, has serious and bona fide doubts about the correctness / completeness of the said report, for the following reasons: [GIVE SPECIFIC REASONS — e.g. visible injuries on the body not mentioned in the report / the cause of death recorded is inconsistent with the injuries seen by the family / the examination was conducted in haste without X-ray or viscera preservation].\n\n3. That a second examination by a board of doctors is necessary in the interest of justice and for a fair investigation, and the body [IS STILL AVAILABLE AT [MORTUARY] / HAS BEEN CREMATED / BURIED — if cremated, pray for exhumation only if permitted and feasible, stating the reasons].\n\n4. That the applicant undertakes to bear the lawful expenses, if any, and to cooperate fully with the investigating agency.\n\nPRAYER:\nIt is therefore most respectfully prayed that this Hon'ble Court may graciously be pleased to direct a second post-mortem examination / re-examination of the dead body of [DECEASED NAME] by a board of [NUMBER] doctors at [HOSPITAL], with preservation of viscera and photography / videography, and pass such other orders as may be deemed fit.\n\nPlace: [PLACE]\nDate: [DATE]\n\n[APPLICANT NAME]\nApplicant\nThrough Counsel: [ADVOCATE NAME, ENROLMENT NO.]\n\nAFFIDAVIT IN SUPPORT:\nI, [APPLICANT NAME], do hereby solemnly affirm that the contents of paras 1 to 4 are true to my personal knowledge and belief.\n\nDeponent\nVerified at [PLACE] on [DATE].",
+      "templateHi": "[मुख्य न्यायिक मजिस्ट्रेट / प्रथम श्रेणी न्यायिक मजिस्ट्रेट], [जिला], [राज्य] के न्यायालय में\n\nआपराधिक प्रकीर्ण आवेदन सं. [____] वर्ष [YEAR]\n([DATE] की प्राथमिकी सं. [____], थाना [NAME], धारा [SECTIONS] / जाँच संख्या [____] में)\n\nमामले में:\n[आवेदक का नाम], [मृतक से संबंध — जैसे पिता / पति / भाई], निवासी [पूरा पता] ... आवेदक\n\nशव की द्वितीय पोस्टमार्टम परीक्षा / पुनः परीक्षा हेतु भारतीय नागरिक सुरक्षा संहिता, 2023 की धारा 194 (दंड प्रक्रिया संहिता, 1973 की धारा 174) के अंतर्गत आवेदन\n\nमाननीय न्यायालय की सेवा में सादर निवेदन है:\n\n1. कि मृतक [नाम], आयु लगभग [आयु] वर्ष, की [तिथि] को [स्थान] पर [परिस्थितियाँ — जैसे संदिग्ध परिस्थितियों में / कथित दुर्घटना में] मृत्यु हुई, और [तिथि] को [अस्पताल] में शव का पोस्टमार्टम किया गया, पोस्टमार्टम रिपोर्ट संख्या [____] के अनुसार।\n\n2. कि आवेदक, मृतक का निकट संबंधी होने के नाते, उक्त रिपोर्ट की शुद्धता / पूर्णता पर गंभीर एवं सद्भावपूर्ण संदेह रखता है, जिसके कारण निम्न हैं: [विशिष्ट कारण दें — जैसे शरीर पर दिख रही चोटों का रिपोर्ट में उल्लेख नहीं / दर्ज मृत्यु-कारण परिवार द्वारा देखी गई चोटों से मेल नहीं खाता / परीक्षा जल्दबाजी में बिना एक्स-रे या विसरा संरक्षण के की गई]।\n\n3. कि न्याय के हित में और निष्पक्ष विवेचना हेतु चिकित्सकों के बोर्ड द्वारा द्वितीय परीक्षा आवश्यक है, और शव [अभी [मुर्दाघर] में उपलब्ध है / का दाह-संस्कार / दफन हो चुका है — यदि दाह-संस्कार हो चुका है तो केवल अनुमति व व्यवहार्यता होने पर शवोत्खनन की प्रार्थना करें, कारण सहित]।\n\n4. कि आवेदक, यदि कोई विधिक व्यय हो, वहन करने और विवेचना एजेंसी से पूर्ण सहयोग करने का वचन देता है।\n\nप्रार्थना:\nअतः अत्यंत सादर प्रार्थना है कि यह माननीय न्यायालय कृपापूर्वक [अस्पताल] में [संख्या] चिकित्सकों के बोर्ड द्वारा [मृतक का नाम] के शव की द्वितीय पोस्टमार्टम परीक्षा / पुनः परीक्षा का निर्देश दे, जिसमें विसरा संरक्षण एवं फोटोग्राफी / वीडियोग्राफी हो, और अन्य ऐसे आदेश पारित करे जो उचित प्रतीत हों।\n\nस्थान: [स्थान]\nदिनांक: [दिनांक]\n\n[आवेदक का नाम]\nआवेदक\nद्वारा अधिवक्ता: [अधिवक्ता का नाम, नामांकन संख्या]\n\nसमर्थन में शपथपत्र:\nमैं, [आवेदक का नाम], शपथपूर्वक पुष्टि करता हूँ कि अनुच्छेद 1 से 4 की बातें मेरी व्यक्तिगत जानकारी एवं विश्वास के अनुसार सत्य हैं।\n\nशपथकर्ता\n[स्थान] में [दिनांक] को सत्यापित।",
+      "filedIn": {
+        "en": "Magistrate conducting / competent to conduct the inquest, or the CJM where the case is pending",
+        "hi": "जाँच करने वाला / जाँच करने में सक्षम मजिस्ट्रेट, अथवा CJM जहां मामला लंबित है"
+      },
+      "sections": {
+        "en": "Sec. 194 BNSS (Sec. 174 CrPC) — police inquest and examination of the dead body by a Magistrate; the Magistrate may order a fresh examination where the first report is disputed. Note: a second post-mortem is discretionary and is ordered only on specific, bona fide grounds — vague dissatisfaction is not enough. If the body has been cremated, exhumation is a separate, exceptional prayer and courts grant it rarely.",
+        "hi": "धारा 194 BNSS (धारा 174 CrPC) — पुलिस जाँच व मजिस्ट्रेट द्वारा शव की परीक्षा; प्रथम रिपोर्ट विवादित होने पर मजिस्ट्रेट नवीन परीक्षा का आदेश दे सकता है। ध्यान दें: द्वितीय पोस्टमार्टम विवेकाधीन है और केवल विशिष्ट, सद्भावपूर्ण आधारों पर आदेशित होता है — अस्पष्ट असंतोष पर्याप्त नहीं है। यदि शव का दाह-संस्कार हो चुका है, तो शवोत्खनन एक अलग, अपवादात्मक प्रार्थना है जो न्यायालय दुर्लभतः ही स्वीकार करते हैं।"
+      },
+      "jurisdiction": {
+        "en": "The Magistrate within whose jurisdiction the death occurred / the inquest is pending.",
+        "hi": "वह मजिस्ट्रेट, जिसके क्षेत्राधिकार में मृत्यु हुई / जाँच लंबित है।"
+      },
+      "requirements": {
+        "en": [
+          "First post-mortem report copy",
+          "Death certificate, if available",
+          "Proof of relationship with the deceased",
+          "Photographs showing injuries, if any",
+          "FIR / inquest papers copy",
+          "Affidavit in support"
+        ],
+        "hi": [
+          "प्रथम पोस्टमार्टम रिपोर्ट की प्रति",
+          "मृत्यु प्रमाणपत्र, यदि उपलब्ध हो",
+          "मृतक से संबंध का प्रमाण",
+          "चोटें दर्शाने वाले फोटोग्राफ, यदि कोई हों",
+          "FIR / जाँच कागजात की प्रति",
+          "समर्थन में शपथपत्र"
+        ]
+      },
+      "when": {
+        "en": "Ask the Magistrate to order a second post-mortem examination or re-examination of the dead body when the first report is disputed, incomplete or suspected to be incorrect. Also called a dobara postmortem application or re-postmortem application.",
+        "hi": "जब प्रथम पोस्टमार्टम रिपोर्ट विवादित, अपूर्ण या गलत होने की आशंका हो, तब शव की द्वितीय पोस्टमार्टम परीक्षा या पुनः परीक्षा का मजिस्ट्रेट से आदेश मांगें। इसे दोबारा पोस्टमार्टम आवेदन या पुनः पोस्टमार्टम आवेदन भी कहते हैं।"
+      },
+      "where": {
+        "en": "Magistrate conducting / competent to conduct the inquest, or the CJM where the case is pending",
+        "hi": "जाँच करने वाला / जाँच करने में सक्षम मजिस्ट्रेट, अथवा CJM जहां मामला लंबित है"
+      }
+    },
+    {
+      "id": "application-loc-cancellation",
+      "category": {
+        "en": "Criminal",
+        "hi": "आपराधिक"
+      },
+      "title": {
+        "en": "Application for Cancellation / Withdrawal of Look Out Circular (LOC) — LOC Cancellation Application / LOC Hatane Ka Application",
+        "hi": "लुक आउट सर्कुलर (LOC) रद्द / वापस लेने हेतु आवेदन — LOC रद्द कराने का आवेदन"
+      },
+      "use": {
+        "en": "Ask the Court to direct the withdrawal or cancellation of a Look Out Circular issued against you, so that you can travel abroad freely. Also called an LOC cancellation application or LOC hatane ka application. File it before the Court where the criminal case is pending, or before the High Court if no case is pending.",
+        "hi": "आपके विरुद्ध जारी लुक आउट सर्कुलर को वापस लेने या रद्द करने का न्यायालय से निर्देश मांगें, ताकि आप स्वतंत्र रूप से विदेश यात्रा कर सकें। इसे LOC रद्द कराने का आवेदन या LOC हटाने का आवेदन भी कहते हैं। इसे उस न्यायालय में दाखिल करें जहां आपराधिक मामला लंबित है, अथवा यदि कोई मामला लंबित न हो तो उच्च न्यायालय में।"
+      },
+      "template": "IN THE COURT OF THE [SESSIONS JUDGE / JUDICIAL MAGISTRATE FIRST CLASS / HIGH COURT], [DISTRICT / STATE]\n\nCriminal Misc. Application No. [____] of [YEAR]\n(In FIR No. [____] dated [DATE], P.S. [NAME], U/s [SECTIONS] / Case No. [____])\n\nIN THE MATTER OF:\n[APPLICANT NAME], S/o / D/o [FATHER'S NAME], R/o [FULL ADDRESS], Passport No. [NUMBER] ... Applicant\n\nVERSUS\n\nState of [STATE] / Union of India, through [INVESTIGATING AGENCY / BUREAU OF IMMIGRATION] ... Respondent\n\nAPPLICATION FOR CANCELLATION / WITHDRAWAL OF THE LOOK OUT CIRCULAR ISSUED AGAINST THE APPLICANT\n\nMay it please the Court:\n\n1. That the applicant is [PROFESSION], holding Indian Passport No. [NUMBER], and a Look Out Circular was opened against him on [DATE] at the instance of [AGENCY], in connection with the above case.\n\n2. That [STATE THE GROUNDS — e.g. the applicant has joined the investigation on every date, has been granted bail / anticipatory bail vide order dated [DATE], has never attempted to evade the process of law, and the investigation / trial is pending for a long period; OR the LOC was opened without any pending case or without following the guidelines in the Office Memorandum on LOCs].\n\n3. That the applicant urgently needs to travel abroad for [PURPOSE — e.g. employment / medical treatment / family obligation] from [DATE] to [DATE], and the subsisting LOC is causing grave hardship and amounts to an unreasonable restriction on his fundamental right to travel.\n\n4. That the applicant undertakes to appear before the investigating agency / Court as and when required, to furnish his travel itinerary and contact details, and to return to India by [DATE].\n\nPRAYER:\nIt is therefore most respectfully prayed that this Hon'ble Court may graciously be pleased to direct the respondents to cancel / withdraw / keep in abeyance the Look Out Circular issued against the applicant, and pass such other orders as may be deemed fit.\n\nPlace: [PLACE]\nDate: [DATE]\n\n[APPLICANT NAME]\nApplicant\nThrough Counsel: [ADVOCATE NAME, ENROLMENT NO.]\n\nAFFIDAVIT IN SUPPORT:\nI, [APPLICANT NAME], do hereby solemnly affirm that the contents of paras 1 to 4 are true to my personal knowledge and belief.\n\nDeponent\nVerified at [PLACE] on [DATE].",
+      "templateHi": "[सत्र न्यायाधीश / प्रथम श्रेणी न्यायिक मजिस्ट्रेट / उच्च न्यायालय], [जिला / राज्य] के न्यायालय में\n\nआपराधिक प्रकीर्ण आवेदन सं. [____] वर्ष [YEAR]\n([DATE] की प्राथमिकी सं. [____], थाना [NAME], धारा [SECTIONS] / प्रकरण सं. [____] में)\n\nमामले में:\n[आवेदक का नाम], पुत्र / पुत्री [पिता का नाम], निवासी [पूरा पता], पासपोर्ट सं. [नंबर] ... आवेदक\n\nबनाम\n\n[राज्य] राज्य / भारत संघ, द्वारा [विवेचना एजेंसी / आव्रजन ब्यूरो] ... प्रत्यर्थी\n\nआवेदक के विरुद्ध जारी लुक आउट सर्कुलर रद्द / वापस लेने हेतु आवेदन\n\nमाननीय न्यायालय की सेवा में सादर निवेदन है:\n\n1. कि आवेदक [पेशा] है, जिसके पास भारतीय पासपोर्ट सं. [नंबर] है, और उपर्युक्त मामले में [एजेंसी] की ओर से [तिथि] को उसके विरुद्ध लुक आउट सर्कुलर खोला गया था।\n\n2. कि [आधार बताएँ — जैसे आवेदक हर तिथि पर विवेचना में शामिल हुआ है, उसे [तिथि] के आदेश से जमानत / अग्रिम जमानत मिली है, उसने कभी विधि की प्रक्रिया से बचने का प्रयास नहीं किया है, और विवेचना / विचारण लंबे समय से लंबित है; अथवा LOC बिना किसी लंबित मामले के या LOC संबंधी कार्यालय ज्ञापन के दिशा-निर्देशों का पालन किए बिना खोला गया था]।\n\n3. कि आवेदक को [उद्देश्य — जैसे रोजगार / चिकित्सा / पारिवारिक दायित्व] हेतु [तिथि] से [तिथि] तक विदेश यात्रा की तत्काल आवश्यकता है, और विद्यमान LOC गंभीर कठिनाई पैदा कर रहा है तथा यात्रा के मूल अधिकार पर अनुचित प्रतिबंध है।\n\n4. कि आवेदक आवश्यकता पड़ने पर विवेचना एजेंसी / न्यायालय के समक्ष उपस्थित होने, अपनी यात्रा योजना व संपर्क विवरण देने, और [तिथि] तक भारत लौटने का वचन देता है।\n\nप्रार्थना:\nअतः अत्यंत सादर प्रार्थना है कि यह माननीय न्यायालय कृपापूर्वक प्रत्यर्थियों को आवेदक के विरुद्ध जारी लुक आउट सर्कुलर रद्द / वापस लेने / स्थगित रखने का निर्देश दे, और अन्य ऐसे आदेश पारित करे जो उचित प्रतीत हों।\n\nस्थान: [स्थान]\nदिनांक: [दिनांक]\n\n[आवेदक का नाम]\nआवेदक\nद्वारा अधिवक्ता: [अधिवक्ता का नाम, नामांकन संख्या]\n\nसमर्थन में शपथपत्र:\nमैं, [आवेदक का नाम], शपथपूर्वक पुष्टि करता हूँ कि अनुच्छेद 1 से 4 की बातें मेरी व्यक्तिगत जानकारी एवं विश्वास के अनुसार सत्य हैं।\n\nशपथकर्ता\n[स्थान] में [दिनांक] को सत्यापित।",
+      "filedIn": {
+        "en": "Court where the criminal case is pending, or the High Court under Article 226 / Sec. 528 BNSS",
+        "hi": "न्यायालय जहां आपराधिक मामला लंबित है, अथवा अनुच्छेद 226 / धारा 528 BNSS के अंतर्गत उच्च न्यायालय"
+      },
+      "sections": {
+        "en": "LOCs are governed by the Ministry of Home Affairs Office Memorandums on Look Out Circulars (as consolidated and amended from time to time) and by the Bureau of Immigration. A Court seized of the case can direct withdrawal where the LOC is no longer justified; where no case is pending, the High Court under Article 226 of the Constitution (or Sec. 528 BNSS) is the usual forum. Key case law: the LOC must satisfy reasonableness and proportionality, and cannot be continued indefinitely without review. Note: an LOC is not itself a bar on travel ordered by a Court — permission to travel and cancellation of the LOC are distinct prayers; claim both if needed.",
+        "hi": "LOC गृह मंत्रालय के लुक आउट सर्कुलर संबंधी कार्यालय ज्ञापनों (समय-समय पर समेकित व संशोधित) और आव्रजन ब्यूरो द्वारा शासित होते हैं। मामले से संबद्ध न्यायालय LOC अब न्यायोचित न रहने पर उसे वापस लेने का निर्देश दे सकता है; कोई मामला लंबित न होने पर संविधान के अनुच्छेद 226 (या धारा 528 BNSS) के अंतर्गत उच्च न्यायालय सामान्य मंच है। प्रमुख विधि: LOC युक्तियुक्तता व आनुपातिकता की कसौटी पर खरा उतरना चाहिए और बिना समीक्षा के अनिश्चितकाल तक जारी नहीं रह सकता। ध्यान दें: LOC स्वयं न्यायालय द्वारा आदेशित यात्रा पर रोक नहीं है — यात्रा की अनुमति और LOC रद्द करना भिन्न प्रार्थनाएँ हैं; आवश्यकता हो तो दोनों माँगें।"
+      },
+      "jurisdiction": {
+        "en": "The Court where the criminal proceedings are pending; otherwise the High Court having territorial jurisdiction.",
+        "hi": "वह न्यायालय जहां आपराधिक कार्यवाही लंबित है; अन्यथा क्षेत्रीय क्षेत्राधिकार वाला उच्च न्यायालय।"
+      },
+      "requirements": {
+        "en": [
+          "Passport copy",
+          "Bail / anticipatory bail order, if any",
+          "Proof of travel need (employment letter / medical papers / invitation)",
+          "Proof of cooperation with investigation (attendance record)",
+          "Affidavit in support"
+        ],
+        "hi": [
+          "पासपोर्ट की प्रति",
+          "जमानत / अग्रिम जमानत आदेश, यदि कोई हो",
+          "यात्रा आवश्यकता का प्रमाण (रोजगार पत्र / चिकित्सा कागजात / निमंत्रण)",
+          "विवेचना में सहयोग का प्रमाण (उपस्थिति रिकॉर्ड)",
+          "समर्थन में शपथपत्र"
+        ]
+      },
+      "when": {
+        "en": "Ask the Court to direct the withdrawal or cancellation of a Look Out Circular issued against you, so that you can travel abroad freely. Also called an LOC cancellation application or LOC hatane ka application. File it before the Court where the criminal case is pending, or before the High Court if no case is pending.",
+        "hi": "आपके विरुद्ध जारी लुक आउट सर्कुलर को वापस लेने या रद्द करने का न्यायालय से निर्देश मांगें, ताकि आप स्वतंत्र रूप से विदेश यात्रा कर सकें। इसे LOC रद्द कराने का आवेदन या LOC हटाने का आवेदन भी कहते हैं। इसे उस न्यायालय में दाखिल करें जहां आपराधिक मामला लंबित है, अथवा यदि कोई मामला लंबित न हो तो उच्च न्यायालय में।"
+      },
+      "where": {
+        "en": "Court where the criminal case is pending, or the High Court under Article 226 / Sec. 528 BNSS",
+        "hi": "न्यायालय जहां आपराधिक मामला लंबित है, अथवा अनुच्छेद 226 / धारा 528 BNSS के अंतर्गत उच्च न्यायालय"
+      }
+    },
+    {
+      "id": "application-cdr-preservation",
+      "category": {
+        "en": "Criminal",
+        "hi": "आपराधिक"
+      },
+      "title": {
+        "en": "Application for Preservation of Call Detail Records (CDR) / Electronic Records (Sec. 94 BNSS) — CDR Preservation Application / Call Details Surakshit Rakhne Ka Application",
+        "hi": "कॉल डिटेल रिकॉर्ड (CDR) / इलेक्ट्रॉनिक रिकॉर्ड सुरक्षित रखने हेतु आवेदन (धारा 94 BNSS) — CDR संरक्षण आवेदन"
+      },
+      "use": {
+        "en": "Ask the Court to direct the police or the telecom service provider to preserve call detail records, tower location data, CCTV footage or other electronic records before they are routinely deleted. Also called a CDR preservation application or call details surakshit rakhne ka application. File it urgently — CDRs are typically retained only for a limited period.",
+        "hi": "नियमित रूप से मिटाए जाने से पहले कॉल डिटेल रिकॉर्ड, टावर लोकेशन डेटा, सीसीटीवी फुटेज या अन्य इलेक्ट्रॉनिक रिकॉर्ड सुरक्षित रखने का पुलिस या टेलीकॉम सेवा प्रदाता को न्यायालय से निर्देश दिलाएँ। इसे CDR संरक्षण आवेदन या कॉल डिटेल सुरक्षित रखने का आवेदन भी कहते हैं। इसे तत्काल दाखिल करें — CDR सामान्यतः केवल सीमित अवधि तक ही रखे जाते हैं।"
+      },
+      "template": "IN THE COURT OF THE JUDICIAL MAGISTRATE FIRST CLASS, [DISTRICT], [STATE]\n\nCriminal Misc. Application No. [____] of [YEAR]\n(In FIR No. [____] dated [DATE], P.S. [NAME], U/s [SECTIONS] / Complaint Case No. [____])\n\nIN THE MATTER OF:\n[APPLICANT — COMPLAINANT / ACCUSED / VICTIM], [DETAILS] ... Applicant\n\nAPPLICATION UNDER SECTION 94 OF THE BHARATIYA NAGARIK SURAKSHA SANHITA, 2023 (SECTION 91 OF THE CODE OF CRIMINAL PROCEDURE, 1973) FOR PRESERVATION OF CALL DETAIL RECORDS AND OTHER ELECTRONIC RECORDS\n\nMay it please the Court:\n\n1. That the above case is pending before this Hon'ble Court / under investigation, and the following electronic records are material to prove [THE FACT IN ISSUE — e.g. the location of the accused at the time of occurrence / the threatening calls received by the complainant]:\n(a) Call Detail Records (CDR) of mobile number [NUMBER] for the period [FROM DATE] to [TO DATE];\n(b) Tower location data of mobile number [NUMBER] for the said period;\n(c) CCTV footage of [LOCATION / CAMERA] for [DATE AND TIME];\n(d) [ANY OTHER RECORD — e.g. IP logs / WhatsApp metadata as lawfully available].\n\n2. That telecom service providers and CCTV operators retain such records only for a limited period, and if not preserved immediately, this vital evidence will be lost forever, causing irreparable prejudice to the applicant.\n\n3. That the applicant is seeking only PRESERVATION of the records at this stage, not their disclosure; the records, once preserved, may be summoned and produced at the appropriate stage in accordance with law, subject to the right to privacy and the procedure under Sec. 94 BNSS.\n\nPRAYER:\nIt is therefore most respectfully prayed that this Hon'ble Court may graciously be pleased to direct [POLICE STATION / TELECOM SERVICE PROVIDER — NAME] to immediately preserve the records mentioned in para 1 and not to delete or overwrite them until further orders, and pass such other orders as may be deemed fit.\n\nPlace: [PLACE]\nDate: [DATE]\n\n[APPLICANT NAME]\nApplicant\nThrough Counsel: [ADVOCATE NAME, ENROLMENT NO.]",
+      "templateHi": "[जिला], [राज्य] के प्रथम श्रेणी न्यायिक मजिस्ट्रेट के न्यायालय में\n\nआपराधिक प्रकीर्ण आवेदन सं. [____] वर्ष [YEAR]\n([DATE] की प्राथमिकी सं. [____], थाना [NAME], धारा [SECTIONS] / शिकायत प्रकरण सं. [____] में)\n\nमामले में:\n[आवेदक — शिकायतकर्ता / अभियुक्त / पीड़ित], [विवरण] ... आवेदक\n\nकॉल डिटेल रिकॉर्ड व अन्य इलेक्ट्रॉनिक रिकॉर्ड सुरक्षित रखने हेतु भारतीय नागरिक सुरक्षा संहिता, 2023 की धारा 94 (दंड प्रक्रिया संहिता, 1973 की धारा 91) के अंतर्गत आवेदन\n\nमाननीय न्यायालय की सेवा में सादर निवेदन है:\n\n1. कि उपर्युक्त मामला इस माननीय न्यायालय के समक्ष लंबित है / विवेचनाधीन है, और निम्नलिखित इलेक्ट्रॉनिक रिकॉर्ड [विवादित तथ्य — जैसे घटना के समय अभियुक्त की स्थिति / शिकायतकर्ता को मिली धमकी भरी कॉलें] सिद्ध करने हेतु महत्वपूर्ण हैं:\n(क) मोबाइल नंबर [नंबर] का [तिथि] से [तिथि] तक का कॉल डिटेल रिकॉर्ड (CDR);\n(ख) उक्त अवधि का मोबाइल नंबर [नंबर] का टावर लोकेशन डेटा;\n(ग) [स्थान / कैमरा] का [तिथि व समय] का सीसीटीवी फुटेज;\n(घ) [अन्य कोई रिकॉर्ड — जैसे विधिपूर्वक उपलब्ध IP लॉग / व्हाट्सऐप मेटाडेटा]।\n\n2. कि टेलीकॉम सेवा प्रदाता और सीसीटीवी संचालक ऐसे रिकॉर्ड केवल सीमित अवधि तक ही रखते हैं, और यदि उन्हें तुरंत सुरक्षित न किया गया तो यह महत्वपूर्ण साक्ष्य सदा के लिए नष्ट हो जाएगा, जिससे आवेदक को अपूरणीय हानि होगी।\n\n3. कि आवेदक इस स्तर पर केवल रिकॉर्डों के संरक्षण की माँग कर रहा है, उनके प्रकटीकरण की नहीं; एक बार सुरक्षित होने पर ये रिकॉर्ड विधि अनुसार उचित चरण में मँगाए व प्रस्तुत किए जा सकेंगे, जो निजता के अधिकार और धारा 94 BNSS की प्रक्रिया के अधीन होगा।\n\nप्रार्थना:\nअतः अत्यंत सादर प्रार्थना है कि यह माननीय न्यायालय कृपापूर्वक [थाना / टेलीकॉम सेवा प्रदाता — नाम] को अनुच्छेद 1 में उल्लिखित रिकॉर्ड तुरंत सुरक्षित रखने और अगले आदेश तक उन्हें मिटाने या ओवरराइट न करने का निर्देश दे, और अन्य ऐसे आदेश पारित करे जो उचित प्रतीत हों।\n\nस्थान: [स्थान]\nदिनांक: [दिनांक]\n\n[आवेदक का नाम]\nआवेदक\nद्वारा अधिवक्ता: [अधिवक्ता का नाम, नामांकन संख्या]",
+      "filedIn": {
+        "en": "Judicial Magistrate / Court where the case is pending or under investigation",
+        "hi": "न्यायिक मजिस्ट्रेट / न्यायालय जहां मामला लंबित है या विवेचनाधीन है"
+      },
+      "sections": {
+        "en": "Sec. 94 BNSS (Sec. 91 CrPC) — Court or officer in charge of a police station may require production of any document or thing necessary for investigation, inquiry or trial. Electronic records are proved under Sec. 63 BSA (Sec. 65B Indian Evidence Act) — a certificate as to the electronic record is required at the stage of proof. Note: preservation is an interim, protective step; actual production and admissibility are decided later, and blanket fishing expeditions into a person's entire call history are not permitted — the period and numbers must be specific and relevant.",
+        "hi": "धारा 94 BNSS (धारा 91 CrPC) — न्यायालय या थाना प्रभारी अधिकारी विवेचना, जाँच या विचारण हेतु आवश्यक कोई दस्तावेज या वस्तु प्रस्तुत करने की अपेक्षा कर सकता है। इलेक्ट्रॉनिक रिकॉर्ड धारा 63 BSA (धारा 65B भारतीय साक्ष्य अधिनियम) के अंतर्गत सिद्ध होते हैं — सिद्धि के चरण में इलेक्ट्रॉनिक रिकॉर्ड संबंधी प्रमाणपत्र आवश्यक है। ध्यान दें: संरक्षण एक अंतरिम, सुरक्षात्मक कदम है; वास्तविक प्रस्तुति व ग्राह्यता बाद में तय होती है, और किसी व्यक्ति के संपूर्ण कॉल इतिहास में अंधाधुंध खोज की अनुमति नहीं है — अवधि व नंबर विशिष्ट व प्रासंगिक होने चाहिए।"
+      },
+      "jurisdiction": {
+        "en": "The Court / Magistrate where the investigation or proceedings are pending.",
+        "hi": "वह न्यायालय / मजिस्ट्रेट जहां विवेचना या कार्यवाही लंबित है।"
+      },
+      "requirements": {
+        "en": [
+          "FIR / complaint copy",
+          "Details of numbers, period and records sought",
+          "Reason showing relevance of the records",
+          "Vakalatnama / authorisation"
+        ],
+        "hi": [
+          "FIR / शिकायत की प्रति",
+          "माँगे गए नंबरों, अवधि व रिकॉर्डों का विवरण",
+          "रिकॉर्डों की प्रासंगिकता दर्शाने वाला कारण",
+          "वकालतनामा/प्राधिकार"
+        ]
+      },
+      "when": {
+        "en": "Ask the Court to direct the police or the telecom service provider to preserve call detail records, tower location data, CCTV footage or other electronic records before they are routinely deleted. Also called a CDR preservation application or call details surakshit rakhne ka application. File it urgently — CDRs are typically retained only for a limited period.",
+        "hi": "नियमित रूप से मिटाए जाने से पहले कॉल डिटेल रिकॉर्ड, टावर लोकेशन डेटा, सीसीटीवी फुटेज या अन्य इलेक्ट्रॉनिक रिकॉर्ड सुरक्षित रखने का पुलिस या टेलीकॉम सेवा प्रदाता को न्यायालय से निर्देश दिलाएँ। इसे CDR संरक्षण आवेदन या कॉल डिटेल सुरक्षित रखने का आवेदन भी कहते हैं। इसे तत्काल दाखिल करें — CDR सामान्यतः केवल सीमित अवधि तक ही रखे जाते हैं।"
+      },
+      "where": {
+        "en": "Judicial Magistrate / Court where the case is pending or under investigation",
+        "hi": "न्यायिक मजिस्ट्रेट / न्यायालय जहां मामला लंबित है या विवेचनाधीन है"
+      }
+    },
+    {
+      "id": "civil-revision-115",
+      "category": {
+        "en": "Civil",
+        "hi": "सिविल"
+      },
+      "title": {
+        "en": "Civil Revision Petition U/s 115 CPC — Civil Revision / Nigraani Petition (Civil)",
+        "hi": "धारा 115 CPC के अंतर्गत सिविल पुनरीक्षण याचिका — सिविल रिवीजन याचिका"
+      },
+      "use": {
+        "en": "File this revision before the High Court (or the District Court, where it has revisional jurisdiction) against an order of a subordinate court that has exercised jurisdiction illegally or with material irregularity, and against which no appeal lies. Also called a civil revision petition or nigraani petition in civil matters.",
+        "hi": "किसी अधीनस्थ न्यायालय के ऐसे आदेश के विरुद्ध — जिसमें क्षेत्राधिकार का अवैध प्रयोग हुआ हो या सारभूत अनियमितता हुई हो, और जिसके विरुद्ध कोई अपील न हो — उच्च न्यायालय (अथवा जिला न्यायालय, जहां उसे पुनरीक्षण क्षेत्राधिकार प्राप्त हो) में यह पुनरीक्षण दाखिल करें। इसे सिविल रिवीजन याचिका या सिविल निगरानी याचिका भी कहते हैं।"
+      },
+      "template": "IN THE HIGH COURT OF JUDICATURE AT [PLACE]\n(Civil Revisional Jurisdiction)\n\nCivil Revision No. [____] of [YEAR]\n\n[PETITIONER NAME], S/o / D/o [FATHER'S NAME], R/o [FULL ADDRESS] ... Petitioner\n\nVERSUS\n\n[RESPONDENT NAME], S/o / D/o [FATHER'S NAME], R/o [FULL ADDRESS] ... Respondent\n\nCIVIL REVISION PETITION UNDER SECTION 115 OF THE CODE OF CIVIL PROCEDURE, 1908\n\nAgainst the order dated [DATE] passed by the [COURT — e.g. Civil Judge (Senior Division)], [DISTRICT], in [SUIT / APPLICATION NO. ____ OF YEAR]\n\nMay it please this Hon'ble Court:\n\n1. That the petitioner is the [PLAINTIFF / DEFENDANT] in the suit mentioned above, which is pending before the learned trial court.\n\n2. That by the impugned order dated [DATE], the learned trial court has [STATE WHAT THE ORDER DID — e.g. rejected the petitioner's application under Order VII Rule 11 CPC / allowed an amendment which changes the nature of the suit / decided a jurisdictional issue against the petitioner]. A certified copy of the impugned order is annexed as Annexure P-1.\n\n3. That the impugned order suffers from [JURISDICTIONAL ERROR / MATERIAL IRREGULARITY — EXPLAIN PRECISELY, e.g. the trial court exercised jurisdiction not vested in it by law / failed to exercise jurisdiction so vested / acted with material irregularity in deciding that the suit is barred by limitation without considering the documents on record].\n\n4. That no appeal lies against the impugned order, and the petitioner has no other efficacious remedy except the present revision under Section 115 CPC.\n\n5. That the petitioner has not filed any other revision against the same order in any other court.\n\n6. That the balance of convenience is in favour of the petitioner, and unless the impugned order is stayed, the petitioner shall suffer irreparable loss, as [STATE HARM — e.g. the trial will proceed on a wrong premise / the suit will be dismissed].\n\nPRAYER:\nIt is therefore most respectfully prayed that this Hon'ble Court may graciously be pleased to:\n(a) call for the records of the trial court and set aside the impugned order dated [DATE];\n(b) pass such other order as this Hon'ble Court may deem fit, including an interim stay of the impugned order and of further proceedings in the suit; and\n(c) award costs of this petition to the petitioner.\n\nPlace: [PLACE]\nDate: [DATE]\n\n[PETITIONER NAME]\nPetitioner\nThrough Counsel: [ADVOCATE NAME, ENROLMENT NO.]\n\nAFFIDAVIT IN SUPPORT:\nI, [PETITIONER NAME], do hereby solemnly affirm that the contents of paras 1 to 6 are true to my personal knowledge and belief, and are based on the record of the case.\n\nDeponent\nVerified at [PLACE] on [DATE].",
+      "templateHi": "[स्थान] स्थित उच्च न्यायालय में\n(सिविल पुनरीक्षण क्षेत्राधिकार)\n\nसिविल रिवीजन सं. [____] वर्ष [YEAR]\n\n[याचिकाकर्ता का नाम], पुत्र / पुत्री [पिता का नाम], निवासी [पूरा पता] ... याचिकाकर्ता\n\nबनाम\n\n[प्रत्यर्थी का नाम], पुत्र / पुत्री [पिता का नाम], निवासी [पूरा पता] ... प्रत्यर्थी\n\nसिविल प्रक्रिया संहिता, 1908 की धारा 115 के अंतर्गत सिविल पुनरीक्षण याचिका\n\n[न्यायालय — जैसे सिविल न्यायाधीश (वरिष्ठ श्रेणी)], [जिला] द्वारा [वाद / आवेदन सं. ____ वर्ष] में पारित [तिथि] के आदेश के विरुद्ध\n\nमाननीय न्यायालय की सेवा में सादर निवेदन है:\n\n1. कि याचिकाकर्ता उपर्युक्त वाद में [वादी / प्रतिवादी] है, जो विद्वान विचारण न्यायालय के समक्ष लंबित है।\n\n2. कि [तिथि] के आक्षेपित आदेश द्वारा विद्वान विचारण न्यायालय ने [आदेश ने क्या किया — जैसे आदेश VII नियम 11 CPC के अंतर्गत याचिकाकर्ता का आवेदन अस्वीकार किया / ऐसा संशोधन स्वीकार किया जो वाद की प्रकृति बदल देता है / क्षेत्राधिकार का मुद्दा याचिकाकर्ता के विरुद्ध तय किया]। आक्षेपित आदेश की प्रमाणित प्रति अनुबंध P-1 के रूप में संलग्न है।\n\n3. कि आक्षेपित आदेश [क्षेत्राधिकार संबंधी त्रुटि / सारभूत अनियमितता] से ग्रस्त है — [सटीक रूप से स्पष्ट करें, जैसे विचारण न्यायालय ने विधि द्वारा उसे प्राप्त न हुए क्षेत्राधिकार का प्रयोग किया / प्राप्त क्षेत्राधिकार का प्रयोग करने में विफल रहा / अभिलेख के दस्तावेजों पर विचार किए बिना वाद को परिसीमा से बाधित मानने में सारभूत अनियमितता की]।\n\n4. कि आक्षेपित आदेश के विरुद्ध कोई अपील नहीं है, और याचिकाकर्ता के पास धारा 115 CPC के अंतर्गत वर्तमान पुनरीक्षण के सिवा कोई अन्य प्रभावी उपचार नहीं है।\n\n5. कि याचिकाकर्ता ने उसी आदेश के विरुद्ध किसी अन्य न्यायालय में कोई अन्य पुनरीक्षण दाखिल नहीं किया है।\n\n6. कि सुविधा का संतुलन याचिकाकर्ता के पक्ष में है, और जब तक आक्षेपित आदेश पर रोक न लगे, याचिकाकर्ता को अपूरणीय हानि होगी, क्योंकि [हानि बताएँ — जैसे विचारण गलत आधार पर आगे बढ़ेगा / वाद खारिज हो जाएगा]।\n\nप्रार्थना:\nअतः अत्यंत सादर प्रार्थना है कि यह माननीय न्यायालय कृपापूर्वक:\n(क) विचारण न्यायालय का अभिलेख मँगाए और [तिथि] के आक्षेपित आदेश को अपास्त करे;\n(ख) आक्षेपित आदेश व वाद की आगे की कार्यवाही पर अंतरिम रोक सहित अन्य ऐसा आदेश पारित करे जो उचित प्रतीत हो; और\n(ग) इस याचिका का खर्चा याचिकाकर्ता को दिलाए।\n\nस्थान: [स्थान]\nदिनांक: [दिनांक]\n\n[याचिकाकर्ता का नाम]\nयाचिकाकर्ता\nद्वारा अधिवक्ता: [अधिवक्ता का नाम, नामांकन संख्या]\n\nसमर्थन में शपथपत्र:\nमैं, [याचिकाकर्ता का नाम], शपथपूर्वक पुष्टि करता हूँ कि अनुच्छेद 1 से 6 की बातें मेरी व्यक्तिगत जानकारी एवं विश्वास के अनुसार सत्य हैं और मामले के अभिलेख पर आधारित हैं।\n\nशपथकर्ता\n[स्थान] में [दिनांक] को सत्यापित।",
+      "filedIn": {
+        "en": "High Court exercising revisional jurisdiction, or District Court where it has revisional jurisdiction over the subordinate court",
+        "hi": "पुनरीक्षण क्षेत्राधिकार का प्रयोग करने वाला उच्च न्यायालय, अथवा जिला न्यायालय जहां उसे अधीनस्थ न्यायालय पर पुनरीक्षण क्षेत्राधिकार प्राप्त हो"
+      },
+      "sections": {
+        "en": "Sec. 115 CPC — revisional jurisdiction of the High Court. After the 1999 amendment, a revision lies only where the impugned order, if allowed to stand, would finally dispose of the suit or proceeding, or where it decides a jurisdictional question finally. The proviso to Sec. 115(1) CPC and the bar in Sec. 115(2) CPC (no revision against an order against which an appeal lies) must be checked before filing. Limitation: 90 days under Article 131, Limitation Act, 1963, from the date of the order.",
+        "hi": "धारा 115 CPC — उच्च न्यायालय का पुनरीक्षण क्षेत्राधिकार। 1999 के संशोधन के बाद पुनरीक्षण केवल वहाँ होगा जहाँ आक्षेपित आदेश, यदि बना रहे, तो वाद या कार्यवाही का अंतिम निपटारा कर देगा, अथवा जहाँ वह क्षेत्राधिकार का प्रश्न अंतिम रूप से तय करता हो। दाखिल करने से पूर्व धारा 115(1) CPC का परंतुक और धारा 115(2) CPC की रोक (जिस आदेश के विरुद्ध अपील हो, उसके विरुद्ध पुनरीक्षण नहीं) जाँच लें। परिसीमा: परिसीमा अधिनियम, 1963 के अनुच्छेद 131 के अंतर्गत आदेश की तिथि से 90 दिन।"
+      },
+      "jurisdiction": {
+        "en": "The High Court (or District Court) having revisional jurisdiction over the court that passed the impugned order.",
+        "hi": "वह उच्च न्यायालय (अथवा जिला न्यायालय) जिसे आक्षेपित आदेश पारित करने वाले न्यायालय पर पुनरीक्षण क्षेत्राधिकार प्राप्त हो।"
+      },
+      "requirements": {
+        "en": [
+          "Certified copy of the impugned order",
+          "Copies of the plaint / application and the order sheet",
+          "Court fee as applicable",
+          "Vakalatnama",
+          "Affidavit in support"
+        ],
+        "hi": [
+          "आक्षेपित आदेश की प्रमाणित प्रति",
+          "वादपत्र / आवेदन व आदेश-पत्र की प्रतियाँ",
+          "लागू न्यायालय शुल्क",
+          "वकालतनामा",
+          "समर्थन में शपथपत्र"
+        ]
+      },
+      "when": {
+        "en": "File this revision before the High Court (or the District Court, where it has revisional jurisdiction) against an order of a subordinate court that has exercised jurisdiction illegally or with material irregularity, and against which no appeal lies. Also called a civil revision petition or nigraani petition in civil matters.",
+        "hi": "किसी अधीनस्थ न्यायालय के ऐसे आदेश के विरुद्ध — जिसमें क्षेत्राधिकार का अवैध प्रयोग हुआ हो या सारभूत अनियमितता हुई हो, और जिसके विरुद्ध कोई अपील न हो — उच्च न्यायालय (अथवा जिला न्यायालय, जहां उसे पुनरीक्षण क्षेत्राधिकार प्राप्त हो) में यह पुनरीक्षण दाखिल करें। इसे सिविल रिवीजन याचिका या सिविल निगरानी याचिका भी कहते हैं।"
+      },
+      "where": {
+        "en": "High Court exercising revisional jurisdiction, or District Court where it has revisional jurisdiction over the subordinate court",
+        "hi": "पुनरीक्षण क्षेत्राधिकार का प्रयोग करने वाला उच्च न्यायालय, अथवा जिला न्यायालय जहां उसे अधीनस्थ न्यायालय पर पुनरीक्षण क्षेत्राधिकार प्राप्त हो"
+      }
+    },
+    {
+      "id": "application-additional-evidence-41r27",
+      "category": {
+        "en": "Civil",
+        "hi": "सिविल"
+      },
+      "title": {
+        "en": "Application for Additional Evidence in Appeal (Order XLI Rule 27 CPC) — Additional Evidence Application / Appeal Me Naya Saboot Application",
+        "hi": "अपील में अतिरिक्त साक्ष्य हेतु आवेदन (आदेश XLI नियम 27 CPC) — अतिरिक्त साक्ष्य आवेदन"
+      },
+      "use": {
+        "en": "Ask the appellate court to receive documents or evidence that could not be produced before the trial court despite due diligence, or that the appellate court itself requires to pronounce judgment. Also called an additional evidence application or appeal me naya saboot application.",
+        "hi": "अपील न्यायालय से ऐसे दस्तावेज या साक्ष्य ग्रहण करने की प्रार्थना करें जो सम्यक तत्परता के बावजूद विचारण न्यायालय के समक्ष प्रस्तुत नहीं किए जा सके थे, अथवा जिनकी अपील न्यायालय को निर्णय सुनाने हेतु स्वयं आवश्यकता है। इसे अतिरिक्त साक्ष्य आवेदन या अपील में नया सबूत आवेदन भी कहते हैं।"
+      },
+      "template": "IN THE COURT OF THE [DISTRICT JUDGE / HIGH COURT], [DISTRICT / PLACE]\n(Appellate Jurisdiction)\n\nCivil Appeal No. [____] of [YEAR]\n\n[APPELLANT NAME], S/o / D/o [FATHER'S NAME], R/o [FULL ADDRESS] ... Appellant\n\nVERSUS\n\n[RESPONDENT NAME], S/o / D/o [FATHER'S NAME], R/o [FULL ADDRESS] ... Respondent\n\nAPPLICATION UNDER ORDER XLI RULE 27 READ WITH SECTION 151 OF THE CODE OF CIVIL PROCEDURE, 1908, FOR PERMISSION TO ADDUCE ADDITIONAL EVIDENCE\n\nMay it please the Court:\n\n1. That the appellant has filed the above appeal against the judgment and decree dated [DATE] passed by the [TRIAL COURT], [DISTRICT], in Suit No. [____] of [YEAR].\n\n2. That the appellant seeks permission to file the following additional evidence, which is essential for the just decision of the appeal:\n(a) [DOCUMENT 1 — FULL DESCRIPTION, e.g. certified copy of sale deed dated [DATE]];\n(b) [DOCUMENT 2 — FULL DESCRIPTION];\n(c) [WITNESS, IF ANY — NAME AND WHAT HE WILL PROVE].\n\n3. That the said evidence could not be produced before the trial court despite the exercise of due diligence, because [GIVE SPECIFIC REASONS — e.g. the document came into the appellant's possession only on [DATE] after the trial had concluded / the witness was seriously ill and unavailable during the trial / the document was in the custody of a government office which supplied it only on [DATE]].\n\n4. That the additional evidence is directly relevant to the issue of [ISSUE — e.g. title to the suit property], and without it this Hon'ble Court cannot pronounce judgment or a substantial cause will fail.\n\n5. That the application is bona fide and no prejudice will be caused to the respondent, who will be given full opportunity to rebut the additional evidence, including cross-examination, if the application is allowed.\n\nPRAYER:\nIt is therefore most respectfully prayed that this Hon'ble Court may graciously be pleased to allow this application and receive the additional evidence mentioned in para 2, and pass such other orders as may be deemed fit.\n\nPlace: [PLACE]\nDate: [DATE]\n\n[APPELLANT NAME]\nAppellant\nThrough Counsel: [ADVOCATE NAME, ENROLMENT NO.]\n\nAFFIDAVIT IN SUPPORT:\nI, [APPELLANT NAME], do hereby solemnly affirm that the contents of paras 1 to 5 are true to my personal knowledge and belief.\n\nDeponent\nVerified at [PLACE] on [DATE].",
+      "templateHi": "[जिला न्यायाधीश / उच्च न्यायालय], [जिला / स्थान] के न्यायालय में\n(अपीलीय क्षेत्राधिकार)\n\nसिविल अपील सं. [____] वर्ष [YEAR]\n\n[अपीलार्थी का नाम], पुत्र / पुत्री [पिता का नाम], निवासी [पूरा पता] ... अपीलार्थी\n\nबनाम\n\n[प्रत्यर्थी का नाम], पुत्र / पुत्री [पिता का नाम], निवासी [पूरा पता] ... प्रत्यर्थी\n\nसिविल प्रक्रिया संहिता, 1908 के आदेश XLI नियम 27 के साथ धारा 151 के अंतर्गत अतिरिक्त साक्ष्य प्रस्तुत करने की अनुमति हेतु आवेदन\n\nमाननीय न्यायालय की सेवा में सादर निवेदन है:\n\n1. कि अपीलार्थी ने [विचारण न्यायालय], [जिला] द्वारा वाद सं. [____] वर्ष [YEAR] में पारित [तिथि] के निर्णय व डिक्री के विरुद्ध उपर्युक्त अपील दाखिल की है।\n\n2. कि अपीलार्थी अपील के न्यायोचित निर्णय हेतु आवश्यक निम्नलिखित अतिरिक्त साक्ष्य प्रस्तुत करने की अनुमति चाहता है:\n(क) [दस्तावेज 1 — पूर्ण विवरण, जैसे [तिथि] के विक्रय विलेख की प्रमाणित प्रति];\n(ख) [दस्तावेज 2 — पूर्ण विवरण];\n(ग) [साक्षी, यदि कोई — नाम व वह क्या सिद्ध करेगा]।\n\n3. कि उक्त साक्ष्य सम्यक तत्परता के बावजूद विचारण न्यायालय के समक्ष प्रस्तुत नहीं किया जा सका था, क्योंकि [विशिष्ट कारण दें — जैसे दस्तावेज विचारण समाप्त होने के बाद [तिथि] को ही अपीलार्थी के कब्जे में आया / साक्षी विचारण के दौरान गंभीर रूप से बीमार व अनुपलब्ध था / दस्तावेज सरकारी कार्यालय की अभिरक्षा में था जिसने उसे [तिथि] को ही दिया]।\n\n4. कि अतिरिक्त साक्ष्य [मुद्दा — जैसे वाद संपत्ति के स्वामित्व] से सीधे प्रासंगिक है, और उसके बिना यह माननीय न्यायालय निर्णय नहीं सुना सकेगा अथवा सारभूत न्याय विफल होगा।\n\n5. कि आवेदन सद्भावपूर्ण है और प्रत्यर्थी को कोई प्रतिकूलता नहीं होगी, क्योंकि आवेदन स्वीकार होने पर उसे अतिरिक्त साक्ष्य का खंडन करने का पूर्ण अवसर मिलेगा, जिसमें प्रतिपरीक्षा भी शामिल है।\n\nप्रार्थना:\nअतः अत्यंत सादर प्रार्थना है कि यह माननीय न्यायालय कृपापूर्वक यह आवेदन स्वीकार कर अनुच्छेद 2 में उल्लिखित अतिरिक्त साक्ष्य ग्रहण करे, और अन्य ऐसे आदेश पारित करे जो उचित प्रतीत हों।\n\nस्थान: [स्थान]\nदिनांक: [दिनांक]\n\n[अपीलार्थी का नाम]\nअपीलार्थी\nद्वारा अधिवक्ता: [अधिवक्ता का नाम, नामांकन संख्या]\n\nसमर्थन में शपथपत्र:\nमैं, [अपीलार्थी का नाम], शपथपूर्वक पुष्टि करता हूँ कि अनुच्छेद 1 से 5 की बातें मेरी व्यक्तिगत जानकारी एवं विश्वास के अनुसार सत्य हैं।\n\nशपथकर्ता\n[स्थान] में [दिनांक] को सत्यापित।",
+      "filedIn": {
+        "en": "Appellate Court where the civil appeal is pending",
+        "hi": "अपीलीय न्यायालय जहां सिविल अपील लंबित है"
+      },
+      "sections": {
+        "en": "Order XLI Rule 27 CPC — additional evidence in appellate court. Grounds: (a) the trial court refused evidence which ought to have been admitted; (aa) the party, despite due diligence, could not produce the evidence before the trial court; or (b) the appellate court itself requires the evidence to pronounce judgment or for any other substantial cause. The application must explain, with dates, why the evidence was not produced earlier — a routine, unexplained delay is refused. If allowed, the opposite party gets a full opportunity to rebut.",
+        "hi": "आदेश XLI नियम 27 CPC — अपीलीय न्यायालय में अतिरिक्त साक्ष्य। आधार: (क) विचारण न्यायालय ने ऐसा साक्ष्य अस्वीकार किया जो ग्रहण किया जाना चाहिए था; (कक) पक्षकार सम्यक तत्परता के बावजूद विचारण न्यायालय के समक्ष साक्ष्य प्रस्तुत नहीं कर सका; अथवा (ख) अपीलीय न्यायालय को स्वयं निर्णय सुनाने हेतु या किसी अन्य सारभूत कारण से साक्ष्य की आवश्यकता है। आवेदन में तिथियों सहित स्पष्ट करना होगा कि साक्ष्य पहले क्यों प्रस्तुत नहीं हुआ — नियमित, अस्पष्टीकृत विलंब अस्वीकार कर दिया जाता है। स्वीकार होने पर विरोधी पक्ष को खंडन का पूर्ण अवसर मिलता है।"
+      },
+      "jurisdiction": {
+        "en": "The appellate court seized of the civil appeal.",
+        "hi": "वह अपीलीय न्यायालय जिसके समक्ष सिविल अपील लंबित है।"
+      },
+      "requirements": {
+        "en": [
+          "Copies of the documents sought to be filed as additional evidence",
+          "Judgment and decree under appeal",
+          "Explanation with dates for non-production before the trial court",
+          "Vakalatnama",
+          "Affidavit in support"
+        ],
+        "hi": [
+          "अतिरिक्त साक्ष्य के रूप में प्रस्तुत किए जाने वाले दस्तावेजों की प्रतियाँ",
+          "अपीलाधीन निर्णय व डिक्री",
+          "विचारण न्यायालय के समक्ष प्रस्तुत न कर पाने का तिथियों सहित स्पष्टीकरण",
+          "वकालतनामा",
+          "समर्थन में शपथपत्र"
+        ]
+      },
+      "when": {
+        "en": "Ask the appellate court to receive documents or evidence that could not be produced before the trial court despite due diligence, or that the appellate court itself requires to pronounce judgment. Also called an additional evidence application or appeal me naya saboot application.",
+        "hi": "अपील न्यायालय से ऐसे दस्तावेज या साक्ष्य ग्रहण करने की प्रार्थना करें जो सम्यक तत्परता के बावजूद विचारण न्यायालय के समक्ष प्रस्तुत नहीं किए जा सके थे, अथवा जिनकी अपील न्यायालय को निर्णय सुनाने हेतु स्वयं आवश्यकता है। इसे अतिरिक्त साक्ष्य आवेदन या अपील में नया सबूत आवेदन भी कहते हैं।"
+      },
+      "where": {
+        "en": "Appellate Court where the civil appeal is pending",
+        "hi": "अपीलीय न्यायालय जहां सिविल अपील लंबित है"
+      }
+    },
+    {
+      "id": "arbitration-interim-measures-9",
+      "category": {
+        "en": "Business",
+        "hi": "व्यापार"
+      },
+      "title": {
+        "en": "Application for Interim Measures U/s 9, Arbitration and Conciliation Act, 1996 — Section 9 Arbitration Application / Arbitration Interim Relief Application",
+        "hi": "माध्यस्थम एवं सुलह अधिनियम, 1996 की धारा 9 के अंतर्गत अंतरिम उपाय हेतु आवेदन — धारा 9 माध्यस्थम आवेदन"
+      },
+      "use": {
+        "en": "Ask the Court for urgent interim protection — such as preservation of goods, securing an amount in dispute, or an injunction — before arbitration begins or during arbitral proceedings. Also called a Section 9 arbitration application or arbitration interim relief application.",
+        "hi": "माध्यस्थम प्रारंभ होने से पूर्व या माध्यस्थम कार्यवाही के दौरान तत्काल अंतरिम संरक्षण — जैसे माल का परिरक्षण, विवादित राशि की सुरक्षा, या निषेधाज्ञा — हेतु न्यायालय से प्रार्थना करें। इसे धारा 9 माध्यस्थम आवेदन या माध्यस्थम अंतरिम राहत आवेदन भी कहते हैं।"
+      },
+      "template": "IN THE COURT OF THE [DISTRICT JUDGE / HIGH COURT — COMMERCIAL DIVISION], [DISTRICT / PLACE]\n\nArbitration Petition No. [____] of [YEAR]\n\n[PETITIONER NAME], [COMPANY / FIRM DETAILS], having its registered office at [FULL ADDRESS] ... Petitioner\n\nVERSUS\n\n[RESPONDENT NAME], [COMPANY / FIRM DETAILS], having its registered office at [FULL ADDRESS] ... Respondent\n\nAPPLICATION UNDER SECTION 9 OF THE ARBITRATION AND CONCILIATION ACT, 1996, FOR INTERIM MEASURES\n\nMay it please the Court:\n\n1. That the petitioner and the respondent entered into an agreement dated [DATE] for [PURPOSE — e.g. supply of goods / construction work / services], which contains an arbitration clause (Clause [NUMBER]) providing that all disputes arising out of or in connection with the agreement shall be referred to arbitration at [SEAT OF ARBITRATION].\n\n2. That disputes have arisen between the parties, namely [DESCRIBE DISPUTES — e.g. non-payment of Rs. [AMOUNT] for supplies made / defective work / wrongful termination], and the petitioner has invoked / proposes to invoke arbitration vide notice dated [DATE].\n\n3. That unless urgent interim protection is granted, the petitioner shall suffer irreparable loss, because [GIVE SPECIFIC URGENCY — e.g. the respondent is disposing of the machinery / goods which are the subject matter of the dispute / is siphoning funds from its bank account / is about to alienate the property in question].\n\n4. That the balance of convenience is in favour of the petitioner, and no prejudice will be caused to the respondent if the interim measures prayed for are granted, whereas refusal will render the arbitration infructuous.\n\nPRAYER:\nIt is therefore most respectfully prayed that this Hon'ble Court may graciously be pleased to:\n(a) direct the respondent to preserve and not to alienate, encumber or dispose of [GOODS / PROPERTY / FUNDS — FULL DESCRIPTION] pending arbitration;\n(b) direct the respondent to furnish security / deposit Rs. [AMOUNT] pending arbitration;\n(c) grant an ad interim injunction restraining the respondent from [ACT — DETAILS]; and\n(d) pass such other orders as this Hon'ble Court may deem fit.\n\nPlace: [PLACE]\nDate: [DATE]\n\n[PETITIONER NAME]\nPetitioner\nThrough Counsel: [ADVOCATE NAME, ENROLMENT NO.]\n\nAFFIDAVIT IN SUPPORT:\nI, [AUTHORISED SIGNATORY NAME], authorised by Board Resolution dated [DATE], do hereby solemnly affirm that the contents of paras 1 to 4 are true to my personal knowledge and belief, and are based on the record.\n\nDeponent\nVerified at [PLACE] on [DATE].",
+      "templateHi": "[जिला न्यायाधीश / उच्च न्यायालय — वाणिज्यिक प्रभाग], [जिला / स्थान] के न्यायालय में\n\nमाध्यस्थम याचिका सं. [____] वर्ष [YEAR]\n\n[याचिकाकर्ता का नाम], [कंपनी / फर्म विवरण], जिसका पंजीकृत कार्यालय [पूरा पता] पर है ... याचिकाकर्ता\n\nबनाम\n\n[प्रत्यर्थी का नाम], [कंपनी / फर्म विवरण], जिसका पंजीकृत कार्यालय [पूरा पता] पर है ... प्रत्यर्थी\n\nमाध्यस्थम एवं सुलह अधिनियम, 1996 की धारा 9 के अंतर्गत अंतरिम उपाय हेतु आवेदन\n\nमाननीय न्यायालय की सेवा में सादर निवेदन है:\n\n1. कि याचिकाकर्ता और प्रत्यर्थी ने [तिथि] को [उद्देश्य — जैसे माल की आपूर्ति / निर्माण कार्य / सेवाएँ] हेतु अनुबंध किया था, जिसमें माध्यस्थम खंड (खंड [संख्या]) है जिसके अनुसार अनुबंध से उत्पन्न या उससे संबंधित सभी विवाद [माध्यस्थम स्थल] पर माध्यस्थम को सौंपे जाएँगे।\n\n2. कि पक्षकारों के बीच विवाद उत्पन्न हुए हैं, अर्थात् [विवादों का वर्णन — जैसे की गई आपूर्ति हेतु रु. [राशि] का भुगतान न होना / दोषपूर्ण कार्य / गलत समापन], और याचिकाकर्ता ने [तिथि] की नोटिस द्वारा माध्यस्थम आहूत किया है / आहूत करने का प्रस्ताव रखता है।\n\n3. कि जब तक तत्काल अंतरिम संरक्षण न दिया जाए, याचिकाकर्ता को अपूरणीय हानि होगी, क्योंकि [विशिष्ट तात्कालिकता दें — जैसे प्रत्यर्थी विवाद की विषय-वस्तु वाली मशीनरी / माल का निपटान कर रहा है / अपने बैंक खाते से धन निकाल रहा है / संबंधित संपत्ति का अंतरण करने वाला है]।\n\n4. कि सुविधा का संतुलन याचिकाकर्ता के पक्ष में है, और प्रार्थित अंतरिम उपाय स्वीकार होने पर प्रत्यर्थी को कोई प्रतिकूलता नहीं होगी, जबकि इनकार से माध्यस्थम निष्फल हो जाएगा।\n\nप्रार्थना:\nअतः अत्यंत सादर प्रार्थना है कि यह माननीय न्यायालय कृपापूर्वक:\n(क) प्रत्यर्थी को माध्यस्थम लंबित रहने तक [माल / संपत्ति / धन — पूर्ण विवरण] का परिरक्षण करने और उसका अंतरण, भार या निपटान न करने का निर्देश दे;\n(ख) प्रत्यर्थी को माध्यस्थम लंबित रहने तक प्रतिभूति देने / रु. [राशि] जमा करने का निर्देश दे;\n(ग) प्रत्यर्थी को [कृत्य — विवरण] से रोकने हेतु अंतरिम निषेधाज्ञा प्रदान करे; और\n(घ) अन्य ऐसे आदेश पारित करे जो उचित प्रतीत हों।\n\nस्थान: [स्थान]\nदिनांक: [दिनांक]\n\n[याचिकाकर्ता का नाम]\nयाचिकाकर्ता\nद्वारा अधिवक्ता: [अधिवक्ता का नाम, नामांकन संख्या]\n\nसमर्थन में शपथपत्र:\nमैं, [प्राधिकृत हस्ताक्षरकर्ता का नाम], [तिथि] के बोर्ड प्रस्ताव द्वारा प्राधिकृत, शपथपूर्वक पुष्टि करता हूँ कि अनुच्छेद 1 से 4 की बातें मेरी व्यक्तिगत जानकारी एवं विश्वास के अनुसार सत्य हैं और अभिलेख पर आधारित हैं।\n\nशपथकर्ता\n[स्थान] में [दिनांक] को सत्यापित।",
+      "filedIn": {
+        "en": "Court as defined in Sec. 2(1)(e) of the Arbitration and Conciliation Act, 1996 — District Court / High Court having jurisdiction over the subject matter",
+        "hi": "माध्यस्थम एवं सुलह अधिनियम, 1996 की धारा 2(1)(e) में परिभाषित न्यायालय — विषय-वस्तु पर क्षेत्राधिकार वाला जिला न्यायालय / उच्च न्यायालय"
+      },
+      "sections": {
+        "en": "Sec. 9, Arbitration and Conciliation Act, 1996 — a party may, before or during arbitral proceedings or at any time after the making of the arbitral award but before it is enforced, apply to a Court for interim measures: preservation of goods, securing the amount in dispute, interim injunction, appointment of a receiver, or other interim measures. Note: where the Court grants interim measures before arbitration commences, arbitral proceedings must be commenced within 90 days of the order (or such further time as the Court allows), failing which the interim order stands vacated. Sec. 17 gives similar powers to the arbitral tribunal itself once constituted.",
+        "hi": "धारा 9, माध्यस्थम एवं सुलह अधिनियम, 1996 — कोई पक्षकार माध्यस्थम कार्यवाही से पूर्व या उसके दौरान अथवा पंचाट बनने के बाद परंतु उसके प्रवर्तन से पूर्व, अंतरिम उपायों हेतु न्यायालय में आवेदन कर सकता है: माल का परिरक्षण, विवादित राशि की सुरक्षा, अंतरिम निषेधाज्ञा, रिसीवर की नियुक्ति, या अन्य अंतरिम उपाय। ध्यान दें: जहाँ न्यायालय माध्यस्थम प्रारंभ होने से पूर्व अंतरिम उपाय प्रदान करता है, वहाँ आदेश की तिथि से 90 दिनों के भीतर (अथवा न्यायालय द्वारा अनुमत अतिरिक्त समय में) माध्यस्थम कार्यवाही प्रारंभ होनी चाहिए, अन्यथा अंतरिम आदेश समाप्त हो जाता है। धारा 17 गठित माध्यस्थम अधिकरण को भी समान शक्तियाँ देती है।"
+      },
+      "jurisdiction": {
+        "en": "The Court having jurisdiction over the subject matter of the arbitration agreement, as per Sec. 2(1)(e) of the Act.",
+        "hi": "अधिनियम की धारा 2(1)(e) के अनुसार माध्यस्थम अनुबंध की विषय-वस्तु पर क्षेत्राधिकार वाला न्यायालय।"
+      },
+      "requirements": {
+        "en": [
+          "Agreement containing the arbitration clause",
+          "Notice invoking arbitration, if issued",
+          "Documents showing urgency / risk of dissipation of assets",
+          "Board resolution / authorisation for the signatory",
+          "Court fee as applicable",
+          "Affidavit in support"
+        ],
+        "hi": [
+          "माध्यस्थम खंड वाला अनुबंध",
+          "माध्यस्थम आहूत करने की नोटिस, यदि जारी हुई हो",
+          "परिसंपत्तियों के अपव्यय के जोखिम / तात्कालिकता दर्शाने वाले दस्तावेज",
+          "हस्ताक्षरकर्ता हेतु बोर्ड प्रस्ताव / प्राधिकार",
+          "लागू न्यायालय शुल्क",
+          "समर्थन में शपथपत्र"
+        ]
+      },
+      "when": {
+        "en": "Ask the Court for urgent interim protection — such as preservation of goods, securing an amount in dispute, or an injunction — before arbitration begins or during arbitral proceedings. Also called a Section 9 arbitration application or arbitration interim relief application.",
+        "hi": "माध्यस्थम प्रारंभ होने से पूर्व या माध्यस्थम कार्यवाही के दौरान तत्काल अंतरिम संरक्षण — जैसे माल का परिरक्षण, विवादित राशि की सुरक्षा, या निषेधाज्ञा — हेतु न्यायालय से प्रार्थना करें। इसे धारा 9 माध्यस्थम आवेदन या माध्यस्थम अंतरिम राहत आवेदन भी कहते हैं।"
+      },
+      "where": {
+        "en": "Court as defined in Sec. 2(1)(e) of the Arbitration and Conciliation Act, 1996 — District Court / High Court having jurisdiction over the subject matter",
+        "hi": "माध्यस्थम एवं सुलह अधिनियम, 1996 की धारा 2(1)(e) में परिभाषित न्यायालय — विषय-वस्तु पर क्षेत्राधिकार वाला जिला न्यायालय / उच्च न्यायालय"
+      }
     }
   ]
 }
