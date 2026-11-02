@@ -519,8 +519,10 @@
     .judgement-cites button { background: none; border: none; padding: 0; font: inherit; color: var(--ink); text-decoration: underline; cursor: pointer; }
     .la-trail { margin-top: 10px; padding-top: 8px; border-top: 1px dashed rgba(128,128,128,.5); font-size: .82rem; line-height: 1.6; }
     .la-trail strong { display: block; margin-bottom: 2px; }
-    .la-upscope { display: flex; gap: 8px; align-items: flex-start; font-size: .82rem; line-height: 1.5; margin: 0 0 8px; }
+    .la-upscope { display: flex; flex-direction: column; gap: 6px; align-items: stretch; font-size: .82rem; line-height: 1.5; margin: 0; padding: 8px 14px 10px; flex-shrink: 0; }
     .la-upscope input { margin-top: 3px; flex-shrink: 0; }
+    .la-upscope select { width: 100%; max-width: 100%; height: 38px; border: 1.5px solid rgba(0,0,0,.25); border-radius: 10px; padding: 0 10px; font-size: .84rem; background: #ffffff; }
+    html[data-theme="dark"] .la-upscope select { background: #000418; color: #F5F5F5; border-color: rgba(255,255,255,.3); }
     .library-note { margin-top: 34px; color: var(--muted); font-size: .78rem; max-width: 720px; }
     .live-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 10px 0 4px; }
     .live-bar .live-label { font: 600 .8rem var(--sans); color: var(--muted); }
@@ -1086,6 +1088,11 @@
     .la-form .la-ctl-inp { flex: 1; min-width: 0; align-items: stretch; }
     .la-form .la-ctl-inp input { width: 100%; flex: none; }
     .la-form .la-ctl-inp .la-cap { text-align: center; }
+    /* LawAssist phone fix 2026-11-03: chrome must never squeeze the answer area */
+    .la-body, .la-pane, .la-messages { min-height: 0; }
+    .la-header, .la-tabs, .la-chips, .la-form { flex-shrink: 0; }
+    .ai-chip { flex: 0 0 auto; white-space: nowrap; padding: 8px 14px; border: 1px solid rgba(0,0,0,.25); border-radius: 999px; background: #ffffff; color: #1e1e1e; font: 700 .78rem var(--sans); cursor: pointer; }
+    html[data-theme="dark"] .ai-chip { background: rgba(255,255,255,.08); color: #F5F5F5; border-color: rgba(255,255,255,.3); }
     @media (max-width: 520px) {
       .la-form { flex-wrap: wrap; }
       .la-form .la-ctl-inp { flex: 1 1 100%; order: -1; }
@@ -1658,6 +1665,8 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           <button type="button" id="navMoreBtn" class="nav-more-btn" aria-haspopup="true" aria-expanded="false"><span data-i18n="navMore">More</span> ▾</button>
           <div class="nav-more-menu" id="navMoreMenu" hidden role="menu" aria-label="More links">
             <a href="#heroAskForm" id="navAskDoubtLink" role="menuitem" data-i18n="navAskDoubt">❓ Ask any doubt</a>
+            <a href="#drafts" role="menuitem" data-i18n="navDrafts">🗂️ Drafts</a>
+            <a href="#library" role="menuitem" data-i18n="navLibrary">⚖️ Important Judgement</a>
             <a href="#draft-guide" role="menuitem" data-i18n="navDraftGuide">📋 Draft Guide</a>
             <a href="#linkDirectory" role="menuitem" data-i18n="hubTabLinks">🔗 Useful Links</a>
             <a href="#notes" role="menuitem" data-i18n="navNotes">📒 Notes</a>
@@ -1675,7 +1684,6 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
             <button type="button" class="hub-jump" data-hub-tab="courts" role="menuitem"><span class="hj-ic" aria-hidden="true">🏛️</span><span data-i18n="hubTabCourts">Courts</span></button>
             <button type="button" class="hub-jump" data-hub-tab="consumer" role="menuitem"><span class="hj-ic" aria-hidden="true">🛒</span><span data-i18n="hubTabConsumer">Consumer</span></button>
             <button type="button" class="hub-jump" data-hub-tab="bar" role="menuitem"><span class="hj-ic" aria-hidden="true">🎓</span><span data-i18n="hubTabBar">AIBE &amp; Bar</span></button>
-            <button type="button" class="hub-jump" data-hub-tab="drafts" role="menuitem"><span class="hj-ic" aria-hidden="true">📁</span><span data-i18n="hubTabDrafts">Drafts &amp; Library</span></button>
             <button type="button" class="hub-jump" data-hub-tab="toolkit" role="menuitem"><span class="hj-ic" aria-hidden="true">⚖️</span><span data-i18n="hubTabToolkit">Criminal Toolkit</span></button>
           </div>
         </div>
@@ -1967,10 +1975,6 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
 
         <div class="hub-panel" id="hubPanel-bar" role="tabpanel" hidden>
           <div class="hub-grid" id="hubBarGrid"></div>
-        </div>
-
-        <div class="hub-panel" id="hubPanel-drafts" role="tabpanel" hidden>
-          <div class="hub-grid" id="hubDraftsGrid"></div>
         </div>
 
 
@@ -3937,7 +3941,6 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         { id: "courts", labelKey: "hubTabCourts", panel: "hubPanel-courts" },
         { id: "consumer", labelKey: "hubTabConsumer", panel: "hubPanel-consumer" },
         { id: "bar", labelKey: "hubTabBar", panel: "hubPanel-bar" },
-        { id: "drafts", labelKey: "hubTabDrafts", panel: "hubPanel-drafts" },
         { id: "toolkit", labelKey: "hubTabToolkit", panel: "hubPanel-toolkit" },
         { id: "bills", labelKey: "hubTabBills", panel: "hubPanel-bills" },
         { id: "compare", labelKey: "hubTabCompare", panel: "hubPanel-compare" }
@@ -4102,12 +4105,6 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         fill("hubBarGrid", [
           linkCard(bar["https://barcouncilofindia.org"], "hubBarBciDesc"),
           linkCard(bar["https://allindiabarexamination.com"], "hubBarAibeDesc")
-        ]);
-        fill("hubDraftsGrid", [
-          { title: t("hubDraftsTitle"), desc: t("hubDraftsDesc"), actions: [{ label: t("hubOpenSection"), href: "#documents", solid: true }] },
-          { title: t("hubFormatsTitle"), desc: t("hubFormatsDesc"), actions: [{ label: t("hubOpenSection"), href: "#documents" }] },
-          { title: t("hubLibraryCardTitle"), desc: t("hubLibraryCardDesc"), actions: [{ label: t("hubOpenSection"), href: "#library" }] },
-          { title: t("hubUpdatesCardTitle"), desc: t("hubUpdatesCardDesc"), actions: [{ label: t("hubOpenSection"), href: "#updates" }] }
         ]);
         renderToolkit();
       }
