@@ -1803,6 +1803,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           <a class="live-btn" id="libLiveKanoon" href="https://indiankanoon.org/search/?formInput=latest%20judgements" target="_blank" rel="noopener" data-i18n="liveKanoon">🔍 Indian Kanoon — Live</a>
           <a class="live-btn" id="libLiveGoogle" href="https://www.google.com/search?q=latest%20judgements%20judgement" target="_blank" rel="noopener" data-i18n="liveGoogle">🔍 Google — Live</a>
           <a class="live-btn" id="libLiveKanoonHi" href="https://indiankanoon-org.translate.goog/search/?formInput=latest%20judgements&_x_tr_sl=en&_x_tr_tl=hi&_x_tr_hl=hi" target="_blank" rel="noopener" data-i18n="liveKanoonHi">🔍 Indian Kanoon — Hindi</a>
+          <a class="live-btn" id="libLiveGoogleHi" href="https://www.google.com/search?q=latest%20judgements%20judgement&hl=hi" target="_blank" rel="noopener" data-i18n="liveGoogleHi">🔍 Google — Hindi</a>
         </div>
         <div class="lib-filters reveal">
           <select id="libCourtFilter" class="lib-filter-sel" aria-label="Filter by court">
@@ -3119,9 +3120,10 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           hubResultActs: "Bare Acts",
           hubResultLive: "Live Search",
           liveSearchLabel: "Search live for the latest judgements/orders:",
-          liveKanoon: "🔍 Indian Kanoon — Live",
-          liveGoogle: "🔍 Google — Live",
-          liveKanoonHi: "🔍 Indian Kanoon — Hindi",
+          liveKanoon: "🔍 Indian Kanoon — English · इंडियन कानून — अंग्रेज़ी",
+          liveGoogle: "🔍 Google — English · गूगल — अंग्रेज़ी",
+          liveKanoonHi: "🔍 Indian Kanoon — Hindi · इंडियन कानून — हिंदी",
+          liveGoogleHi: "🔍 Google — Hindi · गूगल — हिंदी",
           hubResultJudgements: "Judgements",
           hubResultUpdates: "Legal Updates",
           hubResultLinks: "Links",
@@ -3407,9 +3409,10 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           hubResultActs: "बेयर एक्ट",
           hubResultLive: "लाइव खोज",
           liveSearchLabel: "ताज़ा निर्णय/आदेश लाइव खोजें:",
-          liveKanoon: "🔍 इंडियन कानून — लाइव",
-          liveGoogle: "🔍 गूगल — लाइव",
-          liveKanoonHi: "🔍 इंडियन कानून — हिंदी",
+          liveKanoon: "🔍 Indian Kanoon — English · इंडियन कानून — अंग्रेज़ी",
+          liveGoogle: "🔍 Google — English · गूगल — अंग्रेज़ी",
+          liveKanoonHi: "🔍 Indian Kanoon — Hindi · इंडियन कानून — हिंदी",
+          liveGoogleHi: "🔍 Google — Hindi · गूगल — हिंदी",
           hubResultJudgements: "निर्णय",
           hubResultUpdates: "कानूनी अपडेट",
           hubResultLinks: "लिंक",
@@ -11029,11 +11032,14 @@ function cfBiharFee(v) {
         var dHits = ((drData && drData.drafts) || []).filter(function (dr) { return matches(dr.title.en, dr.title.hi, dr.use.en, dr.use.hi, dr.category.en, dr.category.hi, dr.sections && dr.sections.en, dr.sections && dr.sections.hi, dr.jurisdiction && dr.jurisdiction.en, dr.jurisdiction && dr.jurisdiction.hi); }).slice(0, 6);
         if (dHits.length) groups.push({ title: t("hubResultDrafts"), items: dHits.map(function (dr) { return { title: dr.title[lang] || dr.title.en, sub: dr.category[lang] || dr.category.en, go: function () { if (typeof jumpToDraft === "function") jumpToDraft(dr.id); else document.getElementById("drafts").scrollIntoView({ behavior: "smooth" }); } }; }) });
         var liveQ = (q || "").trim() || query;
-        groups.push({ title: t("hubResultLive"), items: [
+        var liveItems = [
           { title: t("liveKanoon"), sub: "indiankanoon.org", go: function () { window.open("https://indiankanoon.org/search/?formInput=" + encodeURIComponent(liveQ), "_blank", "noopener"); } },
           { title: t("liveGoogle"), sub: "google.com", go: function () { window.open("https://www.google.com/search?q=" + encodeURIComponent(liveQ + " judgement"), "_blank", "noopener"); } },
-          { title: t("liveKanoonHi"), sub: "indiankanoon.org (Hindi)", go: function () { window.open("https://indiankanoon-org.translate.goog/search/?formInput=" + encodeURIComponent(liveQ) + "&_x_tr_sl=en&_x_tr_tl=hi&_x_tr_hl=hi", "_blank", "noopener"); } }
-        ] });
+          { title: t("liveKanoonHi"), sub: "indiankanoon.org (Hindi)", go: function () { window.open("https://indiankanoon-org.translate.goog/search/?formInput=" + encodeURIComponent(liveQ) + "&_x_tr_sl=en&_x_tr_tl=hi&_x_tr_hl=hi", "_blank", "noopener"); } },
+          { title: t("liveGoogleHi"), sub: "google.com (Hindi)", go: function () { window.open("https://www.google.com/search?q=" + encodeURIComponent(liveQ + " judgement") + "&hl=hi", "_blank", "noopener"); } }
+        ];
+        if (lang === "hi") liveItems = [liveItems[2], liveItems[3], liveItems[0], liveItems[1]];
+        groups.push({ title: t("hubResultLive"), items: liveItems });
         if (groups.length === 1) {
           box.appendChild(hubEl("div", "hub-no-results", t("hubNoResults")));
         }
@@ -11509,13 +11515,13 @@ function cfBiharFee(v) {
           fk.className = "live-btn";
           fk.target = "_blank"; fk.rel = "noopener";
           fk.href = "https://indiankanoon.org/search/?formInput=" + encodeURIComponent(libQuery);
-          fk.textContent = currentLanguage === "hi" ? "🔍 पूरे भारत के निर्णय Indian Kanoon पर खोजें" : "🔍 Search all-India judgments on Indian Kanoon";
+          fk.textContent = "🔍 Indian Kanoon — English · इंडियन कानून — अंग्रेज़ी";
           var fh = document.createElement("a");
           fh.className = "live-btn";
           fh.target = "_blank"; fh.rel = "noopener";
           fh.href = "https://indiankanoon-org.translate.goog/search/?formInput=" + encodeURIComponent(libQuery) + "&_x_tr_sl=en&_x_tr_tl=hi&_x_tr_hl=hi";
-          fh.textContent = currentLanguage === "hi" ? "🌐 हिंदी में पढ़ें (अनुवादित)" : "🌐 Read in Hindi (translated)";
-          finder.appendChild(fk); finder.appendChild(fh);
+          fh.textContent = "🌐 Indian Kanoon — Hindi (translated) · इंडियन कानून — हिंदी (अनुवादित)";
+          if (currentLanguage === "hi") { finder.appendChild(fh); finder.appendChild(fk); } else { finder.appendChild(fk); finder.appendChild(fh); }
           grid.appendChild(finder);
         }
         if (moreWrap && moreBtn) {
@@ -11531,13 +11537,22 @@ function cfBiharFee(v) {
       /* ---------- Library live search deep links ---------- */
       function initLibLiveBar() {
         var input = document.getElementById("librarySectionSearch");
-        var k = document.getElementById("libLiveKanoon"), g = document.getElementById("libLiveGoogle"), h = document.getElementById("libLiveKanoonHi");
+        var k = document.getElementById("libLiveKanoon"), g = document.getElementById("libLiveGoogle"), h = document.getElementById("libLiveKanoonHi"), gh = document.getElementById("libLiveGoogleHi");
         if (!k || !g || !h) return;
+        function orderLiveBar() {
+          if (!gh || !h.parentNode) return;
+          var p = h.parentNode;
+          var order = (document.documentElement.lang === "hi") ? [h, gh, k, g] : [k, g, h, gh];
+          order.forEach(function (el) { p.appendChild(el); });
+        }
+        orderLiveBar();
+        if (window.MutationObserver) new MutationObserver(orderLiveBar).observe(document.documentElement, { attributes: true, attributeFilter: ["lang"] });
         function upd() {
           var v = (input && input.value ? input.value.trim() : "") || "latest judgements";
           k.href = "https://indiankanoon.org/search/?formInput=" + encodeURIComponent(v);
           g.href = "https://www.google.com/search?q=" + encodeURIComponent(v + " judgement");
           h.href = "https://indiankanoon-org.translate.goog/search/?formInput=" + encodeURIComponent(v) + "&_x_tr_sl=en&_x_tr_tl=hi&_x_tr_hl=hi";
+          if (gh) gh.href = "https://www.google.com/search?q=" + encodeURIComponent(v + " judgement") + "&hl=hi";
         }
         if (input) input.addEventListener("input", upd);
         upd();
