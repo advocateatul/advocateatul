@@ -141,6 +141,14 @@
     { id: "victim-compensation", en: "Victim Compensation & Witness Protection", hi: "पीड़ित मुआवज़ा और गवाह संरक्षण", sections: ["BNSS:396", "BNSS:398"] },
     { id: "probation", en: "Probation", hi: "परिवीक्षा", sections: ["BNSS:401", "BNSS:402"] },
     { id: "hindu-marriage-divorce", en: "Hindu Marriage & Divorce", hi: "हिंदू विवाह और तलाक", sections: ["HMA:13", "HMA:24"] },
+    { id: "extortion", en: "Extortion", hi: "जबरन वसूली", sections: ["BNS:308"] },
+    { id: "dacoity", en: "Dacoity", hi: "डकैती", sections: ["BNS:310"] },
+    { id: "mischief", en: "Mischief", hi: "शरारत / नुकसान", sections: ["BNS:324"] },
+    { id: "bigamy", en: "Bigamy", hi: "द्विविवाह", sections: ["BNS:82", "BNS:83", "BNS:84"] },
+    { id: "organised-crime", en: "Organised Crime", hi: "संगठित अपराध", sections: ["BNS:111"] },
+    { id: "plea-bargaining", en: "Plea Bargaining", hi: "सौदा अभिवचन", sections: ["BNSS:289", "BNSS:290"] },
+    { id: "inquest", en: "Inquest", hi: "पंचनामा / मृत्यु-समीक्षा", sections: ["BNSS:194", "CRPC:174"] },
+    { id: "public-nuisance", en: "Public Nuisance", hi: "लोक उपद्रव", sections: ["BNS:270", "IPC:268"] }
   ];
   function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
   function lang() { return document.documentElement.lang === "hi" ? "hi" : "en"; }
