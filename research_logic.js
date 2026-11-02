@@ -278,6 +278,23 @@
     }
     return { id: "__nomatch__", en: raw, hi: raw, sections: [] };
   }
+  /* Report placement (2026-11-02): the report panel moves to sit right after the element the user acted on, so its information opens WITH that element instead of far below the list. */
+  function placeReport(afterEl) {
+    try {
+      var out = document.getElementById("llReportOut");
+      if (!out) return null;
+      if (afterEl && afterEl.parentNode) afterEl.parentNode.insertBefore(out, afterEl.nextSibling);
+      return out;
+    } catch (e) { return null; }
+  }
+  function placeReportHome() {
+    try {
+      var out = document.getElementById("llReportOut");
+      var form = document.getElementById("llReportForm");
+      if (out && form && form.parentNode) form.parentNode.insertBefore(out, form.nextSibling);
+      return out;
+    } catch (e) { return null; }
+  }
   function boot() {
     var list = document.getElementById("llTopicList");
     if (list) {
@@ -286,8 +303,9 @@
         b.type = "button"; b.className = "vocab-cat ll-topic-btn";
         b.textContent = t.en + " · " + t.hi;
         b.addEventListener("click", function () {
-          var out = document.getElementById("llReportOut");
+          var out = placeReport(b);
           if (out) out.innerHTML = "<p>Loading… / लोड हो रहा है…</p>";
+          try { if (b.scrollIntoView) b.scrollIntoView(); } catch (e) {}
           ensureData(function () { renderReport(t); });
         });
         list.appendChild(b);
@@ -298,7 +316,7 @@
       ev.preventDefault();
       var inp = document.getElementById("llReportInput");
       var topic = resolveInput(inp ? inp.value : "");
-      var out = document.getElementById("llReportOut");
+      var out = placeReportHome();
       if (!topic) { if (inp) inp.focus(); return; }
       if (topic.id === "__nomatch__") {
         if (out) out.innerHTML = "<p>" + (lang() === "hi"
