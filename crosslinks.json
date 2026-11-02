@@ -1,8 +1,8 @@
 {
  "generated_from": [
-  "judgements.json (676 items)",
+  "judgements.json (711 items)",
   "notes.json (163 topics)",
-  "drafts.json (342 items)"
+  "drafts.json (352 items)"
  ],
  "method": "Exact normalized section-token match (family + base number; subsections stripped; ranges expanded up to 60). Old-code tokens are folded to their new-code canonical ONLY via the site's own SECTION_EQ map already in index.html; the folded old tokens are listed in 'equivalents'. Tokens with no identifiable family (judgement 'SEC n' tokens and similar) are excluded, never guessed.",
  "note_id_format": "<subject>:<index> into notes.json arrays, e.g. bnss:0 = notes.json bnss[0].",
@@ -195,6 +195,7 @@
     "Ashok Kumar Dixit v. State of U.P.",
     "Aureliano Fernandes v. State of Goa",
     "Bandhua Mukti Morcha v. Union of India",
+    "Bhadresh Bipinbhai Sheth v. State of Gujarat",
     "Bhim Singh v. State of Jammu & Kashmir",
     "Charles Sobhraj v. Superintendent, Central Jail, Tihar",
     "Common Cause (A Regd. Society) v. Union of India",
@@ -207,11 +208,14 @@
     "Faheema Shirin R.K. v. State of Kerala",
     "Faimuddeen and 2 Others v. State of U.P. and 7 Others",
     "Francis Coralie Mullin v. Administrator, Union Territory of Delhi",
+    "Frank Vitus v. Narcotics Control Bureau",
+    "Gudikanti Narasimhulu v. Public Prosecutor",
     "Hussainara Khatoon v. State of Bihar",
     "In Re: Policy Strategy for Grant of Bail",
     "Independent Thought v. Union of India",
     "Indian Medical Association v. V.P. Shantha",
     "Janhit Manch v. State of Maharashtra",
+    "Javed Gulam Nabi Shaikh v. State of Maharashtra",
     "Javed Siddiqui v. State of U.P.",
     "Joginder Kumar v. State of U.P.",
     "John Kofie v. State of U.P.",
@@ -231,6 +235,7 @@
     "National Legal Services Authority v. Union of India",
     "Navtej Singh Johar v. Union of India",
     "Nilabati Behera v. State of Orissa",
+    "Niranjan Singh v. State of U.P.",
     "Olga Tellis v. Bombay Municipal Corporation",
     "Paschim Banga Khet Mazdoor Samity v. State of West Bengal",
     "Payal Sharma v. Superintendent, Nari Niketan, Agra",
@@ -252,8 +257,11 @@
     "Shaikh Zahid Mukhtar v. State of Maharashtra",
     "Shakti Vahini v. Union of India",
     "Shatrughan Chauhan v. Union of India",
+    "Siddharam Satlingappa Mhetre v. State of Maharashtra",
     "Smt. Shikha v. State of Uttar Pradesh",
+    "State of Rajasthan v. Balchand",
     "State of Tamil Nadu v. K. Balu",
+    "Subhash Kashinath Mahajan v. State of Maharashtra",
     "Subhash Kumar v. State of Bihar",
     "Subramanian Swamy v. Union of India, Ministry of Law",
     "Suchita Srivastava v. Chandigarh Administration",
@@ -321,6 +329,7 @@
     "M.C. Mehta v. Union of India (Oleum Gas Leak case)",
     "Mohammad Haroon v. Union of India and 5 Others",
     "Payal Sharma v. Superintendent, Nari Niketan, Agra",
+    "Pepsi Foods Ltd. v. Special Judicial Magistrate",
     "Pradnya Pranjal Kulkarni v. State of Maharashtra & Anr.",
     "Prakash Singh v. Union of India",
     "Radhey Shyam v. Chhabi Nath",
@@ -688,7 +697,8 @@
     "Anil Kumar And Another vs State of U.P.",
     "Hridaya Ranjan Prasad Verma & Ors. v. State of Bihar & Anr.",
     "Parveen Jain vs State of U.P.",
-    "Raghvendra Singh v. State of U.P."
+    "Raghvendra Singh v. State of U.P.",
+    "Zandu Pharmaceutical Works Ltd. v. Md. Sharaful Haque"
    ],
    "draft_ids": [
     "stridhan-recovery"
@@ -708,6 +718,8 @@
     "Ashish Garg v. State of U.P.",
     "Hridaya Ranjan Prasad Verma & Ors. v. State of Bihar & Anr.",
     "Inder Mohan Goswami & Another v. State of Uttaranchal & Others",
+    "Indian Oil Corporation v. NEPC India Ltd.",
+    "Nimmagadda Prasad v. Central Bureau of Investigation",
     "Parveen Jain vs State of U.P.",
     "Raghvendra Singh v. State of U.P.",
     "S.C. Garg v. State of U.P.",
@@ -835,6 +847,7 @@
     "K.P. Tamilmaran v. State (by Deputy Superintendent of Police)",
     "Kehar Singh v. State (Delhi Administration)",
     "Madhur Chand And 2 Others vs State of U.P.",
+    "Nimmagadda Prasad v. Central Bureau of Investigation",
     "Sidhartha Vashisht @ Manu Sharma v. State (NCT of Delhi)",
     "Sk. Md. Anisur Rahaman v. State of West Bengal"
    ],
@@ -865,6 +878,7 @@
     "Amir Thru. His Father Mohd. Naseer vs State of U.P. Thru. Prin. Secy. Home Lko.",
     "Anindya Sundar Das v. Union of India (In Re: Post-Poll Violence)",
     "Ankush Maruti Shinde v. State of Maharashtra",
+    "Bhadresh Bipinbhai Sheth v. State of Gujarat",
     "Bharwada Bhoginbhai Hirjibhai v. State of Gujarat",
     "Court on Its Own Motion v. State of Haryana",
     "Delhi Domestic Working Women's Forum v. Union of India",
@@ -1042,7 +1056,10 @@
    "note_ids": [
     "bnss:32"
    ],
-   "judgment_ids": [],
+   "judgment_ids": [
+    "Father Thomas v. State of U.P. and Another",
+    "Nahni and 5 Others v. State of U.P. and Another"
+   ],
    "draft_ids": [
     "change-investigating-officer",
     "complaint-scst-atrocities",
@@ -1665,8 +1682,10 @@
     "bnss:2"
    ],
    "judgment_ids": [
+    "Gudikanti Narasimhulu v. Public Prosecutor",
     "Madhur Chand And 2 Others vs State of U.P.",
-    "Mohd. Ashfaque Ansari alias Ashfaque Ansari v. State of U.P."
+    "Mohd. Ashfaque Ansari alias Ashfaque Ansari v. State of U.P.",
+    "State (Delhi Administration) v. Sanjay Gandhi"
    ],
    "draft_ids": [
     "bail-arms-act-25",
@@ -1705,18 +1724,23 @@
    "judgment_ids": [
     "Abdul Hameed v. State of U.P.",
     "Anil Kumar And Another vs State of U.P.",
+    "Bhadresh Bipinbhai Sheth v. State of Gujarat",
     "Gurbaksh Singh Sibbia v. State of Punjab",
     "Gursewak Singh v. State of Punjab",
     "Kiran v. Rajkumar Jivraj Jain",
     "Musheer Alam v. State of U.P.",
+    "P. Chidambaram v. Directorate of Enforcement",
     "Parveen Jain vs State of U.P.",
     "Prathvi Raj Chauhan v. Union of India",
     "Raghvendra Singh v. State of U.P.",
     "Ritesh Kumar v. State of Bihar",
     "Shahzad v. State of U.P.",
+    "Siddharam Satlingappa Mhetre v. State of Maharashtra",
+    "Subhash Kashinath Mahajan v. State of Maharashtra",
     "Sudhir @ Sudhir Kumar Chaurasia vs State of U.P.",
     "Sushila Aggarwal v. State (NCT of Delhi)",
-    "Uday Prakash and Another v. State of U.P."
+    "Uday Prakash and Another v. State of U.P.",
+    "Union of India v. State of Maharashtra"
    ],
    "draft_ids": [
     "anticipatory-bail",
@@ -1742,6 +1766,8 @@
     "Dataram Singh v. State of Uttar Pradesh",
     "Dr. P.V. Varavara Rao v. National Investigation Agency",
     "Firdaus @ Shadab Akhtar v. State of U.P.",
+    "Frank Vitus v. Narcotics Control Bureau",
+    "Gudikanti Narasimhulu v. Public Prosecutor",
     "John Kofie v. State of U.P.",
     "K. Chinnaswamy Reddy v. State of Andhra Pradesh",
     "Kuldeep Singh v. State of U.P.",
@@ -1749,12 +1775,15 @@
     "Manish Sisodia v. Central Bureau of Investigation",
     "Mohammed Zubair v. State of Uttar Pradesh",
     "Nanha S/o Nabhan Khan v. State of Uttar Pradesh",
+    "Nimmagadda Prasad v. Central Bureau of Investigation",
+    "Niranjan Singh v. State of U.P.",
     "Rahmu alias Rahmuddin v. State of U.P.",
     "Ranjan Pradhan v. State of U.P.",
     "Ravi Tiwari v. State of U.P.",
     "Rhea Chakraborty v. Union of India",
     "Sanjay Chandra v. CBI",
     "Satender Kumar Antil v. CBI",
+    "State (Delhi Administration) v. Sanjay Gandhi",
     "Udai Pratap alias Dau v. State of U.P.",
     "Vikas v. State of U.P."
    ],
@@ -1886,7 +1915,8 @@
    ],
    "note_ids": [],
    "judgment_ids": [
-    "Sarah Mathew v. Institute of Cardio Vascular Diseases"
+    "Sarah Mathew v. Institute of Cardio Vascular Diseases",
+    "Zandu Pharmaceutical Works Ltd. v. Md. Sharaful Haque"
    ],
    "draft_ids": [
     "defamation-356"
@@ -1919,11 +1949,14 @@
     "Hridaya Ranjan Prasad Verma & Ors. v. State of Bihar & Anr.",
     "Imran Pratapgarhi v. State of Gujarat",
     "Inder Mohan Goswami & Another v. State of Uttaranchal & Others",
+    "Indian Oil Corporation v. NEPC India Ltd.",
+    "Pepsi Foods Ltd. v. Special Judicial Magistrate",
     "Pradnya Pranjal Kulkarni v. State of Maharashtra & Anr.",
     "R.P. Kapur v. State of Punjab",
     "S.C. Garg v. State of U.P.",
     "Sandeep Singh v. State of U.P. and Another",
-    "State of Haryana v. Bhajan Lal"
+    "State of Haryana v. Bhajan Lal",
+    "Zandu Pharmaceutical Works Ltd. v. Md. Sharaful Haque"
    ],
    "draft_ids": [
     "cbi-transfer-investigation",
@@ -2200,7 +2233,8 @@
    "judgment_ids": [
     "Amlesh Kumar v. State of Bihar",
     "K. Chinnaswamy Reddy v. State of Andhra Pradesh",
-    "Kartar Singh v. State of Punjab"
+    "Kartar Singh v. State of Punjab",
+    "Tofan Singh v. State of Tamil Nadu"
    ],
    "draft_ids": []
   },
@@ -3564,6 +3598,7 @@
     "majorActs:8"
    ],
    "judgment_ids": [
+    "Frank Vitus v. Narcotics Control Bureau",
     "Sudhir @ Sudhir Kumar Chaurasia vs State of U.P."
    ],
    "draft_ids": [
@@ -3617,6 +3652,7 @@
    "judgment_ids": [
     "John Kofie v. State of U.P.",
     "Mustkeem vs State of U.P.",
+    "State of Punjab v. Balbir Singh",
     "State of Punjab v. Baldev Singh"
    ],
    "draft_ids": [
@@ -3828,6 +3864,79 @@
    "judgment_ids": [],
    "draft_ids": [
     "sale-deed"
+   ]
+  },
+  {
+   "section": "BNSS:438",
+   "equivalents": [
+    "CRPC:397"
+   ],
+   "note_ids": [],
+   "judgment_ids": [
+    "Father Thomas v. State of U.P. and Another",
+    "Nahni and 5 Others v. State of U.P. and Another"
+   ],
+   "draft_ids": [
+    "criminal-revision",
+    "revision-framing-charge",
+    "stay-of-proceedings-revision-appeal"
+   ]
+  },
+  {
+   "section": "NDPS:29",
+   "equivalents": [],
+   "note_ids": [],
+   "judgment_ids": [
+    "Frank Vitus v. Narcotics Control Bureau"
+   ],
+   "draft_ids": [
+    "anticipatory-bail-ndps"
+   ]
+  },
+  {
+   "section": "NDPS:42",
+   "equivalents": [],
+   "note_ids": [],
+   "judgment_ids": [
+    "Tofan Singh v. State of Tamil Nadu"
+   ],
+   "draft_ids": [
+    "ndps-bail"
+   ]
+  },
+  {
+   "section": "PMLA:3",
+   "equivalents": [],
+   "note_ids": [],
+   "judgment_ids": [
+    "P. Chidambaram v. Directorate of Enforcement"
+   ],
+   "draft_ids": [
+    "discharge-pmla",
+    "pmla-bail"
+   ]
+  },
+  {
+   "section": "PMLA:4",
+   "equivalents": [],
+   "note_ids": [],
+   "judgment_ids": [
+    "P. Chidambaram v. Directorate of Enforcement"
+   ],
+   "draft_ids": [
+    "pmla-bail"
+   ]
+  },
+  {
+   "section": "UAPA:43d",
+   "equivalents": [],
+   "note_ids": [],
+   "judgment_ids": [
+    "Javed Gulam Nabi Shaikh v. State of Maharashtra"
+   ],
+   "draft_ids": [
+    "discharge-uapa",
+    "uapa-bail"
    ]
   }
  ]

@@ -589,6 +589,402 @@
      "hi": "TADA केवल दुरुपयोग के विरुद्ध सख्त सुरक्षा-उपायों के साथ ही बना रहता है।"
     }
    }
+  },
+  {
+   "caseName": "Olga Tellis v. Bombay Municipal Corporation",
+   "caseNameHi": "ओल्गा टेलिस बनाम बंबई नगर निगम",
+   "citation": "(1985) 3 SCC 545",
+   "year": 1985,
+   "sections": [
+    "ART 21"
+   ],
+   "irrac": {
+    "issue": {
+     "en": "Does the right to life under Article 21 include the right to livelihood, and may pavement and slum dwellers be evicted without fair procedure?",
+     "hi": "क्या अनुच्छेद 21 के तहत जीवन के अधिकार में आजीविका का अधिकार शामिल है, और क्या फुटपाथ व झुग्गी-झोपड़ी में रहने वालों को उचित प्रक्रिया के बिना बेदखल किया जा सकता है?"
+    },
+    "rule": {
+     "en": "Yes to livelihood, no to eviction without process. The right to life includes the right to livelihood, pavement and slum dwellers cannot be evicted without fair procedure and humane consideration, and there can be no estoppel against fundamental rights.",
+     "hi": "आजीविका के लिए हाँ, बिना प्रक्रिया बेदखली के लिए नहीं। जीवन के अधिकार में आजीविका का अधिकार शामिल है, फुटपाथ और झुग्गी-झोपड़ी में रहने वालों को उचित प्रक्रिया और मानवीय विचार के बिना बेदखल नहीं किया जा सकता, और मौलिक अधिकारों के खिलाफ कोई 'एस्टोपल' नहीं चल सकता।"
+    },
+    "reasoning": {
+     "en": "No one can live without the means of living, so a right to life that excluded livelihood would protect life in name only.",
+     "hi": "जीने के साधनों के बिना कोई जीवित नहीं रह सकता, इसलिए आजीविका को छोड़कर जीवन का अधिकार केवल नाम का अधिकार रह जाता।"
+    },
+    "application": {
+     "en": "Pavement and slum dwellers facing eviction must be given fair procedure and humane consideration; their fundamental rights cannot be treated as given up.",
+     "hi": "बेदखली का सामना कर रहे फुटपाथ और झुग्गी-झोपड़ी निवासियों को उचित प्रक्रिया और मानवीय विचार मिलना चाहिए; उनके मौलिक अधिकार छोड़े गए नहीं माने जा सकते।"
+    },
+    "conclusion": {
+     "en": "Article 21 protects livelihood, eviction requires fair procedure with humane consideration, and this ruling remains the foundation of shelter, eviction and urban-poor litigation.",
+     "hi": "अनुच्छेद 21 आजीविका की रक्षा करता है, बेदखली के लिए मानवीय विचार सहित उचित प्रक्रिया आवश्यक है, और आश्रय व बेदखली के मुकदमों में आज भी यही फैसला आधार है।"
+    }
+   }
+  },
+  {
+   "caseName": "M.C. Mehta v. Union of India (Oleum Gas Leak case)",
+   "caseNameHi": "एम.सी. मेहता बनाम भारत संघ (ओलियम गैस रिसाव मामला)",
+   "citation": "(1987) 1 SCC 395",
+   "year": 1986,
+   "sections": [
+    "ART 21",
+    "ART 226",
+    "ART 32"
+   ],
+   "irrac": {
+    "issue": {
+     "en": "After a leak from a factory engaged in a hazardous activity, what liability does the enterprise bear, and do the old Rylands v. Fletcher exceptions still apply?",
+     "hi": "किसी खतरनाक गतिविधि वाले कारखाने से रिसाव के बाद उद्यम पर क्या दायित्व होगा, और क्या राइलैंड्स बनाम फ्लेचर के पुराने अपवाद अब भी लागू होंगे?"
+    },
+    "rule": {
+     "en": "Absolute liability. Industries engaged in hazardous activities bear absolute liability, the old Rylands v. Fletcher exceptions are rejected, compensation is linked to the enterprise's capacity to pay, and Article 21 includes a clean environment.",
+     "hi": "पूर्ण दायित्व। खतरनाक गतिविधियों वाले उद्योगों पर पूर्ण दायित्व होगा, राइलैंड्स बनाम फ्लेचर के पुराने अपवाद खारिज हैं, मुआवज़ा उद्यम की भुगतान क्षमता से जुड़ेगा, और अनुच्छेद 21 में स्वच्छ पर्यावरण शामिल है।"
+    },
+    "reasoning": {
+     "en": "Restatement of the summary's own basis, nothing added: an enterprise engaged in a hazardous activity cannot shelter behind the old exceptions; its liability is absolute, not conditional on them.",
+     "hi": "सारांश के अपने आधार का ही पुनर्कथन, कुछ जोड़ा नहीं गया है: खतरनाक गतिविधि वाला उद्यम पुराने अपवादों की आड़ नहीं ले सकता; उसका दायित्व पूर्ण है, उन पर निर्भर नहीं।"
+    },
+    "application": {
+     "en": "After the oleum gas leak from a Delhi factory, the Court created the absolute-liability doctrine for hazardous industries and linked compensation to the enterprise's capacity to pay.",
+     "hi": "दिल्ली के कारखाने से ओलियम गैस रिसाव के बाद न्यायालय ने खतरनाक उद्योगों के लिए पूर्ण-दायित्व का सिद्धांत दिया और मुआवज़े को उद्यम की भुगतान क्षमता से जोड़ा।"
+    },
+    "conclusion": {
+     "en": "Hazardous industries bear absolute liability without the Rylands exceptions, Article 21 covers a clean environment, and public interest litigation was strengthened as a tool for the poor.",
+     "hi": "खतरनाक उद्योगों पर राइलैंड्स अपवादों के बिना पूर्ण दायित्व है, अनुच्छेद 21 में स्वच्छ पर्यावरण आता है, और गरीबों के लिए जनहित याचिका मजबूत हथियार बनी।"
+    }
+   }
+  },
+  {
+   "caseName": "State of Maharashtra v. Balram Bama Patil & Ors.",
+   "caseNameHi": "महाराष्ट्र राज्य बनाम बलराम बामा पाटिल व अन्य",
+   "citation": "(1983) 2 SCC 28",
+   "year": 1983,
+   "sections": [
+    "IPC 307",
+    "BNS 109"
+   ],
+   "irrac": {
+    "issue": {
+     "en": "For a conviction for attempt to murder under Section 307 IPC (now Section 109 BNS), is it essential that bodily injury capable of causing death was actually inflicted?",
+     "hi": "धारा 307 IPC (अब धारा 109 BNS) के तहत हत्या के प्रयास की दोषसिद्धि के लिए क्या यह आवश्यक है कि मृत्यु कारित करने योग्य शारीरिक चोट वास्तव में पहुँची हो?"
+    },
+    "rule": {
+     "en": "No. What matters is the intention or knowledge of the accused and the act done towards the commission of murder. The nature of the injury actually caused is only one relevant circumstance; hurt is not a necessary ingredient of the offence.",
+     "hi": "नहीं। निर्णायक बात आरोपी का आशय या ज्ञान और हत्या की दिशा में किया गया कृत्य है। वास्तव में लगी चोट की प्रकृति केवल एक प्रासंगिक परिस्थिति है; चोट लगना इस अपराध का आवश्यक तत्व नहीं है।"
+    },
+    "reasoning": {
+     "en": "Restatement of the summary's own basis, nothing added: the offence turns on intention or knowledge and the act towards murder, not on whether the resulting injury could itself have caused death.",
+     "hi": "सारांश के अपने आधार का ही पुनर्कथन, कुछ जोड़ा नहीं गया है: अपराध आशय या ज्ञान और हत्या की दिशा में किए गए कृत्य पर निर्भर है, इस पर नहीं कि लगी चोट स्वयं मृत्यु कारित कर सकती थी या नहीं।"
+    },
+    "application": {
+     "en": "The court examines the accused's intention or knowledge and the act done towards murder, treating the injury actually caused as only one relevant circumstance among others.",
+     "hi": "अदालत आरोपी के आशय या ज्ञान और हत्या की दिशा में किए गए कृत्य को देखती है, और वास्तव में लगी चोट को केवल एक प्रासंगिक परिस्थिति मानती है।"
+    },
+    "conclusion": {
+     "en": "A Section 307 conviction does not require that death-capable injury was actually inflicted; hurt is not a necessary ingredient.",
+     "hi": "धारा 307 की दोषसिद्धि के लिए मृत्यु कारित करने योग्य चोट का वास्तव में लगना आवश्यक नहीं है; चोट इस अपराध का आवश्यक तत्व नहीं है।"
+    }
+   }
+  },
+  {
+   "caseName": "Hridaya Ranjan Prasad Verma & Ors. v. State of Bihar & Anr.",
+   "caseNameHi": "हृदय रंजन प्रसाद वर्मा व अन्य बनाम बिहार राज्य व अन्य",
+   "citation": "(2000) 4 SCC 168",
+   "year": 2000,
+   "sections": [
+    "IPC 415",
+    "IPC 420",
+    "BNS 318",
+    "IPC 406",
+    "BNS 316",
+    "CRPC 482",
+    "BNSS 528"
+   ],
+   "irrac": {
+    "issue": {
+     "en": "Is a mere breach of contract cheating under Section 420 IPC (now Section 318 BNS)?",
+     "hi": "क्या केवल संविदा का उल्लंघन धारा 420 IPC (अब धारा 318 BNS) में धोखाधड़ी होता है?"
+    },
+    "rule": {
+     "en": "No. For an offence under Section 415 IPC, the prosecution must show that the accused held a dishonest or fraudulent intention at the very beginning, at the time the promise was made.",
+     "hi": "नहीं। धारा 415 IPC का अपराध बनने के लिए अभियोजन को यह दिखाना होगा कि वादा करते समय — यानी बिल्कुल शुरुआत में ही — आरोपी का आशय बेईमानी या छल का था।"
+    },
+    "reasoning": {
+     "en": "A complaint that discloses at best a civil dispute over a failed property transaction, not a crime, cannot be turned into cheating merely because a promise was later broken.",
+     "hi": "जो शिकायत अधिकांशतः असफल सम्पत्ति-सौदे का दीवानी विवाद ही प्रकट करती हो, अपराध नहीं, उसे केवल इसलिए धोखाधड़ी नहीं बनाया जा सकता कि वादा बाद में टूट गया।"
+    },
+    "application": {
+     "en": "The complaint under Sections 406/420/120B IPC, arising from a failed property transaction, was quashed because it disclosed a civil dispute rather than an offence of cheating.",
+     "hi": "असफल सम्पत्ति-सौदे से उठी धारा 406/420/120B IPC की शिकायत रद्द कर दी गई, क्योंकि वह धोखाधड़ी का अपराध नहीं, दीवानी विवाद प्रकट करती थी।"
+    },
+    "conclusion": {
+     "en": "Mere breach of contract is not cheating; dishonest or fraudulent intention at the time the promise was made is essential.",
+     "hi": "केवल संविदा का उल्लंघन धोखाधड़ी नहीं होता; वादा करते समय बेईमानी या छल का आशय आवश्यक है।"
+    }
+   }
+  },
+  {
+   "caseName": "C. Chenga Reddy v. State of Andhra Pradesh",
+   "caseNameHi": "सी. चेंगा रेड्डी बनाम आंध्र प्रदेश राज्य",
+   "citation": "(1996) 10 SCC 193",
+   "year": 1996,
+   "sections": [
+    "IPC 120B",
+    "BNS 61"
+   ],
+   "irrac": {
+    "issue": {
+     "en": "When does circumstantial evidence prove guilt beyond reasonable doubt?",
+     "hi": "परिस्थितिजन्य साक्ष्य कब युक्तियुक्त संदेह से परे दोष साबित करता है?"
+    },
+    "rule": {
+     "en": "Only when the circumstances are fully proved, conclusive in nature, and form a complete chain consistent only with the accused's guilt.",
+     "hi": "तभी जब परिस्थितियाँ पूरी तरह साबित हों, निर्णायक प्रकृति की हों, और केवल अभियुक्त के दोष के साथ संगत एक पूर्ण श्रृंखला बनाएँ।"
+    },
+    "reasoning": {
+     "en": "Suspicion and codal violations alone cannot prove guilt beyond reasonable doubt, so a chain built on them is not conclusive.",
+     "hi": "केवल संदेह और नियमों के उल्लंघन से युक्तियुक्त संदेह से परे दोष साबित नहीं हो सकता, इसलिए उन पर बनी श्रृंखला निर्णायक नहीं होती।"
+    },
+    "application": {
+     "en": "In this corruption and conspiracy case, suspicion and codal violations alone were held insufficient, so the accused engineers and contractors were acquitted.",
+     "hi": "इस भ्रष्टाचार व साज़िश के मामले में केवल संदेह और नियमों के उल्लंघन को अपर्याप्त माना गया, इसलिए अभियुक्त इंजीनियरों व ठेकेदारों को बरी किया गया।"
+    },
+    "conclusion": {
+     "en": "A circumstantial-evidence chain must be fully proved, conclusive, and consistent only with guilt; suspicion alone does not convict.",
+     "hi": "परिस्थितिजन्य साक्ष्य की श्रृंखला पूरी तरह साबित, निर्णायक और केवल दोष के साथ संगत होनी चाहिए; केवल संदेह से दोषसिद्धि नहीं होती।"
+    }
+   }
+  },
+  {
+   "caseName": "State of Punjab v. Baldev Singh",
+   "caseNameHi": "पंजाब राज्य बनाम बलदेव सिंह",
+   "citation": "(1999) 6 SCC 172",
+   "year": 1999,
+   "sections": [
+    "NDPS 50"
+   ],
+   "irrac": {
+    "issue": {
+     "en": "Before searching a person under Section 50 of the NDPS Act, what must the officer tell him?",
+     "hi": "NDPS अधिनियम की धारा 50 के तहत किसी व्यक्ति की तलाशी लेने से पहले अधिकारी को उसे क्या बताना होगा?"
+    },
+    "rule": {
+     "en": "The officer must inform him of his right to be searched before a Gazetted Officer or a Magistrate. Section 50 is mandatory, and a search conducted without informing the person of this right vitiates the recovery and any conviction founded solely on it.",
+     "hi": "अधिकारी को उसे यह अधिकार बताना अनिवार्य है कि वह राजपत्रित अधिकारी या मजिस्ट्रेट के समक्ष तलाशी की माँग कर सकता है। धारा 50 आज्ञापक है, और इस अधिकार की जानकारी दिए बिना की गई तलाशी से हुई बरामदगी तथा केवल उसी पर आधारित दोषसिद्धि दूषित हो जाती है।"
+    },
+    "reasoning": {
+     "en": "Restatement of the summary's own basis, nothing added: because Section 50 is mandatory, informing the person of the right is a condition of a valid search, not an optional courtesy.",
+     "hi": "सारांश के अपने आधार का ही पुनर्कथन, कुछ जोड़ा नहीं गया है: क्योंकि धारा 50 आज्ञापक है, व्यक्ति को अधिकार की जानकारी देना वैध तलाशी की शर्त है, वैकल्पिक शिष्टाचार नहीं।"
+    },
+    "application": {
+     "en": "Before the search, the officer informs the person of the right to be searched before a Gazetted Officer or a Magistrate; only then does the search proceed on a valid footing.",
+     "hi": "तलाशी से पहले अधिकारी व्यक्ति को राजपत्रित अधिकारी या मजिस्ट्रेट के समक्ष तलाशी के अधिकार की जानकारी देता है; तभी तलाशी वैध आधार पर आगे बढ़ती है।"
+    },
+    "conclusion": {
+     "en": "Section 50 is mandatory: an uninformed search vitiates the recovery and any conviction founded solely on it.",
+     "hi": "धारा 50 आज्ञापक है: बिना जानकारी की तलाशी से हुई बरामदगी और केवल उसी पर आधारित दोषसिद्धि दूषित हो जाती है।"
+    }
+   }
+  },
+  {
+   "caseName": "Bharwada Bhoginbhai Hirjibhai v. State of Gujarat",
+   "caseNameHi": "भारवाड़ा भोगिनभाई हिरजीभाई बनाम गुजरात राज्य",
+   "citation": "(1983) 3 SCC 217",
+   "year": 1983,
+   "sections": [
+    "IPC 376",
+    "BNS 64"
+   ],
+   "irrac": {
+    "issue": {
+     "en": "In a rape trial, is corroboration a precondition for conviction on the victim's testimony?",
+     "hi": "बलात्कार के मुकदमे में क्या पीड़िता की गवाही पर दोषसिद्धि के लिए पुष्टि (कॉरोबोरेशन) अनिवार्य शर्त है?"
+    },
+    "rule": {
+     "en": "No. The testimony of a rape victim stands on par with that of an injured witness, corroboration is not a precondition for conviction, and minor discrepancies cannot be given undue importance.",
+     "hi": "नहीं। पीड़िता की गवाही आहत गवाह की गवाही के बराबर मानी जाएगी, दोषसिद्धि के लिए पुष्टि अनिवार्य शर्त नहीं है, और छोटी-मोटी विसंगतियों को अनुचित महत्त्व नहीं दिया जा सकता।"
+    },
+    "reasoning": {
+     "en": "Refusing to act on the victim's testimony merely for want of corroboration adds insult to injury.",
+     "hi": "केवल पुष्टि न मिलने के कारण पीड़िता की गवाही पर कार्रवाई से इनकार करना चोट पर नमक छिड़कने जैसा है।"
+    },
+    "application": {
+     "en": "The victim's testimony is weighed as that of an injured witness, without requiring corroboration as a precondition and without giving minor discrepancies undue importance.",
+     "hi": "पीड़िता की गवाही को आहत गवाह की गवाही की तरह तौला जाता है, पुष्टि को अनिवार्य शर्त बनाए बिना और छोटी-मोटी विसंगतियों को अनुचित महत्त्व दिए बिना।"
+    },
+    "conclusion": {
+     "en": "Corroboration is not a precondition for conviction on a rape victim's testimony.",
+     "hi": "पीड़िता की गवाही पर दोषसिद्धि के लिए पुष्टि अनिवार्य शर्त नहीं है।"
+    }
+   }
+  },
+  {
+   "caseName": "M.H. Hoskot v. State of Maharashtra",
+   "caseNameHi": "एम. एच. होस्कोट बनाम महाराष्ट्र राज्य",
+   "citation": "(1978) 3 SCC 544",
+   "year": 1978,
+   "sections": [
+    "ART 21",
+    "ART 39A",
+    "CRPC 304",
+    "BNSS 341",
+    "CRPC 363",
+    "BNSS 392"
+   ],
+   "irrac": {
+    "issue": {
+     "en": "What does fair procedure under Article 21 require the State to do for a prisoner who cannot secure counsel?",
+     "hi": "अनुच्छेद 21 के तहत निष्पक्ष प्रक्रिया में राज्य को उस कैदी के लिए क्या करना होगा जो वकील नहीं जुटा सकता?"
+    },
+    "rule": {
+     "en": "Two State duties: giving a prisoner a copy of the judgment in time to appeal, and providing free legal services to a prisoner who cannot secure counsel. The Court may also assign counsel under Article 142 to do complete justice.",
+     "hi": "राज्य के दो कर्तव्य हैं: कैदी को अपील करने के लिए समय पर निर्णय की प्रति देना, और वकील न जुटा पाने वाले कैदी को निःशुल्क विधिक सेवा देना। पूर्ण न्याय के लिए न्यायालय अनुच्छेद 142 के तहत वकील भी नियुक्त कर सकता है।"
+    },
+    "reasoning": {
+     "en": "Without a timely copy of the judgment and free legal services, the right of appeal is illusory for a prisoner who cannot secure counsel.",
+     "hi": "समय पर निर्णय की प्रति और निःशुल्क विधिक सेवा के बिना, वकील न जुटा पाने वाले कैदी के लिए अपील का अधिकार भ्रम मात्र रह जाता है।"
+    },
+    "application": {
+     "en": "The prisoner is given the judgment copy in time to appeal and free legal services where counsel cannot be secured, with the Court able to assign counsel under Article 142.",
+     "hi": "कैदी को अपील के लिए समय पर निर्णय की प्रति और वकील न जुटा पाने पर निःशुल्क विधिक सेवा दी जाती है, और न्यायालय अनुच्छेद 142 के तहत वकील नियुक्त कर सकता है।"
+    },
+    "conclusion": {
+     "en": "Fair procedure under Article 21 includes a timely judgment copy and free legal aid for prisoners who cannot secure counsel.",
+     "hi": "अनुच्छेद 21 के तहत निष्पक्ष प्रक्रिया में वकील न जुटा पाने वाले कैदियों के लिए समय पर निर्णय की प्रति और निःशुल्क विधिक सहायता शामिल है।"
+    }
+   }
+  },
+  {
+   "caseName": "Nilabati Behera v. State of Orissa",
+   "caseNameHi": "नीलाबती बेहरा बनाम उड़ीसा राज्य",
+   "citation": "(1993) 2 SCC 746",
+   "year": 1993,
+   "sections": [
+    "ART 21"
+   ],
+   "irrac": {
+    "issue": {
+     "en": "After a death in police custody, can a constitutional court award compensation for violation of the right to life without forcing the family through a separate civil suit?",
+     "hi": "पुलिस हिरासत में मौत के बाद क्या संवैधानिक अदालत जीवन के अधिकार के उल्लंघन पर परिवार को अलग दीवानी मुकदमे के बिना मुआवज़ा दे सकती है?"
+    },
+    "rule": {
+     "en": "Yes. The State is strictly liable and monetary compensation is awarded for violation of the right to life; constitutional courts can grant compensation for custodial deaths without a separate civil suit.",
+     "hi": "हाँ। राज्य पूर्णतः उत्तरदायी है और जीवन के अधिकार के उल्लंघन पर आर्थिक मुआवज़ा दिया जाता है; संवैधानिक अदालतें हिरासत में मौत पर अलग दीवानी मुकदमे के बिना मुआवज़ा दे सकती हैं।"
+    },
+    "reasoning": {
+     "en": "Restatement of the summary's own basis, nothing added: the remedy for a custodial death violating Article 21 lies directly before the constitutional court, so the family need not be sent to a separate civil suit first.",
+     "hi": "सारांश के अपने आधार का ही पुनर्कथन, कुछ जोड़ा नहीं गया है: अनुच्छेद 21 का उल्लंघन करने वाली हिरासत में मौत का उपाय सीधे संवैधानिक अदालत के समक्ष है, इसलिए परिवार को पहले अलग दीवानी मुकदमे में नहीं भेजा जाता।"
+    },
+    "application": {
+     "en": "After a young man died in police custody, the State was held strictly liable and monetary compensation was awarded for the violation of the right to life.",
+     "hi": "पुलिस हिरासत में एक युवक की मौत के बाद राज्य को पूर्णतः उत्तरदायी ठहराया गया और जीवन के अधिकार के उल्लंघन पर आर्थिक मुआवज़ा दिया गया।"
+    },
+    "conclusion": {
+     "en": "For a custodial death violating Article 21, the State is strictly liable and constitutional courts may award compensation directly.",
+     "hi": "अनुच्छेद 21 का उल्लंघन करने वाली हिरासत में मौत के लिए राज्य पूर्णतः उत्तरदायी है और संवैधानिक अदालतें सीधे मुआवज़ा दे सकती हैं।"
+    }
+   }
+  },
+  {
+   "caseName": "Prem Shankar Shukla v. Delhi Administration",
+   "caseNameHi": "प्रेम शंकर शुक्ला बनाम दिल्ली प्रशासन",
+   "citation": "(1980) 3 SCC 526",
+   "year": 1980,
+   "sections": [
+    "ART 21",
+    "ART 14",
+    "ART 19"
+   ],
+   "irrac": {
+    "issue": {
+     "en": "Is routine handcuffing of undertrials lawful?",
+     "hi": "विचाराधीन कैदियों को नियमित रूप से हथकड़ी लगाना क्या वैध है?"
+    },
+    "rule": {
+     "en": "No. Routine handcuffing of undertrials is inhuman and violates Articles 14, 19 and 21. The rule is freedom from handcuffs while being taken between prison and court; irons may be used only in exceptional cases, for reasons recorded, and under judicial supervision, never as a matter of routine or as punishment.",
+     "hi": "नहीं। विचाराधीन कैदियों को नियमित रूप से हथकड़ी लगाना अमानवीय है और अनुच्छेद 14, 19 व 21 का उल्लंघन है। नियम यह है कि कारागार से न्यायालय ले जाते समय कैदी हथकड़ी से मुक्त रहेगा; बेड़ियाँ केवल अपवादात्मक मामलों में, कारण दर्ज करके और न्यायिक निगरानी में ही लगाई जा सकती हैं — कभी भी रूटीन या दंड के रूप में नहीं।"
+    },
+    "reasoning": {
+     "en": "Restatement of the summary's own basis, nothing added: handcuffs as routine or punishment treat the undertrial inhumanly, so only a recorded, judicially supervised exception can justify irons.",
+     "hi": "सारांश के अपने आधार का ही पुनर्कथन, कुछ जोड़ा नहीं गया है: रूटीन या दंड के रूप में हथकड़ी विचाराधीन कैदी के साथ अमानवीय व्यवहार है, इसलिए केवल दर्ज, न्यायिक निगरानी वाला अपवाद ही बेड़ियों का औचित्य दे सकता है।"
+    },
+    "application": {
+     "en": "An undertrial taken between prison and court goes without handcuffs as the rule; irons follow only in an exceptional case with reasons recorded and judicial supervision.",
+     "hi": "कारागार से न्यायालय ले जाया जा रहा विचाराधीन कैदी नियमतः बिना हथकड़ी जाएगा; बेड़ियाँ केवल अपवादात्मक मामले में, कारण दर्ज करके और न्यायिक निगरानी में लगेंगी।"
+    },
+    "conclusion": {
+     "en": "Routine handcuffing of undertrials is prohibited; irons are only for recorded, judicially supervised exceptional cases.",
+     "hi": "विचाराधीन कैदियों को नियमित हथकड़ी लगाना निषिद्ध है; बेड़ियाँ केवल दर्ज, न्यायिक निगरानी वाले अपवादात्मक मामलों में हैं।"
+    }
+   }
+  },
+  {
+   "caseName": "Inder Mohan Goswami & Another v. State of Uttaranchal & Others",
+   "caseNameHi": "इन्दर मोहन गोस्वामी एवं अन्य बनाम उत्तरांचल राज्य एवं अन्य",
+   "citation": "(2007) 12 SCC 1",
+   "year": 2007,
+   "sections": [
+    "IPC 420",
+    "BNS 318",
+    "IPC 467",
+    "BNS 338",
+    "CRPC 482",
+    "BNSS 528"
+   ],
+   "irrac": {
+    "issue": {
+     "en": "When may a High Court quash criminal proceedings under Section 482 CrPC (now Section 528 BNSS)?",
+     "hi": "उच्च न्यायालय धारा 482 CrPC (अब धारा 528 BNSS) के तहत आपराधिक कार्यवाही कब रद्द कर सकता है?"
+    },
+    "rule": {
+     "en": "Sparingly, carefully and with caution: to give effect to a court order, to prevent abuse of the process of law, or to secure the ends of justice.",
+     "hi": "संयम, सावधानी और यदा-कदा ही: न्यायालय के आदेश को प्रभावी करने, विधि-प्रक्रिया के दुरुपयोग को रोकने या न्याय के उद्देश्य पूरे करने के लिए।"
+    },
+    "reasoning": {
+     "en": "Criminal process cannot be used as a shortcut to settle civil disputes or to wreak vengeance, so a proceeding that is only a civil dispute in criminal dress fails this test.",
+     "hi": "आपराधिक प्रक्रिया को दीवानी विवाद निपटाने या बदला लेने का हथियार नहीं बनाया जा सकता, इसलिए जो कार्यवाही केवल आपराधिक वेश में दीवानी विवाद हो, वह इस कसौटी पर खरी नहीं उतरती।"
+    },
+    "application": {
+     "en": "An FIR alleging cheating and forgery (Sections 420/467 IPC) that arose out of a purely civil land and power-of-attorney dispute was quashed.",
+     "hi": "भूमि और मुख्तारनामा के विशुद्ध दीवानी विवाद से उठी धोखाधड़ी व जालसाजी (धारा 420/467 IPC) की FIR रद्द कर दी गई।"
+    },
+    "conclusion": {
+     "en": "Inherent powers are exercised sparingly for the three stated purposes, and criminal process may not be used to settle a civil dispute or seek vengeance.",
+     "hi": "अन्तर्निहित शक्तियाँ तीन बताए उद्देश्यों के लिए संयम से प्रयोग होती हैं, और आपराधिक प्रक्रिया से दीवानी विवाद नहीं निपटाया जा सकता, न बदला लिया जा सकता है।"
+    }
+   }
+  },
+  {
+   "caseName": "Hardeep Singh v. State of Punjab",
+   "caseNameHi": "हरदीप सिंह बनाम पंजाब राज्य",
+   "citation": "(2014) 3 SCC 92",
+   "year": 2014,
+   "sections": [
+    "CRPC 319",
+    "BNSS 358"
+   ],
+   "irrac": {
+    "issue": {
+     "en": "During inquiry or trial, may a person who was not named in the FIR, not chargesheeted, or even discharged, be summoned as an additional accused?",
+     "hi": "जाँच या विचारण के दौरान क्या FIR में नाम न होने, आरोप-पत्र में न होने या बरी हो चुके व्यक्ति को भी अतिरिक्त अभियुक्त के रूप में बुलाया जा सकता है?"
+    },
+    "rule": {
+     "en": "Yes, on evidence emerging during trial, including examination-in-chief alone, but only on material stronger than a prima facie case, though short of what would guarantee conviction.",
+     "hi": "हाँ, विचारण के दौरान सामने आए साक्ष्य — केवल मुख्य परीक्षा के आधार पर भी — पर, परन्तु इसके लिए प्रथम दृष्टया मामले से अधिक मज़बूत सामग्री चाहिए, हालाँकि दोषसिद्धि की गारंटी जितनी नहीं।"
+    },
+    "reasoning": {
+     "en": "Restatement of the summary's own basis, nothing added: the threshold sits between a prima facie case and conviction-proof material, so summoning is neither routine nor a trial on the merits.",
+     "hi": "सारांश के अपने आधार का ही पुनर्कथन, कुछ जोड़ा नहीं गया है: कसौटी प्रथम दृष्टया मामले और दोषसिद्धि-योग्य सामग्री के बीच है, इसलिए बुलाना न तो रूटीन है, न गुण-दोष पर विचारण।"
+    },
+    "application": {
+     "en": "The trial court tests evidence emerging during trial, including examination-in-chief alone, against that middle threshold before summoning an additional accused.",
+     "hi": "विचारण न्यायालय विचारण के दौरान सामने आए साक्ष्य — केवल मुख्य परीक्षा सहित — को अतिरिक्त अभियुक्त बुलाने से पहले उसी मध्य कसौटी पर परखता है।"
+    },
+    "conclusion": {
+     "en": "A person not named, not chargesheeted, or even discharged may be summoned on trial evidence stronger than a prima facie case but short of conviction-guaranteeing proof.",
+     "hi": "FIR में नाम न होने, आरोप-पत्र में न होने या बरी हो चुके व्यक्ति को भी विचारण-साक्ष्य पर बुलाया जा सकता है, यदि सामग्री प्रथम दृष्टया से मज़बूत हो पर दोषसिद्धि की गारंटी जितनी न हो।"
+    }
+   }
   }
  ],
  "skipped": [

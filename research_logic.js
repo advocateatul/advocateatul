@@ -107,7 +107,12 @@
     { id: "quashing", en: "Quashing of FIR / Proceedings", hi: "FIR / कार्यवाही रद्द करना", sections: ["BNSS:528", "CRPC:482"] },
     { id: "maintenance", en: "Maintenance", hi: "भरण-पोषण", sections: ["BNSS:144", "CRPC:125"] },
     { id: "evidence", en: "Dying Declaration & Confession", hi: "मृत्युकालिक कथन और इकबालिया बयान", sections: ["BSA:26", "BSA:23", "IEA:32", "IEA:25"] },
-    { id: "cheque", en: "Cheque Bounce", hi: "चेक बाउंस", sections: ["NI:138", "NI:141"] }
+    { id: "cheque", en: "Cheque Bounce", hi: "चेक बाउंस", sections: ["NI:138", "NI:141"] },
+    { id: "anticipatory-bail", en: "Anticipatory Bail", hi: "अग्रिम ज़मानत", sections: ["BNSS:482", "CRPC:438"] },
+    { id: "domestic-violence", en: "Domestic Violence & Cruelty", hi: "घरेलू हिंसा और क्रूरता", sections: ["BNS:85", "IPC:498a"] },
+    { id: "cyber-crime", en: "Cyber Crime", hi: "साइबर अपराध", sections: ["IT:66a", "IT:66d", "IT:67", "IT:67b", "IT:79", "IT:80", "IT:85"] },
+    { id: "ndps", en: "NDPS — Drug Offences", hi: "NDPS — नशीले पदार्थों के अपराध", sections: ["NDPS:8", "NDPS:20", "NDPS:21", "NDPS:22", "NDPS:27a", "NDPS:36", "NDPS:36a", "NDPS:37", "NDPS:50", "NDPS:52", "NDPS:60", "NDPS:63"] },
+    { id: "pocso", en: "POCSO — Offences Against Children", hi: "POCSO — बच्चों के विरुद्ध अपराध", sections: ["POCSO:3", "POCSO:4", "POCSO:5", "POCSO:6", "POCSO:29", "POCSO:94"] }
   ];
   function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
   function lang() { return document.documentElement.lang === "hi" ? "hi" : "en"; }

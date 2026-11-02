@@ -1020,7 +1020,7 @@
     },
     {
       "caseName": "J.C. Chatterjee v. Sri Kishan Tandon",
-      "citation": "(1972) 3 SCC 717",
+      "citation": "(1972) 2 SCC 461",
       "court": {
         "en": "Supreme Court of India",
         "hi": "भारत का सर्वोच्च न्यायालय"
@@ -4621,25 +4621,6 @@
       ]
     },
     {
-      "caseName": "Danamma v. Amar Singh",
-      "citation": "(2018) 3 SCC 343",
-      "court": {
-        "en": "Supreme Court of India",
-        "hi": "भारत का सर्वोच्च न्यायालय"
-      },
-      "year": 2018,
-      "summary": {
-        "en": "Held daughters get coparcenary rights by birth even if born before 2005, regardless of the father's death before the amendment (partially overruled by Vineeta Sharma).",
-        "hi": "न्यायालय ने माना कि पुत्रियों को जन्म से ही सहदायिक (कोपार्सनरी) अधिकार प्राप्त होते हैं, चाहे वे 2005 के संशोधन से पहले जन्मी हों और चाहे पिता का संशोधन से पहले निधन हो गया हो। यह स्थिति बाद में विनीता शर्मा के निर्णय द्वारा आंशिक रूप से परिवर्तित की गई।"
-      },
-      "pdfUrl": "https://indiankanoon.org/search/?formInput=Danamma%20vs%20Amar",
-      "sourceName": "Indian Kanoon",
-      "caseNameHi": "दानम्मा बनाम अमर सिंह",
-      "sections": [
-        "Hindu Succession Act 6"
-      ]
-    },
-    {
       "caseName": "Dataram Singh v. State of Uttar Pradesh",
       "citation": "(2018) 3 SCC 22",
       "court": {
@@ -5928,8 +5909,8 @@
       "caseName": "Alphabet Inc. v. Competition Commission of India (Android case)",
       "citation": "NCLAT judgment dated 29 March 2023",
       "court": {
-        "en": "Supreme Court of India",
-        "hi": "भारत का सर्वोच्च न्यायालय"
+        "en": "National Company Law Appellate Tribunal",
+        "hi": "राष्ट्रीय कम्पनी विधि अपील न्यायाधिकरण"
       },
       "year": 2023,
       "summary": {
@@ -13825,6 +13806,444 @@
         "en": "The Allahabad High Court granted bail to an accused facing trial for rape under BNS Section 65(1) and offences under the POCSO Act, noting the delay of about sixteen days in lodging the FIR, the absence of any criminal history, and custody since February 2025, and relying on the Supreme Court's rulings in Satender Kumar Antil and Manish Sisodia that bail is not to be withheld as punishment.",
         "hi": "इलाहाबाद उच्च न्यायालय ने बीएनएस की धारा 65(1) के तहत बलात्कार और पॉक्सो अधिनियम के अपराधों के आरोपी को जमानत दी। न्यायालय ने प्राथमिकी दर्ज करने में लगभग सोलह दिन की देरी, किसी आपराधिक इतिहास के अभाव और फरवरी 2025 से हिरासत में रहने पर ध्यान दिया, और सतेंद्र कुमार अंतिल तथा मनीष सिसोदिया में सर्वोच्च न्यायालय के इस नियम का सहारा लिया कि जमानत को सजा के रूप में रोका नहीं जाना चाहिए।"
       }
+    },
+    {
+      "caseName": "Siddharam Satlingappa Mhetre v. State of Maharashtra",
+      "citation": "(2011) 1 SCC 694",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "year": 2010,
+      "summary": {
+        "en": "Anticipatory bail is not a short-lived shield that dies when the chargesheet arrives or the trial begins. The Court held that once granted, protection under Section 438 ordinarily runs till the end of the trial, and can be cut short only if the accused misuses it or fresh material emerges. It also laid down the factors a court must weigh — the gravity of the charge, the exact role of the accused, and whether the accusation looks like a tool to humiliate rather than a genuine case — instead of treating anticipatory bail as an exceptional favour.",
+        "hi": "अग्रिम जमानत कोई अल्पकालिक ढाल नहीं है जो आरोपपत्र आते ही या विचारण शुरू होते ही समाप्त हो जाए। न्यायालय ने कहा कि धारा 438 के तहत एक बार दी गई सुरक्षा सामान्यतः विचारण के अंत तक चलती है, और इसे तभी छीना जा सकता है जब आरोपी इसका दुरुपयोग करे या कोई नई सामग्री सामने आए। न्यायालय ने वे बातें भी तय कीं जिन पर अदालत को विचार करना चाहिए — आरोप की गंभीरता, आरोपी की सटीक भूमिका, और क्या आरोप अपमानित करने का साधन लगता है या असली मामला है — न कि अग्रिम जमानत को कोई असाधारण कृपा मानना।"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/1108032/",
+      "sourceName": "Indian Kanoon",
+      "caseNameHi": "सिद्धाराम सतलिंगप्पा म्हेत्रे बनाम महाराष्ट्र राज्य",
+      "sections": [
+        "CRPC 438",
+        "BNSS 482",
+        "ART 21"
+      ]
+    },
+    {
+      "caseName": "Bhadresh Bipinbhai Sheth v. State of Gujarat",
+      "citation": "(2016) 1 SCC 152",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "year": 2015,
+      "summary": {
+        "en": "A belated, serious charge added years after the first complaint does not by itself justify cancelling anticipatory bail. The Sessions Court's grant of anticipatory bail was restored because the accused had obeyed its conditions, there was no material showing misuse or a risk of absconding, and the delay in adding the rape charge told against the prosecution's urgency. The judgment stresses that the discretion under Section 438 must be exercised on the material on record, not on the gravity of the label alone.",
+        "hi": "पहली शिकायत के वर्षों बाद जोड़ा गया कोई विलंबित गंभीर आरोप अपने आप अग्रिम जमानत रद्द करने का आधार नहीं बनता। सत्र न्यायालय की दी हुई अग्रिम जमानत इसलिए बहाल की गई क्योंकि आरोपी ने उसकी शर्तों का पालन किया था, दुरुपयोग या फरार होने के जोखिम की कोई सामग्री नहीं थी, और बलात्कार का आरोप जोड़ने में हुई देरी अभियोजन की तात्कालिकता के विरुद्ध जाती थी। यह फैसला इस बात पर ज़ोर देता है कि धारा 438 के तहत विवेक का प्रयोग रिकॉर्ड की सामग्री पर होना चाहिए, न कि केवल आरोप के नाम की गंभीरता पर।"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/180463386/",
+      "sourceName": "Indian Kanoon",
+      "caseNameHi": "भद्रेश बिपिनभाई शेठ बनाम गुजरात राज्य",
+      "sections": [
+        "CRPC 438",
+        "BNSS 482",
+        "IPC 376",
+        "BNS 64",
+        "ART 21"
+      ]
+    },
+    {
+      "caseName": "P. Chidambaram v. Directorate of Enforcement",
+      "citation": "(2019) 9 SCC 24",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "year": 2019,
+      "summary": {
+        "en": "In economic offences, anticipatory bail remains an extraordinary remedy, not a routine one. The Court refused pre-arrest bail in the INX Media money-laundering case, holding that the power under Section 438 must be used sparingly, after weighing the gravity of the accusation, the stage of investigation, and the risk of the accused fleeing or hampering the probe. It also faulted the High Court for copying the investigating agency's note verbatim instead of applying its own mind, though that error did not change the outcome.",
+        "hi": "आर्थिक अपराधों में अग्रिम जमानत अब भी एक असाधारण उपाय है, कोई सामान्य राहत नहीं। न्यायालय ने INX मीडिया धन-शोधन मामले में गिरफ्तारी-पूर्व जमानत देने से इनकार किया और कहा कि धारा 438 की शक्ति का प्रयोग संयम से होना चाहिए — आरोप की गंभीरता, जांच की अवस्था और आरोपी के फरार होने या जांच में बाधा डालने के जोखिम को तौलकर। न्यायालय ने उच्च न्यायालय की इस गलती पर भी टिप्पणी की कि उसने जांच एजेंसी के नोट को हूबहू उतार लिया था, अपना विवेक नहीं लगाया — हालांकि इस गलती से नतीजा नहीं बदला।"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/90251163/",
+      "sourceName": "Indian Kanoon",
+      "caseNameHi": "पी. चिदंबरम बनाम प्रवर्तन निदेशालय",
+      "sections": [
+        "CRPC 438",
+        "BNSS 482",
+        "PMLA 3",
+        "PMLA 4"
+      ]
+    },
+    {
+      "caseName": "Nimmagadda Prasad v. Central Bureau of Investigation",
+      "citation": "(2013) 7 SCC 466",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "year": 2013,
+      "summary": {
+        "en": "Bail in a big economic-offence case cannot be decided on the size of the scam alone. The Court refused bail at that stage because the investigation was still incomplete, the material collected so far pointed to a deep-rooted conspiracy, and releasing the accused then could have affected the probe. At the same time it left the door open: once the final report was filed, the accused could renew the request before the trial court, which would decide it afresh on its own merits.",
+        "hi": "किसी बड़े आर्थिक अपराध के मामले में जमानत केवल घोटाले के आकार पर तय नहीं हो सकती। न्यायालय ने उस अवस्था में जमानत इसलिए नहीं दी क्योंकि जांच अभी अधूरी थी, अब तक मिली सामग्री गहरे षड्यंत्र की ओर इशारा करती थी, और आरोपी को तब छोड़ना जांच को प्रभावित कर सकता था। साथ ही न्यायालय ने दरवाज़ा खुला रखा: अंतिम रिपोर्ट दाखिल होने के बाद आरोपी विचारण न्यायालय के समक्ष नया अनुरोध कर सकता था, जो उसे अपने गुण-दोष पर नए सिरे से तय करेगा।"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/40654916/",
+      "sourceName": "Indian Kanoon",
+      "caseNameHi": "निम्मगड्डा प्रसाद बनाम केंद्रीय अन्वेषण ब्यूरो",
+      "sections": [
+        "CRPC 439",
+        "BNSS 483",
+        "IPC 120-B",
+        "BNS 61",
+        "IPC 420",
+        "BNS 318"
+      ]
+    },
+    {
+      "caseName": "State of Rajasthan v. Balchand",
+      "citation": "(1977) 4 SCC 308",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "year": 1977,
+      "summary": {
+        "en": "This short order gave Indian bail law its most quoted line: bail is the rule and jail is the exception. A young man who had been on bail through the trial, had not misused it, and had surrendered when the State appealed against his acquittal, was enlarged on bail pending the appeal. Jail before the final verdict, the Court said, is justified only where there is reason to fear flight from justice, tampering, or repetition of offences — not by the gravity of the charge alone.",
+        "hi": "इस छोटे से आदेश ने भारतीय जमानत विधि की सबसे प्रसिद्ध पंक्ति दी: जमानत नियम है, जेल अपवाद। एक युवक, जो विचारण के दौरान जमानत पर था, जिसने इसका दुरुपयोग नहीं किया था, और जिसने दोषमुक्ति के विरुद्ध राज्य की अपील पर आत्मसमर्पण कर दिया था, उसे अपील लंबित रहने तक जमानत पर छोड़ दिया गया। अंतिम फैसले से पहले जेल, न्यायालय ने कहा, तभी उचित है जब न्याय से भागने, छेड़छाड़ या अपराध दोहराने का कारण हो — केवल आरोप की गंभीरता से नहीं।"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/8258/",
+      "sourceName": "Indian Kanoon",
+      "caseNameHi": "राजस्थान राज्य बनाम बालचंद",
+      "sections": [
+        "ART 21"
+      ]
+    },
+    {
+      "caseName": "Gudikanti Narasimhulu v. Public Prosecutor",
+      "citation": "(1978) 1 SCC 240",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "year": 1977,
+      "summary": {
+        "en": "Bail is never a punishment in advance, and refusing it must rest on judicial reasons, not on a hunch. The Court enlarged on bail men convicted on appeal by the High Court after acquittal at trial, noting that they had honoured bail earlier, had not abused the court's trust, and faced years of waiting before their appeal could be heard. The order explains why the wide power under Section 439 is not fenced in by the restrictions of Section 437, and why liberty must be weighed together with public safety and the burden on the public purse.",
+        "hi": "जमानत कभी अग्रिम सज़ा नहीं होती, और उसे नकारना न्यायिक कारणों पर टिका होना चाहिए, किसी अंदाज़े पर नहीं। न्यायालय ने उन लोगों को जमानत पर छोड़ा जिन्हें विचारण में दोषमुक्त किया गया था पर उच्च न्यायालय ने अपील में दोषी ठहराया था — यह देखते हुए कि उन्होंने पहले जमानत का सम्मान किया था, न्यायालय के भरोसे का दुरुपयोग नहीं किया था, और उनकी अपील सुनने में वर्षों लग सकते थे। यह आदेश समझाता है कि धारा 439 की व्यापक शक्ति धारा 437 की बंदिशों से बंधी नहीं है, और स्वतंत्रता को सार्वजनिक सुरक्षा तथा राजकोष के बोझ के साथ तौलना चाहिए।"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/656741/",
+      "sourceName": "Indian Kanoon",
+      "caseNameHi": "गुडिकांति नरसिम्हुलु बनाम लोक अभियोजक",
+      "sections": [
+        "ART 21",
+        "CRPC 437",
+        "BNSS 480",
+        "CRPC 439",
+        "BNSS 483"
+      ]
+    },
+    {
+      "caseName": "State (Delhi Administration) v. Sanjay Gandhi",
+      "citation": "(1978) 1 SCC 411",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "year": 1978,
+      "summary": {
+        "en": "Refusing bail and cancelling bail once granted are two very different exercises. Cancellation, the Court held, needs supervening circumstances — material showing, on a balance of probabilities, that the accused has interfered with witnesses or otherwise made a fair trial impossible. On the evidence, including statements of approvers and witness affidavits, the Court found such interference proved and directed custody, while making clear that the power under Section 439(2) must be used with care and circumspection.",
+        "hi": "जमानत न देना और एक बार दी गई जमानत रद्द करना दो बिल्कुल अलग काम हैं। न्यायालय ने कहा कि रद्दीकरण के लिए बाद की परिस्थितियां चाहिए — ऐसी सामग्री जो संभावनाओं के संतुलन पर दिखाए कि आरोपी ने गवाहों से छेड़छाड़ की है या निष्पक्ष विचारण को असंभव बना दिया है। अनुमोदकों के बयानों और गवाहों के शपथपत्रों सहित साक्ष्य पर न्यायालय ने ऐसा हस्तक्षेप सिद्ध पाया और हिरासत का निर्देश दिया, साथ ही यह स्पष्ट किया कि धारा 439(2) की शक्ति का प्रयोग सावधानी और सतर्कता से होना चाहिए।"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/704992/",
+      "sourceName": "Indian Kanoon",
+      "caseNameHi": "राज्य (दिल्ली प्रशासन) बनाम संजय गांधी",
+      "sections": [
+        "CRPC 439",
+        "BNSS 483",
+        "CRPC 437",
+        "BNSS 480"
+      ]
+    },
+    {
+      "caseName": "Pepsi Foods Ltd. v. Special Judicial Magistrate",
+      "citation": "(1998) 5 SCC 749",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "year": 1997,
+      "summary": {
+        "en": "Summoning an accused is a serious matter, and criminal law cannot be set in motion as a matter of course. A Magistrate who takes cognizance on a complaint must examine the complainant and witnesses, look at the oral and documentary material, and pass an order that shows application of mind — not a mechanical summoning order. The Court also restated when the High Court may quash proceedings under Section 482: to prevent abuse of process or to secure the ends of justice.",
+        "hi": "किसी आरोपी को बुलाना एक गंभीर बात है, और आपराधिक कानून को यंत्रवत चालू नहीं किया जा सकता। शिकायत पर संज्ञान लेने वाले मजिस्ट्रेट को शिकायतकर्ता और गवाहों की जांच करनी चाहिए, मौखिक और दस्तावेज़ी सामग्री देखनी चाहिए, और ऐसा आदेश देना चाहिए जिसमें विवेक का प्रयोग दिखे — कोई यांत्रिक तलबी आदेश नहीं। न्यायालय ने यह भी दोहराया कि उच्च न्यायालय धारा 482 के तहत कार्यवाही कब रद्द कर सकता है: प्रक्रिया के दुरुपयोग को रोकने या न्याय के उद्देश्यों को सुरक्षित करने के लिए।"
+      },
+      "pdfUrl": "https://indiankanoon.org/search/?formInput=Pepsi+Foods+Ltd.+v.+Special+Judicial+Magistrate",
+      "sourceName": "Indian Kanoon",
+      "caseNameHi": "पेप्सी फूड्स लिमिटेड बनाम विशेष न्यायिक मजिस्ट्रेट",
+      "sections": [
+        "CRPC 482",
+        "BNSS 528",
+        "ART 226"
+      ]
+    },
+    {
+      "caseName": "Zandu Pharmaceutical Works Ltd. v. Md. Sharaful Haque",
+      "citation": "(2005) 1 SCC 122",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "year": 2004,
+      "summary": {
+        "en": "The power to quash under Section 482 is wide but must be used sparingly, and the High Court must not turn itself into a trial court. Where the complaint, taken at face value, discloses no offence, or is frivolous, vexatious or oppressive, quashing is justified; but the court should not weigh whether the evidence is reliable — that is the trial judge's job. Here the complaint was also time-barred: cognizance of an offence punishable with three years could not be taken years after the limitation period had run out.",
+        "hi": "धारा 482 के तहत रद्द करने की शक्ति व्यापक है, पर इसका प्रयोग संयम से होना चाहिए, और उच्च न्यायालय को स्वयं विचारण न्यायालय नहीं बन जाना चाहिए। जहां शिकायत, जैसी है वैसी लेने पर, कोई अपराध प्रकट न करे, या तुच्छ, परेशान करने वाली या दमनकारी हो, वहां रद्दीकरण उचित है; पर न्यायालय को यह नहीं तौलना चाहिए कि साक्ष्य विश्वसनीय है या नहीं — यह विचारण न्यायाधीश का काम है। यहां शिकायत समय-सीमा से भी बाहर थी: तीन वर्ष तक दंडनीय अपराध का संज्ञान सीमा अवधि बीतने के वर्षों बाद नहीं लिया जा सकता था।"
+      },
+      "pdfUrl": "https://indiankanoon.org/search/?formInput=Zandu+Pharmaceutical+Works+Ltd.+v.+Md.+Sharaful+Haque",
+      "sourceName": "Indian Kanoon",
+      "caseNameHi": "झांडू फार्मास्युटिकल वर्क्स लिमिटेड बनाम मो. शरफुल हक",
+      "sections": [
+        "CRPC 482",
+        "BNSS 528",
+        "IPC 406",
+        "BNS 316",
+        "CRPC 468",
+        "BNSS 514"
+      ]
+    },
+    {
+      "caseName": "Indian Oil Corporation v. NEPC India Ltd.",
+      "citation": "(2006) 6 SCC 736",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "year": 2006,
+      "summary": {
+        "en": "A broken promise is not automatically cheating. For Section 420, the complainant must show dishonest or fraudulent intention at the very time the promise was made; a later failure to keep it, without that initial dishonesty, does not make a criminal case out of a civil dispute. The Court quashed the cheating proceedings where the record showed duties had in fact been paid and no dishonest intention existed at the inception.",
+        "hi": "वादा टूटना अपने आप ठगी नहीं होता। धारा 420 के लिए शिकायतकर्ता को यह दिखाना होगा कि वादा करते समय ही बेईमानी या कपटपूर्ण इरादा था; बाद में वादा न निभाना, बिना उस शुरुआती बेईमानी के, किसी दीवानी विवाद को आपराधिक मामला नहीं बना देता। न्यायालय ने ठगी की कार्यवाही वहां रद्द कर दी जहां रिकॉर्ड से दिखा कि शुल्क वास्तव में चुका दिए गए थे और शुरुआत में कोई बेईमानी का इरादा नहीं था।"
+      },
+      "pdfUrl": "https://indiankanoon.org/search/?formInput=Indian+Oil+Corporation+v.+NEPC+India+Ltd.",
+      "sourceName": "Indian Kanoon",
+      "caseNameHi": "इंडियन ऑयल कॉर्पोरेशन बनाम एनईपीसी इंडिया लिमिटेड",
+      "sections": [
+        "CRPC 482",
+        "BNSS 528",
+        "IPC 420",
+        "BNS 318"
+      ]
+    },
+    {
+      "caseName": "Tofan Singh v. State of Tamil Nadu",
+      "citation": "(2021) 4 SCC 1",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "year": 2020,
+      "summary": {
+        "en": "A statement recorded under Section 67 of the NDPS Act cannot be used as a confession to convict. Officers empowered under Sections 42 and 53 of the Act are 'police officers' for Section 25 of the Evidence Act, so a confessional statement made to them is barred; and Section 67 itself only empowers the officer to call for information, not to record a confession. Such a statement may at most be used within the limits of Section 27, where it leads to discovery of a fact.",
+        "hi": "एनडीपीएस अधिनियम की धारा 67 के तहत दर्ज बयान को दोषसिद्धि के लिए स्वीकारोक्ति की तरह इस्तेमाल नहीं किया जा सकता। अधिनियम की धारा 42 और 53 के तहत अधिकार प्राप्त अधिकारी साक्ष्य अधिनियम की धारा 25 के अर्थ में 'पुलिस अधिकारी' हैं, इसलिए उन्हें दी गई स्वीकारोक्ति वर्जित है; और धारा 67 स्वयं अधिकारी को केवल जानकारी मांगने का अधिकार देती है, स्वीकारोक्ति दर्ज करने का नहीं। ऐसा बयान अधिक से अधिक धारा 27 की सीमा में इस्तेमाल हो सकता है, जहां वह किसी तथ्य की खोज तक ले जाए।"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/143202244/",
+      "sourceName": "Indian Kanoon",
+      "caseNameHi": "तोफ़ान सिंह बनाम तमिलनाडु राज्य",
+      "sections": [
+        "NDPS 67",
+        "NDPS 42",
+        "IEA 25",
+        "BSA 23"
+      ]
+    },
+    {
+      "caseName": "State of Punjab v. Balbir Singh",
+      "citation": "(1994) 3 SCC 299",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "year": 1994,
+      "summary": {
+        "en": "Section 50 of the NDPS Act is a mandatory safeguard, not a formality. Before searching a person, the empowered officer must inform him of his right to be searched before the nearest Gazetted Officer or Magistrate, and if he so requires, take him there. Failure to give that information, and to act on the request, strikes at the prosecution case and can vitiate the trial — because the provision exists precisely to protect innocent persons against planted or fabricated recoveries.",
+        "hi": "एनडीपीएस अधिनियम की धारा 50 एक अनिवार्य सुरक्षा है, कोई औपचारिकता नहीं। किसी व्यक्ति की तलाशी लेने से पहले अधिकार प्राप्त अधिकारी को उसे यह अधिकार बताना होगा कि वह निकटतम राजपत्रित अधिकारी या मजिस्ट्रेट के समक्ष तलाशी की मांग कर सकता है, और यदि वह ऐसा कहे तो उसे वहां ले जाना होगा। यह जानकारी न देना और अनुरोध पर अमल न करना अभियोजन के मामले को चोट पहुंचाता है और विचारण को दूषित कर सकता है — क्योंकि यह प्रावधान निर्दोष लोगों को रोपित या गढ़ी बरामदगी से बचाने के लिए ही है।"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/795643/",
+      "sourceName": "Indian Kanoon",
+      "caseNameHi": "पंजाब राज्य बनाम बलबीर सिंह",
+      "sections": [
+        "NDPS 50"
+      ]
+    },
+    {
+      "caseName": "Subhash Kashinath Mahajan v. State of Maharashtra",
+      "citation": "(2018) 6 SCC 454",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "year": 2018,
+      "summary": {
+        "en": "Section 18 of the Atrocities Act does not impose an absolute bar on anticipatory bail. Where no prima facie case is made out, or judicial scrutiny shows the complaint to be mala fide, the exclusion of Section 438 does not apply, and the court may protect liberty under Article 21. The Court also laid down safeguards against false implication — a preliminary enquiry before arrest and approval before arresting a public servant — while stressing that the Act's protection for genuine victims remains untouched.",
+        "hi": "अत्याचार अधिनियम की धारा 18 अग्रिम जमानत पर पूर्ण रोक नहीं लगाती। जहां प्रथम दृष्टया मामला ही न बने, या न्यायिक जांच से शिकायत दुर्भावनापूर्ण दिखे, वहां धारा 438 का अपवर्जन लागू नहीं होता, और न्यायालय अनुच्छेद 21 के तहत स्वतंत्रता की रक्षा कर सकता है। न्यायालय ने झूठे फंसाने के विरुद्ध सुरक्षा भी तय की — गिरफ्तारी से पहले प्रारंभिक जांच और लोक सेवक की गिरफ्तारी से पहले अनुमोदन — साथ ही यह स्पष्ट किया कि असली पीड़ितों के लिए अधिनियम की सुरक्षा अछूती रहती है।"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/108728085/",
+      "sourceName": "Indian Kanoon",
+      "caseNameHi": "सुभाष काशीनाथ महाजन बनाम महाराष्ट्र राज्य",
+      "sections": [
+        "SC/ST Act 18",
+        "CRPC 438",
+        "BNSS 482",
+        "ART 21"
+      ]
+    },
+    {
+      "caseName": "Union of India v. State of Maharashtra",
+      "citation": "(2020) 4 SCC 761",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "year": 2019,
+      "summary": {
+        "en": "On review, the Court recalled the two most contested directions from the Mahajan judgment — the preliminary enquiry before registering an FIR and prior approval before arresting a public servant — because Parliament had since inserted Section 18A, which expressly bars any preliminary enquiry or approval for arrest under the Act. What survived is the core holding: where the complaint discloses no prima facie offence under the Act, the Section 18 bar on anticipatory bail is not attracted, and a false, unsubstantiated FIR can still be quashed under Section 482.",
+        "hi": "पुनर्विलोकन पर न्यायालय ने महाजन फैसले के दो सबसे विवादित निर्देश वापस ले लिए — FIR दर्ज करने से पहले प्रारंभिक जांच और लोक सेवक की गिरफ्तारी से पहले पूर्व अनुमोदन — क्योंकि संसद ने तब तक धारा 18A जोड़ दी थी, जो अधिनियम के तहत गिरफ्तारी के लिए किसी भी प्रारंभिक जांच या अनुमोदन को स्पष्ट रूप से वर्जित करती है। जो बात बची वह मूल सिद्धांत है: जहां शिकायत में अधिनियम के तहत प्रथम दृष्टया अपराध ही प्रकट न हो, वहां धारा 18 की अग्रिम जमानत पर रोक लागू नहीं होती, और झूठी, अपुष्ट FIR को धारा 482 के तहत अब भी रद्द किया जा सकता है।"
+      },
+      "pdfUrl": "https://indiankanoon.org/search/?formInput=Union+of+India+v.+State+of+Maharashtra+SC+ST+review",
+      "sourceName": "Indian Kanoon",
+      "caseNameHi": "भारत संघ बनाम महाराष्ट्र राज्य",
+      "sections": [
+        "SC/ST Act 18",
+        "SC/ST Act 18A",
+        "CRPC 438",
+        "BNSS 482"
+      ]
+    },
+    {
+      "caseName": "Hari Ram v. State of Rajasthan",
+      "citation": "(2009) 13 SCC 211",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "year": 2009,
+      "summary": {
+        "en": "Juvenility is judged on the date of the offence, not on the date the court gets around to deciding the claim. The 2006 amendments to the Juvenile Justice Act, 2000 made the under-18 definition apply to all pending cases, so a person who was under 18 when the offence was committed — even if he had crossed 18 by the time the 2000 Act came into force — must be treated as a juvenile, with conviction maintained but sentence set aside and the case sent to the Juvenile Justice Board.",
+        "hi": "किशोर होना अपराध की तारीख पर तय होता है, न कि उस तारीख पर जब न्यायालय दावे पर फैसला करे। किशोर न्याय अधिनियम, 2000 में 2006 के संशोधनों ने 18 वर्ष से कम की परिभाषा सभी लंबित मामलों पर लागू कर दी, इसलिए जो व्यक्ति अपराध के समय 18 से कम था — भले ही 2000 का अधिनियम लागू होने तक वह 18 पार कर चुका हो — उसे किशोर ही माना जाएगा, दोषसिद्धि बनी रहेगी पर दंड रद्द करके मामला किशोर न्याय बोर्ड को भेजा जाएगा।"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/1589001/",
+      "sourceName": "Indian Kanoon",
+      "caseNameHi": "हरि राम बनाम राजस्थान राज्य",
+      "sections": [
+        "JJ Act 20",
+        "JJ Act 7A"
+      ]
+    },
+    {
+      "caseName": "Father Thomas v. State of U.P. and Another",
+      "citation": "2011 (2) ALJ 217",
+      "court": {
+        "en": "Allahabad High Court",
+        "hi": "इलाहाबाद उच्च न्यायालय"
+      },
+      "year": 2010,
+      "summary": {
+        "en": "A proposed accused cannot file a revision against a Magistrate's order directing the police to register an FIR and investigate under Section 156(3). The Full Bench held that such an order is interlocutory: it decides nothing about guilt, and the person against whom neither cognizance has been taken nor process issued has no locus to challenge it. The remedy of revision is barred by Section 397(2), and the same order cannot be challenged even in a writ petition.",
+        "hi": "कोई प्रस्तावित आरोपी मजिस्ट्रेट के उस आदेश के विरुद्ध पुनरीक्षण नहीं कर सकता जिसमें पुलिस को धारा 156(3) के तहत FIR दर्ज करने और जांच का निर्देश दिया गया हो। पूर्ण पीठ ने कहा कि ऐसा आदेश अंतरिम (इंटरलोक्यूटरी) है: यह दोष के बारे में कुछ तय नहीं करता, और जिस व्यक्ति के विरुद्ध न संज्ञान लिया गया हो न प्रक्रिया जारी हुई हो, उसे इसे चुनौती देने का अधिकार नहीं है। धारा 397(2) से पुनरीक्षण का उपाय वर्जित है, और उसी आदेश को रिट याचिका में भी चुनौती नहीं दी जा सकती।"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/77085610/",
+      "sourceName": "Indian Kanoon",
+      "caseNameHi": "फादर थॉमस बनाम उत्तर प्रदेश राज्य व अन्य",
+      "sections": [
+        "CRPC 397",
+        "BNSS 438",
+        "CRPC 156",
+        "BNSS 175"
+      ]
+    },
+    {
+      "caseName": "Nahni and 5 Others v. State of U.P. and Another",
+      "citation": "2025",
+      "court": {
+        "en": "Allahabad High Court",
+        "hi": "इलाहाबाद उच्च न्यायालय"
+      },
+      "year": 2025,
+      "summary": {
+        "en": "Following the Full Bench law in Father Thomas, the Court dismissed a criminal revision by proposed accused against a Magistrate's order directing registration of an FIR under Section 156(3). Because the order merely sets investigation in motion and is interlocutory, and because no cognizance had been taken and no process issued against the revisionists, the revision was not maintainable — and the Court did not go into the merits of the allegations at all.",
+        "hi": "फादर थॉमस के पूर्ण पीठ के कानून का अनुसरण करते हुए न्यायालय ने प्रस्तावित आरोपियों की वह आपराधिक पुनरीक्षण याचिका खारिज कर दी जो मजिस्ट्रेट के धारा 156(3) के तहत FIR दर्ज करने के निर्देश के विरुद्ध थी। क्योंकि वह आदेश केवल जांच शुरू करता है और अंतरिम है, और क्योंकि पुनरीक्षणकर्ताओं के विरुद्ध न संज्ञान लिया गया था न प्रक्रिया जारी हुई थी, पुनरीक्षण पोषणीय नहीं था — और न्यायालय ने आरोपों के गुण-दोष में बिल्कुल प्रवेश नहीं किया।"
+      },
+      "pdfUrl": "https://indiankanoon.org/search/?formInput=Nahni+and+5+Others+v.+State+of+U.P.",
+      "sourceName": "Indian Kanoon",
+      "caseNameHi": "नहनी व 5 अन्य बनाम उत्तर प्रदेश राज्य व अन्य",
+      "sections": [
+        "CRPC 397",
+        "BNSS 438",
+        "CRPC 156",
+        "BNSS 175"
+      ]
+    },
+    {
+      "caseName": "Frank Vitus v. Narcotics Control Bureau",
+      "citation": "2024 INSC 479",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "year": 2024,
+      "summary": {
+        "en": "Bail conditions must secure the accused's presence at trial — nothing more, and nothing that the accused cannot possibly fulfil. The Court deleted two conditions imposed on a Nigerian national on NDPS bail: a certificate of assurance from his High Commission, which no embassy is obliged to give, and a Google Maps PIN drop, which amounts to constant surveillance without enabling real tracking and violates privacy under Article 21. A condition the accused has no control over, the Court said, can turn into a disguised denial of bail.",
+        "hi": "जमानत की शर्तें केवल आरोपी की विचारण में उपस्थिति सुनिश्चित करें — इससे अधिक कुछ नहीं, और ऐसा कुछ भी नहीं जिसे आरोपी पूरा ही न कर सके। न्यायालय ने एनडीपीएस जमानत पर एक नाइजीरियाई नागरिक पर लगाई दो शर्तें हटा दीं: उच्चायोग से आश्वासन प्रमाणपत्र, जो देने के लिए कोई दूतावास बाध्य नहीं है, और गूगल मैप्स पर पिन डालना, जो वास्तविक ट्रैकिंग में मदद किए बिना निरंतर निगरानी बन जाता है और अनुच्छेद 21 के तहत निजता का उल्लंघन करता है। न्यायालय ने कहा कि जिस शर्त पर आरोपी का कोई नियंत्रण ही न हो, वह जमानत से छिपा इनकार बन सकती है।"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/95281330/",
+      "sourceName": "Indian Kanoon",
+      "caseNameHi": "फ्रैंक वाइटस बनाम स्वापक नियंत्रण ब्यूरो",
+      "sections": [
+        "CRPC 439",
+        "BNSS 483",
+        "NDPS 8",
+        "NDPS 22",
+        "NDPS 23",
+        "NDPS 29",
+        "ART 21"
+      ]
+    },
+    {
+      "caseName": "Javed Gulam Nabi Shaikh v. State of Maharashtra",
+      "citation": "2024 INSC 645",
+      "court": {
+        "en": "Supreme Court of India",
+        "hi": "भारत का सर्वोच्च न्यायालय"
+      },
+      "year": 2024,
+      "summary": {
+        "en": "Even the strict bail bar in Section 43D(5) of UAPA melts where the trial is nowhere near concluding and incarceration has already consumed years. The appellant had spent over four years in custody, charges had not even been framed, and the prosecution proposed to examine some eighty witnesses. Holding that bail cannot be withheld as punishment and that the right to speedy trial under Article 21 survives special statutes, the Court granted bail and directed day-to-day trial.",
+        "hi": "यूएपीए की धारा 43D(5) की कड़ी जमानत-रोक भी वहां पिघल जाती है जहां विचारण समाप्त होने के आसपास भी न हो और हिरासत में ही वर्षों बीत गए हों। अपीलकर्ता चार वर्ष से अधिक हिरासत में था, आरोप तक तय नहीं हुए थे, और अभियोजन लगभग अस्सी गवाहों की जांच का प्रस्ताव रखता था। यह मानते हुए कि जमानत को सज़ा की तरह रोका नहीं जा सकता और अनुच्छेद 21 के तहत शीघ्र विचारण का अधिकार विशेष कानूनों के बावजूद जीवित रहता है, न्यायालय ने जमानत दी और दिन-प्रतिदिन विचारण का निर्देश दिया।"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/167668712/",
+      "sourceName": "Indian Kanoon",
+      "caseNameHi": "जावेद गुलाम नबी शेख बनाम महाराष्ट्र राज्य",
+      "sections": [
+        "ART 21",
+        "UAPA 43D(5)"
+      ]
+    },
+    {
+      "caseName": "Niranjan Singh v. State of U.P.",
+      "citation": "2025:AHC:31860",
+      "court": {
+        "en": "Allahabad High Court",
+        "hi": "इलाहाबाद उच्च न्यायालय"
+      },
+      "year": 2025,
+      "summary": {
+        "en": "A Gangsters Act case built on a single gang-chart entry, in which the accused is already on bail, calls for bail rather than continued custody. The Court allowed bail under Section 483 BNSS, weighing Section 19(4) of the U.P. Gangsters Act — which requires the Public Prosecutor to be heard and reasonable grounds for believing the accused is not guilty and will not re-offend — together with the Article 21 mandate, the period already spent in jail since October 2024, and the absence of any gang membership material beyond that one case.",
+        "hi": "गैंग-चार्ट की एकल प्रविष्टि पर बना गुण्डा अधिनियम का मामला, जिसमें आरोपी पहले से जमानत पर हो, निरंतर हिरासत के बजाय जमानत मांगता है। न्यायालय ने धारा 483 BNSS के तहत जमानत दी — उत्तर प्रदेश गुण्डा अधिनियम की धारा 19(4) को तौलकर, जिसमें लोक अभियोजक को सुनना और यह युक्तियुक्त आधार होना ज़रूरी है कि आरोपी दोषी नहीं है और पुनः अपराध नहीं करेगा — साथ ही अनुच्छेद 21 के आदेश, अक्टूबर 2024 से बिताई हिरासत की अवधि, और उस एक मामले से परे गिरोह-सदस्यता की किसी सामग्री के अभाव को देखते हुए।"
+      },
+      "pdfUrl": "https://indiankanoon.org/doc/136399766/",
+      "sourceName": "Indian Kanoon",
+      "caseNameHi": "निरंजन सिंह बनाम उत्तर प्रदेश राज्य",
+      "sections": [
+        "UP Gangsters Act 3",
+        "UP Gangsters Act 19",
+        "CRPC 439",
+        "BNSS 483",
+        "ART 21"
+      ]
     }
   ]
 }
