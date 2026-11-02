@@ -257,7 +257,7 @@
     .nav-more-btn:hover { background: rgba(0,0,0,.07); color: #1e1e1e; }
     html[data-theme="dark"] .nav-more-btn:hover { background: rgba(255,255,255,.12); color: #F5F5F5; }
     .nav-more-menu { position: absolute; top: calc(100% + 8px); right: 0; min-width: 200px; max-width: calc(100vw - 24px); max-height: min(70vh, 420px); overflow-y: auto; overflow-x: hidden; background: #f9fcff; color: #1e1e1e; border: 1px solid rgba(0,0,0,.12); border-radius: 12px; padding: 8px; z-index: 200; box-shadow: 0 18px 50px rgba(0,0,0,.18); scrollbar-width: thin; scrollbar-color: rgba(0,0,0,.35) transparent; }
-    @media (max-width: 1150px) { .nav-more-menu { left: 0; right: auto; } }
+    @media (max-width: 1150px) { .nav-more-menu { left: auto; right: 0; } }
     .nav-more-menu::-webkit-scrollbar { width: 8px; }
     .nav-more-menu::-webkit-scrollbar-track { background: transparent; }
     .nav-more-menu::-webkit-scrollbar-thumb { background: linear-gradient(180deg, rgba(0,0,0,.4), rgba(0,0,0,.3)); border-radius: 8px; border: 2px solid transparent; background-clip: padding-box; }
@@ -1023,11 +1023,11 @@
       #navHamburger { display: none !important; }
       nav { display: contents; }
       .language-switch { order: 1; margin-left: auto; }
-      #themeToggle { order: 6; margin-left: auto; }
+      #themeToggle { order: 6; }
       .nav-strip { order: 5; flex: 1 1 auto; min-width: 0; display: flex; align-items: center; gap: 18px; overflow-x: auto; padding: 6px 2px 10px; scrollbar-width: none; -webkit-mask-image: linear-gradient(to right, #1e1e1e 93%, transparent 100%); mask-image: linear-gradient(to right, #1e1e1e 93%, transparent 100%); }
       .nav-strip::-webkit-scrollbar { display: none; }
       .nav-strip > a { flex: 0 0 auto; white-space: nowrap; }
-      nav > .nav-more-wrap { order: 6; flex: 0 0 auto; }
+      nav > .nav-more-wrap { order: 6; flex: 0 0 auto; margin-left: auto; }
       nav > a.nav-cta { order: 7; flex: 0 0 auto; white-space: nowrap; }
       .top-search { order: 10; flex: 1 1 100%; width: 100%; margin: 0 0 16px; }
       .top-search input { flex: 1 1 auto; width: auto; min-width: 0; }
@@ -1682,7 +1682,6 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
             <button type="button" class="hub-jump" data-hub-tab="toolkit" role="menuitem"><span class="hj-ic" aria-hidden="true">⚖️</span><span data-i18n="hubTabToolkit">Criminal Toolkit</span></button>
           </div>
         </div>
-        <a class="nav-cta" href="#contact" data-i18n="navConsultation">💬 Consultation</a>
         <div class="language-switch" role="group" aria-label="Language / भाषा">
           <button type="button" data-language="en" aria-pressed="true">EN</button>
           <button type="button" data-language="hi" aria-pressed="false">हिं</button>
