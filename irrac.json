@@ -985,6 +985,490 @@
      "hi": "FIR में नाम न होने, आरोप-पत्र में न होने या बरी हो चुके व्यक्ति को भी विचारण-साक्ष्य पर बुलाया जा सकता है, यदि सामग्री प्रथम दृष्टया से मज़बूत हो पर दोषसिद्धि की गारंटी जितनी न हो।"
     }
    }
+  },
+  {
+   "caseName": "Tofan Singh v. State of Tamil Nadu",
+   "caseNameHi": "तोफ़ान सिंह बनाम तमिलनाडु राज्य",
+   "citation": "(2021) 4 SCC 1",
+   "year": 2020,
+   "sections": [
+    "NDPS 67",
+    "NDPS 42",
+    "IEA 25",
+    "BSA 23"
+   ],
+   "irrac": {
+    "issue": {
+     "en": "Can a statement recorded under Section 67 of the NDPS Act be used as a confession to convict the maker?",
+     "hi": "क्या NDPS अधिनियम की धारा 67 के तहत दर्ज बयान को दोषसिद्धि के लिए स्वीकारोक्ति (कन्फेशन) के रूप में इस्तेमाल किया जा सकता है?"
+    },
+    "rule": {
+     "en": "No. Officers empowered under Sections 42 and 53 of the NDPS Act are 'police officers' for Section 25 of the Evidence Act, so a confessional statement made to them is barred; Section 67 itself only empowers the officer to call for information, not to record a confession. Such a statement may at most be used within the limits of Section 27, where it leads to discovery of a fact.",
+     "hi": "नहीं। NDPS अधिनियम की धारा 42 और 53 के तहत सशक्त अधिकारी साक्ष्य अधिनियम की धारा 25 के लिए 'पुलिस अधिकारी' हैं, इसलिए उन्हें दी गई स्वीकारोक्ति वर्जित है; धारा 67 स्वयं अधिकारी को केवल जानकारी माँगने का अधिकार देती है, स्वीकारोक्ति दर्ज करने का नहीं। ऐसा बयान अधिक से अधिक धारा 27 की सीमा में ही इस्तेमाल हो सकता है, जहाँ वह किसी तथ्य की खोज की ओर ले जाए।"
+    },
+    "reasoning": {
+     "en": "Restatement of the summary's own basis, nothing added: because the officers are police officers for Section 25, a confession to them is barred, and because Section 67 only allows calling for information, it cannot produce a confession.",
+     "hi": "सारांश के अपने आधार का ही पुनर्कथन, कुछ जोड़ा नहीं गया है: क्योंकि अधिकारी धारा 25 के लिए पुलिस अधिकारी हैं, उन्हें दी गई स्वीकारोक्ति वर्जित है, और क्योंकि धारा 67 केवल जानकारी माँगने की अनुमति देती है, उससे स्वीकारोक्ति नहीं बन सकती।"
+    },
+    "application": {
+     "en": "A Section 67 statement is not treated as a confession for conviction; at most it is used within Section 27 where it leads to discovery of a fact.",
+     "hi": "धारा 67 के बयान को दोषसिद्धि के लिए स्वीकारोक्ति नहीं माना जाता; अधिक से अधिक धारा 27 के भीतर उसका उपयोग होता है, जहाँ वह किसी तथ्य की खोज की ओर ले जाए।"
+    },
+    "conclusion": {
+     "en": "A statement under Section 67 of the NDPS Act cannot be used as a confession to convict.",
+     "hi": "NDPS अधिनियम की धारा 67 के तहत दर्ज बयान को दोषसिद्धि के लिए स्वीकारोक्ति के रूप में इस्तेमाल नहीं किया जा सकता।"
+    }
+   }
+  },
+  {
+   "caseName": "State of Punjab v. Balbir Singh",
+   "caseNameHi": "पंजाब राज्य बनाम बलबीर सिंह",
+   "citation": "(1994) 3 SCC 299",
+   "year": 1994,
+   "sections": [
+    "NDPS 50"
+   ],
+   "irrac": {
+    "issue": {
+     "en": "Before searching a person under Section 50 of the NDPS Act, what must the empowered officer do?",
+     "hi": "NDPS अधिनियम की धारा 50 के तहत किसी व्यक्ति की तलाशी लेने से पहले सशक्त अधिकारी को क्या करना होगा?"
+    },
+    "rule": {
+     "en": "Section 50 is a mandatory safeguard, not a formality. Before searching a person, the empowered officer must inform him of his right to be searched before the nearest Gazetted Officer or Magistrate, and if he so requires, take him there. Failure to give that information, and to act on the request, strikes at the prosecution case and can vitiate the trial.",
+     "hi": "धारा 50 एक आज्ञापक सुरक्षा-उपाय है, औपचारिकता नहीं। व्यक्ति की तलाशी से पहले सशक्त अधिकारी को उसे निकटतम राजपत्रित अधिकारी या मजिस्ट्रेट के समक्ष तलाशी का अधिकार बताना होगा, और यदि वह ऐसा चाहे तो उसे वहाँ ले जाना होगा। यह जानकारी न देना और अनुरोध पर अमल न करना अभियोजन के मामले पर चोट करता है और विचारण को दूषित कर सकता है।"
+    },
+    "reasoning": {
+     "en": "Restatement of the summary's own basis, nothing added: the provision exists precisely to protect innocent persons against planted or fabricated recoveries, so informing the person and acting on his request is a mandatory condition, not a formality.",
+     "hi": "सारांश के अपने आधार का ही पुनर्कथन, कुछ जोड़ा नहीं गया है: यह प्रावधान ठीक इसलिए है ताकि निर्दोष व्यक्तियों को गढ़ी या रोपित बरामदगी से बचाया जा सके, इसलिए व्यक्ति को जानकारी देना और उसके अनुरोध पर अमल करना आज्ञापक शर्त है, औपचारिकता नहीं।"
+    },
+    "application": {
+     "en": "Before the search, the officer informs the person of the right to be searched before the nearest Gazetted Officer or Magistrate, and if the person so requires, takes him there before searching.",
+     "hi": "तलाशी से पहले अधिकारी व्यक्ति को निकटतम राजपत्रित अधिकारी या मजिस्ट्रेट के समक्ष तलाशी के अधिकार की जानकारी देता है, और यदि व्यक्ति ऐसा चाहे तो तलाशी से पहले उसे वहाँ ले जाता है।"
+    },
+    "conclusion": {
+     "en": "Section 50 of the NDPS Act is mandatory: failure to inform the person of the right, and to act on his request, can vitiate the trial.",
+     "hi": "NDPS अधिनियम की धारा 50 आज्ञापक है: अधिकार की जानकारी न देना और अनुरोध पर अमल न करना विचारण को दूषित कर सकता है।"
+    }
+   }
+  },
+  {
+   "caseName": "State of Rajasthan v. Balchand",
+   "caseNameHi": "राजस्थान राज्य बनाम बालचंद",
+   "citation": "(1977) 4 SCC 308",
+   "year": 1977,
+   "sections": [
+    "ART 21"
+   ],
+   "irrac": {
+    "issue": {
+     "en": "Is bail the rule and jail the exception, even where the State appeals against an acquittal?",
+     "hi": "क्या जमानत नियम है और जेल अपवाद, वहाँ भी जहाँ राज्य बरी किए जाने के विरुद्ध अपील करे?"
+    },
+    "rule": {
+     "en": "Yes. Bail is the rule and jail is the exception. A young man who had been on bail through the trial, had not misused it, and had surrendered when the State appealed against his acquittal, was enlarged on bail pending the appeal. Jail before the final verdict is justified only where there is reason to fear flight from justice, tampering, or repetition of offences — not by the gravity of the charge alone.",
+     "hi": "हाँ। जमानत नियम है और जेल अपवाद है। विचारण के दौरान जमानत पर रहा, उसका दुरुपयोग न किया और राज्य की बरी-विरुद्ध अपील पर समर्पण किया हुआ युवक अपील लंबित रहते जमानत पर छोड़ा गया। अंतिम फैसले से पहले जेल तभी उचित है जब न्याय से भागने, साक्ष्य से छेड़छाड़ या अपराध दोहराने का भय हो — केवल आरोप की गंभीरता से नहीं।"
+    },
+    "reasoning": {
+     "en": "Restatement of the summary's own basis, nothing added: he had honoured bail through the trial, had not misused it, and had surrendered on the State's appeal, and no flight, tampering or repetition fear was shown, so the gravity of the charge alone could not justify jail before the final verdict.",
+     "hi": "सारांश के अपने आधार का ही पुनर्कथन, कुछ जोड़ा नहीं गया है: वह विचारण के दौरान जमानत का पालन करता रहा, उसका दुरुपयोग नहीं किया और राज्य की अपील पर समर्पण किया, और भागने, छेड़छाड़ या अपराध दोहराने का कोई भय नहीं दिखा, इसलिए केवल आरोप की गंभीरता अंतिम फैसले से पहले जेल का औचित्य नहीं दे सकती।"
+    },
+    "application": {
+     "en": "The man on bail through the trial, who had not misused it and had surrendered on the State's appeal against acquittal, was enlarged on bail pending the appeal.",
+     "hi": "विचारण के दौरान जमानत पर रहा, उसका दुरुपयोग न किया और बरी-विरुद्ध राज्य की अपील पर समर्पण किया हुआ व्यक्ति अपील लंबित रहते जमानत पर छोड़ा गया।"
+    },
+    "conclusion": {
+     "en": "Bail is the rule and jail the exception; jail before the final verdict needs a reason to fear flight, tampering or repetition, not the gravity of the charge alone.",
+     "hi": "जमानत नियम है और जेल अपवाद है; अंतिम फैसले से पहले जेल के लिए भागने, छेड़छाड़ या अपराध दोहराने का भय चाहिए, केवल आरोप की गंभीरता नहीं।"
+    }
+   }
+  },
+  {
+   "caseName": "Gudikanti Narasimhulu v. Public Prosecutor",
+   "caseNameHi": "गुडिकांति नरसिम्हुलु बनाम लोक अभियोजक",
+   "citation": "(1978) 1 SCC 240",
+   "year": 1977,
+   "sections": [
+    "ART 21",
+    "CRPC 437",
+    "BNSS 480",
+    "CRPC 439",
+    "BNSS 483"
+   ],
+   "irrac": {
+    "issue": {
+     "en": "When may bail be refused, and is the wide power under Section 439 fenced in by the restrictions of Section 437?",
+     "hi": "जमानत कब इनकार की जा सकती है, और क्या धारा 439 की व्यापक शक्ति धारा 437 की सीमाओं से बँधी है?"
+    },
+    "rule": {
+     "en": "Bail is never a punishment in advance, and refusing it must rest on judicial reasons, not on a hunch. The wide power under Section 439 is not fenced in by the restrictions of Section 437, and liberty must be weighed together with public safety and the burden on the public purse.",
+     "hi": "जमानत कभी अग्रिम दंड नहीं है, और उसे इनकार करने के पीछे न्यायिक कारण होने चाहिए, अंदाज़ा नहीं। धारा 439 की व्यापक शक्ति धारा 437 की सीमाओं से बँधी नहीं है, और स्वतंत्रता को लोक-सुरक्षा तथा सरकारी खज़ाने पर बोझ के साथ तौला जाना चाहिए।"
+    },
+    "reasoning": {
+     "en": "Restatement of the summary's own basis, nothing added: the men had honoured bail earlier, had not abused the court's trust, and faced years of waiting before their appeal could be heard, so refusal on a hunch — as punishment in advance — could not stand, and liberty had to be weighed with public safety and the public purse.",
+     "hi": "सारांश के अपने आधार का ही पुनर्कथन, कुछ जोड़ा नहीं गया है: वे पहले जमानत का पालन कर चुके थे, अदालत के भरोसे का दुरुपयोग नहीं किया था, और अपील की सुनवाई से पहले वर्षों का इंतज़ार था, इसलिए अंदाज़े पर — अग्रिम दंड के रूप में — इनकार टिक नहीं सकता था, और स्वतंत्रता को लोक-सुरक्षा तथा सरकारी खज़ाने के साथ तौला जाना था।"
+    },
+    "application": {
+     "en": "Men convicted on appeal by the High Court after acquittal at trial, who had honoured bail earlier and had not abused the court's trust, were enlarged on bail while facing years of waiting for their appeal.",
+     "hi": "विचारण में बरी होने के बाद उच्च न्यायालय की अपील में दोषी ठहराए गए व्यक्ति, जो पहले जमानत का पालन कर चुके थे और अदालत के भरोसे का दुरुपयोग नहीं किया था, अपील की सुनवाई में वर्षों के इंतज़ार के बीच जमानत पर छोड़े गए।"
+    },
+    "conclusion": {
+     "en": "Refusal of bail needs judicial reasons, not a hunch; bail is never punishment in advance, and Section 439 is not fenced in by Section 437.",
+     "hi": "जमानत इनकार के लिए न्यायिक कारण चाहिए, अंदाज़ा नहीं; जमानत कभी अग्रिम दंड नहीं है, और धारा 439 धारा 437 से बँधी नहीं है।"
+    }
+   }
+  },
+  {
+   "caseName": "Sanjay Chandra v. CBI",
+   "caseNameHi": "संजय चंद्रा बनाम सीबीआई",
+   "citation": "(2012) 1 SCC 40",
+   "year": 2011,
+   "sections": [
+    "CRPC 439",
+    "BNSS 483"
+   ],
+   "irrac": {
+    "issue": {
+     "en": "Is the object of bail punitive or preventive, and may pre-trial detention become punishment before conviction?",
+     "hi": "क्या जमानत का उद्देश्य दंडात्मक या निवारक है, और क्या दोषसिद्धि से पहले की हिरासत दंड बन सकती है?"
+    },
+    "rule": {
+     "en": "The object of bail is neither punitive nor preventive, and pre-trial detention must not become punishment before conviction.",
+     "hi": "जमानत का उद्देश्य न दंडात्मक है, न निवारक, और दोषसिद्धि से पहले की हिरासत दंड नहीं बननी चाहिए।"
+    },
+    "reasoning": {
+     "en": "Restatement of the summary's own basis, nothing added: detention before conviction that functions as punishment contradicts the object of bail, which is neither punitive nor preventive.",
+     "hi": "सारांश के अपने आधार का ही पुनर्कथन, कुछ जोड़ा नहीं गया है: दोषसिद्धि से पहले की हिरासत यदि दंड की तरह काम करे तो वह जमानत के उद्देश्य के विरुद्ध है, जो न दंडात्मक है, न निवारक।"
+    },
+    "application": {
+     "en": "Bail was granted in the 2G case, on the footing that pre-trial detention must not become punishment before conviction.",
+     "hi": "2G मामले में जमानत दी गई, इस आधार पर कि दोषसिद्धि से पहले की हिरासत दंड नहीं बननी चाहिए।"
+    },
+    "conclusion": {
+     "en": "Bail was granted; pre-trial detention must not become punishment before conviction, since the object of bail is neither punitive nor preventive.",
+     "hi": "जमानत दी गई; दोषसिद्धि से पहले की हिरासत दंड नहीं बननी चाहिए, क्योंकि जमानत का उद्देश्य न दंडात्मक है, न निवारक।"
+    }
+   }
+  },
+  {
+   "caseName": "Dataram Singh v. State of Uttar Pradesh",
+   "caseNameHi": "दाताराम सिंह बनाम उत्तर प्रदेश राज्य",
+   "citation": "(2018) 3 SCC 22",
+   "year": 2018,
+   "sections": [
+    "CRPC 439",
+    "BNSS 483"
+   ],
+   "irrac": {
+    "issue": {
+     "en": "What is the general rule on the grant of bail?",
+     "hi": "जमानत देने का सामान्य नियम क्या है?"
+    },
+    "rule": {
+     "en": "Presumption of innocence is a fundamental postulate, and the grant of bail is the general rule and jail is the exception.",
+     "hi": "निर्दोषता की धारणा एक मौलिक सिद्धांत है, और जमानत देना सामान्य नियम है, जेल अपवाद है।"
+    },
+    "reasoning": {
+     "en": "Restatement of the summary's own basis, nothing added: because innocence is presumed, detention before conviction is the exception, not the rule, so bail is granted as the general rule.",
+     "hi": "सारांश के अपने आधार का ही पुनर्कथन, कुछ जोड़ा नहीं गया है: क्योंकि निर्दोषता मानी जाती है, दोषसिद्धि से पहले की हिरासत अपवाद है, नियम नहीं, इसलिए जमानत सामान्य नियम के रूप में दी जाती है।"
+    },
+    "application": {
+     "en": "Bail is granted as the general rule, with jail before conviction as the exception, on the footing of the presumption of innocence.",
+     "hi": "निर्दोषता की धारणा के आधार पर जमानत सामान्य नियम के रूप में दी जाती है, और दोषसिद्धि से पहले जेल अपवाद रहता है।"
+    },
+    "conclusion": {
+     "en": "The grant of bail is the general rule and jail is the exception.",
+     "hi": "जमानत देना सामान्य नियम है और जेल अपवाद है।"
+    }
+   }
+  },
+  {
+   "caseName": "Sushila Aggarwal v. State (NCT of Delhi)",
+   "caseNameHi": "सुशीला अग्रवाल बनाम राज्य (राष्ट्रीय राजधानी क्षेत्र दिल्ली)",
+   "citation": "(2020) 5 SCC 1",
+   "year": 2020,
+   "sections": [
+    "CRPC 438",
+    "BNSS 482"
+   ],
+   "irrac": {
+    "issue": {
+     "en": "Must anticipatory bail be time-limited, or does it last beyond the chargesheet?",
+     "hi": "क्या अग्रिम जमानत समय-सीमित होनी चाहिए, या वह आरोप-पत्र के बाद भी चलती है?"
+    },
+    "rule": {
+     "en": "Anticipatory bail need not be time-limited and normally lasts until the end of the trial, including after the chargesheet.",
+     "hi": "अग्रिम जमानत का समय-सीमित होना ज़रूरी नहीं है और वह सामान्यतः विचारण के अंत तक चलती है, आरोप-पत्र के बाद भी।"
+    },
+    "reasoning": {
+     "en": "Restatement of the summary's own basis, nothing added: the protection is not tied to a fixed period, so it runs until the end of the trial and the filing of the chargesheet does not cut it short.",
+     "hi": "सारांश के अपने आधार का ही पुनर्कथन, कुछ जोड़ा नहीं गया है: यह सुरक्षा किसी निश्चित अवधि से बँधी नहीं है, इसलिए वह विचारण के अंत तक चलती है और आरोप-पत्र दाखिल होने से वह छोटी नहीं हो जाती।"
+    },
+    "application": {
+     "en": "Anticipatory bail continues after the chargesheet and normally lasts until the end of the trial, without a fixed time limit.",
+     "hi": "अग्रिम जमानत आरोप-पत्र के बाद भी जारी रहती है और सामान्यतः बिना निश्चित समय-सीमा के विचारण के अंत तक चलती है।"
+    },
+    "conclusion": {
+     "en": "Anticipatory bail need not be time-limited; it normally lasts until the end of the trial.",
+     "hi": "अग्रिम जमानत का समय-सीमित होना ज़रूरी नहीं है; वह सामान्यतः विचारण के अंत तक चलती है।"
+    }
+   }
+  },
+  {
+   "caseName": "Siddharth v. State of Uttar Pradesh",
+   "caseNameHi": "सिद्धार्थ बनाम उत्तर प्रदेश राज्य",
+   "citation": "(2022) 1 SCC 676",
+   "year": 2021,
+   "sections": [
+    "CRPC 170",
+    "CRPC 41",
+    "BNSS 35"
+   ],
+   "irrac": {
+    "issue": {
+     "en": "Is arrest mandatory at the chargesheet stage, and what does 'custody' under Section 170 CrPC mean?",
+     "hi": "क्या आरोप-पत्र के चरण में गिरफ्तारी अनिवार्य है, और सीआरपीसी की धारा 170 के तहत 'हिरासत' का क्या अर्थ है?"
+    },
+    "rule": {
+     "en": "Arrest is not mandatory at the chargesheet stage where the accused cooperated. 'Custody' under Section 170 CrPC means presentation before the court, not detention.",
+     "hi": "जहाँ अभियुक्त ने सहयोग किया हो, वहाँ आरोप-पत्र के चरण में गिरफ्तारी अनिवार्य नहीं है। सीआरपीसी की धारा 170 के तहत 'हिरासत' का अर्थ अदालत के समक्ष प्रस्तुत करना है, हिरासत में रखना नहीं।"
+    },
+    "reasoning": {
+     "en": "Restatement of the summary's own basis, nothing added: where the accused cooperated, arrest adds nothing at the chargesheet stage, because custody under Section 170 is satisfied by presentation before the court, not by detention.",
+     "hi": "सारांश के अपने आधार का ही पुनर्कथन, कुछ जोड़ा नहीं गया है: जहाँ अभियुक्त ने सहयोग किया हो, वहाँ आरोप-पत्र के चरण में गिरफ्तारी से कुछ जुड़ता नहीं, क्योंकि धारा 170 के तहत हिरासत अदालत के समक्ष प्रस्तुत करने से ही पूरी हो जाती है, हिरासत में रखने से नहीं।"
+    },
+    "application": {
+     "en": "An accused who cooperated is not arrested at the chargesheet stage; custody under Section 170 is met by presenting him before the court.",
+     "hi": "सहयोग करने वाले अभियुक्त को आरोप-पत्र के चरण में गिरफ्तार नहीं किया जाता; धारा 170 के तहत हिरासत उसे अदालत के समक्ष प्रस्तुत करके पूरी होती है।"
+    },
+    "conclusion": {
+     "en": "Arrest is not mandatory at the chargesheet stage for a cooperating accused, and Section 170 custody means presentation before the court, not detention.",
+     "hi": "सहयोग करने वाले अभियुक्त के लिए आरोप-पत्र के चरण में गिरफ्तारी अनिवार्य नहीं है, और धारा 170 की हिरासत का अर्थ अदालत के समक्ष प्रस्तुत करना है, हिरासत में रखना नहीं।"
+    }
+   }
+  },
+  {
+   "caseName": "Mithu v. State of Punjab",
+   "caseNameHi": "मिठू बनाम पंजाब राज्य",
+   "citation": "(1983) 2 SCC 277",
+   "year": 1983,
+   "sections": [
+    "IPC 302",
+    "IPC 303",
+    "BNS 103",
+    "ART 14"
+   ],
+   "irrac": {
+    "issue": {
+     "en": "Is the mandatory death sentence under Section 303 IPC for a life convict who commits murder constitutionally valid?",
+     "hi": "आजीवन कारावास भुगत रहे दोषी द्वारा हत्या करने पर आईपीसी की धारा 303 के तहत अनिवार्य मृत्युदंड क्या संवैधानिक रूप से वैध है?"
+    },
+    "rule": {
+     "en": "No. Section 303 IPC (mandatory death for a life convict who commits murder) was struck down as arbitrary and violative of Articles 14 and 21. No death sentence can be automatic.",
+     "hi": "नहीं। आईपीसी की धारा 303 (आजीवन दोषी द्वारा हत्या पर अनिवार्य मृत्युदंड) को मनमाना और अनुच्छेद 14 व 21 का उल्लंघन मानकर रद्द कर दिया गया। कोई भी मृत्युदंड अपने-आप नहीं हो सकता।"
+    },
+    "reasoning": {
+     "en": "Restatement of the summary's own basis, nothing added: because the death sentence under Section 303 follows automatically, it is arbitrary, and an arbitrary sentence violates Articles 14 and 21.",
+     "hi": "सारांश के अपने आधार का ही पुनर्कथन, कुछ जोड़ा नहीं गया है: क्योंकि धारा 303 के तहत मृत्युदंड अपने-आप लगता है, वह मनमाना है, और मनमानी सजा अनुच्छेद 14 व 21 का उल्लंघन है।"
+    },
+    "application": {
+     "en": "The mandatory death sentence under Section 303 is not applied; a death sentence cannot follow automatically.",
+     "hi": "धारा 303 के तहत अनिवार्य मृत्युदंड लागू नहीं होता; मृत्युदंड अपने-आप नहीं लग सकता।"
+    },
+    "conclusion": {
+     "en": "Section 303 IPC was struck down; no death sentence can be automatic.",
+     "hi": "आईपीसी की धारा 303 रद्द कर दी गई; कोई भी मृत्युदंड अपने-आप नहीं हो सकता।"
+    }
+   }
+  },
+  {
+   "caseName": "Khushal Rao v. State of Bombay",
+   "caseNameHi": "खुशाल राव बनाम बम्बई राज्य",
+   "citation": "AIR 1958 SC 22; 1958 SCR 424",
+   "year": 1957,
+   "sections": [
+    "IEA 32",
+    "BSA 26"
+   ],
+   "irrac": {
+    "issue": {
+     "en": "Can a dying declaration, without corroboration, be the sole basis of conviction?",
+     "hi": "क्या बिना पुष्टि के मृत्यु-पूर्व बयान (डाइंग डिक्लेरेशन) ही दोषसिद्धि का एकमात्र आधार हो सकता है?"
+    },
+    "rule": {
+     "en": "Yes. A dying declaration is not a weaker kind of evidence and can, if true and voluntary, be the sole basis of conviction without corroboration.",
+     "hi": "हाँ। मृत्यु-पूर्व बयान कमज़ोर साक्ष्य नहीं है और यदि सत्य और स्वैच्छिक हो तो बिना पुष्टि के ही दोषसिद्धि का एकमात्र आधार हो सकता है।"
+    },
+    "reasoning": {
+     "en": "Restatement of the summary's own basis, nothing added: truth and voluntariness are the test for a dying declaration, so a true and voluntary declaration needs no corroboration to support conviction on its own.",
+     "hi": "सारांश के अपने आधार का ही पुनर्कथन, कुछ जोड़ा नहीं गया है: मृत्यु-पूर्व बयान की कसौटी सत्यता और स्वैच्छिकता है, इसलिए सत्य और स्वैच्छिक बयान को अकेले दोषसिद्धि के लिए किसी पुष्टि की ज़रूरत नहीं है।"
+    },
+    "application": {
+     "en": "A dying declaration found true and voluntary is acted on as the sole basis of conviction, without corroboration.",
+     "hi": "सत्य और स्वैच्छिक पाया गया मृत्यु-पूर्व बयान बिना पुष्टि के ही दोषसिद्धि के एकमात्र आधार के रूप में स्वीकार किया जाता है।"
+    },
+    "conclusion": {
+     "en": "A true and voluntary dying declaration can be the sole basis of conviction without corroboration.",
+     "hi": "सत्य और स्वैच्छिक मृत्यु-पूर्व बयान बिना पुष्टि के ही दोषसिद्धि का एकमात्र आधार हो सकता है।"
+    }
+   }
+  },
+  {
+   "caseName": "Pakala Narayana Swami v. Emperor",
+   "caseNameHi": "पकला नारायण स्वामी बनाम सम्राट",
+   "citation": "AIR 1939 PC 47",
+   "year": 1939,
+   "sections": [
+    "IEA 32",
+    "BSA 26"
+   ],
+   "irrac": {
+    "issue": {
+     "en": "Must a dying declaration be made in expectation of death, and how is a confession containing self-exculpatory matter to be read?",
+     "hi": "क्या मृत्यु-पूर्व बयान मृत्यु की आशंका में ही दिया जाना चाहिए, और आत्म-निर्दोष बताने वाली बात वाले स्वीकारोक्ति-वक्तव्य को कैसे पढ़ा जाए?"
+    },
+    "rule": {
+     "en": "A dying declaration under Section 32(1) of the Evidence Act need not be made in expectation of death, and a confession containing self-exculpatory matter must be taken as a whole.",
+     "hi": "साक्ष्य अधिनियम की धारा 32(1) के तहत मृत्यु-पूर्व बयान का मृत्यु की आशंका में दिया जाना ज़रूरी नहीं है, और आत्म-निर्दोष बताने वाली बात वाले स्वीकारोक्ति-वक्तव्य को समग्र रूप में लिया जाना चाहिए।"
+    },
+    "reasoning": {
+     "en": "Restatement of the summary's own basis, nothing added: expectation of death is not a condition of Section 32(1), and a confession is taken as a whole, so its self-exculpatory matter is read with the rest rather than cut away.",
+     "hi": "सारांश के अपने आधार का ही पुनर्कथन, कुछ जोड़ा नहीं गया है: मृत्यु की आशंका धारा 32(1) की शर्त नहीं है, और स्वीकारोक्ति समग्र रूप में ली जाती है, इसलिए उसकी आत्म-निर्दोष बताने वाली बात को बाकी हिस्से से अलग करके नहीं, उसी के साथ पढ़ा जाता है।"
+    },
+    "application": {
+     "en": "A dying declaration is admitted under Section 32(1) even though it was not made in expectation of death, and a confession with self-exculpatory matter is read as a whole.",
+     "hi": "मृत्यु-पूर्व बयान धारा 32(1) के तहत स्वीकार किया जाता है, भले ही वह मृत्यु की आशंका में न दिया गया हो, और आत्म-निर्दोष बताने वाली बात वाला स्वीकारोक्ति-वक्तव्य समग्र रूप में पढ़ा जाता है।"
+    },
+    "conclusion": {
+     "en": "Expectation of death is not required for a Section 32(1) dying declaration, and a confession with self-exculpatory matter must be taken as a whole.",
+     "hi": "धारा 32(1) के मृत्यु-पूर्व बयान के लिए मृत्यु की आशंका ज़रूरी नहीं है, और आत्म-निर्दोष बताने वाली बात वाले स्वीकारोक्ति-वक्तव्य को समग्र रूप में लिया जाना चाहिए।"
+    }
+   }
+  },
+  {
+   "caseName": "Kali Ram v. State of Himachal Pradesh",
+   "caseNameHi": "काली राम बनाम हिमाचल प्रदेश राज्य",
+   "citation": "AIR 1973 SC 2773; (1973) 2 SCC 808",
+   "year": 1973,
+   "sections": [],
+   "irrac": {
+    "issue": {
+     "en": "If two views are possible on the evidence, which view must the court adopt, especially in circumstantial-evidence cases?",
+     "hi": "यदि साक्ष्य पर दो दृष्टिकोण सम्भव हों, तो अदालत को कौन-सा दृष्टिकोण अपनाना चाहिए, विशेषतः परिस्थितिजन्य साक्ष्य वाले मामलों में?"
+    },
+    "rule": {
+     "en": "If two views are possible on the evidence, the view favourable to the accused must be adopted — especially in circumstantial-evidence cases.",
+     "hi": "यदि साक्ष्य पर दो दृष्टिकोण सम्भव हों, तो अभियुक्त के पक्ष वाला दृष्टिकोण ही अपनाया जाना चाहिए — विशेषतः परिस्थितिजन्य साक्ष्य वाले मामलों में।"
+    },
+    "reasoning": {
+     "en": "Restatement of the summary's own basis, nothing added: where two views are possible, the view favourable to the accused is the one adopted, and this applies especially in circumstantial-evidence cases.",
+     "hi": "सारांश के अपने आधार का ही पुनर्कथन, कुछ जोड़ा नहीं गया है: जहाँ दो दृष्टिकोण सम्भव हों, वहाँ अभियुक्त के पक्ष वाला दृष्टिकोण ही अपनाया जाता है, और यह विशेषतः परिस्थितिजन्य साक्ष्य वाले मामलों में लागू होता है।"
+    },
+    "application": {
+     "en": "Where the evidence admits two views, the court adopts the view favourable to the accused, especially in a circumstantial-evidence case.",
+     "hi": "जहाँ साक्ष्य दो दृष्टिकोणों की गुंजाइश दे, वहाँ अदालत अभियुक्त के पक्ष वाला दृष्टिकोण अपनाती है, विशेषतः परिस्थितिजन्य साक्ष्य वाले मामले में।"
+    },
+    "conclusion": {
+     "en": "Where two views are possible, the view favourable to the accused must be adopted, especially in circumstantial-evidence cases.",
+     "hi": "जहाँ दो दृष्टिकोण सम्भव हों, वहाँ अभियुक्त के पक्ष वाला दृष्टिकोण ही अपनाया जाना चाहिए, विशेषतः परिस्थितिजन्य साक्ष्य वाले मामलों में।"
+    }
+   }
+  },
+  {
+   "caseName": "State of Punjab v. Gurmit Singh",
+   "caseNameHi": "पंजाब राज्य बनाम गुरमीत सिंह",
+   "citation": "(1996) 2 SCC 384",
+   "year": 1996,
+   "sections": [
+    "IPC 376",
+    "BNS 64"
+   ],
+   "irrac": {
+    "issue": {
+     "en": "Does a rape victim's testimony require corroboration, and how must rape trials be conducted?",
+     "hi": "क्या बलात्कार पीड़िता की गवाही को पुष्टि की ज़रूरत है, और बलात्कार के मुकदमों की सुनवाई कैसे होनी चाहिए?"
+    },
+    "rule": {
+     "en": "A rape victim's testimony requires no corroboration if it inspires confidence, and in-camera trial of rape cases is mandatory to protect the victim.",
+     "hi": "बलात्कार पीड़िता की गवाही को पुष्टि की ज़रूरत नहीं है, यदि वह भरोसा जगाए, और पीड़िता की सुरक्षा के लिए बलात्कार के मामलों में बंद-कमरे (इन-कैमरा) सुनवाई अनिवार्य है।"
+    },
+    "reasoning": {
+     "en": "Restatement of the summary's own basis, nothing added: testimony that inspires confidence stands without corroboration, and in-camera trial is mandatory because it protects the victim.",
+     "hi": "सारांश के अपने आधार का ही पुनर्कथन, कुछ जोड़ा नहीं गया है: जो गवाही भरोसा जगाए वह बिना पुष्टि के ही टिकी रहती है, और बंद-कमरे की सुनवाई इसलिए अनिवार्य है क्योंकि वह पीड़िता की सुरक्षा करती है।"
+    },
+    "application": {
+     "en": "The court acts on a rape victim's testimony that inspires confidence without requiring corroboration, and conducts the trial in camera to protect the victim.",
+     "hi": "अदालत बलात्कार पीड़िता की भरोसा जगाने वाली गवाही पर बिना पुष्टि माँगे अमल करती है, और पीड़िता की सुरक्षा के लिए सुनवाई बंद कमरे में करती है।"
+    },
+    "conclusion": {
+     "en": "A rape victim's confident testimony needs no corroboration, and in-camera trial of rape cases is mandatory.",
+     "hi": "बलात्कार पीड़िता की भरोसा जगाने वाली गवाही को पुष्टि की ज़रूरत नहीं है, और बलात्कार के मामलों में बंद-कमरे की सुनवाई अनिवार्य है।"
+    }
+   }
+  },
+  {
+   "caseName": "Sushil Kumar Sharma v. Union of India",
+   "caseNameHi": "सुशील कुमार शर्मा बनाम भारत संघ",
+   "citation": "(2005) 6 SCC 281",
+   "year": 2005,
+   "sections": [
+    "IPC 498A",
+    "BNS 85"
+   ],
+   "irrac": {
+    "issue": {
+     "en": "Does the mere possibility of misuse invalidate Section 498A IPC?",
+     "hi": "क्या दुरुपयोग की मात्र सम्भावना आईपीसी की धारा 498ए को अमान्य कर देती है?"
+    },
+    "rule": {
+     "en": "No. Section 498A IPC was upheld as constitutionally valid; the mere possibility of misuse cannot invalidate a provision meant to combat the dowry menace.",
+     "hi": "नहीं। आईपीसी की धारा 498ए को संवैधानिक रूप से वैध ठहराया गया; दुरुपयोग की मात्र सम्भावना दहेज की बुराई से लड़ने के लिए बने प्रावधान को अमान्य नहीं कर सकती।"
+    },
+    "reasoning": {
+     "en": "Restatement of the summary's own basis, nothing added: the possibility of misuse does not defeat a provision whose purpose is to combat the dowry menace.",
+     "hi": "सारांश के अपने आधार का ही पुनर्कथन, कुछ जोड़ा नहीं गया है: दुरुपयोग की सम्भावना उस प्रावधान को विफल नहीं करती जिसका उद्देश्य दहेज की बुराई से लड़ना है।"
+    },
+    "application": {
+     "en": "Section 498A stands as valid law; the mere possibility of its misuse is not a ground to strike it down.",
+     "hi": "धारा 498ए वैध कानून के रूप में बनी रहती है; उसके दुरुपयोग की मात्र सम्भावना उसे रद्द करने का आधार नहीं है।"
+    },
+    "conclusion": {
+     "en": "Section 498A IPC is constitutionally valid; mere possibility of misuse cannot invalidate it.",
+     "hi": "आईपीसी की धारा 498ए संवैधानिक रूप से वैध है; दुरुपयोग की मात्र सम्भावना उसे अमान्य नहीं कर सकती।"
+    }
+   }
+  },
+  {
+   "caseName": "Anvar P.V. v. P.K. Basheer",
+   "caseNameHi": "अनवर पी.वी. बनाम पी.के. बशीर",
+   "citation": "(2014) 10 SCC 473",
+   "year": 2014,
+   "sections": [
+    "IEA 65A",
+    "IEA 65B",
+    "BSA 63"
+   ],
+   "irrac": {
+    "issue": {
+     "en": "How must secondary electronic records be proved in evidence?",
+     "hi": "द्वितीयक इलेक्ट्रॉनिक रिकॉर्ड को साक्ष्य में कैसे साबित किया जाना चाहिए?"
+    },
+    "rule": {
+     "en": "Sections 65A and 65B of the Evidence Act form a complete code for electronic evidence, so secondary electronic records are inadmissible without a Section 65B(4) certificate.",
+     "hi": "साक्ष्य अधिनियम की धारा 65ए और 65बी इलेक्ट्रॉनिक साक्ष्य के लिए पूर्ण संहिता हैं, इसलिए धारा 65बी(4) के प्रमाण-पत्र के बिना द्वितीयक इलेक्ट्रॉनिक रिकॉर्ड अस्वीकार्य हैं।"
+    },
+    "reasoning": {
+     "en": "Restatement of the summary's own basis, nothing added: because Sections 65A and 65B form a complete code, admissibility of secondary electronic records runs only through the Section 65B(4) certificate.",
+     "hi": "सारांश के अपने आधार का ही पुनर्कथन, कुछ जोड़ा नहीं गया है: क्योंकि धारा 65ए और 65बी पूर्ण संहिता हैं, द्वितीयक इलेक्ट्रॉनिक रिकॉर्ड की स्वीकार्यता केवल धारा 65बी(4) के प्रमाण-पत्र से ही हो सकती है।"
+    },
+    "application": {
+     "en": "A secondary electronic record produced without a Section 65B(4) certificate is inadmissible.",
+     "hi": "धारा 65बी(4) के प्रमाण-पत्र के बिना प्रस्तुत द्वितीयक इलेक्ट्रॉनिक रिकॉर्ड अस्वीकार्य है।"
+    },
+    "conclusion": {
+     "en": "Secondary electronic records are inadmissible without a Section 65B(4) certificate.",
+     "hi": "धारा 65बी(4) के प्रमाण-पत्र के बिना द्वितीयक इलेक्ट्रॉनिक रिकॉर्ड अस्वीकार्य हैं।"
+    }
+   }
   }
  ],
  "skipped": [

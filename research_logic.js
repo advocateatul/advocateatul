@@ -72,7 +72,7 @@
     var toks = {}, i, m;
     text = String(text || "");
     if (!text) return toks;
-    var secRe = /(?:sec\.?|section)\s*([0-9][0-9a-z,\s\-–\(\)]*?)\s*(BNS|BNSS|BSA|IPC|CrPC|IEA|CPC|NDPS|NI|IT|HSA|TPA|CPA|HMA|POCSO|MVA|UAPA|PMLA)?\b/gi;
+    var secRe = /(?:sec\.?|section)\s*([0-9][0-9a-z,\s\-–\(\)]*?)\s*(BNS|BNSS|BSA|IPC|CrPC|IEA|CPC|NDPS|NI|IT|HSA|TPA|CPA|HMA|POCSO|MVA|UAPA|PMLA|DV)?\b/gi;
     while ((m = secRe.exec(text)) !== null) {
       var nums = expandList(m[1].replace(/[A-Za-z]+/g, ""));
       var fam = m[2] ? normFam(m[2]) : defaultFam;
@@ -109,10 +109,15 @@
     { id: "evidence", en: "Dying Declaration & Confession", hi: "मृत्युकालिक कथन और इकबालिया बयान", sections: ["BSA:26", "BSA:23", "IEA:32", "IEA:25"] },
     { id: "cheque", en: "Cheque Bounce", hi: "चेक बाउंस", sections: ["NI:138", "NI:141"] },
     { id: "anticipatory-bail", en: "Anticipatory Bail", hi: "अग्रिम ज़मानत", sections: ["BNSS:482", "CRPC:438"] },
-    { id: "domestic-violence", en: "Domestic Violence & Cruelty", hi: "घरेलू हिंसा और क्रूरता", sections: ["BNS:85", "IPC:498a"] },
+    { id: "domestic-violence", en: "Domestic Violence & Cruelty", hi: "घरेलू हिंसा और क्रूरता", sections: ["BNS:85", "IPC:498a", "DV:3", "DV:12", "DV:18", "DV:31"] },
     { id: "cyber-crime", en: "Cyber Crime", hi: "साइबर अपराध", sections: ["IT:66a", "IT:66d", "IT:67", "IT:67b", "IT:79", "IT:80", "IT:85"] },
     { id: "ndps", en: "NDPS — Drug Offences", hi: "NDPS — नशीले पदार्थों के अपराध", sections: ["NDPS:8", "NDPS:20", "NDPS:21", "NDPS:22", "NDPS:27a", "NDPS:36", "NDPS:36a", "NDPS:37", "NDPS:50", "NDPS:52", "NDPS:60", "NDPS:63"] },
-    { id: "pocso", en: "POCSO — Offences Against Children", hi: "POCSO — बच्चों के विरुद्ध अपराध", sections: ["POCSO:3", "POCSO:4", "POCSO:5", "POCSO:6", "POCSO:29", "POCSO:94"] }
+    { id: "pocso", en: "POCSO — Offences Against Children", hi: "POCSO — बच्चों के विरुद्ध अपराध", sections: ["POCSO:3", "POCSO:4", "POCSO:5", "POCSO:6", "POCSO:29", "POCSO:94"] },
+    { id: "hurt-assault", en: "Hurt & Assault", hi: "चोट और हमला", sections: ["BNS:114", "BNS:115", "BNS:116", "BNS:117", "IPC:319", "IPC:323", "IPC:325", "IPC:326"] },
+    { id: "kidnapping", en: "Kidnapping", hi: "अपहरण", sections: ["BNS:137", "IPC:363", "IPC:366"] },
+    { id: "dowry-death", en: "Dowry Death", hi: "दहेज मृत्यु", sections: ["BNS:80", "BNS:85", "IPC:304b", "IPC:498a"] },
+    { id: "criminal-appeal", en: "Criminal Appeal", hi: "आपराधिक अपील", sections: ["BNSS:413", "BNSS:415", "BNSS:419", "CRPC:372", "CRPC:374", "CRPC:378"] },
+    { id: "discharge", en: "Discharge", hi: "उन्मोचन", sections: ["BNSS:250", "BNSS:262", "BNSS:263", "CRPC:227", "CRPC:239"] }
   ];
   function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
   function lang() { return document.documentElement.lang === "hi" ? "hi" : "en"; }

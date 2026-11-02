@@ -1,6 +1,6 @@
 {
  "generated_from": [
-  "judgements.json (711 items)",
+  "judgements.json (728 items)",
   "notes.json (163 topics)",
   "drafts.json (352 items)"
  ],
@@ -87,7 +87,8 @@
     "Supriyo @ Supriya Chakraborty v. Union of India",
     "Thalappalam Service Cooperative Bank Ltd. v. State of Kerala",
     "Vishaka v. State of Rajasthan",
-    "Vishal Chelani v. Debashis Nanda"
+    "Vishal Chelani v. Debashis Nanda",
+    "Romila Thapar v. Union of India"
    ],
    "draft_ids": [
     "mandamus-writ",
@@ -111,7 +112,9 @@
    "equivalents": [],
    "note_ids": [],
    "judgment_ids": [
-    "Shatrughan Chauhan v. Union of India"
+    "Shatrughan Chauhan v. Union of India",
+    "Shabnam v. Union of India",
+    "Peoples' Union for Democratic Rights v. Union of India"
    ],
    "draft_ids": [
     "mercy-petition"
@@ -153,7 +156,8 @@
     "T.M.A. Pai Foundation v. State of Karnataka",
     "Tata Press Ltd. v. Mahanagar Telephone Nigam Ltd.",
     "Thalappalam Service Cooperative Bank Ltd. v. State of Kerala",
-    "X Corp v. Union of India (Sahyog Portal Challenge)"
+    "X Corp v. Union of India (Sahyog Portal Challenge)",
+    "Romila Thapar v. Union of India"
    ],
    "draft_ids": [
     "rti-second-appeal"
@@ -275,7 +279,11 @@
     "Vikas v. State of U.P.",
     "Vishaka v. State of Rajasthan",
     "Yash Pal v. State of Haryana",
-    "Zahira Habibullah Sheikh v. State of Gujarat"
+    "Zahira Habibullah Sheikh v. State of Gujarat",
+    "Shabnam v. Union of India",
+    "Arnab Manoranjan Goswami v. State of Maharashtra",
+    "Romila Thapar v. Union of India",
+    "Peoples' Union for Democratic Rights v. Union of India"
    ],
    "draft_ids": [
     "brain-mapping-test",
@@ -337,7 +345,9 @@
     "Smt. Shikha v. State of Uttar Pradesh",
     "Surya Dev Rai v. Ram Chander Rai",
     "Vineet Narain v. Union of India",
-    "Zee Telefilms Ltd. v. Union of India"
+    "Zee Telefilms Ltd. v. Union of India",
+    "Arnab Manoranjan Goswami v. State of Maharashtra",
+    "Peoples' Union for Democratic Rights v. Union of India"
    ],
    "draft_ids": [
     "cbi-transfer-investigation",
@@ -393,7 +403,8 @@
     "Subhash Kumar v. State of Bihar",
     "Tilokchand Motichand v. H.B. Munshi",
     "Vineet Narain v. Union of India",
-    "Vishaka v. State of Rajasthan"
+    "Vishaka v. State of Rajasthan",
+    "Romila Thapar v. Union of India"
    ],
    "draft_ids": [
     "pil-format",
@@ -405,7 +416,9 @@
    "equivalents": [],
    "note_ids": [],
    "judgment_ids": [
-    "Shatrughan Chauhan v. Union of India"
+    "Shatrughan Chauhan v. Union of India",
+    "Shabnam v. Union of India",
+    "Peoples' Union for Democratic Rights v. Union of India"
    ],
    "draft_ids": [
     "mercy-petition"
@@ -471,7 +484,13 @@
     "Vikas Yadav v. State of U.P.",
     "Vikas v. State of U.P.",
     "X Juvenile vs State of U.P.",
-    "Yakub Abdul Razak Memon v. State of Maharashtra"
+    "Yakub Abdul Razak Memon v. State of Maharashtra",
+    "Dhananjoy Chatterjee v. State of West Bengal",
+    "Sajjan Kumar v. CBI",
+    "Vadivelu Thevar v. State of Madras",
+    "Smt. Paniben v. State of Gujarat",
+    "Padala Veera Reddy v. State of Andhra Pradesh",
+    "Gura Singh v. State of Rajasthan"
    ],
    "draft_ids": []
   },
@@ -849,7 +868,8 @@
     "Madhur Chand And 2 Others vs State of U.P.",
     "Nimmagadda Prasad v. Central Bureau of Investigation",
     "Sidhartha Vashisht @ Manu Sharma v. State (NCT of Delhi)",
-    "Sk. Md. Anisur Rahaman v. State of West Bengal"
+    "Sk. Md. Anisur Rahaman v. State of West Bengal",
+    "Union of India v. Prafulla Kumar Samal"
    ],
    "draft_ids": [
     "defamation-356"
@@ -894,7 +914,8 @@
     "State of Punjab v. Gurmit Singh",
     "State of Rajasthan v. Om Prakash",
     "Tukaram v. State of Maharashtra",
-    "X v. Principal Secretary, Health and Family Welfare Department, Govt. of NCT of Delhi"
+    "X v. Principal Secretary, Health and Family Welfare Department, Govt. of NCT of Delhi",
+    "Dhananjoy Chatterjee v. State of West Bengal"
    ],
    "draft_ids": []
   },
@@ -946,7 +967,8 @@
     "bns:15"
    ],
    "judgment_ids": [
-    "Sher Singh v. State of Haryana"
+    "Sher Singh v. State of Haryana",
+    "Kans Raj v. State of Punjab"
    ],
    "draft_ids": []
   },
@@ -963,7 +985,11 @@
     "Hirendra Kushwaha vs State of U.P.",
     "Sher Singh v. State of Haryana",
     "Social Action Forum for Manav Adhikar v. Union of India",
-    "Sushil Kumar Sharma v. Union of India"
+    "Sushil Kumar Sharma v. Union of India",
+    "Rajesh Sharma v. State of Uttar Pradesh",
+    "Ramesh Kumar v. State of Chhattisgarh",
+    "Padala Veera Reddy v. State of Andhra Pradesh",
+    "Kans Raj v. State of Punjab"
    ],
    "draft_ids": []
   },
@@ -1120,7 +1146,8 @@
     "bnss:32"
    ],
    "judgment_ids": [
-    "Nandini Satpathy v. P.L. Dani"
+    "Nandini Satpathy v. P.L. Dani",
+    "Paramvir Singh Saini v. Baljit Singh"
    ],
    "draft_ids": [
     "contradiction-witness-previous-statement",
@@ -1305,7 +1332,11 @@
     "bnss:16",
     "bnss:26"
    ],
-   "judgment_ids": [],
+   "judgment_ids": [
+    "Sajjan Kumar v. CBI",
+    "State of Karnataka v. L. Muniswamy",
+    "Union of India v. Prafulla Kumar Samal"
+   ],
    "draft_ids": [
     "discharge-250",
     "discharge-ndps",
@@ -1323,7 +1354,9 @@
     "bnss:16",
     "bnss:26"
    ],
-   "judgment_ids": [],
+   "judgment_ids": [
+    "Sajjan Kumar v. CBI"
+   ],
    "draft_ids": [
     "revision-framing-charge",
     "speedy-trial-application"
@@ -1447,7 +1480,8 @@
     "D.K. Basu v. State of West Bengal",
     "Joginder Kumar v. State of U.P.",
     "Satender Kumar Antil v. CBI",
-    "Siddharth v. State of Uttar Pradesh"
+    "Siddharth v. State of Uttar Pradesh",
+    "Rajesh Sharma v. State of Uttar Pradesh"
    ],
    "draft_ids": []
   },
@@ -1956,7 +1990,10 @@
     "S.C. Garg v. State of U.P.",
     "Sandeep Singh v. State of U.P. and Another",
     "State of Haryana v. Bhajan Lal",
-    "Zandu Pharmaceutical Works Ltd. v. Md. Sharaful Haque"
+    "Zandu Pharmaceutical Works Ltd. v. Md. Sharaful Haque",
+    "Arnab Manoranjan Goswami v. State of Maharashtra",
+    "Amit Kapoor v. Ramesh Chander",
+    "State of Karnataka v. L. Muniswamy"
    ],
    "draft_ids": [
     "cbi-transfer-investigation",
@@ -2253,7 +2290,8 @@
    "judgment_ids": [
     "Khushal Rao v. State of Bombay",
     "Munnu Raja & Anr. v. State of Madhya Pradesh",
-    "Pakala Narayana Swami v. Emperor"
+    "Pakala Narayana Swami v. Emperor",
+    "Smt. Paniben v. State of Gujarat"
    ],
    "draft_ids": []
   },
@@ -3317,7 +3355,6 @@
    ],
    "judgment_ids": [
     "Danamma @ Suman Surpur v. Amar",
-    "Danamma v. Amar Singh",
     "Vineeta Sharma v. Rakesh Sharma"
    ],
    "draft_ids": [
@@ -3343,7 +3380,8 @@
     "bsa:6"
    ],
    "judgment_ids": [
-    "Kuntesh v. State of U.P."
+    "Kuntesh v. State of U.P.",
+    "Vadivelu Thevar v. State of Madras"
    ],
    "draft_ids": []
   },
@@ -3457,7 +3495,8 @@
     "bns:6"
    ],
    "judgment_ids": [
-    "Sandeep Singh v. State of U.P. and Another"
+    "Sandeep Singh v. State of U.P. and Another",
+    "Dhananjoy Chatterjee v. State of West Bengal"
    ],
    "draft_ids": []
   },
@@ -3874,7 +3913,8 @@
    "note_ids": [],
    "judgment_ids": [
     "Father Thomas v. State of U.P. and Another",
-    "Nahni and 5 Others v. State of U.P. and Another"
+    "Nahni and 5 Others v. State of U.P. and Another",
+    "Amit Kapoor v. Ramesh Chander"
    ],
    "draft_ids": [
     "criminal-revision",
