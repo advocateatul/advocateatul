@@ -12814,7 +12814,7 @@ function cfBiharFee(v) {
       }
       function askGroqProxy(q, lang, cb, sys) { askProxyAI("/groq", 15000, q, lang, cb, sys); }
       function askHf(q, lang, cb, sys) { askProxyAI("/hf", 15000, q, lang, cb, sys); }
-      function askCf(q, lang, cb, sys) { askProxyAI("/cf", 15000, q, lang, cb, sys); } function askNvidia(q, lang, cb, sys) { askProxyAI("/nvidia", 15000, q, lang, cb, sys); }
+      function askCf(q, lang, cb, sys) { askProxyAI("/cf", 60000, q, lang, cb, sys); } function askNvidia(q, lang, cb, sys) { askProxyAI("/nvidia", 15000, q, lang, cb, sys); }
       function aiAsk(q, lang, sys, tokens, cb) {
         askGemini(q, lang, function (gt) {
           if (gt) { cb(gt); return; }
