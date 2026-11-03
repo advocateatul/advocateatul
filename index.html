@@ -13186,7 +13186,7 @@ function cfBiharFee(v) {
       }
       function askGroqProxy(q, lang, cb, sys) { askProxyAI("/groq", 15000, q, lang, cb, sys); }
       function askHf(q, lang, cb, sys) { askProxyAI("/hf", 15000, q, lang, cb, sys); }
-      function askCf(q, lang, cb, sys) { askProxyAI("/cf", 60000, q, lang, cb, sys); } function askNvidia(q, lang, cb, sys) { askProxyAI("/nvidia", 15000, q, lang, cb, sys); }
+      function askCf(q, lang, cb, sys) { askProxyAI("/cf", 60000, q, lang, cb, sys); } function askNvidia(q, lang, cb, sys) { askProxyAI("/nvidia", 15000, q, lang, cb, sys); } function askKilo(q, lang, cb, sys) { askProxyAI("/kilo", 15000, q, lang, cb, sys); }
       function aiAsk(q, lang, sys, tokens, cb) {
         askGemini(q, lang, function (gt) {
           if (gt) { cb(gt); return; }
@@ -13200,7 +13200,10 @@ function cfBiharFee(v) {
                   if (hf) { cb(hf); return; }
                   askCf(q, lang, function (cf) {
                     if (cf) { cb(cf); return; }
-                    askNvidia(q, lang, cb, sys);
+                    askNvidia(q, lang, function (nv) {
+                      if (nv) { cb(nv); return; }
+                      askKilo(q, lang, cb, sys);
+                    }, sys);
                   }, sys);
                 }, sys);
               }, sys);
@@ -14013,8 +14016,11 @@ function cfBiharFee(v) {
                     askCf(qAI, lang, function (cfText) {
                       if (aiOk(cfText)) { done(cfText, builtin.sources, true); return; }
                       askNvidia(qAI, lang, function (nvText) {
-                        if (aiOk(nvText)) done(nvText, builtin.sources, true);
-                        else setTimeout(function () { if (counted) { try { window.LA_AUTH && window.LA_AUTH.refundQuota && window.LA_AUTH.refundQuota(); } catch (e) {} } done(builtin.html, builtin.sources, false, true); }, 350);
+                        if (aiOk(nvText)) { done(nvText, builtin.sources, true); return; }
+                        askKilo(qAI, lang, function (kiText) {
+                          if (aiOk(kiText)) done(kiText, builtin.sources, true);
+                          else setTimeout(function () { if (counted) { try { window.LA_AUTH && window.LA_AUTH.refundQuota && window.LA_AUTH.refundQuota(); } catch (e) {} } done(builtin.html, builtin.sources, false, true); }, 350);
+                        }, sys);
                       }, sys);
                     }, sys);
                   }, sys);
