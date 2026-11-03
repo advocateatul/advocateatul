@@ -4694,7 +4694,7 @@ function cfBiharFee(v) {
       function renderComparePanel() {
         var wrap = document.getElementById("compareTables");
         if (!wrap) return;
-        if (!cmpAkBound) { cmpAkBound = true; document.addEventListener("ak-data", function () { if (cmpOpenKey) renderComparePanel(); }); }
+        if (!cmpAkBound) { cmpAkBound = true; document.addEventListener("ak-data", function () { if (!cmpOpenKey) return; var akB = window.akAnchor, akC = null, akM = 0; try { if (akB) { akC = akB.capture(); akM = ++akB.tok.cur; } } catch (e) {} renderComparePanel(); try { if (akB && akC) akB.settle(akC, akB.tok, akM); } catch (e) {} }); }
         var data = getCompareData();
         if (!data) return;
         var lang = hubLang();
@@ -4710,7 +4710,7 @@ function cfBiharFee(v) {
           b.classList.toggle("active", b.getAttribute("data-cmp-lang") === lang);
           if (!b._cmpLangBound) {
             b._cmpLangBound = true;
-            b.addEventListener("click", function () { applyLanguage(b.getAttribute("data-cmp-lang")); });
+            b.addEventListener("click", function () { var l = b.getAttribute("data-cmp-lang"); if (window.akLangSwitch) window.akLangSwitch(l); else applyLanguage(l); });
           }
         });
         var nw = document.getElementById("compareNotes");
@@ -10569,30 +10569,90 @@ function cfBiharFee(v) {
       }
 
       /* Scroll-anchor helper (2026-11-02): a full re-render changes every height, so a numeric scrollY points at different content afterwards. Anchor the section in view instead: keep it at the same screen position across the re-render, and re-anchor once fonts/data settle — only if the user has not scrolled meanwhile. */
+      /* User-scroll flag (2026-11-03): the first re-anchor runs ~2 frames after
+         capture. If the user is dragging/wheeling in that window, restoring would
+         yank their scroll back — so any wheel/touch/scroll-key input since the
+         capture cancels the re-anchor (their scroll wins; native anchoring still
+         applies). The flag is reset at every capture. */
+      var akUserScroll = false;
+      try {
+        ["wheel", "touchmove"].forEach(function (ev) { document.addEventListener(ev, function () { akUserScroll = true; }, { passive: true }); });
+        document.addEventListener("keydown", function (e) { if (["ArrowUp", "ArrowDown", "PageUp", "PageDown", "Home", "End", " "].indexOf(e.key) !== -1) akUserScroll = true; });
+        /* Deliberate navigations also cancel a pending re-anchor (2026-11-03):
+           in-page anchor taps, hash jumps, and the scrollIntoView wrapper below
+           all mean the user chose a new position — a settle captured before the
+           jump must not drag the page back. Exposed globally so the collapse
+           script (a later script block) and the masthead handler can set it. */
+        window.akNoteScroll = function () { try { akUserScroll = true; } catch (e) {} };
+        document.addEventListener("click", function (e) { try { var a = e.target && e.target.closest ? e.target.closest('a[href^="#"]') : null; if (a) akUserScroll = true; } catch (e) {} }, true);
+        window.addEventListener("hashchange", function () { akUserScroll = true; });
+      } catch (e) {}
       function akCaptureAnchor() {
-        var cap = { sec: null, top: 0 };
+        var cap = { sec: null, top: 0, el: null };
+        akUserScroll = false;
         try {
-          var probe = document.elementFromPoint(Math.floor(window.innerWidth / 2), 130);
-          var sec = probe && probe.closest ? probe.closest("section") : null;
-          if (sec && sec.classList && sec.classList.contains("la-pane")) sec = null;
-          if (sec) { cap.sec = sec; cap.top = sec.getBoundingClientRect().top; }
+          /* Anchor v3 (2026-11-03): the old point probe at y=130 NEVER fired on
+             phones — the fixed masthead is ~197px tall there, so the probe hit
+             the header and no section was found. And a section top alone does
+             not hold the reading content: the section head above the list can
+             shrink/grow across languages, moving every card below it. So anchor
+             the section with the largest visible area below the header, and
+             hold its collapsible body wrapper (which persists across re-renders
+             — only its children are rebuilt). Holding the body top holds the
+             cards still; the head above it may shift, which is unavoidable
+             when the head itself changes height. */
+          var hdrH = 0;
+          try { var hdr = document.querySelector("header"); if (hdr) hdrH = hdr.getBoundingClientRect().height; } catch (e) {}
+          var viewTop = hdrH, viewBottom = window.innerHeight || 0;
+          var best = null, bestVis = 0;
+          var secs = document.querySelectorAll("section");
+          for (var i = 0; i < secs.length; i++) {
+            var s = secs[i];
+            if (s.classList && s.classList.contains("la-pane")) continue;
+            var r = s.getBoundingClientRect();
+            var vis = Math.max(0, Math.min(r.bottom, viewBottom) - Math.max(r.top, viewTop));
+            if (vis > bestVis) { bestVis = vis; best = s; }
+          }
+          if (best) {
+            cap.sec = best;
+            var body = null;
+            try { body = best.querySelector(":scope > .shell > .ak-sec-body, :scope > .ak-sec-body"); } catch (e) {}
+            var target = (body && body.getBoundingClientRect().height > 0) ? body : best;
+            cap.el = target;
+            cap.top = target.getBoundingClientRect().top;
+          }
         } catch (e) {}
         return cap;
       }
       function akRestoreAnchor(cap) {
         try {
-          if (!cap || !cap.sec || !cap.sec.getBoundingClientRect) return;
-          var dy = cap.sec.getBoundingClientRect().top - cap.top;
+          var target = (cap && cap.el && cap.el.isConnected) ? cap.el : (cap && cap.sec);
+          if (!target || !target.getBoundingClientRect) return;
+          var dy = target.getBoundingClientRect().top - cap.top;
           if (dy !== 0) window.scrollBy(0, dy);
         } catch (e) {}
       }
       function akSettleAnchor(cap, tokObj, mine) {
-        var restoredY = null;
-        function reanchor() { akRestoreAnchor(cap); restoredY = window.scrollY || 0; }
+        function reanchor() { if (akUserScroll) return; akRestoreAnchor(cap); }
         function reanchorIfStill() {
           try {
             if (tokObj && tokObj.cur !== mine) return;
-            if (restoredY !== null && Math.abs((window.scrollY || 0) - restoredY) <= 2) reanchor();
+            if (akUserScroll) return;
+            /* Velocity check (2026-11-03): correct the drift only if the page is
+               NOT currently scrolling. A late native-anchoring adjustment leaves
+               scrollY stable, so it gets corrected; a user/momentum scroll keeps
+               moving between frames, so it is left alone. (The old 2px test
+               blocked correction of genuine native drift, leaving the page
+               stuck off-position.) */
+            var y1 = window.scrollY || 0;
+            requestAnimationFrame(function () {
+              try {
+                if (tokObj && tokObj.cur !== mine) return;
+                if (akUserScroll) return;
+                if (Math.abs((window.scrollY || 0) - y1) > 2) return;
+                reanchor();
+              } catch (e) {}
+            });
           } catch (e) {}
         }
         requestAnimationFrame(function () {
@@ -11909,6 +11969,13 @@ function cfBiharFee(v) {
           if (akFab) akFab.addEventListener("click", function () { window.akLoad("legalDraftsData"); window.akLoad("usefulJudgementsData"); window.akLoad("legalVocabData"); }, { once: true });
           document.addEventListener("ak-data", function (e) {
             var akId = e && e.detail;
+            /* Anchor data-arrival re-renders too (2026-11-03): drafts/vocab/notes/
+               library/updates re-render when their JSON arrives (idle ~1.8s, or a
+               search/fab preload). A visitor who already opened a section — via a
+               saved open state or a fast menu jump — would otherwise see the page
+               jump mid-read. Same anchor as language switches, via the bridge. */
+            var akBridge = window.akAnchor, akCap = null, akMine = 0;
+            try { if (akBridge) { akCap = akBridge.capture(); akMine = ++akBridge.tok.cur; } } catch (akCapErr) {}
             try {
               if (akId === "legalDraftsData") { renderDrafts(); renderDraftGuide(); var akH = window.location.hash || ""; if (akH.indexOf("#draft-") === 0 && typeof jumpToDraft === "function") jumpToDraft(akH.slice(7)); }
               else if (akId === "usefulJudgementsData") { renderLibrary(); }
@@ -11920,6 +11987,7 @@ function cfBiharFee(v) {
               var akHs = document.getElementById("hubSearchInput");
               if (akHs && akHs.value.trim()) akHs.dispatchEvent(new Event("input", { bubbles: true }));
             } catch (akErr) {}
+            try { if (akBridge && akCap) akBridge.settle(akCap, akBridge.tok, akMine); } catch (akSettleErr) {}
           });
         }
         renderActiveUpdatesTab();
@@ -11961,6 +12029,7 @@ function cfBiharFee(v) {
         if (ident) {
           ident.addEventListener("click", function(e) {
             e.preventDefault();
+            try { if (window.akNoteScroll) window.akNoteScroll(); } catch (err) {}
             window.scrollTo({ top: 0, behavior: "smooth" });
             history.replaceState(null, "", "#top");
           });
@@ -11968,13 +12037,20 @@ function cfBiharFee(v) {
       }
 
       var akLangTok = { cur: 0 };
+      /* Shared language switch (2026-11-03): header buttons AND the Old↔New Laws
+         panel buttons use this one path, so every site-language switch gets the
+         same scroll anchor. Exposed on window because the anchor helpers are
+         IIFE-scoped (not global), while the compare panel binds in its own scope. */
+      window.akAnchor = { capture: akCaptureAnchor, settle: akSettleAnchor, tok: akLangTok };
+      window.akLangSwitch = function (lang) {
+        var cap = akCaptureAnchor();
+        var mine = ++akLangTok.cur;
+        applyLanguage(lang);
+        akSettleAnchor(cap, akLangTok, mine);
+      };
       document.querySelectorAll("[data-language]").forEach(function (button) {
         button.addEventListener("click", function () {
-          /* Anchor the in-view section across language switch (2026-11-02): a full re-render changes every height, so restoring numeric scrollY lands on different content and later font/data waves jump it again. Keep the same section at the same screen position instead. */
-          var cap = akCaptureAnchor();
-          var mine = ++akLangTok.cur;
-          applyLanguage(button.getAttribute("data-language"));
-          akSettleAnchor(cap, akLangTok, mine);
+          window.akLangSwitch(button.getAttribute("data-language"));
         });
       });
 
@@ -16413,6 +16489,7 @@ function cfBiharFee(v) {
   try {
     var orig = Element.prototype.scrollIntoView;
     Element.prototype.scrollIntoView = function () {
+      try { if (window.akNoteScroll) window.akNoteScroll(); } catch (e) {}
       try {
         var t = this;
         var sec = null;

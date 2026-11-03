@@ -195,7 +195,7 @@
     document.addEventListener("ak-data", onAk);
     setTimeout(function () { if (!done) { done = true; cb(); } }, 4000);
   }
-  var currentTopic = null, currentReport = null;
+  var currentTopic = null, currentReport = null, currentTopicBtn = null;
   function renderReport(topic) {
     currentTopic = topic;
     var box = document.getElementById("llReportOut");
@@ -242,7 +242,26 @@
     if (pr) pr.disabled = false;
   }
   function printReport() {
-    if (!currentTopic || !currentReport) return;
+    var box = document.getElementById("llReportOut");
+    function notice(msg) {
+      if (!box) return;
+      box.querySelectorAll(".ll-print-notice").forEach(function (n) { try { n.remove(); } catch (e) {} });
+      var p = document.createElement("p");
+      p.className = "ll-rep-note ll-print-notice";
+      p.textContent = msg;
+      box.appendChild(p);
+    }
+    function popupMsg() {
+      return lang() === "hi"
+        ? "प्रिंट नहीं खुला — कृपया ब्राउज़र में popup allow करें और दोबारा कोशिश करें।"
+        : "Print did not open — please allow popups in your browser and try again.";
+    }
+    if (!currentTopic || !currentReport) {
+      notice(lang() === "hi"
+        ? "पहले ऊपर दी गई सूची से कोई विषय चुनकर रिपोर्ट बनाएँ, फिर Print दबाएँ।"
+        : "Please pick a topic from the list above to build a report first, then press Print.");
+      return;
+    }
     var t = currentTopic, r = currentReport;
     var html = "<html><head><meta charset=\"utf-8\"><title>" + esc(t.en) + " — Research Report</title></head><body style=\"font-family:system-ui,sans-serif;line-height:1.6\">";
     html += "<h1>" + esc(t.en) + " · " + esc(t.hi) + "</h1><p>Sections: " + esc(t.sections.join(" · ")) + "</p>";
@@ -256,10 +275,40 @@
     html += grp("Study notes", r.notes, function (it) { return esc(it.titleEn) + " [" + esc(it.secs.join(", ")) + "]"; });
     html += grp("Drafts", r.drafts, function (it) { return esc(it.titleEn) + " [" + esc(it.secs.join(", ")) + "]"; });
     html += "<p><small>Study only, not legal advice. Always verify with the bare Act.</small></p></body></html>";
-    var w = window.open("", "_blank");
-    if (!w) return;
-    w.document.write(html); w.document.close();
-    setTimeout(function () { try { w.print(); } catch (e) {} }, 400);
+    function printViaIframe() {
+      try {
+        var f = document.createElement("iframe");
+        f.style.cssText = "position:fixed;right:0;bottom:0;width:0;height:0;border:0;";
+        document.body.appendChild(f);
+        var d = f.contentDocument || (f.contentWindow && f.contentWindow.document);
+        d.open(); d.write(html); d.close();
+        setTimeout(function () {
+          try { f.contentWindow.focus(); f.contentWindow.print(); }
+          catch (e) { notice(popupMsg()); }
+          setTimeout(function () { try { f.remove(); } catch (e2) {} }, 1000);
+        }, 400);
+        return true;
+      } catch (e) { return false; }
+    }
+    var w = null;
+    try { w = window.open("", "_blank"); } catch (e) { w = null; }
+    if (!w) {
+      if (!printViaIframe()) notice(popupMsg());
+      return;
+    }
+    try {
+      w.document.write(html); w.document.close();
+      setTimeout(function () {
+        try { w.print(); }
+        catch (e) {
+          try { w.close(); } catch (e2) {}
+          if (!printViaIframe()) notice(popupMsg());
+        }
+      }, 400);
+    } catch (e) {
+      try { w.close(); } catch (e2) {}
+      if (!printViaIframe()) notice(popupMsg());
+    }
   }
   function resolveInput(raw) {
     var q = String(raw || "").trim().toLowerCase();
@@ -303,6 +352,15 @@
         b.type = "button"; b.className = "vocab-cat ll-topic-btn";
         b.textContent = t.en + " · " + t.hi;
         b.addEventListener("click", function () {
+          if (currentTopic && currentTopic.id === t.id && currentTopicBtn === b) {
+            var out0 = document.getElementById("llReportOut");
+            if (out0) { out0.innerHTML = ""; placeReportHome(); }
+            currentTopic = null; currentReport = null; currentTopicBtn = null;
+            var pr0 = document.getElementById("llReportPrint");
+            if (pr0) pr0.disabled = true;
+            return;
+          }
+          currentTopicBtn = b;
           var out = placeReport(b);
           if (out) out.innerHTML = "<p>Loading… / लोड हो रहा है…</p>";
           try { if (b.scrollIntoView) b.scrollIntoView(); } catch (e) {}
