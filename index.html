@@ -1633,7 +1633,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
 <script>
 /* Round 2 data loader: bade datasets *.json se lazy-load hote hain */
 (function () {
-  var FILES = { legalDraftsData: "drafts.json", usefulJudgementsData: "judgements.json", legalVocabData: "vocab.json", dailyJudgementsArchive: "archive.json", handwrittenNotesData: "notes.json" };
+  var FILES = { legalDraftsData: "drafts.json", usefulJudgementsData: "judgements.json", legalVocabData: "vocab.json", dailyJudgementsArchive: "archive.json", handwrittenNotesData: "notes.json", bailRefData: "bailref.json" };
   window.AK_STORE = {};
   var PENDING = {};
   window.akLoad = function (id) {
@@ -2447,7 +2447,30 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
       </div>
     </section>
 
-    <section class="draft-guide" id="paper-decoder" aria-labelledby="paper-decoder-title">
+        <section class="draft-guide" id="bail-ref" aria-labelledby="bail-ref-title">
+      <div class="shell">
+        <div class="draft-guide-head reveal">
+          <div>
+            <p class="kicker">Bail at a glance · एक नज़र में ज़मानत</p>
+            <h2 id="bail-ref-title">⚖️ Bail & Punishment Quick Reference · ज़मानत व सज़ा — तुरंत संदर्भ</h2>
+          </div>
+          <p>Section number ya offence ka naam dalein — saza, zamaanati hai ya nahi, aur kaunsi court trial karegi, turant milega. Classification BNSS First Schedule ke hisab se hai. / धारा नंबर या अपराध का नाम डालें — सज़ा, ज़मानती है या नहीं, और कौनसी अदालत विचारण करेगी, तुरंत मिलेगा। वर्गीकरण BNSS की प्रथम अनुसूची के अनुसार है।</p>
+        </div>
+        <div class="section-search reveal" role="search">
+          <input type="search" id="bailRefSearch" placeholder="Search section or offence… / धारा या अपराध खोजें…" aria-label="Search bail reference" autocomplete="off" />
+        </div>
+        <div class="vocab-cats reveal" role="group" aria-label="Bail filter">
+          <button type="button" class="vocab-cat active" data-bail-chip="all">All · सभी</button>
+          <button type="button" class="vocab-cat" data-bail-chip="bailable">Bailable · ज़मानती</button>
+          <button type="button" class="vocab-cat" data-bail-chip="non">Non-bailable · गैर-ज़मानती</button>
+        </div>
+        <p class="drafts-note" id="bailRefCount"></p>
+        <div id="bailRefList"></div>
+        <p class="drafts-note reveal">Note: bailable ka matlab hai ki zamaanat adhikaar ke roop me milti hai (BNSS 478); non-bailable me zamaanat court ke vivek par hoti hai (BNSS 480). Ye samanya jaankari hai — apne case ke liye apne vakil se poochhein. / Note: ज़मानती का अर्थ है कि ज़मानत अधिकार के रूप में मिलती है (BNSS 478); गैर-ज़मानती में ज़मानत न्यायालय के विवेक पर होती है (BNSS 480)। यह सामान्य जानकारी है — अपने मामले के लिए अपने वकील से पूछें।</p>
+      </div>
+    </section>
+
+<section class="draft-guide" id="paper-decoder" aria-labelledby="paper-decoder-title">
       <div class="shell">
         <div class="draft-guide-head reveal">
           <div>
@@ -11425,7 +11448,38 @@ function cfBiharFee(v) {
         } catch (e2) {}
         return out;
       }
-      function renderDocChecklist() {
+            var bailRefQuery = "";
+      var bailRefFilter = "all";
+      function getBailRefData() { try { return (window.AK_STORE && window.AK_STORE.bailRefData) || null; } catch (e) { return null; } }
+      function renderBailRef() {
+        var list = document.getElementById("bailRefList"); if (!list) return;
+        var data = getBailRefData();
+        if (!data) { list.innerHTML = "<p class=\"drafts-note\">Loading bail reference… / ज़मानत संदर्भ लोड हो रहा है…</p>"; try { if (window.akLoad) window.akLoad("bailRefData"); } catch (e) {} return; }
+        var rows = (data.rows || []);
+        var q = (bailRefQuery || "").toLowerCase();
+        var out = ""; var n = 0;
+        rows.forEach(function (r) {
+          if (bailRefFilter === "bailable" && !r.bailable) return;
+          if (bailRefFilter === "non" && r.bailable) return;
+          var hay = ((r.sec || "") + " " + ((r.offence && r.offence.en) || "") + " " + ((r.offence && r.offence.hi) || "")).toLowerCase();
+          if (q && hay.indexOf(q) < 0) return;
+          n++;
+          var badge = r.bailable ? "Bailable · ज़मानती" : "Non-bailable · गैर-ज़मानती";
+          out += "<details class=\"rights-guide\"><summary>BNS " + escapeHtml(r.sec) + " · " + escapeHtml(r.offence.en) + " · " + escapeHtml(r.offence.hi) + " — " + escapeHtml(badge) + "</summary>";
+          out += "<p class=\"rights-when\">Punishment: " + escapeHtml(r.punishment.en) + "<br>सज़ा: " + escapeHtml(r.punishment.hi) + "</p>";
+          out += "<p class=\"rights-sections\">Court: " + escapeHtml(r.court.en) + " · " + escapeHtml(r.court.hi) + "</p></details>";
+        });
+        list.innerHTML = out || "<p class=\"drafts-note\">No section matches — try another section number or offence name. / कोई धारा नहीं मिली — दूसरा धारा नंबर या अपराध का नाम डालें।</p>";
+        var cnt = document.getElementById("bailRefCount"); if (cnt) cnt.textContent = n + " / " + rows.length + " sections · धाराएँ";
+        var chips = document.querySelectorAll("[data-bail-chip]"); chips.forEach(function (c) { c.classList.toggle("active", c.getAttribute("data-bail-chip") === bailRefFilter); });
+      }
+      function initBailRef() {
+        if (window.__bailRefBound) return; window.__bailRefBound = true;
+        var inp = document.getElementById("bailRefSearch");
+        if (inp) { inp.addEventListener("input", function () { bailRefQuery = inp.value; renderBailRef(); }); inp.addEventListener("focus", function () { try { if (window.akLoad) window.akLoad("bailRefData"); } catch (e) {} }, { once: true }); }
+        document.querySelectorAll("[data-bail-chip]").forEach(function (c) { c.addEventListener("click", function () { bailRefFilter = c.getAttribute("data-bail-chip"); renderBailRef(); }); });
+      }
+function renderDocChecklist() {
         var res = document.getElementById("docCheckResults");
         var sel = document.getElementById("docCheckSelected");
         var inp = document.getElementById("docCheckSearch");
@@ -12335,7 +12389,7 @@ function cfBiharFee(v) {
               else if (akId === "usefulJudgementsData") { renderLibrary(); }
               else if (akId === "dailyJudgementsArchive") { renderActiveUpdatesTab(); }
               else if (akId === "legalVocabData") { renderVocabCats(); renderVocabList(); }
-              else if (akId === "handwrittenNotesData") { renderNotes(); }
+              else if (akId === "handwrittenNotesData") { renderNotes(); } else if (akId === "bailRefData") { renderBailRef(); }
               var akTs = document.getElementById("topSearchInput");
               if (akTs && akTs.value.trim()) akTs.dispatchEvent(new Event("input", { bubbles: true }));
               var akHs = document.getElementById("hubSearchInput");
@@ -12356,6 +12410,7 @@ function cfBiharFee(v) {
         renderGenDocs();
         renderDocChecklist();
         initDeadlineCalc();
+        initBailRef(); renderBailRef();
         initStickyHeader();
         /* Deep-link: #draft-<id> opens that draft directly */
         (function () {
@@ -16780,7 +16835,7 @@ function cfBiharFee(v) {
 (function () {
   if (window.__akCollapseDone) return;
   window.__akCollapseDone = true;
-  var TARGETS = ['practice', 'ecourts-help', 'updates', 'library', 'linkDirectory', 'knowledge', 'citizen-rights', 'paper-decoder', 'arrest-timeline', 'deadline-calc', 'documents', 'drafts', 'draft-guide', 'general-docs', 'doc-checklist', 'legal-analysis', 'exam-prep', 'notes', 'vocabulary', 'll-journey', 'll-research'];
+  var TARGETS = ['practice', 'ecourts-help', 'updates', 'library', 'linkDirectory', 'knowledge', 'citizen-rights', 'bail-ref', 'paper-decoder', 'arrest-timeline', 'deadline-calc', 'documents', 'drafts', 'draft-guide', 'general-docs', 'doc-checklist', 'legal-analysis', 'exam-prep', 'notes', 'vocabulary', 'll-journey', 'll-research'];
   var SHOW = '▼ Show content · सामग्री दिखाएँ';
   var HIDE = '▲ Hide content · सामग्री छिपाएँ';
   var saved = {};

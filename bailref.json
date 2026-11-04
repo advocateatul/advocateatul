@@ -1,0 +1,420 @@
+{
+  "rows": [
+    {
+      "sec": "64(1)",
+      "offence": {
+        "en": "Rape",
+        "hi": "बलात्कार"
+      },
+      "punishment": {
+        "en": "Rigorous imprisonment for not less than 10 years, up to imprisonment for life, and fine",
+        "hi": "कम से कम 10 वर्ष का सश्रम कारावास, जो आजीवन कारावास तक हो सकता है, और जुर्माना"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Court of Session",
+        "hi": "सत्र न्यायालय"
+      }
+    },
+    {
+      "sec": "85",
+      "offence": {
+        "en": "Cruelty by husband or relatives of husband",
+        "hi": "पति या पति के रिश्तेदारों द्वारा क्रूरता"
+      },
+      "punishment": {
+        "en": "Imprisonment up to 3 years and fine",
+        "hi": "3 वर्ष तक का कारावास और जुर्माना"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Magistrate of the first class",
+        "hi": "प्रथम श्रेणी मजिस्ट्रेट"
+      }
+    },
+    {
+      "sec": "103(1)",
+      "offence": {
+        "en": "Murder",
+        "hi": "हत्या"
+      },
+      "punishment": {
+        "en": "Death or imprisonment for life, and fine",
+        "hi": "मृत्युदंड या आजीवन कारावास, और जुर्माना"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Court of Session",
+        "hi": "सत्र न्यायालय"
+      }
+    },
+    {
+      "sec": "103(2)",
+      "offence": {
+        "en": "Murder by a group of five or more persons",
+        "hi": "पाँच या अधिक व्यक्तियों के समूह द्वारा हत्या"
+      },
+      "punishment": {
+        "en": "Death or imprisonment for life, and fine",
+        "hi": "मृत्युदंड या आजीवन कारावास, और जुर्माना"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Court of Session",
+        "hi": "सत्र न्यायालय"
+      }
+    },
+    {
+      "sec": "104",
+      "offence": {
+        "en": "Murder by a life-convict",
+        "hi": "आजीवन कारावास की सज़ा भुगत रहे व्यक्ति द्वारा हत्या"
+      },
+      "punishment": {
+        "en": "Death or imprisonment for life, which shall mean imprisonment for the remainder of that person's natural life",
+        "hi": "मृत्युदंड या आजीवन कारावास, जिसका अर्थ उस व्यक्ति के प्राकृतिक जीवन के शेष भाग तक कारावास होगा"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Court of Session",
+        "hi": "सत्र न्यायालय"
+      }
+    },
+    {
+      "sec": "105",
+      "offence": {
+        "en": "Culpable homicide not amounting to murder",
+        "hi": "हत्या की श्रेणी में न आने वाला सदोष मानव वध"
+      },
+      "punishment": {
+        "en": "Imprisonment for life, or 5 to 10 years and fine, if done with intention; up to 10 years and fine, if done with knowledge",
+        "hi": "आशय से किए जाने पर आजीवन कारावास, या 5 से 10 वर्ष तक का कारावास और जुर्माना; ज्ञान से किए जाने पर 10 वर्ष तक का कारावास और जुर्माना"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Court of Session",
+        "hi": "सत्र न्यायालय"
+      }
+    },
+    {
+      "sec": "106(1)",
+      "offence": {
+        "en": "Causing death by negligence",
+        "hi": "उपेक्षा से मृत्यु कारित करना"
+      },
+      "punishment": {
+        "en": "Imprisonment up to 5 years and fine; up to 2 years and fine, if done by a registered medical practitioner during a medical procedure",
+        "hi": "5 वर्ष तक का कारावास और जुर्माना; चिकित्सा प्रक्रिया के दौरान पंजीकृत चिकित्सक द्वारा किए जाने पर 2 वर्ष तक का कारावास और जुर्माना"
+      },
+      "bailable": true,
+      "court": {
+        "en": "Magistrate of the first class",
+        "hi": "प्रथम श्रेणी मजिस्ट्रेट"
+      }
+    },
+    {
+      "sec": "107",
+      "offence": {
+        "en": "Abetment of suicide of a child or person of unsound mind",
+        "hi": "बच्चे या विकृतचित्त व्यक्ति की आत्महत्या का दुष्प्रेरण"
+      },
+      "punishment": {
+        "en": "Death, imprisonment for life, or imprisonment up to 10 years, and fine",
+        "hi": "मृत्युदंड, आजीवन कारावास, या 10 वर्ष तक का कारावास, और जुर्माना"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Court of Session",
+        "hi": "सत्र न्यायालय"
+      }
+    },
+    {
+      "sec": "108",
+      "offence": {
+        "en": "Abetment of suicide",
+        "hi": "आत्महत्या का दुष्प्रेरण"
+      },
+      "punishment": {
+        "en": "Imprisonment up to 10 years and fine",
+        "hi": "10 वर्ष तक का कारावास और जुर्माना"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Court of Session",
+        "hi": "सत्र न्यायालय"
+      }
+    },
+    {
+      "sec": "109(1)",
+      "offence": {
+        "en": "Attempt to murder",
+        "hi": "हत्या का प्रयास"
+      },
+      "punishment": {
+        "en": "Imprisonment up to 10 years and fine; if hurt is caused, imprisonment for life or the same punishment",
+        "hi": "10 वर्ष तक का कारावास और जुर्माना; चोट पहुँचने पर आजीवन कारावास या वही सज़ा"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Court of Session",
+        "hi": "सत्र न्यायालय"
+      }
+    },
+    {
+      "sec": "109(2)",
+      "offence": {
+        "en": "Attempt to murder by a life-convict, hurt caused",
+        "hi": "आजीवन कारावास की सज़ा भुगत रहे व्यक्ति द्वारा हत्या का प्रयास, चोट पहुँचने पर"
+      },
+      "punishment": {
+        "en": "Death or imprisonment for life",
+        "hi": "मृत्युदंड या आजीवन कारावास"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Court of Session",
+        "hi": "सत्र न्यायालय"
+      }
+    },
+    {
+      "sec": "110",
+      "offence": {
+        "en": "Attempt to commit culpable homicide",
+        "hi": "सदोष मानव वध करने का प्रयास"
+      },
+      "punishment": {
+        "en": "Imprisonment up to 3 years, or fine, or both; up to 7 years, or fine, or both, if hurt is caused",
+        "hi": "3 वर्ष तक का कारावास, या जुर्माना, या दोनों; चोट पहुँचने पर 7 वर्ष तक का कारावास, या जुर्माना, या दोनों"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Court of Session",
+        "hi": "सत्र न्यायालय"
+      }
+    },
+    {
+      "sec": "115(2)",
+      "offence": {
+        "en": "Voluntarily causing hurt",
+        "hi": "स्वेच्छा से उपहति कारित करना"
+      },
+      "punishment": {
+        "en": "Imprisonment up to 1 year, or fine up to Rs 10,000, or both",
+        "hi": "1 वर्ष तक का कारावास, या 10,000 रुपये तक का जुर्माना, या दोनों"
+      },
+      "bailable": true,
+      "court": {
+        "en": "Any Magistrate",
+        "hi": "कोई भी मजिस्ट्रेट"
+      }
+    },
+    {
+      "sec": "117(2)",
+      "offence": {
+        "en": "Voluntarily causing grievous hurt",
+        "hi": "स्वेच्छा से गंभीर उपहति कारित करना"
+      },
+      "punishment": {
+        "en": "Imprisonment up to 7 years and fine",
+        "hi": "7 वर्ष तक का कारावास और जुर्माना"
+      },
+      "bailable": true,
+      "court": {
+        "en": "Any Magistrate",
+        "hi": "कोई भी मजिस्ट्रेट"
+      }
+    },
+    {
+      "sec": "117(3)",
+      "offence": {
+        "en": "Hurt causing permanent disability or persistent vegetative state",
+        "hi": "स्थायी विकलांगता या निरंतर वनस्पति अवस्था वाली चोट"
+      },
+      "punishment": {
+        "en": "Rigorous imprisonment for not less than 10 years, up to imprisonment for life, which shall mean imprisonment for the remainder of that person's natural life",
+        "hi": "कम से कम 10 वर्ष का सश्रम कारावास, जो आजीवन कारावास (प्राकृतिक जीवन के शेष भाग) तक हो सकता है"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Court of Session",
+        "hi": "सत्र न्यायालय"
+      }
+    },
+    {
+      "sec": "117(4)",
+      "offence": {
+        "en": "Grievous hurt by a group of five or more persons",
+        "hi": "पाँच या अधिक व्यक्तियों के समूह द्वारा गंभीर उपहति"
+      },
+      "punishment": {
+        "en": "Imprisonment up to 7 years and fine",
+        "hi": "7 वर्ष तक का कारावास और जुर्माना"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Court of Session",
+        "hi": "सत्र न्यायालय"
+      }
+    },
+    {
+      "sec": "118(1)",
+      "offence": {
+        "en": "Voluntarily causing hurt by dangerous weapons or means",
+        "hi": "खतरनाक हथियारों या साधनों से स्वेच्छा से उपहति कारित करना"
+      },
+      "punishment": {
+        "en": "Imprisonment up to 3 years, or fine up to Rs 20,000, or both",
+        "hi": "3 वर्ष तक का कारावास, या 20,000 रुपये तक का जुर्माना, या दोनों"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Any Magistrate",
+        "hi": "कोई भी मजिस्ट्रेट"
+      }
+    },
+    {
+      "sec": "126(2)",
+      "offence": {
+        "en": "Wrongful restraint",
+        "hi": "सदोष अवरोध"
+      },
+      "punishment": {
+        "en": "Simple imprisonment up to 1 month, or fine up to Rs 5,000, or both",
+        "hi": "1 मास तक का सादा कारावास, या 5,000 रुपये तक का जुर्माना, या दोनों"
+      },
+      "bailable": true,
+      "court": {
+        "en": "Any Magistrate",
+        "hi": "कोई भी मजिस्ट्रेट"
+      }
+    },
+    {
+      "sec": "127(2)",
+      "offence": {
+        "en": "Wrongful confinement",
+        "hi": "सदोष परिरोध"
+      },
+      "punishment": {
+        "en": "Imprisonment up to 1 year, or fine up to Rs 5,000, or both",
+        "hi": "1 वर्ष तक का कारावास, या 5,000 रुपये तक का जुर्माना, या दोनों"
+      },
+      "bailable": true,
+      "court": {
+        "en": "Any Magistrate",
+        "hi": "कोई भी मजिस्ट्रेट"
+      }
+    },
+    {
+      "sec": "127(3)",
+      "offence": {
+        "en": "Wrongful confinement for three days or more",
+        "hi": "तीन दिन या अधिक समय तक सदोष परिरोध"
+      },
+      "punishment": {
+        "en": "Imprisonment up to 3 years, or fine up to Rs 10,000, or both",
+        "hi": "3 वर्ष तक का कारावास, या 10,000 रुपये तक का जुर्माना, या दोनों"
+      },
+      "bailable": true,
+      "court": {
+        "en": "Any Magistrate",
+        "hi": "कोई भी मजिस्ट्रेट"
+      }
+    },
+    {
+      "sec": "127(4)",
+      "offence": {
+        "en": "Wrongful confinement for ten days or more",
+        "hi": "दस दिन या अधिक समय तक सदोष परिरोध"
+      },
+      "punishment": {
+        "en": "Imprisonment up to 5 years and fine of not less than Rs 10,000",
+        "hi": "5 वर्ष तक का कारावास और कम से कम 10,000 रुपये का जुर्माना"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Magistrate of the first class",
+        "hi": "प्रथम श्रेणी मजिस्ट्रेट"
+      }
+    },
+    {
+      "sec": "137(2)",
+      "offence": {
+        "en": "Kidnapping",
+        "hi": "व्यपहरण"
+      },
+      "punishment": {
+        "en": "Imprisonment up to 7 years and fine",
+        "hi": "7 वर्ष तक का कारावास और जुर्माना"
+      },
+      "bailable": true,
+      "court": {
+        "en": "Magistrate of the first class",
+        "hi": "प्रथम श्रेणी मजिस्ट्रेट"
+      }
+    },
+    {
+      "sec": "303(2)",
+      "offence": {
+        "en": "Theft",
+        "hi": "चोरी"
+      },
+      "punishment": {
+        "en": "Imprisonment up to 3 years, or fine, or both",
+        "hi": "3 वर्ष तक का कारावास, या जुर्माना, या दोनों"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Any Magistrate",
+        "hi": "कोई भी मजिस्ट्रेट"
+      }
+    },
+    {
+      "sec": "318(2)",
+      "offence": {
+        "en": "Cheating",
+        "hi": "छल"
+      },
+      "punishment": {
+        "en": "Imprisonment up to 3 years, or fine, or both",
+        "hi": "3 वर्ष तक का कारावास, या जुर्माना, या दोनों"
+      },
+      "bailable": true,
+      "court": {
+        "en": "Any Magistrate",
+        "hi": "कोई भी मजिस्ट्रेट"
+      }
+    },
+    {
+      "sec": "318(3)",
+      "offence": {
+        "en": "Cheating where the cheater was bound to protect the victim's interest",
+        "hi": "पीड़ित के हित की रक्षा के लिए बाध्य व्यक्ति द्वारा छल"
+      },
+      "punishment": {
+        "en": "Imprisonment up to 5 years, or fine, or both",
+        "hi": "5 वर्ष तक का कारावास, या जुर्माना, या दोनों"
+      },
+      "bailable": true,
+      "court": {
+        "en": "Any Magistrate",
+        "hi": "कोई भी मजिस्ट्रेट"
+      }
+    },
+    {
+      "sec": "318(4)",
+      "offence": {
+        "en": "Cheating and dishonestly inducing delivery of property",
+        "hi": "छल करके संपत्ति का बेईमानी से परिदान कराना"
+      },
+      "punishment": {
+        "en": "Imprisonment up to 7 years and fine",
+        "hi": "7 वर्ष तक का कारावास और जुर्माना"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Magistrate of the first class",
+        "hi": "प्रथम श्रेणी मजिस्ट्रेट"
+      }
+    }
+  ]
+}
