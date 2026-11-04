@@ -4114,7 +4114,7 @@
     },
     {
      "en": "The written statement under Order VIII is the defendant's reply, and time matters: file it within 30 days, extendable to 90, and now 120 with costs. One more trap — a vague, evasive denial will not do; you must deny each allegation specifically.",
-     "hi": "लिखित कथन प्रतिवादी का जवाब है, और समय यहाँ जान है — 30 दिन में दाख़िल करो, 90 तक बढ़ सकता है, अब खर्चे के साथ 120 तक। और गोलमोल इनकार से काम नहीं चलेगा, हर आरोप का साफ़-साफ़ खंडन करना होगा।"
+     "hi": "लिखित कथन (आदेश VIII) प्रतिवादी का जवाब है, और समय यहाँ जान है — 30 दिन में दाख़िल करो, 90 तक बढ़ सकता है, अब खर्चे के साथ 120 तक। और गोलमोल इनकार से काम नहीं चलेगा, हर आरोप का साफ़-साफ़ खंडन करना होगा।"
     },
     {
      "en": "Set-off and counter-claim sound similar but are not the same. Set-off (Order VIII Rule 6) is when the defendant says, you owe me an ascertained sum of money too, adjust it in this very suit — while a counter-claim (Rule 6A) is the defendant's own separate claim, treated like a cross-suit.",
@@ -4136,7 +4136,7 @@
    "points": [
     {
      "en": "A civil trial moves in a fixed order, so learn the sequence: issues are framed (Order XIV), then the plaintiff's evidence, then the defendant's evidence, then arguments, then judgment. Issues are simply the disputed facts or law that come out of the pleadings.",
-     "hi": "दीवानी ट्रायल एक तय क्रम में चलता है — पहले वादपद बनते हैं, फिर वादी के सबूत, फिर प्रतिवादी के सबूत, फिर बहस, फिर फ़ैसला। वादपद मतलब वो तथ्य या क़ानूनी सवाल जिन पर दोनों पक्षों में झगड़ा है।"
+     "hi": "दीवानी ट्रायल एक तय क्रम में चलता है — पहले वादपद बनते हैं (आदेश XIV), फिर वादी के सबूत, फिर प्रतिवादी के सबूत, फिर बहस, फिर फ़ैसला। वादपद मतलब वो तथ्य या क़ानूनी सवाल जिन पर दोनों पक्षों में झगड़ा है।"
     },
     {
      "en": "Burden of proof in civil cases is lighter than in criminal cases, and that is the key difference to remember. The plaintiff only has to prove the case on a preponderance of probability — more likely than not — not beyond reasonable doubt.",
@@ -4148,7 +4148,7 @@
     },
     {
      "en": "Judgment under Order XX should be pronounced in open court within 30 days of arguments. And it cannot be vague — it must decide all the issues, with reasons for each.",
-     "hi": "फ़ैसला बहस ख़त्म होने के 30 दिन के अंदर खुले कोर्ट में सुनाया जाना चाहिए। और अधूरा नहीं चलेगा — हर वादपद का फ़ैसला कारणों के साथ होना चाहिए।"
+     "hi": "फ़ैसला (आदेश XX) बहस ख़त्म होने के 30 दिन के अंदर खुले कोर्ट में सुनाया जाना चाहिए। और अधूरा नहीं चलेगा — हर वादपद का फ़ैसला कारणों के साथ होना चाहिए।"
     },
     {
      "en": "If the defendant simply does not turn up, the court can proceed ex parte and pass a decree. The defendant is not helpless, though — they can apply under Order IX Rule 13 to set it aside, but they must show sufficient cause for their absence.",
@@ -4242,7 +4242,7 @@
     },
     {
      "en": "Interim relief is not limited to injunctions. In suits, you can also get appointment of a receiver (Order XL) or interim sale of perishables — things that would rot or lose value if you waited for the final decree.",
-     "hi": "अंतरिम राहत सिर्फ़ निषेधाज्ञा तक सीमित नहीं है। वाद में रिसीवर की नियुक्ति भी हो सकती है, और जो चीज़ें सड़ सकती हैं या जिनकी क़ीमत घट सकती है, उनकी अंतरिम बिक्री भी — फ़ाइनल फ़ैसले का इंतज़ार करने से नुक़सान होता।"
+     "hi": "अंतरिम राहत सिर्फ़ निषेधाज्ञा तक सीमित नहीं है। वाद में रिसीवर की नियुक्ति (आदेश XL) भी हो सकती है, और जो चीज़ें सड़ सकती हैं या जिनकी क़ीमत घट सकती है, उनकी अंतरिम बिक्री भी — फ़ाइनल फ़ैसले का इंतज़ार करने से नुक़सान होता।"
     }
    ]
   },
@@ -4377,7 +4377,7 @@
    "points": [
     {
      "en": "Interim orders are temporary directions passed while a suit is still pending, just to preserve the subject matter. The main kinds are temporary injunctions (Order XXXIX), stay of proceedings, and status quo orders.",
-     "hi": "अंतरिम आदेश मुकदमा चलते हुए दिए जाने वाले अस्थायी निर्देश हैं, ताकि बीच में विषय-वस्तु सुरक्षित रहे। मुख्य तरह हैं — अस्थायी निषेधाज्ञा, कार्यवाही पर रोक, और यथास्थिति का आदेश।"
+     "hi": "अंतरिम आदेश मुकदमा चलते हुए दिए जाने वाले अस्थायी निर्देश हैं, ताकि बीच में विषय-वस्तु सुरक्षित रहे। मुख्य तरह हैं — अस्थायी निषेधाज्ञा (आदेश XXXIX), कार्यवाही पर रोक, और यथास्थिति का आदेश।"
     },
     {
      "en": "A temporary injunction needs all three tests together, not just one: prima facie case, balance of convenience in the applicant's favour, and irreparable injury if it is refused. Miss one, and the injunction usually fails.",
@@ -4393,7 +4393,7 @@
     },
     {
      "en": "Interim orders can be appealed (Order XLIII), and they are not set in stone. If circumstances change, or if the applicant suppressed material facts, they can be vacated or modified — and suppression alone can invite vacation with costs.",
-     "hi": "अंतरिम आदेशों के ख़िलाफ़ अपील हो सकती है, और ये पत्थर की लकीर नहीं हैं। हालात बदल जाएँ या आवेदक ने ज़रूरी तथ्य छिपाए हों, तो इन्हें रद्द या बदला जा सकता है — तथ्य छिपाना अकेले ही खर्च सहित रद्दीकरण की वजह बन सकता है।"
+     "hi": "अंतरिम आदेशों के ख़िलाफ़ अपील (आदेश XLIII) हो सकती है, और ये पत्थर की लकीर नहीं हैं। हालात बदल जाएँ या आवेदक ने ज़रूरी तथ्य छिपाए हों, तो इन्हें रद्द या बदला जा सकता है — तथ्य छिपाना अकेले ही खर्च सहित रद्दीकरण की वजह बन सकता है।"
     }
    ],
    "sections": "Order XXXIX, XLI Rule 5, XLIII CPC",
@@ -4509,7 +4509,7 @@
     },
     {
      "en": "Objections have their own tracks: under Order XXI Rule 58, a third party claiming interest in attached property may object. Under Rules 97-103, resistance or obstruction to delivery of possession is decided by the executing court itself, and its order is treated as a decree (so appealable) — meaning a separate suit is barred by Rule 101.",
-     "hi": "आपत्तियों के अपने रास्ते हैं — नियम 58 में कुर्क संपत्ति में हित जताने वाला तीसरा पक्ष आपत्ति कर सकता है। नियम 97-103 में कब्ज़ा देने में रुकावट का फ़ैसला निष्पादन कोर्ट खुद करती है, और उसका आदेश डिक्री माना जाता है, यानी अपील हो सकती है, और नियम 101 से अलग वाद वर्जित है।"
+     "hi": "आपत्तियों के अपने रास्ते हैं — आदेश XXI नियम 58 में कुर्क संपत्ति में हित जताने वाला तीसरा पक्ष आपत्ति कर सकता है। नियम 97-103 में कब्ज़ा देने में रुकावट का फ़ैसला निष्पादन कोर्ट खुद करती है, और उसका आदेश डिक्री माना जाता है, यानी अपील हो सकती है, और नियम 101 से अलग वाद वर्जित है।"
     },
     {
      "en": "Limitation here is 12 years for execution of a decree (Article 136, Limitation Act, 1963), except a decree for mandatory injunction, which gets 3 years. And notice under Rule 22 is mandatory when execution is sought more than 2 years after the decree, or against legal representatives.",
