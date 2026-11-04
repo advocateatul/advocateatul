@@ -1569,6 +1569,310 @@
       }
     },
     {
+      "sec": "304(2)",
+      "offence": {
+        "en": "Snatching",
+        "hi": "झपटमारी"
+      },
+      "punishment": {
+        "en": "Imprisonment for 3 years and fine",
+        "hi": "3 वर्ष का कारावास और जुर्माना"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Any Magistrate",
+        "hi": "कोई भी मजिस्ट्रेट"
+      }
+    },
+    {
+      "sec": "308(2)",
+      "offence": {
+        "en": "Extortion",
+        "hi": "उद्धापन"
+      },
+      "punishment": {
+        "en": "Imprisonment for 7 years, or fine, or both",
+        "hi": "7 वर्ष का कारावास, या जुर्माना, या दोनों"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Magistrate of the first class",
+        "hi": "प्रथम श्रेणी मजिस्ट्रेट"
+      }
+    },
+    {
+      "sec": "308(3)",
+      "offence": {
+        "en": "Putting or attempting to put a person in fear of injury, in order to commit extortion",
+        "hi": "उद्धापन करने हेतु किसी व्यक्ति को क्षति के भय में डालना या डालने का प्रयास"
+      },
+      "punishment": {
+        "en": "Imprisonment for 2 years, or fine, or both",
+        "hi": "2 वर्ष का कारावास, या जुर्माना, या दोनों"
+      },
+      "bailable": true,
+      "court": {
+        "en": "Any Magistrate",
+        "hi": "कोई भी मजिस्ट्रेट"
+      }
+    },
+    {
+      "sec": "308(4)",
+      "offence": {
+        "en": "Putting or attempting to put a person in fear of death or grievous hurt, in order to commit extortion",
+        "hi": "उद्धापन करने हेतु किसी व्यक्ति को मृत्यु या गंभीर उपहति के भय में डालना या डालने का प्रयास"
+      },
+      "punishment": {
+        "en": "Imprisonment for up to 7 years and fine",
+        "hi": "7 वर्ष तक का कारावास और जुर्माना"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Magistrate of the first class",
+        "hi": "प्रथम श्रेणी मजिस्ट्रेट"
+      }
+    },
+    {
+      "sec": "308(5)",
+      "offence": {
+        "en": "Extortion by putting a person in fear of death or grievous hurt",
+        "hi": "किसी व्यक्ति को मृत्यु या गंभीर उपहति के भय में डालकर उद्धापन"
+      },
+      "punishment": {
+        "en": "Imprisonment for 10 years and fine",
+        "hi": "10 वर्ष का कारावास और जुर्माना"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Magistrate of the first class",
+        "hi": "प्रथम श्रेणी मजिस्ट्रेट"
+      }
+    },
+    {
+      "sec": "308(6)",
+      "offence": {
+        "en": "Putting or attempting to put a person in fear of accusation of an offence punishable with death, imprisonment for life, or imprisonment for 10 years, in order to commit extortion",
+        "hi": "उद्धापन करने हेतु मृत्यु, आजीवन कारावास या 10 वर्ष के कारावास से दंडनीय अपराध के आरोप के भय में डालना या डालने का प्रयास"
+      },
+      "punishment": {
+        "en": "Imprisonment for up to 10 years and fine",
+        "hi": "10 वर्ष तक का कारावास और जुर्माना"
+      },
+      "bailable": true,
+      "court": {
+        "en": "Magistrate of the first class",
+        "hi": "प्रथम श्रेणी मजिस्ट्रेट"
+      }
+    },
+    {
+      "sec": "308(7)",
+      "offence": {
+        "en": "Extortion by threat of accusation of an offence punishable with death, imprisonment for life, or imprisonment for 10 years",
+        "hi": "मृत्यु, आजीवन कारावास या 10 वर्ष के कारावास से दंडनीय अपराध के आरोप की धमकी देकर उद्धापन"
+      },
+      "punishment": {
+        "en": "Imprisonment for up to 10 years and fine",
+        "hi": "10 वर्ष तक का कारावास और जुर्माना"
+      },
+      "bailable": true,
+      "court": {
+        "en": "Magistrate of the first class",
+        "hi": "प्रथम श्रेणी मजिस्ट्रेट"
+      }
+    },
+    {
+      "sec": "309(4)",
+      "offence": {
+        "en": "Robbery",
+        "hi": "लूट"
+      },
+      "punishment": {
+        "en": "Rigorous imprisonment for up to 10 years and fine; up to 14 years if committed on a highway between sunset and sunrise",
+        "hi": "10 वर्ष तक का सश्रम कारावास और जुर्माना; सूर्यास्त से सूर्योदय के बीच राजमार्ग पर लूट होने पर 14 वर्ष तक"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Magistrate of the first class",
+        "hi": "प्रथम श्रेणी मजिस्ट्रेट"
+      }
+    },
+    {
+      "sec": "309(5)",
+      "offence": {
+        "en": "Attempt to commit robbery",
+        "hi": "लूट करने का प्रयास"
+      },
+      "punishment": {
+        "en": "Rigorous imprisonment for 7 years and fine",
+        "hi": "7 वर्ष का सश्रम कारावास और जुर्माना"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Magistrate of the first class",
+        "hi": "प्रथम श्रेणी मजिस्ट्रेट"
+      }
+    },
+    {
+      "sec": "309(6)",
+      "offence": {
+        "en": "Voluntarily causing hurt in committing or attempting to commit robbery",
+        "hi": "लूट करते या लूट का प्रयास करते समय स्वेच्छा से उपहति कारित करना"
+      },
+      "punishment": {
+        "en": "Imprisonment for life, or rigorous imprisonment for 10 years, and fine",
+        "hi": "आजीवन कारावास, या 10 वर्ष का सश्रम कारावास, और जुर्माना"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Magistrate of the first class",
+        "hi": "प्रथम श्रेणी मजिस्ट्रेट"
+      }
+    },
+    {
+      "sec": "310(2)",
+      "offence": {
+        "en": "Dacoity",
+        "hi": "डकैती"
+      },
+      "punishment": {
+        "en": "Imprisonment for life, or rigorous imprisonment for 10 years, and fine",
+        "hi": "आजीवन कारावास, या 10 वर्ष का सश्रम कारावास, और जुर्माना"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Court of Session",
+        "hi": "सत्र न्यायालय"
+      }
+    },
+    {
+      "sec": "310(3)",
+      "offence": {
+        "en": "Murder in dacoity",
+        "hi": "डकैती में हत्या"
+      },
+      "punishment": {
+        "en": "Death, imprisonment for life, or rigorous imprisonment for not less than 10 years, and fine",
+        "hi": "मृत्युदंड, आजीवन कारावास, या कम से कम 10 वर्ष का सश्रम कारावास, और जुर्माना"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Court of Session",
+        "hi": "सत्र न्यायालय"
+      }
+    },
+    {
+      "sec": "310(4)",
+      "offence": {
+        "en": "Making preparation to commit dacoity",
+        "hi": "डकैती करने की तैयारी करना"
+      },
+      "punishment": {
+        "en": "Rigorous imprisonment for 10 years and fine",
+        "hi": "10 वर्ष का सश्रम कारावास और जुर्माना"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Court of Session",
+        "hi": "सत्र न्यायालय"
+      }
+    },
+    {
+      "sec": "310(5)",
+      "offence": {
+        "en": "Being one of five or more persons assembled for the purpose of committing dacoity",
+        "hi": "डकैती करने के प्रयोजन से एकत्र पाँच या अधिक व्यक्तियों में से एक होना"
+      },
+      "punishment": {
+        "en": "Rigorous imprisonment for 7 years and fine",
+        "hi": "7 वर्ष का सश्रम कारावास और जुर्माना"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Court of Session",
+        "hi": "सत्र न्यायालय"
+      }
+    },
+    {
+      "sec": "310(6)",
+      "offence": {
+        "en": "Belonging to a gang of persons associated for the purpose of habitually committing dacoity",
+        "hi": "आदतन डकैती करने के प्रयोजन से जुड़े व्यक्तियों के गिरोह का सदस्य होना"
+      },
+      "punishment": {
+        "en": "Imprisonment for life, or rigorous imprisonment for 10 years, and fine",
+        "hi": "आजीवन कारावास, या 10 वर्ष का सश्रम कारावास, और जुर्माना"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Court of Session",
+        "hi": "सत्र न्यायालय"
+      }
+    },
+    {
+      "sec": "316(2)",
+      "offence": {
+        "en": "Criminal breach of trust",
+        "hi": "आपराधिक न्यासभंग"
+      },
+      "punishment": {
+        "en": "Imprisonment for 5 years, or fine, or both",
+        "hi": "5 वर्ष का कारावास, या जुर्माना, या दोनों"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Magistrate of the first class",
+        "hi": "प्रथम श्रेणी मजिस्ट्रेट"
+      }
+    },
+    {
+      "sec": "316(3)",
+      "offence": {
+        "en": "Criminal breach of trust by a carrier, wharfinger or warehouse-keeper",
+        "hi": "वाहक, घाटपाल या गोदाम-रक्षक द्वारा आपराधिक न्यासभंग"
+      },
+      "punishment": {
+        "en": "Imprisonment for 7 years and fine",
+        "hi": "7 वर्ष का कारावास और जुर्माना"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Magistrate of the first class",
+        "hi": "प्रथम श्रेणी मजिस्ट्रेट"
+      }
+    },
+    {
+      "sec": "316(4)",
+      "offence": {
+        "en": "Criminal breach of trust by a clerk or servant",
+        "hi": "लिपिक या सेवक द्वारा आपराधिक न्यासभंग"
+      },
+      "punishment": {
+        "en": "Imprisonment for 7 years and fine",
+        "hi": "7 वर्ष का कारावास और जुर्माना"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Magistrate of the first class",
+        "hi": "प्रथम श्रेणी मजिस्ट्रेट"
+      }
+    },
+    {
+      "sec": "316(5)",
+      "offence": {
+        "en": "Criminal breach of trust by a public servant or by a banker, merchant or agent",
+        "hi": "लोक सेवक या बैंकर, व्यापारी या अभिकर्ता द्वारा आपराधिक न्यासभंग"
+      },
+      "punishment": {
+        "en": "Imprisonment for life, or imprisonment for 10 years, and fine",
+        "hi": "आजीवन कारावास, या 10 वर्ष का कारावास, और जुर्माना"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Magistrate of the first class",
+        "hi": "प्रथम श्रेणी मजिस्ट्रेट"
+      }
+    },
+    {
       "sec": "318(2)",
       "offence": {
         "en": "Cheating",
@@ -1611,6 +1915,54 @@
         "hi": "7 वर्ष तक का कारावास और जुर्माना"
       },
       "bailable": false,
+      "court": {
+        "en": "Magistrate of the first class",
+        "hi": "प्रथम श्रेणी मजिस्ट्रेट"
+      }
+    },
+    {
+      "sec": "351(2)",
+      "offence": {
+        "en": "Criminal intimidation",
+        "hi": "आपराधिक अभित्रास"
+      },
+      "punishment": {
+        "en": "Imprisonment for 2 years, or fine, or both",
+        "hi": "2 वर्ष का कारावास, या जुर्माना, या दोनों"
+      },
+      "bailable": true,
+      "court": {
+        "en": "Any Magistrate",
+        "hi": "कोई भी मजिस्ट्रेट"
+      }
+    },
+    {
+      "sec": "351(3)",
+      "offence": {
+        "en": "Criminal intimidation, where the threat is to cause death or grievous hurt",
+        "hi": "मृत्यु या गंभीर उपहति की धमकी देकर आपराधिक अभित्रास"
+      },
+      "punishment": {
+        "en": "Imprisonment for 7 years, or fine, or both",
+        "hi": "7 वर्ष का कारावास, या जुर्माना, या दोनों"
+      },
+      "bailable": true,
+      "court": {
+        "en": "Magistrate of the first class",
+        "hi": "प्रथम श्रेणी मजिस्ट्रेट"
+      }
+    },
+    {
+      "sec": "351(4)",
+      "offence": {
+        "en": "Criminal intimidation by anonymous communication or concealment of the source of the threat",
+        "hi": "गुमनाम संचार द्वारा या धमकी के स्रोत को छिपाकर आपराधिक अभित्रास"
+      },
+      "punishment": {
+        "en": "Imprisonment for 2 years, in addition to the punishment for criminal intimidation",
+        "hi": "आपराधिक अभित्रास के दंड के अतिरिक्त 2 वर्ष का कारावास"
+      },
+      "bailable": true,
       "court": {
         "en": "Magistrate of the first class",
         "hi": "प्रथम श्रेणी मजिस्ट्रेट"
