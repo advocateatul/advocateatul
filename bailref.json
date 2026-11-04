@@ -17,6 +17,438 @@
       }
     },
     {
+      "sec": "64(2)",
+      "offence": {
+        "en": "Rape by a police officer, public servant or person in authority",
+        "hi": "पुलिस अधिकारी, लोक सेवक या प्राधिकार वाले व्यक्ति द्वारा बलात्कार"
+      },
+      "punishment": {
+        "en": "Rigorous imprisonment for not less than 10 years, up to imprisonment for life, which shall mean imprisonment for the remainder of that person's natural life, and fine",
+        "hi": "कम से कम 10 वर्ष का सश्रम कारावास, जो आजीवन कारावास (प्राकृतिक जीवन के शेष भाग) तक हो सकता है, और जुर्माना"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Court of Session",
+        "hi": "सत्र न्यायालय"
+      }
+    },
+    {
+      "sec": "65(1)",
+      "offence": {
+        "en": "Rape on a woman under sixteen years of age",
+        "hi": "16 वर्ष से कम आयु की स्त्री से बलात्कार"
+      },
+      "punishment": {
+        "en": "Rigorous imprisonment for not less than 20 years, up to imprisonment for life, which shall mean imprisonment for the remainder of that person's natural life, and fine",
+        "hi": "कम से कम 20 वर्ष का सश्रम कारावास, जो आजीवन कारावास (प्राकृतिक जीवन के शेष भाग) तक हो सकता है, और जुर्माना"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Court of Session",
+        "hi": "सत्र न्यायालय"
+      }
+    },
+    {
+      "sec": "65(2)",
+      "offence": {
+        "en": "Rape on a woman under twelve years of age",
+        "hi": "12 वर्ष से कम आयु की स्त्री से बलात्कार"
+      },
+      "punishment": {
+        "en": "Rigorous imprisonment for not less than 20 years, up to imprisonment for life, which shall mean imprisonment for the remainder of that person's natural life, and fine, or death",
+        "hi": "कम से कम 20 वर्ष का सश्रम कारावास, जो आजीवन कारावास (प्राकृतिक जीवन के शेष भाग) तक हो सकता है, और जुर्माना, या मृत्युदंड"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Court of Session",
+        "hi": "सत्र न्यायालय"
+      }
+    },
+    {
+      "sec": "66",
+      "offence": {
+        "en": "Rape causing death or persistent vegetative state",
+        "hi": "बलात्कार से मृत्यु या निरंतर वनस्पति अवस्था"
+      },
+      "punishment": {
+        "en": "Rigorous imprisonment for not less than 20 years, up to imprisonment for life, which shall mean imprisonment for the remainder of that person's natural life, or death",
+        "hi": "कम से कम 20 वर्ष का सश्रम कारावास, जो आजीवन कारावास (प्राकृतिक जीवन के शेष भाग) तक हो सकता है, या मृत्युदंड"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Court of Session",
+        "hi": "सत्र न्यायालय"
+      }
+    },
+    {
+      "sec": "67",
+      "offence": {
+        "en": "Sexual intercourse by husband upon his wife during separation",
+        "hi": "पृथक्करण के दौरान पति द्वारा पत्नी से मैथुन"
+      },
+      "punishment": {
+        "en": "Imprisonment for not less than 2 years, up to 7 years, and fine",
+        "hi": "कम से कम 2 वर्ष, 7 वर्ष तक का कारावास, और जुर्माना"
+      },
+      "bailable": true,
+      "court": {
+        "en": "Court of Session",
+        "hi": "सत्र न्यायालय"
+      }
+    },
+    {
+      "sec": "68",
+      "offence": {
+        "en": "Sexual intercourse by a person in authority",
+        "hi": "प्राधिकार वाले व्यक्ति द्वारा मैथुन"
+      },
+      "punishment": {
+        "en": "Rigorous imprisonment for not less than 5 years, up to 10 years, and fine",
+        "hi": "कम से कम 5 वर्ष, 10 वर्ष तक का सश्रम कारावास, और जुर्माना"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Court of Session",
+        "hi": "सत्र न्यायालय"
+      }
+    },
+    {
+      "sec": "69",
+      "offence": {
+        "en": "Sexual intercourse by employing deceitful means",
+        "hi": "छलपूर्ण साधनों से मैथुन"
+      },
+      "punishment": {
+        "en": "Imprisonment up to 10 years and fine",
+        "hi": "10 वर्ष तक का कारावास और जुर्माना"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Court of Session",
+        "hi": "सत्र न्यायालय"
+      }
+    },
+    {
+      "sec": "70(1)",
+      "offence": {
+        "en": "Gang rape",
+        "hi": "सामूहिक बलात्कार"
+      },
+      "punishment": {
+        "en": "Rigorous imprisonment for not less than 20 years, up to imprisonment for life, which shall mean imprisonment for the remainder of that person's natural life, and fine",
+        "hi": "कम से कम 20 वर्ष का सश्रम कारावास, जो आजीवन कारावास (प्राकृतिक जीवन के शेष भाग) तक हो सकता है, और जुर्माना"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Court of Session",
+        "hi": "सत्र न्यायालय"
+      }
+    },
+    {
+      "sec": "70(2)",
+      "offence": {
+        "en": "Gang rape on a woman under eighteen years of age",
+        "hi": "18 वर्ष से कम आयु की स्त्री से सामूहिक बलात्कार"
+      },
+      "punishment": {
+        "en": "Imprisonment for life, which shall mean imprisonment for the remainder of that person's natural life, and fine, or death",
+        "hi": "आजीवन कारावास (प्राकृतिक जीवन के शेष भाग), और जुर्माना, या मृत्युदंड"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Court of Session",
+        "hi": "सत्र न्यायालय"
+      }
+    },
+    {
+      "sec": "71",
+      "offence": {
+        "en": "Repeat offence of rape",
+        "hi": "बलात्कार का पुनरावर्ती अपराध"
+      },
+      "punishment": {
+        "en": "Imprisonment for life, which shall mean imprisonment for the remainder of that person's natural life, or death",
+        "hi": "आजीवन कारावास (प्राकृतिक जीवन के शेष भाग), या मृत्युदंड"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Court of Session",
+        "hi": "सत्र न्यायालय"
+      }
+    },
+    {
+      "sec": "72(1)",
+      "offence": {
+        "en": "Disclosure of identity of the victim of certain offences",
+        "hi": "कुछ अपराधों की पीड़िता की पहचान का प्रकटीकरण"
+      },
+      "punishment": {
+        "en": "Imprisonment for 2 years and fine",
+        "hi": "2 वर्ष का कारावास और जुर्माना"
+      },
+      "bailable": true,
+      "court": {
+        "en": "Any Magistrate",
+        "hi": "कोई भी मजिस्ट्रेट"
+      }
+    },
+    {
+      "sec": "73",
+      "offence": {
+        "en": "Printing or publication of a court proceeding without prior permission",
+        "hi": "न्यायालय की पूर्व अनुमति के बिना कार्यवाही का मुद्रण या प्रकाशन"
+      },
+      "punishment": {
+        "en": "Imprisonment for 2 years and fine",
+        "hi": "2 वर्ष का कारावास और जुर्माना"
+      },
+      "bailable": true,
+      "court": {
+        "en": "Any Magistrate",
+        "hi": "कोई भी मजिस्ट्रेट"
+      }
+    },
+    {
+      "sec": "74",
+      "offence": {
+        "en": "Assault or criminal force to a woman with intent to outrage her modesty",
+        "hi": "स्त्री की लज्जा भंग करने के आशय से हमला या आपराधिक बल"
+      },
+      "punishment": {
+        "en": "Imprisonment for 1 year, up to 5 years, and fine",
+        "hi": "1 वर्ष से 5 वर्ष तक का कारावास, और जुर्माना"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Any Magistrate",
+        "hi": "कोई भी मजिस्ट्रेट"
+      }
+    },
+    {
+      "sec": "75(2)",
+      "offence": {
+        "en": "Sexual harassment, acts in clauses (i), (ii) or (iii)",
+        "hi": "यौन उत्पीड़न, खंड (i), (ii) या (iii) के कृत्य"
+      },
+      "punishment": {
+        "en": "Rigorous imprisonment up to 3 years, or fine, or both",
+        "hi": "3 वर्ष तक का सश्रम कारावास, या जुर्माना, या दोनों"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Court of Session",
+        "hi": "सत्र न्यायालय"
+      }
+    },
+    {
+      "sec": "75(3)",
+      "offence": {
+        "en": "Sexual harassment, act in clause (iv)",
+        "hi": "यौन उत्पीड़न, खंड (iv) का कृत्य"
+      },
+      "punishment": {
+        "en": "Imprisonment for 1 year, or fine, or both",
+        "hi": "1 वर्ष का कारावास, या जुर्माना, या दोनों"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Court of Session",
+        "hi": "सत्र न्यायालय"
+      }
+    },
+    {
+      "sec": "76",
+      "offence": {
+        "en": "Assault or criminal force to a woman with intent to disrobe",
+        "hi": "स्त्री को निर्वस्त्र करने के आशय से हमला या आपराधिक बल"
+      },
+      "punishment": {
+        "en": "Imprisonment for not less than 3 years, up to 7 years, and fine",
+        "hi": "कम से कम 3 वर्ष, 7 वर्ष तक का कारावास, और जुर्माना"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Court of Session",
+        "hi": "सत्र न्यायालय"
+      }
+    },
+    {
+      "sec": "77",
+      "offence": {
+        "en": "Voyeurism, first conviction",
+        "hi": "दृश्यरतिकता, पहली दोषसिद्धि"
+      },
+      "punishment": {
+        "en": "Imprisonment for not less than 1 year, up to 3 years, and fine",
+        "hi": "कम से कम 1 वर्ष, 3 वर्ष तक का कारावास, और जुर्माना"
+      },
+      "bailable": true,
+      "court": {
+        "en": "Court of Session",
+        "hi": "सत्र न्यायालय"
+      }
+    },
+    {
+      "sec": "77",
+      "offence": {
+        "en": "Voyeurism, second or subsequent conviction",
+        "hi": "दृश्यरतिकता, दूसरी या बाद की दोषसिद्धि"
+      },
+      "punishment": {
+        "en": "Imprisonment for not less than 3 years, up to 7 years, and fine",
+        "hi": "कम से कम 3 वर्ष, 7 वर्ष तक का कारावास, और जुर्माना"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Court of Session",
+        "hi": "सत्र न्यायालय"
+      }
+    },
+    {
+      "sec": "78(2)",
+      "offence": {
+        "en": "Stalking, first conviction",
+        "hi": "पीछा करना, पहली दोषसिद्धि"
+      },
+      "punishment": {
+        "en": "Imprisonment up to 3 years and fine",
+        "hi": "3 वर्ष तक का कारावास और जुर्माना"
+      },
+      "bailable": true,
+      "court": {
+        "en": "Any Magistrate",
+        "hi": "कोई भी मजिस्ट्रेट"
+      }
+    },
+    {
+      "sec": "78(2)",
+      "offence": {
+        "en": "Stalking, second or subsequent conviction",
+        "hi": "पीछा करना, दूसरी या बाद की दोषसिद्धि"
+      },
+      "punishment": {
+        "en": "Imprisonment up to 5 years and fine",
+        "hi": "5 वर्ष तक का कारावास और जुर्माना"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Any Magistrate",
+        "hi": "कोई भी मजिस्ट्रेट"
+      }
+    },
+    {
+      "sec": "79",
+      "offence": {
+        "en": "Uttering a word or making a gesture to insult the modesty of a woman",
+        "hi": "स्त्री की लज्जा का अपमान करने के आशय से शब्द कहना या अंगविक्षेप करना"
+      },
+      "punishment": {
+        "en": "Simple imprisonment up to 3 years and fine",
+        "hi": "3 वर्ष तक का सादा कारावास और जुर्माना"
+      },
+      "bailable": true,
+      "court": {
+        "en": "Any Magistrate",
+        "hi": "कोई भी मजिस्ट्रेट"
+      }
+    },
+    {
+      "sec": "80(2)",
+      "offence": {
+        "en": "Dowry death",
+        "hi": "दहेज मृत्यु"
+      },
+      "punishment": {
+        "en": "Imprisonment for not less than 7 years, up to imprisonment for life",
+        "hi": "कम से कम 7 वर्ष, आजीवन कारावास तक का कारावास"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Court of Session",
+        "hi": "सत्र न्यायालय"
+      }
+    },
+    {
+      "sec": "81",
+      "offence": {
+        "en": "A man by deceit causing a woman not lawfully married to him to believe she is lawfully married to him and to cohabit",
+        "hi": "छल से किसी स्त्री को यह विश्वास दिलाकर सहवास करना कि वह उससे विधिपूर्वक विवाहित है"
+      },
+      "punishment": {
+        "en": "Imprisonment for 10 years and fine",
+        "hi": "10 वर्ष का कारावास और जुर्माना"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Magistrate of the first class",
+        "hi": "प्रथम श्रेणी मजिस्ट्रेट"
+      }
+    },
+    {
+      "sec": "82(1)",
+      "offence": {
+        "en": "Marrying again during the lifetime of husband or wife",
+        "hi": "पति या पत्नी के जीवनकाल में पुनः विवाह करना"
+      },
+      "punishment": {
+        "en": "Imprisonment for 7 years and fine",
+        "hi": "7 वर्ष का कारावास और जुर्माना"
+      },
+      "bailable": true,
+      "court": {
+        "en": "Magistrate of the first class",
+        "hi": "प्रथम श्रेणी मजिस्ट्रेट"
+      }
+    },
+    {
+      "sec": "82(2)",
+      "offence": {
+        "en": "Marrying again with concealment of the former marriage",
+        "hi": "पूर्व विवाह छिपाकर पुनः विवाह करना"
+      },
+      "punishment": {
+        "en": "Imprisonment for 10 years and fine",
+        "hi": "10 वर्ष का कारावास और जुर्माना"
+      },
+      "bailable": true,
+      "court": {
+        "en": "Magistrate of the first class",
+        "hi": "प्रथम श्रेणी मजिस्ट्रेट"
+      }
+    },
+    {
+      "sec": "83",
+      "offence": {
+        "en": "Going through a marriage ceremony with fraudulent intention",
+        "hi": "कपटपूर्ण आशय से विवाह संस्कार करना"
+      },
+      "punishment": {
+        "en": "Imprisonment up to 7 years and fine",
+        "hi": "7 वर्ष तक का कारावास और जुर्माना"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Magistrate of the first class",
+        "hi": "प्रथम श्रेणी मजिस्ट्रेट"
+      }
+    },
+    {
+      "sec": "84",
+      "offence": {
+        "en": "Enticing or taking away or detaining a married woman with criminal intent",
+        "hi": "आपराधिक आशय से विवाहित स्त्री को फुसलाना, ले जाना या रोक रखना"
+      },
+      "punishment": {
+        "en": "Imprisonment for 2 years, or fine, or both",
+        "hi": "2 वर्ष का कारावास, या जुर्माना, या दोनों"
+      },
+      "bailable": true,
+      "court": {
+        "en": "Any Magistrate",
+        "hi": "कोई भी मजिस्ट्रेट"
+      }
+    },
+    {
       "sec": "85",
       "offence": {
         "en": "Cruelty by husband or relatives of husband",
@@ -30,6 +462,230 @@
       "court": {
         "en": "Magistrate of the first class",
         "hi": "प्रथम श्रेणी मजिस्ट्रेट"
+      }
+    },
+    {
+      "sec": "87",
+      "offence": {
+        "en": "Kidnapping, abducting or inducing a woman to compel her marriage",
+        "hi": "स्त्री को विवाह के लिए विवश करने हेतु व्यपहरण, अपहरण या उत्प्रेरण"
+      },
+      "punishment": {
+        "en": "Imprisonment for 10 years and fine",
+        "hi": "10 वर्ष का कारावास और जुर्माना"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Court of Session",
+        "hi": "सत्र न्यायालय"
+      }
+    },
+    {
+      "sec": "88",
+      "offence": {
+        "en": "Causing miscarriage",
+        "hi": "गर्भपात कारित करना"
+      },
+      "punishment": {
+        "en": "Imprisonment for 3 years, or fine, or both; imprisonment for 7 years and fine, if the woman is quick with child",
+        "hi": "3 वर्ष का कारावास, या जुर्माना, या दोनों; स्त्री के शीघ्र गर्भवती होने पर 7 वर्ष का कारावास और जुर्माना"
+      },
+      "bailable": true,
+      "court": {
+        "en": "Magistrate of the first class",
+        "hi": "प्रथम श्रेणी मजिस्ट्रेट"
+      }
+    },
+    {
+      "sec": "89",
+      "offence": {
+        "en": "Causing miscarriage without the woman's consent",
+        "hi": "स्त्री की सहमति के बिना गर्भपात कारित करना"
+      },
+      "punishment": {
+        "en": "Imprisonment for life, or imprisonment for 10 years, and fine",
+        "hi": "आजीवन कारावास, या 10 वर्ष का कारावास, और जुर्माना"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Court of Session",
+        "hi": "सत्र न्यायालय"
+      }
+    },
+    {
+      "sec": "90(1)",
+      "offence": {
+        "en": "Death caused by an act done with intent to cause miscarriage",
+        "hi": "गर्भपात के आशय से किए गए कार्य से मृत्यु"
+      },
+      "punishment": {
+        "en": "Imprisonment for 10 years and fine",
+        "hi": "10 वर्ष का कारावास और जुर्माना"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Court of Session",
+        "hi": "सत्र न्यायालय"
+      }
+    },
+    {
+      "sec": "90(2)",
+      "offence": {
+        "en": "Death caused by an act done to cause miscarriage, without the woman's consent",
+        "hi": "गर्भपात के आशय से किया गया कार्य, स्त्री की सहमति के बिना, जिससे मृत्यु हुई"
+      },
+      "punishment": {
+        "en": "Imprisonment for life, or imprisonment for 10 years and fine",
+        "hi": "आजीवन कारावास, या 10 वर्ष का कारावास और जुर्माना"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Court of Session",
+        "hi": "सत्र न्यायालय"
+      }
+    },
+    {
+      "sec": "91",
+      "offence": {
+        "en": "Act done with intent to prevent a child being born alive or to cause it to die after birth",
+        "hi": "बच्चे के जीवित जन्म को रोकने या जन्म के बाद उसकी मृत्यु के आशय से कार्य"
+      },
+      "punishment": {
+        "en": "Imprisonment for 10 years, or fine, or both",
+        "hi": "10 वर्ष का कारावास, या जुर्माना, या दोनों"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Court of Session",
+        "hi": "सत्र न्यायालय"
+      }
+    },
+    {
+      "sec": "92",
+      "offence": {
+        "en": "Causing death of a quick unborn child by an act amounting to culpable homicide",
+        "hi": "सदोष मानव वध की श्रेणी के कार्य से शीघ्र गर्भस्थ शिशु की मृत्यु कारित करना"
+      },
+      "punishment": {
+        "en": "Imprisonment for 10 years and fine",
+        "hi": "10 वर्ष का कारावास और जुर्माना"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Court of Session",
+        "hi": "सत्र न्यायालय"
+      }
+    },
+    {
+      "sec": "93",
+      "offence": {
+        "en": "Exposure of a child under twelve years of age, with intention of wholly abandoning it",
+        "hi": "12 वर्ष से कम आयु के बच्चे को पूर्णतः त्यागने के आशय से अरक्षित छोड़ना"
+      },
+      "punishment": {
+        "en": "Imprisonment for 7 years, or fine, or both",
+        "hi": "7 वर्ष का कारावास, या जुर्माना, या दोनों"
+      },
+      "bailable": true,
+      "court": {
+        "en": "Magistrate of the first class",
+        "hi": "प्रथम श्रेणी मजिस्ट्रेट"
+      }
+    },
+    {
+      "sec": "94",
+      "offence": {
+        "en": "Concealment of birth by secret disposal of a dead body",
+        "hi": "मृत शरीर के गुप्त निपटान से जन्म छिपाना"
+      },
+      "punishment": {
+        "en": "Imprisonment for 2 years, or fine, or both",
+        "hi": "2 वर्ष का कारावास, या जुर्माना, या दोनों"
+      },
+      "bailable": true,
+      "court": {
+        "en": "Magistrate of the first class",
+        "hi": "प्रथम श्रेणी मजिस्ट्रेट"
+      }
+    },
+    {
+      "sec": "95",
+      "offence": {
+        "en": "Hiring, employing or engaging a child to commit an offence",
+        "hi": "अपराध करने हेतु बच्चे को भाड़े पर लेना, नियोजित करना या लगाना"
+      },
+      "punishment": {
+        "en": "Imprisonment for not less than 3 years, up to 10 years, and fine",
+        "hi": "कम से कम 3 वर्ष, 10 वर्ष तक का कारावास, और जुर्माना"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Magistrate of the first class",
+        "hi": "प्रथम श्रेणी मजिस्ट्रेट"
+      }
+    },
+    {
+      "sec": "96",
+      "offence": {
+        "en": "Procuration of a child",
+        "hi": "बच्चे की प्राप्ति (दलाली)"
+      },
+      "punishment": {
+        "en": "Imprisonment for 10 years and fine",
+        "hi": "10 वर्ष का कारावास और जुर्माना"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Court of Session",
+        "hi": "सत्र न्यायालय"
+      }
+    },
+    {
+      "sec": "97",
+      "offence": {
+        "en": "Kidnapping or abducting a child under ten years with intent to steal from its person",
+        "hi": "उसके शरीर से चोरी के आशय से 10 वर्ष से कम बच्चे का व्यपहरण या अपहरण"
+      },
+      "punishment": {
+        "en": "Imprisonment for 7 years and fine",
+        "hi": "7 वर्ष का कारावास और जुर्माना"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Magistrate of the first class",
+        "hi": "प्रथम श्रेणी मजिस्ट्रेट"
+      }
+    },
+    {
+      "sec": "98",
+      "offence": {
+        "en": "Selling a child for purposes of prostitution",
+        "hi": "वेश्यावृत्ति के प्रयोजनों हेतु बच्चे को बेचना"
+      },
+      "punishment": {
+        "en": "Imprisonment for 10 years and fine",
+        "hi": "10 वर्ष का कारावास और जुर्माना"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Court of Session",
+        "hi": "सत्र न्यायालय"
+      }
+    },
+    {
+      "sec": "99",
+      "offence": {
+        "en": "Buying a child for purposes of prostitution",
+        "hi": "वेश्यावृत्ति के प्रयोजनों हेतु बच्चे को खरीदना"
+      },
+      "punishment": {
+        "en": "Imprisonment for not less than 7 years, up to 14 years, and fine",
+        "hi": "कम से कम 7 वर्ष, 14 वर्ष तक का कारावास, और जुर्माना"
+      },
+      "bailable": false,
+      "court": {
+        "en": "Court of Session",
+        "hi": "सत्र न्यायालय"
       }
     },
     {
