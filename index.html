@@ -1633,7 +1633,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
 <script>
 /* Round 2 data loader: bade datasets *.json se lazy-load hote hain */
 (function () {
-  var FILES = { legalDraftsData: "drafts.json", usefulJudgementsData: "judgements.json", legalVocabData: "vocab.json", dailyJudgementsArchive: "archive.json", handwrittenNotesData: "notes.json", bailRefData: "bailref.json" };
+  var FILES = { legalDraftsData: "drafts.json", usefulJudgementsData: "judgements.json", legalVocabData: "vocab.json", dailyJudgementsArchive: "archive.json", handwrittenNotesData: "notes.json", bailRefData: "bailref.json", faqData: "faq.json" };
   window.AK_STORE = {};
   var PENDING = {};
   window.akLoad = function (id) {
@@ -1763,6 +1763,43 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           <p data-i18n="practiceCopy">Independent representation and procedural guidance for criminal-law matters.</p>
         </div>
         <div class="practice-list" id="practiceList"></div>
+      </div>
+    </section>
+
+    <section class="draft-guide" id="court-guide" aria-labelledby="court-guide-title">
+      <div class="shell">
+        <div class="draft-guide-head reveal">
+          <div>
+            <p class="kicker">Bulandshahr District Court · बुलंदशहर ज़िला न्यायालय</p>
+            <h2 id="court-guide-title">🏛️ Court Guide · कोर्ट गाइड</h2>
+          </div>
+          <p>Bulandshahr District Court me kaunsi court kis kaam ki hai, pehli baar court jaane par kya saath le jayein, aur aaj court khula hai ya nahi — sab ek jagah. Judges ke naam isliye nahi diye gaye hain kyunki posting badalti rehti hai; aaj kaun kis court me baitha hai, ye live causelist se dekhein. / बुलंदशहर ज़िला न्यायालय में कौनसी अदालत किस काम की है, पहली बार अदालत जाते समय क्या साथ ले जाएँ, और आज अदालत खुली है या नहीं — सब एक जगह। न्यायाधीशों के नाम इसलिए नहीं दिए गए हैं क्योंकि नियुक्तियाँ बदलती रहती हैं; आज कौन किस अदालत में बैठा है, यह लाइव कॉज़लिस्ट से देखें।</p>
+        </div>
+        <p class="drafts-note reveal" id="courtGuideToday">Aaj ki sthiti load ho rahi hai… / आज की स्थिति लोड हो रही है…</p>
+        <details class="rights-guide"><summary>Kaunsi court kis kaam ki · कौनसी अदालत किस काम की</summary>
+          <p class="rights-when">District &amp; Sessions Judge: sessions trial (hatya, balatkar, dakaiti jaise gambhir apraadh), magistrate ke faislon par appeal aur revision. / ज़िला एवं सत्र न्यायाधीश: सत्र विचारण (हत्या, बलात्कार, डकैती जैसे गंभीर अपराध), मजिस्ट्रेट के निर्णयों पर अपील व पुनरीक्षण।</p>
+          <p class="rights-when">Addl. District &amp; Sessions Judges: sessions trial aur civil appeal, jaise kaam baanta jaye. / अपर ज़िला एवं सत्र न्यायाधीश: सत्र विचारण व दीवानी अपील, जैसा कार्य बाँटा जाए।</p>
+          <p class="rights-when">Chief Judicial Magistrate / Judicial Magistrates: aapradhik trial, remand, zamaanat, aur cases ko sessions court ko bhejna (committal). / मुख्य न्यायिक मजिस्ट्रेट / न्यायिक मजिस्ट्रेट: आपराधिक विचारण, रिमांड, ज़मानत, और मामलों को सत्र न्यायालय को भेजना।</p>
+          <p class="rights-when">Civil Judge (Senior / Junior Division): diwani mukadme, apni seema ke andar. / सिविल जज (सीनियर / जूनियर डिवीज़न): दीवानी मुकदमे, अपनी सीमा के भीतर।</p>
+          <p class="rights-when">Family Court (Principal Judge + Addl. Principal Judge): talak, bhatta, bachchon ki abhiraksha, vaivahik adhikaaron ki punarsthapna. / पारिवारिक न्यायालय (प्रधान न्यायाधीश + अपर प्रधान न्यायाधीश): तलाक़, भत्ता, बच्चों की अभिरक्षा, वैवाहिक अधिकारों की पुनर्स्थापना।</p>
+          <p class="rights-when">Special Judges: POCSO Act ke mamle (bachchon ke prati yaun apraadh) aur EC Act (avasheyak vastu adhiniyam) ke mamle alag special courts me. / विशेष न्यायाधीश: POCSO अधिनियम के मामले (बच्चों के प्रति यौन अपराध) और EC अधिनियम (आवश्यक वस्तु अधिनियम) के मामले अलग विशेष अदालतों में।</p>
+        </details>
+        <details class="rights-guide"><summary>Outlying courts: Khurja aur Anoopshahr · बाहरी अदालतें: खुर्जा और अनूपशहर</summary>
+          <p class="rights-when">Bulandshahr judgeship ke outlying courts Khurja aur Anoopshahr me baithte hain — in ilakon ke mamle wahin ki अदालतों me chalte hain. Apne case ki court CNR ya causelist se confirm karein. / बुलंदशहर न्यायक्षेत्र की बाहरी अदालतें खुर्जा और अनूपशहर में बैठती हैं — इन इलाक़ों के मामले वहीं की अदालतों में चलते हैं। अपने मामले की अदालत CNR या कॉज़लिस्ट से पुष्ट करें।</p>
+        </details>
+        <details class="rights-guide"><summary>Pehli baar court ja rahe hain · पहली बार अदालत जा रहे हैं</summary>
+          <p class="rights-when">Saath le jayein: pehchan-patra (Aadhaar/voter ID), apne case ke kagaz, CNR number ya filing receipt, aur pichhli tareekh ka order (agar ho). / साथ ले जाएँ: पहचान-पत्र (आधार/मतदाता पहचान-पत्र), अपने मामले के काग़ज़, CNR नंबर या फाइलिंग रसीद, और पिछली तारीख़ का आदेश (यदि हो)।</p>
+          <p class="rights-when">Samay par pahunchein, apni court ka kamra aur court number causelist se pehle dekh lein, aur apne vakil ka number phone me rakhein. / समय पर पहुँचें, अपनी अदालत का कमरा व अदालत संख्या कॉज़लिस्ट से पहले देख लें, और अपने वकील का नंबर फ़ोन में रखें।</p>
+        </details>
+        <details class="rights-guide"><summary>Kaam ke din aur chhuttiyan · कार्य-दिवस और छुट्टियाँ</summary>
+          <p class="rights-when">Aam taur par court Somvar se Shanivar tak khulti hai. Ravivar band hota hai, aur mahine ka doosra Shanivar bhi chhutti hoti hai. / सामान्यतः अदालत सोमवार से शनिवार तक खुलती है। रविवार बंद होता है, और महीने का दूसरा शनिवार भी छुट्टी होती है।</p>
+          <p class="rights-when">Iske alawa gazetted chhuttiyan, sthaniya chhuttiyan (District Judge dwara ghoshit) aur High Court ke beech saal ke adeshon se bhi chhuttiyan badal sakti hain — isliye kisi khaas tareekh ke liye us din ki causelist hi antim pushti hai. / इसके अलावा राजपत्रित छुट्टियाँ, स्थानीय छुट्टियाँ (ज़िला न्यायाधीश द्वारा घोषित) और उच्च न्यायालय के वर्ष के दौरान के आदेशों से भी छुट्टियाँ बदल सकती हैं — इसलिए किसी विशेष तारीख़ के लिए उस दिन की कॉज़लिस्ट ही अंतिम पुष्टि है।</p>
+        </details>
+        <details class="rights-guide"><summary>Live links · लाइव लिंक</summary>
+          <p class="rights-when">Aaj ki causelist (kaun judge kis court me): <a href="https://ecourtsindia.com/causelist/UP/48/1130108" target="_blank" rel="noopener">Bulandshahr causelist</a> · आज की कॉज़लिस्ट (कौन न्यायाधीश किस अदालत में): <a href="https://ecourtsindia.com/causelist/UP/48/1130108" target="_blank" rel="noopener">बुलंदशहर कॉज़लिस्ट</a></p>
+          <p class="rights-when">Case status: <a href="https://services.ecourts.gov.in" target="_blank" rel="noopener">services.ecourts.gov.in</a> · High Court cases: <a href="https://hcservices.ecourts.gov.in" target="_blank" rel="noopener">hcservices.ecourts.gov.in</a> · Allahabad High Court: <a href="https://allahabadhighcourt.in" target="_blank" rel="noopener">allahabadhighcourt.in</a></p>
+        </details>
+        <p class="drafts-note reveal">Ye samanya jaankari hai, aapke case ki salah nahi — apne vakil se poochhein. / यह सामान्य जानकारी है, आपके मामले की सलाह नहीं है — अपने वकील से पूछें।</p>
       </div>
     </section>
 
@@ -3164,6 +3201,24 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
 </section>
 <script src="research_logic.js"></script>
 <!-- ================= END C6 RESEARCH REPORT VIEW ================= -->
+    <section class="draft-guide" id="faq" aria-labelledby="faq-title">
+      <div class="shell">
+        <div class="draft-guide-head reveal">
+          <div>
+            <p class="kicker">Common questions · आम सवाल</p>
+            <h2 id="faq-title">❓ Frequently Asked Questions · अक्सर पूछे जाने वाले सवाल</h2>
+          </div>
+          <p>Adalat, FIR, zamaanat, case status aur kharch se jude aam sawalon ke seedhe jawab — English aur Hindi dono me. Kisi sawal ka jawab na mile to LawAssist se poochhein ya apne vakil se sampark karein. / अदालत, FIR, ज़मानत, केस की स्थिति और ख़र्च से जुड़े आम सवालों के सीधे जवाब — अंग्रेज़ी और हिंदी दोनों में। किसी सवाल का जवाब न मिले तो LawAssist से पूछें या अपने वकील से संपर्क करें।</p>
+        </div>
+        <div class="section-search reveal" role="search">
+          <input type="search" id="faqSearch" placeholder="Search a question… / सवाल खोजें…" aria-label="Search questions" autocomplete="off" />
+        </div>
+        <p class="drafts-note" id="faqCount"></p>
+        <div id="faqList"></div>
+        <p class="drafts-note reveal">Ye samanya jaankari hai, aapke case ki salah nahi — apne vakil se poochhein. / यह सामान्य जानकारी है, आपके मामले की सलाह नहीं है — अपने वकील से पूछें।</p>
+      </div>
+    </section>
+
     <section class="contact" id="contact" aria-labelledby="contact-title">
       <div class="shell">
         <div class="contact-grid">
@@ -11479,6 +11534,39 @@ function cfBiharFee(v) {
         if (inp) { inp.addEventListener("input", function () { bailRefQuery = inp.value; renderBailRef(); }); inp.addEventListener("focus", function () { try { if (window.akLoad) window.akLoad("bailRefData"); } catch (e) {} }, { once: true }); }
         document.querySelectorAll("[data-bail-chip]").forEach(function (c) { c.addEventListener("click", function () { bailRefFilter = c.getAttribute("data-bail-chip"); renderBailRef(); }); });
       }
+      var faqQuery = "";
+      function getFaqData() { try { return (window.AK_STORE && window.AK_STORE.faqData) || null; } catch (e) { return null; } }
+      function renderFaq() {
+        var list = document.getElementById("faqList"); if (!list) return;
+        var data = getFaqData();
+        if (!data) { list.innerHTML = "<p class=\"drafts-note\">Loading questions… / सवाल लोड हो रहे हैं…</p>"; try { if (window.akLoad) window.akLoad("faqData"); } catch (e) {} return; }
+        var items = (data.items || []);
+        var q = (faqQuery || "").toLowerCase();
+        var out = ""; var n = 0;
+        items.forEach(function (it) {
+          var hay = (((it.q && it.q.en) || "") + " " + ((it.q && it.q.hi) || "") + " " + ((it.a && it.a.en) || "") + " " + ((it.a && it.a.hi) || "")).toLowerCase();
+          if (q && hay.indexOf(q) < 0) return;
+          n++;
+          out += "<details class=\"rights-guide\"><summary>" + escapeHtml(it.q.en) + " · " + escapeHtml(it.q.hi) + "</summary>";
+          out += "<p class=\"rights-when\">" + escapeHtml(it.a.en) + "<br>" + escapeHtml(it.a.hi) + "</p></details>";
+        });
+        list.innerHTML = out || "<p class=\"drafts-note\">No question matches — try another word. / कोई सवाल नहीं मिला — दूसरा शब्द डालें।</p>";
+        var cnt = document.getElementById("faqCount"); if (cnt) cnt.textContent = n + " / " + items.length + " questions · सवाल";
+      }
+      function initFaq() {
+        if (window.__faqBound) return; window.__faqBound = true;
+        var inp = document.getElementById("faqSearch");
+        if (inp) { inp.addEventListener("input", function () { faqQuery = inp.value; renderFaq(); }); inp.addEventListener("focus", function () { try { if (window.akLoad) window.akLoad("faqData"); } catch (e) {} }, { once: true }); }
+      }
+      function initCourtGuide() {
+        var el = document.getElementById("courtGuideToday"); if (!el) return;
+        var d = new Date(); var dow = d.getDay(); var date = d.getDate();
+        var secondSat = (dow === 6 && date >= 8 && date <= 14);
+        var link = " <a href=\"https://ecourtsindia.com/causelist/UP/48/1130108\" target=\"_blank\" rel=\"noopener\">Bulandshahr causelist</a>";
+        if (dow === 0) { el.innerHTML = "Aaj Ravivar hai — court band hai. / आज रविवार है — अदालत बंद है।"; }
+        else if (secondSat) { el.innerHTML = "Aaj mahine ka doosra Shanivar hai — court band hai. / आज महीने का दूसरा शनिवार है — अदालत बंद है।"; }
+        else { el.innerHTML = "Aaj court aam taur par khula hai — aaj ki causelist se confirm karein:" + link + " / आज अदालत सामान्यतः खुली है — आज की कॉज़लिस्ट से पुष्ट करें:" + link; }
+      }
 function renderDocChecklist() {
         var res = document.getElementById("docCheckResults");
         var sel = document.getElementById("docCheckSelected");
@@ -12389,7 +12477,7 @@ function renderDocChecklist() {
               else if (akId === "usefulJudgementsData") { renderLibrary(); }
               else if (akId === "dailyJudgementsArchive") { renderActiveUpdatesTab(); }
               else if (akId === "legalVocabData") { renderVocabCats(); renderVocabList(); }
-              else if (akId === "handwrittenNotesData") { renderNotes(); } else if (akId === "bailRefData") { renderBailRef(); }
+              else if (akId === "handwrittenNotesData") { renderNotes(); } else if (akId === "bailRefData") { renderBailRef(); } else if (akId === "faqData") { renderFaq(); }
               var akTs = document.getElementById("topSearchInput");
               if (akTs && akTs.value.trim()) akTs.dispatchEvent(new Event("input", { bubbles: true }));
               var akHs = document.getElementById("hubSearchInput");
@@ -12411,6 +12499,7 @@ function renderDocChecklist() {
         renderDocChecklist();
         initDeadlineCalc();
         initBailRef(); renderBailRef();
+        initFaq(); renderFaq(); initCourtGuide();
         initStickyHeader();
         /* Deep-link: #draft-<id> opens that draft directly */
         (function () {
@@ -16835,7 +16924,7 @@ function renderDocChecklist() {
 (function () {
   if (window.__akCollapseDone) return;
   window.__akCollapseDone = true;
-  var TARGETS = ['practice', 'ecourts-help', 'updates', 'library', 'linkDirectory', 'knowledge', 'citizen-rights', 'bail-ref', 'paper-decoder', 'arrest-timeline', 'deadline-calc', 'documents', 'drafts', 'draft-guide', 'general-docs', 'doc-checklist', 'legal-analysis', 'exam-prep', 'notes', 'vocabulary', 'll-journey', 'll-research'];
+  var TARGETS = ['practice', 'court-guide', 'ecourts-help', 'updates', 'library', 'linkDirectory', 'knowledge', 'citizen-rights', 'bail-ref', 'paper-decoder', 'arrest-timeline', 'deadline-calc', 'documents', 'drafts', 'draft-guide', 'general-docs', 'doc-checklist', 'legal-analysis', 'exam-prep', 'notes', 'vocabulary', 'll-journey', 'll-research', 'faq'];
   var SHOW = '▼ Show content · सामग्री दिखाएँ';
   var HIDE = '▲ Hide content · सामग्री छिपाएँ';
   var saved = {};
