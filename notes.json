@@ -606,16 +606,16 @@
      "hi": "धारा 127 सदोष परिरोध को परिभाषित करती है — किसी व्यक्ति को इस तरह गलत तरीके से रोकना कि वो कुछ तय सीमाओं से आगे न जा सके। हर परिरोध एक अवरोध है, पर हर अवरोध परिरोध नहीं है — परिरोध के लिए एक सीमा चाहिए जिसे पीड़ित पार न कर सके।"
     },
     {
-     "en": "Punishment is graded by time and secrecy: wrongful restraint under Sec 126 is simple imprisonment up to 1 month or fine up to Rs. 5,000 or both; wrongful confinement under Sec 127(1) is up to 1 year or fine up to Rs. 5,000 or both; confinement for 3 days or more under Sec 127(2) is up to 2 years; for 10 days or more under Sec 127(3) is up to 3 years; and keeping a person in secret confinement under Sec 127(5) adds up to 2 years.",
-     "hi": "सज़ा समय और गोपनीयता के हिसाब से बढ़ती है — सदोष अवरोध, धारा 126, में 1 महीने तक का साधारण कारावास या 5,000 रुपये तक जुर्माना या दोनों; सदोष परिरोध, धारा 127(1), में 1 साल तक या 5,000 रुपये तक जुर्माना या दोनों; 3 दिन या ज़्यादा का परिरोध, धारा 127(2), में 2 साल तक; 10 दिन या ज़्यादा, धारा 127(3), में 3 साल तक; और गुप्त परिरोध, धारा 127(5), में 2 साल और जुड़ जाते हैं।"
+     "en": "Punishment is graded by time and circumstance: wrongful restraint under Sec 126 is simple imprisonment up to 1 month or fine up to Rs. 5,000 or both; wrongful confinement under Sec 127(2) is up to 1 year or fine up to Rs. 5,000 or both; confinement for 3 days or more under Sec 127(3) is up to 3 years or fine up to Rs. 10,000 or both; for 10 days or more under Sec 127(4) is up to 5 years and a fine of not less than Rs. 10,000; keeping a person confined despite a writ for his liberation under Sec 127(5) adds up to 2 years; and secret confinement under Sec 127(6) adds up to 3 years, plus fine in both cases.",
+     "hi": "सज़ा समय और हालात के हिसाब से बढ़ती है — सदोष अवरोध, धारा 126, में 1 महीने तक का साधारण कारावास या 5,000 रुपये तक जुर्माना या दोनों; सदोष परिरोध, धारा 127(2), में 1 साल तक या 5,000 रुपये तक जुर्माना या दोनों; 3 दिन या ज़्यादा का परिरोध, धारा 127(3), में 3 साल तक या 10,000 रुपये तक जुर्माना या दोनों; 10 दिन या ज़्यादा, धारा 127(4), में 5 साल तक और कम से कम 10,000 रुपये जुर्माना; मुक्ति-आदेश (रिट) के बावजूद परिरोध रखना, धारा 127(5), 2 साल और जोड़ देता है; और गुप्त परिरोध, धारा 127(6), 3 साल और जोड़ देता है, दोनों में जुर्माना भी।"
     },
     {
      "en": "The key distinction for exams is visual: restraint is blocking a path or direction; confinement is keeping a person within a closed boundary — a room, a house, a vehicle. If the victim can still go in some other direction, it is restraint; if all exits are blocked, it is confinement.",
      "hi": "परीक्षा के लिए मुख्य फर्क आंखों के सामने रखो — अवरोध किसी रास्ते या दिशा को रोकना है; परिरोध किसी व्यक्ति को किसी बंद सीमा — कमरा, मकान, गाड़ी — के भीतर रखना है। अगर पीड़ित किसी और दिशा में जा सकता है तो वो अवरोध है; अगर सारे निकास बंद हैं तो वो परिरोध है।"
     },
     {
-     "en": "Both offences are non-cognizable and bailable, and are tried by a Magistrate. A private complaint is the usual route; police cannot arrest without a warrant. And good-faith restraint by a person acting under legal authority — for example a lawful arrest — is not an offence at all.",
-     "hi": "दोनों अपराध असंज्ञेय और जमानतीय हैं, और मजिस्ट्रेट इनका विचारण करते हैं। आमतौर पर निजी शिकायत का रास्ता अपनाया जाता है; पुलिस बिना वारंट गिरफ्तार नहीं कर सकती। और कानूनी अधिकार के तहत नेक नियति से किया गया अवरोध — जैसे कानूनी गिरफ्तारी — अपराध ही नहीं है।"
+     "en": "As to forum and bail: the basic offences are bailable and tried by a Magistrate, but confinement for 10 days or more under Sec 127(4) is non-bailable and triable by a Magistrate of the first class. A private complaint is a common route for the basic offences, and good-faith restraint by a person acting under legal authority — for example a lawful arrest — is not an offence at all.",
+     "hi": "मंच और ज़मानत के लिहाज़ से — बुनियादी अपराध ज़मानती हैं और मजिस्ट्रेट द्वारा विचारणीय हैं, पर 10 दिन या ज़्यादा का परिरोध, धारा 127(4), गैर-ज़मानती है और प्रथम श्रेणी मजिस्ट्रेट द्वारा विचारणीय है। बुनियादी अपराधों के लिए निजी शिकायत आम रास्ता है, और कानूनी अधिकार के तहत काम करने वाले व्यक्ति का सद्भावपूर्ण अवरोध — जैसे वैध गिरफ्तारी — अपराध ही नहीं है।"
     }
    ],
    "sections": "Sec 126-127 BNS (correspond to Sec 339-342 IPC)",
@@ -2785,6 +2785,36 @@
     "en": "Test Identification Parade — How Identification Evidence Is Tested",
     "hi": "शिनाख्त परेड — पहचान के साक्ष्य की जाँच कैसे होती है"
    }
+  },
+  {
+   "title": {
+    "en": "Magistrate's Power to Order Investigation (Sec 175 BNSS)",
+    "hi": "जाँच का आदेश देने की मजिस्ट्रेट की शक्ति (धारा 175 BNSS)"
+   },
+   "sections": "Sec 175 BNSS (Sec 156(3) CrPC); complaint procedure Sec 223 BNSS",
+   "cases": "Priyanka Srivastava v. State of UP (application u/s 156(3) must be supported by affidavit)",
+   "points": [
+    {
+     "en": "When a complaint is made to a Magistrate, the Magistrate has three options: take cognizance and examine the complainant (Sec 223), postpone and order a police investigation (Sec 175(3)), or dismiss the complaint. Sec 175 is the bridge between a private complaint and a police investigation.",
+     "hi": "जब मजिस्ट्रेट के पास शिकायत आती है तो उसके पास तीन विकल्प होते हैं — संज्ञान लेकर शिकायतकर्ता की परीक्षा करे (धारा 223), टालकर पुलिस जाँच का आदेश दे (धारा 175(3)), या शिकायत खारिज कर दे। धारा 175 निजी शिकायत और पुलिस जाँच के बीच का पुल है।"
+    },
+    {
+     "en": "An application under Sec 175(3) must be supported by an affidavit, and the complainant must first show that he approached the police (Sec 173) and the Superintendent of Police (Sec 173(4)) without result. This filter exists so that Sec 175 does not become a shortcut around the police station.",
+     "hi": "धारा 175(3) का आवेदन शपथपत्र के साथ होना चाहिए, और शिकायतकर्ता को पहले यह दिखाना होता है कि वह पुलिस (धारा 173) और पुलिस अधीक्षक (धारा 173(4)) के पास गया था और कोई नतीजा नहीं निकला। यह छन्नी इसलिए है ताकि धारा 175 थाने के रास्ते से बचने का शॉर्टकट न बन जाए।"
+    },
+    {
+     "en": "The Magistrate cannot order investigation in a mechanical way — he must apply his mind to the complaint and record brief reasons. An order passed without application of mind, or on a complaint that discloses no offence at all, is liable to be set aside by the High Court.",
+     "hi": "मजिस्ट्रेट यंत्रवत जाँच का आदेश नहीं दे सकता — उसे शिकायत पर अपना दिमाग लगाना होता है और संक्षिप्त कारण दर्ज करने होते हैं। बिना दिमाग लगाए, या ऐसी शिकायत पर जिसमें कोई अपराध ही न बनता हो, पारित आदेश हाई कोर्ट से रद्द हो सकता है।"
+    },
+    {
+     "en": "After investigation, the police report goes back to the Magistrate, who then decides whether to take cognizance, order further investigation, or treat the matter as a complaint case. The complainant gets a chance to protest if the police file a closure report — the protest petition is a real, recognised remedy.",
+     "hi": "जाँच के बाद पुलिस रिपोर्ट वापस मजिस्ट्रेट के पास जाती है, जो तब तय करता है कि संज्ञान ले, आगे जाँच का आदेश दे, या मामले को शिकायत-वाद की तरह चलाए। अगर पुलिस समापन रिपोर्ट दाखिल करे तो शिकायतकर्ता को विरोध का मौका मिलता है — विरोध-याचिका एक वास्तविक, मान्यता प्राप्त उपाय है।"
+    },
+    {
+     "en": "Practical caution for complainants: do not file a Sec 175(3) application as a pressure tactic in a civil dispute. Courts treat misuse seriously, and a complaint that is essentially civil in nature will be rejected — criminal process is not a recovery tool.",
+     "hi": "शिकायतकर्ताओं के लिए व्यावहारिक चेतावनी — दीवानी विवाद में दबाव बनाने के लिए धारा 175(3) का आवेदन मत दायर करो। कोर्ट दुरुपयोग को गंभीरता से लेते हैं, और जो शिकायत मूल रूप से दीवानी हो उसे खारिज कर दिया जाएगा — आपराधिक प्रक्रिया वसूली का औज़ार नहीं है।"
+    }
+   ]
   }
  ],
  "bsa": [
@@ -3939,6 +3969,66 @@
     "en": "Previous Judgments: When an Earlier Decision Can Be Used in a Later Case",
     "hi": "पूर्व निर्णय: पहले का फैसला बाद के मामले में कब काम आता है"
    }
+  },
+  {
+   "title": {
+    "en": "May Presume, Shall Presume & Conclusive Proof (Sec 119-120 BSA)",
+    "hi": "उपधारणा — कर सकेगा, करेगा, और निश्चायक सबूत (धारा 119-120 BSA)"
+   },
+   "sections": "Sec 119-120 BSA (Sec 114, 4 IEA)",
+   "cases": "G. Vasu v. Syed Yaseen (may presume vs shall presume explained)",
+   "points": [
+    {
+     "en": "Start with the three levels, because exams love testing exactly this. 'May presume' (Sec 119) means the court has a choice — it may treat a fact as proved, or it may ask for more proof. 'Shall presume' means the court must treat it as proved unless the other side disproves it. 'Conclusive proof' (Sec 120) means no disproof is allowed at all — once the basic fact is shown, the conclusion is final.",
+     "hi": "पहले तीन स्तर समझ लो, क्योंकि परीक्षा में यही पूछा जाता है। 'उपधारणा कर सकेगा' (धारा 119) का मतलब कोर्ट के पास विकल्प है — वह तथ्य को साबित मान भी सकता है, और और सबूत भी माँग सकता है। 'उपधारणा करेगा' का मतलब कोर्ट को उसे साबित मानना ही होगा, जब तक दूसरा पक्ष उसे गलत साबित न कर दे। 'निश्चायक सबूत' (धारा 120) का मतलब है कि खंडन की गुंजाइश ही नहीं — बुनियादी तथ्य दिखते ही नतीजा पक्का।"
+    },
+    {
+     "en": "A classic 'may presume' example: a person found in possession of stolen goods soon after the theft. The court may presume he is the thief or that he knew the goods were stolen — but it is not forced to. If he gives a believable explanation, like a genuine purchase receipt, the presumption falls away.",
+     "hi": "एक जाना-माना 'कर सकेगा' उदाहरण — चोरी के तुरंत बाद चुराया सामान किसी के पास मिलना। कोर्ट यह मान सकता है कि वही चोर है या उसे पता था कि सामान चोरी का है — पर कोर्ट मजबूर नहीं है। अगर वह विश्वसनीय सफाई दे दे, जैसे असली खरीद की रसीद, तो उपधारणा खत्म हो जाती है।"
+    },
+    {
+     "en": "A 'shall presume' example is abetment of suicide by a married woman (Sec 117) or dowry death (Sec 118): once the basic conditions are proved, the court must presume the husband's guilt unless he rebuts it. The burden shifts — now it is the accused who must bring evidence, not the prosecution.",
+     "hi": "'करेगा' का उदाहरण है विवाहित महिला के आत्महत्या के दुष्प्रेरण (धारा 117) या दहेज मृत्यु (धारा 118) की उपधारणा — बुनियादी शर्तें साबित होते ही कोर्ट को पति का दोष मानना ही होगा, जब तक वह उसे खंडित न कर दे। सबूत का बोझ पलट जाता है — अब सबूत अभियुक्त को लाना है, अभियोजन को नहीं।"
+    },
+    {
+     "en": "Conclusive proof is the strongest level and is used sparingly. The best-known example: a child born during a valid marriage, or within 280 days of its dissolution while the mother remains unmarried, is conclusively proved to be the legitimate child of the husband — no DNA test or argument can reopen it, except proof of non-access between the parties.",
+     "hi": "निश्चायक सबूत सबसे मज़बूत स्तर है और कम ही इस्तेमाल होता है। सबसे जाना-माना उदाहरण — वैध विवाह के दौरान, या उसके विच्छेद के 280 दिन के भीतर जब माँ अविवाहित रहे, पैदा हुआ बच्चा पति की वैध संतान निश्चायक रूप से साबित माना जाता है — कोई डीएनए टेस्ट या दलील इसे दोबारा नहीं खोल सकती, सिवाय पक्षों के बीच संपर्क न होने के सबूत के।"
+    },
+    {
+     "en": "Practical tip for court: never argue 'the court must presume' when the section only says 'may'. Judges notice this slip at once. Always quote the exact word from the section — may, shall, or conclusive — and build your argument around the burden that word creates.",
+     "hi": "कोर्ट के लिए व्यावहारिक सलाह — जब धारा में सिर्फ 'कर सकेगा' लिखा हो तो कभी यह दलील मत दो कि 'कोर्ट को मानना ही होगा'। जज यह गलती तुरंत पकड़ लेते हैं। हमेशा धारा का सटीक शब्द उद्धृत करो — कर सकेगा, करेगा, या निश्चायक — और उसी शब्द से बनने वाले सबूत के बोझ पर अपनी दलील खड़ी करो।"
+    }
+   ]
+  },
+  {
+   "title": {
+    "en": "Proof of Signature & Handwriting (Sec 72-73 BSA)",
+    "hi": "हस्ताक्षर और हस्तलेख का सबूत (धारा 72-73 BSA)"
+   },
+   "sections": "Sec 72-73 BSA (Sec 67-73 IEA); expert opinion Sec 39 BSA",
+   "cases": "Fakhruddin v. State of Madhya Pradesh (handwriting expert evidence)",
+   "points": [
+    {
+     "en": "When a document's signature or handwriting is denied, it must be proved like any other fact (Sec 72). The usual routes are: the writer himself admits it, a witness saw him write it, an expert compares it, or the court itself compares it with admitted writing under Sec 73.",
+     "hi": "जब किसी दस्तावेज़ के हस्ताक्षर या हस्तलेख से इनकार किया जाए तो उसे भी किसी और तथ्य की तरह साबित करना होता है (धारा 72)। आम तरीके हैं — लिखने वाला खुद स्वीकार करे, किसी गवाह ने उसे लिखते देखा हो, विशेषज्ञ तुलना करे, या कोर्ट खुद धारा 73 के तहत स्वीकृत लेख से उसकी तुलना करे।"
+    },
+    {
+     "en": "Expert opinion (Sec 39) is the most common route in forgery and cheque cases, but remember its limit: an expert's opinion is only corroborative, never conclusive by itself. Courts repeatedly warn that a conviction should not rest on handwriting opinion alone without other supporting evidence.",
+     "hi": "जालसाज़ी और चेक के मामलों में विशेषज्ञ की राय (धारा 39) सबसे आम रास्ता है, पर इसकी सीमा याद रखो — विशेषज्ञ की राय सिर्फ पुष्टि करने वाली होती है, अपने आप में निर्णायक कभी नहीं। कोर्ट बार-बार चेतावनी देते हैं कि सिर्फ हस्तलेख-राय पर, बिना दूसरे सहायक सबूत के, सज़ा नहीं होनी चाहिए।"
+    },
+    {
+     "en": "Under Sec 73, the court can direct a person present in court to write words or figures so they can be compared with the disputed writing. This is a powerful tool, but the comparison must be done carefully — a judge is not a handwriting expert, so the reasons for agreement or difference must be recorded in the order.",
+     "hi": "धारा 73 के तहत कोर्ट कोर्ट में मौजूद व्यक्ति को शब्द या अंक लिखने का निर्देश दे सकती है ताकि विवादित लेख से तुलना हो सके। यह मज़बूत हथियार है, पर तुलना सावधानी से होनी चाहिए — जज हस्तलेख विशेषज्ञ नहीं होता, इसलिए सहमति या अंतर के कारण आदेश में दर्ज होने चाहिए।"
+    },
+    {
+     "en": "Admitted or proved writings are the anchor of every comparison. A specimen taken in court, a signature on a bank record, or a letter the party has already admitted — without a reliable standard, even the best expert opinion has nothing solid to stand on.",
+     "hi": "स्वीकृत या साबित लेख ही हर तुलना की नींव होते हैं। कोर्ट में लिया गया नमूना, बैंक रिकॉर्ड पर हस्ताक्षर, या वह पत्र जिसे पक्ष पहले ही स्वीकार कर चुका हो — बिना विश्वसनीय मानक के सबसे अच्छी विशेषज्ञ राय भी ठोस आधार पर नहीं टिकती।"
+    },
+    {
+     "en": "Exam trap: do not confuse Sec 72 (how to prove handwriting) with Sec 39 (expert opinion in general) or Sec 73 (court's own comparison). A question that asks 'how is a denied signature proved' wants Sec 72 first, with Sec 39 and 73 as the methods inside it.",
+     "hi": "परीक्षा की चाल — धारा 72 (हस्तलेख कैसे साबित करें) को धारा 39 (सामान्य विशेषज्ञ राय) या धारा 73 (कोर्ट की अपनी तुलना) से गड़बड़ मत करो। जो सवाल पूछे कि 'इनकार किए गए हस्ताक्षर कैसे साबित होंगे', उसका जवाब पहले धारा 72 है, और धारा 39 व 73 उसके अंदर के तरीके हैं।"
+    }
+   ]
   }
  ],
  "cpc": [
@@ -5143,6 +5233,66 @@
     "en": "Framing of Issues (Order XIV CPC)",
     "hi": "विवाद्यकों की रचना (आदेश XIV CPC)"
    }
+  },
+  {
+   "title": {
+    "en": "Withdrawal & Compromise of Suits (Order XXIII CPC)",
+    "hi": "वाद की वापसी और समझौता (आदेश XXIII CPC)"
+   },
+   "sections": "Order XXIII Rules 1-4 CPC",
+   "cases": "Hulas Rai Baij Nath v. Firm K.B. Bass & Co. (withdrawal with liberty to file fresh suit)",
+   "points": [
+    {
+     "en": "A plaintiff can withdraw the whole suit, or just a part of the claim, at any time after filing (Order XXIII Rule 1). If he withdraws without the court's permission to file again, he cannot bring a fresh suit on the same cause of action — this is the price of an unconditional withdrawal.",
+     "hi": "वादी दायर करने के बाद कभी भी पूरा वाद, या दावे का कोई हिस्सा, वापस ले सकता है (आदेश XXIII नियम 1)। अगर वह दोबारा वाद दायर करने की कोर्ट की अनुमति के बिना वापस लेता है तो उसी वाद-कारण पर नया वाद नहीं ला सकता — बिना शर्त वापसी की यही कीमत है।"
+    },
+    {
+     "en": "Liberty to file a fresh suit is granted only when the suit is bound to fail for a formal defect — like a missing notice, wrong court, or a technical flaw — or when there are other sufficient grounds. Mere change of mind or a weak case is not a sufficient ground.",
+     "hi": "नया वाद दायर करने की अनुमति तभी मिलती है जब वाद किसी औपचारिक कमी — जैसे नोटिस की कमी, गलत कोर्ट, या तकनीकी खामी — के कारण ज़रूर असफल होने वाला हो, या कोई और पर्याप्त कारण हो। सिर्फ मन बदलना या कमज़ोर केस पर्याप्त कारण नहीं है।"
+    },
+    {
+     "en": "A compromise (Rule 3) is different from withdrawal: when the parties settle, the court records the compromise and passes a decree in its terms. Such a compromise decree can only be challenged on limited grounds, like fraud or lack of authority of the person who signed it.",
+     "hi": "समझौता (नियम 3) वापसी से अलग है — जब पक्ष समझौता कर लेते हैं तो कोर्ट उसे दर्ज करके उसी के अनुसार डिक्री पारित करती है। ऐसे समझौता-डिक्री को सिर्फ सीमित आधारों पर चुनौती दी जा सकती है, जैसे धोखाधड़ी या हस्ताक्षर करने वाले के अधिकार की कमी।"
+    },
+    {
+     "en": "A minor's compromise needs the court's leave, and the court must be satisfied it is for the minor's benefit. Without leave, a compromise involving a minor is voidable at the minor's instance — a protection that cannot be waived by the guardian alone.",
+     "hi": "नाबालिग के समझौते के लिए कोर्ट की अनुमति ज़रूरी है, और कोर्ट को यह संतुष्ट होना चाहिए कि वह नाबालिग के हित में है। बिना अनुमति के नाबालिग से जुड़ा समझौता नाबालिग की ओर से रद्द किया जा सकता है — यह सुरक्षा अकेले संरक्षक नहीं छोड़ सकता।"
+    },
+    {
+     "en": "Practical point: always ask the court to record in the order whether liberty to file afresh is granted or refused. A silent withdrawal order is treated as a withdrawal without liberty, and the client loses the right to re-file — one of the costliest drafting slips in civil practice.",
+     "hi": "व्यावहारिक बात — हमेशा कोर्ट से आदेश में यह दर्ज करवाओ कि नया वाद दायर करने की अनुमति दी गई है या नहीं। चुपचाप वापसी का आदेश बिना अनुमति वाली वापसी माना जाता है, और मुवक्किल दोबारा वाद का अधिकार खो देता है — दीवानी प्रैक्टिस की सबसे महँगी मसौदा-गलतियों में से एक।"
+    }
+   ]
+  },
+  {
+   "title": {
+    "en": "Mesne Profits & Interest on Decrees (Sec 34 CPC, Order XX Rule 12)",
+    "hi": "अंतरिम लाभ और डिक्री पर ब्याज (धारा 34 CPC, आदेश XX नियम 12)"
+   },
+   "sections": "Sec 34 CPC; Sec 2(12) CPC (definition); Order XX Rule 12 CPC",
+   "cases": "R.S. Madanappa v. Chandramma (mesne profits — wrongful possession)",
+   "points": [
+    {
+     "en": "Mesne profits (Sec 2(12)) are the profits a person in wrongful possession of property actually received, or could with ordinary diligence have received, plus interest. The idea is simple: a trespasser should not keep the benefit of someone else's property for free.",
+     "hi": "अंतरिम लाभ (धारा 2(12)) वे लाभ हैं जो संपत्ति पर गलत कब्ज़ा रखने वाले व्यक्ति ने वास्तव में पाए, या सामान्य सावधानी से पा सकता था, साथ में ब्याज। सीधा सिद्धांत है — अतिक्रमणकारी किसी और की संपत्ति का फायदा मुफ्त में नहीं रख सकता।"
+    },
+    {
+     "en": "Mesne profits are claimed in two stages: first the court decides who owns the property and directs an inquiry into the amount, then the amount is fixed. A plaintiff who wins possession but never asks for an inquiry loses the money part — possession and mesne profits are separate reliefs.",
+     "hi": "अंतरिम लाभ दो चरणों में माँगे जाते हैं — पहले कोर्ट तय करती है कि संपत्ति किसकी है और रकम की जाँच का निर्देश देती है, फिर रकम तय होती है। जो वादी कब्ज़ा तो जीत ले पर जाँच की माँग ही न करे, वह पैसों वाला हिस्सा खो देता है — कब्ज़ा और अंतरिम लाभ अलग-अलग राहतें हैं।"
+    },
+    {
+     "en": "Interest under Sec 34 runs in three periods: before the suit (if the contract or law allows it), from filing till the decree (pendente lite, at a rate the court thinks reasonable), and from the decree till payment (usually up to 6% per annum, though the court can allow more on a commercial transaction).",
+     "hi": "धारा 34 के तहत ब्याज तीन अवधियों में चलता है — वाद से पहले (अगर अनुबंध या कानून इसकी इजाज़त दे), वाद दायर करने से डिक्री तक (वाद-लंबित अवधि, कोर्ट उचित समझे उस दर पर), और डिक्री से भुगतान तक (आमतौर पर 6% सालाना तक, हालांकि व्यापारिक लेनदेन पर कोर्ट ज़्यादा भी दे सकती है)।"
+    },
+    {
+     "en": "A common exam confusion: mesne profits are not rent. Rent comes from a lawful tenancy; mesne profits arise only from wrongful possession after the right to possess has ended. If the person was a lawful tenant, the claim is arrears of rent, not mesne profits.",
+     "hi": "आम परीक्षा-भ्रम — अंतरिम लाभ किराया नहीं है। किराया वैध किरायेदारी से आता है; अंतरिम लाभ सिर्फ गलत कब्ज़े से पैदा होता है, जब कब्ज़े का अधिकार खत्म हो चुका हो। अगर व्यक्ति वैध किरायेदार था तो दावा बकाया किराए का होगा, अंतरिम लाभ का नहीं।"
+    },
+    {
+     "en": "Limitation matters: mesne profits can be claimed only for the three years before the suit (Article 67, Limitation Act, 1963). A landlord who sleeps for ten years cannot recover ten years of profits — delay directly shrinks the money recoverable.",
+     "hi": "मियाद भी मायने रखती है — अंतरिम लाभ सिर्फ वाद से पहले के तीन साल के लिए माँगे जा सकते हैं (परिसीमा अधिनियम, 1963 का अनुच्छेद 67)। जो मकान-मालिक दस साल सोता रहे, वह दस साल का लाभ वसूल नहीं सकता — देरी सीधे वसूली जाने वाली रकम घटा देती है।"
+    }
+   ]
   }
  ],
  "majorActs": [
