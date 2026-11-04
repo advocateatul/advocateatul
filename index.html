@@ -1670,8 +1670,8 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           <div class="nav-more-menu" id="navMoreMenu" hidden role="menu" aria-label="More links">
             <a href="https://ecourts.gov.in/" target="_blank" rel="noopener" role="menuitem">💻 eCourts</a>
             <a href="#linkDirectory" role="menuitem" data-i18n="hubTabLinks">🔗 Useful Links</a>
-            <a id="navIndiaCodeLink" href="https://indiacode.gov.in/" target="_blank" rel="noopener" role="menuitem">🇮🇳 India Code</a>
-            <a id="navConstitutionLink" href="https://legislative.gov.in/constitution-of-india" target="_blank" rel="noopener" role="menuitem">📖 Constitution of India · भारत का संविधान</a>
+            <div style="display:flex;align-items:center;gap:6px"><a style="flex:1;min-width:0" id="navIndiaCodeLink" href="https://indiacode.gov.in/" target="_blank" rel="noopener" role="menuitem">🇮🇳 India Code</a><span style="display:flex;gap:4px;flex-shrink:0"><button type="button" data-langlink="navIndiaCodeLink" data-lang="en" aria-label="India Code in English" style="border:1px solid currentColor;background:transparent;color:inherit;border-radius:6px;padding:3px 7px;font-size:12px;line-height:1.4;cursor:pointer">EN</button><button type="button" data-langlink="navIndiaCodeLink" data-lang="hi" aria-label="India Code in Hindi" style="border:1px solid currentColor;background:transparent;color:inherit;border-radius:6px;padding:3px 7px;font-size:12px;line-height:1.4;cursor:pointer">हिं</button></span></div>
+            <div style="display:flex;align-items:center;gap:6px"><a style="flex:1;min-width:0" id="navConstitutionLink" href="https://legislative.gov.in/constitution-of-india" target="_blank" rel="noopener" role="menuitem">📖 Constitution of India · भारत का संविधान</a><span style="display:flex;gap:4px;flex-shrink:0"><button type="button" data-langlink="navConstitutionLink" data-lang="en" aria-label="Constitution of India in English" style="border:1px solid currentColor;background:transparent;color:inherit;border-radius:6px;padding:3px 7px;font-size:12px;line-height:1.4;cursor:pointer">EN</button><button type="button" data-langlink="navConstitutionLink" data-lang="hi" aria-label="Constitution of India in Hindi" style="border:1px solid currentColor;background:transparent;color:inherit;border-radius:6px;padding:3px 7px;font-size:12px;line-height:1.4;cursor:pointer">हिं</button></span></div>
             <a href="#heroAskForm" id="navAskDoubtLink" role="menuitem" data-i18n="navAskDoubt">❓ Ask any doubt</a>
             <a href="#drafts" role="menuitem" data-i18n="navDrafts">🗂️ Drafts</a>
             <a href="#library" role="menuitem" data-i18n="navLibrary">⚖️ Important Judgement</a>
@@ -17014,7 +17014,7 @@ function renderDocChecklist() {
 })();
 </script>
 <script>
-/* More-menu EN/HI links (2026-11-04, Atul: jitna ho sake easy): India Code + Constitution open in the site language — English page in EN mode, Google-Translated Hindi page in HI mode (same translate.goog pattern the site already uses for Kanoon Hindi). Useful Links needs nothing: #linkDirectory is already bilingual-inline. */
+/* More-menu EN/HI links (2026-11-04, Atul: jitna ho sake easy + wahi par EN/HI choice, taaki poori site ki bhasha badle bina link ki bhasha chuni ja sake): main link follows site language; EN/HI buttons beside each link open that exact language. India Code + Constitution only (Useful Links is already bilingual-inline). — English page in EN mode, Google-Translated Hindi page in HI mode (same translate.goog pattern the site already uses for Kanoon Hindi). Useful Links needs nothing: #linkDirectory is already bilingual-inline. */
 (function(){
   var LINKS=[
     {id:"navIndiaCodeLink", en:"https://indiacode.gov.in/", hi:"https://indiacode-gov-in.translate.goog/?_x_tr_sl=en&_x_tr_tl=hi&_x_tr_hl=hi"},
@@ -17029,6 +17029,12 @@ function renderDocChecklist() {
   }
   apply();
   try{ new MutationObserver(apply).observe(document.documentElement,{attributes:true,attributeFilter:["lang"]}); }catch(e){}
+  var menu=document.getElementById("navMoreMenu");
+  if(menu){ menu.addEventListener("click",function(e){
+    var b=(e.target && e.target.closest) ? e.target.closest("[data-langlink]") : null;
+    if(!b) return;
+    for(var i=0;i<LINKS.length;i++){ if(LINKS[i].id===b.getAttribute("data-langlink")){ window.open(b.getAttribute("data-lang")==="hi"?LINKS[i].hi:LINKS[i].en,"_blank","noopener"); break; } }
+  }); }
 })();
 </script>
 </body>
