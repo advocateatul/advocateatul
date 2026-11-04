@@ -14249,6 +14249,7 @@ function renderDocChecklist() {
       }
       function laDraftHtml(txt) {
         var h = esc(txt || "");
+        h = h.replace(/&lt;(\/?strong)&gt;/g, "<$1>").replace(/&lt;br&gt;/g, "<br>");
         h = h.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>").replace(/\*\*/g, "");
         h = h.replace(/^#{1,6}\s?/gm, "");
         return h.replace(/\n/g, "<br>");
