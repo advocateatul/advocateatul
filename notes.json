@@ -595,7 +595,7 @@
    }
   },
   {
-   "cases": "State of U.P. v. Krishna Master (wrongful confinement ingredients); Madan Lal v. State of Punjab (restraint vs confinement)",
+   "cases": "",
    "points": [
     {
      "en": "Sec 126 defines wrongful restraint: voluntarily obstructing a person so as to prevent them from proceeding in a direction in which they have a right to proceed. And the obstruction need not be physical — even a verbal threat or a show of force counts. Standing in someone's way with a threat is enough.",
@@ -618,7 +618,7 @@
      "hi": "मंच और ज़मानत के लिहाज़ से — बुनियादी अपराध ज़मानती हैं और मजिस्ट्रेट द्वारा विचारणीय हैं, पर 10 दिन या ज़्यादा का परिरोध, धारा 127(4), गैर-ज़मानती है और प्रथम श्रेणी मजिस्ट्रेट द्वारा विचारणीय है। बुनियादी अपराधों के लिए निजी शिकायत आम रास्ता है, और कानूनी अधिकार के तहत काम करने वाले व्यक्ति का सद्भावपूर्ण अवरोध — जैसे वैध गिरफ्तारी — अपराध ही नहीं है।"
     }
    ],
-   "sections": "Sec 126-127 BNS (correspond to Sec 339-342 IPC)",
+   "sections": "Sec 126-127 BNS (correspond to Sec 339-346 IPC)",
    "title": {
     "en": "Wrongful Restraint & Wrongful Confinement (Sec 126-127 BNS)",
     "hi": "सदोष अवरोध एवं सदोष परिरोध (धारा 126-127 BNS)"
@@ -2795,8 +2795,8 @@
    "cases": "Priyanka Srivastava v. State of UP (application u/s 156(3) must be supported by affidavit)",
    "points": [
     {
-     "en": "When a complaint is made to a Magistrate, the Magistrate has three options: take cognizance and examine the complainant (Sec 223), postpone and order a police investigation (Sec 175(3)), or dismiss the complaint. Sec 175 is the bridge between a private complaint and a police investigation.",
-     "hi": "जब मजिस्ट्रेट के पास शिकायत आती है तो उसके पास तीन विकल्प होते हैं — संज्ञान लेकर शिकायतकर्ता की परीक्षा करे (धारा 223), टालकर पुलिस जाँच का आदेश दे (धारा 175(3)), या शिकायत खारिज कर दे। धारा 175 निजी शिकायत और पुलिस जाँच के बीच का पुल है।"
+     "en": "When a complaint is made to a Magistrate, the Magistrate has three options: take cognizance and examine the complainant (Sec 223), order a police investigation instead of taking cognizance at that stage (Sec 175(3)), or dismiss the complaint (Sec 226). Sec 175 is the bridge between a private complaint and a police investigation.",
+     "hi": "जब मजिस्ट्रेट के पास शिकायत आती है तो उसके पास तीन विकल्प होते हैं — संज्ञान लेकर शिकायतकर्ता की परीक्षा करे (धारा 223), उस चरण में संज्ञान लेने के बजाय पुलिस जाँच का आदेश दे (धारा 175(3)), या शिकायत खारिज कर दे (धारा 226)। धारा 175 निजी शिकायत और पुलिस जाँच के बीच का पुल है।"
     },
     {
      "en": "An application under Sec 175(3) must be supported by an affidavit, and the complainant must first show that he approached the police (Sec 173) and the Superintendent of Police (Sec 173(4)) without result. This filter exists so that Sec 175 does not become a shortcut around the police station.",
@@ -2813,6 +2813,10 @@
     {
      "en": "Practical caution for complainants: do not file a Sec 175(3) application as a pressure tactic in a civil dispute. Courts treat misuse seriously, and a complaint that is essentially civil in nature will be rejected — criminal process is not a recovery tool.",
      "hi": "शिकायतकर्ताओं के लिए व्यावहारिक चेतावनी — दीवानी विवाद में दबाव बनाने के लिए धारा 175(3) का आवेदन मत दायर करो। कोर्ट दुरुपयोग को गंभीरता से लेते हैं, और जो शिकायत मूल रूप से दीवानी हो उसे खारिज कर दिया जाएगा — आपराधिक प्रक्रिया वसूली का औज़ार नहीं है।"
+    },
+    {
+     "en": "One special filter: a complaint against a public servant for an offence committed in the course of official duties cannot lead straight to a Sec 175(3) order — under Sec 175(4) the Magistrate must first obtain a report from the public servant's superior officer and give the public servant a chance to be heard.",
+     "hi": "एक खास छन्नी — आधिकारिक कर्तव्य के दौरान किए गए अपराध के लिए लोक सेवक के खिलाफ शिकायत पर सीधे धारा 175(3) का आदेश नहीं हो सकता — धारा 175(4) के तहत मजिस्ट्रेट को पहले उस लोक सेवक के वरिष्ठ अधिकारी से रिपोर्ट लेनी होगी और लोक सेवक को सुनवाई का मौका देना होगा।"
     }
    ]
   }
@@ -3972,27 +3976,27 @@
   },
   {
    "title": {
-    "en": "May Presume, Shall Presume & Conclusive Proof (Sec 119-120 BSA)",
-    "hi": "उपधारणा — कर सकेगा, करेगा, और निश्चायक सबूत (धारा 119-120 BSA)"
+    "en": "May Presume, Shall Presume & Conclusive Proof (Sec 2, 116-119 BSA)",
+    "hi": "उपधारणा — कर सकेगा, करेगा, और निश्चायक सबूत (धारा 2, 116-119 BSA)"
    },
-   "sections": "Sec 119-120 BSA (Sec 114, 4 IEA)",
+   "sections": "Sec 2(1)(b), (h), (l), 116-119 BSA (Sec 4, 112, 113A, 113B, 114 IEA)",
    "cases": "G. Vasu v. Syed Yaseen (may presume vs shall presume explained)",
    "points": [
     {
-     "en": "Start with the three levels, because exams love testing exactly this. 'May presume' (Sec 119) means the court has a choice — it may treat a fact as proved, or it may ask for more proof. 'Shall presume' means the court must treat it as proved unless the other side disproves it. 'Conclusive proof' (Sec 120) means no disproof is allowed at all — once the basic fact is shown, the conclusion is final.",
-     "hi": "पहले तीन स्तर समझ लो, क्योंकि परीक्षा में यही पूछा जाता है। 'उपधारणा कर सकेगा' (धारा 119) का मतलब कोर्ट के पास विकल्प है — वह तथ्य को साबित मान भी सकता है, और और सबूत भी माँग सकता है। 'उपधारणा करेगा' का मतलब कोर्ट को उसे साबित मानना ही होगा, जब तक दूसरा पक्ष उसे गलत साबित न कर दे। 'निश्चायक सबूत' (धारा 120) का मतलब है कि खंडन की गुंजाइश ही नहीं — बुनियादी तथ्य दिखते ही नतीजा पक्का।"
+     "en": "Start with the three levels, because exams love testing exactly this. 'May presume' (defined in Sec 2(1)(h), illustrated in Sec 119) means the court has a choice — it may treat a fact as proved, or it may ask for more proof. 'Shall presume' (Sec 2(1)(l)) means the court must treat it as proved unless the other side disproves it. 'Conclusive proof' (Sec 2(1)(b)) means no disproof is allowed at all — once the basic fact is shown, the conclusion is final.",
+     "hi": "पहले तीन स्तर समझ लो, क्योंकि परीक्षा में यही पूछा जाता है। 'उपधारणा कर सकेगा' (परिभाषा धारा 2(1)(h) में, उदाहरण धारा 119 में) का मतलब कोर्ट के पास विकल्प है — वह तथ्य को साबित मान भी सकता है, और और सबूत भी माँग सकता है। 'उपधारणा करेगा' (धारा 2(1)(l)) का मतलब कोर्ट को उसे साबित मानना ही होगा, जब तक दूसरा पक्ष उसे गलत साबित न कर दे। 'निश्चायक सबूत' (धारा 2(1)(b)) का मतलब है कि खंडन की गुंजाइश ही नहीं — बुनियादी तथ्य दिखते ही नतीजा पक्का।"
     },
     {
      "en": "A classic 'may presume' example: a person found in possession of stolen goods soon after the theft. The court may presume he is the thief or that he knew the goods were stolen — but it is not forced to. If he gives a believable explanation, like a genuine purchase receipt, the presumption falls away.",
      "hi": "एक जाना-माना 'कर सकेगा' उदाहरण — चोरी के तुरंत बाद चुराया सामान किसी के पास मिलना। कोर्ट यह मान सकता है कि वही चोर है या उसे पता था कि सामान चोरी का है — पर कोर्ट मजबूर नहीं है। अगर वह विश्वसनीय सफाई दे दे, जैसे असली खरीद की रसीद, तो उपधारणा खत्म हो जाती है।"
     },
     {
-     "en": "A 'shall presume' example is abetment of suicide by a married woman (Sec 117) or dowry death (Sec 118): once the basic conditions are proved, the court must presume the husband's guilt unless he rebuts it. The burden shifts — now it is the accused who must bring evidence, not the prosecution.",
-     "hi": "'करेगा' का उदाहरण है विवाहित महिला के आत्महत्या के दुष्प्रेरण (धारा 117) या दहेज मृत्यु (धारा 118) की उपधारणा — बुनियादी शर्तें साबित होते ही कोर्ट को पति का दोष मानना ही होगा, जब तक वह उसे खंडित न कर दे। सबूत का बोझ पलट जाता है — अब सबूत अभियुक्त को लाना है, अभियोजन को नहीं।"
+     "en": "A 'shall presume' example is dowry death (Sec 118): once it is shown that the woman was subjected to cruelty or harassment for dowry soon before her death, the court must presume that the accused caused the dowry death unless he rebuts it. Contrast abetment of suicide by a married woman (Sec 117) — suicide within seven years of marriage plus cruelty — where the court only MAY presume, having regard to all the other circumstances. The burden shifts — now it is the accused who must bring evidence, not the prosecution.",
+     "hi": "'करेगा' का उदाहरण है दहेज मृत्यु (धारा 118) की उपधारणा — मृत्यु से कुछ पहले दहेज के लिए क्रूरता या उत्पीड़न दिखते ही कोर्ट को यह मानना ही होगा कि अभियुक्त ने ही दहेज मृत्यु कारित की है, जब तक वह उसे खंडित न कर दे। इसके उल्टा, विवाहित महिला के आत्महत्या-दुष्प्रेरण (धारा 117) में — विवाह के सात साल के भीतर आत्महत्या और क्रूरता — कोर्ट सिर्फ 'कर सकेगा', बाकी सभी हालात देखकर। सबूत का बोझ पलट जाता है — अब सबूत अभियुक्त को लाना है, अभियोजन को नहीं।"
     },
     {
-     "en": "Conclusive proof is the strongest level and is used sparingly. The best-known example: a child born during a valid marriage, or within 280 days of its dissolution while the mother remains unmarried, is conclusively proved to be the legitimate child of the husband — no DNA test or argument can reopen it, except proof of non-access between the parties.",
-     "hi": "निश्चायक सबूत सबसे मज़बूत स्तर है और कम ही इस्तेमाल होता है। सबसे जाना-माना उदाहरण — वैध विवाह के दौरान, या उसके विच्छेद के 280 दिन के भीतर जब माँ अविवाहित रहे, पैदा हुआ बच्चा पति की वैध संतान निश्चायक रूप से साबित माना जाता है — कोई डीएनए टेस्ट या दलील इसे दोबारा नहीं खोल सकती, सिवाय पक्षों के बीच संपर्क न होने के सबूत के।"
+     "en": "Conclusive proof is the strongest level and is used sparingly. The best-known example: a child born during a valid marriage, or within 280 days of its dissolution while the mother remains unmarried, is conclusively proved (Sec 116) to be the legitimate child of the husband — no DNA test or argument can reopen it, except proof of non-access between the parties.",
+     "hi": "निश्चायक सबूत सबसे मज़बूत स्तर है और कम ही इस्तेमाल होता है। सबसे जाना-माना उदाहरण — वैध विवाह के दौरान, या उसके विच्छेद के 280 दिन के भीतर जब माँ अविवाहित रहे, पैदा हुआ बच्चा पति की वैध संतान निश्चायक रूप से (धारा 116) साबित माना जाता है — कोई डीएनए टेस्ट या दलील इसे दोबारा नहीं खोल सकती, सिवाय पक्षों के बीच संपर्क न होने के सबूत के।"
     },
     {
      "en": "Practical tip for court: never argue 'the court must presume' when the section only says 'may'. Judges notice this slip at once. Always quote the exact word from the section — may, shall, or conclusive — and build your argument around the burden that word creates.",
@@ -4002,31 +4006,31 @@
   },
   {
    "title": {
-    "en": "Proof of Signature & Handwriting (Sec 72-73 BSA)",
-    "hi": "हस्ताक्षर और हस्तलेख का सबूत (धारा 72-73 BSA)"
+    "en": "Proof of Signature & Handwriting (Sec 65, 72 BSA)",
+    "hi": "हस्ताक्षर और हस्तलेख का सबूत (धारा 65, 72 BSA)"
    },
-   "sections": "Sec 72-73 BSA (Sec 67-73 IEA); expert opinion Sec 39 BSA",
+   "sections": "Sec 65, 72 BSA (Sec 67, 73 IEA); expert opinion Sec 39 BSA",
    "cases": "Fakhruddin v. State of Madhya Pradesh (handwriting expert evidence)",
    "points": [
     {
-     "en": "When a document's signature or handwriting is denied, it must be proved like any other fact (Sec 72). The usual routes are: the writer himself admits it, a witness saw him write it, an expert compares it, or the court itself compares it with admitted writing under Sec 73.",
-     "hi": "जब किसी दस्तावेज़ के हस्ताक्षर या हस्तलेख से इनकार किया जाए तो उसे भी किसी और तथ्य की तरह साबित करना होता है (धारा 72)। आम तरीके हैं — लिखने वाला खुद स्वीकार करे, किसी गवाह ने उसे लिखते देखा हो, विशेषज्ञ तुलना करे, या कोर्ट खुद धारा 73 के तहत स्वीकृत लेख से उसकी तुलना करे।"
+     "en": "When a document's signature or handwriting is denied, it must be proved like any other fact (Sec 65). The usual routes are: the writer himself admits it, a witness saw him write it, an expert compares it, or the court itself compares it with admitted writing under Sec 72.",
+     "hi": "जब किसी दस्तावेज़ के हस्ताक्षर या हस्तलेख से इनकार किया जाए तो उसे भी किसी और तथ्य की तरह साबित करना होता है (धारा 65)। आम तरीके हैं — लिखने वाला खुद स्वीकार करे, किसी गवाह ने उसे लिखते देखा हो, विशेषज्ञ तुलना करे, या कोर्ट खुद धारा 72 के तहत स्वीकृत लेख से उसकी तुलना करे।"
     },
     {
      "en": "Expert opinion (Sec 39) is the most common route in forgery and cheque cases, but remember its limit: an expert's opinion is only corroborative, never conclusive by itself. Courts repeatedly warn that a conviction should not rest on handwriting opinion alone without other supporting evidence.",
      "hi": "जालसाज़ी और चेक के मामलों में विशेषज्ञ की राय (धारा 39) सबसे आम रास्ता है, पर इसकी सीमा याद रखो — विशेषज्ञ की राय सिर्फ पुष्टि करने वाली होती है, अपने आप में निर्णायक कभी नहीं। कोर्ट बार-बार चेतावनी देते हैं कि सिर्फ हस्तलेख-राय पर, बिना दूसरे सहायक सबूत के, सज़ा नहीं होनी चाहिए।"
     },
     {
-     "en": "Under Sec 73, the court can direct a person present in court to write words or figures so they can be compared with the disputed writing. This is a powerful tool, but the comparison must be done carefully — a judge is not a handwriting expert, so the reasons for agreement or difference must be recorded in the order.",
-     "hi": "धारा 73 के तहत कोर्ट कोर्ट में मौजूद व्यक्ति को शब्द या अंक लिखने का निर्देश दे सकती है ताकि विवादित लेख से तुलना हो सके। यह मज़बूत हथियार है, पर तुलना सावधानी से होनी चाहिए — जज हस्तलेख विशेषज्ञ नहीं होता, इसलिए सहमति या अंतर के कारण आदेश में दर्ज होने चाहिए।"
+     "en": "Under Sec 72(2), the court can direct a person present in court to write words or figures so they can be compared with the disputed writing. This is a powerful tool, but the comparison must be done carefully — a judge is not a handwriting expert, so the reasons for agreement or difference must be recorded in the order.",
+     "hi": "धारा 72(2) के तहत कोर्ट कोर्ट में मौजूद व्यक्ति को शब्द या अंक लिखने का निर्देश दे सकती है ताकि विवादित लेख से तुलना हो सके। यह मज़बूत हथियार है, पर तुलना सावधानी से होनी चाहिए — जज हस्तलेख विशेषज्ञ नहीं होता, इसलिए सहमति या अंतर के कारण आदेश में दर्ज होने चाहिए।"
     },
     {
      "en": "Admitted or proved writings are the anchor of every comparison. A specimen taken in court, a signature on a bank record, or a letter the party has already admitted — without a reliable standard, even the best expert opinion has nothing solid to stand on.",
      "hi": "स्वीकृत या साबित लेख ही हर तुलना की नींव होते हैं। कोर्ट में लिया गया नमूना, बैंक रिकॉर्ड पर हस्ताक्षर, या वह पत्र जिसे पक्ष पहले ही स्वीकार कर चुका हो — बिना विश्वसनीय मानक के सबसे अच्छी विशेषज्ञ राय भी ठोस आधार पर नहीं टिकती।"
     },
     {
-     "en": "Exam trap: do not confuse Sec 72 (how to prove handwriting) with Sec 39 (expert opinion in general) or Sec 73 (court's own comparison). A question that asks 'how is a denied signature proved' wants Sec 72 first, with Sec 39 and 73 as the methods inside it.",
-     "hi": "परीक्षा की चाल — धारा 72 (हस्तलेख कैसे साबित करें) को धारा 39 (सामान्य विशेषज्ञ राय) या धारा 73 (कोर्ट की अपनी तुलना) से गड़बड़ मत करो। जो सवाल पूछे कि 'इनकार किए गए हस्ताक्षर कैसे साबित होंगे', उसका जवाब पहले धारा 72 है, और धारा 39 व 73 उसके अंदर के तरीके हैं।"
+     "en": "Exam trap: do not confuse Sec 65 (how to prove handwriting) with Sec 39 (expert opinion in general) or Sec 72 (court's own comparison). A question that asks 'how is a denied signature proved' wants Sec 65 first, with Sec 39 and 72 as the methods inside it.",
+     "hi": "परीक्षा की चाल — धारा 65 (हस्तलेख कैसे साबित करें) को धारा 39 (सामान्य विशेषज्ञ राय) या धारा 72 (कोर्ट की अपनी तुलना) से गड़बड़ मत करो। जो सवाल पूछे कि 'इनकार किए गए हस्ताक्षर कैसे साबित होंगे', उसका जवाब पहले धारा 65 है, और धारा 39 व 72 उसके अंदर के तरीके हैं।"
     }
    ]
   }
@@ -5239,7 +5243,7 @@
     "en": "Withdrawal & Compromise of Suits (Order XXIII CPC)",
     "hi": "वाद की वापसी और समझौता (आदेश XXIII CPC)"
    },
-   "sections": "Order XXIII Rules 1-4 CPC",
+   "sections": "Order XXIII Rules 1-4 CPC; Order XXXII Rule 7 CPC (minor's compromise)",
    "cases": "Hulas Rai Baij Nath v. Firm K.B. Bass & Co. (withdrawal with liberty to file fresh suit)",
    "points": [
     {
@@ -5289,8 +5293,8 @@
      "hi": "आम परीक्षा-भ्रम — अंतरिम लाभ किराया नहीं है। किराया वैध किरायेदारी से आता है; अंतरिम लाभ सिर्फ गलत कब्ज़े से पैदा होता है, जब कब्ज़े का अधिकार खत्म हो चुका हो। अगर व्यक्ति वैध किरायेदार था तो दावा बकाया किराए का होगा, अंतरिम लाभ का नहीं।"
     },
     {
-     "en": "Limitation matters: mesne profits can be claimed only for the three years before the suit (Article 67, Limitation Act, 1963). A landlord who sleeps for ten years cannot recover ten years of profits — delay directly shrinks the money recoverable.",
-     "hi": "मियाद भी मायने रखती है — अंतरिम लाभ सिर्फ वाद से पहले के तीन साल के लिए माँगे जा सकते हैं (परिसीमा अधिनियम, 1963 का अनुच्छेद 67)। जो मकान-मालिक दस साल सोता रहे, वह दस साल का लाभ वसूल नहीं सकता — देरी सीधे वसूली जाने वाली रकम घटा देती है।"
+     "en": "Limitation matters: mesne profits can be claimed only for the three years before the suit (Article 51, Limitation Act, 1963). A landlord who sleeps for ten years cannot recover ten years of profits — delay directly shrinks the money recoverable.",
+     "hi": "मियाद भी मायने रखती है — अंतरिम लाभ सिर्फ वाद से पहले के तीन साल के लिए माँगे जा सकते हैं (परिसीमा अधिनियम, 1963 का अनुच्छेद 51)। जो मकान-मालिक दस साल सोता रहे, वह दस साल का लाभ वसूल नहीं सकता — देरी सीधे वसूली जाने वाली रकम घटा देती है।"
     }
    ]
   }
