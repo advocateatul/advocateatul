@@ -2512,6 +2512,23 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
       </div>
     </section>
 
+    <section class="draft-guide" id="bail-checker" aria-labelledby="bail-checker-title">
+      <div class="shell">
+        <div class="draft-guide-head reveal">
+          <div>
+            <p class="kicker">Bail checker · ज़मानत जाँच</p>
+            <h2 id="bail-checker-title">🔓 Bail Milegi Ya Nahi? · ज़मानत मिलेगी या नहीं?</h2>
+          </div>
+          <p>Apni dhara chunein — turant pata chalega ki offence zamaanati hai ya nahi, kaunsi court trial karegi, aur zamaanat ke liye kahan apply karna hai. Classification BNSS First Schedule ke hisab se hai. / अपनी धारा चुनें — तुरंत पता चलेगा कि अपराध ज़मानती है या नहीं, कौनसी अदालत विचारण करेगी, और ज़मानत के लिए कहाँ आवेदन करना है। वर्गीकरण BNSS की प्रथम अनुसूची के अनुसार है।</p>
+        </div>
+        <div class="section-search reveal" role="group" aria-label="Bail checker">
+          <select id="bailCheckSelect" aria-label="Choose section"></select>
+        </div>
+        <div id="bailCheckResult"></div>
+        <p class="drafts-note reveal">Note: ye samanya jaankari hai — apne case ke tathyon par zamaanat ka faisla court karti hai; apne case ke liye apne vakil se poochhein. / नोट: यह सामान्य जानकारी है — अपने मामले के तथ्यों पर ज़मानत का फैसला न्यायालय करती है; अपने मामले के लिए अपने वकील से पूछें।</p>
+      </div>
+    </section>
+
 <section class="draft-guide" id="paper-decoder" aria-labelledby="paper-decoder-title">
       <div class="shell">
         <div class="draft-guide-head reveal">
@@ -11541,6 +11558,41 @@ function cfBiharFee(v) {
         if (inp) { inp.addEventListener("input", function () { bailRefQuery = inp.value; renderBailRef(); }); inp.addEventListener("focus", function () { try { if (window.akLoad) window.akLoad("bailRefData"); } catch (e) {} }, { once: true }); }
         document.querySelectorAll("[data-bail-chip]").forEach(function (c) { c.addEventListener("click", function () { bailRefFilter = c.getAttribute("data-bail-chip"); renderBailRef(); }); });
       }
+      var bailCheckSel = "";
+      function renderBailChecker() {
+        var sel = document.getElementById("bailCheckSelect");
+        var res = document.getElementById("bailCheckResult");
+        if (!sel || !res) return;
+        var data = getBailRefData();
+        if (!data) { res.innerHTML = "<p class=\"drafts-note\">Loading bail reference… / ज़मानत संदर्भ लोड हो रहा है…</p>"; try { if (window.akLoad) window.akLoad("bailRefData"); } catch (e) {} return; }
+        var rows = (data.rows || []);
+        if (!sel.getAttribute("data-populated")) {
+          var opts = "<option value=\"\">Choose your section… / अपनी धारा चुनें…</option>";
+          rows.forEach(function (r, i) {
+            opts += "<option value=\"" + i + "\">BNS " + escapeHtml(r.sec) + " · " + escapeHtml(r.offence.en) + " · " + escapeHtml(r.offence.hi) + "</option>";
+          });
+          sel.innerHTML = opts;
+          sel.setAttribute("data-populated", "1");
+          if (bailCheckSel) sel.value = bailCheckSel;
+        }
+        var row = (bailCheckSel === "" ? null : (rows[parseInt(bailCheckSel, 10)] || null));
+        if (!row) { res.innerHTML = "<p class=\"drafts-note\">Select a section above to see the bail position. / ऊपर धारा चुनें — ज़मानत की स्थिति दिखेगी।</p>"; return; }
+        var out = "<details class=\"rights-guide\" open><summary>BNS " + escapeHtml(row.sec) + " · " + escapeHtml(row.offence.en) + " · " + escapeHtml(row.offence.hi) + "</summary>";
+        if (row.bailable) {
+          out += "<p class=\"rights-when\">✅ Bailable · ज़मानती — Bail is a right (BNSS 478). Police ya court ko zamaanat deni hogi, personal bond ya surety par. / ज़मानत अधिकार है (BNSS 478)। पुलिस या न्यायालय को ज़मानत देनी होगी, व्यक्तिगत बंधपत्र या प्रतिभू पर।</p>";
+        } else {
+          out += "<p class=\"rights-when\">⛔ Non-bailable · गैर-ज़मानती — Bail is the court's discretion, not a right. Magistrate ke samne BNSS 480, Sessions ya High Court ke samne BNSS 483 ke tahat apply karein. Giraftari se pehle darr ho to anticipatory bail BNSS 482 ke tahat. / ज़मानत न्यायालय के विवेक पर है, अधिकार नहीं। मजिस्ट्रेट के समक्ष BNSS 480, सत्र या उच्च न्यायालय के समक्ष BNSS 483 के तहत आवेदन करें। गिरफ्तारी से पहले भय हो तो अग्रिम ज़मानत BNSS 482 के तहत।</p>";
+        }
+        out += "<p class=\"rights-when\">Punishment: " + escapeHtml(row.punishment.en) + "<br>सज़ा: " + escapeHtml(row.punishment.hi) + "</p>";
+        out += "<p class=\"rights-sections\">Court: " + escapeHtml(row.court.en) + " · " + escapeHtml(row.court.hi) + "</p>";
+        out += "<p class=\"rights-sections\">Default bail note: giraftari ke 60/90 din ke andar chargesheet dakhil na ho to default bail BNSS 187(3) ke tahat mil sakti hai. / नोट: गिरफ्तारी के 60/90 दिन के भीतर आरोपपत्र दाखिल न हो तो डिफॉल्ट ज़मानत BNSS 187(3) के तहत मिल सकती है।</p></details>";
+        res.innerHTML = out;
+      }
+      function initBailChecker() {
+        if (window.__bailCheckerBound) return; window.__bailCheckerBound = true;
+        var sel = document.getElementById("bailCheckSelect");
+        if (sel) { sel.addEventListener("change", function () { bailCheckSel = sel.value; renderBailChecker(); }); sel.addEventListener("focus", function () { try { if (window.akLoad) window.akLoad("bailRefData"); } catch (e) {} }, { once: true }); }
+      }
       var faqQuery = "";
       function getFaqData() { try { return (window.AK_STORE && window.AK_STORE.faqData) || null; } catch (e) { return null; } }
       function renderFaq() {
@@ -12484,7 +12536,7 @@ function renderDocChecklist() {
               else if (akId === "usefulJudgementsData") { renderLibrary(); }
               else if (akId === "dailyJudgementsArchive") { renderActiveUpdatesTab(); }
               else if (akId === "legalVocabData") { renderVocabCats(); renderVocabList(); }
-              else if (akId === "handwrittenNotesData") { renderNotes(); } else if (akId === "bailRefData") { renderBailRef(); } else if (akId === "faqData") { renderFaq(); }
+              else if (akId === "handwrittenNotesData") { renderNotes(); } else if (akId === "bailRefData") { renderBailRef(); renderBailChecker(); } else if (akId === "faqData") { renderFaq(); }
               var akTs = document.getElementById("topSearchInput");
               if (akTs && akTs.value.trim()) akTs.dispatchEvent(new Event("input", { bubbles: true }));
               var akHs = document.getElementById("hubSearchInput");
@@ -12505,7 +12557,7 @@ function renderDocChecklist() {
         renderGenDocs();
         renderDocChecklist();
         initDeadlineCalc();
-        initBailRef(); renderBailRef();
+        initBailRef(); renderBailRef(); initBailChecker(); renderBailChecker();
         initFaq(); renderFaq(); initCourtGuide();
         initStickyHeader();
         /* Deep-link: #draft-<id> opens that draft directly */
