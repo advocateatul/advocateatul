@@ -13437,6 +13437,20 @@ function renderDocChecklist() {
         return { html: html, sources: sources.slice(0, 6) };
       }
 
+      /* Local Hindi-URL helper for LawAssist sources: the updates section's
+         hindiSourceUrl lives in a different IIFE and is NOT visible here
+         (harness ReferenceError 2026-11-04 proved it — a cross-IIFE call here
+         crashes the whole answer render, so this copy must stay). */
+      function laHindiUrl(url) {
+        try {
+          var u = new URL(url);
+          if (u.hostname.indexOf("translate.goog") !== -1) return url;
+          var host = u.hostname.replace(/\./g, "-");
+          var q = u.search ? u.search + "&" : "?";
+          return "https://" + host + ".translate.goog" + u.pathname + q + "_x_tr_sl=en&_x_tr_tl=hi&_x_tr_hl=hi";
+        } catch (e) { return url; }
+      }
+
       function addMsg(html, who, sources, related) {
         var box = document.getElementById("laMessages");
         if (!box) return;
@@ -13454,7 +13468,7 @@ function renderDocChecklist() {
               if (x.j.pdfUrl) {
                 var a = document.createElement("a");
                 a.className = "la-goto"; a.target = "_blank"; a.rel = "noopener";
-                a.href = x.j.pdfUrl;
+                a.href = laLang() === "hi" ? laHindiUrl(x.j.pdfUrl) : x.j.pdfUrl;
                 a.textContent = "⚖️ " + (laLang() === "hi" && x.j.caseNameHi ? x.j.caseNameHi : x.j.caseName) + " " + (x.j.citation || "");
                 src.appendChild(a);
               } else {
