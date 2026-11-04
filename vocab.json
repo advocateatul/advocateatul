@@ -13,6 +13,10 @@
      "example": {
       "en": "The plaintiff filed the suit in the district court.",
       "hi": "वादी ने जिला न्यायालय में वाद दायर किया।"
+     },
+     "definition": {
+      "en": "The person who files a civil case in court, asking the court for relief against the other party.",
+      "hi": "वह व्यक्ति जो न्यायालय में दीवानी मुकदमा दायर करता है और दूसरे पक्ष के विरुद्ध राहत माँगता है।"
      }
     },
     {
@@ -21,6 +25,10 @@
      "example": {
       "en": "The defendant denied all the allegations.",
       "hi": "प्रतिवादी ने सभी आरोपों से इनकार किया।"
+     },
+     "definition": {
+      "en": "The person against whom a civil case or criminal complaint is brought, who must answer the claim in court.",
+      "hi": "वह व्यक्ति जिसके विरुद्ध दीवानी मुकदमा या आपराधिक शिकायत लाई जाती है और जिसे न्यायालय में अपना पक्ष रखना होता है।"
      }
     },
     {
@@ -93,6 +101,10 @@
      "example": {
       "en": "This court has no jurisdiction over the matter.",
       "hi": "इस न्यायालय को मामले पर क्षेत्राधिकार प्राप्त नहीं है।"
+     },
+     "definition": {
+      "en": "A court's legal authority to hear and decide a case, which depends on factors like the place, the subject matter and the value of the dispute.",
+      "hi": "किसी न्यायालय का किसी मामले को सुनने और उस पर निर्णय देने का कानूनी अधिकार, जो स्थान, विषय-वस्तु और विवाद के मूल्य जैसे तथ्यों पर निर्भर करता है।"
      }
     },
     {
@@ -109,6 +121,10 @@
      "example": {
       "en": "The court passed a decree in favour of the plaintiff.",
       "hi": "न्यायालय ने वादी के पक्ष में डिक्री पारित की।"
+     },
+     "definition": {
+      "en": "The formal written order of a civil court that finally decides the rights of the parties in a suit.",
+      "hi": "दीवानी न्यायालय का वह औपचारिक लिखित आदेश जो किसी वाद में पक्षों के अधिकारों का अंतिम रूप से निर्णय करता है।"
      }
     },
     {
@@ -141,6 +157,10 @@
      "example": {
       "en": "The accused applied for bail.",
       "hi": "अभियुक्त ने जमानत हेतु आवेदन किया।"
+     },
+     "definition": {
+      "en": "The temporary release of an accused person from custody, on conditions fixed by the court, with a promise to appear for trial when required.",
+      "hi": "किसी अभियुक्त को न्यायालय द्वारा तय शर्तों पर अभिरक्षा से अस्थायी रूप से छोड़ा जाना, इस वादे के साथ कि वह आवश्यकता पड़ने पर विचारण के लिए उपस्थित होगा।"
      }
     },
     {
@@ -181,6 +201,10 @@
      "example": {
       "en": "The plaintiff sought a temporary injunction.",
       "hi": "वादी ने अस्थायी निषेधाज्ञा मांगी।"
+     },
+     "definition": {
+      "en": "A court order that directs a person either to do something or to stop doing something, to protect a party's rights until the case is decided.",
+      "hi": "न्यायालय का वह आदेश जो किसी व्यक्ति को कुछ करने या कुछ करना रोकने का निर्देश देता है, ताकि मामले के निर्णय तक किसी पक्ष के अधिकार सुरक्षित रहें।"
      }
     },
     {
@@ -189,6 +213,10 @@
      "example": {
       "en": "He filed an affidavit in support of his claim.",
       "hi": "उसने अपने दावे के समर्थन में शपथपत्र दाखिल किया।"
+     },
+     "definition": {
+      "en": "A written statement of facts sworn on oath before an authorised officer, which is treated as evidence in court proceedings.",
+      "hi": "तथ्यों का एक लिखित बयान जो अधिकृत अधिकारी के समक्ष शपथ पर दिया जाता है और न्यायालय की कार्यवाही में साक्ष्य माना जाता है।"
      }
     },
     {
@@ -237,6 +265,10 @@
      "example": {
       "en": "The cause of action arose on the date of breach.",
       "hi": "भंग की तिथि को वाद हेतुक उत्पन्न हुआ।"
+     },
+     "definition": {
+      "en": "The set of facts that gives a person the right to file a case in court and seek relief.",
+      "hi": "तथ्यों का वह समूह जो किसी व्यक्ति को न्यायालय में मुकदमा दायर करने और राहत माँगने का अधिकार देता है।"
      }
     },
     {
@@ -245,6 +277,10 @@
      "example": {
       "en": "The petitioner had locus standi to file the PIL.",
       "hi": "याचिकाकर्ता को जनहित याचिका हेतु वादाधिकार था।"
+     },
+     "definition": {
+      "en": "The right of a person to approach the court in a matter, which exists only if the person has a sufficient legal interest in the dispute.",
+      "hi": "किसी मामले में न्यायालय जाने का किसी व्यक्ति का अधिकार, जो तभी होता है जब उस व्यक्ति का विवाद में पर्याप्त कानूनी हित हो।"
      }
     },
     {
@@ -253,6 +289,10 @@
      "example": {
       "en": "A second suit on the same matter is barred as res sub judice.",
       "hi": "उसी विषय पर दूसरा वाद विचाराधीन विषय के रूप में वर्जित है।"
+     },
+     "definition": {
+      "en": "The rule that a court cannot try a matter which is already pending before another court of competent jurisdiction between the same parties.",
+      "hi": "वह नियम जिसके अनुसार कोई न्यायालय उस मामले का विचारण नहीं कर सकता जो उन्हीं पक्षों के बीच किसी अन्य सक्षम न्यायालय में पहले से लंबित हो।"
      }
     },
     {
@@ -261,6 +301,10 @@
      "example": {
       "en": "The court appointed an amicus curiae in the complex case.",
       "hi": "न्यायालय ने जटिल मामले में न्यायालय मित्र नियुक्त किया।"
+     },
+     "definition": {
+      "en": "A person who is not a party to a case but is invited by the court to help it by giving legal arguments or information on an important point.",
+      "hi": "वह व्यक्ति जो मामले का पक्षकार नहीं होता, परंतु न्यायालय द्वारा किसी महत्त्वपूर्ण बिंदु पर कानूनी तर्क या जानकारी देकर सहायता के लिए आमंत्रित किया जाता है।"
      }
     },
     {
@@ -277,6 +321,10 @@
      "example": {
       "en": "The ratio decidendi of the case binds lower courts.",
       "hi": "मामले का विनिश्चय आधार निचले न्यायालयों को बांधता है।"
+     },
+     "definition": {
+      "en": "The legal principle on which a court's decision rests, which becomes binding precedent for later cases on similar facts.",
+      "hi": "वह कानूनी सिद्धांत जिस पर न्यायालय का निर्णय टिका होता है और जो समान तथ्यों वाले बाद के मामलों के लिए बाध्यकारी नज़ीर बन जाता है।"
      }
     },
     {
@@ -285,6 +333,10 @@
      "example": {
       "en": "Stare decisis keeps the law stable and predictable.",
       "hi": "पूर्व निर्णय पालन विधि को स्थिर व पूर्वानुमेय रखता है।"
+     },
+     "definition": {
+      "en": "The principle that courts must follow the decisions of higher courts in earlier cases, so that the law stays settled and predictable.",
+      "hi": "वह सिद्धांत जिसके अनुसार न्यायालयों को पहले के मामलों में उच्च न्यायालयों के निर्णयों का पालन करना होता है, ताकि कानून स्थिर और पूर्वानुमेय बना रहे।"
      }
     },
     {
@@ -301,6 +353,10 @@
      "example": {
       "en": "The High Court took suo motu notice of the news report.",
       "hi": "उच्च न्यायालय ने समाचार पर स्वतः संज्ञान लिया।"
+     },
+     "definition": {
+      "en": "Action taken by a court on its own initiative, without any petition or complaint being filed before it.",
+      "hi": "न्यायालय द्वारा अपनी ओर से स्वतः की गई कार्रवाई, जिसके लिए उसके समक्ष कोई याचिका या शिकायत दायर नहीं की गई होती है।"
      }
     },
     {
@@ -365,6 +421,10 @@
      "example": {
       "en": "The lawyer cited a binding precedent.",
       "hi": "अधिवक्ता ने बाध्यकारी पूर्वनिर्णय उद्धृत किया।"
+     },
+     "definition": {
+      "en": "An earlier court decision that later courts follow when deciding cases with similar facts or legal questions.",
+      "hi": "पहले का कोई न्यायालयीन निर्णय जिसका समान तथ्यों या कानूनी प्रश्नों वाले बाद के मामलों में न्यायालय पालन करते हैं।"
      }
     },
     {
@@ -630,6 +690,10 @@
      "example": {
       "en": "The magistrate took cognizance of the offence.",
       "hi": "मजिस्ट्रेट ने अपराध का संज्ञान लिया।"
+     },
+     "definition": {
+      "en": "The stage at which a magistrate or court formally takes notice of an offence and begins judicial proceedings against the accused.",
+      "hi": "वह चरण जब मजिस्ट्रेट या न्यायालय किसी अपराध का औपचारिक रूप से संज्ञान लेता है और अभियुक्त के विरुद्ध न्यायिक कार्यवाही शुरू करता है।"
      }
     },
     {
@@ -638,6 +702,10 @@
      "example": {
       "en": "The accused was sent to police remand for three days.",
       "hi": "अभियुक्त को तीन दिन की पुलिस रिमांड पर भेजा गया।"
+     },
+     "definition": {
+      "en": "An order sending an accused person back to police or judicial custody for a fixed period while investigation or trial continues.",
+      "hi": "वह आदेश जिसके द्वारा अभियुक्त को अन्वेषण या विचारण जारी रहने तक एक निश्चित अवधि के लिए पुलिस या न्यायिक अभिरक्षा में वापस भेजा जाता है।"
      }
     },
     {
@@ -654,6 +722,10 @@
      "example": {
       "en": "The court ordered the acquittal of the accused.",
       "hi": "न्यायालय ने अभियुक्त की दोषमुक्ति का आदेश दिया।"
+     },
+     "definition": {
+      "en": "A court's finding that the accused is not guilty of the charge, which ends the prosecution and frees the accused.",
+      "hi": "न्यायालय का यह निष्कर्ष कि अभियुक्त आरोप का दोषी नहीं है, जिससे अभियोजन समाप्त हो जाता है और अभियुक्त मुक्त हो जाता है।"
      }
     },
     {
@@ -694,6 +766,10 @@
      "example": {
       "en": "The client signed the vakalatnama.",
       "hi": "मुवक्किल ने वकालतनामा पर हस्ताक्षर किए।"
+     },
+     "definition": {
+      "en": "The written document by which a client authorises an advocate to appear and act on their behalf in a case.",
+      "hi": "वह लिखित दस्तावेज़ जिसके द्वारा कोई पक्षकार किसी अधिवक्ता को अपने मामले में अपनी ओर से उपस्थित होने और कार्य करने के लिए अधिकृत करता है।"
      }
     },
     {
@@ -726,6 +802,10 @@
      "example": {
       "en": "He was punished for contempt of court.",
       "hi": "उसे न्यायालय की अवमानना हेतु दंडित किया गया।"
+     },
+     "definition": {
+      "en": "Conduct that disobeys a court order or lowers the authority of a court, which the court can punish to protect the administration of justice.",
+      "hi": "ऐसा आचरण जो किसी न्यायालय के आदेश की अवज्ञा करता है या न्यायालय की गरिमा को कम करता है, जिसे न्याय के प्रशासन की रक्षा के लिए न्यायालय दंडित कर सकता है।"
      }
     },
     {
@@ -1303,6 +1383,10 @@
      "example": {
       "en": "They were convicted of criminal conspiracy.",
       "hi": "उन्हें आपराधिक षड्यंत्र हेतु दोषी ठहराया गया।"
+     },
+     "definition": {
+      "en": "An agreement between two or more persons to commit an illegal act, or to do a legal act by illegal means, which is itself an offence.",
+      "hi": "दो या अधिक व्यक्तियों के बीच किसी अवैध कार्य को करने, या किसी वैध कार्य को अवैध साधनों से करने का समझौता, जो स्वयं एक अपराध है।"
      }
     },
     {
@@ -1311,6 +1395,10 @@
      "example": {
       "en": "He moved an application for anticipatory bail.",
       "hi": "उसने अग्रिम जमानत हेतु आवेदन प्रस्तुत किया।"
+     },
+     "definition": {
+      "en": "Bail granted by a court to a person who fears arrest in a non-bailable offence, so that the person is released on bail if arrested.",
+      "hi": "न्यायालय द्वारा उस व्यक्ति को दी गई जमानत जिसे किसी गैर-जमानती अपराध में गिरफ्तारी का भय होता है, ताकि गिरफ्तारी होने पर वह जमानत पर छूट सके।"
      }
     },
     {
@@ -1383,6 +1471,10 @@
      "example": {
       "en": "Hurt is a compoundable offence.",
       "hi": "उपहति शमनीय अपराध है।"
+     },
+     "definition": {
+      "en": "An offence that the victim and the accused are legally allowed to settle between themselves, after which the proceedings can be closed in the manner the law provides.",
+      "hi": "ऐसा अपराध जिसे पीड़ित और अभियुक्त कानूनी रूप से आपस में सुलझा सकते हैं, जिसके बाद कार्यवाही कानून द्वारा निर्धारित तरीके से बंद की जा सकती है।"
      }
     },
     {
@@ -1391,6 +1483,10 @@
      "example": {
       "en": "Common intention makes all liable.",
       "hi": "सामान्य आशय सभी को दायी बनाता है।"
+     },
+     "definition": {
+      "en": "A shared intention of several persons to commit an offence together, which makes each of them liable as if they had committed the offence alone.",
+      "hi": "कई व्यक्तियों द्वारा एक साथ अपराध करने का साझा इरादा, जिसके कारण प्रत्येक व्यक्ति उसी प्रकार उत्तरदायी होता है मानो उसने अकेले अपराध किया हो।"
      }
     },
     {
@@ -1607,7 +1703,11 @@
       "en": "The accused took the plea of alibi and proved he was in another city at the time of the offence.",
       "hi": "अभियुक्त ने अन्यत्र उपस्थिति का प्रतिवाद लिया और सिद्ध किया कि अपराध के समय वह दूसरे नगर में था।"
      },
-     "hi": "अन्यत्र उपस्थिति"
+     "hi": "अन्यत्र उपस्थिति",
+     "definition": {
+      "en": "A defence claiming that the accused was somewhere else when the offence happened, and therefore could not have committed it.",
+      "hi": "वह बचाव जिसमें कहा जाता है कि अपराध के समय अभियुक्त किसी अन्य स्थान पर था, इसलिए वह अपराध नहीं कर सकता था।"
+     }
     },
     {
      "en": "Benefit of Doubt",
@@ -1615,7 +1715,11 @@
       "en": "When the evidence leaves a reasonable doubt, the benefit of doubt goes to the accused.",
       "hi": "जब साक्ष्य से युक्तियुक्त संदेह रह जाए, तो संदेह का लाभ अभियुक्त को मिलता है।"
      },
-     "hi": "संदेह का लाभ"
+     "hi": "संदेह का लाभ",
+     "definition": {
+      "en": "The rule that if the prosecution's evidence leaves a reasonable doubt about the accused's guilt, the accused must be acquitted.",
+      "hi": "वह नियम जिसके अनुसार यदि अभियोजन के साक्ष्य से अभियुक्त के दोष के बारे में युक्तियुक्त संदेह रह जाता है, तो अभियुक्त को बरी किया जाना चाहिए।"
+     }
     },
     {
      "en": "Right of Private Defence",
@@ -1623,7 +1727,11 @@
       "en": "The right of private defence under Sections 34 to 44 of the BNS protects the body and property against unlawful attack.",
       "hi": "बीएनएस की धारा 34 से 44 के अंतर्गत निजी प्रतिरक्षा का अधिकार शरीर और संपत्ति को विधिविरुद्ध आक्रमण से सुरक्षित करता है।"
      },
-     "hi": "निजी प्रतिरक्षा का अधिकार"
+     "hi": "निजी प्रतिरक्षा का अधिकार",
+     "definition": {
+      "en": "The right of a person to use reasonable force to protect their own body or property, or the body or property of another, against an unlawful attack.",
+      "hi": "किसी व्यक्ति का अपने शरीर या संपत्ति, अथवा किसी अन्य के शरीर या संपत्ति की किसी अवैध हमले से रक्षा के लिए युक्तियुक्त बल प्रयोग करने का अधिकार।"
+     }
     },
     {
      "en": "Mistake of Fact",
@@ -1631,7 +1739,11 @@
       "en": "An act done by mistake of fact in good faith is no offence under Section 14 of the BNS.",
       "hi": "सद्भावपूर्वक तथ्यगत भूल से किया गया कार्य बीएनएस की धारा 14 के अंतर्गत अपराध नहीं है।"
      },
-     "hi": "तथ्यगत भूल"
+     "hi": "तथ्यगत भूल",
+     "definition": {
+      "en": "A defence where a person acts under an honest and reasonable misunderstanding of facts, so that the act lacks the criminal intention required for the offence.",
+      "hi": "वह बचाव जिसमें कोई व्यक्ति तथ्यों की ईमानदार और युक्तियुक्त गलतफहमी में कार्य करता है, जिससे उसके कार्य में अपराध के लिए आवश्यक आपराधिक इरादा नहीं रहता।"
+     }
     },
     {
      "en": "Unsoundness of Mind",
@@ -1792,6 +1904,10 @@
      "example": {
       "en": "The court awarded mesne profits to the owner.",
       "hi": "न्यायालय ने स्वामी को मध्यवर्ती लाभ दिलाया।"
+     },
+     "definition": {
+      "en": "The compensation a person in wrongful possession of property must pay to the rightful owner for the period of that possession.",
+      "hi": "वह मुआवज़ा जो किसी संपत्ति पर गलत तरीके से कब्ज़ा रखने वाले व्यक्ति को उस कब्ज़े की अवधि के लिए वास्तविक स्वामी को देना होता है।"
      }
     },
     {
@@ -1888,6 +2004,10 @@
      "example": {
       "en": "Negligence is a tort.",
       "hi": "उपेक्षा एक अपकृत्य है।"
+     },
+     "definition": {
+      "en": "A civil wrong, other than a breach of contract, that causes harm or loss to another person and gives the injured person a right to claim compensation.",
+      "hi": "संविदा भंग के अलावा कोई दीवानी दोष जो किसी अन्य व्यक्ति को हानि या नुकसान पहुँचाता है और पीड़ित व्यक्ति को मुआवज़ा माँगने का अधिकार देता है।"
      }
     },
     {
@@ -1896,6 +2016,10 @@
      "example": {
       "en": "The driver was held liable for negligence.",
       "hi": "चालक को उपेक्षा हेतु दायी ठहराया गया।"
+     },
+     "definition": {
+      "en": "Failure to take the reasonable care that an ordinary person would take in the same situation, which causes harm to another person.",
+      "hi": "उस युक्तियुक्त सावधानी को बरतने में असफलता जो समान परिस्थिति में कोई सामान्य व्यक्ति बरतता, जिससे किसी अन्य व्यक्ति को हानि पहुँचती है।"
      }
     },
     {
@@ -1928,6 +2052,10 @@
      "example": {
       "en": "He claimed quantum meruit for the part work done.",
       "hi": "उसने किए गए आंशिक कार्य हेतु यथायोग्य पारिश्रमिक मांगा।"
+     },
+     "definition": {
+      "en": "The principle that a person who has done work or supplied something under a contract should be paid a reasonable amount for it, even if the contract price was not fixed.",
+      "hi": "वह सिद्धांत जिसके अनुसार किसी संविदा के तहत काम करने या कुछ आपूर्ति करने वाले व्यक्ति को उसका युक्तियुक्त मूल्य मिलना चाहिए, भले ही संविदा में मूल्य तय न हुआ हो।"
      }
     },
     {
@@ -1936,6 +2064,10 @@
      "example": {
       "en": "Estoppel stops a person from denying his own statement.",
       "hi": "विबंध व्यक्ति को अपने कथन से मुकरने से रोकता है।"
+     },
+     "definition": {
+      "en": "A rule that stops a person from denying a statement or fact they earlier made or acted upon, when another person has relied on it to their disadvantage.",
+      "hi": "वह नियम जो किसी व्यक्ति को पहले दिए गए किसी बयान या तथ्य से मुकरने से रोकता है, जब किसी अन्य व्यक्ति ने उस पर भरोसा करके अपना नुकसान उठाया हो।"
      }
     },
     {
@@ -1944,6 +2076,10 @@
      "example": {
       "en": "Res judicata bars re-litigation of decided issues.",
       "hi": "प्राङ्न्याय निर्णीत विषयों के पुनः मुकदमे को रोकता है।"
+     },
+     "definition": {
+      "en": "The rule that a matter already finally decided by a competent court cannot be raised again between the same parties in a new case.",
+      "hi": "वह नियम जिसके अनुसार किसी सक्षम न्यायालय द्वारा अंतिम रूप से तय किए गए मामले को उन्हीं पक्षों के बीच नए मुकदमे में दोबारा नहीं उठाया जा सकता।"
      }
     },
     {
@@ -2088,6 +2224,10 @@
      "example": {
       "en": "Covid invoked force majeure clauses.",
       "hi": "कोविड ने अप्रत्याशित घटना खंड जगाए।"
+     },
+     "definition": {
+      "en": "An extraordinary event beyond anyone's control, such as a natural disaster or war, which prevents a party from fulfilling a contract and may excuse the failure.",
+      "hi": "किसी के नियंत्रण से बाहर की कोई असाधारण घटना, जैसे प्राकृतिक आपदा या युद्ध, जो किसी पक्ष को संविदा पूरा करने से रोक देती है और जिसके कारण असफलता को माफ किया जा सकता है।"
      }
     }
    ]
@@ -2827,6 +2967,10 @@
      "example": {
       "en": "A writ was filed in the High Court.",
       "hi": "उच्च न्यायालय में रिट दाखिल की गई।"
+     },
+     "definition": {
+      "en": "A formal written order issued by a High Court or the Supreme Court directing a person or authority to do something or to stop doing something.",
+      "hi": "उच्च न्यायालय या सर्वोच्च न्यायालय द्वारा जारी किया गया औपचारिक लिखित आदेश जो किसी व्यक्ति या प्राधिकारी को कुछ करने या कुछ करना रोकने का निर्देश देता है।"
      }
     },
     {
@@ -2835,6 +2979,10 @@
      "example": {
       "en": "The court issued a writ of habeas corpus.",
       "hi": "न्यायालय ने बंदी प्रत्यक्षीकरण रिट जारी की।"
+     },
+     "definition": {
+      "en": "A writ by which a court orders a person who is detained to be produced before it, so that it can examine whether the detention is lawful.",
+      "hi": "वह रिट जिसके द्वारा न्यायालय हिरासत में रखे गए व्यक्ति को अपने समक्ष प्रस्तुत करने का आदेश देता है, ताकि वह यह जाँच सके कि हिरासत वैध है या नहीं।"
      }
     },
     {
@@ -2843,6 +2991,10 @@
      "example": {
       "en": "A writ of mandamus was issued to the authority.",
       "hi": "प्राधिकारी को परमादेश रिट जारी की गई।"
+     },
+     "definition": {
+      "en": "A writ by which a court orders a public authority to perform a duty that it is legally bound to perform and has failed to do.",
+      "hi": "वह रिट जिसके द्वारा न्यायालय किसी लोक प्राधिकारी को उस कर्तव्य को पूरा करने का आदेश देता है जिसे पूरा करना उसके लिए कानूनी रूप से बाध्यकारी है और जिसे उसने पूरा नहीं किया है।"
      }
     },
     {
@@ -2851,6 +3003,10 @@
      "example": {
       "en": "The order was quashed by certiorari.",
       "hi": "आदेश उत्प्रेषण द्वारा अभिखंडित किया गया।"
+     },
+     "definition": {
+      "en": "A writ by which a higher court calls for the record of a lower court or tribunal and quashes its order if it was passed without jurisdiction or in violation of law.",
+      "hi": "वह रिट जिसके द्वारा कोई उच्च न्यायालय किसी निचले न्यायालय या अधिकरण का अभिलेख मँगवाता है और यदि उसका आदेश बिना अधिकारिता के या कानून के उल्लंघन में पारित हुआ हो तो उसे रद्द कर देता है।"
      }
     },
     {
@@ -2875,6 +3031,10 @@
      "example": {
       "en": "A public interest litigation was filed on the pollution issue.",
       "hi": "प्रदूषण के मुद्दे पर जनहित याचिका दायर की गई।"
+     },
+     "definition": {
+      "en": "A case filed in a High Court or the Supreme Court for the benefit of the public or a disadvantaged group, even by a person who is not personally affected.",
+      "hi": "उच्च न्यायालय या सर्वोच्च न्यायालय में जनता या किसी वंचित वर्ग के हित में दायर किया गया मामला, जिसे व्यक्तिगत रूप से प्रभावित न होने वाला व्यक्ति भी दायर कर सकता है।"
      }
     },
     {
@@ -2955,6 +3115,10 @@
      "example": {
       "en": "Laws are subject to judicial review.",
       "hi": "विधियां न्यायिक पुनर्विलोकन के अधीन हैं।"
+     },
+     "definition": {
+      "en": "The power of courts to examine whether a law or an action of the government is consistent with the Constitution, and to strike it down if it is not.",
+      "hi": "न्यायालयों की वह शक्ति जिसके तहत वे यह जाँचते हैं कि कोई कानून या सरकार की कोई कार्रवाई संविधान के अनुरूप है या नहीं, और यदि नहीं है तो उसे निरस्त कर देते हैं।"
      }
     },
     {
@@ -3035,6 +3199,10 @@
      "example": {
       "en": "Parliament cannot destroy the basic structure of the Constitution.",
       "hi": "संसद संविधान के मूल ढांचे को नष्ट नहीं कर सकती।"
+     },
+     "definition": {
+      "en": "The doctrine that Parliament cannot amend the Constitution in a way that destroys its essential features, such as democracy, secularism and the rule of law.",
+      "hi": "वह सिद्धांत जिसके अनुसार संसद संविधान में इस प्रकार संशोधन नहीं कर सकती जिससे उसकी आवश्यक विशेषताएँ, जैसे लोकतंत्र, धर्मनिरपेक्षता और विधि का शासन, नष्ट हो जाएँ।"
      }
     },
     {
@@ -3268,6 +3436,10 @@
      "example": {
       "en": "The burden of proof lies on the prosecution.",
       "hi": "सबूत का भार अभियोजन पर होता है।"
+     },
+     "definition": {
+      "en": "The duty of a party to prove the facts it claims in a case; in criminal cases the prosecution must prove the accused's guilt beyond reasonable doubt.",
+      "hi": "किसी मामले में अपने दावों के तथ्यों को साबित करने का किसी पक्ष का कर्तव्य; आपराधिक मामलों में अभियोजन को अभियुक्त का दोष युक्तियुक्त संदेह से परे साबित करना होता है।"
      }
     },
     {
@@ -3292,6 +3464,10 @@
      "example": {
       "en": "Hearsay evidence is generally inadmissible.",
       "hi": "अनुश्रुत साक्ष्य सामान्यतः अग्राह्य है।"
+     },
+     "definition": {
+      "en": "Evidence based on what someone else said, rather than on the witness's own knowledge, which is generally not admissible in court.",
+      "hi": "ऐसा साक्ष्य जो गवाह के अपने ज्ञान पर नहीं बल्कि किसी अन्य व्यक्ति के कहे पर आधारित होता है, जो सामान्यतः न्यायालय में स्वीकार्य नहीं होता।"
      }
     },
     {
@@ -3356,6 +3532,10 @@
      "example": {
       "en": "The dying declaration was recorded by the magistrate.",
       "hi": "मृत्युकालिक कथन मजिस्ट्रेट द्वारा अभिलिखित किया गया।"
+     },
+     "definition": {
+      "en": "A statement made by a person about the cause of their death or the circumstances leading to it, which is admissible as evidence even though the person cannot be cross-examined.",
+      "hi": "किसी व्यक्ति द्वारा अपनी मृत्यु के कारण या उससे जुड़ी परिस्थितियों के बारे में दिया गया बयान, जो साक्ष्य के रूप में स्वीकार्य होता है, भले ही उस व्यक्ति से जिरह न की जा सके।"
      }
     },
     {
@@ -3380,6 +3560,10 @@
      "example": {
       "en": "There is a presumption of innocence.",
       "hi": "निर्दोषता की उपधारणा होती है।"
+     },
+     "definition": {
+      "en": "A rule by which a court treats a fact as proved until evidence to the contrary is given, unless the law makes the presumption conclusive.",
+      "hi": "वह नियम जिसके द्वारा न्यायालय किसी तथ्य को तब तक साबित माना जाता है जब तक उसके विरुद्ध साक्ष्य न दिया जाए, जब तक कि कानून उस धारणा को निश्चायक न बना दे।"
      }
     },
     {
@@ -4002,6 +4186,10 @@
      "example": {
       "en": "The order was set aside for violation of audi alteram partem.",
       "hi": "दूसरे पक्ष को सुने बिना पारित आदेश अपास्त किया गया।"
+     },
+     "definition": {
+      "en": "The principle of natural justice that no person should be condemned without being given a fair chance to be heard.",
+      "hi": "प्राकृतिक न्याय का वह सिद्धांत जिसके अनुसार किसी व्यक्ति को सुने जाने का उचित अवसर दिए बिना दंडित नहीं किया जाना चाहिए।"
      }
     },
     {
@@ -4038,6 +4226,10 @@
      "example": {
       "en": "Both actus reus and mens rea must be proved.",
       "hi": "दोषपूर्ण कृत्य और दोषपूर्ण मनःस्थिति दोनों साबित होने चाहिए।"
+     },
+     "definition": {
+      "en": "The physical act or unlawful omission that forms the external part of an offence, as opposed to the mental intention behind it.",
+      "hi": "वह शारीरिक कार्य या अवैध चूक जो किसी अपराध का बाहरी भाग बनाती है, उसके पीछे के मानसिक इरादे से अलग।"
      }
     },
     {
@@ -4050,6 +4242,10 @@
      "example": {
       "en": "The court examined whether mens rea was present.",
       "hi": "न्यायालय ने जांचा कि दोषपूर्ण मनःस्थिति थी या नहीं।"
+     },
+     "definition": {
+      "en": "The guilty mind or criminal intention behind an act, which must usually be present along with the act itself for an offence to be complete.",
+      "hi": "किसी कार्य के पीछे का दोषपूर्ण मन या आपराधिक इरादा, जो सामान्यतः कार्य के साथ-साथ अपराध के पूर्ण होने के लिए आवश्यक होता है।"
      }
     },
     {
@@ -4074,6 +4270,10 @@
      "example": {
       "en": "A prima facie case was made out against him.",
       "hi": "उसके विरुद्ध प्रथम दृष्टया मामला बनता था।"
+     },
+     "definition": {
+      "en": "A case or evidence that is sufficient on its first appearance to prove a fact, unless it is contradicted or explained away.",
+      "hi": "ऐसा मामला या साक्ष्य जो पहली नज़र में किसी तथ्य को साबित करने के लिए पर्याप्त हो, जब तक कि उसका खंडन न किया जाए या उसे स्पष्ट न कर दिया जाए।"
      }
     },
     {

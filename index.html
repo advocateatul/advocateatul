@@ -5201,7 +5201,7 @@ function cfBiharFee(v) {
           if (vocabActiveCat !== "all" && vocabActiveCat !== cat.id) return;
           cat.terms.forEach(function (term) {
             if (q && term.en.toLowerCase().indexOf(q) < 0 && term.hi.indexOf(vocabQuery) < 0) return;
-            out.push({ en: term.en, hi: term.hi, exEn: term.example && term.example.en, exHi: term.example && term.example.hi, cat: (currentLanguage === "hi" ? (cat.name.hi || cat.name.en) : (cat.name.en || cat.name.hi)) });
+            out.push({ en: term.en, hi: term.hi, exEn: term.example && term.example.en, exHi: term.example && term.example.hi, defEn: term.definition && term.definition.en, defHi: term.definition && term.definition.hi, cat: (currentLanguage === "hi" ? (cat.name.hi || cat.name.en) : (cat.name.en || cat.name.hi)) });
           });
         });
         return out;
@@ -5223,6 +5223,8 @@ function cfBiharFee(v) {
           out += '<div class="vocab-flash-hi">' + escapeHtml(tt.hi) + "</div>";
           if (tt.exEn) out += '<p class="vocab-flash-ex">' + escapeHtml(tt.exEn) + "</p>";
           if (tt.exHi) out += '<p class="vocab-flash-ex">' + escapeHtml(tt.exHi) + "</p>";
+          if (tt.defEn) out += '<p class="vocab-flash-ex">' + escapeHtml("Definition: " + tt.defEn) + "</p>";
+          if (tt.defHi) out += '<p class="vocab-flash-ex">' + escapeHtml("परिभाषा: " + tt.defHi) + "</p>";
         }
         out += "</div>";
         out += '<div class="vocab-flash-ctrl"><button type="button" class="vocab-cat" data-fl-prev>\u2190</button><span style="align-self:center;">' + (vocabFlash.idx + 1) + " / " + vocabFlash.terms.length + "</span><button type=\"button\" class=\"vocab-cat\" data-fl-next>\u2192</button><button type=\"button\" class=\"vocab-cat\" data-fl-shuffle>" + escapeHtml(hi ? "\uD83D\uDD00 फेरबदल" : "\uD83D\uDD00 Shuffle") + "</button><button type=\"button\" class=\"vocab-cat\" data-fl-exit>" + escapeHtml(hi ? "✕ वापस" : "✕ Exit") + "</button></div>";
@@ -10397,6 +10399,18 @@ function cfBiharFee(v) {
               exHi.className = "vocab-ex-hi";
               exHi.textContent = term.example.hi;
               div.appendChild(exHi);
+            }
+            if (term.definition && term.definition.en) {
+              var defEn = document.createElement("p");
+              defEn.className = "vocab-ex";
+              defEn.textContent = "Definition: " + term.definition.en;
+              div.appendChild(defEn);
+            }
+            if (term.definition && term.definition.hi) {
+              var defHi = document.createElement("p");
+              defHi.className = "vocab-ex-hi";
+              defHi.textContent = "परिभाषा: " + term.definition.hi;
+              div.appendChild(defHi);
             }
             var vl = (typeof LA_VOCAB_LINKS !== "undefined") ? LA_VOCAB_LINKS[cat.id + "|" + term.en] : null;
             if (vl) {
