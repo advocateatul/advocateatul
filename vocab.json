@@ -553,6 +553,10 @@
      "example": {
       "en": "The state was bound by promissory estoppel.",
       "hi": "राज्य वचन विबंध से बाध्य था।"
+     },
+     "definition": {
+      "en": "Where one party makes a promise and the other acts on it, the promisor cannot go back on the promise where it would be unjust to do so, even if there was no formal consideration.",
+      "hi": "जहाँ एक पक्ष वचन देता है और दूसरा उस पर कार्य करता है, वहाँ वचनदाता उस वचन से मुकर नहीं सकता, यदि ऐसा करना अन्यायपूर्ण हो — भले ही औपचारिक प्रतिफल न रहा हो।"
      }
     },
     {
@@ -2702,6 +2706,10 @@
      "example": {
       "en": "Title was claimed by adverse possession.",
       "hi": "प्रतिकूल कब्जे से स्वत्व का दावा किया गया।"
+     },
+     "definition": {
+      "en": "Possession of another's property, openly, continuously and hostilely for the statutory period — 12 years under Article 65 of the Limitation Act — can ripen into ownership.",
+      "hi": "दूसरे की संपत्ति पर खुले तौर पर, निरंतर और विरोधात्मक रूप से वैधानिक अवधि — परिसीमा अधिनियम के अनुच्छेद 65 के तहत 12 वर्ष — तक कब्ज़ा स्वामित्व में बदल सकता है।"
      }
     },
     {
@@ -2918,6 +2926,10 @@
      "example": {
       "en": "Later title feeds the earlier grant.",
       "hi": "बाद का स्वत्व पूर्व अनुदान पोषित करता है।"
+     },
+     "definition": {
+      "en": "Under Section 43 of the Transfer of Property Act, where a person transfers property he does not own, claiming authority to do so, and later acquires an interest in it, the transfer takes effect for the transferee's benefit at his option.",
+      "hi": "संपत्ति अंतरण अधिनियम की धारा 43 के तहत, जहाँ कोई व्यक्ति ऐसी संपत्ति अंतरित करता है जिसका वह स्वामी नहीं है, पर अधिकार का दावा करता है, और बाद में उसमें हित प्राप्त कर लेता है, वहाँ अंतरण अंतरिती के लाभ के लिए, उसके विकल्प पर, प्रभावी हो जाता है।"
      }
     }
    ]
@@ -3015,6 +3027,10 @@
      "example": {
       "en": "A writ of prohibition restrained the tribunal.",
       "hi": "प्रतिषेध रिट ने अधिकरण को रोका।"
+     },
+     "definition": {
+      "en": "A writ issued by a higher court to a lower court or tribunal, directing it to stop proceedings that are beyond its jurisdiction or against the principles of natural justice.",
+      "hi": "उच्च न्यायालय द्वारा निम्न अदालत या अधिकरण को जारी लेख, जो उसे अपने अधिकार-क्षेत्र से बाहर या प्राकृतिक न्याय के सिद्धांतों के विरुद्ध चल रही कार्यवाही रोकने का निर्देश देता है।"
      }
     },
     {
@@ -3023,6 +3039,10 @@
      "example": {
       "en": "Quo warranto questions the authority of a public office holder.",
       "hi": "अधिकार पृच्छा लोक पदधारी के प्राधिकार पर प्रश्न उठाती है।"
+     },
+     "definition": {
+      "en": "A writ that asks by what authority a person holds a public office, and can remove a person who is holding it unlawfully.",
+      "hi": "वह लेख जो पूछता है कि कोई व्यक्ति किस अधिकार से सार्वजनिक पद धारण किए है, और अवैध रूप से पद धारण करने वाले व्यक्ति को हटाया जा सकता है।"
      }
     },
     {
@@ -6627,6 +6647,10 @@
      "example": {
       "en": "A second writ on the same cause is barred by res judicata.",
       "hi": "उसी हेतुक पर दूसरी रिट प्राङ्न्याय द्वारा वर्जित है।"
+     },
+     "definition": {
+      "en": "The rule that a matter already decided between the same parties cannot be raised again also applies to writ petitions, subject to recognised exceptions.",
+      "hi": "यह नियम कि उन्हीं पक्षों के बीच पहले से तय मामला दोबारा नहीं उठाया जा सकता, रिट याचिकाओं पर भी लागू होता है — मान्य अपवादों के अधीन।"
      }
     },
     {
@@ -8244,6 +8268,10 @@
      "example": {
       "en": "Article 20 bars double jeopardy.",
       "hi": "अनुच्छेद 20 दोहरा संकट वर्जित करता है।"
+     },
+     "definition": {
+      "en": "Under Article 20(2) of the Constitution, no person shall be prosecuted and punished for the same offence more than once.",
+      "hi": "संविधान के अनुच्छेद 20(2) के तहत किसी व्यक्ति को एक ही अपराध के लिए एक से अधिक बार अभियोजित और दंडित नहीं किया जा सकता।"
      }
     },
     {
