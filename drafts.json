@@ -13987,10 +13987,7 @@
     },
     {
       "id": "electricity-ombudsman-complaint",
-      "category": {
-        "en": "General",
-        "hi": "सामान्य"
-      },
+      "category": {"en": "Consumer", "hi": "उपभोक्ता"},
       "title": {
         "en": "Complaint to Electricity Ombudsman (Against Distribution Licensee — Wrong Billing / Supply Failure)",
         "hi": "विद्युत लोकपाल को शिकायत (वितरण अनुज्ञप्तिधारी के विरुद्ध — गलत बिल / आपूर्ति विफलता)"
@@ -14040,10 +14037,7 @@
     },
     {
       "id": "insurance-ombudsman-complaint",
-      "category": {
-        "en": "General",
-        "hi": "सामान्य"
-      },
+      "category": {"en": "Consumer", "hi": "उपभोक्ता"},
       "title": {
         "en": "Complaint to Insurance Ombudsman (Claim Rejection / Delay / Partial Settlement by Insurer)",
         "hi": "बीमा लोकपाल को शिकायत (बीमाकर्ता द्वारा दावा अस्वीकृति / विलंब / आंशिक निपटान)"
