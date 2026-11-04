@@ -2520,6 +2520,27 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
       </div>
     </section>
 
+
+    <section class="draft-guide" id="deadline-calc" aria-labelledby="deadline-calc-title">
+      <div class="shell">
+        <div class="draft-guide-head reveal">
+          <div>
+            <p class="kicker">Last dates · आखिरी तारीखें</p>
+            <h2 id="deadline-calc-title">⏳ Deadline / Limitation Calculator · समय-सीमा कैलकुलेटर</h2>
+          </div>
+          <p>Kaam chunein aur shuru ki date dalein — aakhri date, din ke naam ke saath, mil jayegi. / काम चुनें और शुरू की तारीख़ डालें — आख़िरी तारीख़, दिन के नाम के साथ, मिल जाएगी।</p>
+        </div>
+        <div class="section-search reveal" role="group" aria-label="Deadline calculator">
+          <select id="dlRule" aria-label="Select work"></select>
+          <input type="date" id="dlDate" aria-label="Trigger date" />
+          <button type="button" id="dlCalcBtn">Calculate · गणना करें</button>
+        </div>
+        <p class="drafts-note" id="dlTriggerLabel"></p>
+        <div id="dlResult"></div>
+        <p class="drafts-note reveal">Note: court band hone ke din (Limitation Act, Sec 4) aur certified-copy ka samay (Sec 12) is calculation me nahi gina gaya — aakhri date par apne vakil se confirm karein. Trigger day ko chhodkar gina gaya hai (Sec 12(1)). / Note: court holidays (Sec 4) and certified-copy time (Sec 12) are NOT included in this calculation — confirm the last date with your lawyer. The trigger day is excluded (Sec 12(1)).</p>
+      </div>
+    </section>
+
     <section class="documents" id="documents" aria-labelledby="documents-title">
       <div class="shell">
         <div class="documents-top reveal">
@@ -11492,6 +11513,95 @@ function cfBiharFee(v) {
         row.appendChild(cl);
         sel.appendChild(row);
       }
+
+      var DEADLINE_RULES = [
+        { id: "art116hc", en: "Appeal to High Court", hi: "उच्च न्यायालय में अपील", art: "Limitation Act, Article 116(a)", kind: "days", val: 90, trEn: "Date of judgment/order", trHi: "निर्णय/आदेश की तारीख" },
+        { id: "art116other", en: "Appeal to any other court", hi: "किसी अन्य न्यायालय में अपील", art: "Limitation Act, Article 116(b)", kind: "days", val: 30, trEn: "Date of judgment/order", trHi: "निर्णय/आदेश की तारीख" },
+        { id: "art124", en: "Review application", hi: "पुनर्विलोकन अर्ज़ी", art: "Limitation Act, Article 124", kind: "days", val: 30, trEn: "Date of judgment/order", trHi: "निर्णय/आदेश की तारीख" },
+        { id: "art131", en: "Revision application", hi: "पुनरीक्षण अर्ज़ी", art: "Limitation Act, Article 131", kind: "days", val: 90, trEn: "Date of decree/order/sentence to be revised", trHi: "पुनरीक्षण वाली डिक्री/आदेश/दंडादेश की तारीख" },
+        { id: "art136", en: "Execution of a decree", hi: "डिक्री का निष्पादन", art: "Limitation Act, Article 136", kind: "years", val: 12, trEn: "Date decree/order became enforceable", trHi: "डिक्री/आदेश के प्रवर्तनीय होने की तारीख" },
+        { id: "art65", en: "Suit for possession (title)", hi: "कब्ज़े का वाद (स्वत्व के आधार पर)", art: "Limitation Act, Article 65", kind: "years", val: 12, trEn: "Date possession became adverse", trHi: "कब्ज़ा प्रतिकूल होने की तारीख" },
+        { id: "art55", en: "Suit for compensation (breach of contract)", hi: "संविदा भंग पर क्षतिपूर्ति का वाद", art: "Limitation Act, Article 55", kind: "years", val: 3, trEn: "Date of breach of contract", trHi: "संविदा भंग की तारीख" },
+        { id: "art54", en: "Suit for specific performance", hi: "विशिष्ट अनुपालन का वाद", art: "Limitation Act, Article 54", kind: "years", val: 3, trEn: "Date fixed for performance (or notice of refusal)", trHi: "अनुपालन के लिए तय तारीख (या इनकार की सूचना की तारीख)" },
+        { id: "art51", en: "Suit for mesne profits", hi: "मध्यवर्ती लाभ का वाद", art: "Limitation Act, Article 51", kind: "years", val: 3, trEn: "Date profits were received", trHi: "लाभ प्राप्त होने की तारीख" },
+        { id: "art75", en: "Suit for libel/slander compensation", hi: "मानहानि (लिबल/स्लैंडर) पर क्षतिपूर्ति का वाद", art: "Limitation Act, Articles 75/76", kind: "years", val: 1, trEn: "Date libel published / words spoken", trHi: "लिबल प्रकाशन / शब्द कहे जाने की तारीख" },
+        { id: "ni138", en: "NI 138 cheque-bounce chain", hi: "NI 138 चेक बाउंस श्रृंखला", art: "NI Act, Sec 138 proviso (b)/(c) + Sec 142(1)(b)", kind: "ni", val: 0, trEn: "Notice receipt date", trHi: "नोटिस मिलने की तारीख" },
+        { id: "consumer", en: "Consumer complaint", hi: "उपभोक्ता शिकायत", art: "Consumer Protection Act 2019, Sec 69", kind: "years", val: 2, trEn: "Date cause of action arose", trHi: "वाद-कारण उत्पन्न होने की तारीख" }
+      ];
+      function dlPad(n) { return (n < 10 ? "0" : "") + n; }
+      function dlFmt(d) {
+        var wdEn = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        var wdHi = ["रविवार", "सोमवार", "मंगलवार", "बुधवार", "गुरुवार", "शुक्रवार", "शनिवार"];
+        return dlPad(d.getDate()) + "-" + dlPad(d.getMonth() + 1) + "-" + d.getFullYear() + " (" + wdEn[d.getDay()] + " · " + wdHi[d.getDay()] + ")";
+      }
+      function dlAddMonths(d, m) {
+        var y = d.getFullYear(), mo = d.getMonth() + m, day = d.getDate();
+        var last = new Date(y, mo + 1, 0).getDate();
+        return new Date(y, mo, Math.min(day, last));
+      }
+      function dlParseDate(s) {
+        var p = (s || "").split("-");
+        if (p.length !== 3) return null;
+        var d = new Date(+p[0], +p[1] - 1, +p[2]);
+        return isNaN(d.getTime()) ? null : d;
+      }
+      function initDeadlineCalc() {
+        var sel = document.getElementById("dlRule");
+        var inp = document.getElementById("dlDate");
+        var btn = document.getElementById("dlCalcBtn");
+        var lbl = document.getElementById("dlTriggerLabel");
+        var out = document.getElementById("dlResult");
+        if (!sel || !inp || !btn || !lbl || !out || window.__dlBound) return;
+        window.__dlBound = true;
+        DEADLINE_RULES.forEach(function (r) {
+          var o = document.createElement("option");
+          o.value = r.id;
+          o.textContent = r.en + " · " + r.hi + " (" + r.art + ")";
+          sel.appendChild(o);
+        });
+        function showRule() {
+          var r = DEADLINE_RULES.filter(function (x) { return x.id === sel.value; })[0] || DEADLINE_RULES[0];
+          lbl.textContent = "Trigger date: " + r.trEn + " · " + r.trHi + " | Period: " + r.art;
+          calc();
+        }
+        function calc() {
+          var r = DEADLINE_RULES.filter(function (x) { return x.id === sel.value; })[0] || DEADLINE_RULES[0];
+          var d = dlParseDate(inp.value);
+          out.textContent = "";
+          if (!d) {
+            var h = document.createElement("p");
+            h.className = "drafts-note";
+            h.textContent = "Date chunein · तारीख़ चुनें।";
+            out.appendChild(h);
+            return;
+          }
+          function line(txt) {
+            var p = document.createElement("p");
+            p.textContent = txt;
+            out.appendChild(p);
+          }
+          if (r.kind === "ni") {
+            var payBy = new Date(d.getTime());
+            payBy.setDate(payBy.getDate() + 15);
+            var compBy = dlAddMonths(payBy, 1);
+            line("Payment last date (15 days) · भुगतान की आखिरी तारीख (15 दिन): " + dlFmt(payBy));
+            line("Complaint last date (1 month after) · शिकायत की आखिरी तारीख (उसके 1 महीने बाद): " + dlFmt(compBy));
+            line("Note: demand notice khud dishonour ki jaankari milne ke 30 din ke andar dena hota hai (proviso (b)). · नोट: माँग नोटिस ख़ुद डिसऑनर की जानकारी मिलने के 30 दिन के अंदर देना होता है (परंतुक (b))।");
+          } else if (r.kind === "days") {
+            var dd = new Date(d.getTime());
+            dd.setDate(dd.getDate() + r.val);
+            line("Last date (" + r.val + " days) · आखिरी तारीख (" + r.val + " दिन): " + dlFmt(dd));
+          } else {
+            var dy = dlAddMonths(d, r.val * 12);
+            line("Last date (" + r.val + " years) · आखिरी तारीख (" + r.val + " साल): " + dlFmt(dy));
+          }
+          line(r.art + " · " + r.en + " · " + r.hi);
+        }
+        sel.addEventListener("change", showRule);
+        inp.addEventListener("change", calc);
+        btn.addEventListener("click", calc);
+        showRule();
+      }
       function getGeneralDocs() {
         try { var node = document.getElementById("generalDocumentsData"); if (!node) return { documents: [] }; return JSON.parse(node.textContent); } catch (e) { return { documents: [] }; }
       }
@@ -12245,6 +12355,7 @@ function cfBiharFee(v) {
         renderDraftGuide();
         renderGenDocs();
         renderDocChecklist();
+        initDeadlineCalc();
         initStickyHeader();
         /* Deep-link: #draft-<id> opens that draft directly */
         (function () {
@@ -16669,7 +16780,7 @@ function cfBiharFee(v) {
 (function () {
   if (window.__akCollapseDone) return;
   window.__akCollapseDone = true;
-  var TARGETS = ['practice', 'ecourts-help', 'updates', 'library', 'linkDirectory', 'knowledge', 'citizen-rights', 'paper-decoder', 'arrest-timeline', 'documents', 'drafts', 'draft-guide', 'general-docs', 'doc-checklist', 'legal-analysis', 'exam-prep', 'notes', 'vocabulary', 'll-journey', 'll-research'];
+  var TARGETS = ['practice', 'ecourts-help', 'updates', 'library', 'linkDirectory', 'knowledge', 'citizen-rights', 'paper-decoder', 'arrest-timeline', 'deadline-calc', 'documents', 'drafts', 'draft-guide', 'general-docs', 'doc-checklist', 'legal-analysis', 'exam-prep', 'notes', 'vocabulary', 'll-journey', 'll-research'];
   var SHOW = '▼ Show content · सामग्री दिखाएँ';
   var HIDE = '▲ Hide content · सामग्री छिपाएँ';
   var saved = {};
