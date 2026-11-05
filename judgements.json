@@ -7194,7 +7194,10 @@
     "en": "A tape-recorded conversation is admissible if it is relevant, the voices are identified, and its accuracy is proved by eliminating the possibility of erasure or tampering.",
     "hi": "यह अभिनिर्धारित किया गया कि टेप-रिकॉर्ड की गई वार्तालाप तभी ग्राह्य है जब वह सुसंगत हो, उसमें आवाज़ों की पहचान की गई हो तथा मिटाए जाने या छेड़छाड़ की सम्भावना को दूर करके उसकी सत्यता सिद्ध की गई हो।"
    },
-   "year": 1972
+   "year": 1972,
+   "sections": [
+    "ART 21"
+   ]
   },
   {
    "caseName": "State of West Bengal v. Administrator, Howrah Municipality",
@@ -7229,7 +7232,11 @@
     "en": "Only reasonable doubts belong to the accused; the golden thread of proof beyond reasonable doubt must not be stretched to embrace every hunch or hesitancy.",
     "hi": "अभिनिर्धारित किया गया कि केवल युक्तियुक्त सन्देहों का लाभ ही अभियुक्त को मिलता है। युक्तियुक्त सन्देह से परे प्रमाण के सुनहरे सूत्र को इतना नहीं खींचा जाना चाहिए कि वह प्रत्येक आशंका या झिझक को समेट ले।"
    },
-   "year": 1973
+   "year": 1973,
+   "sections": [
+    "IPC 302",
+    "BNS 103"
+   ]
   },
   {
    "caseName": "Kali Ram v. State of Himachal Pradesh",
@@ -7245,7 +7252,11 @@
     "en": "If two views are possible on the evidence, the view favourable to the accused must be adopted — especially in circumstantial-evidence cases.",
     "hi": "यह अभिनिर्धारित किया गया कि यदि साक्ष्य पर दो दृष्टिकोण सम्भव हों, तो अभियुक्त के पक्ष वाला दृष्टिकोण ही अपनाया जाना चाहिए — विशेषतः परिस्थितिजन्य साक्ष्य वाले मामलों में।"
    },
-   "year": 1973
+   "year": 1973,
+   "sections": [
+    "IPC 302",
+    "BNS 103"
+   ]
   },
   {
    "caseName": "Pooran Mal v. Director of Inspection (Investigation)",
