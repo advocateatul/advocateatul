@@ -19011,63 +19011,6 @@
    }
   },
   {
-   "id": "supurdgi-seized-property",
-   "category": {
-    "en": "Criminal",
-    "hi": "आपराधिक"
-   },
-   "title": {
-    "en": "Application for Release of Seized Property — Supurdgi (Sec. 505 BNSS / 451 CrPC)",
-    "hi": "जब्त संपत्ति की सुपुर्दगी हेतु आवेदन — सुपुर्दगी (धारा 505 BNSS / 451 CrPC)"
-   },
-   "use": {
-    "en": "Use when police have seized your vehicle, mobile phone, cash, documents or any article during investigation and you want its interim custody (supurdgi / supurdaginama) till the trial ends. Also called release of seized property, interim custody of case property, or vehicle release on supurdgi.",
-    "hi": "जब जाँच के दौरान पुलिस ने आपका वाहन, मोबाइल फोन, नकदी, दस्तावेज़ या कोई सामान जब्त कर लिया हो और मुकदमा समाप्त होने तक उसकी अंतरिम अभिरक्षा (सुपुर्दगी / सुपुर्दगीनामा) चाहिए हो, तब इसका प्रयोग करें। इसे जब्त संपत्ति की वापसी, केस प्रॉपर्टी की अंतरिम अभिरक्षा या सुपुर्दगी पर वाहन रिलीज़ भी कहा जाता है।"
-   },
-   "template": "IN THE COURT OF [JUDICIAL MAGISTRATE FIRST CLASS / CHIEF JUDICIAL MAGISTRATE], [DISTRICT NAME], [STATE]\n\nCriminal Misc. Application No. [____] of [YEAR]\nUnder Section 505 of the Bharatiya Nagarik Suraksha Sanhita, 2023\n(Section 451 of the Code of Criminal Procedure, 1973)\n\nIN THE MATTER OF:\n[APPLICANT NAME], S/o / D/o [FATHER'S NAME],\nR/o [FULL ADDRESS]                                     ... Applicant\n\nVERSUS\n\nState of [STATE], Through S.H.O.,\nPolice Station [NAME], District [NAME]                 ... Respondent\n\nFIR No. [____] dated [DATE], P.S. [NAME]\nOffence(s): Section(s) [____] of [BNS, 2023]\n\nAPPLICATION FOR RELEASE OF SEIZED PROPERTY ON SUPURDGI\n(Supurdgi / Interim Custody of Case Property)\n\nMay it please the Court:\n\n1. That the applicant is the lawful owner of the property described below, which was seized by the police during investigation of the above FIR:\n   [DESCRIPTION OF PROPERTY — e.g. Motor Vehicle Maruti Swift, Registration No. [____], Chassis No. [____], Engine No. [____] / Mobile Phone [MAKE/MODEL, IMEI No. [____]] / Cash Rs. [____] / [OTHER ARTICLE]].\n2. That the applicant is not an accused in the present case / is an accused but the said property is not the subject-matter of the offence and is not required to be retained for any further investigation.\n3. That the property is lying in the police malkhana / court malkhana and is deteriorating day by day. The vehicle, if kept unused, will lose its value and suffer damage; the mobile phone and other articles are also of no use to the investigation now.\n4. That the applicant undertakes to produce the property before the Court / Investigating Officer as and when required, and not to sell, transfer, alienate or alter the property in any manner during the pendency of the trial.\n5. That the applicant is ready and willing to furnish a supurdginama (bond) with one surety and to comply with all conditions imposed by this Hon'ble Court, including keeping the vehicle insured and maintaining its original condition.\n6. That no other application for release of the same property is pending before any other court.\n\nPRAYER:\nIt is, therefore, most respectfully prayed that this Hon'ble Court may be pleased to release the above-described property to the applicant on supurdgi (interim custody), on such terms and conditions as this Hon'ble Court deems fit and proper, in the interest of justice.\n\nPlace: [____]                              [SIGNATURE OF APPLICANT]\nDate: [____]                               Through Counsel\n                                            [ADVOCATE NAME, ENROLMENT NO.]\n                                            [ADDRESS / PHONE]\n\nVERIFICATION:\nI, [APPLICANT NAME], the applicant above-named, do hereby verify that the contents of paras 1 to 6 above are true and correct to my knowledge and belief, and nothing material has been concealed therefrom.\n\nVerified at [PLACE] on this [DATE] day of [MONTH], [YEAR].\n\n                                            [SIGNATURE OF APPLICANT]\n\nANNEXURES: (1) Copy of FIR; (2) Proof of ownership — Registration Certificate / Invoice / Bill; (3) Seizure memo; (4) ID proof of applicant.",
-   "templateHi": "माननीय [न्यायिक मजिस्ट्रेट प्रथम श्रेणी / मुख्य न्यायिक मजिस्ट्रेट] न्यायालय, [DISTRICT NAME], [STATE] में\n\nआपराधिक विविध आवेदन सं. [____] सन् [YEAR]\nभारतीय नागरिक सुरक्षा संहिता, 2023 की धारा 505 के अंतर्गत\n(दंड प्रक्रिया संहिता, 1973 की धारा 451)\n\nविषय में:\n[APPLICANT NAME], पुत्र/पुत्री [FATHER'S NAME],\nनिवासी [FULL ADDRESS]                                     ... आवेदक\n\nबनाम\n\n[STATE] राज्य, थाना प्रभारी के माध्यम से,\nथाना [NAME], जिला [NAME]                 ... प्रत्यर्थी\n\nप्र.सू.रि. सं. [____] दिनांक [DATE], थाना [NAME]\nअपराध: धारा [____] [BNS, 2023]\n\nजब्त संपत्ति की सुपुर्दगी हेतु आवेदन\n(सुपुर्दगी / केस प्रॉपर्टी की अंतरिम अभिरक्षा)\n\nमाननीय न्यायालय के समक्ष निवेदन है:\n\n1. कि आवेदक नीचे वर्णित संपत्ति का वैध स्वामी है, जिसे उपर्युक्त प्र.सू.रि. की जाँच के दौरान पुलिस ने जब्त किया था:\n   [संपत्ति का विवरण — यथा मोटर वाहन मारुति स्विफ्ट, पंजीकरण सं. [____], चेसिस सं. [____], इंजन सं. [____] / मोबाइल फोन [MAKE/MODEL, IMEI सं. [____]] / नकदी रु. [____] / [अन्य सामान]]।\n2. कि आवेदक इस मामले में अभियुक्त नहीं है / अभियुक्त है परंतु उक्त संपत्ति अपराध की विषय-वस्तु नहीं है और आगे की जाँच हेतु उसे रखे जाने की आवश्यकता नहीं है।\n3. कि संपत्ति पुलिस मालखाना / न्यायालय मालखाना में पड़ी है और दिन-प्रतिदिन खराब हो रही है। वाहन को बिना उपयोग रखे जाने से उसका मूल्य घटेगा और उसे क्षति होगी; मोबाइल फोन और अन्य सामान भी अब जाँच के लिए उपयोगी नहीं हैं।\n4. कि आवेदक वचन देता है कि आवश्यकता पड़ने पर संपत्ति न्यायालय / जाँच अधिकारी के समक्ष प्रस्तुत करेगा और मुकदमे के लंबित रहने के दौरान संपत्ति को किसी प्रकार बेचेगा, हस्तांतरित करेगा, अन्य-संक्रांत नहीं करेगा या उसमें कोई परिवर्तन नहीं करेगा।\n5. कि आवेदक एक जमानतदार सहित सुपुर्दगीनामा (बंधपत्र) प्रस्तुत करने और माननीय न्यायालय द्वारा लगाई गई सभी शर्तों का पालन करने को तैयार है, जिसमें वाहन का बीमा बनाए रखना और उसकी मूल स्थिति बनाए रखना शामिल है।\n6. कि इसी संपत्ति की वापसी हेतु कोई अन्य आवेदन किसी अन्य न्यायालय में लंबित नहीं है।\n\nप्रार्थना:\nअतः सादर प्रार्थना है कि माननीय न्यायालय उपर्युक्त संपत्ति को आवेदक को सुपुर्दगी (अंतरिम अभिरक्षा) पर, ऐसी शर्तों पर जो माननीय न्यायालय उचित समझे, जारी करने की कृपा करें, न्याय के हित में।\n\nस्थान: [____]                              [आवेदक के हस्ताक्षर]\nदिनांक: [____]                             अधिवक्ता द्वारा\n                                            [ADVOCATE NAME, ENROLMENT NO.]\n                                            [ADDRESS / PHONE]\n\nसत्यापन:\nमैं, [APPLICANT NAME], उपर्युक्त आवेदक, सत्यापित करता/करती हूँ कि उपर्युक्त पैरा 1 से 6 की विषय-वस्तु मेरी जानकारी और विश्वास के अनुसार सत्य और सही है, और कोई महत्वपूर्ण बात छिपाई नहीं गई है।\n\n[PLACE] में [DATE] [MONTH], [YEAR] को सत्यापित।\n\n                                            [आवेदक के हस्ताक्षर]\n\nसंलग्नक: (1) FIR की प्रति; (2) स्वामित्व प्रमाण — पंजीकरण प्रमाणपत्र / चालान / बिल; (3) जब्ती मेमो; (4) आवेदक का पहचान प्रमाण।",
-   "filedIn": {
-    "en": "Court of the Magistrate / Sessions Court (where the case is pending)",
-    "hi": "मजिस्ट्रेट न्यायालय / सत्र न्यायालय (जहाँ मामला लंबित हो)"
-   },
-   "sections": {
-    "en": "Sec. 505 BNSS (Sec. 451 CrPC) — custody and disposal of property pending trial; Sec. 506 BNSS (Sec. 452 CrPC) — disposal at conclusion of trial; Sec. 503–504 BNSS — seizure and disposal of property. Sunderbhai Ambalal Desai v. State of Gujarat, (2002) 10 SCC 283 — guidelines: vehicle/property should be released promptly on supurdgi instead of rotting in police custody.",
-    "hi": "धारा 505 BNSS (धारा 451 CrPC) — मुकदमा लंबित रहने के दौरान संपत्ति की अभिरक्षा और निपटान; धारा 506 BNSS (धारा 452 CrPC) — मुकदमा समाप्ति पर निपटान; धारा 503–504 BNSS — संपत्ति की जब्ती और निपटान। सुंदरभाई अंबालाल देसाई बनाम गुजरात राज्य, (2002) 10 SCC 283 — दिशानिर्देश: वाहन/संपत्ति को पुलिस अभिरक्षा में सड़ने देने के बजाय शीघ्र सुपुर्दगी पर दे देना चाहिए।"
-   },
-   "jurisdiction": {
-    "en": "The Magistrate or Sessions Court before which the case / investigation is pending; where no case is pending, the Magistrate having territorial jurisdiction over the police station.",
-    "hi": "वह मजिस्ट्रेट या सत्र न्यायालय जिसके समक्ष मामला / जाँच लंबित हो; जहाँ कोई मामला लंबित न हो, वहाँ थाने के क्षेत्राधिकार वाला मजिस्ट्रेट।"
-   },
-   "requirements": {
-    "en": [
-     "Copy of FIR",
-     "Seizure memo (if available)",
-     "Proof of ownership — RC / invoice / bill / purchase receipt",
-     "ID proof of applicant",
-     "Photographs of the property/vehicle",
-     "Insurance papers (for vehicles)",
-     "Surety with ID and address proof"
-    ],
-    "hi": [
-     "FIR की प्रति",
-     "जब्ती मेमो (यदि उपलब्ध हो)",
-     "स्वामित्व प्रमाण — RC / चालान / बिल / खरीद रसीद",
-     "आवेदक का पहचान प्रमाण",
-     "संपत्ति/वाहन की फोटो",
-     "बीमा कागजात (वाहनों के लिए)",
-     "जमानतदार पहचान और पता प्रमाण सहित"
-    ]
-   },
-   "when": {
-    "en": "When police have seized your vehicle, phone, cash or other property and you want it back on interim custody during the case.",
-    "hi": "जब पुलिस ने आपका वाहन, फोन, नकदी या अन्य संपत्ति जब्त कर ली हो और मुकदमे के दौरान उसे अंतरिम अभिरक्षा में वापस चाहिए हो।"
-   },
-   "where": {
-    "en": "Magistrate / Sessions Court where the case is pending",
-    "hi": "मजिस्ट्रेट / सत्र न्यायालय जहाँ मामला लंबित हो"
-   }
-  },
-  {
    "id": "restoration-suit-dismissed-default",
    "category": {
     "en": "Civil",
