@@ -1523,7 +1523,10 @@
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=McDowell+%26+Co.+v.+Commercial+Tax+Officer",
       "sourceName": "Indian Kanoon",
-      "caseNameHi": "मैकडॉवेल एंड कंपनी लिमिटेड बनाम वाणिज्य कर अधिकारी"
+      "caseNameHi": "मैकडॉवेल एंड कंपनी लिमिटेड बनाम वाणिज्य कर अधिकारी",
+      "sections": [
+        "ART 265"
+      ]
     },
     {
       "caseName": "Union of India v. Tulsiram Patel",
@@ -7126,7 +7129,10 @@
         "en": "Classic exposition that a Hindu joint family is a creature of law which cannot be created by act of parties, and a coparcenary is a much narrower body within it consisting only of those who take by birth.",
         "hi": "शास्त्रीय व्याख्या की गई कि हिन्दू संयुक्त परिवार विधि की सृष्टि है, जिसे पक्षों के कृत्य से सृजित नहीं किया जा सकता। सहदायिकी (coparcenary) उसके भीतर एक अत्यन्त संकीर्ण निकाय है, जिसमें केवल वे सम्मिलित हैं जो जन्म से अधिकार प्राप्त करते हैं।"
       },
-      "year": 1969
+      "year": 1969,
+      "sections": [
+        "HSA 6"
+      ]
     },
     {
       "caseName": "E.M. Sankaran Namboodiripad v. T. Narayanan Nambiar",
@@ -8359,7 +8365,10 @@
         "en": "A Hindu father or Karta can validly gift a reasonable portion of joint family property to his daughter at the time of or after her marriage, such gift being a pious obligation.",
         "hi": "यह अभिनिर्धारित किया गया कि कोई हिन्दू पिता या कर्ता अपने विवाह के समय या उसके पश्चात अपनी पुत्री को संयुक्त परिवार की सम्पत्ति का युक्तियुक्त भाग वैध रूप से उपहार में दे सकता है; ऐसा उपहार एक धार्मिक दायित्व है।"
       },
-      "year": 2004
+      "year": 2004,
+      "sections": [
+        "TPA 122"
+      ]
     },
     {
       "caseName": "Amarawati and Another v. State of U.P.",
