@@ -11011,7 +11011,12 @@ function cfBiharFee(v) {
         var moreWrap = document.getElementById("vocabMoreWrap");
         var moreBtn = document.getElementById("vocabMoreBtn");
         if (!list) return;
-        if (vocabFlash) { vocabFlash = null; var bx = document.getElementById("vocabFlash"); if (bx) bx.hidden = true; list.style.display = ""; if (countEl) countEl.style.display = ""; var fb2 = document.getElementById("vocabFlashBtn"); if (fb2) fb2.textContent = "🃏 Flashcards / फ़्लैशकार्ड"; }
+        if (vocabFlash) { vocabFlash = null; var bx = document.getElementById("vocabFlash"); if (bx) bx.hidden = true; var fb2 = document.getElementById("vocabFlashBtn"); if (fb2) fb2.textContent = "🃏 Flashcards / फ़्लैशकार्ड"; }
+        /* Flashcards exit fix (v192): vocabFlashExit() nulls vocabFlash BEFORE calling
+           renderVocabList(), so the display restore above never ran and the list +
+           count stayed display:none after Exit — the section went blank. Restore
+           unconditionally: this function renders the list, so the list must show. */
+        list.style.display = ""; if (countEl) countEl.style.display = "";
         list.textContent = "";
         var shown = 0, total = 0, matched = 0;
         var q = vocabQuery.toLowerCase();
@@ -13234,7 +13239,7 @@ function renderDocChecklist() {
            fetches the live index.html and compares this number — a higher live
            version means an update is waiting, so the refresh reloads to load it.
            Bump this (and the vNNN-rebuild comment) on every deploy. */
-        window.AK_BUILD = 191;
+        window.AK_BUILD = 192;
         initCustomPullToRefresh();
         /* Deep-link: #draft-<id> opens that draft directly */
         (function () {
