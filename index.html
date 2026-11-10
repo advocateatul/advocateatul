@@ -1615,7 +1615,8 @@ html[data-theme="dark"] .la-doc-row{background:rgba(255,255,255,.06)}
     .vocab-term h3 .vocab-hi { color: #581c87; font-weight: 700; }
     .vocab-term .vocab-ex { font-size: .92rem; color: var(--ink); opacity: .85; margin: 8px 0 0; padding-left: 14px; border-left: 3px solid #3b82f6; }
     .vocab-term .vocab-ex-hi { font-size: .92rem; color: var(--ink); opacity: .75; margin: 4px 0 0; padding-left: 14px; }
-    .vocab-flash-card { background: var(--paper-2); border: 1px solid var(--line); border-radius: 16px; padding: 28px 24px; text-align: center; cursor: pointer; min-height: 190px; }
+    .vocab-flash-card { background: var(--paper-2); border: 1px solid var(--line); border-radius: 16px; padding: 28px 24px; text-align: center; cursor: pointer; min-height: 190px; animation: vocabFlashIn .18s ease; }
+    @keyframes vocabFlashIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
     .vocab-flash-card .vocab-flash-cat { font-size: .8rem; opacity: .7; margin-bottom: 10px; }
     .vocab-flash-card .vocab-flash-term { font-size: 1.6rem; font-weight: 800; margin: 6px 0; color: #1e1e1e; }
     .vocab-flash-card .vocab-flash-hi { font-size: 1.4rem; font-weight: 700; color: #581c87; margin: 6px 0; }
@@ -5840,13 +5841,27 @@ function cfBiharFee(v) {
         });
       }
       var vocabFlash = null;
+      /* Flashcards learning state (v193): known marks persist in localStorage,
+         review mode filters the deck to unknown terms, Hindi-first swaps faces. */
+      var vocabFlashHiFirst = false;
+      try { vocabFlashHiFirst = localStorage.getItem("akFlashHiFirst") === "1"; } catch (e) {}
+      function vocabFlashKnownSet() {
+        try { var a = JSON.parse(localStorage.getItem("akFlashKnown") || "[]"); var s = {}; a.forEach(function (k) { s[k] = 1; }); return s; } catch (e) { return {}; }
+      }
+      function vocabFlashSaveKnown(set) {
+        try { var a = []; for (var k in set) if (set[k]) a.push(k); localStorage.setItem("akFlashKnown", JSON.stringify(a)); } catch (e) {}
+      }
+      var vocabFlashKnown = vocabFlashKnownSet();
+      var vocabFlashReview = false;
       function vocabFlashTerms() {
         var data = getVocabData(); var out = []; var q = vocabQuery.toLowerCase();
         data.categories.forEach(function (cat) {
           if (vocabActiveCat !== "all" && vocabActiveCat !== cat.id) return;
           cat.terms.forEach(function (term) {
             if (q && term.en.toLowerCase().indexOf(q) < 0 && term.hi.indexOf(vocabQuery) < 0) return;
-            out.push({ en: term.en, hi: term.hi, exEn: term.example && term.example.en, exHi: term.example && term.example.hi, defEn: term.definition && term.definition.en, defHi: term.definition && term.definition.hi, cat: (currentLanguage === "hi" ? (cat.name.hi || cat.name.en) : (cat.name.en || cat.name.hi)) });
+            var key = cat.id + "|" + term.en;
+            if (vocabFlashReview && vocabFlashKnown[key]) return;
+            out.push({ key: key, en: term.en, hi: term.hi, exEn: term.example && term.example.en, exHi: term.example && term.example.hi, defEn: term.definition && term.definition.en, defHi: term.definition && term.definition.hi, cat: (currentLanguage === "hi" ? (cat.name.hi || cat.name.en) : (cat.name.en || cat.name.hi)) });
           });
         });
         return out;
@@ -5854,28 +5869,46 @@ function cfBiharFee(v) {
       function renderVocabFlash() {
         var box = document.getElementById("vocabFlash"); if (!box || !vocabFlash) return;
         var hi = currentLanguage === "hi";
+        var knownTotal = 0; for (var kk in vocabFlashKnown) if (vocabFlashKnown[kk]) knownTotal++;
         if (!vocabFlash.terms.length) {
-          box.innerHTML = "<p>" + escapeHtml(hi ? "कोई शब्द नहीं मिला — खोज साफ़ करें या दूसरी श्रेणी चुनें।" : "No terms match — clear the search or pick another category.") + "</p><div class=\"vocab-flash-ctrl\"><button type=\"button\" class=\"vocab-cat\" data-fl-exit>" + escapeHtml(hi ? "✕ वापस सूची पर" : "✕ Back to list") + "</button></div>";
+          if (vocabFlashReview) {
+            box.innerHTML = "<p>" + escapeHtml(hi ? "🎉 सब जान लिए — इस सेट के सारे शब्द याद हो गए!" : "🎉 All learned — you know every word in this set!") + "</p><div class=\"vocab-flash-ctrl\"><button type=\"button\" class=\"vocab-cat\" data-fl-review>" + escapeHtml(hi ? "🔁 सब दिखाएं" : "🔁 Show all") + "</button><button type=\"button\" class=\"vocab-cat\" data-fl-exit>" + escapeHtml(hi ? "✕ वापस" : "✕ Exit") + "</button></div>";
+          } else {
+            box.innerHTML = "<p>" + escapeHtml(hi ? "कोई शब्द नहीं मिला — खोज साफ़ करें या दूसरी श्रेणी चुनें।" : "No terms match — clear the search or pick another category.") + "</p><div class=\"vocab-flash-ctrl\"><button type=\"button\" class=\"vocab-cat\" data-fl-exit>" + escapeHtml(hi ? "✕ वापस सूची पर" : "✕ Back to list") + "</button></div>";
+          }
           return;
         }
         var tt = vocabFlash.terms[vocabFlash.idx];
         var out = '<div class="vocab-flash-card" data-fl-flip>';
         out += '<div class="vocab-flash-cat">' + escapeHtml(tt.cat) + "</div>";
         if (!vocabFlash.flipped) {
-          out += '<div class="vocab-flash-term">' + escapeHtml(tt.en) + "</div>";
-          out += '<div class="vocab-flash-hint">' + escapeHtml(hi ? "अर्थ देखने के लिए टैप करें" : "Tap to see the meaning") + "</div>";
+          if (vocabFlashHiFirst) {
+            out += '<div class="vocab-flash-term">' + escapeHtml(tt.hi || tt.en) + "</div>";
+            out += '<div class="vocab-flash-hint">' + escapeHtml(hi ? "English देखने के लिए टैप करें" : "Tap to see the English") + "</div>";
+          } else {
+            out += '<div class="vocab-flash-term">' + escapeHtml(tt.en) + "</div>";
+            out += '<div class="vocab-flash-hint">' + escapeHtml(hi ? "अर्थ देखने के लिए टैप करें" : "Tap to see the meaning") + "</div>";
+          }
         } else {
-          out += '<div class="vocab-flash-hi">' + escapeHtml(tt.hi) + "</div>";
-          if (tt.exEn) out += '<p class="vocab-flash-ex">' + escapeHtml(tt.exEn) + "</p>";
-          if (tt.exHi) out += '<p class="vocab-flash-ex">' + escapeHtml(tt.exHi) + "</p>";
-          if (tt.defEn) out += '<p class="vocab-flash-ex">' + escapeHtml("Definition: " + tt.defEn) + "</p>";
-          if (tt.defHi) out += '<p class="vocab-flash-ex">' + escapeHtml("परिभाषा: " + tt.defHi) + "</p>";
+          if (vocabFlashHiFirst) {
+            out += '<div class="vocab-flash-hi">' + escapeHtml(tt.en) + "</div>";
+            if (tt.exEn) out += '<p class="vocab-flash-ex">' + escapeHtml(tt.exEn) + "</p>";
+            if (tt.defEn) out += '<p class="vocab-flash-ex">' + escapeHtml("Definition: " + tt.defEn) + "</p>";
+          } else {
+            out += '<div class="vocab-flash-hi">' + escapeHtml(tt.hi) + "</div>";
+            if (tt.exEn) out += '<p class="vocab-flash-ex">' + escapeHtml(tt.exEn) + "</p>";
+            if (tt.exHi) out += '<p class="vocab-flash-ex">' + escapeHtml(tt.exHi) + "</p>";
+            if (tt.defEn) out += '<p class="vocab-flash-ex">' + escapeHtml("Definition: " + tt.defEn) + "</p>";
+            if (tt.defHi) out += '<p class="vocab-flash-ex">' + escapeHtml("परिभाषा: " + tt.defHi) + "</p>";
+          }
         }
         out += "</div>";
-        out += '<div class="vocab-flash-ctrl"><button type="button" class="vocab-cat" data-fl-prev>\u2190</button><span style="align-self:center;">' + (vocabFlash.idx + 1) + " / " + vocabFlash.terms.length + "</span><button type=\"button\" class=\"vocab-cat\" data-fl-next>\u2192</button><button type=\"button\" class=\"vocab-cat\" data-fl-shuffle>" + escapeHtml(hi ? "\uD83D\uDD00 फेरबदल" : "\uD83D\uDD00 Shuffle") + "</button><button type=\"button\" class=\"vocab-cat\" data-fl-exit>" + escapeHtml(hi ? "✕ वापस" : "✕ Exit") + "</button></div>";
+        out += '<div class="vocab-flash-ctrl"><button type="button" class="vocab-cat" data-fl-prev>\u2190</button><span style="align-self:center;">' + (vocabFlash.idx + 1) + " / " + vocabFlash.terms.length + " · ✓ " + knownTotal + "</span><button type=\"button\" class=\"vocab-cat\" data-fl-next>\u2192</button><button type=\"button\" class=\"vocab-cat\" data-fl-shuffle>" + escapeHtml(hi ? "\uD83D\uDD00 फेरबदल" : "\uD83D\uDD00 Shuffle") + "</button><button type=\"button\" class=\"vocab-cat\" data-fl-exit>" + escapeHtml(hi ? "✕ वापस" : "✕ Exit") + "</button></div>";
+        out += '<div class="vocab-flash-ctrl"><button type="button" class="vocab-cat" data-fl-known>' + escapeHtml(hi ? "✓ जानता हूँ" : "✓ I know it") + "</button><button type=\"button\" class=\"vocab-cat\" data-fl-unknown>" + escapeHtml(hi ? "✗ अभी नहीं" : "✗ Not yet") + "</button><button type=\"button\" class=\"vocab-cat" + (vocabFlashReview ? " active" : "") + "\" data-fl-review>" + escapeHtml(hi ? "🔁 सिर्फ़ ना-जाने हुए" : "🔁 Review unknown") + "</button><button type=\"button\" class=\"vocab-cat\" data-fl-hifirst>" + escapeHtml(vocabFlashHiFirst ? (hi ? "A→अ English पहले" : "A→अ English first") : (hi ? "अ→A हिंदी पहले" : "अ→A Hindi first")) + "</button></div>";
         box.innerHTML = out;
       }
       function vocabFlashOpen() {
+        vocabFlashReview = false;
         var terms = vocabFlashTerms();
         vocabFlash = { terms: terms, idx: 0, flipped: false };
         var list = document.getElementById("vocabList"); if (list) list.style.display = "none";
@@ -11117,14 +11150,49 @@ function cfBiharFee(v) {
         var fx = document.getElementById("vocabFlash");
         if (fx && !fx.getAttribute("data-fl-bound")) {
           fx.setAttribute("data-fl-bound", "1");
+          var flSwiped = false;
           fx.addEventListener("click", function (e) {
+            var wasSwiped = flSwiped; flSwiped = false;
+            if (wasSwiped) return;
             var t2 = e.target; if (!t2 || !t2.closest) return;
             if (t2.closest("[data-fl-exit]")) { vocabFlashExit(); return; }
-            if (!vocabFlash || !vocabFlash.terms.length) return;
+            if (!vocabFlash) return;
+            if (t2.closest("[data-fl-review]")) { vocabFlashReview = !vocabFlashReview; vocabFlash.terms = vocabFlashTerms(); vocabFlash.idx = 0; vocabFlash.flipped = false; renderVocabFlash(); return; }
+            if (!vocabFlash.terms.length) return;
+            if (t2.closest("[data-fl-known]")) { var ck = vocabFlash.terms[vocabFlash.idx].key; vocabFlashKnown[ck] = 1; vocabFlashSaveKnown(vocabFlashKnown); if (vocabFlashReview) { vocabFlash.terms.splice(vocabFlash.idx, 1); if (vocabFlash.idx >= vocabFlash.terms.length) vocabFlash.idx = 0; } else { vocabFlash.idx = (vocabFlash.idx + 1) % vocabFlash.terms.length; } vocabFlash.flipped = false; renderVocabFlash(); return; }
+            if (t2.closest("[data-fl-unknown]")) { var uk = vocabFlash.terms[vocabFlash.idx].key; if (vocabFlashKnown[uk]) { delete vocabFlashKnown[uk]; vocabFlashSaveKnown(vocabFlashKnown); } vocabFlash.idx = (vocabFlash.idx + 1) % vocabFlash.terms.length; vocabFlash.flipped = false; renderVocabFlash(); return; }
+            if (t2.closest("[data-fl-hifirst]")) { vocabFlashHiFirst = !vocabFlashHiFirst; try { localStorage.setItem("akFlashHiFirst", vocabFlashHiFirst ? "1" : "0"); } catch (e) {} vocabFlash.flipped = false; renderVocabFlash(); return; }
             if (t2.closest("[data-fl-shuffle]")) { for (var i = vocabFlash.terms.length - 1; i > 0; i--) { var r = Math.floor(Math.random() * (i + 1)); var tmp = vocabFlash.terms[i]; vocabFlash.terms[i] = vocabFlash.terms[r]; vocabFlash.terms[r] = tmp; } vocabFlash.idx = 0; vocabFlash.flipped = false; renderVocabFlash(); return; }
             if (t2.closest("[data-fl-prev]")) { vocabFlash.idx = (vocabFlash.idx - 1 + vocabFlash.terms.length) % vocabFlash.terms.length; vocabFlash.flipped = false; renderVocabFlash(); return; }
             if (t2.closest("[data-fl-next]")) { vocabFlash.idx = (vocabFlash.idx + 1) % vocabFlash.terms.length; vocabFlash.flipped = false; renderVocabFlash(); return; }
             if (t2.closest("[data-fl-flip]")) { vocabFlash.flipped = !vocabFlash.flipped; renderVocabFlash(); return; }
+          });
+          /* Swipe left/right to change cards (v193, mobile). A swipe sets flSwiped so
+             the click that follows the touch does not also flip the card. */
+          var flTouchX = 0, flTouchY = 0;
+          fx.addEventListener("touchstart", function (ev) { var t = ev.changedTouches[0]; flTouchX = t.clientX; flTouchY = t.clientY; flSwiped = false; }, { passive: true });
+          fx.addEventListener("touchend", function (ev) {
+            if (!vocabFlash || !vocabFlash.terms.length) return;
+            var t = ev.changedTouches[0]; var dx = t.clientX - flTouchX, dy = t.clientY - flTouchY;
+            if (Math.abs(dx) > 50 && Math.abs(dy) < 60) {
+              flSwiped = true;
+              if (dx < 0) vocabFlash.idx = (vocabFlash.idx + 1) % vocabFlash.terms.length;
+              else vocabFlash.idx = (vocabFlash.idx - 1 + vocabFlash.terms.length) % vocabFlash.terms.length;
+              vocabFlash.flipped = false; renderVocabFlash();
+            }
+          }, { passive: true });
+        }
+        /* Keyboard: arrows move, Space/Enter flips, Esc exits (v193, desktop). */
+        if (!window.__akFlashKeys) {
+          window.__akFlashKeys = true;
+          document.addEventListener("keydown", function (e) {
+            if (!vocabFlash || !vocabFlash.terms.length) return;
+            var tg = e.target;
+            if (tg && (tg.tagName === "INPUT" || tg.tagName === "TEXTAREA" || tg.tagName === "SELECT" || tg.tagName === "BUTTON")) return;
+            if (e.key === "ArrowRight") { vocabFlash.idx = (vocabFlash.idx + 1) % vocabFlash.terms.length; vocabFlash.flipped = false; renderVocabFlash(); e.preventDefault(); }
+            else if (e.key === "ArrowLeft") { vocabFlash.idx = (vocabFlash.idx - 1 + vocabFlash.terms.length) % vocabFlash.terms.length; vocabFlash.flipped = false; renderVocabFlash(); e.preventDefault(); }
+            else if (e.key === " " || e.key === "Enter") { vocabFlash.flipped = !vocabFlash.flipped; renderVocabFlash(); e.preventDefault(); }
+            else if (e.key === "Escape") { vocabFlashExit(); }
           });
         }
       }
@@ -13239,7 +13307,7 @@ function renderDocChecklist() {
            fetches the live index.html and compares this number — a higher live
            version means an update is waiting, so the refresh reloads to load it.
            Bump this (and the vNNN-rebuild comment) on every deploy. */
-        window.AK_BUILD = 192;
+        window.AK_BUILD = 193;
         initCustomPullToRefresh();
         /* Deep-link: #draft-<id> opens that draft directly */
         (function () {
