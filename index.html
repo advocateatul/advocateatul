@@ -14172,7 +14172,7 @@ function renderDocChecklist() {
       function getJudgements() { try { if (window.AK_STORE && window.AK_STORE.usefulJudgementsData) return (window.AK_STORE.usefulJudgementsData.items || []); var el = document.getElementById("usefulJudgementsData"); var d = el ? JSON.parse(el.textContent) : null; return (d && d.items) ? d.items : []; } catch (e) { return []; } }
       function getVocab() { try { var d = null; if (window.AK_STORE && window.AK_STORE.legalVocabData) d = window.AK_STORE.legalVocabData; else { var el = document.getElementById("legalVocabData"); d = el ? JSON.parse(el.textContent) : null; } if (!d) return []; if (d.terms) return d.terms; var out = []; (d.categories || []).forEach(function (c) { (c.terms || []).forEach(function (t) { out.push(t); }); }); return out; } catch (e) { return []; } }
       var LA_STOP = { what:1, is:1, the:1, a:1, an:1, of:1, to:1, in:1, on:1, for:1, and:1, or:1, how:1, why:1, when:1, where:1, who:1, does:1, do:1, did:1, are:1, was:1, were:1, be:1, been:1, this:1, that:1, it:1, its:1, with:1, by:1, from:1, about:1, into:1, after:1, before:1, can:1, could:1, should:1, would:1, will:1, shall:1, may:1, am:1, me:1, kya:1, hai:1, ka:1, ki:1, ke:1, ko:1, se:1, mein:1, par:1, aur:1, jo:1, toh:1, bhi:1, hain:1, tha:1, thi:1, kab:1, kaise:1, kahan:1, kis:1, kyon:1, kyun:1, kaun:1, yeh:1, woh:1, ye:1, wo:1, ne:1, section:1, under:1, act:1, sec:1, धर:1, कय:1, कस:1, कह:1, कन:1, यह:1, वह:1, पर:1, और:1, कब:1, कसलए:1 };
-      function tokens(s) { return String(s || "").toLowerCase().replace(/\p{M}/gu, "").replace(/[^\p{L}\p{N}\s]/gu, " ").split(/\s+/).filter(function (w) { return w.length > 1 && !LA_STOP[w]; }); }
+      function tokens(s) { return String(s || "").toLowerCase().replace(/([aeiou])\1+/g, "$1").replace(/\p{M}/gu, "").replace(/[^\p{L}\p{N}\s]/gu, " ").split(/\s+/).filter(function (w) { return w.length > 1 && !LA_STOP[w]; }); }
       function overlap(q, text) {
         var qt = tokens(q), tt = {}, i, score = 0;
         tokens(text).forEach(function (w) { tt[w] = 1; });
@@ -14258,7 +14258,7 @@ function renderDocChecklist() {
           var s = String(t || "").replace(/\([^)]*\)/g, " ");
           return tokens(s).filter(function (w) { return !GEN[w]; });
         }
-        var qw = ql.replace(/\p{M}/gu, "").replace(/[^\p{L}\p{N}\s]/gu, " ").split(/\s+/);
+        var qw = ql.replace(/([aeiou])\1+/g, "$1").replace(/\p{M}/gu, "").replace(/[^\p{L}\p{N}\s]/gu, " ").split(/\s+/);
         function hasAll(words) { if (!words.length) return false; for (var i = 0; i < words.length; i++) if (qw.indexOf(words[i]) === -1) return false; return true; }
         var bestD = null, bestScore = -1, bestStrong = false;
         (drafts || []).forEach(function (d) {
@@ -14273,7 +14273,7 @@ function renderDocChecklist() {
           var s = String(t || "").replace(/\([^)]*\)/g, " ");
           return tokens(s).filter(function (w) { return !GEN[w] && !GEN2[w]; });
         }
-        function normGen(s) { return String(s || "").toLowerCase().replace(/license/g, "licence").replace(/-/g, ""); }
+        function normGen(s) { return String(s || "").toLowerCase().replace(/([aeiou])\1+/g, "$1").replace(/license/g, "licence").replace(/-/g, ""); }
         function stripGenTitleH(t) {
           var s = normGen(String(t || "").replace(/\([^)]*\)/g, " "));
           return tokens(s).filter(function (w) { return !GEN[w] && !GEN2[w]; });
