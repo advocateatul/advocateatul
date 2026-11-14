@@ -1479,8 +1479,8 @@
      "hi": "धारा 113 BNS का अपना आतंक-विरोधी प्रावधान है। इसमें कोई भी कृत्य आता है जो भारत की एकता, अखंडता, सुरक्षा, आर्थिक सुरक्षा या संप्रभुता को खतरे में डालने, या लोगों में आतंक फैलाने के इरादे से किया जाए। ये नया प्रावधान है — IPC में इस नाम का कोई सामान्य अपराध नहीं था, आतंक के मामले सिर्फ UAPA जैसे विशेष कानूनों में चलते थे।"
     },
     {
-     "en": "The acts covered are specific: using bombs, dynamite or other explosive or inflammable substances, firearms or other lethal weapons, poisonous or injurious gases, or damaging property, or detaining or kidnapping a person to compel the Government or any other person. Mere membership of a banned group is not enough — the act itself must be proved.",
-     "hi": "कृत्य तय हैं — बम, डायनामाइट या अन्य विस्फोटक या ज्वलनशील पदार्थ, आग्नेयास्त्र या अन्य घातक हथियार, ज़हरीली या हानिकारक गैस का प्रयोग, संपत्ति को नुकसान, या सरकार या किसी व्यक्ति को मजबूर करने के लिए किसी को बंधक बनाना या अपहरण करना। सिर्फ प्रतिबंधित संगठन का सदस्य होना काफी नहीं है — कृत्य खुद साबित करना होगा।"
+     "en": "The acts covered are specific: using bombs, dynamite or other explosive or inflammable substances, firearms or other lethal weapons, poisonous or injurious gases, or damaging property, or detaining or kidnapping a person to compel the Government or any other person. And note Sec 113(5): mere membership of an organisation involved in a terrorist act is itself punishable with imprisonment up to life — membership is not a safe harbour.",
+     "hi": "कृत्य तय हैं — बम, डायनामाइट या अन्य विस्फोटक या ज्वलनशील पदार्थ, आग्नेयास्त्र या अन्य घातक हथियार, ज़हरीली या हानिकारक गैस का प्रयोग, संपत्ति को नुकसान, या सरकार या किसी व्यक्ति को मजबूर करने के लिए किसी को बंधक बनाना या अपहरण करना। और धारा 113(5) याद रखो — आतंकवादी कृत्य में शामिल संगठन का सदस्य होना ही अपने आप दंडनीय है, अधिकतम आजीवन कारावास तक — सदस्यता कोई बचाव नहीं है।"
     },
     {
      "en": "Punishment is the heaviest in the Code. If the act causes the death of any person, the punishment is death or imprisonment for life, with fine. In other cases it is imprisonment of not less than five years, extending to life, with fine. Conspiracy, attempt, abetment, incitement and facilitation of a terrorist act carry the same five-years-to-life range.",
@@ -1517,8 +1517,8 @@
      "hi": "सज़ा आजीवन कारावास या सात साल तक का कारावास और जुर्माना है। ये संज्ञेय, गैर-ज़मानती अपराध है, जिसका मुकदमा सत्र न्यायालय में चलता है। दांव इतने ऊँचे हैं, इसलिए पुलिस और अभियोजन को संप्रभुता को खतरे में डालने या अलगाव-विद्रोह भड़काने का इरादा साबित करना ही होगा — हल्का-फुल्का आरोप काफी नहीं है।"
     },
     {
-     "en": "The Explanation to Sec 152 is the citizen's shield. Comments expressing disapprobation of the measures or administrative action of the Government, made with the intention of bringing about their alteration by lawful means and without exciting hatred, contempt or disaffection, are not an offence. Criticising the government is still lawful; exciting secession is not.",
-     "hi": "धारा 152 का स्पष्टीकरण नागरिक की ढाल है। सरकार के उपायों या प्रशासनिक कार्रवाई की निंदा करने वाली टिप्पणी, अगर उसका मकसद कानून के रास्ते बदलाव लाना हो और उसमें घृणा, अवमानना या असंतोष भड़काने का भाव न हो, तो अपराध नहीं है। सरकार की आलोचना अब भी कानूनी है — अलगाववाद भड़काना नहीं।"
+     "en": "The Explanation to Sec 152 is the citizen's shield. Comments expressing disapprobation of the measures or administrative action of the Government, made with the intention of bringing about their alteration by lawful means and without exciting or attempting to excite secession, armed rebellion or subversive activities, are not an offence. Criticising the government is still lawful; exciting secession is not.",
+     "hi": "धारा 152 का स्पष्टीकरण नागरिक की ढाल है। सरकार के उपायों या प्रशासनिक कार्रवाई की निंदा करने वाली टिप्पणी, अगर उसका मकसद कानून के रास्ते बदलाव लाना हो और उसमें अलगाववाद, सशस्त्र विद्रोह या विध्वंसक गतिविधियों को भड़काने का भाव न हो, तो अपराध नहीं है। सरकार की आलोचना अब भी कानूनी है — अलगाववाद भड़काना नहीं।"
     },
     {
      "en": "Kedar Nath Singh (1962) still frames the test: speech is punishable only when it incites violence or has the tendency to create public disorder. Read with that judgment, Sec 152 does not criminalise dissent — it criminalises a real threat to the country's unity and integrity. That distinction is the first thing to argue in a Sec 152 case, whether you are defending or prosecuting.",
@@ -1549,8 +1549,8 @@
      "hi": "जीरो FIR तब काम आती है जब अपराध किसी और जगह हुआ हो — आप किसी भी थाने में FIR दर्ज करा सकते हैं, चाहे वह इलाका उस थाने का हो या नहीं। बाद में वह संबंधित थाने को भेज दी जाती है, इसलिए क्षेत्राधिकार के नाम पर आपको लौटाया नहीं जा सकता।"
     },
     {
-     "en": "Always take your free copy of the FIR — under Sec 173(2) the informant gets it FREE, and that copy is your proof that the complaint actually went on record. In sensitive cases it also has to be uploaded on the police website within 24 hours, so there is a public trail too.",
-     "hi": "FIR की अपनी प्रति हमेशा मुफ्त में लेना — धारा 173(2) के तहत सूचनाकर्ता को यह निःशुल्क मिलती है, और यही प्रति इस बात का सबूत है कि शिकायत सच में दर्ज हुई। संवेदनशील मामलों में इसे 24 घंटे के अंदर पुलिस की वेबसाइट पर भी डालना होता है, ताकि एक खुला रिकॉर्ड भी रहे।"
+     "en": "Always take your free copy of the FIR — under Sec 173(2) the informant gets it FREE, and that copy is your proof that the complaint actually went on record. In general the FIR is also uploaded on the police website within 24 hours (Youth Bar Association, 2016) — but sensitive cases (sexual offences, POCSO, terrorism/insurgency) are EXCLUDED from upload, so there is no public trail for those.",
+     "hi": "FIR की अपनी प्रति हमेशा मुफ्त में लेना — धारा 173(2) के तहत सूचनाकर्ता को यह निःशुल्क मिलती है, और यही प्रति इस बात का सबूत है कि शिकायत सच में दर्ज हुई। आम तौर पर FIR 24 घंटे के अंदर पुलिस की वेबसाइट पर भी डाली जाती है (यूथ बार एसोसिएशन, 2016) — पर संवेदनशील मामले (यौन अपराध, POCSO, आतंकवाद/उग्रवाद) अपलोड से बाहर रखे जाते हैं, इसलिए उनका कोई खुला रिकॉर्ड नहीं होता।"
     },
     {
      "en": "If the station refuses to register, do not keep arguing at the desk — you have two clear doors. One, apply to the SP under Sec 173(4); two, apply to the Magistrate under Sec 175(3) BNSS for a direction to investigate.",
