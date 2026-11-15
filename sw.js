@@ -5,7 +5,7 @@
    saved copy in the background for the next open.
    Static files: stale-while-revalidate. Cross-origin requests untouched.
    All paths are relative to this script, so it works under any base path. */
-var CACHE = "aklegal-v9"; // v9 (2026-11-09): time-based splash (SW serves the manifest with the right colour by hour) + heading/refresh fixes — old cache deleted on activate
+var CACHE = "aklegal-v10"; // v10 (2026-11-15): nav-refresh fix — auth pill renders at parse time (no more empty pill for ~2s after refresh); old cache deleted on activate
 function abs(p) { return new URL(p, self.location.href).toString(); }
 var INDEX = abs("index.html");
 var CORE = ["", "index.html", "hero.webp", "manifest.webmanifest", "logo.webp", "icon-192.png", "icon-512.png", "icon-maskable-512.png", "apple-touch-icon.png"];

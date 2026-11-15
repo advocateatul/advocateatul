@@ -1092,6 +1092,16 @@
     .section-search input::placeholder { color: var(--muted); }
     .section-search input:focus { border-color: #1e1e1e; box-shadow: 0 0 0 3px rgba(0,0,0,.08); }
     html[data-theme="dark"] .section-search input:focus { border-color: #f0f0f0; box-shadow: 0 0 0 3px rgba(255,255,255,.1); }
+    /* Deadline calculator (2026-11-15, nav-swipe fix): #dlRule's longest option is
+       ~626px, so its flex row overflowed to ~883px and Chrome expanded the layout
+       viewport to 898px on every load — the whole fixed nav visibly swiped right
+       for a few moments until the section-collapse hid it. The row now wraps: the
+       select gets its own full-width row (long rule names stay readable) and the
+       date + button sit on the next row; nothing can overflow the viewport again
+       (same min-width:0 pattern as the Bail Checker select). */
+    #deadline-calc .section-search { flex-wrap: wrap; }
+    #dlRule { flex: 1 1 100%; min-width: 0; max-width: 100%; }
+    #deadline-calc .section-search #dlDate, #deadline-calc .section-search #dlCalcBtn { flex-shrink: 0; }
 
       /* LawAssist — AI Legal Workspace */
     .lawassist-fab { position: fixed; right: 18px; bottom: 18px; z-index: 500; display: flex; align-items: center; justify-content: center; gap: 0; width: 54px; height: 54px; padding: 0; border: 2px solid #1e1e1e; border-radius: 50%; background: #1e1e1e; color: #F5F5F5; font: 700 .95rem/1 var(--sans); cursor: pointer; box-shadow: 0 8px 24px rgba(0,0,0,.25); transform: translateZ(0); transition: transform .15s cubic-bezier(0.22, 1, 0.36, 1); }
@@ -1825,6 +1835,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
         </div>
       <div class="auth-wrap">
   <button type="button" id="authBtn" class="auth-btn" aria-label="Loading / लोड हो रहा है"></button>
+  <script>(function(){try{var c=JSON.parse(localStorage.getItem("la_auth_cache")||"null");if(!c||!c.uid)return;var b=document.getElementById("authBtn");if(!b)return;var n=((c.displayName||(c.email||"").split("@")[0]||"User").trim().split(" ")[0]||"User").replace(/[<>&"]/g,"");b.innerHTML='<span class="auth-av">'+n.charAt(0).toUpperCase()+'</span><span class="auth-name">'+n+'</span>';b.setAttribute("aria-label",n);}catch(e){}})();</script>
   <div class="auth-menu" id="authMenu" hidden>
     <div class="am-name" id="authMenuName"></div>
     <div class="am-email" id="authMenuEmail"></div>
