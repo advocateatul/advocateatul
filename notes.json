@@ -1563,16 +1563,16 @@
     "en": "Arrest of Persons (Sec 35-47)",
     "hi": "व्यक्तियों की गिरफ्तारी (धारा 35-47)"
    },
-   "sections": "Sec 35-47 BNSS (Sec 41-60 CrPC)",
+   "sections": "Sec 35-47 BNSS (Sec 41-50 CrPC)",
    "cases": "Arnesh Kumar v. State of Bihar (arrest guidelines); D.K. Basu v. State of WB (arrest safeguards)",
    "points": [
     {
-     "en": "Under Sec 35, police can arrest without a warrant for a cognizable offence — that part is straightforward. But for offences punishable up to 3 years, arrest is not automatic: it is allowed only if conditions are met, like a risk that the person will not appear or will tamper with evidence — those are the Arnesh Kumar safeguards.",
-     "hi": "धारा 35 के तहत संज्ञेय अपराध में पुलिस बिना वारंट गिरफ्तार कर सकती है, यह बात सीधी है। लेकिन 3 साल तक की सज़ा वाले अपराध में गिरफ्तारी अपने आप नहीं होती — सिर्फ तब, जब कोई शर्त पूरी हो, जैसे व्यक्ति के हाज़िर न होने का खतरा हो या साक्ष्य से छेड़छाड़ का डर हो। यही अर्नेश कुमार की सुरक्षा है।"
+     "en": "Under Sec 35, police can arrest without a warrant for a cognizable offence — that part is straightforward. But for offences punishable up to 7 years, arrest is not automatic: it is allowed only if conditions are met, like a risk that the person will not appear or will tamper with evidence — those are the Arnesh Kumar safeguards.",
+     "hi": "धारा 35 के तहत संज्ञेय अपराध में पुलिस बिना वारंट गिरफ्तार कर सकती है, यह बात सीधी है। लेकिन 7 साल तक की सज़ा वाले अपराध में गिरफ्तारी अपने आप नहीं होती — सिर्फ तब, जब कोई शर्त पूरी हो, जैसे व्यक्ति के हाज़िर न होने का खतरा हो या साक्ष्य से छेड़छाड़ का डर हो। यही अर्नेश कुमार की सुरक्षा है।"
     },
     {
-     "en": "For offences up to 3 years, think of it like this: first a written notice of appearance under Sec 35(1), asking the person to come and cooperate. Arrest comes only if the person does not comply — the notice is the first step, not the handcuffs.",
-     "hi": "3 साल तक के अपराध में इसे ऐसे समझो — पहले धारा 35(1) के तहत लिखित में हाज़िर होने का नोटिस दिया जाता है, यानी आओ और सहयोग करो। गिरफ्तारी सिर्फ तब होती है जब व्यक्ति इसका पालन न करे — पहला कदम नोटिस है, हथकड़ी नहीं।"
+     "en": "For offences up to 7 years, think of it like this: first a written notice of appearance under Sec 35(3), asking the person to come and cooperate. Arrest comes only if the person does not comply — the notice is the first step, not the handcuffs.",
+     "hi": "7 साल तक के अपराध में इसे ऐसे समझो — पहले धारा 35(3) के तहत लिखित में हाज़िर होने का नोटिस दिया जाता है, यानी आओ और सहयोग करो। गिरफ्तारी सिर्फ तब होती है जब व्यक्ति इसका पालन न करे — पहला कदम नोटिस है, हथकड़ी नहीं।"
     },
     {
      "en": "The D.K. Basu guidelines are not optional paperwork, they are mandatory — memo of arrest, informing a relative or friend, medical examination, a diary entry, and informing the Magistrate. Why it matters is simple: every step leaves a paper trail, so nobody can later say the arrest never happened, or happened differently.",
@@ -1627,8 +1627,8 @@
    "cases": "Bhagwant Singh v. Commissioner of Police (protest petition)",
    "points": [
     {
-     "en": "The investigation has a deadline: it must be completed within 90 days and the chargesheet filed in court. And there is a shorter clock for offences against women and children under Sec 64-72 BNS — just 60 days — because those cases are not supposed to wait.",
-     "hi": "जांच की एक समय-सीमा है — 90 दिन के अंदर जांच पूरी करके न्यायालय में चार्जशीट दाखिल करनी होती है। और महिला व बच्चों के खिलाफ अपराधों में, धारा 64-72 BNS के तहत, यह समय सिर्फ 60 दिन है, क्योंकि ऐसे मामले इंतज़ार के लिए नहीं होते।"
+     "en": "The investigation must be completed without unnecessary delay and the chargesheet filed in court (Sec 193(1)) — there is no fixed 90-day deadline to finish investigation; the 90/60-day clocks are the custody limits under Sec 187(3), after which default bail follows. The one fixed deadline is two months for the sexual-offence cases listed in Sec 193(2) — BNS Sec 64, 65, 66, 67, 68, 70, 71 and POCSO Sec 4, 6, 8, 10 — because those cases are not supposed to wait.",
+     "hi": "जांच बिना अनावश्यक विलंब पूरी करके चार्जशीट न्यायालय में दाखिल करनी होती है (धारा 193(1)) — जांच पूरी करने की कोई तय 90 दिन की समय-सीमा नहीं है; 90/60 दिन की घड़ियाँ धारा 187(3) के तहत हिरासत की सीमा हैं, जिनके बाद डिफ़ॉल्ट ज़मानत मिलती है। एकमात्र तय समय-सीमा दो महीने है, जो धारा 193(2) में सूचीबद्ध यौन अपराधों पर लागू है — BNS धारा 64, 65, 66, 67, 68, 70, 71 और POCSO धारा 4, 6, 8, 10 — क्योंकि ऐसे मामले इंतज़ार के लिए नहीं होते।"
     },
     {
      "en": "Even after the chargesheet is filed, the story is not closed: further investigation is allowed with the Magistrate's permission, and a supplementary chargesheet can be filed under Sec 193(9). So a new lead found later is not wasted, it just needs the court's permission first.",
@@ -5657,8 +5657,8 @@
      "hi": "पुलिस हिरासत के 15 दिन अब पहले 15 दिन में एक साथ ही लेने ज़रूरी नहीं — इन्हें पहले 40 या 60 दिन में टुकड़ों में लिया जा सकता है। दिन वही 15 हैं, बस जाँच की ज़रूरत के हिसाब से बाँटकर लिए जा सकते हैं।"
     },
     {
-     "en": "Deadlines are now written in: investigation in 90 days, chargesheet in 60 days for offences against women and children, and judgment within 30 days of arguments ending. If a question asks 'what changed in BNSS', these timelines are the easiest marks.",
-     "hi": "अब समयसीमा साफ लिखी है — अन्वेषण 90 दिन में, महिला-बाल अपराधों में आरोपपत्र 60 दिन में, और बहस खत्म होने के 30 दिन में फैसला। BNSS में 'क्या बदला' पूछा जाए तो ये समयसीमाएँ सबसे आसान नंबर हैं।"
+     "en": "Deadlines are now written in: investigation must be completed without unnecessary delay (Sec 193(1)), within two months for the sexual-offence cases listed in Sec 193(2), and the victim must be told the progress of investigation within 90 days — and judgment within 30 days of arguments ending. If a question asks 'what changed in BNSS', these timelines are the easiest marks.",
+     "hi": "अब समयसीमा साफ लिखी है — जांच बिना अनावश्यक विलंब पूरी करनी है (धारा 193(1)), धारा 193(2) में सूचीबद्ध यौन अपराधों में दो महीने में, और पीड़ित को 90 दिन के अंदर जांच की प्रगति बतानी है — और बहस खत्म होने के 30 दिन में फैसला। BNSS में 'क्या बदला' पूछा जाए तो ये समयसीमाएँ सबसे आसान नंबर हैं।"
     }
    ]
   },
