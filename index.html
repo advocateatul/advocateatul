@@ -1539,7 +1539,7 @@ html[data-theme="dark"] .la-doc-row{background:rgba(255,255,255,.06)}
     .rm-zone-h { font-size: .95rem; font-weight: 700; color: #1e1e1e; margin-bottom: 8px; }
     html[data-theme="dark"] .rm-zone-h { color: #f1f5f9; }
     .rm-chips { display: flex; flex-wrap: wrap; gap: 8px; }
-    .rm-chip { background: rgba(255,255,255,.85); border: 1px solid rgba(0,0,0,.12); border-radius: 999px; padding: 6px 12px; font-size: .85rem; font-weight: 600; color: #1e1e1e; }
+    .rm-chip { background: rgba(255,255,255,.85); border: 1px solid rgba(0,0,0,.12); border-radius: 999px; padding: 6px 12px; font-size: .85rem; font-weight: 600; color: #1e1e1e; font-family: inherit; cursor: pointer; }
     html[data-theme="dark"] .rm-chip { background: rgba(0,0,0,.35); border-color: rgba(255,255,255,.2); color: #f1f5f9; }
     .notes-note { margin-top: 24px; font-size: .85rem; color: var(--ink); opacity: .7; }
     .notes-index-count { font-family: var(--sans); font-size: .95rem; color: var(--muted); margin: 0 0 14px; }
@@ -3435,6 +3435,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           <h2 id="vocab-title" data-i18n="vocabTitle">📖 विधिक शब्दावली — English to Hindi</h2>
           <p class="vocab-sub" data-i18n="vocabSub">Every legal word you will hear in court — English meaning in Hindi, with examples.</p>
         </div>
+        <div id="dailyWordsBlock" class="reveal"></div>
         <div class="vocab-search reveal">
           <input type="search" id="vocabSearch" data-i18n-ph="vocabSearchPh" placeholder="Search a word... / शब्द खोजें..." aria-label="Search vocabulary">
           <button type="button" class="vocab-cat" id="vocabFlashBtn">🃏 Flashcards / फ़्लैशकार्ड</button>
@@ -5505,7 +5506,68 @@ function cfBiharFee(v) {
         var out = '<div class="rm-wrap"><div class="rm-title">' + escapeHtml(hi ? "🗺️ BNS रोडमैप — पूरा रास्ता" : "🗺️ BNS ROADMAP — the full journey") + '</div><p class="rm-sub">' + escapeHtml(hi ? "धारा 1 से 358 तक — पूरा BNS चार ज़ोन में" : "Sec 1 to 358 — the whole BNS in four zones") + "</p>";
         zones.forEach(function(z) {
           out += '<div class="rm-zone ' + z.cls + '"><div class="rm-zone-h">' + escapeHtml(z.h) + '</div><div class="rm-chips">';
-          z.chips.forEach(function(c) { out += '<span class="rm-chip">' + escapeHtml(c[0]) + " · " + escapeHtml(c[1]) + "</span>"; });
+          z.chips.forEach(function(c) { var ti = {"Sec 1–3":0,"Sec 4–13":1,"Sec 14–44":2,"Sec 45–62":11,"Sec 63–99":9,"Sec 100–146":4,"Sec 147–158":3,"Sec 189–197":40,"Sec 198–205":36,"Sec 227–269":42,"Sec 270–297":35,"Sec 298–302":41,"Sec 303–334":6,"Sec 335–350":23,"Sec 351–357":12}[c[1]]; if (ti != null) out += '<button type="button" class="rm-chip" data-subj="bns" data-ti="' + ti + '">' + escapeHtml(c[0]) + " · " + escapeHtml(c[1]) + "</button>"; else out += '<span class="rm-chip">' + escapeHtml(c[0]) + " · " + escapeHtml(c[1]) + "</span>"; });
+          out += "</div></div>";
+        });
+        return out + "</div>";
+      }
+      function bnssRoadmapHtml(lang) {
+        var hi = lang === "hi";
+        var zones = [
+          { cls: "rm-z1", h: hi ? "ZONE 1: गिरफ्तारी और सुरक्षा (धारा 35–144)" : "ZONE 1: Arrest & Protection (Sec 35–144)", chips: [
+            ["🚔 Arrest of Persons", "गिरफ्तारी", "Sec 35–47", 1],
+            ["✋ Rights of Arrested Persons", "गिरफ्तार व्यक्ति के अधिकार", "Sec 47–53", 14],
+            ["📢 Proclamation & Attachment", "उद्घोषणा व कुर्की", "Sec 84–89", 18],
+            ["🏠 Attachment of Proclaimed Offender's Property", "उद्घोषित अपराधी की संपत्ति की कुर्की", "Sec 84–89", 31],
+            ["🔍 Search Warrants", "तलाशी वारंट", "Sec 96–98", 19],
+            ["🕊️ Security for Peace & Good Behaviour", "शांति व सदाचार की प्रतिभूति", "Sec 125–143", 34],
+            ["💰 Maintenance", "भरण-पोषण", "Sec 144", 5] ] },
+          { cls: "rm-z2", h: hi ? "ZONE 2: FIR, जाँच और आरोप (धारा 173–247)" : "ZONE 2: FIR, Investigation & Charge (Sec 173–247)", chips: [
+            ["📝 FIR", "प्रथम सूचना रिपोर्ट", "Sec 173", 0],
+            ["📱 Zero FIR & E-FIR", "ज़ीरो FIR और ई-FIR", "Sec 173", 42],
+            ["🔎 Investigation — Stages in Detail", "अन्वेषण — विस्तृत चरण", "Sec 173–193", 32],
+            ["📒 Case Diary", "केस डायरी", "Sec 192", 25],
+            ["📄 Police Report / Charge Sheet", "पुलिस रिपोर्ट / आरोपपत्र", "Sec 193", 3],
+            ["⚰️ Inquest", "इन्क्वेस्ट", "Sec 194", 24],
+            ["🗣️ Statements & Confessions", "बयान और इकबालिया बयान", "Sec 183", 35],
+            ["🩺 Medical Examination of the Victim", "पीड़ित की चिकित्सकीय जाँच", "Sec 184", 39],
+            ["⏰ Remand & Custody", "रिमांड व अभिरक्षा", "Sec 187", 8],
+            ["🔓 Default Bail", "डिफ़ॉल्ट ज़मानत", "Sec 187", 33],
+            ["👥 Test Identification Parade", "शिनाख्त परेड", "", 40],
+            ["⚖️ Magistrate's Power to Order Investigation", "जाँच का आदेश देने की शक्ति", "Sec 175", 41],
+            ["📋 Cognizance & Complaint", "संज्ञान व परिवाद", "Sec 210, 223", 7],
+            ["📜 Framing of Charge", "आरोप विरचित करना", "Sec 234–240", 11],
+            ["🔀 Framing — Alteration, Joinder & Discharge", "आरोप — परिवर्तन व उन्मोचन", "Sec 238–247", 20] ] },
+          { cls: "rm-z3", h: hi ? "ZONE 3: विचारण (धारा 248–360)" : "ZONE 3: Trial (Sec 248–360)", chips: [
+            ["🏛️ Sessions Trial — Stages", "सत्र विचारण — चरण", "Sec 248–260", 26],
+            ["👨‍⚖️ Trial of Warrant Cases", "वारंट मामलों का विचारण", "Sec 261–273", 21],
+            ["📑 Trial Stages — Warrant & Summons", "विचारण चरण — वारंट व समन", "Sec 267–286", 4],
+            ["⚖️ Warrant vs Summons Trial", "वारंट बनाम समन मुकदमा", "", 16],
+            ["⚡ Summary Trials", "संक्षिप्त विचारण", "Sec 283–288", 22],
+            ["🤝 Plea Bargaining", "सौदा अभिवचन", "Sec 289–300", 12],
+            ["🤝 Plea Bargaining — Procedure & Victim's Role", "सौदा अभिवाक् — प्रक्रिया व पीड़ित की भूमिका", "Sec 289–300", 17],
+            ["👤 Trial in Absentia", "अनुपस्थिति में विचारण", "Sec 356", 23],
+            ["🤝 Compounding of Offences", "अपराधों का शमन", "Sec 359", 27],
+            ["↩️ Withdrawal of Prosecution", "अभियोजन की वापसी", "Sec 360", 28],
+            ["⏳ Timelines — Investigation & Trial", "समय-सीमाएं — अन्वेषण व विचारण", "Sec 173, 187, 193, 258", 13] ] },
+          { cls: "rm-z4", h: hi ? "ZONE 4: जमानत, अपील और पीड़ित (धारा 396–528)" : "ZONE 4: Bail, Appeals & Victims (Sec 396–528)", chips: [
+            ["❤️ Victim Compensation & Witness Protection", "पीड़ित प्रतिकर व साक्षी संरक्षण", "Sec 396–398", 9],
+            ["🌱 Probation", "परिवीक्षा", "Sec 401–402", 29],
+            ["🔄 Appeals, Reference & Revision", "अपील, निर्देश व पुनरीक्षण", "Sec 413–435", 15],
+            ["🚚 Transfer of Criminal Cases", "आपराधिक मामलों का अंतरण", "Sec 446–448", 36],
+            ["🔐 Bail Provisions", "जमानत प्रावधान", "Sec 478–484", 2],
+            ["🏃 Anticipatory Bail", "अग्रिम जमानत", "Sec 482", 10],
+            ["📃 Bail Bonds & Sureties", "ज़मानत बंधपत्र व प्रतिभू", "Sec 484–492", 30],
+            ["📦 Disposal of Property", "संपत्ति का निपटान", "Sec 497", 38],
+            ["⏱️ Limitation for Cognizance", "संज्ञान की परिसीमा", "Sec 513–514", 37],
+            ["✨ Inherent Powers", "अंतर्निहित शक्तियाँ", "Sec 528", 6] ] }
+        ];
+        var out = '<div class="rm-wrap"><div class="rm-title">' + escapeHtml(hi ? "🗺️ BNSS रोडमैप — पूरा रास्ता" : "🗺️ BNSS ROADMAP — the full journey") + '</div><p class="rm-sub">' + escapeHtml(hi ? "धारा 35 से 528 तक — पूरा BNSS चार ज़ोन में" : "Sec 35 to 528 — the whole BNSS in four zones") + "</p>";
+        zones.forEach(function(z) {
+          out += '<div class="rm-zone ' + z.cls + '"><div class="rm-zone-h">' + escapeHtml(z.h) + '</div><div class="rm-chips">';
+          z.chips.forEach(function(c) {
+            out += '<button type="button" class="rm-chip" data-subj="bnss" data-ti="' + c[3] + '">' + escapeHtml(hi ? c[1] : c[0]) + (c[2] ? " · " + escapeHtml(c[2]) : "") + "</button>";
+          });
           out += "</div></div>";
         });
         return out + "</div>";
@@ -5783,6 +5845,7 @@ function cfBiharFee(v) {
           var countLabel = lang === "hi" ? " टॉपिक" : " topics";
           htmlOut += '<p class="notes-index-count">' + escapeHtml(notesSubjectLabels[currentNotesSubject] || currentNotesSubject) + " — " + list.length + countLabel + "</p>";
           if (currentNotesSubject === "bns" && !notesQuery) htmlOut += bnsRoadmapHtml(lang);
+          if (currentNotesSubject === "bnss" && !notesQuery) htmlOut += bnssRoadmapHtml(lang);
           list.forEach(function(topic, ti) {
             htmlOut += indexItem(currentNotesSubject, ti, topic, null);
           });
@@ -5797,6 +5860,90 @@ function cfBiharFee(v) {
           var el = document.getElementById("legalVocabData");
           return el ? JSON.parse(el.textContent) : {categories:[]};
         } catch(e) { return {categories:[]}; }
+      }
+      /* Daily 10 court words (Day 1 = 15 Nov 2026). To add a day, append one
+         more array to dailyWords (Day 3 = rows 21-30, Day 4 = 31-40, ... Day 10
+         = rows 91-100); the block auto-shows the set for today's date. If the
+         date runs past the last added day, the latest set keeps showing. */
+      var DAILY_WORDS_START = new Date(2026, 10, 15); /* Day 1 = 15 Nov 2026 */
+      var dailyWords = {
+        1: [
+          { en: "Evidence", hi: "साक्ष्य", useEn: "In trial, to prove or disprove the facts of the case.", useHi: "विचारण (trial) में मुकदमे के तथ्यों को साबित करने या गलत ठहराने के लिए।" },
+          { en: "Witness", hi: "गवाह", useEn: "In court during trial — the person who gives a statement or evidence before the judge.", useHi: "विचारण में अदालत के सामने बयान या साक्ष्य देने वाला व्यक्ति।" },
+          { en: "Accused", hi: "अभियुक्त / आरोपी", useEn: "The person against whom the FIR / case is filed; the trial runs against them.", useHi: "जिसके खिलाफ FIR / मुकदमा दर्ज हो; विचारण उसी के खिलाफ चलता है।" },
+          { en: "Complainant", hi: "शिकायतकर्ता", useEn: "The person who files the FIR / complaint that starts the case.", useHi: "FIR / शिकायत दर्ज कराकर मुकदमा शुरू कराने वाला व्यक्ति।" },
+          { en: "FIR", hi: "प्रथम सूचना रिपोर्ट", useEn: "First information given at the police station (BNSS s.173); investigation starts from the FIR.", useHi: "थाने में दी गई पहली सूचना (BNSS धारा 173); जांच यहीं से शुरू होती है।" },
+          { en: "Investigation", hi: "जांच", useEn: "After the FIR, the police collect evidence and record statements before filing the charge sheet.", useHi: "FIR के बाद पुलिस सबूत जुटाती है और बयान दर्ज करती है, फिर चार्जशीट दाखिल करती है।" },
+          { en: "Arrest", hi: "गिरफ्तारी", useEn: "When the police take the accused into custody during investigation.", useHi: "जांच के दौरान पुलिस जब आरोपी को हिरासत में लेती है।" },
+          { en: "Bail", hi: "जमानत", useEn: "Release of the accused from custody on conditions, while the case is pending (BNSS bail provisions).", useHi: "मुकदमा चलते हुए शर्तों पर आरोपी की हिरासत से रिहाई (BNSS के जमानत वाले प्रावधान)।" },
+          { en: "Custody", hi: "अभिरक्षा", useEn: "Police custody during investigation, and judicial custody while the trial is pending.", useHi: "जांच के दौरान पुलिस हिरासत, और विचारण चलते हुए न्यायिक हिरासत।" },
+          { en: "Charge Sheet", hi: "आरोप पत्र", useEn: "The police report filed before the court after investigation (BNSS s.193); charges are framed from it.", useHi: "जांच पूरी होने पर पुलिस की रिपोर्ट (BNSS धारा 193), जिससे अदालत में आरोप तय होते हैं।" }
+        ],
+        2: [
+          { en: "Trial", hi: "विचारण / मुकदमा", useEn: "In court — both sides present evidence and arguments before the judge, who then decides the case.", useHi: "अदालत में — दोनों पक्ष जज के सामने सबूत और दलीलें पेश करते हैं, फिर जज फैसला करता है।" },
+          { en: "Judgment", hi: "निर्णय", useEn: "The court's final decision on the case — who won, and what relief or punishment follows.", useHi: "मुकदमे पर अदालत का अंतिम फैसला — कौन जीता, और क्या राहत या सज़ा मिलेगी।" },
+          { en: "Order", hi: "आदेश", useEn: "A direction given by the court during a case — e.g. an interim order, or the order fixing the next date.", useHi: "मुकदमा चलते हुए अदालत का निर्देश — जैसे अंतरिम आदेश, या अगली तारीख तय करने वाला आदेश।" },
+          { en: "Decree", hi: "डिक्री", useEn: "In a civil suit, the court's formal final decision, on the basis of which execution (recovery/enforcement) follows.", useHi: "दीवानी मुकदमे में अदालत का औपचारिक अंतिम फैसला, जिसके आधार पर execution (वसूली/अमल) होती है।" },
+          { en: "Conviction", hi: "दोषसिद्धि", useEn: "When the court finds the accused guilty of the charge.", useHi: "जब अदालत आरोपी को आरोप का दोषी ठहराती है।" },
+          { en: "Acquittal", hi: "दोषमुक्ति / बरी", useEn: "When the court finds the accused not guilty and sets them free.", useHi: "जब अदालत आरोपी को निर्दोष मानकर बरी कर देती है।" },
+          { en: "Appeal", hi: "अपील", useEn: "Challenging a judgment or order before a higher court.", useHi: "फैसले या आदेश को ऊपरी अदालत में चुनौती देना।" },
+          { en: "Revision", hi: "पुनरीक्षण", useEn: "When a higher court checks whether a lower court's order was correct, legal and proper.", useHi: "जब ऊपरी अदालत निचली अदालत के आदेश की जाँच करती है कि वह सही, कानूनी और उचित था या नहीं।" },
+          { en: "Petition", hi: "याचिका", useEn: "A written request or application filed before the court.", useHi: "अदालत के सामने दाखिल की गई लिखित प्रार्थना / अर्जी।" },
+          { en: "Affidavit", hi: "शपथ पत्र", useEn: "A written statement made on oath, used as evidence in the case.", useHi: "शपथ पर दिया गया लिखित बयान, जो मुकदमे में सबूत के रूप में काम आता है।" }
+        ]
+      };
+      function dailyWordsDay() {
+        var now = new Date();
+        var today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+        var d = Math.floor((today - DAILY_WORDS_START) / 86400000) + 1;
+        if (d < 1) d = 1;
+        var max = 0;
+        for (var k in dailyWords) { var n = parseInt(k, 10); if (n > max) max = n; }
+        if (d > max) d = max;
+        return d;
+      }
+      function renderDailyWords() {
+        var box = document.getElementById("dailyWordsBlock");
+        if (!box) return;
+        var day = dailyWordsDay();
+        var set = dailyWords[day] || [];
+        var dateStr = "";
+        try { var dt = new Date(DAILY_WORDS_START.getTime() + (day - 1) * 86400000); dateStr = dt.toLocaleDateString("en-IN", { day: "numeric", month: "long", year: "numeric" }); } catch (e) {}
+        box.textContent = "";
+        var head = document.createElement("div");
+        head.className = "vocab-head";
+        var h = document.createElement("h3");
+        h.textContent = "📅 Aaj ke 10 Court Words · आज के 10 कोर्ट शब्द — Day " + day + (dateStr ? " · " + dateStr : "");
+        head.appendChild(h);
+        var sub = document.createElement("p");
+        sub.className = "vocab-sub";
+        sub.textContent = "Roz 10 naye court words — English + Hindi, kahaan use hote hain uske saath. / हर दिन 10 नए कोर्ट शब्द — अंग्रेज़ी + हिंदी, कहाँ इस्तेमाल होते हैं उसके साथ।";
+        head.appendChild(sub);
+        box.appendChild(head);
+        var list = document.createElement("div");
+        list.className = "vocab-list";
+        set.forEach(function(w, i) {
+          var div = document.createElement("div");
+          div.className = "vocab-term";
+          div.style.animationDelay = Math.min(i, 11) * 40 + "ms";
+          var h3 = document.createElement("h3");
+          h3.textContent = w.en + " ";
+          var hiSpan = document.createElement("span");
+          hiSpan.className = "vocab-hi";
+          hiSpan.textContent = "— " + w.hi;
+          h3.appendChild(hiSpan);
+          div.appendChild(h3);
+          var exEn = document.createElement("p");
+          exEn.className = "vocab-ex";
+          exEn.textContent = w.useEn;
+          div.appendChild(exEn);
+          var exHi = document.createElement("p");
+          exHi.className = "vocab-ex-hi";
+          exHi.textContent = w.useHi;
+          div.appendChild(exHi);
+          list.appendChild(div);
+        });
+        box.appendChild(list);
       }
       function renderVocabCats() {
         var data = getVocabData();
@@ -11122,6 +11269,7 @@ function cfBiharFee(v) {
         }
         renderVocabCats();
         renderVocabList();
+        renderDailyWords();
         initVocabMore();
         var fb3 = document.getElementById("vocabFlashBtn");
         if (fb3) fb3.addEventListener("click", function () { if (vocabFlash) vocabFlashExit(); else vocabFlashOpen(); });
@@ -11392,6 +11540,15 @@ function cfBiharFee(v) {
               if (qo.classList.contains("notes-quiz-next")) { notesQuiz.idx++; notesQuiz.picked = -1; renderNotesQuiz(); return; }
               var qi = parseInt(qo.getAttribute("data-qi"), 10);
               if (!isNaN(qi) && notesQuiz.picked === -1) { notesQuiz.picked = qi; if (qi === notesQuiz.qs[notesQuiz.idx].ans) notesQuiz.score++; renderNotesQuiz(); }
+              return;
+            }
+            var chip = (t && t.closest) ? t.closest(".rm-chip[data-ti]") : null;
+            if (chip) {
+              notesReturn = { subj: chip.getAttribute("data-subj"), ti: parseInt(chip.getAttribute("data-ti"), 10) };
+              notesOpen = { subj: notesReturn.subj, ti: notesReturn.ti };
+              renderNotes();
+              var _np = document.getElementById("notesPaper");
+              if (_np) _np.scrollIntoView(); else document.getElementById("notes").scrollIntoView();
               return;
             }
             var item = (t && t.closest) ? t.closest(".notes-index-item") : null;
