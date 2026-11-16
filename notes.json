@@ -1657,8 +1657,8 @@
    "cases": "P. Ramachandra Rao v. State of Karnataka (speedy trial)",
    "points": [
     {
-     "en": "A warrant-case trial follows a full, step-by-step ladder: charge framed, then prosecution evidence, then the Sec 313 statement of the accused, then defence evidence, then arguments, then judgment. And if there is no prima facie case at all, discharge is possible under Sec 250 — the case can end before that long climb even starts.",
-     "hi": "वारंट-मामले का विचारण एक पूरी सीढ़ी की तरह चलता है — आरोप तय होना, फिर अभियोजन का साक्ष्य, फिर अभियुक्त का धारा 313 के तहत बयान, फिर बचाव पक्ष का साक्ष्य, फिर बहस और फिर निर्णय। और अगर शुरू में ही प्रथम दृष्टया मामला ही न बने तो धारा 250 के तहत उन्मोचन हो सकता है — यानी लंबी सीढ़ी चढ़ने से पहले ही मामला खत्म हो सकता है।"
+     "en": "A warrant-case trial follows a full, step-by-step ladder: charge framed, then prosecution evidence, then the Sec 351 statement of the accused, then defence evidence, then arguments, then judgment. And if there is no prima facie case at all, discharge is possible under Sec 250 — the case can end before that long climb even starts.",
+     "hi": "वारंट-मामले का विचारण एक पूरी सीढ़ी की तरह चलता है — आरोप तय होना, फिर अभियोजन का साक्ष्य, फिर अभियुक्त का धारा 351 के तहत बयान, फिर बचाव पक्ष का साक्ष्य, फिर बहस और फिर निर्णय। और अगर शुरू में ही प्रथम दृष्टया मामला ही न बने तो धारा 250 के तहत उन्मोचन हो सकता है — यानी लंबी सीढ़ी चढ़ने से पहले ही मामला खत्म हो सकता है।"
     },
     {
      "en": "A summons-case trial is the simpler cousin: the substance of the accusation is just stated to the accused, there is no formal charge. It is for offences with a maximum punishment of 2 years — lighter cases get a lighter procedure, which makes sense.",
@@ -1669,12 +1669,12 @@
      "hi": "धारा 346 अब रोज़ाना सुनवाई पर ज़ोर देती है — आदतन अंतहीन तारीखें अब नहीं चलेंगी। स्थगन सिर्फ दर्ज विशेष कारणों पर मिलेगा और गवाहों की परीक्षा बिना देरी के होगी, ताकि कोई मामला तारीखों की डायरी में धीरे-धीरे दम न तोड़ दे।"
     },
     {
-     "en": "There is also a new provision for the accused who simply disappears: trial in the absence of a proclaimed offender under Sec 335, where evidence can be recorded if the accused absconded after proclamation. In plain terms, running away does not freeze the whole case anymore.",
-     "hi": "जो अभियुक्त बस गायब हो जाता है उसके लिए भी नया प्रावधान है — धारा 335 के तहत उद्घोषित अपराधी की अनुपस्थिति में विचारण, जिसमें साक्ष्य दर्ज किया जा सकता है अगर अभियुक्त उद्घोषणा के बाद फरार हुआ हो। सीधी भाषा में, भाग जाने से अब पूरा मामला ठंडा नहीं पड़ता।"
+     "en": "There is also a new provision for the accused who simply disappears: trial in the absence of a proclaimed offender under Sec 356, where the court can try the case and pronounce judgment as if the accused were present, once 90 days have passed since the charge was framed. In plain terms, running away does not freeze the whole case anymore.",
+     "hi": "जो अभियुक्त बस गायब हो जाता है उसके लिए भी नया प्रावधान है — धारा 356 के तहत उद्घोषित अपराधी की अनुपस्थिति में विचारण, जिसमें आरोप तय होने के 90 दिन बाद अदालत मामला चला सकती है और फैसला सुना सकती है, जैसे अभियुक्त मौजूद हो। सीधी भाषा में, भाग जाने से अब पूरा मामला ठंडा नहीं पड़ता।"
     },
     {
-     "en": "After arguments end, the judgment should come within 30 days, extendable to 60 days with reasons, and it is to be uploaded online. So the end of the trial is not a mystery either — there is a deadline, and a public copy.",
-     "hi": "बहस खत्म होने के बाद निर्णय 30 दिन के अंदर आना चाहिए, कारण दर्ज करके इसे 60 दिन तक बढ़ाया जा सकता है, और इसे ऑनलाइन भी अपलोड करना होता है। तो विचारण का अंत भी कोई रहस्य नहीं है — एक समय-सीमा है और एक सार्वजनिक प्रति भी।"
+     "en": "After arguments end, the judgment should be pronounced immediately, or at a later time not beyond 45 days (Sec 392) — and, as far as practicable, a copy is uploaded on the court's portal within 7 days of the judgment. So the end of the trial is not a mystery either — there is a deadline, and a public copy.",
+     "hi": "बहस खत्म होने के बाद निर्णय तुरंत सुनाया जाना चाहिए, या बाद के समय पर, पर 45 दिन से आगे नहीं (धारा 392) — और, जहाँ तक संभव हो, फैसले की प्रति 7 दिन के अंदर अदालत के पोर्टल पर अपलोड की जाती है। तो विचारण का अंत भी कोई रहस्य नहीं है — एक समय-सीमा है और एक सार्वजनिक प्रति भी।"
     }
    ]
   },
@@ -1691,8 +1691,8 @@
      "hi": "भरण-पोषण उनके लिए है जो खुद अपना गुज़ारा नहीं कर सकते — पत्नी, बच्चे और माता-पिता उस व्यक्ति से इसकी मांग कर सकते हैं जिसके पास पर्याप्त साधन हों। मूल बात सीधी है — अगर आप उनका खर्च उठा सकते हैं और वे खुद नहीं उठा सकते, तो कानून आपको इस ज़िम्मेदारी से भागने नहीं देगा।"
     },
     {
-     "en": "The scope is now wider: it includes a divorced wife too, and interim maintenance has to be decided within 60 days of the application. That 60-day part matters a lot in real life, because a person waiting for support cannot be left hanging for years.",
-     "hi": "अब इसका दायरा बढ़ गया है — इसमें तलाकशुदा पत्नी भी आती है, और अंतरिम भरण-पोषण आवेदन के 60 दिन के अंदर तय करना होता है। असल ज़िंदगी में यह 60 दिन वाली बात बहुत अहम है, क्योंकि मदद का इंतज़ार कर रहे व्यक्ति को सालों तक लटकाया नहीं जा सकता।"
+     "en": "The scope is wide: it includes a divorced wife too, and interim maintenance should, as far as possible, be decided within 60 days of service of notice of the application. That 60-day part matters a lot in real life, because a person waiting for support cannot be left hanging for years.",
+     "hi": "इसका दायरा बड़ा है — इसमें तलाकशुदा पत्नी भी आती है, और अंतरिम भरण-पोषण आवेदन की सूचना तामील होने के 60 दिन के अंदर, जहाँ तक संभव हो, तय कर देना चाहिए। असल ज़िंदगी में यह 60 दिन वाली बात बहुत अहम है, क्योंकि मदद का इंतज़ार कर रहे व्यक्ति को सालों तक लटकाया नहीं जा सकता।"
     },
     {
      "en": "Rajnesh v. Neha (2021) added a practical discipline: both parties must file an affidavit of their assets and liabilities. And if maintenance is going on in more than one forum, the overlapping amounts have to be adjusted — so nobody gets paid twice for the same need, and nobody hides their real income.",
@@ -1733,8 +1733,8 @@
      "hi": "इन शक्तियों का प्रयोग संयम और सावधानी से करना है — रद्दीकरण के चरण में उच्च न्यायालय कोई समानांतर विचारण नहीं चला रहा। विवादित तथ्यों पर यहां फैसला नहीं होता, अगर तथ्य ही विवाद में हैं तो आमतौर पर रद्दीकरण सही दरवाज़ा नहीं है।"
     },
     {
-     "en": "And there is a new express point in Sec 528: it includes the power to quash proceedings to give effect to a settlement in compoundable matters. So for compoundable cases, the settlement route is now written in the section itself, not just implied.",
-     "hi": "और धारा 528 में एक नया स्पष्ट बिंदु है — इसमें शमनीय मामलों में समझौते को प्रभावी करने के लिए कार्यवाही रद्द करने की शक्ति भी शामिल है। तो शमनीय मामलों में समझौते वाला रास्ता अब सिर्फ माना हुआ नहीं, धारा में ही लिखा हुआ है।"
+     "en": "Sec 528 itself adds nothing new — it is CrPC 482 word for word, only 'Sanhita' in place of 'Code'. The settlement route for compoundable matters is compounding under Sec 359 BNSS, and quashing on settlement for non-compoundable matters rests on the Gian Singh case law, not on any express words in Sec 528.",
+     "hi": "धारा 528 में कुछ नया नहीं है — यह CrPC की धारा 482 का शब्दशः रूप है, सिर्फ 'संहिता' शब्द बदला है। शमनीय मामलों में समझौते का रास्ता धारा 359 BNSS के तहत शमन है, और अशमनीय मामलों में समझौते पर कार्यवाही रद्द करना ज्ञान सिंह के फैसले पर टिका है, धारा 528 के किसी स्पष्ट शब्द पर नहीं।"
     }
    ]
   },
@@ -5739,16 +5739,16 @@
      "hi": "धारा 193(9) के तहत आरोपपत्र के बाद भी आगे जाँच हो सकती है, पर सिर्फ अदालत की अनुमति से — फिर पूरक आरोपपत्र भी आ सकता है। मतलब आरोपपत्र जाँच पर पूर्णविराम नहीं है।"
     },
     {
-     "en": "Sec 335 allows trial in the absence of a proclaimed offender — evidence is recorded and judgment pronounced without him. But if he later appears, he can ask for a fresh (de novo) trial, so it's not a one-sided trap.",
-     "hi": "धारा 335 के तहत उद्घोषित अपराधी की गैरमौजूदगी में भी मुकदमा चल सकता है — साक्ष्य दर्ज होगा और फैसला भी सुनाया जाएगा। पर अगर वो बाद में हाज़िर हो जाए तो नया (de novo) मुकदमा माँग सकता है, यानी ये एकतरफा जाल नहीं है।"
+     "en": "Sec 356 allows trial in the absence of a proclaimed offender — evidence is recorded and judgment pronounced without him, once 90 days have passed since the charge was framed. But if he appears during the trial, the court may let him examine the evidence recorded in his absence — there is no fresh trial as of right, and his appearance at the end does not stop the judgment.",
+     "hi": "धारा 356 के तहत उद्घोषित अपराधी की गैरमौजूदगी में भी मुकदमा चल सकता है — आरोप तय होने के 90 दिन बाद साक्ष्य दर्ज होगा और फैसला भी सुनाया जाएगा। पर अगर वो विचारण के दौरान हाज़िर हो जाए तो अदालत उसे उसकी गैरमौजूदगी में दर्ज साक्ष्य की जाँच करने दे सकती है — नया मुकदमा अधिकार के रूप में नहीं मिलता, और अंत में हाज़िर होने से फैसला नहीं रुकता।"
     },
     {
      "en": "Sec 530 says trials, inquiries and appeals can all happen in electronic mode — video conferencing now has full statutory backing. Think of it as the law finally admitting that a screen can be a courtroom too.",
      "hi": "धारा 530 कहती है कि विचारण, जाँच और अपील — सब इलेक्ट्रॉनिक तरीके से हो सकते हैं, वीडियो कॉन्फ्रेंसिंग को पूरा कानूनी आधार मिल गया है। जैसे कानून ने मान लिया कि स्क्रीन भी अदालत हो सकती है।"
     },
     {
-     "en": "The victim now has a voice: under Sec 360, the victim must be heard before the prosecution is withdrawn, and the victim gets a free copy of the judgment. It's a small line, but it stops cases from being quietly closed over the victim's head.",
-     "hi": "पीड़ित की अब आवाज़ है — धारा 360 के तहत अभियोजन वापस लेने से पहले पीड़ित को सुना जाना ज़रूरी है, और फैसले की प्रति पीड़ित को मुफ्त मिलेगी। छोटी सी बात है, पर इससे मामला पीड़ित की जानकारी के बिना चुपचाप बंद नहीं हो सकता।"
+     "en": "The victim now has a voice: under Sec 360, the victim must be heard before the prosecution is withdrawn. And under Sec 404(5), a person affected by the judgment — including the victim — can get a copy on application, on payment of the prescribed charges; the court may give it free only for some special reason. It's a small line, but it stops cases from being quietly closed over the victim's head.",
+     "hi": "पीड़ित की अब आवाज़ है — धारा 360 के तहत अभियोजन वापस लेने से पहले पीड़ित को सुना जाना ज़रूरी है। और धारा 404(5) के तहत फैसले से प्रभावित व्यक्ति — पीड़ित भी — आवेदन पर, निर्धारित शुल्क देकर, प्रति पा सकता है; अदालत सिर्फ किसी विशेष कारण से मुफ्त दे सकती है। छोटी सी बात है, पर इससे मामला पीड़ित की जानकारी के बिना चुपचाप बंद नहीं हो सकता।"
     }
    ]
   },
