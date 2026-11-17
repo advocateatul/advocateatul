@@ -5629,6 +5629,68 @@ function cfBiharFee(v) {
         });
         return out + "</div>";
       }
+      function majorActsRoadmapHtml(lang) {
+        var hi = lang === "hi";
+        var zones = [
+          { cls: "rm-z1", h: hi ? "ZONE 1: नए आपराधिक कानून — तुलना व ज़रूरी बातें" : "ZONE 1: New Criminal Laws — Comparison & Must-Know", chips: [
+            ["⚖️ BNS vs IPC", "BNS बनाम IPC", "", 0],
+            ["⚖️ BNSS vs CrPC", "BNSS बनाम CrPC", "", 1],
+            ["⚖️ BSA vs Evidence Act", "BSA बनाम साक्ष्य अधिनियम", "", 2],
+            ["✨ New Provisions — BNS", "BNS में नए प्रावधान", "", 3],
+            ["✨ New Provisions — BNSS", "BNSS में नए प्रावधान", "", 4],
+            ["✨ New Provisions — BSA", "BSA में नए प्रावधान", "", 5],
+            ["💼 Practical Tips for Lawyers", "वकीलों के लिए व्यावहारिक टिप्स", "", 6],
+            ["🗺️ Section Mapping Old → New", "धारा मानचित्रण पुरानी → नई", "", 7] ] },
+          { cls: "rm-z2", h: hi ? "ZONE 2: दीवानी, पारिवारिक व संपत्ति" : "ZONE 2: Civil, Family & Property", chips: [
+            ["🛒 CPA 2019 — Rights & Remedies", "उपभोक्ता संरक्षण अधिनियम — अधिकार व उपचार", "", 9],
+            ["🛒 CPA 2019 — Commissions & E-Commerce", "उपभोक्ता संरक्षण — आयोग व ई-कॉमर्स", "", 18],
+            ["⏳ Limitation Act 1963", "परिसीमा अधिनियम 1963", "", 10],
+            ["📝 Indian Contract Act 1872", "भारतीय संविदा अधिनियम 1872", "", 21],
+            ["🏠 Transfer of Property Act 1882", "संपत्ति अंतरण अधिनियम 1882", "", 13],
+            ["👪 Hindu Succession Act 1956", "हिंदू उत्तराधिकार अधिनियम 1956", "", 12],
+            ["💍 Hindu Marriage Act 1955", "हिंदू विवाह अधिनियम 1955", "", 14],
+            ["👶 HAMA 1956 — Adoption & Maintenance", "हिंदू दत्तक ग्रहण व भरण-पोषण अधिनियम 1956", "", 39],
+            ["📜 Indian Succession Act 1925 — Wills", "भारतीय उत्तराधिकार अधिनियम 1925 — वसीयत", "", 40],
+            ["⚖️ Specific Relief Act 1963", "विशिष्ट अनुतोष अधिनियम 1963", "", 15],
+            ["🚫 Dowry Prohibition Act 1961", "दहेज प्रतिषेध अधिनियम 1961", "", 16] ] },
+          { cls: "rm-z3", h: hi ? "ZONE 3: महिला, बालक व कमज़ोर वर्गों का संरक्षण" : "ZONE 3: Protection of Women, Children & Vulnerable", chips: [
+            ["✊ SC/ST Atrocities Act 1989", "SC/ST अत्याचार निवारण अधिनियम 1989", "", 17],
+            ["🧒 POCSO Act 2012", "पॉक्सो अधिनियम 2012", "", 23],
+            ["🏠 Domestic Violence Act 2005", "घरेलू हिंसा अधिनियम 2005", "", 24],
+            ["👦 Juvenile Justice Act 2015", "किशोर न्याय अधिनियम 2015", "", 25],
+            ["👩‍💼 POSH Act 2013", "कार्यस्थल पर यौन उत्पीड़न अधिनियम 2013", "", 38],
+            ["👴 Senior Citizens Act 2007", "वरिष्ठ नागरिक अधिनियम 2007", "", 36],
+            ["🤝 Probation of Offenders Act 1958", "अपराधी परिवीक्षा अधिनियम 1958", "", 28],
+            ["🎒 RTE Act 2009", "शिक्षा का अधिकार अधिनियम 2009", "", 41],
+            ["💰 EPF Act 1952", "कर्मचारी भविष्य निधि अधिनियम 1952", "", 42] ] },
+          { cls: "rm-z4", h: hi ? "ZONE 4: अपराध, धन, भूमि व विवाद" : "ZONE 4: Crime, Money, Land & Disputes", chips: [
+            ["💊 NDPS Act 1985", "NDPS अधिनियम 1985", "Sec 20–22, 27, 37", 8],
+            ["💻 IT Act 2000 — Cyber Crime", "IT अधिनियम 2000 — साइबर अपराध", "Sec 43, 66–67", 11],
+            ["🔫 Arms Act 1959", "शस्त्र अधिनियम 1959", "Sec 3, 13–15", 22],
+            ["💸 Prevention of Corruption Act 1988", "भ्रष्टाचार निवारण अधिनियम 1988", "Sec 7, 13", 26],
+            ["👥 UP Gangsters & Goondas Acts", "यूपी गैंगस्टर व गुंडा अधिनियम", "", 27],
+            ["🌳 Environment Act 1986", "पर्यावरण अधिनियम 1986", "Sec 2–3, 15", 19],
+            ["📖 RTI Act 2005", "सूचना का अधिकार अधिनियम 2005", "Sec 6–8", 20],
+            ["🌾 UP Revenue Code 2006", "उ.प्र. राजस्व संहिता 2006", "Sec 74, 144", 29],
+            ["🚗 Motor Vehicles Act 1988", "मोटर यान अधिनियम 1988", "Sec 146, 164, 166", 30],
+            ["🧾 NI Act 1881", "परक्राम्य लिखत अधिनियम 1881", "Sec 138", 37],
+            ["🏦 PMLA 2002", "धन शोधन निवारण अधिनियम 2002", "", 35],
+            ["🏛️ SARFAESI Act 2002", "सरफेसी अधिनियम 2002", "Sec 13, 17", 32],
+            ["🏢 Companies Act 2013", "कंपनी अधिनियम 2013", "Sec 7, 241", 33],
+            ["™️ Trade Marks & Copyright Acts", "व्यापार चिह्न व प्रतिलिप्यधिकार अधिनियम", "", 34],
+            ["⚖️ Arbitration Act 1996", "माध्यस्थम् अधिनियम 1996", "Sec 7, 34", 31],
+            ["🤝 Mediation Act 2023", "मध्यस्थता अधिनियम 2023", "Sec 5, 27", 43] ] }
+        ];
+        var out = '<div class="rm-wrap"><div class="rm-title">' + escapeHtml(hi ? "🗺️ Major Acts रोडमैप — पूरा रास्ता" : "🗺️ MAJOR ACTS ROADMAP — the full journey") + '</div><p class="rm-sub">' + escapeHtml(hi ? "44 अधिनियम — चार ज़ोन में" : "44 Acts in four zones") + "</p>";
+        zones.forEach(function(z) {
+          out += '<div class="rm-zone ' + z.cls + '"><div class="rm-zone-h">' + escapeHtml(z.h) + '</div><div class="rm-chips">';
+          z.chips.forEach(function(c) {
+            out += '<button type="button" class="rm-chip" data-subj="majorActs" data-ti="' + c[3] + '">' + escapeHtml(hi ? c[1] : c[0]) + (c[2] ? " · " + escapeHtml(c[2]) : "") + "</button>";
+          });
+          out += "</div></div>";
+        });
+        return out + "</div>";
+      }
       function notesVisualBody(topic, lang) {
         var pts = topic.points || [];
         var out = "";
@@ -5904,6 +5966,7 @@ function cfBiharFee(v) {
           if (currentNotesSubject === "bns" && !notesQuery) htmlOut += bnsRoadmapHtml(lang);
           if (currentNotesSubject === "bnss" && !notesQuery) htmlOut += bnssRoadmapHtml(lang);
           if (currentNotesSubject === "bsa" && !notesQuery) htmlOut += bsaRoadmapHtml(lang);
+          if (currentNotesSubject === "majorActs" && !notesQuery) htmlOut += majorActsRoadmapHtml(lang);
           list.forEach(function(topic, ti) {
             htmlOut += indexItem(currentNotesSubject, ti, topic, null);
           });
