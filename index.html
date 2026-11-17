@@ -5862,7 +5862,7 @@ function cfBiharFee(v) {
         } catch(e) { return {categories:[]}; }
       }
       /* Daily 10 court words (Day 1 = 15 Nov 2026). To add a day, append one
-         more array to dailyWords (Day 3 = rows 21-30, Day 4 = 31-40, ... Day 10
+         more array to dailyWords (Day 4 = 31-40, ... Day 10
          = rows 91-100); the block auto-shows the set for today's date. If the
          date runs past the last added day, the latest set keeps showing. */
       var DAILY_WORDS_START = new Date(2026, 10, 15); /* Day 1 = 15 Nov 2026 */
@@ -5890,6 +5890,18 @@ function cfBiharFee(v) {
           { en: "Revision", hi: "पुनरीक्षण", useEn: "When a higher court checks whether a lower court's order was correct, legal and proper.", useHi: "जब ऊपरी अदालत निचली अदालत के आदेश की जाँच करती है कि वह सही, कानूनी और उचित था या नहीं।" },
           { en: "Petition", hi: "याचिका", useEn: "A written request or application filed before the court.", useHi: "अदालत के सामने दाखिल की गई लिखित प्रार्थना / अर्जी।" },
           { en: "Affidavit", hi: "शपथ पत्र", useEn: "A written statement made on oath, used as evidence in the case.", useHi: "शपथ पर दिया गया लिखित बयान, जो मुकदमे में सबूत के रूप में काम आता है।" }
+        ],
+        3: [
+          { en: "Summons", hi: "समन", useEn: "A court order asking a person to appear before the court on a fixed date.", useHi: "अदालत का आदेश — किसी व्यक्ति को तय तारीख पर अदालत में हाज़िर होने के लिए बुलाना।" },
+          { en: "Warrant", hi: "वारंट", useEn: "A court order authorising the police to arrest a person or to search a place.", useHi: "अदालत का आदेश — पुलिस को किसी व्यक्ति की गिरफ्तारी या किसी जगह की तलाशी का अधिकार देना।" },
+          { en: "Prosecution", hi: "अभियोजन", useEn: "The side that brings the case against the accused on behalf of the State.", useHi: "राज्य की ओर से आरोपी के खिलाफ मुकदमा चलाने वाला पक्ष।" },
+          { en: "Defence", hi: "बचाव पक्ष", useEn: "The accused's side — the lawyer and arguments that defend the accused in court.", useHi: "आरोपी का पक्ष — अदालत में आरोपी का बचाव करने वाला वकील और उसकी दलीलें।" },
+          { en: "Cross Examination", hi: "जिरह", useEn: "When the opposite side's lawyer questions a witness to test whether their statement is true.", useHi: "जब दूसरी तरफ का वकील गवाह से सवाल करके उसके बयान की सच्चाई परखता है।" },
+          { en: "Examination-in-Chief", hi: "मुख्य परीक्षण", useEn: "When the side that called a witness questions them first, to bring their statement on record.", useHi: "जब गवाह को बुलाने वाला पक्ष पहले उससे सवाल करके उसका बयान दर्ज कराता है।" },
+          { en: "Statement", hi: "बयान", useEn: "What a witness or the accused says before the police or the court, recorded as part of the case.", useHi: "गवाह या आरोपी पुलिस या अदालत के सामने जो कहता है, जो मुकदमे का हिस्सा बनता है।" },
+          { en: "Confession", hi: "स्वीकारोक्ति", useEn: "When the accused admits before the court that they committed the offence.", useHi: "जब आरोपी अदालत के सामने मान लेता है कि उसने अपराध किया है।" },
+          { en: "Alibi", hi: "अन्यत्र उपस्थिति का बचाव", useEn: "The defence that the accused was somewhere else when the offence happened, so they could not have done it.", useHi: "यह बचाव कि अपराध के समय आरोपी कहीं और था, इसलिए वह अपराध कर ही नहीं सकता था।" },
+          { en: "Motive", hi: "उद्देश्य / मंशा", useEn: "The reason why the accused is said to have committed the offence.", useHi: "वह वजह जिससे कहा जाता है कि आरोपी ने अपराध किया।" }
         ]
       };
       function dailyWordsDay() {
