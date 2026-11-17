@@ -5572,6 +5572,63 @@ function cfBiharFee(v) {
         });
         return out + "</div>";
       }
+      function bsaRoadmapHtml(lang) {
+        var hi = lang === "hi";
+        var zones = [
+          { cls: "rm-z1", h: hi ? "ZONE 1: सुसंगतता, स्वीकृति व संस्वीकृति (धारा 3–55)" : "ZONE 1: Relevancy, Admissions & Confessions (Sec 3–55)", chips: [
+            ["📖 Relevancy of Facts", "तथ्यों की सुसंगतता", "Sec 3–14", 0],
+            ["✍️ Admissions", "स्वीकृतियां", "Sec 15–21", 1],
+            ["🗣️ Confessions", "संस्वीकृतियां", "Sec 22–24", 2],
+            ["👮 Confession to Police", "पुलिस के समक्ष संस्वीकृति", "Sec 23", 18],
+            ["🕯️ Dying Declaration", "मृत्युकालिक कथन", "Sec 26(a)", 3],
+            ["🕯️ Dying Declaration — Detailed", "मृत्युकालिक कथन — विस्तृत", "Sec 26(a)", 11],
+            ["⚖️ Admissions vs Confessions", "स्वीकृति बनाम संस्वीकृति", "", 13],
+            ["🧑‍⚕️ Expert Opinion — Detailed", "विशेषज्ञ की राय — विस्तृत", "Sec 39", 14],
+            ["🧑‍⚕️ Expert Opinion & Presumptions", "विशेषज्ञ राय व उपधारणाएं", "", 7],
+            ["👤 Character Evidence", "चरित्र साक्ष्य", "Sec 46–50", 25],
+            ["🏛️ Judicial Notice", "न्यायिक नोटिस", "Sec 51–53", 21],
+            ["👂 Hearsay Evidence", "अनुश्रुत साक्ष्य", "Sec 55", 15] ] },
+          { cls: "rm-z2", h: hi ? "ZONE 2: सबूत व दस्तावेज़ (धारा 57–95)" : "ZONE 2: Proof & Documents (Sec 57–95)", chips: [
+            ["📄 Primary vs Secondary Evidence", "प्राथमिक बनाम द्वितीयक साक्ष्य", "Sec 57–65", 16],
+            ["💻 Electronic Evidence", "इलेक्ट्रॉनिक साक्ष्य", "Sec 62–63", 4],
+            ["🔐 Electronic Evidence — Certificate & Hash", "इलेक्ट्रॉनिक साक्ष्य — प्रमाणपत्र व हैश", "Sec 63", 17],
+            ["💾 Digital Records", "डिजिटल अभिलेख", "", 9],
+            ["📜 Electronic Record Certificate", "इलेक्ट्रॉनिक रिकॉर्ड प्रमाणपत्र", "Sec 63(4)", 20],
+            ["✒️ Proof of Signature & Handwriting", "हस्ताक्षर और हस्तलेख का सबूत", "Sec 65, 72", 37],
+            ["🏢 Public vs Private Documents", "लोक बनाम निजी दस्तावेज़", "Sec 74–77", 23],
+            ["📑 Presumptions as to Documents", "दस्तावेजों संबंधी उपधारणाएं", "Sec 80–83, 92", 8],
+            ["✍️ Attested Documents", "अनुप्रमाणित दस्तावेज़", "", 34],
+            ["⚖️ Previous Judgments", "पूर्व निर्णय", "", 35],
+            ["🚫 Exclusion of Oral by Documentary Evidence", "दस्तावेज़ी साक्ष्य द्वारा मौखिक साक्ष्य का अपवर्जन", "Sec 94–95", 24] ] },
+          { cls: "rm-z3", h: hi ? "ZONE 3: सबूत का भार व उपधारणाएं (धारा 104–123)" : "ZONE 3: Burden of Proof & Presumptions (Sec 104–123)", chips: [
+            ["⚖️ Burden of Proof", "सबूत का भार", "Sec 104–115", 5],
+            ["⚖️ Burden of Proof & Presumptions", "सबूत का भार और धारणाएं", "Sec 104–120", 10],
+            ["⚰️ Presumption of Death", "मृत्यु की उपधारणा", "Sec 111", 27],
+            ["🔀 May / Shall Presume & Conclusive Proof", "उपधारणा — कर सकेगा, करेगा, निश्चायक सबूत", "Sec 2, 116–119", 36],
+            ["💔 Presumption — Abetment of Suicide", "आत्महत्या के दुष्प्रेरण की उपधारणा", "Sec 117", 29],
+            ["🪔 Presumption — Dowry Death", "दहेज मृत्यु की उपधारणा", "Sec 118", 32],
+            ["🚫 Presumption — Absence of Consent in Rape", "बलात्कार में सहमति के अभाव की उपधारणा", "Sec 120", 38],
+            ["🔒 Estoppel", "एस्टॉपल", "Sec 121–123", 22] ] },
+          { cls: "rm-z4", h: hi ? "ZONE 4: साक्षी व परीक्षा (धारा 119–169)" : "ZONE 4: Witnesses & Examination (Sec 119–169)", chips: [
+            ["👥 Witnesses — Competency & Examination", "साक्षी — सक्षमता व परीक्षण", "Sec 119–136", 6],
+            ["🤫 Privileged Communications", "विशेषाधिकार प्राप्त संचार", "Sec 126–134", 12],
+            ["👤 Accomplice Evidence", "सह-अपराधी का साक्ष्य", "Sec 138", 33],
+            ["🎤 Examination of Witnesses", "गवाहों की परीक्षा", "Sec 142–143", 30],
+            ["❓ Leading Questions", "सूचक प्रश्न", "Sec 146", 28],
+            ["😠 Hostile Witness", "प्रतिकूल साक्षी", "Sec 157", 19],
+            ["🧠 Refreshing Memory", "स्मृति ताज़ा करना", "Sec 162", 31],
+            ["⚠️ Improper Admission or Rejection", "साक्ष्य की अनुचित स्वीकृति या अस्वीकृति", "Sec 169", 26] ] }
+        ];
+        var out = '<div class="rm-wrap"><div class="rm-title">' + escapeHtml(hi ? "🗺️ BSA रोडमैप — पूरा रास्ता" : "🗺️ BSA ROADMAP — the full journey") + '</div><p class="rm-sub">' + escapeHtml(hi ? "धारा 3 से 169 तक — पूरा BSA चार ज़ोन में" : "Sec 3 to 169 — the whole BSA in four zones") + "</p>";
+        zones.forEach(function(z) {
+          out += '<div class="rm-zone ' + z.cls + '"><div class="rm-zone-h">' + escapeHtml(z.h) + '</div><div class="rm-chips">';
+          z.chips.forEach(function(c) {
+            out += '<button type="button" class="rm-chip" data-subj="bsa" data-ti="' + c[3] + '">' + escapeHtml(hi ? c[1] : c[0]) + (c[2] ? " · " + escapeHtml(c[2]) : "") + "</button>";
+          });
+          out += "</div></div>";
+        });
+        return out + "</div>";
+      }
       function notesVisualBody(topic, lang) {
         var pts = topic.points || [];
         var out = "";
@@ -5846,6 +5903,7 @@ function cfBiharFee(v) {
           htmlOut += '<p class="notes-index-count">' + escapeHtml(notesSubjectLabels[currentNotesSubject] || currentNotesSubject) + " — " + list.length + countLabel + "</p>";
           if (currentNotesSubject === "bns" && !notesQuery) htmlOut += bnsRoadmapHtml(lang);
           if (currentNotesSubject === "bnss" && !notesQuery) htmlOut += bnssRoadmapHtml(lang);
+          if (currentNotesSubject === "bsa" && !notesQuery) htmlOut += bsaRoadmapHtml(lang);
           list.forEach(function(topic, ti) {
             htmlOut += indexItem(currentNotesSubject, ti, topic, null);
           });
