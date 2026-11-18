@@ -12280,7 +12280,7 @@ function cfBiharFee(v) {
       }
       function jumpToDraft(id) {
         var panel = document.getElementById("lawAssistPanel");
-        if (panel) panel.hidden = true;
+        if (panel) { panel.hidden = true; try { document.body.style.overflow = ""; } catch (e) {} }
         var target = document.querySelector('.draft-item[data-draft-id="' + id + '"]');
         if (!target) {
           try { if (typeof renderDrafts === "function") renderDrafts(); } catch (e) {}
@@ -13653,6 +13653,11 @@ function renderDocChecklist() {
           }
           function reset() { pulling = false; ready = false; setSp(-140, false); }
           document.addEventListener("touchstart", function (e) {
+            /* LawAssist panel / notes reader (2026-11-18): a touch starting
+               inside a scrollable overlay is a panel gesture, not a page pull
+               — never arm the PTR from it, or a fast scroll inside the panel
+               spins the refresh circle (and can reload the page at >=90px). */
+            if (e.target && e.target.closest && e.target.closest("#lawAssistPanel, #notesReader")) { pulling = false; return; }
             if (window.scrollY <= 0 && e.touches && e.touches.length === 1) {
               startY = e.touches[0].clientY; pulling = true; ready = false;
             } else { pulling = false; }
@@ -16789,6 +16794,10 @@ function respond(q, sysOverride) {
       function openPanel() {
         var panel = document.getElementById("lawAssistPanel");
         panel.hidden = false;
+        /* Body scroll lock (2026-11-18, same as notesReaderOpen): while the
+           panel is open the page behind must not scroll via scroll chaining
+           from the panel's inner lists. scrollY is preserved; restored on close. */
+        try { document.body.style.overflow = "hidden"; } catch (e) {}
         applyLabels();
         laSyncDraftCount();
         if (!greeted && laChatRestore()) greeted = true;
@@ -16805,11 +16814,11 @@ function respond(q, sysOverride) {
         if (!fab || !panel) return;
         fab.addEventListener("click", function () {
           if (GEMINI_PROXY) { try { fetch(GEMINI_PROXY + "/", { method: "GET", mode: "no-cors" }).catch(function () {}); } catch (e) {} }
-          if (panel.hidden) openPanel(); else panel.hidden = true;
+          if (panel.hidden) openPanel(); else { panel.hidden = true; try { document.body.style.overflow = ""; } catch (e) {} }
         });
         document.addEventListener("ak-data", function (e) { if (e && e.detail === "legalDraftsData") laSyncDraftCount(); });
         laSyncDraftCount();
-        document.getElementById("laClose").addEventListener("click", function () { try { if (window.speechSynthesis) window.speechSynthesis.cancel(); } catch (e) {} panel.hidden = true; });
+        document.getElementById("laClose").addEventListener("click", function () { try { if (window.speechSynthesis) window.speechSynthesis.cancel(); } catch (e) {} panel.hidden = true; try { document.body.style.overflow = ""; } catch (e2) {} });
         document.querySelectorAll(".la-tab").forEach(function (b) {
           b.addEventListener("click", function () { switchTab(b.getAttribute("data-latab")); });
         });
