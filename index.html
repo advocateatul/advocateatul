@@ -1114,6 +1114,7 @@
     .la-header { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; background: #1e1e1e; color: #F5F5F5; }
     .la-brand { display: flex; align-items: center; gap: 10px; }
     .la-logo { font-size: 1.6rem; }
+    .la-logo-img { width: 26px; height: 26px; border-radius: 50%; object-fit: cover; background: #f9fcff; } /* Same emblem as header logo (logo.webp) */
     .la-brand strong { display: block; font-size: 1.05rem; letter-spacing: .02em; }
     .la-brand .la-sub { display: block; font-size: .72rem; opacity: .7; font-weight: 400; }
     .la-header #laClose { background: transparent; border: 1px solid rgba(255,255,255,.35); color: #F5F5F5; width: 32px; height: 32px; border-radius: 50%; cursor: pointer; font-size: .85rem; }
@@ -14287,7 +14288,7 @@ function renderDocChecklist() {
   
   <div id="lawAssistPanel" class="lawassist-panel" hidden role="dialog" aria-label="LawAssist — AI Legal Workspace">
     <div class="la-header">
-      <div class="la-brand"><span class="la-logo" aria-hidden="true">⚖️</span><div><strong>LawAssist</strong><span class="la-sub" id="laSubtitle">AI Legal Workspace</span></div></div>
+      <div class="la-brand"><img class="la-logo-img" src="logo.webp" alt="" aria-hidden="true" width="26" height="26" decoding="async"><div><strong>LawAssist</strong><span class="la-sub" id="laSubtitle">AI Legal Workspace</span></div></div>
       <button type="button" id="laClose" aria-label="Close">✕</button>
     </div>
     <div class="la-tabs" role="tablist">
