@@ -5983,7 +5983,7 @@ function cfBiharFee(v) {
         } catch(e) { return {categories:[]}; }
       }
       /* Daily 10 court words (Day 1 = 15 Nov 2026). To add a day, append one
-         more array to dailyWords (Day 4 = 31-40, ... Day 10
+         more array to dailyWords (Day 5 = 41-50, ... Day 10
          = rows 91-100); the block auto-shows the set for today's date. If the
          date runs past the last added day, the latest set keeps showing. */
       var DAILY_WORDS_START = new Date(2026, 10, 15); /* Day 1 = 15 Nov 2026 */
@@ -6023,6 +6023,18 @@ function cfBiharFee(v) {
           { en: "Confession", hi: "स्वीकारोक्ति", useEn: "When the accused admits before the court that they committed the offence.", useHi: "जब आरोपी अदालत के सामने मान लेता है कि उसने अपराध किया है।" },
           { en: "Alibi", hi: "अन्यत्र उपस्थिति का बचाव", useEn: "The defence that the accused was somewhere else when the offence happened, so they could not have done it.", useHi: "यह बचाव कि अपराध के समय आरोपी कहीं और था, इसलिए वह अपराध कर ही नहीं सकता था।" },
           { en: "Motive", hi: "उद्देश्य / मंशा", useEn: "The reason why the accused is said to have committed the offence.", useHi: "वह वजह जिससे कहा जाता है कि आरोपी ने अपराध किया।" }
+        ],
+        4: [
+          { en: "Intention", hi: "आशय", useEn: "What the accused meant to do — the mental state behind the act, which decides whether an act is an offence.", useHi: "आरोपी ने क्या करने का इरादा किया था — काम के पीछे की मानसिक स्थिति, जिससे तय होता है कि काम अपराध है या नहीं।" },
+          { en: "Negligence", hi: "लापरवाही", useEn: "Failing to take the care that a reasonable person would take, which causes harm to someone.", useHi: "वह सावधानी न बरतना जो एक समझदार व्यक्ति बरतता — जिससे किसी को नुकसान पहुँचे।" },
+          { en: "Offence", hi: "अपराध", useEn: "An act or omission punishable by law.", useHi: "कोई काम या काम न करना, जिसकी सज़ा कानून में तय हो।" },
+          { en: "Cognizable Offence", hi: "संज्ञेय अपराध", useEn: "A serious offence in which the police can arrest without a warrant and start investigation without the court's permission.", useHi: "गंभीर अपराध — जिसमें पुलिस बिना वारंट गिरफ्तार कर सकती है और अदालत की इजाज़त के बिना जांच शुरू कर सकती है।" },
+          { en: "Non-Cognizable Offence", hi: "असंज्ञेय अपराध", useEn: "A less serious offence in which the police cannot arrest without a warrant and need the court's order to investigate.", useHi: "कम गंभीर अपराध — जिसमें पुलिस बिना वारंट गिरफ्तार नहीं कर सकती और जांच के लिए अदालत का आदेश चाहिए।" },
+          { en: "Compoundable Offence", hi: "समझौतायोग्य अपराध", useEn: "An offence that can be settled by a compromise between the two sides, with the court's permission.", useHi: "वह अपराध जिसका दोनों पक्षों के बीच समझौते से निपटारा हो सकता है, अदालत की इजाज़त से।" },
+          { en: "Non-Compoundable Offence", hi: "असमझौतायोग्य अपराध", useEn: "An offence that cannot be settled by compromise — the case must run its full course in court.", useHi: "वह अपराध जिसका समझौते से निपटारा नहीं हो सकता — मुकदमा अदालत में पूरा चलता है।" },
+          { en: "Jurisdiction", hi: "अधिकार क्षेत्र", useEn: "The power of a particular court to hear and decide a case — which court, and which place, the case belongs to.", useHi: "किसी खास अदालत की किसी मुकदमे को सुनने और फैसला करने की शक्ति — मुकदमा किस अदालत और किस जगह का है।" },
+          { en: "Injunction", hi: "निषेधाज्ञा", useEn: "A court order that tells a person to do something, or to stop doing something, until the case is decided.", useHi: "अदालत का आदेश — किसी व्यक्ति को कुछ करने या कुछ करने से रुकने का हुक्म, जब तक मुकदमे का फैसला न हो।" },
+          { en: "Execution", hi: "आदेश/डिक्री का पालन", useEn: "Enforcing the court's decree or order — getting the judgment actually carried out (e.g. recovery of money or possession).", useHi: "अदालत की डिक्री या आदेश पर अमल कराना — फैसले को सच में लागू करवाना (जैसे पैसे की वसूली या कब्ज़ा दिलाना)।" }
         ]
       };
       function dailyWordsDay() {
