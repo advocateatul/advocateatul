@@ -1108,6 +1108,7 @@
     .lawassist-fab:hover { transform: translateY(-2px) translateZ(0); }
     .lawassist-fab-label { display: none; } /* Round icon-only FAB — chosen by Atul 2026-10-20 */
     .lawassist-fab span[aria-hidden="true"] { font-size: 1.3rem; }
+    .lawassist-fab-logo { display: block; width: 100%; height: 100%; border-radius: 50%; object-fit: cover; background: #f9fcff; } /* Same emblem as header logo (logo.webp), sized to the FAB */
     .lawassist-panel { position: fixed; right: 12px; bottom: 84px; z-index: 960; width: min(460px, calc(100vw - 24px)); height: min(680px, calc(100vh - 100px)); display: flex; flex-direction: column; background: #f9fcff; border: 2px solid #1e1e1e; border-radius: 18px; box-shadow: 0 24px 64px rgba(0,0,0,.3); overflow: hidden; }
     .lawassist-panel[hidden] { display: none; }
     .la-header { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; background: #1e1e1e; color: #F5F5F5; }
@@ -1740,7 +1741,7 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
   <!-- Fixed FABs moved to top of body (2026-11-05): they sat at the end of this 2MB file, so on every refresh the LawAssist icon popped in visibly late after the header ("blink"); position:fixed, so document position changes nothing else. -->
 
   <button type="button" id="lawAssistFab" class="lawassist-fab" aria-label="LawAssist — AI Legal Workspace">
-    <span aria-hidden="true">⚖️</span><span class="lawassist-fab-label">LawAssist</span>
+    <img class="lawassist-fab-logo" src="logo.webp" alt="" aria-hidden="true" width="54" height="54" decoding="async"><span class="lawassist-fab-label">LawAssist</span>
   </button>
 <script>
 /* Round 2 data loader: bade datasets *.json se lazy-load hote hain */
