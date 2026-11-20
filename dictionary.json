@@ -460,6 +460,11 @@
   "hi": "वस्तुतः अनुपस्थित"
  },
  {
+  "term": "absentation from intoxicants",
+  "def": "[s. 4(4), Probation of Offenders Act]",
+  "hi": "मादक पदार्थ से प्रविरत रहना"
+ },
+ {
   "term": "absentee",
   "def": "",
   "hi": "अनुपस्थित"
@@ -605,12 +610,7 @@
   "hi": "आमेलित करना ; आमेलन करना"
  },
  {
-  "term": "absorb absentation from intoxicants",
-  "def": "[s. 4(4), Probation of Offenders Act]",
-  "hi": "मादक पदार्थ से प्रविरत रहना"
- },
- {
-  "term": "absorb in regular service absorb in regular service",
+  "term": "absorb in regular service",
   "def": "[s. 12(1)(f), International Airports Authority Act]",
   "hi": "नियमित सेवा में आमेलित करना"
  },
@@ -641,7 +641,7 @@
  },
  {
   "term": "abstain from a certain act",
-  "def": "[s. 144(1), Cr. P.C.] -",
+  "def": "[s. 144(1), Cr. P.C.]",
   "hi": "कार्य विशेष न करना"
  },
  {
