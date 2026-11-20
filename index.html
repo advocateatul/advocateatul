@@ -5985,7 +5985,7 @@ function cfBiharFee(v) {
         } catch(e) { return {categories:[]}; }
       }
       /* Daily 10 court words (Day 1 = 15 Nov 2026). To add a day, append one
-         more array to dailyWords (Day 5 = 41-50, ... Day 10
+         more array to dailyWords (Day 6 = 51-60, ... Day 10
          = rows 91-100); the block auto-shows the set for today's date. If the
          date runs past the last added day, the latest set keeps showing. */
       var DAILY_WORDS_START = new Date(2026, 10, 15); /* Day 1 = 15 Nov 2026 */
@@ -6049,6 +6049,18 @@ function cfBiharFee(v) {
           { en: "Compensation", hi: "प्रतिकार / मुआवजा", useEn: "Money paid to a person for the loss or harm they suffered, as ordered by the court.", useHi: "किसी व्यक्ति को हुए नुकसान या हानि के बदले दिया जाने वाला पैसा, जैसा अदालत आदेश दे।" },
           { en: "Tribunal", hi: "न्यायाधिकरण", useEn: "A special body set up to decide certain types of disputes, like service matters or tax cases, instead of a regular court.", useHi: "कुछ खास तरह के विवादों को सुलझाने के लिए बनाया गया विशेष निकाय, जैसे सेवा मामले या कर के मामले — आम अदालत के बजाय।" },
           { en: "Precedent", hi: "न्यायिक दृष्टांत", useEn: "An earlier decision of a higher court that lower courts must follow in similar cases.", useHi: "किसी ऊंची अदालत का पहले का फैसला, जिसका पालन नीचे की अदालतों को ऐसे ही मामलों में करना होता है।" }
+        ],
+        6: [
+          { en: "Judge", hi: "न्यायाधीश", useEn: "The person who hears the case in court and gives the decision.", useHi: "मुकदमे की सुनवाई करके फैसला देने वाला व्यक्ति।" },
+          { en: "Magistrate", hi: "मजिस्ट्रेट", useEn: "A judicial officer who hears criminal cases and passes orders in the lower courts.", useHi: "निचली अदालतों में आपराधिक मामलों की सुनवाई करके आदेश देने वाला न्यायिक अधिकारी।" },
+          { en: "Court", hi: "न्यायालय", useEn: "The place and authority where cases are heard and decided.", useHi: "वह जगह और अधिकार जहाँ मुकदमों की सुनवाई और फैसला होता है।" },
+          { en: "High Court", hi: "उच्च न्यायालय", useEn: "The highest court of a state, which hears appeals and writ petitions.", useHi: "किसी राज्य की सबसे ऊँची अदालत, जो अपील और रिट याचिकाएँ सुनती है।" },
+          { en: "Supreme Court", hi: "सर्वोच्च न्यायालय", useEn: "The highest court of the country, whose decision is final and binding on all courts.", useHi: "देश की सबसे ऊँची अदालत, जिसका फैसला अंतिम होता है और सभी अदालतों पर लागू होता है।" },
+          { en: "Lawyer", hi: "अधिवक्ता", useEn: "A person who knows the law and advises and represents clients in legal matters.", useHi: "कानून जानने वाला व्यक्ति जो कानूनी मामलों में मुवक्किल को सलाह देता है और उसकी ओर से पैरवी करता है।" },
+          { en: "Advocate", hi: "वकील / अधिवक्ता", useEn: "A lawyer enrolled with the Bar Council who argues cases in court on behalf of a client.", useHi: "बार काउंसिल में नामांकित वकील जो मुवक्किल की ओर से अदालत में बहस करके मुकदमा लड़ता है।" },
+          { en: "Public Prosecutor", hi: "लोक अभियोजक", useEn: "The government lawyer who presents the State's case against the accused in criminal trials.", useHi: "सरकारी वकील जो आपराधिक मुकदमों में राज्य की ओर से आरोपी के खिलाफ केस पेश करता है।" },
+          { en: "Defence Counsel", hi: "बचाव अधिवक्ता", useEn: "The lawyer who defends the accused in court.", useHi: "अदालत में आरोपी का बचाव करने वाला वकील।" },
+          { en: "Legal Aid", hi: "निःशुल्क विधिक सहायता", useEn: "Free legal help given to people who cannot afford a lawyer, so that no one is denied justice for lack of money.", useHi: "उन लोगों को दी जाने वाली मुफ़्त कानूनी मदद जो वकील का खर्च नहीं उठा सकते, ताकि पैसे की कमी से किसी को न्याय से वंचित न होना पड़े।" }
         ]
       };
       function dailyWordsDay() {
