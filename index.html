@@ -4673,6 +4673,11 @@ html[data-theme="dark"] .auth-btn:hover{background:#f9fcff}
           title: lang === "hi" ? "संविधान — हिंदी-अंग्रेज़ी, सितंबर 2026" : "Constitution of India — Hindi–English, September 2026",
           desc: lang === "hi" ? "भारत का संविधान हिंदी और अंग्रेज़ी में पढ़ें — 10 सितंबर 2026 तक अद्यतन, विधायी विभाग का आधिकारिक पाठ।" : "Read the Constitution of India in Hindi and English — official diglot text from the Legislative Department, as on 10th September 2026.",
           actions: [{ label: lang === "hi" ? "पीडीएफ देखें" : "View PDF", href: "https://www.legislative.gov.in/static/uploads/2025/07/95ef471035ee0b5e4e5b1cac3d3584c1.pdf", external: true }]
+        }, {
+          badge: t("hubOfficialBadge"),
+          title: lang === "hi" ? "भारत का संविधान — क्षेत्रीय भाषाओं में" : "Constitution of India — in Regional Languages",
+          desc: lang === "hi" ? "संविधान क्षेत्रीय भाषाओं में पढ़ें — विधायी विभाग का आधिकारिक पाठ, हर भाषा का अलग PDF।" : "Read the Constitution in regional languages — official text from the Legislative Department, a separate PDF for each language.",
+          actions: [{ label: lang === "hi" ? "वेबसाइट देखें" : "View page", href: "https://legislative.gov.in/constitution-of-india", external: true }]
         }].concat(constitutionIndexCards()));
         function linkCard(l, descKey) {
           return { title: l["label_" + lang] || l.label_en, badge: t("hubOfficialBadge"), desc: descKey ? t(descKey) : (l["why_" + lang] || l.why_en), actions: [{ label: t("hubVisitSite"), href: l.url, external: true }] };
