@@ -5990,7 +5990,7 @@ function cfBiharFee(v) {
         } catch(e) { return {categories:[]}; }
       }
       /* Daily 10 court words (Day 1 = 15 Nov 2026). To add a day, append one
-         more array to dailyWords (Day 6 = 51-60, ... Day 10
+         more array to dailyWords (Day 7 = 61-70, ... Day 10
          = rows 91-100); the block auto-shows the set for today's date. If the
          date runs past the last added day, the latest set keeps showing. */
       var DAILY_WORDS_START = new Date(2026, 10, 15); /* Day 1 = 15 Nov 2026 */
@@ -6066,6 +6066,18 @@ function cfBiharFee(v) {
           { en: "Public Prosecutor", hi: "लोक अभियोजक", useEn: "The government lawyer who presents the State's case against the accused in criminal trials.", useHi: "सरकारी वकील जो आपराधिक मुकदमों में राज्य की ओर से आरोपी के खिलाफ केस पेश करता है।" },
           { en: "Defence Counsel", hi: "बचाव अधिवक्ता", useEn: "The lawyer who defends the accused in court.", useHi: "अदालत में आरोपी का बचाव करने वाला वकील।" },
           { en: "Legal Aid", hi: "निःशुल्क विधिक सहायता", useEn: "Free legal help given to people who cannot afford a lawyer, so that no one is denied justice for lack of money.", useHi: "उन लोगों को दी जाने वाली मुफ़्त कानूनी मदद जो वकील का खर्च नहीं उठा सकते, ताकि पैसे की कमी से किसी को न्याय से वंचित न होना पड़े।" }
+        ],
+        7: [
+          { en: "Hearing", hi: "सुनवाई", useEn: "A court sitting where the judge listens to both sides' arguments and passes orders, or fixes the next date.", useHi: "अदालत की सुनवाई — जहाँ जज दोनों पक्षों की दलीलें सुनता है और आदेश देता है, या अगली तारीख तय करता है।" },
+          { en: "Interim Order", hi: "अंतरिम आदेश", useEn: "A temporary order passed by the court while the case is still pending, to protect a party's rights in the meantime.", useHi: "मुकदमा चलते हुए अदालत का अस्थायी आदेश — जब तक फैसला न हो, किसी पक्ष के हक़ की रक्षा के लिए।" },
+          { en: "Final Order", hi: "अंतिम आदेश", useEn: "The court's order that finally decides the matter before it, after which that proceeding ends.", useHi: "अदालत का अंतिम आदेश — जो सामने के मामले को आखिरी तौर पर तय करता है, जिसके बाद वह कार्यवाही खत्म हो जाती है।" },
+          { en: "Stay Order", hi: "स्थगन आदेश", useEn: "A court order that pauses the proceedings or the effect of a lower court's order until further orders.", useHi: "अदालत का आदेश — किसी कार्यवाही या निचली अदालत के आदेश पर आगे के आदेश तक रोक लगाना।" },
+          { en: "Interim Bail", hi: "अंतरिम जमानत", useEn: "Temporary bail granted by the court for a short period, until the regular or anticipatory bail application is decided.", useHi: "अदालत की ओर से थोड़े समय के लिए दी गई अस्थायी जमानत — जब तक नियमित या अग्रिम जमानत की अर्जी पर फैसला न हो।" },
+          { en: "Anticipatory Bail", hi: "अग्रिम जमानत", useEn: "Bail granted before arrest, when a person fears arrest in a case — the court orders that they be released on bail if arrested.", useHi: "गिरफ्तारी से पहले मिलने वाली जमानत — जब किसी को किसी मुकदमे में गिरफ्तारी का डर हो, अदालत आदेश देती है कि गिरफ्तारी पर उसे जमानत पर छोड़ा जाए।" },
+          { en: "Regular Bail", hi: "नियमित जमानत", useEn: "Bail granted to a person already arrested and in custody, after the court hears both sides.", useHi: "गिरफ्तार होकर हिरासत में मौजूद व्यक्ति को मिलने वाली जमानत — अदालत दोनों पक्षों को सुनकर देती है।" },
+          { en: "Default Bail", hi: "वैधानिक जमानत", useEn: "Bail that the accused gets as a right when the police do not file the charge sheet within the time the law allows.", useHi: "वह जमानत जो आरोपी को हक़ के तौर पर मिलती है, जब पुलिस कानून में तय समय के अंदर चार्जशीट दाखिल न करे।" },
+          { en: "Surety", hi: "जमानती", useEn: "A person who stands guarantee for the accused — promising the court that the accused will appear when required.", useHi: "वह व्यक्ति जो आरोपी की ज़मानत देता है — अदालत को भरोसा दिलाता है कि आरोपी ज़रूरत पड़ने पर हाज़िर होगा।" },
+          { en: "Bond", hi: "बंधपत्र", useEn: "A written undertaking, usually with a money amount, given to the court — e.g. a bail bond promising the accused will appear on every date.", useHi: "अदालत को दिया गया लिखित वचन — आमतौर पर एक रकम के साथ — जैसे बेल बांड, जिसमें आरोपी हर तारीख पर हाज़िर होने का वादा करता है।" }
         ]
       };
       function dailyWordsDay() {
