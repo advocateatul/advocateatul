@@ -5698,6 +5698,124 @@ function cfBiharFee(v) {
         });
         return out + "</div>";
       }
+      function cpcRoadmapHtml(lang) {
+        var hi = lang === "hi";
+        var zones = [
+          { cls: "rm-z1", h: hi ? "ZONE 1: मुकदमा शुरू — क्षेत्राधिकार, पक्षकार और अभिवचन" : "ZONE 1: Starting the Suit — Jurisdiction, Parties & Pleadings", chips: [
+            ["🏛️ Jurisdiction of Civil Courts", "दीवानी न्यायालयों का क्षेत्राधिकार", "Sec 9, 15-25", 0],
+            ["👥 Parties to Suit — Joinder & Misjoinder", "वाद के पक्षकार — संयोजन व गलत संयोजन", "Order I CPC", 12],
+            ["📝 Frame of Suit", "वाद की रूपरेखा", "Order II Rule 1 CPC", 41],
+            ["🔗 Joinder of Causes of Action", "वाद-कारणों का संयोजन", "Order II Rule 3 CPC", 42],
+            ["📝 Pleadings — Plaint & Written Statement", "अभिवचन — वादपत्र व लिखित कथन", "Order VI-VIII", 2],
+            ["✏️ Amendment of Pleadings", "अभिवचनों में संशोधन", "Order VI Rule 17 CPC", 17],
+            ["⚖️ Set-off & Counterclaim", "मुजरा व प्रतिदावा", "Order VIII Rules 6, 6A CPC", 25],
+            ["✉️ Service of Summons", "समन की तामील", "Order V CPC", 36],
+            ["✉️ Duty of Person Serving Summons", "सम्मन तामील करने वाले व्यक्ति का कर्तव्य", "Order V Rule 29 CPC", 43],
+            ["⚠️ Caveat — Sec 148A CPC", "कैवियट — धारा 148A CPC", "", 9],
+            ["⏳ Limitation Periods — Quick Reference", "मियाद अवधि — त्वरित संदर्भ", "Limitation Act, 1963", 8]
+          ] },
+          { cls: "rm-z2", h: hi ? "ZONE 2: सुनवाई से पहले — रोक, मुद्दे और अंतरिम राहत" : "ZONE 2: Before Trial — Bars, Issues & Interim Relief", chips: [
+            ["🔒 Res Judicata", "प्राङ्न्याय", "Sec 11", 1],
+            ["🔒 Constructive Res Judicata & Its Exceptions", "आन्वयिक पूर्वन्याय व इसके अपवाद", "Sec 11 CPC", 13],
+            ["⏸️ Stay of Suit — Res Sub Judicata", "वाद का स्थगन — विचाराधीन वाद का सिद्धांत", "Sec 10 CPC", 40],
+            ["❓ Framing of Issues", "विवाद्यकों की रचना", "Order XIV CPC", 37],
+            ["🔍 Discovery and Inspection", "प्रकटीकरण और निरीक्षण", "Order XI CPC", 32],
+            ["📋 Commission", "कमीशन", "Order XXVI CPC", 28],
+            ["🔒 Attachment Before Judgment", "निर्णय से पूर्व कुर्की", "Order XXXVIII CPC", 29],
+            ["🚫 Temporary Injunctions", "अस्थायी निषेधाज्ञाएं", "Order XXXIX", 6],
+            ["⏸️ Interim Orders — Injunctions, Stay & Status Quo", "अंतरिम आदेश — निषेधाज्ञा, रोक और यथास्थिति", "Order XXXIX, XLI", 11],
+            ["🗝️ Receiver", "रिसीवर", "Order XL CPC", 27],
+            ["🔀 Transfer of Suits", "वादों का हस्तांतरण", "Sec 22-25 CPC", 34]
+          ] },
+          { cls: "rm-z3", h: hi ? "ZONE 3: विचारण, फैसला और खास मुकदमे" : "ZONE 3: Trial, Judgment & Special Suits", chips: [
+            ["⚖️ Trial of Civil Suits", "दीवानी वादों का विचारण", "Order XVIII", 3],
+            ["👤 Ex Parte Proceedings & Setting Aside Ex Parte Decree", "एकपक्षीय कार्यवाही व एकपक्षीय डिक्री रद्द कराना", "Order IX CPC", 44],
+            ["🤝 Withdrawal & Compromise of Suits", "वाद की वापसी और समझौता", "Order XXIII CPC", 38],
+            ["📜 Judgment and Decree", "निर्णय और डिक्री", "Sec 33, Order XX CPC", 33],
+            ["💰 Costs of Suit", "मुकदमे का खर्च", "Sec 35, 35A, 35B CPC", 23],
+            ["↩️ Restitution", "प्रत्यास्थापन", "Sec 144 CPC", 20],
+            ["💰 Mesne Profits & Interest on Decrees", "अंतरिम लाभ और डिक्री पर ब्याज", "Sec 34 CPC, Order XX Rule 12", 39],
+            ["🤝 Section 89 — Settlement of Disputes Outside Court", "धारा 89 — अदालत के बाहर विवाद निपटारा", "ADR", 19],
+            ["👤 Death, Marriage & Insolvency of Parties", "पक्षों की मृत्यु, विवाह व दिवालिया", "Order XXII CPC", 21],
+            ["🫶 Suits by Indigent Persons", "निर्धन व्यक्तियों के मुकदमे", "Order XXXIII CPC", 22],
+            ["🧒 Suits by Minors", "अवयस्कों द्वारा मुकदमे", "Order XXXII CPC", 26],
+            ["🏛️ Suits by or Against the Government", "सरकार के विरुद्ध या सरकार द्वारा वाद", "Sec 79-82 CPC", 30],
+            ["👥 Interpleader Suits", "अंतराभिवादी वाद", "Sec 88, Order XXXV CPC", 31],
+            ["🌍 Foreign Judgments", "विदेशी निर्णय", "Sec 13-14 CPC", 24],
+            ["✨ Inherent Powers of Civil Courts", "सिविल न्यायालयों की अंतर्निहित शक्तियाँ", "Sec 151 CPC", 35]
+          ] },
+          { cls: "rm-z4", h: hi ? "ZONE 4: अपील, पुनरीक्षण और निष्पादन" : "ZONE 4: Appeals, Revision & Execution", chips: [
+            ["🔄 Appeals", "अपीलें", "Sec 96, 100; Order XLI-XLIII", 4],
+            ["🔄 Appeals — First Appeal vs Second Appeal: Key Differences", "अपीलें — प्रथम अपील बनाम द्वितीय अपील: प्रमुख अंतर", "Sec 96, 100 CPC", 14],
+            ["🔍 Review, Revision & Reference", "पुनर्विलोकन, पुनरीक्षण और निर्देश", "Sec 113-115 CPC", 18],
+            ["📜 Execution of Decrees", "डिक्रियों का निष्पादन", "Order XXI", 5],
+            ["📜 Execution of Decree — Detailed Study: Modes, Objections & Stay", "डिक्री का निष्पादन — विस्तृत अध्ययन: तरीके, आपत्तियां व स्थगन", "Order XXI CPC", 15],
+            ["🔨 Modes of Execution — Attachment, Arrest & Sale", "निष्पादन के तरीके — कुर्की, गिरफ्तारी व विक्रय", "", 10],
+            ["⚡ Summary Suits", "संक्षिप्त वाद", "Order XXXVII", 7],
+            ["⚡ Summary Suit — Procedure, Leave to Defend & Key Differences", "संक्षिप्त वाद — प्रक्रिया, प्रतिवाद की अनुमति एवं मुख्य अंतर", "Order XXXVII CPC", 16]
+          ] }
+        ];
+        var out = '<div class="rm-wrap"><div class="rm-title">' + escapeHtml(hi ? "🗺️ CPC रोडमैप — पूरा रास्ता" : "🗺️ CPC ROADMAP — the full journey") + '</div><p class="rm-sub">' + escapeHtml(hi ? "45 विषय — चार ज़ोन में" : "45 topics in four zones") + "</p>";
+        zones.forEach(function(z) {
+          out += '<div class="rm-zone ' + z.cls + '"><div class="rm-zone-h">' + escapeHtml(z.h) + '</div><div class="rm-chips">';
+          z.chips.forEach(function(c) {
+            out += '<button type="button" class="rm-chip" data-subj="cpc" data-ti="' + c[3] + '">' + escapeHtml(hi ? c[1] : c[0]) + (c[2] ? " · " + escapeHtml(c[2]) : "") + "</button>";
+          });
+          out += "</div></div>";
+        });
+        return out + "</div>";
+      }
+      function constitutionRoadmapHtml(lang) {
+        var hi = lang === "hi";
+        var zones = [
+          { cls: "rm-z1", h: hi ? "ZONE 1: प्रस्तावना और मौलिक अधिकार — नीति और कर्तव्य" : "ZONE 1: Preamble & Fundamental Rights — Principles & Duties", chips: [
+            ["📜 Preamble & Salient Features of the Constitution", "प्रस्तावना और संविधान की मुख्य विशेषताएँ", "", 0],
+            ["⚖️ Fundamental Rights — General", "मौलिक अधिकार — सामान्य जानकारी", "Art 12-35", 1],
+            ["⚖️ Right to Equality", "समानता का अधिकार", "Art 14-18", 2],
+            ["🕊️ Right to Freedom", "स्वतंत्रता का अधिकार", "Art 19-22", 3],
+            ["🛕 Right against Exploitation & Freedom of Religion", "शोषण के विरुद्ध अधिकार और धार्मिक स्वतंत्रता का अधिकार", "Art 23-28", 4],
+            ["🎓 Cultural & Educational Rights and Right to Constitutional Remedies", "सांस्कृतिक और शैक्षिक अधिकार तथा संवैधानिक उपचारों का अधिकार", "Art 29-32", 5],
+            ["🧭 Directive Principles of State Policy", "राज्य के नीति निदेशक तत्व", "Art 36-51", 6],
+            ["🤝 Fundamental Duties", "मौलिक कर्तव्य", "Art 51A", 7],
+            ["🎓 Right to Education & Children", "शिक्षा का अधिकार और बच्चे", "Art 21A, 86th Amendment 2002", 23],
+            ["⚖️ Reservation & Social Justice (Art 15(4), 15(5), 16", "आरक्षण और सामाजिक न्याय (अनुच्छेद 15(4), 15(5), 16", "4), 330-342", 24],
+            ["🔒 Right to Privacy & Personal Liberty", "निजता का अधिकार और व्यक्तिगत स्वतंत्रता", "Art 21", 28]
+          ] },
+          { cls: "rm-z2", h: hi ? "ZONE 2: संघ, राज्य और सरकार" : "ZONE 2: Union, States & Government", chips: [
+            ["🏛️ Union Executive — President & Council of Ministers", "संघ की कार्यपालिका — राष्ट्रपति व मंत्रिपरिषद", "Art 52-78", 8],
+            ["🏛️ Parliament", "संसद", "Art 79-122", 9],
+            ["🏛️ States — Executive & Legislature", "राज्य — कार्यपालिका व विधायिका", "Art 152-213", 14],
+            ["🏘️ Union Territories, Panchayats & Municipalities", "संघ राज्यक्षेत्र, पंचायतें व नगरपालिकाएँ", "Art 239-243, 73rd & 74th Amendments, 1992", 15],
+            ["🗣️ Co-operative Societies & Official Language", "सहकारी समितियाँ व राजभाषा", "Art 243ZH-243ZT, Art 343-351", 16],
+            ["👔 Services under the Union & States", "संघ व राज्यों के अधीन सेवाएँ", "Art 308-323", 17],
+            ["💰 Finance, Property, Contracts & Suits", "वित्त, संपत्ति, संविदाएँ व वाद", "Art 264-300A", 19],
+            ["🗳️ Elections", "निर्वाचन", "Art 324-329", 20],
+            ["🏛️ Constitutional Bodies — Attorney General, Advocate General & Others", "संवैधानिक निकाय — महान्यायवादी, महाधिवक्ता और अन्य", "Art 76, 165, 148, 280", 26]
+          ] },
+          { cls: "rm-z3", h: hi ? "ZONE 3: न्यायपालिका, संघवाद और रिटें" : "ZONE 3: Judiciary, Federalism & Writs", chips: [
+            ["⚖️ Judiciary — Supreme Court & High Courts", "न्यायपालिका — सर्वोच्च न्यायालय व उच्च न्यायालय", "Art 124-147, 214-231", 10],
+            ["🇮🇳 Federalism & Centre-State Relations", "संघवाद व केंद्र-राज्य संबंध", "Art 245-263, Seventh Schedule", 11],
+            ["⚖️ Tribunals", "अधिकरण", "Art 323A-323B", 18],
+            ["📜 Writs in Detail", "रिटें — विस्तार से", "Art 32 & 226", 21],
+            ["⚖️ Judicial Review & Basic Structure", "न्यायिक पुनरावलोकन और मूल ढाँचा", "", 22]
+          ] },
+          { cls: "rm-z4", h: hi ? "ZONE 4: संशोधन, आपातकाल और विशेष प्रावधान" : "ZONE 4: Amendment, Emergency & Special Provisions", chips: [
+            ["✏️ Amendment of the Constitution", "संविधान में संशोधन", "Art 368", 12],
+            ["🚨 Emergency Provisions", "आपातकालीन उपबंध", "Art 352-360", 13],
+            ["📜 Special Provisions for Certain States & the Schedules", "कुछ राज्यों के लिए विशेष प्रावधान और अनुसूचियाँ", "Art 370, 371, 12 Schedules", 25],
+            ["✏️ Landmark Constitutional Amendments — Quick Reference", "महत्वपूर्ण संविधान संशोधन — त्वरित संदर्भ", "1st, 42nd, 44th, 52nd, 73rd, 74th, 86th, 97th, 101st, 106th", 27]
+          ] }
+        ];
+        var out = '<div class="rm-wrap"><div class="rm-title">' + escapeHtml(hi ? "🗺️ संविधान रोडमैप — पूरा रास्ता" : "🗺️ CONSTITUTION ROADMAP — the full journey") + '</div><p class="rm-sub">' + escapeHtml(hi ? "29 विषय — चार ज़ोन में" : "29 topics in four zones") + "</p>";
+        zones.forEach(function(z) {
+          out += '<div class="rm-zone ' + z.cls + '"><div class="rm-zone-h">' + escapeHtml(z.h) + '</div><div class="rm-chips">';
+          z.chips.forEach(function(c) {
+            out += '<button type="button" class="rm-chip" data-subj="constitution" data-ti="' + c[3] + '">' + escapeHtml(hi ? c[1] : c[0]) + (c[2] ? " · " + escapeHtml(c[2]) : "") + "</button>";
+          });
+          out += "</div></div>";
+        });
+        return out + "</div>";
+      }
       function notesVisualBody(topic, lang) {
         var pts = topic.points || [];
         var out = "";
@@ -5974,6 +6092,8 @@ function cfBiharFee(v) {
           if (currentNotesSubject === "bnss" && !notesQuery) htmlOut += bnssRoadmapHtml(lang);
           if (currentNotesSubject === "bsa" && !notesQuery) htmlOut += bsaRoadmapHtml(lang);
           if (currentNotesSubject === "majorActs" && !notesQuery) htmlOut += majorActsRoadmapHtml(lang);
+          if (currentNotesSubject === "cpc" && !notesQuery) htmlOut += cpcRoadmapHtml(lang);
+          if (currentNotesSubject === "constitution" && !notesQuery) htmlOut += constitutionRoadmapHtml(lang);
           list.forEach(function(topic, ti) {
             htmlOut += indexItem(currentNotesSubject, ti, topic, null);
           });
