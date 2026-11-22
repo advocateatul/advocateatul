@@ -5990,7 +5990,7 @@ function cfBiharFee(v) {
         } catch(e) { return {categories:[]}; }
       }
       /* Daily 10 court words (Day 1 = 15 Nov 2026). To add a day, append one
-         more array to dailyWords (Day 7 = 61-70, ... Day 10
+         more array to dailyWords (Day 8 = 71-80, ... Day 10
          = rows 91-100); the block auto-shows the set for today's date. If the
          date runs past the last added day, the latest set keeps showing. */
       var DAILY_WORDS_START = new Date(2026, 10, 15); /* Day 1 = 15 Nov 2026 */
@@ -6078,6 +6078,18 @@ function cfBiharFee(v) {
           { en: "Default Bail", hi: "वैधानिक जमानत", useEn: "Bail that the accused gets as a right when the police do not file the charge sheet within the time the law allows.", useHi: "वह जमानत जो आरोपी को हक़ के तौर पर मिलती है, जब पुलिस कानून में तय समय के अंदर चार्जशीट दाखिल न करे।" },
           { en: "Surety", hi: "जमानती", useEn: "A person who stands guarantee for the accused — promising the court that the accused will appear when required.", useHi: "वह व्यक्ति जो आरोपी की ज़मानत देता है — अदालत को भरोसा दिलाता है कि आरोपी ज़रूरत पड़ने पर हाज़िर होगा।" },
           { en: "Bond", hi: "बंधपत्र", useEn: "A written undertaking, usually with a money amount, given to the court — e.g. a bail bond promising the accused will appear on every date.", useHi: "अदालत को दिया गया लिखित वचन — आमतौर पर एक रकम के साथ — जैसे बेल बांड, जिसमें आरोपी हर तारीख पर हाज़िर होने का वादा करता है।" }
+        ],
+        8: [
+          { en: "Surety Bond", hi: "जमानत बंधपत्र", useEn: "A written bond given to the court with a surety, promising that the accused will appear on every date — if they don't, the surety pays the bond amount.", useHi: "अदालत को जमानती के साथ दिया गया लिखित बंधपत्र — आरोपी हर तारीख पर हाज़िर होगा, वरना जमानती को बंधपत्र की रकम देनी होगी।" },
+          { en: "Detention", hi: "निरुद्धि", useEn: "Keeping a person in custody — e.g. detention in a police station or jail while the investigation or trial is going on.", useHi: "किसी व्यक्ति को हिरासत में रखना — जैसे जांच या मुकदमा चलते हुए थाने या जेल में रखना।" },
+          { en: "Imprisonment", hi: "कारावास", useEn: "The punishment of being kept in jail for a fixed period, given by the court after conviction.", useHi: "दोषसिद्धि के बाद अदालत की ओर से तय अवधि के लिए जेल में रखने की सज़ा।" },
+          { en: "Sentence", hi: "दंडादेश", useEn: "The punishment the court awards after conviction — imprisonment, fine, or both.", useHi: "दोषसिद्धि के बाद अदालत की ओर से सुनाई गई सज़ा — कारावास, जुर्माना, या दोनों।" },
+          { en: "Fine", hi: "जुर्माना", useEn: "Money the court orders the convicted person to pay as punishment, sometimes along with imprisonment.", useHi: "अदालत की ओर से दोषी व्यक्ति को सज़ा के रूप में देने के लिए तय की गई रकम — कभी कारावास के साथ भी।" },
+          { en: "Punishment", hi: "दंड", useEn: "The penalty the law gives for an offence — imprisonment, fine, or both, as decided by the court.", useHi: "किसी अपराध के लिए कानून में तय सज़ा — कारावास, जुर्माना, या दोनों, जैसा अदालत तय करे।" },
+          { en: "Crime", hi: "अपराध", useEn: "An act forbidden and punishable by law — the whole criminal case starts from the crime.", useHi: "कानून में मना और सज़ा-योग्य काम — पूरा आपराधिक मुकदमा अपराध से ही शुरू होता है।" },
+          { en: "Victim", hi: "पीड़ित", useEn: "The person who suffered loss or harm because of the crime — they can give evidence and seek compensation.", useHi: "अपराध के कारण नुकसान या हानि झेलने वाला व्यक्ति — वह सबूत दे सकता है और मुआवजा मांग सकता है।" },
+          { en: "Suspect", hi: "संदिग्ध", useEn: "A person the police suspect of committing the offence — a suspect is not yet an accused; the case is proved later.", useHi: "वह व्यक्ति जिस पर पुलिस को अपराध करने का शक हो — संदिग्ध अभी आरोपी नहीं होता; बात आगे साबित होती है।" },
+          { en: "Eyewitness", hi: "प्रत्यक्षदर्शी गवाह", useEn: "A person who saw the offence happen with their own eyes — their statement carries great weight in trial.", useHi: "वह व्यक्ति जिसने अपराध अपनी आँखों से होते देखा हो — विचारण में उसके बयान का बहुत वज़न होता है।" }
         ]
       };
       function dailyWordsDay() {
