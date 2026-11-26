@@ -1174,6 +1174,18 @@
       .la-form { flex-wrap: wrap; }
       .la-form .la-ctl-inp { flex: 1 1 100%; order: -1; }
     }
+    /* LawAssist short-viewport fix 2026-11-26 (daily bariki): with the phone
+       keyboard open the layout viewport shrinks to ~400-540px, but the
+       panel's fixed chrome (header + tabs + chips + state-scope + form =
+       444px) exceeds the panel height, so overflow:hidden clipped the input
+       + Send row. At short heights the panel stretches to the viewport edges
+       and the optional chips + state-scope rows hide (a chosen scope stays
+       selected, only the control hides) so the input and Send always stay
+       visible. Full look unchanged at normal heights. */
+    @media (max-height: 600px) {
+      .lawassist-panel { bottom: 8px; height: min(680px, calc(100vh - 16px)); }
+      #laChips, .la-upscope { display: none; }
+    }
     .la-cap { font-size: 9px; line-height: 1.1; opacity: .7; white-space: nowrap; }
     .la-meet-micwrap { display: inline-flex; flex-direction: column; align-items: center; gap: 2px; vertical-align: middle; margin-right: 8px; margin-bottom: 8px; }
     #laMockBtn.la-mock-on { background: #f9fcff; color: #1e1e1e; }
