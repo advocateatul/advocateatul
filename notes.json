@@ -2846,16 +2846,16 @@
    "cases": "",
    "points": [
     {
-     "en": "Chapter XXXVI of the BNSS answers a question every investigation throws up: what happens to the property the police seize? Section 497 opens the chapter, which deals with orders for the custody and disposal of property — pending trial, and at the conclusion of the case.",
-     "hi": "BNSS का अध्याय XXXVI हर जाँच में उठने वाले सवाल का जवाब देता है: पुलिस द्वारा ज़ब्त की गई संपत्ति का क्या होगा? धारा 497 इस अध्याय को खोलती है, जो संपत्ति की अभिरक्षा और निपटान के आदेशों से संबंधित है — विचारण लंबित रहने के दौरान, और मामले के समापन पर।"
+     "en": "Chapter XXXVI of the BNSS answers a question every investigation throws up: what happens to the property the police seize? Section 497 opens the chapter, which deals with orders for the custody and disposal of property pending trial; disposal at the conclusion of the case is the next section, Sec 498.",
+     "hi": "BNSS का अध्याय XXXVI हर जाँच में उठने वाले सवाल का जवाब देता है: पुलिस द्वारा ज़ब्त की गई संपत्ति का क्या होगा? धारा 497 इस अध्याय को खोलती है, जो विचारण लंबित रहने के दौरान संपत्ति की अभिरक्षा और निपटान के आदेशों से संबंधित है; मामले के समापन पर निपटान अगली धारा, धारा 498, में है।"
     },
     {
      "en": "The first idea is custody pending trial. While the case is going on, the court can order that seized property be kept in safe custody, or delivered to the person entitled to its possession, on conditions the court fixes — so that property does not rot in a police store while the trial crawls on.",
      "hi": "पहला विचार विचारण लंबित रहने के दौरान अभिरक्षा का है। मामला चलने के दौरान न्यायालय आदेश दे सकता है कि ज़ब्त संपत्ति सुरक्षित अभिरक्षा में रखी जाए, या उसके कब्ज़े के हकदार व्यक्ति को, न्यायालय द्वारा तय शर्तों पर, सौंप दी जाए — ताकि संपत्ति विचारण के धीरे चलने के दौरान पुलिस के गोदाम में सड़ती न रहे।"
     },
     {
-     "en": "The second idea is disposal at the end. When the case concludes, the court orders what happens to the property — return to the entitled person, confiscation, or destruction, according to the nature of the property and the outcome of the case. Disposal is a judicial order, not a police decision.",
-     "hi": "दूसरा विचार अंत में निपटान का है। मामला समाप्त होने पर न्यायालय आदेश देता है कि संपत्ति का क्या होगा — हकदार व्यक्ति को वापसी, ज़ब्ती, या नष्टीकरण, संपत्ति की प्रकृति और मामले के परिणाम के अनुसार। निपटान एक न्यायिक आदेश है, पुलिस का निर्णय नहीं।"
+     "en": "The second idea is the new BNSS timetable inside Sec 497 itself. Once property is produced before the court, the court must prepare a statement of the property within 14 days (Sec 497(2)), get it photographed and, if necessary, videographed (497(3)) — the statement and photo/video are then used as evidence (497(4)) — and within 30 days after that, order its disposal, destruction, confiscation or delivery (497(5)). Do not confuse this with disposal at the conclusion of the case, which is the next section, Sec 498 (old Sec 452 CrPC): return to the entitled person, confiscation or destruction according to the outcome. Either way, disposal is a judicial order, not a police decision.",
+     "hi": "दूसरा विचार धारा 497 के अंदर की नई BNSS समय-सारणी है। संपत्ति न्यायालय के सामने पेश होने पर न्यायालय को 14 दिन के भीतर संपत्ति का विवरण तैयार करना होगा (धारा 497(2)), उसका फोटो और ज़रूरत हो तो वीडियोग्राफ कराना होगा (497(3)) — विवरण और फोटो/वीडियो फिर साक्ष्य के रूप में इस्तेमाल होते हैं (497(4)) — और उसके 30 दिन के भीतर उसका निपटान, नष्टीकरण, ज़ब्ती या सुपुर्दगी का आदेश देना होगा (497(5))। इसे मामले के समापन पर निपटान से मत मिलाओ, जो अगली धारा, धारा 498 (पुरानी धारा 452 CrPC), में है: परिणाम के अनुसार हकदार को वापसी, ज़ब्ती या नष्टीकरण। दोनों ही तरह से, निपटान एक न्यायिक आदेश है, पुलिस का निर्णय नहीं।"
     },
     {
      "en": "Perishable property gets special treatment, and this is the practical point students forget. Property that will decay, or that is subject to speedy and natural decay, can be ordered to be sold or otherwise disposed of promptly, with the sale proceeds held instead — the law does not wait for the trial to end while the property itself disappears.",
@@ -2870,30 +2870,30 @@
      "hi": "व्यवहार के लिए क्रम याद रखें: ज़ब्ती, आवेदन, आदेश। पुलिस ज़ब्त करके रिपोर्ट करती है; हितबद्ध व्यक्ति न्यायालय में आवेदन करता है; न्यायालय शर्तों के साथ अभिरक्षा या निपटान का आदेश देता है। कोई भी छूटा हुआ कदम — खासकर न्यायालय के आदेश के बिना निपटान — वहीं है जहाँ संपत्ति के मामले बिगड़ते हैं।"
     }
    ],
-   "sections": "Sec 497 BNSS (Chapter XXXVI — Disposal of Property; correspond to Sec 451 CrPC)",
+   "sections": "Sec 497 BNSS (Chapter XXXVI — Disposal of Property; corresponds to Sec 451 CrPC; Sec 498 = disposal at conclusion, old Sec 452 CrPC)",
    "title": {
     "en": "Disposal of Property (Sec 497 BNSS)",
     "hi": "संपत्ति का निपटान (धारा 497 BNSS)"
    }
   },
   {
-   "cases": "General position — medical examination of a victim, especially in sexual-offence cases, is an investigative step that must be done promptly, with consent, and by a registered medical practitioner.",
+   "cases": "General position — medical examination of a victim of rape (or attempt to commit rape) is an investigative step that must be done within 24 hours, with consent, and by a registered medical practitioner; the report reaches the investigating officer within 7 days.",
    "points": [
     {
-     "en": "Start with why this examination exists at all. It is not a formality and it is not a test of the victim's character. Its job is to record injuries, collect medical evidence while it still exists, and give the victim treatment — three purposes in one visit.",
-     "hi": "पहले यह समझो कि यह जाँच है ही क्यों। यह कोई औपचारिकता नहीं है और पीड़ित के चरित्र की परीक्षा भी नहीं है। इसका काम है चोटें दर्ज करना, चिकित्सकीय साक्ष्य तब तक जुटाना जब तक वह मौजूद है, और पीड़ित को इलाज देना — एक ही मुलाक़ात में तीन उद्देश्य।"
+     "en": "First, the scope: Sec 184 is titled \"Medical examination of victim of rape\" — it applies only where an offence of rape or attempt to commit rape is under investigation, not to victims of other offences. Within that scope, it is not a formality and it is not a test of the victim's character. Its job is to record injuries, collect medical evidence while it still exists, and give the victim treatment — three purposes in one visit.",
+     "hi": "पहले दायरा समझो: धारा 184 का शीर्षक है \"बलात्कार की पीड़िता की चिकित्सकीय जाँच\" — यह सिर्फ़ वहीं लागू होती है जहाँ बलात्कार या बलात्कार के प्रयास के अपराध की जाँच चल रही हो, अन्य अपराधों के पीड़ितों पर नहीं। इस दायरे में, यह कोई औपचारिकता नहीं है और पीड़ित के चरित्र की परीक्षा भी नहीं है। इसका काम है चोटें दर्ज करना, चिकित्सकीय साक्ष्य तब तक जुटाना जब तक वह मौजूद है, और पीड़ित को इलाज देना — एक ही मुलाक़ात में तीन उद्देश्य।"
     },
     {
-     "en": "Time is the enemy here, and students should remember why. Bruises fade, DNA degrades, and clothing gets washed. That is why the law expects the examination to happen without delay once the offence is reported, and why delay has to be explained, not just noted.",
-     "hi": "यहाँ समय ही दुश्मन है, और छात्रों को यह याद रखना चाहिए कि क्यों। खरोंचें मिट जाती हैं, डीएनए खराब हो जाता है, और कपड़े धुल जाते हैं। इसीलिए कानून अपेक्षा करता है कि अपराध की सूचना के बाद जाँच बिना देर के हो, और देर हुई हो तो उसे सिर्फ़ दर्ज नहीं, समझाया भी जाए।"
+     "en": "Time is the enemy here, and the law fixes a hard clock for it. The woman must be sent to the registered medical practitioner within 24 hours of receiving the information about the offence (Sec 184(1)). Bruises fade, DNA degrades, and clothing gets washed — that is why delay has to be explained, not just noted.",
+     "hi": "यहाँ समय ही दुश्मन है, और कानून ने इसके लिए सख़्त समय-सीमा तय की है। अपराध की सूचना मिलने के 24 घंटे के भीतर महिला को पंजीकृत चिकित्सक के पास भेजना होगा (धारा 184(1))। खरोंचें मिट जाती हैं, डीएनए खराब हो जाता है, और कपड़े धुल जाते हैं — इसीलिए देर हुई हो तो उसे सिर्फ़ दर्ज नहीं, समझाया भी जाए।"
     },
     {
      "en": "Consent is not optional, and it is not a signature collected in a hurry. The victim must understand what the examination involves and agree to it. If the victim refuses any part of it, that refusal is recorded and respected, and the rest of the investigation still goes on.",
      "hi": "सहमति वैकल्पिक नहीं है, और यह जल्दबाज़ी में लिया गया हस्ताक्षर भी नहीं है। पीड़ित को समझना चाहिए कि जाँच में क्या-क्या होगा और वह उससे सहमत हो। अगर पीड़ित किसी हिस्से से इनकार करे तो वह इनकार दर्ज किया जाता है और उसका सम्मान होता है, और बाकी जाँच फिर भी चलती रहती है।"
     },
     {
-     "en": "The examination is done by a registered medical practitioner, and the report matters as much as the treatment. It should record injuries in plain terms, the victim's own account where relevant, and samples taken, because months later in court, this report is often the only medical voice in the room.",
-     "hi": "जाँच पंजीकृत चिकित्सक द्वारा होती है, और रिपोर्ट इलाज जितनी ही मायने रखती है। इसमें चोटें सीधी भाषा में दर्ज होनी चाहिए, जहाँ ज़रूरी हो वहाँ पीड़ित का अपना विवरण, और लिए गए नमूने, क्योंकि महीनों बाद न्यायालय में यही रिपोर्ट अक्सर एकमात्र चिकित्सकीय आवाज़ होती है।"
+     "en": "The examination is done by a registered medical practitioner — preferably one employed in a government or local-authority hospital — and the report matters as much as the treatment. It must record injuries in plain terms, the material taken for DNA profiling, the woman's general mental condition, the reasons for each conclusion, and the exact time the examination started and finished. And the report must reach the investigating officer within 7 days (Sec 184(6)), because months later in court, this report is often the only medical voice in the room.",
+     "hi": "जाँच पंजीकृत चिकित्सक द्वारा होती है — बेहतर हो तो सरकारी या स्थानीय प्राधिकरण के अस्पताल में कार्यरत चिकित्सक — और रिपोर्ट इलाज जितनी ही मायने रखती है। इसमें चोटें सीधी भाषा में, डीएनए प्रोफाइलिंग के लिए लिया गया पदार्थ, महिला की सामान्य मानसिक स्थिति, हर निष्कर्ष के कारण, और जाँच शुरू होने व खत्म होने का सटीक समय दर्ज होना चाहिए। और रिपोर्ट 7 दिन के भीतर विवेचनाधिकारी को भेजनी होगी (धारा 184(6)), क्योंकि महीनों बाद न्यायालय में यही रिपोर्ट अक्सर एकमात्र चिकित्सकीय आवाज़ होती है।"
     },
     {
      "en": "Do not confuse this with the medical examination of the accused, which is a different provision with a different purpose. One examines the person who suffered, to treat and to preserve evidence; the other examines the person accused, to find evidence on their body. Mixing them up in an exam answer loses marks fast.",
@@ -2906,8 +2906,8 @@
    ],
    "sections": "Sec 184 BNSS (Sec 164A CrPC)",
    "title": {
-    "en": "Medical Examination of the Victim (Sec 184 BNSS)",
-    "hi": "पीड़ित की चिकित्सकीय जाँच (धारा 184 BNSS)"
+    "en": "Medical Examination of the Victim of Rape (Sec 184 BNSS)",
+    "hi": "बलात्कार की पीड़िता की चिकित्सकीय जाँच (धारा 184 BNSS)"
    }
   },
   {

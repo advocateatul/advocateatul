@@ -1135,7 +1135,8 @@
       "sourceName": "Indian Kanoon",
       "caseNameHi": "मधु लिमये बनाम महाराष्ट्र राज्य",
       "sections": [
-        "SEC 397"
+        "SEC 397",
+        "SEC 482"
       ]
     },
     {
@@ -1147,8 +1148,8 @@
       },
       "year": 1977,
       "summary": {
-        "en": "Held that constructive res judicata bars a second writ petition raising a ground that might and ought to have been raised in the earlier petition.",
-        "hi": "न्यायालय ने कहा कि रचनात्मक प्राङ्न्याय (कंस्ट्रक्टिव रेस ज्यूडिकाटा) दूसरी रिट याचिका पर रोक लगाता है। जो आधार पहली याचिका में उठाया जा सकता था और उठाना चाहिए था, उसे बाद में नहीं उठाया जा सकता।"
+        "en": "Held that constructive res judicata bars a subsequent civil suit raising a ground that might and ought to have been raised in the earlier writ petition.",
+        "hi": "न्यायालय ने कहा कि रचनात्मक प्राङ्न्याय (कंस्ट्रक्टिव रेस ज्यूडिकाटा) बाद के दीवानी वाद पर रोक लगाता है, अगर उसमें वही आधार उठाया जाए जो पहली रिट याचिका में उठाया जा सकता था और उठाना चाहिए था।"
       },
       "pdfUrl": "https://indiankanoon.org/search/?formInput=State+of+UP+Nawab+Hussain",
       "sourceName": "Indian Kanoon",
