@@ -213,6 +213,7 @@
       text-rendering: optimizeLegibility;
     }
     a { color: inherit; }
+    button, input, textarea, select { font-family: inherit; } /* form controls must inherit --sans (with Noto Sans Devanagari) or Hindi shows as boxes on systems without a Devanagari system font */
     button, a { -webkit-tap-highlight-color: transparent; }
     img { display: block; max-width: 100%; }
     .shell { width: min(1180px, calc(100% - 40px)); margin-inline: auto; }
